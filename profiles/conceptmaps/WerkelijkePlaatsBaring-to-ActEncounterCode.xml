@@ -1,0 +1,88 @@
+<?xml-model href="http://hl7.org/fhir/STU3/conceptmap.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/conceptmap.xsd">
+  <url value="http://nictiz.nl/fhir/ConceptMap/WerkelijkePlaatsBaring-to-ActEncounterCode" />
+  <version value="1.0.0" />
+  <name value="WerkelijkePlaatsBaring-to-ActEncounterCode" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <sourceReference>
+    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
+    <display value="WerkelijkePlaatsBaring" />
+  </sourceReference>
+  <targetReference>
+    <reference value="http://hl7.org/fhir/ValueSet/v3-ActEncounterCode" />
+    <display value="ActEncounterCode" />
+  </targetReference>
+  <group>
+    <source value="http://snomed.info/sct" />
+    <target value="http://hl7.org/fhir/v3-ActEncounterCode" />
+    <element>
+      <code value="169813005" />
+      <display value="Home birth (finding)"/>
+      <target>
+        <code value="HH" />
+        <equivalence value="wider" />
+        <comment value="The term home birth in the source is more specific than the term home encounter in the source."/>
+      </target>
+    </element>
+    <element>
+      <code value="22232009" />
+      <display value="Hospital (environment)"/>
+      <target>
+        <code value="SS" />
+        <equivalence value="inexact" />
+        <comment value="In case of a delivery the length of stay is usually not predetermined. In addition, the term hospital in the source is more specific than the term healthcare facility in the target."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="urn:oid:2.16.840.1.113883.2.4.3.22.1.8.7" />
+    <target value="http://hl7.org/fhir/v3-ActEncounterCode" />
+    <element>
+      <code value="23" />
+      <display value="Geboortecentrum"/>
+      <target>
+        <code value="SS" />
+        <equivalence value="inexact" />
+        <comment value="In case of a delivery the length of stay is usually not predetermined. In addition, the term birth centre in the source is more specific than the term healthcare facility in the target."/>
+      </target>
+    </element>
+    <element>
+      <code value="40" /> 
+      <display value="Onderweg"/>
+      <target>
+        <code value="VR" />
+        <equivalence value="wider" />
+        <comment value="The term 'on the way' in the source is more specific than the term 'not in the same physical location' in the source."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/v3/NullFlavor" />
+    <target value="http://hl7.org/fhir/v3/NullFlavor" />  
+    <element>
+      <code value="UNK" /> 
+      <display value="Onbekend"/>
+      <target>
+        <code value="UNK" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="NI" /> 
+      <display value="Geen informatie"/>
+      <target>
+        <code value="NI" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>
