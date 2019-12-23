@@ -1,0 +1,45 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-11-06T15:34:16+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.38--20141106153416"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.38"/>
+   </identifier>
+   <version value="2014-11-06T15:34:16"/>
+   <name value="BesluitSC"/>
+   <title value="BesluitSC"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="BesluitSC"/>
+   <immutable value="false"/>
+   <expansion>
+      <identifier value="urn:uuid:7507fd9d-9231-4873-96ea-c09e1ecb5b95"/>
+      <timestamp value="2019-12-23T10:08:58.837+01:00"/>
+      <total value="3"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.5"/>
+         <code value="2"/>
+         <display value="Tijdens ontsluiting besloten"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.5"/>
+         <code value="3"/>
+         <display value="Tijdens uitdrijving besloten"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
+</ValueSet>

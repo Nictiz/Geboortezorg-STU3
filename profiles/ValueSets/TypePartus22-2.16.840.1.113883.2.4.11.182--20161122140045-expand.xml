@@ -1,0 +1,81 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-22T14:00:45+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.182"/>
+   </identifier>
+   <version value="2016-11-22T14:00:45"/>
+   <name value="TypePartus22"/>
+   <title value="TypePartus"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="TypePartus"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <expansion>
+      <identifier value="urn:uuid:ccaa3026-5bb5-4773-836f-05bcf3e2f5e0"/>
+      <timestamp value="2019-12-23T10:09:02.045+01:00"/>
+      <total value="10"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="177184002"/>
+         <display value="Normal delivery procedure (procedure)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="3311000146109"/>
+         <display value="Assisted delivery of fetus (procedure)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="11466000"/>
+         <display value="Cesarean section (procedure)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="177141003"/>
+         <display value="Elective cesarian delivery (procedure)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="274130007"/>
+         <display value="Emergency cesarian section (procedure)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
+         <code value="10"/>
+         <display value="Termination of Pregnancy (TOP)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="447972007"/>
+         <display value="Medical termination of pregnancy using prostaglandin (procedure)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="236990004"/>
+         <display value="Postmortem cesarean section (procedure)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
+         <code value="9"/>
+         <display value="Overig"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
+</ValueSet>

@@ -1,0 +1,65 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-07-31T16:09:54+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.22--20140731160954"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.22"/>
+   </identifier>
+   <version value="2014-07-31T16:09:54"/>
+   <name value="GeboortePlacenta"/>
+   <title value="GeboortePlacenta"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="GeboortePlacenta"/>
+   <immutable value="false"/>
+   <expansion>
+      <identifier value="urn:uuid:285cebde-2022-46c4-bd22-6760f8f00a43"/>
+      <timestamp value="2019-12-23T10:08:52.451+01:00"/>
+      <total value="7"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.19"/>
+         <code value="0"/>
+         <display value="Spontaan"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.19"/>
+         <code value="2"/>
+         <display value="Controlled cord traction"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.19"/>
+         <code value="3"/>
+         <display value="Manuele placentaverwijdering"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.19"/>
+         <code value="4"/>
+         <display value="Placentaverwijdering bij SC"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Overig"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="Onbekend"/>
+      </contains>
+   </expansion>
+</ValueSet>

@@ -1,0 +1,55 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-01-10T12:25:06+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.16--20130110122506"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.16"/>
+   </identifier>
+   <version value="2013-01-10T12:25:06"/>
+   <name value="WijzeBaringBegin"/>
+   <title value="WijzeBaringBegin"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="WijzeBaringBegin"/>
+   <immutable value="false"/>
+   <expansion>
+      <identifier value="urn:uuid:ae3d5ed2-6967-4778-bc42-7e1003f74286"/>
+      <timestamp value="2019-12-23T10:09:04.625+01:00"/>
+      <total value="5"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+         <code value="1"/>
+         <display value="spontane weeën"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+         <code value="2"/>
+         <display value="spontane vliesscheur"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+         <code value="3"/>
+         <display value="interventie om baring op gang te brengen"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="geen informatie"/>
+      </contains>
+   </expansion>
+</ValueSet>

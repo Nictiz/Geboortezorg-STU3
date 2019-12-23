@@ -1,0 +1,102 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-06T16:37:58+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.190--20161106163758"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.190"/>
+   </identifier>
+   <version value="2016-11-06T16:37:58"/>
+   <name value="IndicatieInterventie"/>
+   <title value="Indicatie interventie"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Indicatie interventie"/>
+   <immutable value="false"/>
+   <expansion>
+      <identifier value="urn:uuid:f8228eb7-fb06-4538-9845-4848a9df48f0"/>
+      <timestamp value="2019-12-23T10:09:04.087+01:00"/>
+      <total value="14"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <abstract value="true"/>
+         <code value="10"/>
+         <display value="Conditie moeder"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="1"/>
+         <display value="Acuut levensbedreigend"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="3"/>
+         <display value="Niet levensbedreigend"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="8"/>
+         <display value="Onbekend"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <abstract value="true"/>
+         <code value="20"/>
+         <display value="Conditie kind"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="2"/>
+         <display value="Foetale nood"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="4"/>
+         <display value="Niet levensbedreigend"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="23"/>
+         <display value="Inleiding vanwege congenitale afwijking"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="9"/>
+         <display value="Onbekend"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="6"/>
+         <display value="Interventie in het kader van wetenschappelijk onderzoek"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <code value="7"/>
+         <display value="Wens patiënt"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Overig"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="Onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
+</ValueSet>
