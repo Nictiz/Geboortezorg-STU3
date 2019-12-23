@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- maternale_onderzoeksgegevens conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.142" -->
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="maternalegegevens"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalReport"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference>
+            <reference value="Condition/zwangerschap" />
+            <display value="Scenario 1 zwangerschap" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <!-- Terminologie in ART DECOR klopt niet (issue), als fallback even data element -->
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.2.6" />
+            <code value="142" />
+            <display value="Maternale onderzoeksgegevens"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/patient-verrouwe"/>
+        <display value="Sara Verrouwe"/>
+    </subject>
+    <result>
+       <reference value="Observation/antistoffen"/>
+    </result>
+</Observation>
