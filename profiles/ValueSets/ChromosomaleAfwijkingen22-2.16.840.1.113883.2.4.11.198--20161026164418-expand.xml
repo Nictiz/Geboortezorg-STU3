@@ -5,42 +5,52 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2014-08-13T09:40:49+01:00"/>
+         <start value="2016-10-26T16:44:18+01:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418"/>
    <identifier>
       <use value="official"/>
       <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.10"/>
+      <value value="2.16.840.1.113883.2.4.11.198"/>
    </identifier>
-   <version value="2014-08-13T09:40:49"/>
-   <name value="FasePerinataleSterfte22"/>
-   <title value="Fase Perinatale Sterfte (2.2)"/>
+   <version value="2.3.0"/>
+   <name value="ChromosomaleAfwijkingen22"/>
+   <title value="ChromosomaleAfwijkingen"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="KNOV"/>
-   <description value="Fase Perinatale Sterfte (2.2)"/>
+   <description value="ChromosomaleAfwijkingen"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <expansion>
-      <identifier value="urn:uuid:5705ceb7-6649-4368-9cb0-4f40d79bc4f5"/>
-      <timestamp value="2019-12-23T13:46:04.777+01:00"/>
-      <total value="4"/>
+      <identifier value="urn:uuid:9ad964fe-6772-4d4d-a4c5-1c04af2d9d4d"/>
+      <timestamp value="2019-12-23T13:45:59.683+01:00"/>
+      <total value="6"/>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="237361005"/>
-         <display value="Antepartum fetal death (event)"/>
+         <code value="41040004"/>
+         <display value="Complete trisomy 21 syndrome (disorder)"/>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="237362003"/>
-         <display value="Intrapartum fetal death (event)"/>
+         <code value="51500006"/>
+         <display value="Complete trisomy 18 syndrome (disorder)"/>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="276506001"/>
-         <display value="Newborn death (event)"/>
+         <code value="21111006"/>
+         <display value="Complete trisomy 13 syndrome (disorder)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.22"/>
+         <code value="7"/>
+         <display value="Andere numerieke chromosomale afwijkingen"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Overige chromosomale afwijkingen"/>
       </contains>
       <contains>
          <system value="http://hl7.org/fhir/v3/NullFlavor"/>
