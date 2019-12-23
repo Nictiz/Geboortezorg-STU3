@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bevalling conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.6" -->
+
+<Procedure xmlns='http://hl7.org/fhir'>
+    <id value='bevallingprocedure'/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
+    </meta>
+    <!-- Bij voorgaande zwangerschap: vaste waarde 'completed' -->
+    <status value='completed'/>
+    <category>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value='236973005'/>
+            <display value='Delivery procedure (procedure)'/>
+        </coding>
+    </category>
+    <!-- Vaste terminologie uit PWD -->
+    <code>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value='236973005'/>
+            <display value='Delivery procedure (procedure)'/>
+        </coding>
+    </code>
+    <!-- Referentie naar kind -->
+    <subject>
+        <reference value="Patient/kind" />
+        <display value="Kind van patient Verrouwe, 2018-10-08T20:03:00" />
+    </subject>
+    <!-- Context Episode of Care -->
+    <context>
+        <reference value="EpisodeOfCare/episodeofcare"/>
+        <display value="Voorgaande zwangerschap van Sara Verrouwe"></display>
+    </context>
+    <!-- Referentie verloskundige / gynaecoloog -->
+    <performer>
+        <actor>
+            <reference value="Practitioner/zorgverlener-delos"/>
+            <display value="Vera de Los"/>
+        </actor>
+    </performer>
+    <report>
+        <reference value="DiagnosticReport/baringsgegevens"/>
+        <display value="Partusverslag"/>
+    </report>
+</Procedure>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wijzebegin"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-WayStartBirth"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference value="Observation/firststageoflabor" />
+    </extension> 
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+            <code value="BeginDeliv"/>
+            <display value="Wijze waarop de baring begon"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/patient-verrouwe"/>
+        <display value="Sara Verrouwe"/>
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/episodeofcare"/>
+        <display value="Voorgaande zwangerschap Sara Verrouwe"/>       
+    </context>
+    <!-- wijze_waarop_de_baring_begon conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20550" -->
+    <valueCodeableConcept>
+        <!-- wijze_einde_zwangerschap conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80625" -->
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.46"/>
+            <code value="3"/>
+            <display value="interventie om baring op gang te brengen"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

@@ -1,0 +1,23 @@
+<!-- uitkomst_per_kind conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.7" -->
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="patient-kind-verrouwe"/>
+    <meta>
+        <versionId value="15"/>
+        <lastUpdated value="2017-01-23T13:51:41.677+00:00"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/bc-Child"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>BSN: </p>
+            <p>Naam: Kind van Sara Verrouwe</p>
+            <p>Geboortedatum en tijd: 2018-10-08 20:03</p>
+        </div>
+    </text>
+    <!-- perinatale_sterfteq conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40280" -->
+    <birthdate value="2018-10-08"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+        <valuedateTime value="2018-10-08T20:03:00+01:00"/>
+    </extension>
+    <deceasedBoolean value="false"/>
+</Patient>

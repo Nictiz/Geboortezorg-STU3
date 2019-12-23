@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="bloedverlies"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BloodLoss"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference value="Observation/secondstageoflabor" />
+    </extension> 
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="64332008"/>
+            <display value="Blood loss in labour"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/patient-verrouwe"/>
+        <display value="Sara Verrouwe"/>
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/episodeofcare"/>
+        <display value="Voorgaande zwangerschap Sara Verrouwe"/>       
+    </context>
+    <!-- hoeveelheid_bloedverlies conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20640" -->
+    <valueQuantity>
+        <value value="615"/>
+        <unit value="ml"/>
+        <system value="http://unitsofmeasure.org"/>
+    </valueQuantity>
+</Observation>
