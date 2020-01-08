@@ -76,8 +76,12 @@
       </type>
     </element>
     <element id="Observation.extension:focus.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
+      <path value="Observation.extension.value[x]" />
       <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Fetus" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Child" />
