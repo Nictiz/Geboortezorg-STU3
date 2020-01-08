@@ -177,6 +177,10 @@
                                         <sliceName value="valueReference" />
                                         <type>
                                             <code value="Reference" />
+                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Fetus" />
+                                        </type>
+                                        <type>
+                                            <code value="Reference" />
                                             <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Child" />
                                         </type>
                                     </element>
