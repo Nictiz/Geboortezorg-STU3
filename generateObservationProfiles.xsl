@@ -67,6 +67,11 @@
             <partof>Uitdrijvingsfase</partof>
             <focus value="true"/>
         </item> 
+        <item>
+            <id>peri23-dataelement-10814</id>
+            <translation>Hb</translation>
+            <datatype>Hoeveelheid</datatype>
+        </item>
     </xsl:variable>
     
     <xd:doc>
@@ -87,6 +92,9 @@
             <xsl:variable name="dataType" select="$dataItems[$pos]/datatype"/>
             <xsl:variable name="partOf" select="lower-case($dataItems[$pos]/partof)"/>
             <xsl:variable name="focus" select="$dataItems[$pos]/focus"/>
+            
+            <xsl:value-of select="$id"/>
+            <xsl:value-of select="$partOf"/>
             
             <xsl:for-each select="$url//*[matches(@iddisplay,$dataItems[$pos]/id)]">
                 <xsl:variable name="conceptName" select="./name"/>
@@ -121,45 +129,49 @@
                         <!-- differential -->                        
                         <differential>
                             <!-- part of extensie afhankelijk van fase zwangerschap/bevalling/geboorte -->
-                            <element id="Observation.extension">
-                                <path value="Observation.extension"/>
-                                <slicing>
-                                    <discriminator>
-                                        <type value="value"/>
-                                        <path value="url"/>
-                                    </discriminator>
-                                    <rules value="open"/>
-                                </slicing>
-                            </element>
-                            <element id="Observation.extension:{$partOf}">
-                                <path value="Observation.extension"/>
-                                <sliceName value="{$partOf}"/>
-                                <type>
-                                    <code value="Extension"/>
-                                    <profile value="http://hl7.org/fhir/StructureDefinition/event-partOf"/>
-                                </type>
-                            </element>
-                            <element id="Observation.extension:{$partOf}.valueReference:valueReference">
-                                <path value="Observation.extension.valueReference"/>
-                                <sliceName value="valueReference"/>
-                                <type>
-                                    <code value="Reference"/>
-                                    <xsl:choose>
-                                        <xsl:when test="$partOf='zwangerschap'">
-                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
-                                        </xsl:when>
-                                        <xsl:when test="$partOf='ontsluitingsfase'">
-                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FirstStageOfLabor"/>
-                                        </xsl:when>
-                                        <xsl:when test="$partOf='uitdrijvingsfase'">
-                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
-                                        </xsl:when>
-                                        <xsl:when test="$partOf='nageboortefase'">
-                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ThirdStageOfLabor"/>
-                                        </xsl:when>
-                                    </xsl:choose>  
-                                </type>
-                            </element>
+                            <xsl:choose>
+                                <xsl:when test="$partOf!=''">
+                                    <element id="Observation.extension">
+                                        <path value="Observation.extension"/>
+                                        <slicing>
+                                            <discriminator>
+                                                <type value="value"/>
+                                                <path value="url"/>
+                                            </discriminator>
+                                            <rules value="open"/>
+                                        </slicing>
+                                    </element>
+                                    <element id="Observation.extension:{$partOf}">
+                                        <path value="Observation.extension"/>
+                                        <sliceName value="{$partOf}"/>
+                                        <type>
+                                            <code value="Extension"/>
+                                            <profile value="http://hl7.org/fhir/StructureDefinition/event-partOf"/>
+                                        </type>
+                                    </element>
+                                    <element id="Observation.extension:{$partOf}.valueReference:valueReference">
+                                        <path value="Observation.extension.valueReference"/>
+                                        <sliceName value="valueReference"/>
+                                        <type>
+                                            <code value="Reference"/>
+                                            <xsl:choose>
+                                                <xsl:when test="$partOf='zwangerschap'">
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
+                                                </xsl:when>
+                                                <xsl:when test="$partOf='ontsluitingsfase'">
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FirstStageOfLabor"/>
+                                                </xsl:when>
+                                                <xsl:when test="$partOf='uitdrijvingsfase'">
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
+                                                </xsl:when>
+                                                <xsl:when test="$partOf='nageboortefase'">
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ThirdStageOfLabor"/>
+                                                </xsl:when>
+                                            </xsl:choose>  
+                                        </type>
+                                    </element>
+                                </xsl:when>
+                            </xsl:choose>
                             
                             <!-- focus extensie voor kindspecifieke uitkomstgegevens bij uitdrijvingsfase -->
                             <xsl:choose>
