@@ -97,6 +97,7 @@
             <xsl:value-of select="$partOf"/>
             
             <xsl:for-each select="$url//*[matches(@iddisplay,$dataItems[$pos]/id)]">
+                <xsl:variable name="conceptIdDisplay" select="@iddisplay"/>
                 <xsl:variable name="conceptName" select="./name"/>
                 <!-- todo: hoe betrouwbaar ophalen juiste conceptId? -->
                 <xsl:variable name="conceptId" select="./inherit/@ref|./@id[1]"/>
@@ -119,6 +120,11 @@
                             <identity value="hcim-basicelements-v1.0-2017EN"/>
                             <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
                             <name value="HCIM BasicElements-v1.0(2017EN)"/>
+                        </mapping>
+                        <mapping>
+                            <identity value="gebz-peri-v2.3" />
+                            <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+                            <name value="Geboortezorg Perinatologie 2.3" />
                         </mapping>
                         <kind value="resource"/>
                         <abstract value="false"/>
@@ -289,6 +295,11 @@
                                             <description value="{$valueSetName}" />
                                             <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/{$valueSetID}--{$effective}" />
                                         </binding>
+                                        <mapping>
+                                            <identity value="gebz-peri-v2.3" />
+                                            <map value="{$conceptIdDisplay}" />
+                                            <comment value="{$conceptName}" />
+                                        </mapping>
                                     </element>                                             
                                 </xsl:when>
                                 <xsl:when test="$dataType='Datum/tijd'">
@@ -298,6 +309,11 @@
                                         <type>
                                             <code value="dateTime" />
                                         </type>
+                                        <mapping>
+                                            <identity value="gebz-peri-v2.3" />
+                                            <map value="{$conceptIdDisplay}" />
+                                            <comment value="{$conceptName}" />
+                                        </mapping>
                                     </element>
                                 </xsl:when>
                                 <xsl:when test="$dataType='Hoeveelheid'">
@@ -307,6 +323,11 @@
                                         <type>
                                             <code value="Quantity" />
                                         </type>
+                                        <mapping>
+                                            <identity value="gebz-peri-v2.3" />
+                                            <map value="{$conceptIdDisplay}" />
+                                            <comment value="{$conceptName}" />
+                                        </mapping>
                                     </element>
                                     <element id="Observation.value[x]:valueQuantity.system">
                                         <path value="Observation.valueQuantity.system" />
