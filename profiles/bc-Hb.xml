@@ -1,43 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <url value="http://nictiz.nl/fhir/StructureDefinition/Hb"/>
-   <name value="Hb"/>
-   <status value="draft"/>
-   <fhirVersion value="3.0.1"/>
-   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
-   </mapping>
-   <kind value="resource"/>
-   <abstract value="false"/>
-   <type value="Observation"/>
-   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Observation.subject">
-         <path value="Observation.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman"/>
-         </type>
-      </element>
-      <element id="Observation.context">
-         <path value="Observation.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-      </element>
-      <element id="Observation.value[x]:valueQuantity">
-         <path value="Observation.valueQuantity"/>
-         <sliceName value="valueQuantity"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-      </element>
-      <element id="Observation.value[x]:valueQuantity.system">
-         <path value="Observation.valueQuantity.system"/>
-         <fixedUri value="https://unitsofmeasure.org"/>
-      </element>
-   </differential>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Hb" />
+  <name value="Hb" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10814" />
+        <comment value="Hb" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueQuantity.system">
+      <path value="Observation.valueQuantity.system" />
+      <fixedUri value="https://unitsofmeasure.org" />
+    </element>
+  </differential>
 </StructureDefinition>

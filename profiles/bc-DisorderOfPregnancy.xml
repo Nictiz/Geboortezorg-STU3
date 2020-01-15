@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
     <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Condition" />
@@ -75,10 +80,20 @@
         <description value="GynaecologischeAandoeningen" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82269" />
+        <comment value="Gynaecologische aandoening" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:Bloedverlies">
       <path value="Condition.code.coding" />
       <sliceName value="Bloedverlies" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82270" />
+        <comment value="Bloedverlies" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:Bloedverlies.system">
       <path value="Condition.code.coding.system" />
@@ -95,6 +110,11 @@
     <element id="Condition.code.coding:Cervixinsufficientie">
       <path value="Condition.code.coding" />
       <sliceName value="Cervixinsufficientie" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82271" />
+        <comment value="Cervixinsufficientie" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:Cervixinsufficientie.system">
       <path value="Condition.code.coding.system" />
@@ -120,6 +140,11 @@
     <element id="Condition.code.coding:HyperemesisGravidarum">
       <path value="Condition.code.coding" />
       <sliceName value="HyperemesisGravidarum" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82274" />
+        <comment value="HyperemesisGravidarum" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:HyperemesisGravidarum.system">
       <path value="Condition.code.coding.system" />
@@ -141,10 +166,20 @@
         <description value="HypertensieveAandoening" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82275" />
+        <comment value="Hypertensieve aandoening" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:Zwangerschapscholestase">
       <path value="Condition.code.coding" />
       <sliceName value="Zwangerschapscholestase" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82276" />
+        <comment value="Zwangerschapscholestase" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:Zwangerschapscholestase.system">
       <path value="Condition.code.coding.system" />
@@ -161,6 +196,11 @@
     <element id="Condition.code.coding:DiabetesGravidarumMetInsuline">
       <path value="Condition.code.coding" />
       <sliceName value="DiabetesGravidarumMetInsuline" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82277" />
+        <comment value="Diabetes gravidarum met insuline" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:DiabetesGravidarumMetInsuline.system">
       <path value="Condition.code.coding.system" />
@@ -182,10 +222,20 @@
         <description value="GroeiAfwijkend" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82278" />
+        <comment value="Afwijkende groei foetus" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:DreigendePartusImmaturus">
       <path value="Condition.code.coding" />
       <sliceName value="DreigendePartusImmaturus" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82279" />
+        <comment value="Dreigende partus immaturus" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:DreigendePartusImmaturus.system">
       <path value="Condition.code.coding.system" />
@@ -202,6 +252,11 @@
     <element id="Condition.code.coding:DreigendePartusPrematurus">
       <path value="Condition.code.coding" />
       <sliceName value="DreigendePartusPrematurus" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82280" />
+        <comment value="Dreigende partus prematurus" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:DreigendePartusPrematurus.system">
       <path value="Condition.code.coding.system" />
@@ -218,6 +273,11 @@
     <element id="Condition.code.coding:AbruptioPlacentae">
       <path value="Condition.code.coding" />
       <sliceName value="AbruptioPlacentae" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82289" />
+        <comment value="Abruptio placentae" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:AbruptioPlacentae.system">
       <path value="Condition.code.coding.system" />

@@ -54,6 +54,11 @@
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
     <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Procedure" />
@@ -101,6 +106,10 @@
           <display value="VerrichtingTypeCodelijst" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement" />
+      </mapping>
     </element>
     <element id="Procedure.code.coding:VaginaleKunstverlossing">
       <path value="Procedure.code.coding" />
@@ -110,6 +119,11 @@
         <description value="VaginaleKunstverlossing" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40190" />
+        <comment value="Vaginale kunstverlossing" />
+      </mapping>
     </element>
     <element id="Procedure.code.coding:OverigeInterventies">
       <path value="Procedure.code.coding" />
@@ -121,6 +135,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.20--20161123204523" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40240" />
+        <comment value="Overige interventies" />
+      </mapping>
     </element>
     <element id="Procedure.context">
       <path value="Procedure.context" />

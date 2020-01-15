@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
     <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Condition" />
@@ -49,6 +54,11 @@
         <description value="CongenitaleAfwijkingen" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40090" />
+        <comment value="Specificatie congenitale afwijking" />
+      </mapping>
     </element>
     <element id="Condition.code.coding:ChromosomaleAfwijking">
       <path value="Condition.code.coding" />
@@ -58,6 +68,11 @@
         <description value="ChromosomaleAfwijking" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40120" />
+        <comment value="Specificatie chromosomale afwijking" />
+      </mapping>
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
