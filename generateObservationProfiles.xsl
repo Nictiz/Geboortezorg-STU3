@@ -54,8 +54,15 @@
             <partof>Nageboortefase</partof>
         </item> 
         <item>
-            <id>peri23-dataelement-40290</id>
+            <id>peri23-dataelement-80705</id>
             <translation>PerinatalDeath</translation>
+            <datatype>Boolean</datatype>
+            <partof>Uitdrijvingsfase</partof>
+            <focus value="true"/>
+        </item>
+        <item>
+            <id>peri23-dataelement-40290</id>
+            <translation>PhaseOfPerinatalDeath</translation>
             <datatype>Code</datatype>
             <partof>Uitdrijvingsfase</partof>
             <focus value="true"/>
@@ -308,6 +315,20 @@
                                         <sliceName value="valueDateTime" />
                                         <type>
                                             <code value="dateTime" />
+                                        </type>
+                                        <mapping>
+                                            <identity value="gebz-peri-v2.3" />
+                                            <map value="{$conceptIdDisplay}" />
+                                            <comment value="{$conceptName}" />
+                                        </mapping>
+                                    </element>
+                                </xsl:when>
+                                <xsl:when test="$dataType='Boolean'">
+                                    <element id="Observation.value[x]:valueBoolean">
+                                        <path value="Observation.valueBoolean"/>
+                                        <sliceName value="valueBoolean"/>
+                                        <type>
+                                            <code value="boolean"/>
                                         </type>
                                         <mapping>
                                             <identity value="gebz-peri-v2.3" />
