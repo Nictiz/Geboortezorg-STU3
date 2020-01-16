@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalReport" />
-  <name value="bc-MaternalReport" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricReport" />
+  <name value="bc-ObstetricReport" />
   <status value="draft" />
   <fhirVersion value="3.0.1" />
   <mapping>
@@ -85,13 +85,38 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="DiagnosticReport.result:irregulaireAntistoffen">
+    <element id="DiagnosticReport.result:laboratoryTestResult">
       <path value="DiagnosticReport.result" />
-      <sliceName value="irregulaireAntistoffen" />
+      <sliceName value="laboratoryTestResult" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IrregularAntibodyPresent" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10810" />
+        <comment value="Bloedgroep vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82214" />
+        <comment value="Irregulaire antistoffen?" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10811" />
+        <comment value="Rhesus D Factor vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10816" />
+        <comment value="Rhesus c Factor" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10814" />
+        <comment value="Hb" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
