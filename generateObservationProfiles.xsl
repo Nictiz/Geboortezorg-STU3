@@ -101,20 +101,21 @@
             <xsl:variable name="focus" select="$dataItems[$pos]/focus"/>
             
             <xsl:value-of select="$id"/>
-            <xsl:value-of select="$partOf"/>
+            <xsl:text>&#xa;</xsl:text>
             
             <xsl:for-each select="$url//*[matches(@iddisplay,$dataItems[$pos]/id)]">
                 <xsl:variable name="conceptIdDisplay" select="@iddisplay"/>
                 <xsl:variable name="conceptName" select="./name"/>
-                <!-- todo: hoe betrouwbaar ophalen juiste conceptId? -->
                 <xsl:variable name="conceptId" select="./inherit/@ref|./@id[1]"/>
+                <xsl:variable name="terminology" select="./terminologyAssociation[@conceptId=$conceptId]"/>
+                <xsl:variable name="concept" select="$terminology[@codeSystemName='SNOMED CT']|$terminology[@codeSystemName='LOINC']|$terminology[1]"/>
                 <xsl:variable name="conceptCode" select="./terminologyAssociation[@conceptId=$conceptId]/@code"/>
                 <xsl:variable name="conceptDisplay" select="./terminologyAssociation[@conceptId=$conceptId]/@displayName"/>
                 <xsl:variable name="conceptCodeSystem" select="./terminologyAssociation[@conceptId=$conceptId]/@codeSystem"/>
                 <xsl:variable name="valueSetID" select="./valueSet/@id"/>
                 <xsl:variable name="valueSetName" select="./valueSet/@displayName"/>
                 <xsl:variable name="effective" select="translate(./valueSet/@effectiveDate,'-T:','')"/>
-                            
+                                        
                 <xsl:result-document href="{concat('bc-',translate($translation, ' ', ''),'.xml')}" indent="yes" method="xml" omit-xml-declaration="yes"> 
                     
                     <!-- XML StructureDefinition -->
