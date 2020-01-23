@@ -80,7 +80,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
-    <element id="Observation.extension:focus.valueReference:valueReference">
+    <element id="Observation.extension:focus.Reference:valueReference">
       <path value="Observation.extension.value[x]" />
       <sliceName value="valueReference" />
       <type>
@@ -123,13 +123,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-    </element>
-    <element id="Observation.context">
-      <path value="Observation.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
     <element id="Observation.performer">

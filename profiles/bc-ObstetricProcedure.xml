@@ -76,9 +76,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.partOf:birthProcedure">
+    <element id="Procedure.partOf:deliveryProcedure">
       <path value="Procedure.partOf" />
-      <sliceName value="birthProcedure" />
+      <sliceName value="deliveryProcedure" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
@@ -161,13 +161,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-    </element>
-    <element id="Procedure.context">
-      <path value="Procedure.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
     <element id="Procedure.reasonCode.coding">

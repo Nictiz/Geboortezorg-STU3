@@ -92,11 +92,22 @@
       <path value="Procedure.context" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
   </differential>
