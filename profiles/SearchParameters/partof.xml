@@ -1,0 +1,16 @@
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="partof" />
+    <url value="http://hl7.org/fhir/SearchParameter/partof" />
+    <name value="partof" />
+    <status value="active" />
+    <code value="partof" />
+    <base value="Observation" />
+    <base value="Procedure" />
+    <type value="reference" />
+    <description value="Resource this Observation is part of" />
+    <expression value="(Observation|Procedure).extension('http://hl7.org/fhir/StructureDefinition/event-partOf').value"/>
+    <target value = 'Any'/>
+    <!--<target value="Condition"/>
+	<target value="Observation"/>
+	<target value="Procedure"/>-->
+</SearchParameter>
