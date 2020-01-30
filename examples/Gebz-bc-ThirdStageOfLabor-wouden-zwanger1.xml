@@ -5,7 +5,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-StageOfLabor"/>
     </meta>
     <!-- context zwangerschapsdossier -->
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord">
+    <extension url="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare">
         <valueReference>
             <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
         </valueReference>
@@ -27,11 +27,11 @@
         <reference value="Patient/XXX-VDWOUDEN" />
         <display value="Patient van der Wouden" />
     </subject>
-    <code>
+    <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="15898009"/>
             <display value="Third stage of labor (finding)"/>
         </coding>
-    </code>
+    </valueCodeableConcept>
 </Observation>
