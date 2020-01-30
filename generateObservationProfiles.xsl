@@ -21,64 +21,69 @@
             <id>peri23-dataelement-80625</id>
             <translation>WayEndPregnancy</translation>
             <datatype>Code</datatype>
-            <partof>Zwangerschap</partof>
+            <focus>Zwangerschap</focus>
         </item>
         <item>
             <id>peri23-dataelement-20540</id>
             <translation>DateEndPregnancy</translation>
             <datatype>Datum/tijd</datatype>
-            <partof>Zwangerschap</partof>
+            <focus>Zwangerschap</focus>
         </item>
         <item>
             <id>peri23-dataelement-20550</id>
             <translation>WayStartBirth</translation>
             <datatype>Code</datatype>
-            <partof>Ontsluitingsfase</partof>
+            <focus>Ontsluitingsfase</focus>
         </item>
         <item>
             <id>peri23-dataelement-20630</id>
             <translation>BirthPlacenta</translation>
             <datatype>Code</datatype>
-            <partof>Nageboortefase</partof>
+            <focus>Nageboortefase</focus>
         </item>
         <item>
             <id>peri23-dataelement-20640</id>
             <translation>BloodLoss</translation>
             <datatype>Hoeveelheid</datatype>
-            <partof>Uitdrijvingsfase</partof>
+            <focus>Uitdrijvingsfase</focus>
         </item>        		
         <item>
             <id>peri23-dataelement-80673</id>
             <translation>StatePerineumPostpartum</translation>
             <datatype>Code</datatype>
-            <partof>Nageboortefase</partof>
+            <focus>Nageboortefase</focus>
         </item> 
         <item>
             <id>peri23-dataelement-80705</id>
             <translation>PerinatalDeath</translation>
             <datatype>Boolean</datatype>
-            <partof>Uitdrijvingsfase</partof>
-            <focus value="true"/>
+            <focus>Uitdrijvingsfase</focus>
+            <focuschild value="true"/>
         </item>
         <item>
             <id>peri23-dataelement-40290</id>
             <translation>PhaseOfPerinatalDeath</translation>
             <datatype>Code</datatype>
-            <partof>Uitdrijvingsfase</partof>
-            <focus value="true"/>
+            <focus>Uitdrijvingsfase</focus>
+            <focuschild value="true"/>
         </item> 
         <item>
             <id>peri23-dataelement-80626</id>
             <translation>ParturitionType</translation>
             <datatype>Code</datatype>
-            <partof>Uitdrijvingsfase</partof>
-            <focus value="true"/>
+            <focus>Uitdrijvingsfase</focus>
+            <focuschild value="true"/>
         </item> 
         <item>
-            <id>peri23-dataelement-10814</id>
-            <translation>Hb</translation>
-            <datatype>Hoeveelheid</datatype>
+            <id>peri23-dataelement-20590</id>
+            <translation>OnsetOfLaborFirstStage</translation>
+            <datatype>Datum/tijd</datatype>
         </item>
+        <item>
+            <id>peri23-dataelement-30030</id>
+            <translation>OnsetOfPushing</translation>
+            <datatype>Datum/tijd</datatype>
+        </item>        
     </xsl:variable>
     
     <xd:doc>
@@ -97,8 +102,8 @@
             <xsl:variable name="id" select="$dataItems[$pos]/id"/>
             <xsl:variable name="translation" select="$dataItems[$pos]/translation"/>
             <xsl:variable name="dataType" select="$dataItems[$pos]/datatype"/>
-            <xsl:variable name="partOf" select="lower-case($dataItems[$pos]/partof)"/>
-            <xsl:variable name="focus" select="$dataItems[$pos]/focus"/>
+            <xsl:variable name="focus" select="lower-case($dataItems[$pos]/focus)"/>
+            <xsl:variable name="focusChild" select="$dataItems[$pos]/focuschild"/>
             
             <xsl:value-of select="$id"/>
             <xsl:text>&#xa;</xsl:text>
@@ -144,7 +149,7 @@
                         <differential>
                             <!-- part of extensie afhankelijk van fase zwangerschap/bevalling/geboorte -->
                             <xsl:choose>
-                                <xsl:when test="$partOf!=''">
+                                <xsl:when test="$focus!=''">
                                     <element id="Observation.extension">
                                         <path value="Observation.extension"/>
                                         <slicing>
@@ -155,30 +160,30 @@
                                             <rules value="open"/>
                                         </slicing>
                                     </element>
-                                    <element id="Observation.extension:{$partOf}">
+                                    <element id="Observation.extension:{$focus}">
                                         <path value="Observation.extension"/>
-                                        <sliceName value="{$partOf}"/>
+                                        <sliceName value="{$focus}"/>
                                         <type>
                                             <code value="Extension"/>
-                                            <profile value="http://hl7.org/fhir/StructureDefinition/event-partOf"/>
+                                            <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
                                         </type>
                                     </element>
-                                    <element id="Observation.extension:{$partOf}.valueReference:valueReference">
+                                    <element id="Observation.extension:{$focus}.valueReference:valueReference">
                                         <path value="Observation.extension.valueReference"/>
                                         <sliceName value="valueReference"/>
                                         <type>
                                             <code value="Reference"/>
                                             <xsl:choose>
-                                                <xsl:when test="$partOf='zwangerschap'">
+                                                <xsl:when test="$focus='zwangerschap'">
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
                                                 </xsl:when>
-                                                <xsl:when test="$partOf='ontsluitingsfase'">
+                                                <xsl:when test="$focus='ontsluitingsfase'">
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FirstStageOfLabor"/>
                                                 </xsl:when>
-                                                <xsl:when test="$partOf='uitdrijvingsfase'">
+                                                <xsl:when test="$focus='uitdrijvingsfase'">
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
                                                 </xsl:when>
-                                                <xsl:when test="$partOf='nageboortefase'">
+                                                <xsl:when test="$focus='nageboortefase'">
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ThirdStageOfLabor"/>
                                                 </xsl:when>
                                             </xsl:choose>  
@@ -189,16 +194,16 @@
                             
                             <!-- focus extensie voor kindspecifieke uitkomstgegevens bij uitdrijvingsfase -->
                             <xsl:choose>
-                                <xsl:when test="$focus">
-                                    <element id="Observation.extension:focus">
+                                <xsl:when test="$focusChild">
+                                    <element id="Observation.extension:focusChild">
                                         <path value="Observation.extension" />
-                                        <sliceName value="focus" />
+                                        <sliceName value="focusChild" />
                                         <type>
                                             <code value="Extension" />
                                             <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
                                         </type>
                                     </element>
-                                    <element id="Observation.extension:focus.valueReference:valueReference">
+                                    <element id="Observation.extension:focusChild.valueReference:valueReference">
                                         <path value="Observation.extension.valueReference" />
                                         <sliceName value="valueReference" />
                                         <type>
@@ -247,7 +252,7 @@
                             
                             <!-- subject is kind bij geboortegegevens, anders altijd de moeder -->
                             <xsl:choose>
-                                <xsl:when test="$partOf='Geboorte'">
+                                <xsl:when test="$focus='Geboorte'">
                                     <element id="Observation.subject">
                                         <path value="Observation.subject"/>
                                         <type>

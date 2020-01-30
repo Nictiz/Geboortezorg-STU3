@@ -1,134 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/PhaseOfPerinatalDeath" />
-  <name value="bc-PhaseOfPerinatalDeath" />
-  <status value="draft" />
-  <fhirVersion value="3.0.1" />
-  <mapping>
-    <identity value="hcim-basicelements-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
-    <name value="HCIM BasicElements-v1.0(2017EN)" />
-  </mapping>
-  <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:uitdrijvingsfase">
-      <path value="Observation.extension" />
-      <sliceName value="uitdrijvingsfase" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/event-partOf" />
-      </type>
-    </element>
-    <element id="Observation.extension:uitdrijvingsfase.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor" />
-      </type>
-    </element>
-    <element id="Observation.extension:focus">
-      <path value="Observation.extension" />
-      <sliceName value="focus" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
-      </type>
-    </element>
-    <element id="Observation.extension:focus.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Fetus" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Child" />
-      </type>
-    </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.code.coding:FasePerinataleSterfte">
-      <path value="Observation.code.coding" />
-      <sliceName value="FasePerinataleSterfte" />
-    </element>
-    <element id="Observation.code.coding:FasePerinataleSterfte.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="2.16.840.1.113883.2.4.4.13" />
-    </element>
-    <element id="Observation.code.coding:FasePerinataleSterfte.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="FasePerinataleSterfte" />
-    </element>
-    <element id="Observation.code.coding:FasePerinataleSterfte.display">
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Fase perinatale sterfte" />
-    </element>
-    <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
-      </type>
-    </element>
-    <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-    </element>
-    <element id="Observation.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.value[x]:valueCodeableConcept.coding:FasePerinataleSterfte">
-      <path value="Observation.valueCodeableConcept.coding" />
-      <sliceName value="FasePerinataleSterfte" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Fase Perinatale Sterfte (2.2)" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40290" />
-        <comment value="Fase perinatale sterfte" />
-      </mapping>
-    </element>
-  </differential>
+   <url value="http://nictiz.nl/fhir/StructureDefinition/PhaseOfPerinatalDeath"/>
+   <name value="PhaseOfPerinatalDeath"/>
+   <status value="draft"/>
+   <fhirVersion value="3.0.1"/>
+   <mapping>
+      <identity value="hcim-basicelements-v1.0-2017EN"/>
+      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
+      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+   </mapping>
+   <mapping>
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation.extension">
+         <path value="Observation.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.extension:uitdrijvingsfase">
+         <path value="Observation.extension"/>
+         <sliceName value="uitdrijvingsfase"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
+         </type>
+      </element>
+      <element id="Observation.extension:uitdrijvingsfase.valueReference:valueReference">
+         <path value="Observation.extension.valueReference"/>
+         <sliceName value="valueReference"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
+         </type>
+      </element>
+      <element id="Observation.extension:focusChild">
+         <path value="Observation.extension"/>
+         <sliceName value="focusChild"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
+         </type>
+      </element>
+      <element id="Observation.extension:focusChild.valueReference:valueReference">
+         <path value="Observation.extension.valueReference"/>
+         <sliceName value="valueReference"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Fetus"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Child"/>
+         </type>
+      </element>
+      <element id="Observation.code.coding">
+         <path value="Observation.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.code.coding:FasePerinataleSterfte">
+         <path value="Observation.code.coding"/>
+         <sliceName value="FasePerinataleSterfte"/>
+      </element>
+      <element id="Observation.code.coding:FasePerinataleSterfte.system">
+         <path value="Observation.code.coding.system"/>
+         <fixedUri value="2.16.840.1.113883.2.4.4.13"/>
+      </element>
+      <element id="Observation.code.coding:FasePerinataleSterfte.code">
+         <path value="Observation.code.coding.code"/>
+         <fixedCode value="FasePerinataleSterfte"/>
+      </element>
+      <element id="Observation.code.coding:FasePerinataleSterfte.display">
+         <path value="Observation.code.coding.display"/>
+         <fixedString value="Fase perinatale sterfte"/>
+      </element>
+      <element id="Observation.subject">
+         <path value="Observation.subject"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman"/>
+         </type>
+      </element>
+      <element id="Observation.context">
+         <path value="Observation.context"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+      </element>
+      <element id="Observation.value[x]:valueCodeableConcept">
+         <path value="Observation.valueCodeableConcept"/>
+         <sliceName value="valueCodeableConcept"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="Observation.value[x]:valueCodeableConcept.coding">
+         <path value="Observation.valueCodeableConcept.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.value[x]:valueCodeableConcept.coding:FasePerinataleSterfte">
+         <path value="Observation.valueCodeableConcept.coding"/>
+         <sliceName value="FasePerinataleSterfte"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="Fase Perinatale Sterfte (2.2)"/>
+            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049"/>
+         </binding>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-40290"/>
+            <comment value="Fase perinatale sterfte"/>
+         </mapping>
+      </element>
+   </differential>
 </StructureDefinition>

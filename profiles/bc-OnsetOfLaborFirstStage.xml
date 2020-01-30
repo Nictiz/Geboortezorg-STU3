@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <url value="http://nictiz.nl/fhir/StructureDefinition/BloodLoss"/>
-   <name value="BloodLoss"/>
+   <url value="http://nictiz.nl/fhir/StructureDefinition/OnsetOfLaborFirstStage"/>
+   <name value="OnsetOfLaborFirstStage"/>
    <status value="draft"/>
    <fhirVersion value="3.0.1"/>
    <mapping>
@@ -19,32 +19,6 @@
    <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="Observation.extension">
-         <path value="Observation.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.extension:uitdrijvingsfase">
-         <path value="Observation.extension"/>
-         <sliceName value="uitdrijvingsfase"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
-         </type>
-      </element>
-      <element id="Observation.extension:uitdrijvingsfase.valueReference:valueReference">
-         <path value="Observation.extension.valueReference"/>
-         <sliceName value="valueReference"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
-         </type>
-      </element>
       <element id="Observation.code.coding">
          <path value="Observation.code.coding"/>
          <slicing>
@@ -55,21 +29,21 @@
             <rules value="open"/>
          </slicing>
       </element>
-      <element id="Observation.code.coding:364332008">
+      <element id="Observation.code.coding:PRN520301 249120008">
          <path value="Observation.code.coding"/>
-         <sliceName value="364332008"/>
+         <sliceName value="PRN520301 249120008"/>
       </element>
-      <element id="Observation.code.coding:364332008.system">
+      <element id="Observation.code.coding:PRN520301 249120008.system">
          <path value="Observation.code.coding.system"/>
-         <fixedUri value="2.16.840.1.113883.6.96"/>
+         <fixedUri value="2.16.840.1.113883.2.4.3.22.1.1 2.16.840.1.113883.6.96"/>
       </element>
-      <element id="Observation.code.coding:364332008.code">
+      <element id="Observation.code.coding:PRN520301 249120008.code">
          <path value="Observation.code.coding.code"/>
-         <fixedCode value="364332008"/>
+         <fixedCode value="PRN520301 249120008"/>
       </element>
-      <element id="Observation.code.coding:364332008.display">
+      <element id="Observation.code.coding:PRN520301 249120008.display">
          <path value="Observation.code.coding.display"/>
-         <fixedString value="Blood loss in labour"/>
+         <fixedString value="Tijdstip begin actieve ontsluiting Onset of labour first stage"/>
       </element>
       <element id="Observation.subject">
          <path value="Observation.subject"/>
@@ -85,21 +59,17 @@
             <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
          </type>
       </element>
-      <element id="Observation.value[x]:valueQuantity">
-         <path value="Observation.valueQuantity"/>
-         <sliceName value="valueQuantity"/>
+      <element id="Observation.value[x]:valueDateTime">
+         <path value="Observation.valueDateTime"/>
+         <sliceName value="valueDateTime"/>
          <type>
-            <code value="Quantity"/>
+            <code value="dateTime"/>
          </type>
          <mapping>
             <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20640"/>
-            <comment value="Hoeveelheid bloedverlies"/>
+            <map value="peri23-dataelement-20590"/>
+            <comment value="Tijdstip begin actieve ontsluiting"/>
          </mapping>
-      </element>
-      <element id="Observation.value[x]:valueQuantity.system">
-         <path value="Observation.valueQuantity.system"/>
-         <fixedUri value="https://unitsofmeasure.org"/>
       </element>
    </differential>
 </StructureDefinition>
