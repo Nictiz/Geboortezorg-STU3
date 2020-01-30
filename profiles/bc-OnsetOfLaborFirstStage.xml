@@ -19,6 +19,32 @@
    <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
    <derivation value="constraint"/>
    <differential>
+      <element id="Observation.extension">
+         <path value="Observation.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.extension:bevalling">
+         <path value="Observation.extension"/>
+         <sliceName value="bevalling"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
+         </type>
+      </element>
+      <element id="Observation.extension:bevalling.valueReference:valueReference">
+         <path value="Observation.extension.valueReference"/>
+         <sliceName value="valueReference"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-StageOfLabor"/>
+         </type>
+      </element>
       <element id="Observation.code.coding">
          <path value="Observation.code.coding"/>
          <slicing>

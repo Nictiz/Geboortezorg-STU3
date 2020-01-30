@@ -33,31 +33,31 @@
             <id>peri23-dataelement-20550</id>
             <translation>WayStartBirth</translation>
             <datatype>Code</datatype>
-            <focus>Ontsluitingsfase</focus>
+            <focus>Bevalling</focus>
         </item>
         <item>
             <id>peri23-dataelement-20630</id>
             <translation>BirthPlacenta</translation>
             <datatype>Code</datatype>
-            <focus>Nageboortefase</focus>
+            <focus>Bevalling</focus>
         </item>
         <item>
             <id>peri23-dataelement-20640</id>
             <translation>BloodLoss</translation>
             <datatype>Hoeveelheid</datatype>
-            <focus>Uitdrijvingsfase</focus>
+            <focus>Bevalling</focus>
         </item>        		
         <item>
             <id>peri23-dataelement-80673</id>
             <translation>StatePerineumPostpartum</translation>
             <datatype>Code</datatype>
-            <focus>Nageboortefase</focus>
+            <focus>Bevalling</focus>
         </item> 
         <item>
             <id>peri23-dataelement-80705</id>
             <translation>PerinatalDeath</translation>
             <datatype>Boolean</datatype>
-            <focus>Uitdrijvingsfase</focus>
+            <focus>Bevalling</focus>
             <focuschild value="true"/>
         </item>
         <item>
@@ -71,18 +71,20 @@
             <id>peri23-dataelement-80626</id>
             <translation>ParturitionType</translation>
             <datatype>Code</datatype>
-            <focus>Uitdrijvingsfase</focus>
+            <focus>Bevalling</focus>
             <focuschild value="true"/>
         </item> 
         <item>
             <id>peri23-dataelement-20590</id>
             <translation>OnsetOfLaborFirstStage</translation>
             <datatype>Datum/tijd</datatype>
+            <focus>Bevalling</focus>
         </item>
         <item>
             <id>peri23-dataelement-30030</id>
             <translation>OnsetOfPushing</translation>
             <datatype>Datum/tijd</datatype>
+            <focus>Bevalling</focus>
         </item>        
     </xsl:variable>
     
@@ -177,14 +179,8 @@
                                                 <xsl:when test="$focus='zwangerschap'">
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
                                                 </xsl:when>
-                                                <xsl:when test="$focus='ontsluitingsfase'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FirstStageOfLabor"/>
-                                                </xsl:when>
-                                                <xsl:when test="$focus='uitdrijvingsfase'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor"/>
-                                                </xsl:when>
-                                                <xsl:when test="$focus='nageboortefase'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ThirdStageOfLabor"/>
+                                                <xsl:when test="$focus='bevalling'">
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-StageOfLabor"/>
                                                 </xsl:when>
                                             </xsl:choose>  
                                         </type>
