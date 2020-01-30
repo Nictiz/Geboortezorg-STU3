@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <url value="http://nictiz.nl/fhir/StructureDefinition/StatePerineumPostpartum"/>
-   <name value="StatePerineumPostpartum"/>
+   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-StatePerineumPostpartum"/>
+   <name value="bc-StatePerineumPostpartum"/>
    <status value="draft"/>
    <fhirVersion value="3.0.1"/>
    <mapping>
@@ -20,13 +20,13 @@
    <derivation value="constraint"/>
    <differential>
       <element id="Observation.extension">
-         <path value="Observation.extension" />
+         <path value="Observation.extension"/>
          <slicing>
             <discriminator>
-               <type value="value" />
-               <path value="url" />
+               <type value="value"/>
+               <path value="url"/>
             </discriminator>
-            <rules value="open" />
+            <rules value="open"/>
          </slicing>
       </element>
       <element id="Observation.extension:episodeOfCare">
@@ -46,16 +46,6 @@
             <code value="Reference"/>
             <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord"/>
          </type>
-      </element>
-      <element id="Observation.extension">
-         <path value="Observation.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
       </element>
       <element id="Observation.extension:bevalling">
          <path value="Observation.extension"/>

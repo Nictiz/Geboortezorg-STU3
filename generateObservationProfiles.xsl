@@ -127,8 +127,8 @@
                     
                     <!-- XML StructureDefinition -->
                     <StructureDefinition xmlns="http://hl7.org/fhir">
-                        <url value="http://nictiz.nl/fhir/StructureDefinition/{translate($translation, ' ', '')}"/>
-                        <name value="{translate($translation, ' ', '')}"/>
+                        <url value="http://nictiz.nl/fhir/StructureDefinition/bc-{translate($translation, ' ', '')}"/>
+                        <name value="bc-{translate($translation, ' ', '')}"/>
                         <status value="draft"/>
                         <fhirVersion value="3.0.1"/>
                         <mapping>
