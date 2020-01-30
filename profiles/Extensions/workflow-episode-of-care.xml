@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="workflow-episodeOfCare" />
+  <url value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+  <name value="workflow-episodeOfCare" />
+  <title value="Episode of Care" />
+  <status value="draft" />
+  <date value="2017-12-06" />
+  <description value="The episode(s) of care that establishes the context for this {{title}}." />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Observation" />
+  <context value="DiagnosticReport" />
+  <context value="Media" />
+  <context value="DeviceRequest" />
+  <context value="ServiceRequest" />
+  <context value="NutritionOrder" />
+  <context value="DeviceUseStatement" />
+  <context value="AdverseEvent" />
+  <context value="CarePlan" />
+  <context value="CareTeam" />
+  <context value="ClinicalImpression" />
+  <context value="Communication" />
+  <context value="CommunicationRequest" />
+  <context value="Condition" />
+  <context value="Procedure" />
+  <context value="QuestionnaireResponse" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

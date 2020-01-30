@@ -1,0 +1,15 @@
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="eoc" />
+    <url value="http://nictiz.nl/fhir/SearchParameter/eoc" />
+    <name value="eoc" />
+    <status value="active" />
+    <code value="eoc" />
+    <base value="Condition" />
+    <base value="Observation" />
+    <base value="Procedure" />
+    <base value="DiagnosticReport" />
+    <type value="reference" />
+    <description value="Episode of care that provides the context of this structure" />
+    <expression value="(Condition|Observation|Procedure|DiagnosticReport).extension('http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare').value"/>
+    <target value = 'EpisodeOfCare'/>
+</SearchParameter>

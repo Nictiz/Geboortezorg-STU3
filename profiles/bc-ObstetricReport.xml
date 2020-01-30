@@ -35,6 +35,34 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
   <derivation value="constraint" />
   <differential>
+    <element id="DiagnosticReport.extension">
+      <path value="DiagnosticReport.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.extension:episodeOfCare">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="episodeOfCare" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.extension:episodeOfCare.valueReference:valueReference">
+      <path value="DiagnosticReport.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
     <element id="DiagnosticReport.code.coding">
       <path value="DiagnosticReport.code.coding" />
       <slicing>

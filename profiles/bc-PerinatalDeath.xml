@@ -19,6 +19,24 @@
    <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
    <derivation value="constraint"/>
    <differential>
+      <element id="Observation.extension:episodeOfCare">
+         <path value="Observation.extension"/>
+         <sliceName value="episodeOfCare"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare"/>
+         </type>
+      </element>
+      <element id="Observation.extension:episodeOfCare.valueReference:valueReference">
+         <path value="Observation.extension.valueReference"/>
+         <sliceName value="valueReference"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+      </element>
       <element id="Observation.extension">
          <path value="Observation.extension"/>
          <slicing>
@@ -70,13 +88,6 @@
          <type>
             <code value="Reference"/>
             <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman"/>
-         </type>
-      </element>
-      <element id="Observation.context">
-         <path value="Observation.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
          </type>
       </element>
       <element id="Observation.value[x]:valueBoolean">

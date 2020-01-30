@@ -149,19 +149,39 @@
                         
                         <!-- differential -->                        
                         <differential>
-                            <!-- part of extensie afhankelijk van fase zwangerschap/bevalling/geboorte -->
+                            <!-- eoc extensie -->
+                            <element id="Observation.extension">
+                                <path value="Observation.extension"/>
+                                <slicing>
+                                    <discriminator>
+                                        <type value="value"/>
+                                        <path value="url"/>
+                                    </discriminator>
+                                    <rules value="open"/>
+                                </slicing>
+                            </element>
+                            <element id="Observation.extension:episodeOfCare">
+                                <path value="Observation.extension" />
+                                <sliceName value="episodeOfCare" />
+                                <min value="0" />
+                                <max value="*" />
+                                <type>
+                                    <code value="Extension" />
+                                    <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+                                </type>
+                            </element>
+                            <element id="Observation.extension:episodeOfCare.valueReference:valueReference">
+                                <path value="Observation.extension.valueReference" />
+                                <sliceName value="valueReference" />
+                                <type>
+                                    <code value="Reference" />
+                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
+                                </type>
+                            </element>
+                                                        
+                            <!-- focus extensie afhankelijk van zwangerschap/bevalling -->
                             <xsl:choose>
                                 <xsl:when test="$focus!=''">
-                                    <element id="Observation.extension">
-                                        <path value="Observation.extension"/>
-                                        <slicing>
-                                            <discriminator>
-                                                <type value="value"/>
-                                                <path value="url"/>
-                                            </discriminator>
-                                            <rules value="open"/>
-                                        </slicing>
-                                    </element>
                                     <element id="Observation.extension:{$focus}">
                                         <path value="Observation.extension"/>
                                         <sliceName value="{$focus}"/>
@@ -188,7 +208,7 @@
                                 </xsl:when>
                             </xsl:choose>
                             
-                            <!-- focus extensie voor kindspecifieke uitkomstgegevens bij uitdrijvingsfase -->
+                            <!-- focus extensie voor kindspecifieke uitkomstgegevens bij bevalling -->
                             <xsl:choose>
                                 <xsl:when test="$focusChild">
                                     <element id="Observation.extension:focusChild">
@@ -267,15 +287,7 @@
                                     </element>                                    
                                 </xsl:otherwise>
                             </xsl:choose>
-                            
-                            <element id="Observation.context">
-                                <path value="Observation.context" />
-                                <type>
-                                    <code value="Reference" />
-                                    <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-                                </type>
-                            </element>
-                            
+                                  
                             <!-- constraints value[x] element obv datatype -->
                             <xsl:choose>
                                 <xsl:when test="$dataType='Code'">                                 
