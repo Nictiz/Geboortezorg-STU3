@@ -79,8 +79,6 @@
     <element id="Procedure.extension:episodeOfCare">
       <path value="Procedure.extension" />
       <sliceName value="episodeOfCare" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
@@ -123,6 +121,32 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-SecondStageOfLabor" />
       </type>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.category.coding:obstetricprocedure">
+      <path value="Procedure.category.coding" />
+      <sliceName value="obstetricprocedure" />
+    </element>
+    <element id="Procedure.category.coding:obstetricprocedure.system">
+      <path value="Procedure.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.category.coding:obstetricprocedure.code">
+      <path value="Procedure.category.coding.code" />
+      <fixedCode value="386637004" />
+    </element>
+    <element id="Procedure.category.coding:obstetricprocedure.display">
+      <path value="Procedure.category.coding.display" />
+      <fixedString value="Obstetric procedure (procedure)" />
     </element>
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
