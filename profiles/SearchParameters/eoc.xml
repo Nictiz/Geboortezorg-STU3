@@ -10,6 +10,6 @@
     <base value="DiagnosticReport" />
     <type value="reference" />
     <description value="Episode of care that provides the context of this structure" />
-    <expression value="(Condition|Observation|Procedure|DiagnosticReport).extension('http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare').value"/>
+    <expression value="(Condition|Observation|Procedure|DiagnosticReport).extension('http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare').value"/>
     <target value = 'EpisodeOfCare'/>
 </SearchParameter>
