@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <Observation xmlns="http://hl7.org/fhir">
     <id value="ontsluitingsfase-wouden-zwanger1"/>
     <meta>
@@ -10,7 +10,7 @@
             <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
         </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
             <reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
         </valueReference>
@@ -27,6 +27,9 @@
         <reference value="Patient/XXX-VDWOUDEN" />
         <display value="Patient van der Wouden" />
     </subject>
+    <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
+    </context>
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
