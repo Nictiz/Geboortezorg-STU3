@@ -56,28 +56,12 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:episodeOfCare">
-      <path value="Observation.extension" />
-      <sliceName value="episodeOfCare" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
-      </type>
-    </element>
-    <element id="Observation.extension:episodeOfCare.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
-      </type>
-    </element>
     <element id="Observation.extension:deliveryProcedure">
       <path value="Observation.extension" />
       <sliceName value="deliveryProcedure" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/event-partOf" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
     <element id="Observation.extension:deliveryProcedure.valueReference:valueReference">

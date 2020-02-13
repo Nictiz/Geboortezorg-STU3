@@ -62,24 +62,6 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
       </type>
     </element>
-    <element id="Condition.extension:episodeOfCare">
-      <path value="Condition.extension" />
-      <sliceName value="episodeOfCare" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
-      </type>
-    </element>
-    <element id="Condition.extension:episodeOfCare.valueReference:valueReference">
-      <path value="Condition.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
-      </type>
-    </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />
       <slicing>

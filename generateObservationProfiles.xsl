@@ -162,6 +162,7 @@
                                     <rules value="open"/>
                                 </slicing>
                             </element>
+                            <!--
                             <element id="Observation.extension:episodeOfCare">
                                 <path value="Observation.extension" />
                                 <sliceName value="episodeOfCare" />
@@ -180,6 +181,7 @@
                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
                                 </type>
                             </element>
+                            -->
                                                         
                             <!-- focus extensie afhankelijk van zwangerschap/bevalling -->
                             <xsl:choose>

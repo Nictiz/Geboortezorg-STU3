@@ -66,32 +66,6 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
   <derivation value="constraint" />
   <differential>
-    <element id="Procedure.extension">
-      <path value="Procedure.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Procedure.extension:episodeOfCare">
-      <path value="Procedure.extension" />
-      <sliceName value="episodeOfCare" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
-      </type>
-    </element>
-    <element id="Procedure.extension:episodeOfCare.valueReference:valueReference">
-      <path value="Procedure.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
-      </type>
-    </element>
     <element id="Procedure.partOf">
       <path value="Procedure.partOf" />
       <slicing>
