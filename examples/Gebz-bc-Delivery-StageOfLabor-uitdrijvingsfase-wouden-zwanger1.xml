@@ -1,17 +1,17 @@
 
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="uitdrijvingsfase-wouden-zwanger3"/>
+    <id value="uitdrijvingsfase-wouden-zwanger1"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-StageOfLabor"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-StageOfLabor"/>
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
-            <reference value="Procedure/bevallingprocedure-wouden-zwanger3" />
+            <reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
         </valueReference>
     </extension>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
-            <reference value="Patient/XXX-KINDZW2VDWOUDEN" />
+            <reference value="Patient/XXX-KINDZW1VDWOUDEN" />
         </valueReference>
     </extension>
     <status value="final"/>
@@ -27,7 +27,7 @@
         <display value="Patient van der Wouden" />
     </subject>
     <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
     </context>
     <valueCodeableConcept>
         <coding>
