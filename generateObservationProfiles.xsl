@@ -19,19 +19,19 @@
     <xsl:variable name="dataItems" as="element()*">
         <item>
             <id>peri23-dataelement-80625</id>
-            <translation>WayEndPregnancy</translation>
+            <translation>Pregnancy-EndType</translation>
             <datatype>Code</datatype>
             <focus>Zwangerschap</focus>
         </item>
         <item>
             <id>peri23-dataelement-20540</id>
-            <translation>DateEndPregnancy</translation>
+            <translation>Pregnancy-EndDate</translation>
             <datatype>Datum/tijd</datatype>
             <focus>Zwangerschap</focus>
         </item>
         <item>
             <id>peri23-dataelement-20550</id>
-            <translation>WayStartBirth</translation>
+            <translation>Birth-StartType</translation>
             <datatype>Code</datatype>
             <focus>Bevallingsfase</focus>
         </item>
@@ -62,7 +62,7 @@
         </item>
         <item>
             <id>peri23-dataelement-40290</id>
-            <translation>PhaseOfPerinatalDeath</translation>
+            <translation>PerinatalDeath-Phase</translation>
             <datatype>Code</datatype>
             <focus>Uitdrijvingsfase</focus>
             <focuschild value="true"/>
@@ -184,7 +184,7 @@
                                                     <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
                                                 </xsl:when>
                                                 <xsl:when test="$focus='bevallingsfase'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-StageOfLabor"/>
+                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-StageOfLabor"/>
                                                 </xsl:when>
                                             </xsl:choose>  
                                         </type>
