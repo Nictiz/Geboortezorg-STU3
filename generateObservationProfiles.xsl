@@ -162,26 +162,6 @@
                                     <rules value="open"/>
                                 </slicing>
                             </element>
-                            <!--
-                            <element id="Observation.extension:episodeOfCare">
-                                <path value="Observation.extension" />
-                                <sliceName value="episodeOfCare" />
-                                <min value="0" />
-                                <max value="*" />
-                                <type>
-                                    <code value="Extension" />
-                                    <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
-                                </type>
-                            </element>
-                            <element id="Observation.extension:episodeOfCare.valueReference:valueReference">
-                                <path value="Observation.extension.valueReference" />
-                                <sliceName value="valueReference" />
-                                <type>
-                                    <code value="Reference" />
-                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-MaternalRecord" />
-                                </type>
-                            </element>
-                            -->
                                                         
                             <!-- focus extensie afhankelijk van zwangerschap/bevallingsfase -->
                             <xsl:choose>
@@ -267,6 +247,35 @@
                                         <path value="Observation.code.coding.display"/>
                                         <fixedString value="{$conceptDisplay}"/>
                                     </element>
+                                </xsl:when>
+                                <!-- tijdelijke workaround tot loinc code in ada is opgenomen -->
+                                <xsl:when test="$conceptName='Datum einde zwangerschap'">
+                                    <element id="Observation.code.coding">
+                                        <path value="Observation.code.coding"/>
+                                        <slicing>
+                                            <discriminator>
+                                                <type value="value"/>
+                                                <path value="code"/>
+                                            </discriminator>
+                                            <rules value="open"/>
+                                        </slicing>
+                                    </element>
+                                    <element id="Observation.code.coding:datumEindeZwangerschap">
+                                        <path value="Observation.code.coding"/>
+                                        <sliceName value="datumEindeZwangerschap"/>
+                                    </element>
+                                    <element id="Observation.code.coding:datumEindeZwangerschap.system">
+                                        <path value="Observation.code.coding.system"/>
+                                        <fixedUri value="http://loinc.org"/>
+                                    </element>
+                                    <element id="Observation.code.coding:datumEindeZwangerschap.code">
+                                        <path value="Observation.code.coding.code"/>
+                                        <fixedCode value="63963-3"/>
+                                    </element>
+                                    <element id="Observation.code.coding:datumEindeZwangerschap.display">
+                                        <path value="Observation.code.coding.display"/>
+                                        <fixedString value="Date of end of pregnancy"/>
+                                    </element>                                   
                                 </xsl:when>
                             </xsl:choose>
                             
