@@ -36,6 +36,20 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
   <derivation value="constraint" />
   <differential>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <comment value="A ConceptMap (https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-VerificationStatus) is available." />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40100" />
+        <comment value="Waarschijnlijkheid congenitale afwijking" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40130" />
+        <comment value="Waarschijnlijkheid chromosomale afwijking" />
+      </mapping>
+    </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />
       <slicing>
@@ -72,6 +86,20 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40120" />
         <comment value="Specificatie chromosomale afwijking" />
+      </mapping>
+    </element>
+    <element id="Condition.code.coding:ProblematiekKind">
+      <path value="Condition.code.coding" />
+      <sliceName value="ProblematiekKind" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProblematiekKind" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.12--20191009125104" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80789" />
+        <comment value="Problematiek kind" />
       </mapping>
     </element>
     <element id="Condition.subject">

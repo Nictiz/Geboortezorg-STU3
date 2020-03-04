@@ -1,0 +1,60 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true" />
+    </extension>
+    <url value="http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-ConditionVerificationStatus" />
+    <version value="1.0" />
+    <name value="UncertaintyCode-to-ConditionVerificationStatus" />
+    <title value="UncertaintyCode-to-ConditionVerificationStatus" />
+    <status value="active" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="email" />
+            <value value="info@nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Maps the PWD ActUncertainty terminology for UncertaintyCode to the FHIR STU3 terminology associated with Condition.verificationStatus." />
+    <purpose value="To aid in mapping from PWD ActUncertainty value set UncertaintyCode to FHIR STU3 Condition.verificationStatus." />
+    <copyright value="CC0" />
+    <sourceUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.50--20130118110803" />
+    <targetUri value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
+    <group>
+        <source value="ActUncertainty" />
+        <target value="http://hl7.org/fhir/condition-ver-status" />
+        <targetVersion value="http://hl7.org/fhir/condition-ver-status version 3.0.1" />
+        <element>
+            <code value="U" />
+            <display value="Stated with uncertainty" />
+            <target>
+                <code value="provisional" />
+                <display value="Provisional" />
+                <equivalence value="equal" />
+            </target>
+        </element>
+        <element>
+            <code value="N" />
+            <display value="Stated with no assertion of uncertainty" />
+            <target>
+                <code value="confirmed" />
+                <display value="Confirmed" />
+                <equivalence value="equal" />
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="NullFlavor" />
+        <target value="http://hl7.org/fhir/condition-ver-status" />
+        <element>
+            <code value="NI" />
+            <display value="Geen informatie" />
+            <target>
+                <code value="unknown" />
+                <display value="Unknown" />
+                <equivalence value="equal" />
+            </target>
+        </element>
+    </group>
+</ConceptMap>
