@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
@@ -15,105 +14,28 @@
     
     <xsl:output omit-xml-declaration="yes"/>
     
-    <!-- input: data items waarvoor profiel gemaakt moet worden -->
-    <xsl:variable name="dataItems" as="element()*">
-        <item>
-            <id>peri23-dataelement-80625</id>
-            <translation>Pregnancy-EndType</translation>
-            <datatype>Code</datatype>
-            <focus>Zwangerschap</focus>
-        </item>
-        <item>
-            <id>peri23-dataelement-20540</id>
-            <translation>Pregnancy-EndDate</translation>
-            <datatype>Datum/tijd</datatype>
-            <focus>Zwangerschap</focus>
-        </item>
-        <item>
-            <id>peri23-dataelement-20550</id>
-            <translation>Birth-StartType</translation>
-            <datatype>Code</datatype>
-            <focus>Bevallingsfase</focus>
-        </item>
-        <item>
-            <id>peri23-dataelement-20630</id>
-            <translation>BirthPlacenta</translation>
-            <datatype>Code</datatype>
-            <focus>Bevallingsfase</focus>
-        </item>
-        <item>
-            <id>peri23-dataelement-20640</id>
-            <translation>BloodLoss</translation>
-            <datatype>Hoeveelheid</datatype>
-            <focus>Bevallingsfase</focus>
-        </item>        		
-        <item>
-            <id>peri23-dataelement-80673</id>
-            <translation>StatePerineumPostpartum</translation>
-            <datatype>Code</datatype>
-            <focus>Bevallingsfase</focus>
-        </item> 
-        <item>
-            <id>peri23-dataelement-80705</id>
-            <translation>PerinatalDeath</translation>
-            <datatype>Boolean</datatype>
-            <focus>Bevallingsfase</focus>
-            <focuschild value="true"/>
-        </item>
-        <item>
-            <id>peri23-dataelement-40290</id>
-            <translation>PerinatalDeath-Phase</translation>
-            <datatype>Code</datatype>
-            <focus>Uitdrijvingsfase</focus>
-            <focuschild value="true"/>
-        </item> 
-        <item>
-            <id>peri23-dataelement-80626</id>
-            <translation>ParturitionType</translation>
-            <datatype>Code</datatype>
-            <focus>Bevallingsfase</focus>
-            <focuschild value="true"/>
-        </item> 
-        <item>
-            <id>peri23-dataelement-20590</id>
-            <translation>OnsetOfLaborFirstStage</translation>
-            <datatype>Datum/tijd</datatype>
-            <focus>Bevallingsfase</focus>
-        </item>
-        <item>
-            <id>peri23-dataelement-30030</id>
-            <translation>OnsetOfPushing</translation>
-            <datatype>Datum/tijd</datatype>
-            <focus>Bevallingsfase</focus>
-        </item>        
-    </xsl:variable>
-    
     <xd:doc>
         <xd:desc/>
     </xd:doc>
     
     <!-- input: url dataset op decor -->
-    <xsl:param name="url" select=
-        "document('http://decor.nictiz.nl/decor/services/RetrieveTransaction?language=nl-NL&amp;version=2019-09-26T16%3A35%3A41&amp;id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;format=xml')"/>
+    <xsl:param name="url" select="document('https://decor.nictiz.nl/decor/services/RetrieveTransaction?id=2.16.840.1.113883.2.4.3.11.60.90.77.4.2499&amp;effectiveDate=2020-01-08T13:47:27&amp;language=nl-NL&amp;ui=nl-NL&amp;format=xml')"/>
+        <!--"document('http://decor.nictiz.nl/decor/services/RetrieveTransaction?language=nl-NL&amp;version=2019-09-26T16%3A35%3A41&amp;id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;format=xml')"/> -->
     
-    <!-- voor alle input data items: opzoeken op decor & structuredefinition aanmaken -->    
+    <xd:doc>
+        <xd:desc> voor alle items op decor waar generate-profile = yes een structuredefinition aanmaken </xd:desc>
+    </xd:doc>
     <xsl:template match="/">
-        <xsl:variable name="count" select="count($dataItems)"/>
-        <xsl:for-each select="(//*)[position()&lt;=$count]">
-            <xsl:variable name="pos" select="position()"/>
-            <xsl:variable name="id" select="$dataItems[$pos]/id"/>
-            <xsl:variable name="translation" select="$dataItems[$pos]/translation"/>
-            <xsl:variable name="dataType" select="$dataItems[$pos]/datatype"/>
-            <xsl:variable name="focus" select="lower-case($dataItems[$pos]/focus)"/>
-            <xsl:variable name="focusChild" select="$dataItems[$pos]/focuschild"/>
+        <xsl:for-each select="$url//*/community[@name='fhirmapping']/data[@type='generate-profile']['yes']">
+            <xsl:variable name="translation" select="ancestor::community/data[@type='translation']"/>
+            <xsl:variable name="focus" select="ancestor::community/data[@type='observation-focus']"/>
+            <xsl:variable name="focusChild" select="ancestor::community/data[@type='focus-child']"/>
             
-            <xsl:value-of select="$id"/>
-            <xsl:text>&#xa;</xsl:text>
-            
-            <xsl:for-each select="$url//*[matches(@iddisplay,$dataItems[$pos]/id)]">
+            <xsl:for-each select="ancestor::concept[1]">
                 <xsl:variable name="conceptIdDisplay" select="@iddisplay"/>
                 <xsl:variable name="conceptName" select="./name"/>
                 <xsl:variable name="conceptId" select="./inherit/@ref|./@id[1]"/>
+                <xsl:variable name="dataType" select="./valueDomain/@type"/>
                 <xsl:variable name="terminology" select="./terminologyAssociation[@conceptId=$conceptId]"/>
                 <xsl:variable name="concept" select="$terminology[@codeSystemName='SNOMED CT']|$terminology[@codeSystemName='LOINC']|$terminology[1]"/>
                 <xsl:variable name="conceptCode" select="./terminologyAssociation[@conceptId=$conceptId]/@code"/>
@@ -122,15 +44,15 @@
                 <xsl:variable name="valueSetID" select="./valueSet/@id"/>
                 <xsl:variable name="valueSetName" select="./valueSet/@displayName"/>
                 <xsl:variable name="effective" select="translate(./valueSet/@effectiveDate,'-T:','')"/>
-                                        
-                <xsl:result-document href="{concat('bc-',translate($translation, ' ', ''),'.xml')}" indent="yes" method="xml" omit-xml-declaration="yes"> 
+                
+                <xsl:result-document href="{concat($translation,'.xml')}" indent="yes" method="xml" omit-xml-declaration="yes"> 
                     
                     <!-- XML StructureDefinition -->
                     <xsl:comment>This example is autogenerated by https://github.com/Nictiz/Geboortezorg-STU3/blob/master/generateObservationProfiles.xsl</xsl:comment>
                     <xsl:text>&#xa;</xsl:text>
                     <StructureDefinition xmlns="http://hl7.org/fhir">
-                        <url value="http://nictiz.nl/fhir/StructureDefinition/bc-{translate($translation, ' ', '')}"/>
-                        <name value="bc-{translate($translation, ' ', '')}"/>
+                        <url value="http://nictiz.nl/fhir/StructureDefinition/{$translation}"/>
+                        <name value="{$translation}"/>
                         <status value="draft"/>
                         <fhirVersion value="3.0.1"/>
                         <mapping>
@@ -162,31 +84,24 @@
                                     <rules value="open"/>
                                 </slicing>
                             </element>
-                                                        
+                            
                             <!-- focus extensie afhankelijk van zwangerschap/bevallingsfase -->
                             <xsl:choose>
                                 <xsl:when test="$focus!=''">
-                                    <element id="Observation.extension:{$focus}">
+                                    <element id="Observation.extension:focusObservatie">
                                         <path value="Observation.extension"/>
-                                        <sliceName value="{$focus}"/>
+                                        <sliceName value="focusObservatie"/>
                                         <type>
                                             <code value="Extension"/>
                                             <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3"/>
                                         </type>
                                     </element>
-                                    <element id="Observation.extension:{$focus}.valueReference:valueReference">
+                                    <element id="Observation.extension:focusObservatie.valueReference:valueReference">
                                         <path value="Observation.extension.valueReference"/>
                                         <sliceName value="valueReference"/>
                                         <type>
                                             <code value="Reference"/>
-                                            <xsl:choose>
-                                                <xsl:when test="$focus='zwangerschap'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy"/>
-                                                </xsl:when>
-                                                <xsl:when test="$focus='bevallingsfase'">
-                                                    <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-StageOfLabor"/>
-                                                </xsl:when>
-                                            </xsl:choose>  
+                                            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/{$focus}"/>
                                         </type>
                                     </element>
                                 </xsl:when>
@@ -194,7 +109,7 @@
                             
                             <!-- focus extensie voor kindspecifieke uitkomstgegevens bij bevalling -->
                             <xsl:choose>
-                                <xsl:when test="$focusChild">
+                                <xsl:when test="$focusChild='yes'">
                                     <element id="Observation.extension:focusChild">
                                         <path value="Observation.extension" />
                                         <sliceName value="focusChild" />
@@ -281,7 +196,7 @@
                             
                             <!-- subject is kind bij geboortegegevens, anders altijd de moeder -->
                             <xsl:choose>
-                                <xsl:when test="$focus='Geboorte'">
+                                <xsl:when test="$focus='bc-Child'">
                                     <element id="Observation.subject">
                                         <path value="Observation.subject"/>
                                         <type>
@@ -300,10 +215,10 @@
                                     </element>                                    
                                 </xsl:otherwise>
                             </xsl:choose>
-                                  
+                            
                             <!-- constraints value[x] element obv datatype -->
                             <xsl:choose>
-                                <xsl:when test="$dataType='Code'">                                 
+                                <xsl:when test="$dataType='code'">                                 
                                     <element id="Observation.value[x]:valueCodeableConcept">
                                         <path value="Observation.valueCodeableConcept" />
                                         <sliceName value="valueCodeableConcept" />
@@ -336,7 +251,7 @@
                                         </mapping>
                                     </element>                                             
                                 </xsl:when>
-                                <xsl:when test="$dataType='Datum/tijd'">
+                                <xsl:when test="$dataType='date' or $dataType='datetime'">
                                     <element id="Observation.value[x]:valueDateTime">
                                         <path value="Observation.valueDateTime" />
                                         <sliceName value="valueDateTime" />
@@ -350,7 +265,7 @@
                                         </mapping>
                                     </element>
                                 </xsl:when>
-                                <xsl:when test="$dataType='Boolean'">
+                                <xsl:when test="$dataType='boolean'">
                                     <element id="Observation.value[x]:valueBoolean">
                                         <path value="Observation.valueBoolean"/>
                                         <sliceName value="valueBoolean"/>
@@ -364,7 +279,7 @@
                                         </mapping>
                                     </element>
                                 </xsl:when>
-                                <xsl:when test="$dataType='Hoeveelheid'">
+                                <xsl:when test="$dataType='quantity'">
                                     <element id="Observation.value[x]:valueQuantity">
                                         <path value="Observation.valueQuantity" />
                                         <sliceName value="valueQuantity" />
@@ -388,8 +303,7 @@
                     <!-- einde XML StructureDefinition -->
                     
                 </xsl:result-document>                
-            </xsl:for-each>  
-            
+            </xsl:for-each>           
         </xsl:for-each>
             
     </xsl:template>
