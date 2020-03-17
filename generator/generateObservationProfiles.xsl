@@ -181,15 +181,15 @@
                                     </element>
                                     <element id="Observation.code.coding:datumEindeZwangerschap.system">
                                         <path value="Observation.code.coding.system"/>
-                                        <fixedUri value="http://loinc.org"/>
+                                        <fixedUri value="http://snomed.info/sct"/>
                                     </element>
                                     <element id="Observation.code.coding:datumEindeZwangerschap.code">
                                         <path value="Observation.code.coding.code"/>
-                                        <fixedCode value="63963-3"/>
+                                        <fixedCode value="118951000146109"/>
                                     </element>
                                     <element id="Observation.code.coding:datumEindeZwangerschap.display">
                                         <path value="Observation.code.coding.display"/>
-                                        <fixedString value="Date of end of pregnancy"/>
+                                        <fixedString value="Date of end of pregnancy (observable entity)"/>
                                     </element>                                   
                                 </xsl:when>
                             </xsl:choose>
