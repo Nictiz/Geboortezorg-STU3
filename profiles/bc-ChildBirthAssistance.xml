@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
   <name value="bc-ChildBirthAssistance" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-encounter-v1.2-2015EN" />
     <uri value="https://zibs.nl/wiki/Encounter-v1.2(2015EN)" />
@@ -98,7 +98,6 @@
     <element id="Encounter.participant.extension:arrival">
       <path value="Encounter.participant.extension" />
       <sliceName value="arrival" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -124,6 +123,9 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
       <path value="Encounter.diagnosis" />
       <slicing>
         <discriminator>
@@ -134,6 +136,9 @@
       </slicing>
     </element>
     <element id="Encounter.diagnosis:pregnancy">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
       <path value="Encounter.diagnosis" />
       <sliceName value="pregnancy" />
     </element>

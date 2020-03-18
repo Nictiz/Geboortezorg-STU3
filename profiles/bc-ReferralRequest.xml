@@ -3,7 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest" />
   <name value="bc-ReferralRequest" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="w5" />
     <uri value="http://hl7.org/fhir/w5" />
@@ -171,6 +171,9 @@
       <sliceName value="redenVerwijzingTweedeNaarDerdeLijn" />
     </element>
     <element id="ReferralRequest.reasonCode:redenVerwijzingTweedeNaarDerdeLijn.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="ReferralRequest.reasonCode.text" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -198,7 +201,7 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value=" peri23-dataelement-82454" />
+        <map value="peri23-dataelement-82454" />
         <comment value="Reden van verwijzing vanuit algemene anamnese" />
       </mapping>
       <mapping>

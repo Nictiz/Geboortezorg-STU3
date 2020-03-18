@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-CarePlan" />
+  <name value="bc-Delivery-CarePlan" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-nursingintervention-v3.2-2018EN" />
+    <uri value="https://zibs.nl/wiki/NursingIntervention-v3.2(2018EN)" />
+    <name value="HCIM NursingIntervention-v3.2(2018EN)" />
+    <comment value="HCIM release 2018 is because it does not have the redundant container 'NursingProcedure'." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-outcomeofcare-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/OutcomeOfCare-v3.1(2017EN)" />
+    <name value="HCIM OutcomeOfCare-v3.1 (2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="gebz-peri-v2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CarePlan" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-careplan" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CarePlan.extension">
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CarePlan.extension:location">
+      <path value="CarePlan.extension" />
+      <sliceName value="location" />
+      <definition value="Planned location of delivery" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://example.org/fhir/StructureDefinition/bc-careplan-location" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="VoorgenomenPlaatsBaring" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.179--20131230000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20261" />
+        <comment value="Voorgenomen plaats baring tijdens zwangerschap" />
+      </mapping>
+    </element>
+    <element id="CarePlan.intent">
+      <path value="CarePlan.intent" />
+      <fixedCode value="proposal" />
+    </element>
+    <element id="CarePlan.subject">
+      <path value="CarePlan.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="CarePlan.context">
+      <path value="CarePlan.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="CarePlan.careTeam">
+      <path value="CarePlan.careTeam" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareTeam" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
