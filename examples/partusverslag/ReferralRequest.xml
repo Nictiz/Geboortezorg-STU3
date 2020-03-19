@@ -1,0 +1,37 @@
+<ReferralRequest xmlns="http://hl7.org/fhir">
+    <id value="verwijsdetails"/> 
+    <status value="active"/> 
+    <intent value="order"/> 
+    <type> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="308292007"/> 
+            <display value="Transfer of care (procedure)"/> 
+        </coding> 
+    </type> 
+    <subject> 
+        <reference value="Patient/XXX-VDWOUDEN"/> 
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context> 
+    <authoredOn value="2017-06-01"/> 
+    <requester> 
+        <agent> 
+            <reference value="Practitioner/zorgverlener-delos"/> 
+        </agent> 
+    </requester> 
+    <specialty> 
+        <coding> 
+            <system value="Specialisme"/> 
+            <code value="02"/> 
+            <display value="Gynaecoloog 2e lijn"/> 
+        </coding> 
+    </specialty> 
+    <recipient> 
+        <reference value="Practitioner/zorgverlener-gyn"/>
+    </recipient> 
+    <reasonReference> 
+        <reference value="Condition/pre-eclampsie"/> 
+    </reasonReference> 
+</ReferralRequest> 

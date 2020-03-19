@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="partusassistentie"/> 
+    <status value="finished"/> 
+    <class> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="22232009"/> 
+            <display value="Hospital (environment)"/> 
+        </coding> 
+    </class> 
+    <subject> 
+        <reference value="Patient/XXX-VDWOUDEN"/> 
+    </subject> 
+    <episodeOfCare> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </episodeOfCare> 
+    <participant>
+        <type>
+            <coding> 
+                <system value="Rol"/> 
+                <code value="32"/> 
+                <display value="Kraamverzorgende"/> 
+            </coding>         
+        </type>
+        <extension url="http://example.org/fhir/StructureDefinition/bc-encounter-arrival">
+            <valueCodeableConcept>
+                <coding> 
+                    <system value="http://snomed.info/sct"/> 
+                    <code value="42857002"/> 
+                    <display value="Second stage of labor (finding)"/> 
+                </coding>    
+            </valueCodeableConcept>
+        </extension>
+    </participant>
+    <diagnosis>
+        <reference value="Condition/wouden-zwanger3"/>
+    </diagnosis>
+</Encounter> 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Partogram" />
+  <name value="bc-Partogram" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="gebz-peri-v2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code:partogram">
+      <path value="Observation.code" />
+      <sliceName value="partogram" />
+    </element>
+    <element id="Observation.code:partogram.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="Partogram" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
