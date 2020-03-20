@@ -1,0 +1,41 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="[[a unique id]]"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-delivery-child-observation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="[[reference to the delivery | Procedure/bevallingprocedure-wouden-zwanger1" />
+        </valueReference>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="[[reference to the Child | Patient/XXX-KIND1VDWOUDEN" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="[[system, see below | http://snomed.info/sct]]"/>
+            <code value="[[code, see below | 364336006"/>
+            <display value="[[display, see below | Pattern of delivery (observable entity)]]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="[[reference to the Mother Patient | Patient/XXX-VDWOUDEN" />
+        <display value="[[display of reference | Patient van der Wouden]]" />
+    </subject>
+    <context>
+        <reference value="[[reference to the EpisodeOfCare | EpisodeOfCare/wouden-dossier-zwanger1]]"/>
+    </context>
+    [[#observation, see below]]
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="3311000146109"/>
+            <display value="Vaginale kunstverlossing"/>
+        </coding>
+    </valueCodeableConcept>
+    [[/observation]]
+</Observation>
+    

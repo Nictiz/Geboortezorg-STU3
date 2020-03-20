@@ -1,0 +1,29 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="[[a unique id]]"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-child-observation"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="[[system, see below | http://loinc.org]]"/>
+            <code value="[[code, see below | 8339-4"/>
+            <display value="[[display, see below | Birth weight Measured]]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="[[reference to the Child Patient | Patient/XXX-KIND2VDWOUDEN" />
+        <display value="[[display of reference | Kind 2 van der Wouden]]" />
+    </subject>
+    <context>
+        <reference value="[[reference to the EpisodeOfCare | EpisodeOfCare/wouden-dossier-zwanger1]]"/>
+    </context>
+    [[#observation, see below]]
+    <valueQuantity>
+        <value value="2845"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="gram"/>
+    </valueQuantity>
+    [[/observation]]
+</Observation>
+ 

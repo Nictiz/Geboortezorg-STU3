@@ -1,0 +1,34 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="[[a unique id]]"/>
+    <meta>
+        <profile value="[[profile uri, see below | http://nictiz.nl/fhir/StructureDefinition/bc-pregnancy-observation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="[[reference to the pregnancy | Condition/wouden-zwanger1]]" />
+        </valueReference>
+    </extension>
+    <status value="[['final' for completed pregnancies, 'active' for ongoing ones]]"/>
+    <code>
+        <coding>
+            <system value="[[system, see below | http://loinc.org]]"/>
+            <code value="[[code, see below | 11996-6"/>
+            <display value="[[display, see below | Gravidity]]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="[[reference to the Mother Patient | Patient/XXX-VDWOUDEN" />
+        <display value="[[display of reference | Patient van der Wouden]]" />
+    </subject>
+    <context>
+        <reference value="[[reference to the EpisodeOfCare | EpisodeOfCare/wouden-dossier-zwanger1]]"/>
+    </context>
+    [[#observation, see below]]
+    <valueQuantity>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+    </valueQuantity>
+    [[/observation]]
+</Observation>
+ 
