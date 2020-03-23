@@ -1,19 +1,19 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="[[a unique id]]"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-delivery-observation"/>
+        <profile value="[[profile uri, see below | http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
-            <reference value="[[reference to the delivery | Procedure/bevallingprocedure-wouden-zwanger1]]" />
+            <reference value="[[reference to the pregnancy | Condition/wouden-zwanger1]]" />
         </valueReference>
     </extension>
-    <status value="final"/>
+    <status value="[['final' for completed pregnancies, 'active' for ongoing ones]]"/>
     <code>
         <coding>
-            <system value="[[system, see below | http://snomed.info/sct]]"/>
-            <code value="[[code, see below | 64332008"/>
-            <display value="[[display, see below | Blood loss in labour]]"/>
+            <system value="[[system, see below | http://loinc.org]]"/>
+            <code value="[[code, see below | 11996-6"/>
+            <display value="[[display, see below | Gravidity]]"/>
         </coding>
     </code>
     <subject>
@@ -25,9 +25,10 @@
     </context>
     [[#observation, see below]]
     <valueQuantity>
-        <value value="600"/>
-        <unit value="ml"/>
+        <value value="1"/>
         <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
     </valueQuantity>
     [[/observation]]
 </Observation>
+ 
