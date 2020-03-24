@@ -208,7 +208,9 @@
       <binding>
         <strength value="extensible" />
         <description value="TypePartus" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3"/>
@@ -225,21 +227,15 @@
       <binding>
         <strength value="extensible" />
         <description value="Conditie perineum (2.2.)" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3"/>
         <map value="peri23-dataelement-80673"/>
         <comment value="Conditie perineum postpartum"/>
       </mapping>
-    </element>
-    <element id="Observation.value[x]:conditiePerineumPostpartum.coding">
-      <path value="Observation.value[x].coding" />
-      <binding>
-        <strength value="extensible" />
-        <description value="WijzeEindeZwangerschap" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.171--20130320000000" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
