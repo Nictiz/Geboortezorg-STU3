@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation" />
-  <name value="bc-DeliveryObservation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation" />
+  <name value="bc-BirthObservation" />
   <status value="draft" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -30,20 +30,20 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:bevalling">
+    <element id="Observation.extension:geboorte">
       <path value="Observation.extension" />
-      <sliceName value="bevalling" />
+      <sliceName value="geboorte" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
-    <element id="Observation.extension:bevalling.valueReference:valueReference">
+    <element id="Observation.extension:geboorte.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
       </type>
     </element>
     <element id="Observation.code.coding">
@@ -56,62 +56,43 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:tijdstipBeginActieveOntsluiting">
+    <element id="Observation.code.coding:tijdstipActiefMeepersen">
       <path value="Observation.code.coding" />
-      <sliceName value="tijdstipBeginActieveOntsluiting" />
+      <sliceName value="tijdstipActiefMeepersen" />
     </element>
-    <element id="Observation.code.coding:tijdstipBeginActieveOntsluiting.system">
+    <element id="Observation.code.coding:tijdstipActiefMeepersen.system">
       <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
+      <fixedUri value="2.16.840.1.113883.2.4.4.13" />
     </element>
-    <element id="Observation.code.coding:tijdstipBeginActieveOntsluiting.code">
+    <element id="Observation.code.coding:tijdstipActiefMeepersen.code">
       <path value="Observation.code.coding.code" />
-      <fixedCode value="249120008" />
+      <fixedCode value="249163006" />
     </element>
-    <element id="Observation.code.coding:tijdstipBeginActieveOntsluiting.display">
+    <element id="Observation.code.coding:tijdstipActiefMeepersen.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <fixedString value="Onset of labor first stage (observable entity)" />
+      <fixedString value="Onset of pushing (in labor) (observable entity)" />
     </element>
-    <element id="Observation.code.coding:hoeveelheidBloedverlies">
+    <element id="Observation.code.coding:typePartus">
       <path value="Observation.code.coding" />
-      <sliceName value="hoeveelheidBloedverlies" />
+      <sliceName value="typePartus" />
     </element>
-    <element id="Observation.code.coding:hoeveelheidBloedverlies.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding:hoeveelheidBloedverlies.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="64332008" />
-    </element>
-    <element id="Observation.code.coding:hoeveelheidBloedverlies.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Bloodloss in labour" />
-    </element>
-    <element id="Observation.code.coding:conditiePerineumPostpartum">
-      <path value="Observation.code.coding" />
-      <sliceName value="conditiePerineumPostpartum" />
-    </element>
-    <element id="Observation.code.coding:conditiePerineumPostpartum.system">
+    <element id="Observation.code.coding:typePartus.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="2.16.840.1.113883.6.96" />
     </element>
-    <element id="Observation.code.coding:conditiePerineumPostpartum.code">
+    <element id="Observation.code.coding:typePartus.code">
       <path value="Observation.code.coding.code" />
-      <fixedCode value="364297003" />
+      <fixedCode value="364336006" />
     </element>
-    <element id="Observation.code.coding:conditiePerineumPostpartum.display">
+    <element id="Observation.code.coding:typePartus.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <fixedString value="Female perineum observable (observable entity)" />
+      <fixedString value="Pattern of delivery (observable entity)" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -145,23 +126,23 @@
         <comment value="Hoeveelheid bloedverlies" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:conditiePerineumPostpartum">
+    <element id="Observation.value[x]:typePartus">
       <path value="Observation.value[x]" />
-      <sliceName value="conditiePerineumPostpartum" />
+      <sliceName value="typePartus" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Conditie perineum (2.2.)" />
+        <description value="TypePartus" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
         </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80673" />
-        <comment value="Conditie perineum postpartum" />
+        <map value="peri23-dataelement-80626" />
+        <comment value="Type partus" />
       </mapping>
     </element>
   </differential>
