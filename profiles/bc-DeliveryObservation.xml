@@ -178,25 +178,25 @@
       <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="value" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <mapping>
-        <identity value="gebz-peri-v2.3"/>
-        <map value="peri23-dataelement-20590"/>
-        <comment value="Tijdstip begin actieve ontsluiting"/>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20590" />
+        <comment value="Tijdstip begin actieve ontsluiting" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v2.3"/>
-        <map value="peri23-dataelement-30030"/>
-        <comment value="Tijdstip actief meepersen"/>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-30030" />
+        <comment value="Tijdstip actief meepersen" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v2.3"/>
-        <map value="peri23-dataelement-20640"/>
-        <comment value="Hoeveelheid bloedverlies"/>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20640" />
+        <comment value="Hoeveelheid bloedverlies" />
       </mapping>
     </element>
     <element id="Observation.value[x]:typePartus">
@@ -208,14 +208,14 @@
       <binding>
         <strength value="extensible" />
         <description value="TypePartus" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
+        </valueSetReference>
       </binding>
       <mapping>
-        <identity value="gebz-peri-v2.3"/>
-        <map value="peri23-dataelement-80626"/>
-        <comment value="Type partus"/>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80626" />
+        <comment value="Type partus" />
       </mapping>
     </element>
     <element id="Observation.value[x]:conditiePerineumPostpartum">
@@ -227,14 +227,14 @@
       <binding>
         <strength value="extensible" />
         <description value="Conditie perineum (2.2.)" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
+        </valueSetReference>
       </binding>
       <mapping>
-        <identity value="gebz-peri-v2.3"/>
-        <map value="peri23-dataelement-80673"/>
-        <comment value="Conditie perineum postpartum"/>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80673" />
+        <comment value="Conditie perineum postpartum" />
       </mapping>
     </element>
   </differential>
