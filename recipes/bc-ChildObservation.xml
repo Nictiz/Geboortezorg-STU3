@@ -18,12 +18,15 @@
     <context>
         <reference value="[[reference to the EpisodeOfCare | EpisodeOfCare/wouden-dossier-zwanger1]]"/>
     </context>
-    [[#observation, see below]]
+    <performer>
+        <reference value="[[reference to the performer should be included if known | Practitioner/nl-core-practitioner-01]]" />
+        <display value="[[display of reference | Vera de Los]]" />
+    </performer>
+    [[#observation.value, see below]]
     <valueQuantity>
         <value value="2845"/>
         <system value="http://unitsofmeasure.org"/>
         <code value="gram"/>
     </valueQuantity>
-    [[/observation]]
+    [[/observation.value]]
 </Observation>
- 

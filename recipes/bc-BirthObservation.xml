@@ -1,16 +1,12 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="[[a unique id]]"/>
     <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
-            <reference value="[[reference to the delivery | Procedure/bevallingprocedure-wouden-zwanger1]]" />
-        </valueReference>
-    </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
-        <valueReference>
-            <reference value="[[reference to the Child | Patient/XXX-KIND1VDWOUDEN]]" />
+            <reference value="[[reference to the birth | Observation/geboorte1-wouden]]" />
         </valueReference>
     </extension>
     <status value="final"/>
@@ -26,9 +22,16 @@
         <display value="[[display of reference | Patient van der Wouden]]" />
     </subject>
     <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+    </context>
+    <context>
         <reference value="[[reference to the EpisodeOfCare | EpisodeOfCare/wouden-dossier-zwanger1]]"/>
     </context>
-    [[#observation, see below]]
+    <performer>
+        <reference value="[[reference to the performer should be included if known | Practitioner/nl-core-practitioner-01]]" />
+        <display value="[[display of reference | Vera de Los]]" />
+    </performer>
+    [[#observation.value see below]]
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -36,6 +39,5 @@
             <display value="Vaginale kunstverlossing"/>
         </coding>
     </valueCodeableConcept>
-    [[/observation]]
+    [[/observation.value]]
 </Observation>
-    
