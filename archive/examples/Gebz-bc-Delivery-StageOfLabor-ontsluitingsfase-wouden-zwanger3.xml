@@ -1,0 +1,34 @@
+
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="ontsluitingsfase-wouden-zwanger3"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-StageOfLabor"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="118216002"/>
+            <display value="Labor finding (finding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/>
+    </context>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="249120008"/>
+            <display value="Onset of labor first stage (observable entity)"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
