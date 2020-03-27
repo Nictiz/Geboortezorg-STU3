@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExaminationObservation" />
+  <name value="bc-DigitalVaginalExaminationObservation" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code.coding:portio">
+      <path value="Observation.code.coding" />
+      <sliceName value="portio" />
+    </element>
+    <element id="Observation.code.coding:portio.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:portio.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="249021005" />
+    </element>
+    <element id="Observation.code.coding:portio.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Effacement of cervix" />
+    </element>
+    <element id="Observation.code.coding:positiePortio">
+      <path value="Observation.code.coding" />
+      <sliceName value="positiePortio" />
+    </element>
+    <element id="Observation.code.coding:positiePortio.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:positiePortio.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="248920001" />
+    </element>
+    <element id="Observation.code.coding:positiePortio.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Position of uterine cervix (observable entity)" />
+    </element>
+    <element id="Observation.code.coding:ontsluiting">
+      <path value="Observation.code.coding" />
+      <sliceName value="ontsluiting" />
+    </element>
+    <element id="Observation.code.coding:ontsluiting.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:ontsluiting.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="289761004" />
+    </element>
+    <element id="Observation.code.coding:ontsluiting.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Finding of cervical dilatation" />
+    </element>
+    <element id="Observation.code.coding:vliezen">
+      <path value="Observation.code.coding" />
+      <sliceName value="vliezen" />
+    </element>
+    <element id="Observation.code.coding:vliezen.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:vliezen.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="112074005" />
+    </element>
+    <element id="Observation.code.coding:vliezen.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Condition of fetal membrane" />
+    </element>
+    <element id="Observation.code.coding:indalingHodge">
+      <path value="Observation.code.coding" />
+      <sliceName value="indalingHodge" />
+    </element>
+    <element id="Observation.code.coding:indalingHodge.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:indalingHodge.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="364611006" />
+    </element>
+    <element id="Observation.code.coding:indalingHodge.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Fetal descent in relation to ischial spines (observable entity)" />
+    </element>
+    <element id="Observation.code.coding:aardVoorliggendDeel">
+      <path value="Observation.code.coding" />
+      <sliceName value="aardVoorliggendDeel" />
+    </element>
+    <element id="Observation.code.coding:aardVoorliggendDeel.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:aardVoorliggendDeel.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="364612004" />
+    </element>
+    <element id="Observation.code.coding:aardVoorliggendDeel.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Presenting part palpable vaginally" />
+    </element>
+    <element id="Observation.code.coding:stand">
+      <path value="Observation.code.coding" />
+      <sliceName value="stand" />
+    </element>
+    <element id="Observation.code.coding:stand.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:stand.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="163520002" />
+    </element>
+    <element id="Observation.code.coding:stand.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="O/E - presenting part position" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20590" />
+        <comment value="Tijdstip begin actieve ontsluiting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-30030" />
+        <comment value="Tijdstip actief meepersen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20640" />
+        <comment value="Hoeveelheid bloedverlies" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:portio">
+      <path value="Observation.value[x]" />
+      <sliceName value="portio" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="CervixEffacement" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20120317000000" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80673" />
+        <comment value="Conditie perineum postpartum" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:positiePortio">
+      <path value="Observation.value[x]" />
+      <sliceName value="positiePortio" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="PositiePortio22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:ontsluiting">
+      <path value="Observation.value[x]" />
+      <sliceName value="ontsluiting" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="CervicalDilatation" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20130422173433" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:vliezen">
+      <path value="Observation.value[x]" />
+      <sliceName value="vliezen" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Vliezen" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20130320000000" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:indalingHodge">
+      <path value="Observation.value[x]" />
+      <sliceName value="indalingHodge" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="HodgePlanes" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20120317000000" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:aardVoorliggendDeel">
+      <path value="Observation.value[x]" />
+      <sliceName value="aardVoorliggendDeel" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="PresentationOfFetus" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.172--20130320000000" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:stand">
+      <path value="Observation.value[x]" />
+      <sliceName value="stand" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Stand" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
