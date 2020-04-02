@@ -3,7 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
   <name value="bc-DisorderOfPregnancy" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-concernfortransfer-v1.2-2015EN" />
     <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)" />
@@ -104,6 +104,9 @@
       <fixedCode value="131148009" />
     </element>
     <element id="Condition.code.coding:Bloedverlies.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Bleeding (finding)" />
     </element>
@@ -125,6 +128,9 @@
       <fixedCode value="17382005" />
     </element>
     <element id="Condition.code.coding:Cervixinsufficientie.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Cervical incompetence (disorder)" />
     </element>
@@ -155,6 +161,9 @@
       <fixedCode value="14094001" />
     </element>
     <element id="Condition.code.coding:HyperemesisGravidarum.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Excessive vomiting in pregnancy (disorder)" />
     </element>
@@ -190,6 +199,9 @@
       <fixedCode value="235888006" />
     </element>
     <element id="Condition.code.coding:Zwangerschapscholestase.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Cholestasis of pregnancy (disorder)" />
     </element>
@@ -211,6 +223,9 @@
       <fixedCode value="46894009" />
     </element>
     <element id="Condition.code.coding:DiabetesGravidarumMetInsuline.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Gestational diabetes mellitus, class A&gt;2&lt; (disorder)" />
     </element>
@@ -246,6 +261,9 @@
       <fixedCode value="PartusImmaturusDreig" />
     </element>
     <element id="Condition.code.coding:DreigendePartusImmaturus.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Partus immaturus - dreigend" />
     </element>
@@ -267,6 +285,9 @@
       <fixedCode value="PartusPrematurusDreig" />
     </element>
     <element id="Condition.code.coding:DreigendePartusPrematurus.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Partus prematurus - dreigend" />
     </element>
@@ -288,6 +309,9 @@
       <fixedCode value="415105001" />
     </element>
     <element id="Condition.code.coding:AbruptioPlacentae.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Placental abruption (disorder)" />
     </element>
