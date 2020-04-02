@@ -1,0 +1,128 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2015-10-19T20:56:20+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.174"/>
+    </identifier>
+    <version value="2015-10-19T20:56:20"/>
+    <name value="Stand"/>
+    <title value="Stand"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Stand"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <concept>
+                <code value="1"/>
+                <display value="Voor"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Links voor"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="Links dwars"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Links achter"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="Achter"/>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="Rechts voor"/>
+            </concept>
+            <concept>
+                <code value="7"/>
+                <display value="Rechts dwars"/>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Rechts achter"/>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="Niet te beoordelen"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:b599793e-ea1b-44f2-9037-edb768efa2a2"/>
+        <timestamp value="2020-04-02T11:33:56.722+02:00"/>
+        <total value="10"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="1"/>
+            <display value="Voor"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="2"/>
+            <display value="Links voor"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="3"/>
+            <display value="Links dwars"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="4"/>
+            <display value="Links achter"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="5"/>
+            <display value="Achter"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="6"/>
+            <display value="Rechts voor"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="7"/>
+            <display value="Rechts dwars"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="8"/>
+            <display value="Rechts achter"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
+            <code value="9"/>
+            <display value="Niet te beoordelen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

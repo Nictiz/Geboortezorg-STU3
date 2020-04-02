@@ -1,76 +1,120 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-   </meta>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2014-01-20T14:20:52+01:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052"/>
-   <identifier>
-      <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.11.189"/>
-   </identifier>
-   <version value="2014-01-20T14:20:52"/>
-   <name value="InterventieBeginBaring22"/>
-   <title value="Interventie begin baring (2.2)"/>
-   <status value="active"/>
-   <experimental value="false"/>
-   <publisher value="KNOV"/>
-   <description value="Interventie begin baring (2.2)"/>
-   <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-   <expansion>
-      <identifier value="urn:uuid:2ca1c91a-b033-442a-952a-7664f4e70227"/>
-      <timestamp value="2019-12-23T13:46:05.845+01:00"/>
-      <total value="9"/>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="236960006"/>
-         <display value="Sweeping of membrane (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="408818004"/>
-         <display value="Induction of labour by artificial rupture of membranes (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="425861005"/>
-         <display value="Cervical ripening with balloon (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="236966000"/>
-         <display value="Cervical ripening with Prostaglandin E2 (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="177135005"/>
-         <display value="Oxytocin induction of labour (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="177136006"/>
-         <display value="Prostaglandin induction of labour (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="177141003"/>
-         <display value="Elective caesarean section (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="OTH"/>
-         <display value="Overig"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="NI"/>
-         <display value="Geen informatie"/>
-      </contains>
-   </expansion>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-01-20T14:20:52+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.189"/>
+    </identifier>
+    <version value="2014-01-20T14:20:52"/>
+    <name value="InterventieBeginBaring22"/>
+    <title value="Interventie begin baring (2.2)"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Interventie begin baring (2.2)"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="236960006"/>
+                <display value="Sweeping of membrane (procedure)"/>
+            </concept>
+            <concept>
+                <code value="408818004"/>
+                <display value="Induction of labour by artificial rupture of membranes (procedure)"/>
+            </concept>
+            <concept>
+                <code value="425861005"/>
+                <display value="Cervical ripening with balloon (procedure)"/>
+            </concept>
+            <concept>
+                <code value="236966000"/>
+                <display value="Cervical ripening with Prostaglandin E2 (procedure)"/>
+            </concept>
+            <concept>
+                <code value="177135005"/>
+                <display value="Oxytocin induction of labour (procedure)"/>
+            </concept>
+            <concept>
+                <code value="177136006"/>
+                <display value="Prostaglandin induction of labour (procedure)"/>
+            </concept>
+            <concept>
+                <code value="177141003"/>
+                <display value="Elective caesarean section (procedure)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:bf85496f-06a9-4c91-812b-7f55440af8e2"/>
+        <timestamp value="2020-04-02T11:34:02.176+02:00"/>
+        <total value="9"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="236960006"/>
+            <display value="Sweeping of membrane (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="408818004"/>
+            <display value="Induction of labour by artificial rupture of membranes (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="425861005"/>
+            <display value="Cervical ripening with balloon (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="236966000"/>
+            <display value="Cervical ripening with Prostaglandin E2 (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="177135005"/>
+            <display value="Oxytocin induction of labour (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="177136006"/>
+            <display value="Prostaglandin induction of labour (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="177141003"/>
+            <display value="Elective caesarean section (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+        </contains>
+    </expansion>
 </ValueSet>

@@ -5,71 +5,74 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2014-08-14T13:45:44+02:00"/>
+            <start value="2012-03-17T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.160--20120317000000"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.16"/>
+        <value value="2.16.840.1.113883.2.4.11.160"/>
     </identifier>
-    <version value="2014-08-14T13:45:44"/>
-    <name value="GynaecologischAandoening"/>
-    <title value="Gynaecologische aandoeningen"/>
+    <version value="2012-03-17T00:00:00"/>
+    <name value="Completenessplacenta"/>
+    <title value="Completeness placenta"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="KNOV"/>
-    <description value="Gynaecologische aandoeningen"/>
+    <description value="Completeness placenta"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="129103003"/>
-                <display value="Endometriosis (disorder)"/>
+                <code value="249170006"/>
+                <display value="compleet"/>
             </concept>
             <concept>
-                <code value="95315005"/>
-                <display value="Uterine leiomyoma (disorder)"/>
-            </concept>
-            <concept>
-                <code value="37849005"/>
-                <display value="Congenital uterine anomaly (disorder)"/>
+                <code value="268479002"/>
+                <display value="niet compleet"/>
             </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.44"/>
+            <concept>
+                <code value="pdubc"/>
+                <display value="dubieus compleet"/>
             </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:bff67222-4184-4008-8dcc-46450732bf13"/>
-        <timestamp value="2020-04-02T11:33:59.862+02:00"/>
+        <identifier value="urn:uuid:2603a052-7f06-499f-9681-b29026aa9cf6"/>
+        <timestamp value="2020-04-02T11:34:04.203+02:00"/>
         <total value="4"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="129103003"/>
-            <display value="Endometriosis (disorder)"/>
+            <code value="249170006"/>
+            <display value="compleet"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="95315005"/>
-            <display value="Uterine leiomyoma (disorder)"/>
+            <code value="268479002"/>
+            <display value="niet compleet"/>
         </contains>
         <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="37849005"/>
-            <display value="Congenital uterine anomaly (disorder)"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.44"/>
+            <code value="pdubc"/>
+            <display value="dubieus compleet"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <code value="OTH"/>
-            <display value="Overig"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
         </contains>
     </expansion>
 </ValueSet>

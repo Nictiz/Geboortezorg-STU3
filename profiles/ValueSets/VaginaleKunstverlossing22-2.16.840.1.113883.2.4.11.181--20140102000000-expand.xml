@@ -1,66 +1,102 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-   </meta>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2014-01-02T00:00:00+01:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000"/>
-   <identifier>
-      <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.11.181"/>
-   </identifier>
-   <version value="2014-01-02T00:00:00"/>
-   <name value="VaginaleKunstverlossing22"/>
-   <title value="VaginaleKunstverlossing22"/>
-   <status value="active"/>
-   <experimental value="false"/>
-   <publisher value="KNOV"/>
-   <description value="VaginaleKunstverlossing22"/>
-   <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-   <expansion>
-      <identifier value="urn:uuid:6a51b042-7926-404a-93e3-cbaca5d9523f"/>
-      <timestamp value="2019-12-23T13:46:03.081+01:00"/>
-      <total value="7"/>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="302383004"/>
-         <display value="Forceps delivery (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="61586001"/>
-         <display value="Delivery by vacuum extraction (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="699999008"/>
-         <display value="Obstetrical version with extraction (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="359940006"/>
-         <display value="Partial breech extraction (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="416055001"/>
-         <display value="Total breech extraction (procedure)"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="OTH"/>
-         <display value="anders"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="NI"/>
-         <display value="geen informatie"/>
-      </contains>
-   </expansion>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-01-02T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.181"/>
+    </identifier>
+    <version value="2014-01-02T00:00:00"/>
+    <name value="VaginaleKunstverlossing22"/>
+    <title value="VaginaleKunstverlossing22"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="VaginaleKunstverlossing22"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="302383004"/>
+                <display value="Forceps delivery (procedure)"/>
+            </concept>
+            <concept>
+                <code value="61586001"/>
+                <display value="Delivery by vacuum extraction (procedure)"/>
+            </concept>
+            <concept>
+                <code value="699999008"/>
+                <display value="Obstetrical version with extraction (procedure)"/>
+            </concept>
+            <concept>
+                <code value="359940006"/>
+                <display value="Partial breech extraction (procedure)"/>
+            </concept>
+            <concept>
+                <code value="416055001"/>
+                <display value="Total breech extraction (procedure)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="anders"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:976fab83-0d72-49af-a371-dff08235c377"/>
+        <timestamp value="2020-04-02T11:34:02.647+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="302383004"/>
+            <display value="Forceps delivery (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="61586001"/>
+            <display value="Delivery by vacuum extraction (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="699999008"/>
+            <display value="Obstetrical version with extraction (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="359940006"/>
+            <display value="Partial breech extraction (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="416055001"/>
+            <display value="Total breech extraction (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="anders"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
 </ValueSet>

@@ -5,71 +5,71 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2014-08-14T13:45:44+02:00"/>
+            <start value="2016-04-25T12:20:48+02:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.16"/>
+        <value value="2.16.840.1.113883.2.4.11.213"/>
     </identifier>
-    <version value="2014-08-14T13:45:44"/>
-    <name value="GynaecologischAandoening"/>
-    <title value="Gynaecologische aandoeningen"/>
-    <status value="active"/>
+    <version value="2016-04-25T12:20:48"/>
+    <name value="PositiePortio22"/>
+    <title value="Positie portio (2.2)"/>
+    <status value="draft"/>
     <experimental value="false"/>
     <publisher value="KNOV"/>
-    <description value="Gynaecologische aandoeningen"/>
+    <description value="Positie portio (2.2)"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="129103003"/>
-                <display value="Endometriosis (disorder)"/>
+                <code value="289783000"/>
+                <display value="Cervix central (finding)"/>
             </concept>
             <concept>
-                <code value="95315005"/>
-                <display value="Uterine leiomyoma (disorder)"/>
+                <code value="289784006"/>
+                <display value="Cervix posterior (finding)"/>
             </concept>
             <concept>
-                <code value="37849005"/>
-                <display value="Congenital uterine anomaly (disorder)"/>
+                <code value="289785007"/>
+                <display value="Cervix mid-posterior (finding)"/>
             </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
+                <code value="UNK"/>
+                <display value="Onbekend"/>
             </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:bff67222-4184-4008-8dcc-46450732bf13"/>
-        <timestamp value="2020-04-02T11:33:59.862+02:00"/>
+        <identifier value="urn:uuid:2a0afdeb-2c0e-4257-baea-8de83929a1b0"/>
+        <timestamp value="2020-04-02T11:33:54.494+02:00"/>
         <total value="4"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="129103003"/>
-            <display value="Endometriosis (disorder)"/>
+            <code value="289783000"/>
+            <display value="Cervix central (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="95315005"/>
-            <display value="Uterine leiomyoma (disorder)"/>
+            <code value="289784006"/>
+            <display value="Cervix posterior (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="37849005"/>
-            <display value="Congenital uterine anomaly (disorder)"/>
+            <code value="289785007"/>
+            <display value="Cervix mid-posterior (finding)"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <code value="OTH"/>
-            <display value="Overig"/>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
         </contains>
     </expansion>
 </ValueSet>

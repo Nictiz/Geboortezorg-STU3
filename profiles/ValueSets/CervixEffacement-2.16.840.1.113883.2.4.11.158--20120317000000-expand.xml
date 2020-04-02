@@ -5,71 +5,71 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2014-08-14T13:45:44+02:00"/>
+            <start value="2012-03-17T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20120317000000"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.16"/>
+        <value value="2.16.840.1.113883.2.4.11.158"/>
     </identifier>
-    <version value="2014-08-14T13:45:44"/>
-    <name value="GynaecologischAandoening"/>
-    <title value="Gynaecologische aandoeningen"/>
+    <version value="2012-03-17T00:00:00"/>
+    <name value="CervixEffacement"/>
+    <title value="Cervix Effacement"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="KNOV"/>
-    <description value="Gynaecologische aandoeningen"/>
+    <description value="Cervix Effacement"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="129103003"/>
-                <display value="Endometriosis (disorder)"/>
+                <code value="278056007"/>
+                <display value="Uneffaced cervix"/>
             </concept>
             <concept>
-                <code value="95315005"/>
-                <display value="Uterine leiomyoma (disorder)"/>
+                <code value="278058008"/>
+                <display value="Partially effaced cervix"/>
             </concept>
             <concept>
-                <code value="37849005"/>
-                <display value="Congenital uterine anomaly (disorder)"/>
+                <code value="19337000"/>
+                <display value="Fully effaced cervix"/>
             </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
+                <code value="NI"/>
+                <display value="geen informatie"/>
             </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:bff67222-4184-4008-8dcc-46450732bf13"/>
-        <timestamp value="2020-04-02T11:33:59.862+02:00"/>
+        <identifier value="urn:uuid:36901630-8293-404d-a2f5-a71974d2684f"/>
+        <timestamp value="2020-04-02T11:33:53.998+02:00"/>
         <total value="4"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="129103003"/>
-            <display value="Endometriosis (disorder)"/>
+            <code value="278056007"/>
+            <display value="Uneffaced cervix"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="95315005"/>
-            <display value="Uterine leiomyoma (disorder)"/>
+            <code value="278058008"/>
+            <display value="Partially effaced cervix"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="37849005"/>
-            <display value="Congenital uterine anomaly (disorder)"/>
+            <code value="19337000"/>
+            <display value="Fully effaced cervix"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <code value="OTH"/>
-            <display value="Overig"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
         </contains>
     </expansion>
 </ValueSet>

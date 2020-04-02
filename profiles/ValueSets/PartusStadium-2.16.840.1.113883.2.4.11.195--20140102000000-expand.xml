@@ -5,57 +5,78 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2014-10-20T15:12:52+02:00"/>
+            <start value="2014-01-02T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.37"/>
+        <value value="2.16.840.1.113883.2.4.11.195"/>
     </identifier>
-    <version value="2014-10-20T15:12:52"/>
-    <name value="GroeiAfwijkend"/>
-    <title value="Groei afwijkend"/>
-    <status value="active"/>
+    <version value="2014-01-02T00:00:00"/>
+    <name value="PartusStadium"/>
+    <title value="Partus stadium"/>
+    <status value="draft"/>
     <experimental value="false"/>
     <publisher value="KNOV"/>
-    <description value="Groei afwijkend"/>
+    <description value="Partus stadium"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="199616008"/>
-                <display value="Large-for-dates fetus (disorder)"/>
+                <code value="6893006"/>
+                <display value="First stage of labor (finding)"/>
             </concept>
             <concept>
-                <code value="267258002"/>
-                <display value="Small for gestational age fetus (disorder)"/>
+                <code value="42857002"/>
+                <display value="Second stage of labor (finding)"/>
             </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
+                <code value="UNK"/>
+                <display value="Onbekend"/>
+            </concept>
+            <concept>
                 <code value="NI"/>
                 <display value="Geen informatie"/>
             </concept>
         </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
+            <concept>
+                <code value="3"/>
+                <display value="Na geboorte gearriveerd"/>
+            </concept>
+        </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:30b6fe88-4e0f-4527-aa90-de949b7ab544"/>
-        <timestamp value="2020-04-02T11:34:01.234+02:00"/>
-        <total value="3"/>
+        <identifier value="urn:uuid:7d85f112-c71c-452e-9cb6-d90512abb6d2"/>
+        <timestamp value="2020-04-02T11:33:52.546+02:00"/>
+        <total value="5"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="199616008"/>
-            <display value="Large-for-dates fetus (disorder)"/>
+            <code value="6893006"/>
+            <display value="First stage of labor (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="267258002"/>
-            <display value="Small for gestational age fetus (disorder)"/>
+            <code value="42857002"/>
+            <display value="Second stage of labor (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
+            <code value="3"/>
+            <display value="Na geboorte gearriveerd"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>

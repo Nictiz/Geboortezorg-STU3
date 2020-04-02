@@ -82,6 +82,16 @@
     </element>
     <element id="ReferralRequest.specialty">
       <path value="ReferralRequest.specialty" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ReferralSpecialty" />
+        </extension>
+        <strength value="extensible" />
+        <description value="Specialisme" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82580" />

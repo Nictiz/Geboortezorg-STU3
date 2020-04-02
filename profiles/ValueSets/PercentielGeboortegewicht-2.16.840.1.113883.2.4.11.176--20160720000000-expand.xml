@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2016-07-20T00:00:00+01:00"/>
+            <start value="2016-07-20T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
     <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.176--20160720000000"/>
@@ -22,9 +22,45 @@
     <publisher value="KNOV"/>
     <description value="PercentielGeboortegewicht"/>
     <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.50"/>
+            <concept>
+                <code value="1"/>
+                <display value="&lt; p2,3"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="p2,3 tot p10"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="p10 tot p50"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="p50 tot p90"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="p90 tot p97,7"/>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="&gt;= p97,7"/>
+            </concept>
+        </include>
+    </compose>
     <expansion>
-        <identifier value="urn:uuid:e581df9c-af8e-4748-97c4-79f0a2cf7da9"/>
-        <timestamp value="2020-01-31T14:22:20.862+01:00"/>
+        <identifier value="urn:uuid:f5918405-009e-480a-8155-db37bc65a4aa"/>
+        <timestamp value="2020-04-02T11:33:51.504+02:00"/>
         <total value="7"/>
         <contains>
             <system value="urn:oid:2.16.840.1.113883.2.4.4.13.50"/>
