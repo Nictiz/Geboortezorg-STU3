@@ -2,11 +2,9 @@
     <id value="partusassistentie"/> 
     <status value="finished"/> 
     <class> 
-        <coding> 
-            <system value="http://snomed.info/sct"/> 
-            <code value="22232009"/> 
-            <display value="Hospital (environment)"/> 
-        </coding> 
+         <system value="http://snomed.info/sct"/> 
+         <code value="22232009"/> 
+         <display value="Hospital (environment)"/> 
     </class> 
     <subject> 
         <reference value="Patient/XXX-VDWOUDEN"/> 
@@ -33,6 +31,8 @@
         </extension>
     </participant>
     <diagnosis>
-        <reference value="Condition/wouden-zwanger3"/>
+        <condition>
+            <reference value="Condition/wouden-zwanger3"/>
+        </condition>
     </diagnosis>
 </Encounter> 
