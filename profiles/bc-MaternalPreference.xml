@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreference" />
+  <name value="bc-MaternalPreference" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code:voorgenomenPlaatsBaring">
+      <path value="Observation.code" />
+      <sliceName value="voorgenomenPlaatsBaring" />
+    </element>
+    <element id="Observation.code:voorgenomenPlaatsBaring.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="PerinatologyProceduresPRN" />
+    </element>
+    <element id="Observation.code:voorgenomenPlaatsBaring.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="PRN4209" />
+    </element>
+    <element id="Observation.code:voorgenomenPlaatsBaring.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Voorgenomen plaats baring tijdens zwangerschap" />
+    </element>
+    <element id="Observation.code:voorgenomenVoeding">
+      <path value="Observation.code" />
+      <sliceName value="voorgenomenVoeding" />
+    </element>
+    <element id="Observation.code:voorgenomenVoeding.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code:voorgenomenVoeding.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="169740003" />
+    </element>
+    <element id="Observation.code:voorgenomenVoeding.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.code.coding.display" />
+      <fixedString value="Infant feeding method (observable entity)" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:voorgenomenPlaatsBaring">
+      <path value="Observation.value[x]" />
+      <sliceName value="voorgenomenPlaatsBaring" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="VoorgenomenPlaatsBaring" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.179--20131230000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20261" />
+        <comment value="Voorgenomen plaats baring tijdens zwangerschap (type locatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:voorgenomenVoeding">
+      <path value="Observation.value[x]" />
+      <sliceName value="voorgenomenVoeding" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Voorgenomen voeding" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.228--20170201140644" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82009" />
+        <comment value="Voorgenomen voeding" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

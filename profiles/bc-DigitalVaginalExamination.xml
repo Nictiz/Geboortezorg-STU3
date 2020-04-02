@@ -84,76 +84,10 @@
     </element>
     <element id="DiagnosticReport.result">
       <path value="DiagnosticReport.result" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="reference" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="DiagnosticReport.result:portio">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="portio" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20612" />
-        <comment value="Portio" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:positiePortio">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="positiePortio" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82372" />
-        <comment value="Positie portio" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:ontsluiting">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="ontsluiting" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20613" />
-        <comment value="Ontsluiting" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:vliezen">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="vliezen" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20614" />
-        <comment value="Vliezen" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:indalingHodge">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="indalingHodge" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20615" />
-        <comment value="Indaling Hodge" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:aardVoorliggendDeel">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="aardVoorliggendDeel" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80616" />
-        <comment value="Aard van het voorliggend deel" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.result:stand">
-      <path value="DiagnosticReport.result" />
-      <sliceName value="stand" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80618" />
-        <comment value="Stand" />
-      </mapping>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExaminationObservation" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

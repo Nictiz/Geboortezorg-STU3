@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-CareTeam" />
+  <name value="bc-CareTeam" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CareTeam" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-careteam" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CareTeam.subject">
+      <path value="CareTeam.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
+    </element>
+    <element id="CareTeam.context">
+      <path value="CareTeam.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="CareTeam.participant.member">
+      <path value="CareTeam.participant.member" />
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-82335" />
+        <comment value="Zorginstelling LVR-ID" />
+      </mapping>
+    </element>
+    <element id="CareTeam.participant.period.start">
+      <path value="CareTeam.participant.period.start" />
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-82122" />
+        <comment value="Datum betrokkenheid van de zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CareTeam.reasonCode">
+      <path value="CareTeam.reasonCode" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CareTeam.reasonCode:redenBetrokkenheidKinderarts">
+      <path value="CareTeam.reasonCode" />
+      <sliceName value="redenBetrokkenheidKinderarts" />
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-82123" />
+        <comment value="Reden betrokkenheid van de kinderarts: pediatrische verwijsindicaties." />
+      </mapping>
+    </element>
+    <element id="CareTeam.reasonCode:redenBetrokkenheidKinderarts.id">
+      <path value="CareTeam.reasonCode.id" />
+      <fixedString value="redenBetrokkenheidKinderarts" />
+    </element>
+  </differential>
+</StructureDefinition>
