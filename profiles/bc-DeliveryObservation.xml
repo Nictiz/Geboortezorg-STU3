@@ -33,6 +33,8 @@
     <element id="Observation.extension:bevalling">
       <path value="Observation.extension" />
       <sliceName value="bevalling" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
@@ -117,7 +119,18 @@
       <path value="Observation.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
       </type>
     </element>
     <element id="Observation.value[x]">
@@ -129,6 +142,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20590" />
@@ -163,6 +177,14 @@
         <map value="peri23-dataelement-80673" />
         <comment value="Conditie perineum postpartum" />
       </mapping>
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

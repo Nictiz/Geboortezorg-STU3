@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
   <name value="bc-Birth" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="workflow" />
     <uri value="http://hl7.org/fhir/workflow" />
@@ -80,7 +80,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
-    <element id="Observation.extension:deliveryProcedure.valueReference:valueReference">
+    <element id="Observation.extension:child.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -111,6 +111,9 @@
       <fixedCode value="3950001" />
     </element>
     <element id="Observation.code.coding:geboorte.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Birth (finding)" />
     </element>

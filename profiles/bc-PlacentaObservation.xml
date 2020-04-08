@@ -106,6 +106,17 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
       </type>
     </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+      </type>
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <slicing>
@@ -115,6 +126,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20590" />
@@ -149,6 +161,35 @@
         <map value="peri23-dataelement-80673" />
         <comment value="Conditie perineum postpartum" />
       </mapping>
+    </element>
+    <element id="Observation.bodySite.coding">
+      <path value="Observation.bodySite.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.bodySite.coding:placenta">
+      <path value="Observation.bodySite.coding" />
+      <sliceName value="placenta" />
+    </element>
+    <element id="Observation.bodySite.coding:placenta.system">
+      <path value="Observation.bodySite.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.bodySite.coding:placenta.code">
+      <path value="Observation.bodySite.coding.code" />
+      <fixedCode value="181455002" />
+    </element>
+    <element id="Observation.bodySite.coding:placenta.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.bodySite.coding.display" />
+      <fixedString value="Entire placenta (body structure)" />
     </element>
   </differential>
 </StructureDefinition>
