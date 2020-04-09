@@ -82,15 +82,19 @@
     <element id="CareTeam.reasonCode:redenBetrokkenheidKinderarts">
       <path value="CareTeam.reasonCode" />
       <sliceName value="redenBetrokkenheidKinderarts" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CareTeamReason" />
+        </extension>
+        <strength value="extensible" />
+        <description value="PediatrischeVerwijsindicatie" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413" />
+      </binding>
       <mapping>
         <identity value="gebz" />
         <map value="peri23-dataelement-82123" />
         <comment value="Reden betrokkenheid van de kinderarts: pediatrische verwijsindicaties." />
       </mapping>
-    </element>
-    <element id="CareTeam.reasonCode:redenBetrokkenheidKinderarts.id">
-      <path value="CareTeam.reasonCode.id" />
-      <fixedString value="redenBetrokkenheidKinderarts" />
     </element>
   </differential>
 </StructureDefinition>
