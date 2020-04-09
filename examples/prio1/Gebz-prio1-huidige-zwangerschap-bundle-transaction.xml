@@ -119,7 +119,7 @@
             <Observation>
                 <id value="pariteit-wouden-zwanger4"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Parity"
                     />
                 </meta>
@@ -160,7 +160,7 @@
             <Observation>
                 <id value="graviditeit-wouden-zwanger4"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
                     <profile
                         value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Gravidity"/>
                 </meta>
@@ -201,7 +201,7 @@
             <Observation>
                 <id value="aterm-wouden-zwanger4"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
                     <profile
                         value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate"/>
                 </meta>
@@ -238,16 +238,14 @@
             <Observation>
                 <id value="wouden-RhDPos"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
-                    <profile
-                        value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
-                    />
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+                    <!--<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>-->
                 </meta>
                 <status value="final"/>
                 <category>
                     <coding>
                         <system value="http://snomed.info/sct"/>
-                        <code value="49581000146104"/>
+                        <code value="49581000146104"/> 
                         <display value="Laboratory test finding (finding)"/>
                     </coding>
                 </category>
@@ -284,10 +282,8 @@
             <Observation>
                 <id value="wouden-rhcneg"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
-                    <profile
-                        value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
-                    />
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+<!--                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>-->
                 </meta>
                 <status value="final"/>
                 <category>
@@ -330,10 +326,8 @@
             <Observation>
                 <id value="wouden-hb"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
-                    <profile
-                        value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
-                    />
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+<!--                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>-->
                 </meta>
                 <status value="final"/>
                 <category>
@@ -375,10 +369,8 @@
             <Observation>
                 <id value="wouden-bloedgroepAB"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
-                    <profile
-                        value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
-                    />
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+<!--                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>-->
                 </meta>
                 <status value="final"/>
                 <category>
@@ -547,9 +539,9 @@
         <resource>
             <EpisodeOfCare>
                 <id value="wouden-dossier-zwanger4"/>
-                <meta>
+<!--                <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-                </meta>
+                </meta>-->
                 <status value="active"/>
                 <type>
                     <coding>
