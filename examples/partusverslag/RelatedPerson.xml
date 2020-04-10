@@ -1,0 +1,38 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+    <id value="wouden-partner" />
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+    </meta>
+    <active value="true" />
+    <patient>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/RoleCode" />
+            <code value="DOMPART"/>
+            <display value="Domestic Partner"/>
+        </coding>
+    </relationship>
+    <name>
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+            <valueCode value="NL4" />
+        </extension>
+        <use value="official" />
+        <family value="van Putten">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                <valueString value="van" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Putten" />
+            </extension>
+        </family>
+        <given value="Klaas">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="CL" />
+            </extension>
+        </given>
+    </name>       
+</RelatedPerson>
+

@@ -1,0 +1,40 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-datumtijd-geboorte-placenta" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaObservation" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="Procedure/bevallingprocedure-wouden-zwanger3" />
+        </valueReference>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="BodySite/wouden-placenta" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="?????"/>
+            <display value="?????"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueDateTime value="2017-06-22T18:01:00+01:00"/>
+    <bodySite>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="181455002"/>
+            <display value="Entire placenta (body structure)"/>
+        </coding>
+    </bodySite>
+</Observation>
+

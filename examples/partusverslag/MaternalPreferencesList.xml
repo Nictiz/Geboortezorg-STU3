@@ -1,0 +1,27 @@
+<List xmlns="http://hl7.org/fhir">
+    <id value="wouden-voornemens" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreferences" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare">
+        <valueReference>
+            <reference value="EpisodeOfCare/wouden-dossier-zwanger3" />
+        </valueReference>
+    </extension>
+    <status value="current"/>
+    <mode value="working"/>
+    <title value="Voornemens"/>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject>    
+    <entry>
+        <item>
+            <reference value="Observation/wouden-voornemen-plaats-baring"/>
+        </item>
+        <item>
+            <reference value="Observation/wouden-voornemen-voeding"/>
+        </item>
+    </entry>
+</List>
+

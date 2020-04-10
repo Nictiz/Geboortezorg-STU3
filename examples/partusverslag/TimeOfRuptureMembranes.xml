@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-datumtijd-breken-vliezen" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="Observation/geboorte2-wouden" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="289251005"/>
+            <display value="Time rupture of membranes detected"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueDateTime value="2017-06-22T00:41:00+01:00"/>
+</Observation>
+

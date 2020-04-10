@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-indaling-hodge" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalExaminationObservation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="364611006"/>
+            <display value="Fetal descent in relation to ischial spines (observable entity)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <system value="http://snomed.info/sct"/>
+        <code value="289385009"/>
+        <display value="3 level of presenting part in relation to ischial spines"/>
+    </valueCodeableConcept>
+</Observation>
+

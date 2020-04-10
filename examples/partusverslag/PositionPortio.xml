@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-positie-portio" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalExaminationObservation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="248920001"/>
+            <display value="Position of uterine cervix (observable entity)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <system value="http://snomed.info/sct"/>
+        <code value="289785007"/>
+        <display value="Cervix mid-posterior (finding)"/>
+    </valueCodeableConcept>
+</Observation>
+

@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-aard-voorliggend-deel" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalExaminationObservation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="364612004"/>
+            <display value="Presenting part palpable vaginally"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <system value="http://snomed.info/sct"/>
+        <code value="249081007"/>
+        <display value="Both fontanelles presenting"/>
+    </valueCodeableConcept>
+</Observation>
+

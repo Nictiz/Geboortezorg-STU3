@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-stand" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalExaminationObservation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="163520002"/>
+            <display value="O/E - presenting part position"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <system value="Stand"/>
+        <code value="7"/>
+        <display value="Rechts dwars"/>
+    </valueCodeableConcept>
+</Observation>
+

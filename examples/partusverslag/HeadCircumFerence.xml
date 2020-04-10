@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-kind2-hoofdomtrek" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="9843-4"/>
+            <display value="Head Occipital-frontal circumference"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-KIND2VDWOUDEN" />
+        <display value="Kind 2 van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueQuantity>
+        <value value="35"/>
+        <unit value="cm"/>
+        <system value="unitsofmeasure.org"/>
+    </valueQuantity>
+</Observation>
+

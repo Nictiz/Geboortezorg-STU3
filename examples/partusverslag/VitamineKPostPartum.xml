@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-vitamine-K" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="Observation/geboorte2-wouden" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="??"/>
+            <code value="???"/>
+            <display value="Heeft het kind post partum Vitamine K gehad (binnen 24 uur)?"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueBoolean value="true"/>
+</Observation>
+

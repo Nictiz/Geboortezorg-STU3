@@ -1,0 +1,29 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-voornemen-voeding" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreference" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://snomed.info/sct" />
+            <code value="169740003"/>
+            <display value="Infant feeding method (observable entity)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="169643005"/>
+            <display value="Feeding intention - breast (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
+

@@ -1,0 +1,29 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-voornemen-plaats-baring" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreference" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="PerinatologyProcedurePRN" />
+            <code value="PRN4209"/>
+            <display value="Voorgenomen plaats baring tijdens zwangerschap"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="22232009"/>
+            <display value="Hospital (environment)"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
+

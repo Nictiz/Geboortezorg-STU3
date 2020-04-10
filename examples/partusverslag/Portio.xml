@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="wouden-portio" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalExaminationObservation" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="249021005"/>
+            <display value="Effacement of cervix"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-KIND2VDWOUDEN" />
+        <display value="Kind 2 van der Wouden" />
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+    </context>    
+    <valueCodeableConcept>
+        <system value="http://snomed.info/sct"/>
+        <code value="278058008"/>
+        <display value="Partially effaced cervix"/>
+    </valueCodeableConcept>
+</Observation>
+
