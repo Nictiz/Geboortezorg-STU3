@@ -25,6 +25,36 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/List" />
   <derivation value="constraint" />
   <differential>
+    <element id="List.extension">
+      <path value="List.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="List.extension:context">
+      <path value="List.extension" />
+      <sliceName value="context" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
+      </type>
+    </element>
+    <element id="List.extension:context.valueReference:valueReference">
+      <path value="List.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="List.mode">
+      <path value="List.mode" />
+      <fixedCode value="working" />
+    </element>
     <element id="List.title">
       <path value="List.title" />
       <fixedString value="Voornemens" />
