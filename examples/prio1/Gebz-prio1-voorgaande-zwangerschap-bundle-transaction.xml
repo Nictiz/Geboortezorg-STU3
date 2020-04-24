@@ -32,34 +32,34 @@
                   <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                </entry>
                <entry>
-                  <reference value="Observation/pariteit_voor_deze_zwangerschap-zwangerschap-1"/>
+                  <reference value="Observation/pariteit-voor-deze-zwangerschap-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/wijze_einde_zwangerschap-zwangerschap-1"/>
+                  <reference value="Observation/wijze-einde-zwangerschap-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/datum_einde_zwangerschap-zwangerschap-1"/>
+                  <reference value="Observation/datum-einde-zwangerschap-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/tijdstip_begin_actieve_ontsluiting-zwangerschap-1"/>
+                  <reference value="Observation/tijdstip-begin-actieve-ontsluiting-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/hoeveelheid_bloedverlies-zwangerschap-1"/>
+                  <reference value="Observation/hoeveelheid-bloedverlies-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/conditie_perineum_postpartum-zwangerschap-1"/>
+                  <reference value="Observation/conditie-perineum-postpartum-zwangerschap-1"/>
                </entry>
                <entry>
                   <reference value="Observation/baring-zwangerschap-1-kind-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/tijdstip_actief_meepersen-zwangerschap-1-kind-1"/>
+                  <reference value="Observation/tijdstip-actief-meepersen-zwangerschap-1-kind-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/type_partus-zwangerschap-1-kind-1"/>
+                  <reference value="Observation/type-partus-zwangerschap-1-kind-1"/>
                </entry>
                <entry>
-                  <reference value="Observation/apgarscore_na_5_min-zwangerschap-1-kind-1"/>
+                  <reference value="Observation/apgarscore-na-5-min-zwangerschap-1-kind-1"/>
                </entry>
                <entry>
                   <reference value="Observation/geboortegewicht-zwangerschap-1-kind-1"/>
@@ -86,7 +86,7 @@
                   <reference value="Procedure/bevalling-zwangerschap-1"/>
                </entry>
                <entry>
-                  <reference value="Procedure/vaginale_kunstverlossing-zwangerschap-1-kind-1"/>
+                  <reference value="Procedure/vaginale-kunstverlossing-zwangerschap-1-kind-1"/>
                </entry>
             </section>
          </Composition>
@@ -145,7 +145,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueQuantity>
                <value value="1"/>
             </valueQuantity>
@@ -160,7 +162,7 @@
       <fullUrl value="urn:uuid:6d7eeeda-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="pariteit_voor_deze_zwangerschap-zwangerschap-1"/>
+            <id value="pariteit-voor-deze-zwangerschap-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Parity"/>
             </meta>
@@ -181,7 +183,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueQuantity>
                <value value="0"/>
             </valueQuantity>
@@ -189,14 +193,14 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/pariteit_voor_deze_zwangerschap-zwangerschap-1"/>
+         <url value="Observation/pariteit-voor-deze-zwangerschap-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7eeee4-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="wijze_einde_zwangerschap-zwangerschap-1"/>
+            <id value="wijze-einde-zwangerschap-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
             </meta>
@@ -217,7 +221,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueCodeableConcept>
                <coding>
                   <system value="urn:oid:2.16.840.1.113883.2.4.4.13.46"/>
@@ -229,14 +235,14 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/wijze_einde_zwangerschap-zwangerschap-1"/>
+         <url value="Observation/wijze-einde-zwangerschap-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef0a6-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="datum_einde_zwangerschap-zwangerschap-1"/>
+            <id value="datum-einde-zwangerschap-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
             </meta>
@@ -257,20 +263,22 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueDateTime value="2016-05-24+02:00"/>
          </Observation>
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/datum_einde_zwangerschap-zwangerschap-1"/>
+         <url value="Observation/datum-einde-zwangerschap-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef0ba-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="tijdstip_begin_actieve_ontsluiting-zwangerschap-1"/>
+            <id value="tijdstip-begin-actieve-ontsluiting-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
             </meta>
@@ -291,20 +299,22 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueDateTime value="5-23-2016T21:46:00+01:00"/>
          </Observation>
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/tijdstip_begin_actieve_ontsluiting-zwangerschap-1"/>
+         <url value="Observation/tijdstip-begin-actieve-ontsluiting-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef0ce-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="hoeveelheid_bloedverlies-zwangerschap-1"/>
+            <id value="hoeveelheid-bloedverlies-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
             </meta>
@@ -325,7 +335,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueQuantity>
                <value value="600"/>
                <unit value="ml"/>
@@ -336,14 +348,14 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/hoeveelheid_bloedverlies-zwangerschap-1"/>
+         <url value="Observation/hoeveelheid-bloedverlies-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef0e2-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="conditie_perineum_postpartum-zwangerschap-1"/>
+            <id value="conditie-perineum-postpartum-zwangerschap-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
             </meta>
@@ -364,7 +376,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
@@ -376,7 +390,7 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/conditie_perineum_postpartum-zwangerschap-1"/>
+         <url value="Observation/conditie-perineum-postpartum-zwangerschap-1"/>
       </request>
    </entry>
    <entry>
@@ -409,7 +423,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
@@ -428,7 +444,7 @@
       <fullUrl value="urn:uuid:6d7ef0f6-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="tijdstip_actief_meepersen-zwangerschap-1-kind-1"/>
+            <id value="tijdstip-actief-meepersen-zwangerschap-1-kind-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
             </meta>
@@ -449,20 +465,22 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueDateTime value="5-24-2016T01:01:00+01:00"/>
          </Observation>
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/tijdstip_actief_meepersen-zwangerschap-1-kind-1"/>
+         <url value="Observation/tijdstip-actief-meepersen-zwangerschap-1-kind-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef10a-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="type_partus-zwangerschap-1-kind-1"/>
+            <id value="type-partus-zwangerschap-1-kind-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
             </meta>
@@ -481,7 +499,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
@@ -493,14 +513,14 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/type_partus-zwangerschap-1-kind-1"/>
+         <url value="Observation/type-partus-zwangerschap-1-kind-1"/>
       </request>
    </entry>
    <entry>
       <fullUrl value="urn:uuid:6d7ef114-8628-11ea-1501-020000000000"/>
       <resource>
          <Observation>
-            <id value="apgarscore_na_5_min-zwangerschap-1-kind-1"/>
+            <id value="apgarscore-na-5-min-zwangerschap-1-kind-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore"/>
             </meta>
@@ -515,7 +535,9 @@
             <subject>
                <reference value="Patient/zwangerschap-1-kind-1"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueQuantity>
                <value value="6"/>
             </valueQuantity>
@@ -523,7 +545,7 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Observation/apgarscore_na_5_min-zwangerschap-1-kind-1"/>
+         <url value="Observation/apgarscore-na-5-min-zwangerschap-1-kind-1"/>
       </request>
    </entry>
    <entry>
@@ -545,7 +567,9 @@
             <subject>
                <reference value="Patient/zwangerschap-1-kind-1"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <valueQuantity>
                <value value="4810"/>
                <unit value="gram"/>
@@ -733,7 +757,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <performedPeriod>
                <start value="5-23-2016T21:46:00+01:00"/>
             </performedPeriod>
@@ -751,7 +777,7 @@
       <fullUrl value="urn:uuid:6d7ef240-8628-11ea-1501-020000000000"/>
       <resource>
          <Procedure>
-            <id value="vaginale_kunstverlossing-zwangerschap-1-kind-1"/>
+            <id value="vaginale-kunstverlossing-zwangerschap-1-kind-1"/>
             <meta>
                <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure"/>
             </meta>
@@ -779,7 +805,9 @@
                <reference value="urn:uuid:6d7eeeb2-8628-11ea-1501-020000000000"/>
                <display value="van der Wouden"/>
             </subject>
-            <context value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+                        <context>
+               <reference value="EpisodeOfCare/zwangerschapsdossier-zwangerschap-1"/>
+            </context> 
             <reasonReference>
                <reference value="Condition/zwangerschap-1"/>
             </reasonReference>
@@ -787,7 +815,7 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Procedure/vaginale_kunstverlossing-zwangerschap-1-kind-1"/>
+         <url value="Procedure/vaginale-kunstverlossing-zwangerschap-1-kind-1"/>
       </request>
    </entry>
 </Bundle>
