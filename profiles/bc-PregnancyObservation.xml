@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
   <name value="bc-PregnancyObservation" />
   <status value="draft" />
+  <description value="An Observation profile describing pregnancy-related Observations, such as date of end pregnancy, as defined by BabyConnect. Pregnancy-related Observations are Observations about a pregnancy, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
@@ -30,15 +31,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:zwangerschap">
+    <element id="Observation.extension:pregnancy">
       <path value="Observation.extension" />
-      <sliceName value="zwangerschap" />
+      <sliceName value="pregnancy" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
-    <element id="Observation.extension:zwangerschap.valueReference:valueReference">
+    <element id="Observation.extension:pregnancy.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -56,38 +57,38 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:datumEindeZwangerschap">
+    <element id="Observation.code.coding:dateEndPregnancy">
       <path value="Observation.code.coding" />
-      <sliceName value="datumEindeZwangerschap" />
+      <sliceName value="dateEndPregnancy" />
     </element>
-    <element id="Observation.code.coding:datumEindeZwangerschap.system">
+    <element id="Observation.code.coding:dateEndPregnancy.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:datumEindeZwangerschap.code">
+    <element id="Observation.code.coding:dateEndPregnancy.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="118951000146109" />
     </element>
-    <element id="Observation.code.coding:datumEindeZwangerschap.display">
+    <element id="Observation.code.coding:dateEndPregnancy.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Date of end of pregnancy (observable entity)" />
     </element>
-    <element id="Observation.code.coding:wijzeEindeZwangerschap">
+    <element id="Observation.code.coding:endPregnancyType">
       <path value="Observation.code.coding" />
-      <sliceName value="wijzeEindeZwangerschap" />
+      <sliceName value="endPregnancyType" />
     </element>
-    <element id="Observation.code.coding:wijzeEindeZwangerschap.system">
+    <element id="Observation.code.coding:endPregnancyType.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="2.16.840.1.113883.2.4.4.13" />
     </element>
-    <element id="Observation.code.coding:wijzeEindeZwangerschap.code">
+    <element id="Observation.code.coding:endPregnancyType.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="EindeZw" />
     </element>
-    <element id="Observation.code.coding:wijzeEindeZwangerschap.display">
+    <element id="Observation.code.coding:endPregnancyType.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -116,9 +117,9 @@
         <comment value="Datum einde zwangerschap" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:wijzeEindeZwangerschap">
+    <element id="Observation.value[x]:endPregnancyType">
       <path value="Observation.value[x]" />
-      <sliceName value="wijzeEindeZwangerschap" />
+      <sliceName value="endPregnancyType" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -128,7 +129,7 @@
         <comment value="Wijze einde zwangerschap" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:wijzeEindeZwangerschap.coding">
+    <element id="Observation.value[x]:endPregnancyType.coding">
       <path value="Observation.value[x].coding" />
       <binding>
         <strength value="extensible" />

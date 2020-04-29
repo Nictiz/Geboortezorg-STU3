@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
   <name value="bc-Birth" />
   <status value="draft" />
+  <description value="A Procedure profile describing the birth of a child as defined by BabyConnect. A birth is related to a delivery Procedure (Procedure.partOf), the child (Procedure.subject) and the pregnancy (Procedure.reasonReference). A pregnancy can lead to one delivery Procedure and one or multiple birth Procedures. In multiple birth, multiple birth instances point to the same delivery Procedure. A birth also provides the relation between a child and its mother: The mother Patient is the subject of the delivery Procedure and the child Patient is the subject of the birth Procedure." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-procedurefortransfer-v1.2-2015EN" />

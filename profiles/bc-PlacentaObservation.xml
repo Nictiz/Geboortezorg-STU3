@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaObservation" />
   <name value="bc-PlacentaObservation" />
   <status value="draft" />
+  <description value="An Observation profile describing Observations related to the placenta body structure as defined by BabyConnect. Placenta-related Observations are Observations about the placenta, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
@@ -30,15 +31,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:bevalling">
+    <element id="Observation.extension:delivery">
       <path value="Observation.extension" />
-      <sliceName value="bevalling" />
+      <sliceName value="delivery" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
       </type>
     </element>
-    <element id="Observation.extension:bevalling.valueReference:valueReference">
+    <element id="Observation.extension:delivery.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -72,27 +73,27 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:datumTijdGeboortePlacenta">
+    <element id="Observation.code.coding:dateTimeBirthPlacenta">
       <path value="Observation.code.coding" />
-      <sliceName value="datumTijdGeboortePlacenta" />
+      <sliceName value="dateTimeBirthPlacenta" />
     </element>
-    <element id="Observation.code.coding:datumTijdGeboortePlacenta.system">
+    <element id="Observation.code.coding:dateTimeBirthPlacenta.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:compleetheidPlacenta">
+    <element id="Observation.code.coding:completenessPlacenta">
       <path value="Observation.code.coding" />
-      <sliceName value="compleetheidPlacenta" />
+      <sliceName value="completenessPlacenta" />
     </element>
-    <element id="Observation.code.coding:compleetheidPlacenta.system">
+    <element id="Observation.code.coding:completenessPlacenta.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:compleetheidPlacenta.code">
+    <element id="Observation.code.coding:completenessPlacenta.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="364343000" />
     </element>
-    <element id="Observation.code.coding:compleetheidPlacenta.display">
+    <element id="Observation.code.coding:completenessPlacenta.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -143,9 +144,9 @@
         <comment value="Hoeveelheid bloedverlies" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:compleetheidPlacenta">
+    <element id="Observation.value[x]:completenessPlacenta">
       <path value="Observation.value[x]" />
-      <sliceName value="compleetheidPlacenta" />
+      <sliceName value="completenessPlacenta" />
       <type>
         <code value="CodeableConcept" />
       </type>

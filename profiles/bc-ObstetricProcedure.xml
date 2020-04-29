@@ -4,6 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
   <name value="bc-ObstetricProcedure" />
   <status value="draft" />
+  <description value="A Procedure profile describing obstetric procedures, such as vacuum delivery, as defined by BabyConnect. Child-related obstetric procedures are part of a birth Procedure, while mother-related obstetric procedures are part of a delivery Procedure." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-procedurefortransfer-v1.2-2015EN" />
@@ -133,9 +134,9 @@
         <map value="peri23-dataelement" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:InterventieBeginBaring">
+    <element id="Procedure.code.coding:startBirthIntervention">
       <path value="Procedure.code.coding" />
-      <sliceName value="InterventieBeginBaring" />
+      <sliceName value="startBirthIntervention" />
       <binding>
         <strength value="extensible" />
         <description value="WijzeBaringBegin" />
@@ -147,9 +148,9 @@
         <comment value="Interventie begin baring" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:VaginaleKunstverlossing">
+    <element id="Procedure.code.coding:assistedDelivery">
       <path value="Procedure.code.coding" />
-      <sliceName value="VaginaleKunstverlossing" />
+      <sliceName value="assistedDelivery" />
       <binding>
         <strength value="extensible" />
         <description value="VaginaleKunstverlossing" />
@@ -161,9 +162,9 @@
         <comment value="Vaginale kunstverlossing" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:OverigeInterventies">
+    <element id="Procedure.code.coding:otherInterventions">
       <path value="Procedure.code.coding" />
-      <sliceName value="OverigeInterventies" />
+      <sliceName value="otherInterventions" />
       <binding>
         <strength value="extensible" />
         <description value="OverigeInterventies" />
@@ -194,9 +195,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.reasonCode.coding:IndicatieInterventieBeginBaring">
+    <element id="Procedure.reasonCode.coding:reasonStartBirthIntervention">
       <path value="Procedure.reasonCode.coding" />
-      <sliceName value="IndicatieInterventieBeginBaring" />
+      <sliceName value="reasonStartBirthIntervention" />
       <binding>
         <strength value="extensible" />
         <description value="IndicatieInterventie" />

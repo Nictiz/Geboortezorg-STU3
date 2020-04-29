@@ -3,7 +3,8 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Partogram" />
   <name value="bc-Partogram" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <description value="An Observation profile grouping Observations that compose a partograph as defined by BabyConnect." />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
@@ -44,12 +45,6 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
-    </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

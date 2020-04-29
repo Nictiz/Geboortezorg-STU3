@@ -3,7 +3,8 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthWeight" />
   <name value="bc-BirthWeight" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <description value="An Observation profile describing the bodyweight of a newborn infant as defined by BabyConnect." />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
@@ -38,6 +39,9 @@
       <fixedCode value="8339-4" />
     </element>
     <element id="Observation.code.coding:birthweight.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Birth weight Measured" />
     </element>
@@ -58,9 +62,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.interpretation.coding:percentiel">
+    <element id="Observation.interpretation.coding:percentile">
       <path value="Observation.interpretation.coding" />
-      <sliceName value="percentiel" />
+      <sliceName value="percentile" />
       <binding>
         <strength value="extensible" />
         <description value="PercentielGeboortegewicht" />
