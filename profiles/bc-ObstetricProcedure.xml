@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
   <name value="bc-ObstetricProcedure" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-procedurefortransfer-v1.2-2015EN" />
     <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)" />
@@ -76,20 +76,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.partOf:deliveryProcedure">
+    <element id="Procedure.partOf:deliveryOrBirthProcedure">
       <path value="Procedure.partOf" />
-      <sliceName value="deliveryProcedure" />
+      <sliceName value="deliveryOrBirthProcedure" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
-      </type>
-    </element>
-    <element id="Procedure.partOf:stageOfLabor">
-      <path value="Procedure.partOf" />
-      <sliceName value="stageOfLabor" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Delivery-StageOfLabor" />
       </type>
     </element>
     <element id="Procedure.category.coding">
@@ -115,6 +111,9 @@
       <fixedCode value="386637004" />
     </element>
     <element id="Procedure.category.coding:obstetricprocedure.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Procedure.category.coding.display" />
       <fixedString value="Obstetric procedure (procedure)" />
     </element>
