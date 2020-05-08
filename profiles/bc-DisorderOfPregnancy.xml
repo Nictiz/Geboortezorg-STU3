@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
   <name value="bc-DisorderOfPregnancy" />
   <status value="draft" />
+  <description value="A Condition profile describing disorders related to a pregnancy as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-concernfortransfer-v1.2-2015EN" />
@@ -72,9 +73,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:GynaecologischeAandoeningen">
+    <element id="Condition.code.coding:disorderFemaleGenitalTract">
       <path value="Condition.code.coding" />
-      <sliceName value="GynaecologischeAandoeningen" />
+      <sliceName value="disorderFemaleGenitalTract" />
       <binding>
         <strength value="extensible" />
         <description value="GynaecologischeAandoeningen" />
@@ -86,90 +87,90 @@
         <comment value="Gynaecologische aandoening" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:Bloedverlies">
+    <element id="Condition.code.coding:bleeding">
       <path value="Condition.code.coding" />
-      <sliceName value="Bloedverlies" />
+      <sliceName value="bleeding" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82270" />
         <comment value="Bloedverlies" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:Bloedverlies.system">
+    <element id="Condition.code.coding:bleeding.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:Bloedverlies.code">
+    <element id="Condition.code.coding:bleeding.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="131148009" />
     </element>
-    <element id="Condition.code.coding:Bloedverlies.display">
+    <element id="Condition.code.coding:bleeding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Bleeding (finding)" />
     </element>
-    <element id="Condition.code.coding:Cervixinsufficientie">
+    <element id="Condition.code.coding:cervicalIncompetence">
       <path value="Condition.code.coding" />
-      <sliceName value="Cervixinsufficientie" />
+      <sliceName value="cervicalIncompetence" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82271" />
         <comment value="Cervixinsufficientie" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:Cervixinsufficientie.system">
+    <element id="Condition.code.coding:cervicalIncompetence.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:Cervixinsufficientie.code">
+    <element id="Condition.code.coding:cervicalIncompetence.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="17382005" />
     </element>
-    <element id="Condition.code.coding:Cervixinsufficientie.display">
+    <element id="Condition.code.coding:cervicalIncompetence.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Cervical incompetence (disorder)" />
     </element>
-    <element id="Condition.code.coding:Infectie">
+    <element id="Condition.code.coding:infectiousDisease">
       <path value="Condition.code.coding" />
-      <sliceName value="Infectie" />
+      <sliceName value="infectiousDisease" />
       <binding>
         <strength value="extensible" />
         <description value="Infectie" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20141021114554" />
       </binding>
     </element>
-    <element id="Condition.code.coding:HyperemesisGravidarum">
+    <element id="Condition.code.coding:excessiveVomiting">
       <path value="Condition.code.coding" />
-      <sliceName value="HyperemesisGravidarum" />
+      <sliceName value="excessiveVomiting" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82274" />
         <comment value="HyperemesisGravidarum" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:HyperemesisGravidarum.system">
+    <element id="Condition.code.coding:excessiveVomiting.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:HyperemesisGravidarum.code">
+    <element id="Condition.code.coding:excessiveVomiting.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="14094001" />
     </element>
-    <element id="Condition.code.coding:HyperemesisGravidarum.display">
+    <element id="Condition.code.coding:excessiveVomiting.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Excessive vomiting in pregnancy (disorder)" />
     </element>
-    <element id="Condition.code.coding:HypertensieveAandoening">
+    <element id="Condition.code.coding:hypertensiveDisorder">
       <path value="Condition.code.coding" />
-      <sliceName value="HypertensieveAandoening" />
+      <sliceName value="hypertensiveDisorder" />
       <binding>
         <strength value="extensible" />
         <description value="HypertensieveAandoening" />
@@ -181,57 +182,57 @@
         <comment value="Hypertensieve aandoening" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:Zwangerschapscholestase">
+    <element id="Condition.code.coding:cholestatisOfPregnancy">
       <path value="Condition.code.coding" />
-      <sliceName value="Zwangerschapscholestase" />
+      <sliceName value="cholestatisOfPregnancy" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82276" />
         <comment value="Zwangerschapscholestase" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:Zwangerschapscholestase.system">
+    <element id="Condition.code.coding:cholestatisOfPregnancy.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:Zwangerschapscholestase.code">
+    <element id="Condition.code.coding:cholestatisOfPregnancy.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="235888006" />
     </element>
-    <element id="Condition.code.coding:Zwangerschapscholestase.display">
+    <element id="Condition.code.coding:cholestatisOfPregnancy.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Cholestasis of pregnancy (disorder)" />
     </element>
-    <element id="Condition.code.coding:DiabetesGravidarumMetInsuline">
+    <element id="Condition.code.coding:gestationalDiabetesMellitus">
       <path value="Condition.code.coding" />
-      <sliceName value="DiabetesGravidarumMetInsuline" />
+      <sliceName value="gestationalDiabetesMellitus" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82277" />
         <comment value="Diabetes gravidarum met insuline" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:DiabetesGravidarumMetInsuline.system">
+    <element id="Condition.code.coding:gestationalDiabetesMellitus.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:DiabetesGravidarumMetInsuline.code">
+    <element id="Condition.code.coding:gestationalDiabetesMellitus.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="46894009" />
     </element>
-    <element id="Condition.code.coding:DiabetesGravidarumMetInsuline.display">
+    <element id="Condition.code.coding:gestationalDiabetesMellitus.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Gestational diabetes mellitus, class A&gt;2&lt; (disorder)" />
     </element>
-    <element id="Condition.code.coding:AfwijkendeGroeiFoetus">
+    <element id="Condition.code.coding:abnormalFetalGrowth">
       <path value="Condition.code.coding" />
-      <sliceName value="AfwijkendeGroeiFoetus" />
+      <sliceName value="abnormalFetalGrowth" />
       <binding>
         <strength value="extensible" />
         <description value="GroeiAfwijkend" />
@@ -243,48 +244,48 @@
         <comment value="Afwijkende groei foetus" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:DreigendePartusImmaturus">
+    <element id="Condition.code.coding:nearImmatureParturition">
       <path value="Condition.code.coding" />
-      <sliceName value="DreigendePartusImmaturus" />
+      <sliceName value="nearImmatureParturition" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82279" />
         <comment value="Dreigende partus immaturus" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:DreigendePartusImmaturus.system">
+    <element id="Condition.code.coding:nearImmatureParturition.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="urn:oid:2.16.840.1.113883.2.4.4.13" />
     </element>
-    <element id="Condition.code.coding:DreigendePartusImmaturus.code">
+    <element id="Condition.code.coding:nearImmatureParturition.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="PartusImmaturusDreig" />
     </element>
-    <element id="Condition.code.coding:DreigendePartusImmaturus.display">
+    <element id="Condition.code.coding:nearImmatureParturition.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
       <fixedString value="Partus immaturus - dreigend" />
     </element>
-    <element id="Condition.code.coding:DreigendePartusPrematurus">
+    <element id="Condition.code.coding:nearPrematureParturition">
       <path value="Condition.code.coding" />
-      <sliceName value="DreigendePartusPrematurus" />
+      <sliceName value="nearPrematureParturition" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82280" />
         <comment value="Dreigende partus prematurus" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:DreigendePartusPrematurus.system">
+    <element id="Condition.code.coding:nearPrematureParturition.system">
       <path value="Condition.code.coding.system" />
       <fixedUri value="urn:oid:2.16.840.1.113883.2.4.4.13" />
     </element>
-    <element id="Condition.code.coding:DreigendePartusPrematurus.code">
+    <element id="Condition.code.coding:nearPrematureParturition.code">
       <path value="Condition.code.coding.code" />
       <fixedCode value="PartusPrematurusDreig" />
     </element>
-    <element id="Condition.code.coding:DreigendePartusPrematurus.display">
+    <element id="Condition.code.coding:nearPrematureParturition.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

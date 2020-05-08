@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreferences" />
   <name value="bc-MaternalPreferences" />
   <status value="draft" />
+  <description value="A List profile grouping maternal preferences, such as infant nutrition or delivery, as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="rim" />
@@ -43,7 +44,11 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
       </type>
     </element>
-    <element id="List.extension:context.valueReference:valueReference">
+    <element id="List.extension:context.url">
+      <path value="List.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/workflow-episodeOfCare" />
+    </element>
+    <element id="List.extension:context.value[x]:valueReference">
       <path value="List.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>

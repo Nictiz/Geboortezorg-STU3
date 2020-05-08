@@ -4,7 +4,8 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MotherOf" />
   <name value="bc-MotherOf" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <description value="A RelatedPerson profile describing the relation between mother and child as defined by BabyConnect. The RelatedPerson is the mother, which is a related person of the child Patient (RelatedPerson.patient). The mother Patient (bc-Woman) is linked to the RelatedPerson (Patient.link of type seealso)." />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="rim" />
     <uri value="http://hl7.org/v3" />
@@ -61,6 +62,9 @@
       <fixedCode value="MTH" />
     </element>
     <element id="RelatedPerson.relationship.coding:mother.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="RelatedPerson.relationship.coding.display" />
       <fixedString value="Mother" />
     </element>

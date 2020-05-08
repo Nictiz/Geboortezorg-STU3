@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-CareTeam" />
   <name value="bc-CareTeam" />
   <status value="draft" />
+  <description value="A CareTeam profile describing the involvement of (other) care providers in the care of a patient and her child." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
@@ -79,9 +80,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="CareTeam.reasonCode:redenBetrokkenheidKinderarts">
+    <element id="CareTeam.reasonCode:reasonInvolvementPediatrician">
       <path value="CareTeam.reasonCode" />
-      <sliceName value="redenBetrokkenheidKinderarts" />
+      <sliceName value="reasonInvolvementPediatrician" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CareTeamReason" />

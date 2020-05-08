@@ -4,7 +4,8 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
   <name value="bc-MaternalRecord" />
   <status value="draft" />
-  <fhirVersion value="3.0.1" />
+  <description value="An EpisodeOfCare profile describing the maternal record (or pregnancy file) as defined by BabyConnect. The maternal record groups all data related to one pregnancy." />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-concernfortransfer-v1.2-2015EN" />
     <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)" />
@@ -49,6 +50,9 @@
       <fixedCode value="364320009" />
     </element>
     <element id="EpisodeOfCare.type.coding:maternalRecord.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="EpisodeOfCare.type.coding.display" />
       <fixedString value="Pregnancy observable (observable entity)" />
     </element>

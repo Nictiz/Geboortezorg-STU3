@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation" />
   <name value="bc-BirthObservation" />
   <status value="draft" />
+  <description value="An Observation profile describing birth-related Observations, such as parturition type, as defined by BabyConnect. Birth-related Observations are Observations about a birth, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
@@ -30,21 +31,29 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:geboorte">
+    <element id="Observation.extension:birth">
       <path value="Observation.extension" />
-      <sliceName value="geboorte" />
+      <sliceName value="birth" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
     </element>
-    <element id="Observation.extension:geboorte.valueReference:valueReference">
+    <element id="Observation.extension:birth.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
       </type>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -56,38 +65,38 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:tijdstipActiefMeepersen">
+    <element id="Observation.code.coding:onsetOfPushing">
       <path value="Observation.code.coding" />
-      <sliceName value="tijdstipActiefMeepersen" />
+      <sliceName value="onsetOfPushing" />
     </element>
-    <element id="Observation.code.coding:tijdstipActiefMeepersen.system">
+    <element id="Observation.code.coding:onsetOfPushing.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="2.16.840.1.113883.2.4.4.13" />
     </element>
-    <element id="Observation.code.coding:tijdstipActiefMeepersen.code">
+    <element id="Observation.code.coding:onsetOfPushing.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="249163006" />
     </element>
-    <element id="Observation.code.coding:tijdstipActiefMeepersen.display">
+    <element id="Observation.code.coding:onsetOfPushing.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Onset of pushing (in labor) (observable entity)" />
     </element>
-    <element id="Observation.code.coding:typePartus">
+    <element id="Observation.code.coding:parturitionType">
       <path value="Observation.code.coding" />
-      <sliceName value="typePartus" />
+      <sliceName value="parturitionType" />
     </element>
-    <element id="Observation.code.coding:typePartus.system">
+    <element id="Observation.code.coding:parturitionType.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="2.16.840.1.113883.6.96" />
     </element>
-    <element id="Observation.code.coding:typePartus.code">
+    <element id="Observation.code.coding:parturitionType.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="364336006" />
     </element>
-    <element id="Observation.code.coding:typePartus.display">
+    <element id="Observation.code.coding:parturitionType.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -126,9 +135,9 @@
         <comment value="Hoeveelheid bloedverlies" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:typePartus">
+    <element id="Observation.value[x]:parturitionType">
       <path value="Observation.value[x]" />
-      <sliceName value="typePartus" />
+      <sliceName value="parturitionType" />
       <type>
         <code value="CodeableConcept" />
       </type>

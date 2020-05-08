@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest" />
   <name value="bc-ReferralRequest" />
   <status value="draft" />
+  <description value="A ReferralRequest profile describing referral details as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="w5" />
@@ -44,9 +45,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="ReferralRequest.type.coding:typeVerwijzing">
+    <element id="ReferralRequest.type.coding:referralType">
       <path value="ReferralRequest.type.coding" />
-      <sliceName value="typeVerwijzing" />
+      <sliceName value="referralType" />
       <binding>
         <strength value="extensible" />
         <description value="Type verwijzing" />
@@ -129,9 +130,9 @@
         <comment value="Reden verwijzing" />
       </mapping>
     </element>
-    <element id="ReferralRequest.reasonCode:redenVerwijzingTweedeNaarEerste">
+    <element id="ReferralRequest.reasonCode:reasonReferralSecondToFirstLine">
       <path value="ReferralRequest.reasonCode" />
-      <sliceName value="redenVerwijzingTweedeNaarEerste" />
+      <sliceName value="reasonReferralSecondToFirstLine" />
       <binding>
         <strength value="extensible" />
         <description value="Reden verwijzing (2e naar 1e lijn)" />
@@ -145,9 +146,9 @@
         <comment value="Reden verwijzing van 2e naar 1e lijn" />
       </mapping>
     </element>
-    <element id="ReferralRequest.reasonCode:categorieRedenVerwijzing">
+    <element id="ReferralRequest.reasonCode:reasonReferralCategory">
       <path value="ReferralRequest.reasonCode" />
-      <sliceName value="categorieRedenVerwijzing" />
+      <sliceName value="reasonReferralCategory" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -160,9 +161,9 @@
         <comment value="Categorie Reden (Acute Overdracht)" />
       </mapping>
     </element>
-    <element id="ReferralRequest.reasonCode:redenVerwijzingDerdeNaarTweedeLijn">
+    <element id="ReferralRequest.reasonCode:reasonReferralThirdToSecondLine">
       <path value="ReferralRequest.reasonCode" />
-      <sliceName value="redenVerwijzingDerdeNaarTweedeLijn" />
+      <sliceName value="reasonReferralThirdToSecondLine" />
       <binding>
         <strength value="extensible" />
         <description value="Reden verwijzing (van 3e naar 2e lijn)" />
@@ -176,11 +177,11 @@
         <comment value="Reden verwijzing van 3e naar 2e lijn" />
       </mapping>
     </element>
-    <element id="ReferralRequest.reasonCode:redenVerwijzingTweedeNaarDerdeLijn">
+    <element id="ReferralRequest.reasonCode:reasonReferralSecondToThirdLine">
       <path value="ReferralRequest.reasonCode" />
-      <sliceName value="redenVerwijzingTweedeNaarDerdeLijn" />
+      <sliceName value="reasonReferralSecondToThirdLine" />
     </element>
-    <element id="ReferralRequest.reasonCode:redenVerwijzingTweedeNaarDerdeLijn.text">
+    <element id="ReferralRequest.reasonCode:reasonReferralSecondToThirdLine.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

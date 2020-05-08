@@ -1,21 +1,20 @@
 
-<Observation xmlns="http://hl7.org/fhir">
+<Procedure xmlns="http://hl7.org/fhir">
     <id value="geboorte1-wouden"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
-        <valueReference>
-            <reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
-        </valueReference>
-    </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
-        <valueReference>
-            <reference value="Patient/XXX-KIND1VDWOUDEN" />
-        </valueReference>
-    </extension>
-    <status value="final"/>
+    <partOf>
+        <reference value="Procedure/bevallingprocedure-wouden-zwangerschap-1"/>
+    </partOf>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value="386637004"/>
+            <display value='Obstetric procedure (procedure)'/>
+        </coding>
+    </category>    
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -24,10 +23,16 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
+        <reference value="Patient/XXX-KIND1VDWOUDEN" />
+        <display value="Kind 1 van der Wouden" />
     </subject>
     <context>
         <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
     </context>
-</Observation>
+    <performedPeriod>
+        <start value = "2016-02-20"/>
+    </performedPeriod>
+    <reasonReference>
+        <reference value = "Condition/wouden-zwanger1"/>
+    </reasonReference>
+</Procedure>

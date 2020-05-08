@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalPreference" />
   <name value="bc-MaternalPreference" />
   <status value="draft" />
+  <description value="An Observation profile to describe maternal preferences, such as infant nutrition or delivery, as defined by BabyConnect. Maternal preferences are grouped in a List of preferences (bc-MaternalPreferences)." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
@@ -30,38 +31,38 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code:voorgenomenPlaatsBaring">
+    <element id="Observation.code:birthLocation">
       <path value="Observation.code" />
-      <sliceName value="voorgenomenPlaatsBaring" />
+      <sliceName value="birthLocation" />
     </element>
-    <element id="Observation.code:voorgenomenPlaatsBaring.coding.system">
+    <element id="Observation.code:birthLocation.coding.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="PerinatologyProceduresPRN" />
     </element>
-    <element id="Observation.code:voorgenomenPlaatsBaring.coding.code">
+    <element id="Observation.code:birthLocation.coding.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="PRN4209" />
     </element>
-    <element id="Observation.code:voorgenomenPlaatsBaring.coding.display">
+    <element id="Observation.code:birthLocation.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Voorgenomen plaats baring tijdens zwangerschap" />
     </element>
-    <element id="Observation.code:voorgenomenVoeding">
+    <element id="Observation.code:nutrition">
       <path value="Observation.code" />
-      <sliceName value="voorgenomenVoeding" />
+      <sliceName value="nutrition" />
     </element>
-    <element id="Observation.code:voorgenomenVoeding.coding.system">
+    <element id="Observation.code:nutrition.coding.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code:voorgenomenVoeding.coding.code">
+    <element id="Observation.code:nutrition.coding.code">
       <path value="Observation.code.coding.code" />
       <fixedCode value="169740003" />
     </element>
-    <element id="Observation.code:voorgenomenVoeding.coding.display">
+    <element id="Observation.code:nutrition.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -96,9 +97,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.value[x]:voorgenomenPlaatsBaring">
+    <element id="Observation.value[x]:birthLocation">
       <path value="Observation.value[x]" />
-      <sliceName value="voorgenomenPlaatsBaring" />
+      <sliceName value="birthLocation" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -113,9 +114,9 @@
         <comment value="Voorgenomen plaats baring tijdens zwangerschap (type locatie)" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:voorgenomenVoeding">
+    <element id="Observation.value[x]:nutrition">
       <path value="Observation.value[x]" />
-      <sliceName value="voorgenomenVoeding" />
+      <sliceName value="nutrition" />
       <type>
         <code value="CodeableConcept" />
       </type>

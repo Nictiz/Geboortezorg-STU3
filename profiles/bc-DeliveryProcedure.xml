@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
   <name value="bc-DeliveryProcedure" />
   <status value="draft" />
+  <description value="A Procedure profile describing the delivery as defined by BabyConnect. A pregnancy (Procedure.reasonReference) can lead to one delivery Procedure, even in multiple birth. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure. The mother Patient is the subject of the delivery Procedure (Procedure.subject)." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-procedurefortransfer-v1.2-2015EN" />
@@ -124,7 +125,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
       <type>
         <code value="Reference" />

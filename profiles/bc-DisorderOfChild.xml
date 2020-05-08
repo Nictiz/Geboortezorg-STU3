@@ -3,6 +3,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfChild" />
   <name value="bc-DisorderOfChild" />
   <status value="draft" />
+  <description value="A Condition profile describing child disorders, such as chromosomal and congenital abnormalities or other problems, as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-concernfortransfer-v1.2-2015EN" />
@@ -60,9 +61,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:CongenitaleAfwijkingen">
+    <element id="Condition.code.coding:CongenitalDisorder">
       <path value="Condition.code.coding" />
-      <sliceName value="CongenitaleAfwijkingen" />
+      <sliceName value="CongenitalDisorder" />
       <binding>
         <strength value="extensible" />
         <description value="CongenitaleAfwijkingen" />
@@ -74,9 +75,9 @@
         <comment value="Specificatie congenitale afwijking" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:ChromosomaleAfwijking">
+    <element id="Condition.code.coding:ChromosomalDisorder">
       <path value="Condition.code.coding" />
-      <sliceName value="ChromosomaleAfwijking" />
+      <sliceName value="ChromosomalDisorder" />
       <binding>
         <strength value="extensible" />
         <description value="ChromosomaleAfwijking" />
@@ -88,9 +89,9 @@
         <comment value="Specificatie chromosomale afwijking" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:ProblematiekKind">
+    <element id="Condition.code.coding:ProblemChild">
       <path value="Condition.code.coding" />
-      <sliceName value="ProblematiekKind" />
+      <sliceName value="ProblemChild" />
       <binding>
         <strength value="extensible" />
         <description value="ProblematiekKind" />

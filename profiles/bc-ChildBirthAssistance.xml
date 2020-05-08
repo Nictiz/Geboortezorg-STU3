@@ -4,6 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
   <name value="bc-ChildBirthAssistance" />
   <status value="draft" />
+  <description value="An Encounter profile describing assistance to a woman in labor as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-encounter-v1.2-2015EN" />
@@ -61,9 +62,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.class:werkelijkePlaatsBaring">
+    <element id="Encounter.class:actualPlaceOfBirth">
       <path value="Encounter.class" />
-      <sliceName value="werkelijkePlaatsBaring" />
+      <sliceName value="actualPlaceOfBirth" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
