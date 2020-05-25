@@ -1,108 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prototype>
-   <!--<data type="fhirprofile" label="FHIR profile" datatype="enum">
-      <enumValue>AllergyIntolerance</enumValue>
-      <enumValue>BodySite</enumValue>
-      <enumValue>CarePlan</enumValue>
-      <enumValue>CareTeam</enumValue>
-      <enumValue>Condition</enumValue>
-      <enumValue>Consent</enumValue>
-      <enumValue>DiagnosticReport</enumValue>
-      <enumValue>Encounter</enumValue>
-      <enumValue>EpisodeOfCare</enumValue>
-      <enumValue>Flag</enumValue>
-      <enumValue>Immunization</enumValue>
-      <enumValue>Medication</enumValue>
-      <enumValue>MedicationAdministration</enumValue>
-      <enumValue>MedicationDispense</enumValue>
-      <enumValue>MedicationRequest</enumValue>
-      <enumValue>MedicationStatement</enumValue>
-      <enumValue>NutritionOrder</enumValue>
-      <enumValue>Observation</enumValue>
-      <enumValue>Organization</enumValue>
-      <enumValue>Patient</enumValue>
-      <enumValue>Practitioner</enumValue>
-      <enumValue>PractitionerRole</enumValue>
-      <enumValue>Procedure</enumValue>
-      <enumValue>Specimen</enumValue>
-   </data>-->
-   <data type="baseprofile" label="FHIR profile" datatype="enum">
-      <enumValue>bc-Birth-StartType</enumValue>
-      <enumValue>bc-BirthPlacenta</enumValue>
-      <enumValue>bc-BirthWeight</enumValue>
-      <enumValue>bc-BloodLoss</enumValue>
-      <enumValue>bc-Child</enumValue>
-      <enumValue>bc-DecisionSectionCaesarae</enumValue>
-      <enumValue>bc-Delivery-StageOfLabor</enumValue>
-      <enumValue>bc-DeliveryProcedure</enumValue>
-      <enumValue>bc-DisorderOfChild</enumValue>
-      <enumValue>bc-DisorderOfLaborAndDelivery</enumValue>
-      <enumValue>bc-DisorderOfPregnancy</enumValue>
-      <enumValue>bc-Fetus</enumValue>
-      <enumValue>bc-HeadCircumference</enumValue>
-      <enumValue>bc-MaternalRecord</enumValue>
-      <enumValue>bc-Mother</enumValue>
-      <enumValue>bc-ObstetricProcedure</enumValue>
-      <enumValue>bc-OnsetOfLaborFirstStage</enumValue>
-      <enumValue>bc-OnsetOfPushing</enumValue>
-      <enumValue>bc-ParturitionType</enumValue>
-      <enumValue>bc-Percentile</enumValue>
-      <enumValue>bc-PerinatalDeath-Phase</enumValue>
-      <enumValue>bc-PerinatalDeath</enumValue>
-      <enumValue>bc-Pregnancy-EndDate</enumValue>
-      <enumValue>bc-Pregnancy-EndType</enumValue>
-      <enumValue>bc-StatePerineumPostpartum</enumValue>
-      <enumValue>bc-Woman</enumValue>
-      <enumValue>nl-core-address</enumValue>
-      <enumValue>nl-core-careplan</enumValue>
-      <enumValue>nl-core-careteam</enumValue>
-      <enumValue>nl-core-contactpoint</enumValue>
-      <enumValue>nl-core-episodeofcare</enumValue>
-      <enumValue>nl-core-healthcareservice</enumValue>
-      <enumValue>nl-core-humanname</enumValue>
-      <enumValue>nl-core-location</enumValue>
-      <enumValue>nl-core-observation</enumValue>
-      <enumValue>nl-core-organization</enumValue>
-      <enumValue>nl-core-patient</enumValue>
-      <enumValue>nl-core-person</enumValue>
-      <enumValue>nl-core-practitioner</enumValue>
-      <enumValue>nl-core-practitionerrole</enumValue>
-      <enumValue>nl-core-relatedperson</enumValue>
-      <enumValue>zib-AdministrationAgreement</enumValue>
-      <enumValue>zib-AllergyIntolerance</enumValue>
-      <enumValue>zib-Alert</enumValue>
-      <enumValue>zib-DispenseRequest</enumValue>
-      <enumValue>zib-MedicationAdministration</enumValue>
-      <enumValue>zib-MedicationDispense</enumValue>	
-      <enumValue>zib-MedicationAgreement</enumValue>
-      <enumValue>zib-MedicationUse</enumValue>
-      <enumValue>zib-Pregnancy</enumValue>
-      <enumValue>zib-Problem</enumValue>
-      <enumValue>zib-Procedure</enumValue>
-      <enumValue>zib-Vaccination</enumValue>
-   </data>
-   <data type="generate-profile" label="Generate profile?" datatype="enum">
-      <desc language="nl-NL">Whether the profile should be generated (default: not). If so, provide the translation and (if needed) the focus attributes.</desc>
-      <enumValue>yes</enumValue>
-      <enumValue></enumValue>
-   </data>
-   <data type="translation" label="FHIR profile name" datatype="string">
-      <desc language="en-US">The name for the FHIR profile</desc>
-   </data>
-   <data type="observation-focus" label="Focus of Observation" datatype="enum">
-      <desc language="nl-NL">The focus of an Observation, when it is not the Patient</desc>
-      <enumValue>bc-Child</enumValue>
-      <enumValue>bc-Delivery-StageOfLabor</enumValue>
-      <enumValue>bc-DeliveryProcedure</enumValue>
-      <enumValue>bc-Fetus</enumValue>
-      <enumValue>bc-Mother</enumValue>
-      <enumValue>bc-OnsetOfLaborFirstStage</enumValue>
-      <enumValue>bc-Woman</enumValue>
-      <enumValue>zib-Pregnancy</enumValue>
-   </data>
-   <data type="focus-child" label="Focus is child?" datatype="enum">
-      <desc language="nl-NL">Whether the child is focus of the Observation or not (default: not).</desc>
-      <enumValue>yes</enumValue>
-      <enumValue></enumValue>
-   </data>
+    <data type="recipe" label="FHIR profile recipe" datatype="enum">
+        <enumValue>bc-Birth</enumValue>
+        <enumValue>bc-BirthObservation</enumValue>
+        <enumValue>bc-BirthWeight</enumValue>
+        <enumValue>bc-CareTeam</enumValue>
+        <enumValue>bc-Child</enumValue>
+        <enumValue>bc-ChildBirthAssistance</enumValue>
+        <enumValue>bc-DeliveryObservation</enumValue>
+        <enumValue>bc-DeliveryProcedure</enumValue>
+        <enumValue>bc-DigitalVaginalExamination</enumValue>
+        <enumValue>bc-DigitalVaginalExaminationObservation</enumValue>
+        <enumValue>bc-DisorderOfChild</enumValue>
+        <enumValue>bc-DisorderOfLaborAndDelivery</enumValue>
+        <enumValue>bc-DisorderOfPregnancy</enumValue>
+        <enumValue>bc-Fetus</enumValue>
+        <enumValue>bc-MaternalPreference</enumValue>
+        <enumValue>bc-MaternalPreferences</enumValue>
+        <enumValue>bc-MaternalRecord</enumValue>
+        <enumValue>bc-Mother</enumValue>
+        <enumValue>bc-ObstetricProcedure</enumValue>
+        <enumValue>bc-Partogram</enumValue>
+        <enumValue>bc-Placenta</enumValue>
+        <enumValue>bc-PlacentaObservation</enumValue>
+        <enumValue>bc-PregnancyObservation</enumValue>
+        <enumValue>bc-ReferralRequest</enumValue>
+        <enumValue>bc-TransactionComposition</enumValue>
+        <enumValue>bc-Woman</enumValue>
+        <enumValue>nl-core-address</enumValue>
+        <enumValue>nl-core-careplan</enumValue>
+        <enumValue>nl-core-careteam</enumValue>
+        <enumValue>nl-core-contactpoint</enumValue>
+        <enumValue>nl-core-episodeofcare</enumValue>
+        <enumValue>nl-core-healthcareservice</enumValue>
+        <enumValue>nl-core-humanname</enumValue>
+        <enumValue>nl-core-location</enumValue>
+        <enumValue>nl-core-observation</enumValue>
+        <enumValue>nl-core-organization</enumValue>
+        <enumValue>nl-core-patient</enumValue>
+        <enumValue>nl-core-person</enumValue>
+        <enumValue>nl-core-practitioner</enumValue>
+        <enumValue>nl-core-practitionerrole</enumValue>
+        <enumValue>nl-core-relatedperson</enumValue>
+        <enumValue>zib-AdministrationAgreement</enumValue>
+        <enumValue>zib-AllergyIntolerance</enumValue>
+        <enumValue>zib-Alert</enumValue>
+        <enumValue>zib-DispenseRequest</enumValue>
+        <enumValue>zib-MedicationAdministration</enumValue>
+        <enumValue>zib-MedicationDispense</enumValue>
+        <enumValue>zib-MedicationAgreement</enumValue>
+        <enumValue>zib-MedicationUse</enumValue>
+        <enumValue>zib-Pregnancy</enumValue>
+        <enumValue>zib-Problem</enumValue>
+        <enumValue>zib-Procedure</enumValue>
+        <enumValue>zib-Vaccination</enumValue>
+    </data>
+    <!--<data type="generate-profile" label="Generate profile?" datatype="enum">
+        <desc language="nl-NL">Whether the profile should be generated (default: not). If so, provide the translation and (if needed) the focus attributes.</desc>
+        <enumValue>yes</enumValue>
+        <enumValue>no</enumValue>
+    </data>
+    <data type="translation" label="FHIR profile name" datatype="string">
+        <desc language="en-US">The name for the FHIR profile</desc>
+    </data>-->
+    <data type="example" label="FHIR example" datatype="string">
+        <desc language="en-US">FHIR Example</desc>
+    </data>
+    <data type="searchurl" label="FHIR search URL examples" datatype="text">
+        <desc language="en-US">FHIR search URL examples</desc>
+    </data>
 </prototype>
