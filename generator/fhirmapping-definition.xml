@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prototype>
-    <data type="recipe" label="FHIR profile recipe" datatype="enum">
+    <data type="base" label="FHIR profile concept is based on" datatype="enum">
         <enumValue>bc-Birth</enumValue>
         <enumValue>bc-BirthObservation</enumValue>
         <enumValue>bc-BirthWeight</enumValue>
@@ -69,7 +69,8 @@
         <desc language="en-US">The name for the FHIR profile</desc>
     </data>-->
     <data type="path" label="FHIR path" datatype="string">
-        <desc language="en-US">FHIR path</desc>
+        <desc language="en-US">FHIR path. For concepts which map to an element in a FHIR resource, this can be added. 
+            Do not use for concepts which map to an entire FHIR resource.</desc>
     </data>
     <data type="example" label="FHIR example" datatype="string">
         <desc language="en-US">FHIR Example</desc>
