@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-CombinedTest" />
+  <name value="bc-CombinedTest" />
+  <status value="draft" />
+  <description value="A RiskAssessment profile describing the combined test for Down, Edward and Patau, as defined by BabyConnect. The prediction element includes a priori risks and predicted risks for Down, Edward and Patau. The basis element includes all observations supporting the risk assessment. The subject of the risk assessment is the pregnant woman. The risk assessment is related to the fetus (especially in multiple pregnancies), which is the focus of the risk assessment (extension)." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="openehr" />
+    <uri value="http://openehr.org" />
+    <name value="Open EHR Archetype Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/w5" />
+    <name value="W5 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RiskAssessment" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RiskAssessment.extension">
+      <path value="RiskAssessment.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RiskAssessment.extension:fetus">
+      <path value="RiskAssessment.extension" />
+      <sliceName value="fetus" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/riskassessment-focus" />
+      </type>
+    </element>
+    <element id="RiskAssessment.extension:fetus.valueReference:valueReference">
+      <path value="RiskAssessment.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
+    </element>
+    <element id="RiskAssessment.method">
+      <path value="RiskAssessment.method" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="RiskAssessmentMethod" />
+        </extension>
+        <strength value="extensible" />
+        <description value="CombiRiskMethod" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.78--20110128000000" />
+      </binding>
+    </element>
+    <element id="RiskAssessment.method.extension">
+      <path value="RiskAssessment.method.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RiskAssessment.method.extension:software">
+      <path value="RiskAssessment.method.extension" />
+      <sliceName value="software" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-riskassessment-software" />
+      </type>
+    </element>
+    <element id="RiskAssessment.subject">
+      <path value="RiskAssessment.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="RiskAssessment.context">
+      <path value="RiskAssessment.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="RiskAssessment.condition">
+      <path value="RiskAssessment.condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy" />
+      </type>
+    </element>
+    <element id="RiskAssessment.performer">
+      <path value="RiskAssessment.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+    <element id="RiskAssessment.basis">
+      <path value="RiskAssessment.basis" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+      </type>
+    </element>
+    <element id="RiskAssessment.prediction">
+      <path value="RiskAssessment.prediction" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="outcome" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk">
+      <path value="RiskAssessment.prediction" />
+      <sliceName value="trisomyCutOffAndRisk" />
+    </element>
+    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk.outcome">
+      <path value="RiskAssessment.prediction.outcome" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="RiskAssessmentOutcome" />
+        </extension>
+        <strength value="extensible" />
+        <description value="Perinatologische observatiecodes (subset)" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.136--20141020120647" />
+      </binding>
+    </element>
+    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk.probability[x]:probabilityDecimal">
+      <path value="RiskAssessment.prediction.probabilityDecimal" />
+      <sliceName value="probabilityDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
