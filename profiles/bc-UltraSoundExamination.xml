@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExamination" />
-  <name value="bc-DigitalVaginalExamination" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
+  <name value="bc-PregnancyUltraSound" />
   <status value="draft" />
-  <description value="A DiagnosticReport profile describing a digital vaginal examination as defined by BabyConnect. The DiagnosticReport groups Observations related to the digital vaginal examination." />
+  <description value="A DiagnosticReport profile describing a pregnancy ultrasound as defined by BabyConnect. The DiagnosticReport groups Observations related to the pregnancy ultrasound." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="workflow" />
@@ -46,24 +46,14 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="DiagnosticReport.code.coding:digitalVaginalExamination">
+    <element id="DiagnosticReport.code.coding:ultraSoundType">
       <path value="DiagnosticReport.code.coding" />
-      <sliceName value="digitalVaginalExamination" />
-    </element>
-    <element id="DiagnosticReport.code.coding:digitalVaginalExamination.system">
-      <path value="DiagnosticReport.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="DiagnosticReport.code.coding:digitalVaginalExamination.code">
-      <path value="DiagnosticReport.code.coding.code" />
-      <fixedCode value="51597003" />
-    </element>
-    <element id="DiagnosticReport.code.coding:digitalVaginalExamination.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="DiagnosticReport.code.coding.display" />
-      <fixedString value="Manual palpation of vagina (procedure)" />
+      <sliceName value="ultraSoundType" />
+      <binding>
+        <strength value="extensible" />
+        <description value="OnderzoekType" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120" />
+      </binding>
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
@@ -83,11 +73,37 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
+    <element id="DiagnosticReport.performer.role.coding">
+      <path value="DiagnosticReport.performer.role.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.performer.role.coding:RoleCodeNL-extension">
+      <path value="DiagnosticReport.performer.role.coding" />
+      <sliceName value="RoleCodeNL-extension" />
+      <binding>
+        <strength value="extensible" />
+        <description value="RolZorgverlenerMedischOnderzoek" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.187--20140102000000" />
+      </binding>
+    </element>
+    <element id="DiagnosticReport.performer.actor">
+      <path value="DiagnosticReport.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
     <element id="DiagnosticReport.result">
       <path value="DiagnosticReport.result" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
       </type>
     </element>
   </differential>
