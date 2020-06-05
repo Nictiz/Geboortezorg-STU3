@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-ChildBirthAssistance" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
-  <name value="bc-ChildBirthAssistance" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyCheck" />
+  <name value="bc-PregnancyCheck" />
   <status value="draft" />
   <description value="An Encounter profile describing assistance to a woman in labor as defined by BabyConnect." />
   <fhirVersion value="3.0.2" />
@@ -52,26 +51,6 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
   <derivation value="constraint" />
   <differential>
-    <element id="Encounter.class">
-      <path value="Encounter.class" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.class:actualPlaceOfBirth">
-      <path value="Encounter.class" />
-      <sliceName value="actualPlaceOfBirth" />
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
-        </valueSetReference>
-      </binding>
-    </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
       <slicing>
@@ -82,24 +61,43 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.type:childbirthAssistance">
+    <element id="Encounter.type:prenatalVisit">
       <path value="Encounter.type" />
-      <sliceName value="childbirthAssistance" />
+      <sliceName value="prenatalVisit" />
     </element>
-    <element id="Encounter.type:childbirthAssistance.coding.system">
+    <element id="Encounter.type:prenatalVisit.coding.system">
       <path value="Encounter.type.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Encounter.type:childbirthAssistance.coding.code">
+    <element id="Encounter.type:prenatalVisit.coding.code">
       <path value="Encounter.type.coding.code" />
-      <fixedCode value="816968003" />
+      <fixedCode value="424619006" />
     </element>
-    <element id="Encounter.type:childbirthAssistance.coding.display">
+    <element id="Encounter.type:prenatalVisit.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.type.coding.display" />
-      <fixedString value="Labor and birth support (regime/therapy)" />
+      <fixedString value="Prenatal visit" />
+    </element>
+    <element id="Encounter.type:followUpVisit">
+      <path value="Encounter.type" />
+      <sliceName value="followUpVisit" />
+    </element>
+    <element id="Encounter.type:followUpVisit.coding.system">
+      <path value="Encounter.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Encounter.type:followUpVisit.coding.code">
+      <path value="Encounter.type.coding.code" />
+      <fixedCode value="384634009" />
+    </element>
+    <element id="Encounter.type:followUpVisit.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Encounter.type.coding.display" />
+      <fixedString value="Postnatal appointment" />
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
@@ -114,38 +112,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
-    </element>
-    <element id="Encounter.participant.extension">
-      <path value="Encounter.participant.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.participant.extension:arrival">
-      <path value="Encounter.participant.extension" />
-      <sliceName value="arrival" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20650" />
-        <comment value="Partusstadium assistente gearriveerd" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.type.coding:babyCatcher">
-      <path value="Encounter.participant.type.coding" />
-      <sliceName value="babyCatcher" />
     </element>
     <element id="Encounter.participant.individual.extension:practitionerRole">
       <path value="Encounter.participant.individual.extension" />
