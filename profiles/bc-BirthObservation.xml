@@ -39,7 +39,11 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
     </element>
-    <element id="Observation.extension:birth.valueReference:valueReference">
+    <element id="Observation.extension:birth.url">
+      <path value="Observation.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
+    </element>
+    <element id="Observation.extension:birth.value[x]:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -108,6 +112,21 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
     </element>
     <element id="Observation.value[x]">
