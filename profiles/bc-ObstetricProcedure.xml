@@ -185,6 +185,17 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
     </element>
+    <element id="Procedure.context">
+      <path value="Procedure.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
     <element id="Procedure.reasonCode.coding">
       <path value="Procedure.reasonCode.coding" />
       <slicing>

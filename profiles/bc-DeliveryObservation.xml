@@ -41,7 +41,11 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
     </element>
-    <element id="Observation.extension:delivery.valueReference:valueReference">
+    <element id="Observation.extension:delivery.url">
+      <path value="Observation.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
+    </element>
+    <element id="Observation.extension:delivery.value[x]:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -59,63 +63,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:onsetOfFirstStageOfLabor">
-      <path value="Observation.code.coding" />
-      <sliceName value="onsetOfFirstStageOfLabor" />
-    </element>
-    <element id="Observation.code.coding:onsetOfFirstStageOfLabor.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding:onsetOfFirstStageOfLabor.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="249120008" />
-    </element>
-    <element id="Observation.code.coding:onsetOfFirstStageOfLabor.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Onset of labor first stage (observable entity)" />
-    </element>
-    <element id="Observation.code.coding:bloodloss">
-      <path value="Observation.code.coding" />
-      <sliceName value="bloodloss" />
-    </element>
-    <element id="Observation.code.coding:bloodloss.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding:bloodloss.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="64332008" />
-    </element>
-    <element id="Observation.code.coding:bloodloss.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Bloodloss in labour" />
-    </element>
-    <element id="Observation.code.coding:stateOfPerineumPostpartum">
-      <path value="Observation.code.coding" />
-      <sliceName value="stateOfPerineumPostpartum" />
-    </element>
-    <element id="Observation.code.coding:stateOfPerineumPostpartum.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="2.16.840.1.113883.6.96" />
-    </element>
-    <element id="Observation.code.coding:stateOfPerineumPostpartum.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="364297003" />
-    </element>
-    <element id="Observation.code.coding:stateOfPerineumPostpartum.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Female perineum observable (observable entity)" />
-    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
@@ -127,22 +74,19 @@
       <path value="Observation.context" />
       <type>
         <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+      <type>
+        <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
       </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -158,25 +102,6 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20640" />
         <comment value="Hoeveelheid bloedverlies" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:stateOfPerineumPostpartum">
-      <path value="Observation.value[x]" />
-      <sliceName value="stateOfPerineumPostpartum" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Conditie perineum (2.2.)" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80673" />
-        <comment value="Conditie perineum postpartum" />
       </mapping>
     </element>
     <element id="Observation.specimen">
