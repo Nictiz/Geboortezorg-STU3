@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="prenatalecontrole"/> 
+    <status value="finished"/> 
+    <class> 
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/ActCode"/> 
+                    <code value="AMB"/> 
+                    <display value="Ambulatory"/>                 
+                </coding>
+                <text value="Poliklinisch"/>
+            </valueCodeableConcept>
+        </extension>
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="18114009" />
+            <display value="prenataal onderzoek en zorg voor moeder (procedure)" />
+        </coding>        
+    </type>
+    <subject> 
+        <reference value="Patient/XXX-VDWOUDEN"/> 
+    </subject> 
+    <episodeOfCare> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/> 
+    </episodeOfCare> 
+    <participant>
+        <individual>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <reference value="PractitionerRole/zorgverlener-janssen-verloskundigenpraktijk-B" />
+            </extension>
+            <reference value="Practitioner/zorgverlener-janssen" />
+        </individual>
+    </participant>
+    <period>
+        <start value="2015-10-02T10:30:00+01:00" />
+    </period>
+    <diagnosis>
+        <condition>
+            <reference value="Condition/wouden-zwanger3"/>
+        </condition>
+    </diagnosis>
+</Encounter> 
