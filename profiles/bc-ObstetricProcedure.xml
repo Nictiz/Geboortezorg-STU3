@@ -214,6 +214,39 @@
         <description value="IndicatieInterventie" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.190--20161106163758" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20570" />
+        <comment value="Indicatie interventie begin baring" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonCode.coding:reasonPrimarySectio">
+      <path value="Procedure.reasonCode.coding" />
+      <sliceName value="reasonPrimarySectio" />
+      <binding>
+        <strength value="extensible" />
+        <description value="SCPrimIndicatie" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.220--20180228115805" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82546" />
+        <comment value="Indicatie primaire sectio" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonCode.coding:reasonSecondarySectio">
+      <path value="Procedure.reasonCode.coding" />
+      <sliceName value="reasonSecondarySectio" />
+      <binding>
+        <strength value="extensible" />
+        <description value="SCIndicatieSec" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.219--20161124113309" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82547" />
+        <comment value="Indicatie secundaire sectio" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

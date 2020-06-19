@@ -144,6 +144,277 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
   <derivation value="constraint" />
   <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:ethnicity">
+      <path value="Patient.extension" />
+      <sliceName value="ethnicity" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="EthnicGroup" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10400" />
+        <comment value="Ethniciteit" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10031" />
+        <comment value="Lokale persoonsidentificatie" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:BSN">
+      <path value="Patient.identifier" />
+      <sliceName value="BSN" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10030" />
+        <comment value="Burgerservicenummer" />
+      </mapping>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10035" />
+        <comment value="Naamgegevens" />
+      </mapping>
+    </element>
+    <element id="Patient.name.extension:humannameAssemblyOrder">
+      <path value="Patient.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode">
+      <path value="Patient.name.extension.valueCode" />
+      <sliceName value="valueCode" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10043" />
+        <comment value="Achternaam" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension:humannameOwnPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82363" />
+        <comment value="Voorvoegsel (als soort naam is BR)" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension:humannamePartnerPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82363" />
+        <comment value="Voorvoegsel (als soort naam = SP)" />
+      </mapping>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10042" />
+        <comment value="Voornamen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82359" />
+        <comment value="Initialen" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10040" />
+        <comment value="Geboortedatum" />
+      </mapping>
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10300" />
+        <comment value="Adres" />
+      </mapping>
+    </element>
+    <element id="Patient.address.type">
+      <path value="Patient.address.type" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10308" />
+        <comment value="Adrestype" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:streetName">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="streetName" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10301" />
+        <comment value="Straatnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:houseNumber">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="houseNumber" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10302" />
+        <comment value="Huisnummer" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:buildingNumbersuffix">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10303" />
+        <comment value="Huisletter/huisnummertoevoeging" />
+      </mapping>
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10305" />
+        <comment value="Plaatsnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.district">
+      <path value="Patient.address.district" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10306" />
+        <comment value="Gemeentenaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10304" />
+        <comment value="Postcode" />
+      </mapping>
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10307" />
+        <comment value="Land" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:humannameAssemblyOrder">
+      <path value="Patient.contact.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode">
+      <path value="Patient.contact.name.extension.valueCode" />
+      <sliceName value="valueCode" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="language" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="extension.value[x]" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.communication:dutch">
+      <path value="Patient.communication" />
+      <sliceName value="dutch" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency">
+      <path value="Patient.communication.extension" />
+      <sliceName value="languageProficiency" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type">
+      <path value="Patient.communication.extension.extension" />
+      <sliceName value="type" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.system">
+      <path value="Patient.communication.extension.extension.valueCoding.system" />
+      <fixedUri value="http://hl7.org/fhir/v3/LanguageAbilityMode" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.code">
+      <path value="Patient.communication.extension.extension.valueCoding.code" />
+      <fixedCode value="RSP" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.communication.extension.extension.valueCoding.display" />
+      <fixedString value="Received spoken" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:level">
+      <path value="Patient.communication.extension.extension" />
+      <sliceName value="level" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:level.valueCoding:valueCoding">
+      <path value="Patient.communication.extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Language Ability Proficiency" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.141--20130320000000" />
+          <display value="TaalvaardigheidBegrijpenCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Patient.communication:dutch.language.coding.system">
+      <path value="Patient.communication.language.coding.system" />
+      <fixedUri value="urn:ietf:bcp:47" />
+    </element>
+    <element id="Patient.communication:dutch.language.coding.code">
+      <path value="Patient.communication.language.coding.code" />
+      <fixedCode value="nl" />
+    </element>
+    <element id="Patient.communication:dutch.language.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.communication.language.coding.display" />
+      <fixedString value="Dutch" />
+    </element>
     <element id="Patient.link">
       <path value="Patient.link" />
       <slicing>

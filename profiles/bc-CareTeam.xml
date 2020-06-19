@@ -62,12 +62,35 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
     </element>
+    <element id="CareTeam.participant.role.coding:typeOfInvolvement">
+      <path value="CareTeam.participant.role.coding" />
+      <sliceName value="typeOfInvolvement" />
+      <binding>
+        <strength value="extensible" />
+        <description value="AndereZorgverlenerBetrokken" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82121" />
+        <comment value="Type betrokkenheid" />
+      </mapping>
+    </element>
     <element id="CareTeam.participant.member">
       <path value="CareTeam.participant.member" />
       <mapping>
         <identity value="gebz" />
         <map value="peri23-dataelement-82335" />
         <comment value="Zorginstelling LVR-ID" />
+      </mapping>
+    </element>
+    <element id="CareTeam.participant.member.extension:practitionerRole">
+      <path value="CareTeam.participant.member.extension" />
+      <sliceName value="practitionerRole" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82120" />
+        <comment value="Betrokkenheid kinderarts" />
       </mapping>
     </element>
     <element id="CareTeam.participant.period.start">

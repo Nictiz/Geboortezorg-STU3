@@ -66,6 +66,19 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-6" />
+        <comment value="Bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-18" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
+    </element>
     <element id="Procedure.category.coding">
       <path value="Procedure.category.coding" />
       <slicing>

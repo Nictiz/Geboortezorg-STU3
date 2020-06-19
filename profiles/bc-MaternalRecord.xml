@@ -27,6 +27,14 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare" />
   <derivation value="constraint" />
   <differential>
+    <element id="EpisodeOfCare">
+      <path value="EpisodeOfCare" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
     <element id="EpisodeOfCare.type.coding">
       <path value="EpisodeOfCare.type.coding" />
       <slicing>
@@ -40,6 +48,7 @@
     <element id="EpisodeOfCare.type.coding:maternalRecord">
       <path value="EpisodeOfCare.type.coding" />
       <sliceName value="maternalRecord" />
+      <max value="1" />
     </element>
     <element id="EpisodeOfCare.type.coding:maternalRecord.system">
       <path value="EpisodeOfCare.type.coding.system" />
@@ -55,6 +64,16 @@
       </extension>
       <path value="EpisodeOfCare.type.coding.display" />
       <fixedString value="Pregnancy observable (observable entity)" />
+    </element>
+    <element id="EpisodeOfCare.type.coding:perinatalPeriod">
+      <path value="EpisodeOfCare.type.coding" />
+      <sliceName value="perinatalPeriod" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="PeriodeZorgverlening" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828" />
+      </binding>
     </element>
     <element id="EpisodeOfCare.diagnosis.condition">
       <path value="EpisodeOfCare.diagnosis.condition" />
@@ -74,6 +93,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-3" />
+        <comment value="Zwangerschap" />
+      </mapping>
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
@@ -81,6 +105,27 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.period.start">
+      <path value="EpisodeOfCare.period.start" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20290" />
+        <comment value="Datum start zorgverantwoordelijkheid" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.period.end">
+      <path value="EpisodeOfCare.period.end" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20340" />
+        <comment value="Datum einde zorgverantwoordelijkheid" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

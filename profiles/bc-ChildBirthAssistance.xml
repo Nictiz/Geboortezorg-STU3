@@ -146,6 +146,37 @@
     <element id="Encounter.participant.type.coding:babyCatcher">
       <path value="Encounter.participant.type.coding" />
       <sliceName value="babyCatcher" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40149" />
+        <comment value="Aanpakker kind" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.type.coding:babyCatcher.code">
+      <path value="Encounter.participant.type.coding.code" />
+      <fixedCode value="catcher" />
+    </element>
+    <element id="Encounter.participant.type.coding:babyCatcher.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Encounter.participant.type.coding.display" />
+      <fixedString value="Person who catches the baby" />
+    </element>
+    <element id="Encounter.participant.type.coding:supervisor">
+      <path value="Encounter.participant.type.coding" />
+      <sliceName value="supervisor" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40169" />
+        <comment value="Supervisor" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.type.coding:supervisor.code">
+      <path value="Encounter.participant.type.coding.code" />
+      <fixedCode value="supervisor" />
     </element>
     <element id="Encounter.participant.individual.extension:practitionerRole">
       <path value="Encounter.participant.individual.extension" />
@@ -154,6 +185,16 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82132" />
         <comment value="Rol partusassistent" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40150" />
+        <comment value="Rol aanpakker kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40170" />
+        <comment value="Rol supervisor" />
       </mapping>
     </element>
     <element id="Encounter.diagnosis">

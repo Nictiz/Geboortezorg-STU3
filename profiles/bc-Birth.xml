@@ -55,12 +55,25 @@
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
     <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Procedure" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80709" />
+        <comment value="Vorige baring" />
+      </mapping>
+    </element>
     <element id="Procedure.partOf">
       <path value="Procedure.partOf" />
       <type>
@@ -115,6 +128,14 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
+    </element>
+    <element id="Procedure.note">
+      <path value="Procedure.note" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80790" />
+        <comment value="Bijzonderheden kind" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
