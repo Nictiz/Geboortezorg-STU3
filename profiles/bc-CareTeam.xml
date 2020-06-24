@@ -46,6 +46,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
     </element>
     <element id="CareTeam.context">
       <path value="CareTeam.context" />
@@ -61,6 +66,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
     </element>
     <element id="CareTeam.participant.role.coding:typeOfInvolvement">
       <path value="CareTeam.participant.role.coding" />
@@ -92,13 +102,18 @@
         <map value="peri23-dataelement-82120" />
         <comment value="Betrokkenheid kinderarts" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82119" />
+        <comment value="Kinderarts betrokken?" />
+      </mapping>
     </element>
     <element id="CareTeam.participant.period.start">
       <path value="CareTeam.participant.period.start" />
       <mapping>
-        <identity value="gebz" />
+        <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82122" />
-        <comment value="Datum betrokkenheid van de zorgverlener" />
+        <comment value="Datum betrokkenheid" />
       </mapping>
     </element>
     <element id="CareTeam.reasonCode">

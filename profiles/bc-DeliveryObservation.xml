@@ -40,6 +40,16 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-6" />
+        <comment value="Bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-18" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
     </element>
     <element id="Observation.extension:delivery.url">
       <path value="Observation.extension.url" />
@@ -69,6 +79,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
     </element>
     <element id="Observation.context">
       <path value="Observation.context" />
@@ -84,9 +99,21 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -103,6 +130,74 @@
         <map value="peri23-dataelement-20640" />
         <comment value="Hoeveelheid bloedverlies" />
       </mapping>
+    </element>
+    <element id="Observation.value[x]:birthPlacenta">
+      <path value="Observation.value[x]" />
+      <sliceName value="birthPlacenta" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="GeboortePlacenta" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.22--20140731160954" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82336" />
+        <comment value="Geboorte placenta" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20630" />
+        <comment value="Geboorte placenta" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:conditionPerineumPostpartum">
+      <path value="Observation.value[x]" />
+      <sliceName value="conditionPerineumPostpartum" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Conditieperineum22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.192--20140122110447" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80674" />
+        <comment value="Conditie perineum postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80673" />
+        <comment value="Conditie perineum postpartum" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:startBirth">
+      <path value="Observation.value[x]" />
+      <sliceName value="startBirth" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="WijzeBaringBegin" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.16--20130110122506" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:completenessPlacenta">
+      <path value="Observation.value[x]" />
+      <sliceName value="completenessPlacenta" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Completenessplacenta" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.160--20120317000000" />
+      </binding>
     </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />

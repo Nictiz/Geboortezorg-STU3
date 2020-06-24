@@ -67,6 +67,14 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82297" />
+        <comment value="Diagnose/interventie postpartum" />
+      </mapping>
+    </element>
     <element id="Procedure.partOf">
       <path value="Procedure.partOf" />
       <slicing>
@@ -117,6 +125,14 @@
       </extension>
       <path value="Procedure.category.coding.display" />
       <fixedString value="Obstetric procedure (procedure)" />
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82373" />
+        <comment value="Interventie" />
+      </mapping>
     </element>
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
@@ -178,6 +194,20 @@
         <comment value="Overige interventies" />
       </mapping>
     </element>
+    <element id="Procedure.code.coding:intraUterinTreatment">
+      <path value="Procedure.code.coding" />
+      <sliceName value="intraUterinTreatment" />
+      <binding>
+        <strength value="extensible" />
+        <description value="IntraUterineBehandeling22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.26--20140919115814" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82230" />
+        <comment value="Intra-uterine behandeling" />
+      </mapping>
+    </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
       <type>
@@ -195,6 +225,14 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
+    </element>
+    <element id="Procedure.performedPeriod:performedPeriod.start">
+      <path value="Procedure.performedPeriod.start" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82298" />
+        <comment value="Datum" />
+      </mapping>
     </element>
     <element id="Procedure.reasonCode.coding">
       <path value="Procedure.reasonCode.coding" />
@@ -247,6 +285,10 @@
         <map value="peri23-dataelement-82547" />
         <comment value="Indicatie secundaire sectio" />
       </mapping>
+    </element>
+    <element id="Procedure.reasonCode.coding:reasonEpisiotomy">
+      <path value="Procedure.reasonCode.coding" />
+      <sliceName value="reasonEpisiotomy" />
     </element>
   </differential>
 </StructureDefinition>

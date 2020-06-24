@@ -27,6 +27,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
     </element>
     <element id="Observation.context">
       <path value="Observation.context" />
@@ -42,6 +47,140 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:portio">
+      <path value="Observation.value[x]" />
+      <sliceName value="portio" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="CervixEffacement" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20120317000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20612" />
+        <comment value="Portio" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:portioPosition">
+      <path value="Observation.value[x]" />
+      <sliceName value="portioPosition" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="PositiePortio22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20613" />
+        <comment value="Ontsluiting" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:dilatation">
+      <path value="Observation.value[x]" />
+      <sliceName value="dilatation" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="CervicalDilatation" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20130422173433" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20613" />
+        <comment value="Ontsluiting" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:membranes">
+      <path value="Observation.value[x]" />
+      <sliceName value="membranes" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Vliezen" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20130320000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20614" />
+        <comment value="Vliezen" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:hodgePlanes">
+      <path value="Observation.value[x]" />
+      <sliceName value="hodgePlanes" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="HodgePlanes" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20120317000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20615" />
+        <comment value="Indaling Hodge" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:fetusPresentation">
+      <path value="Observation.value[x]" />
+      <sliceName value="fetusPresentation" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="PresentationOfFetus" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.172--20130320000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80616" />
+        <comment value="Aard van het voorliggend deel" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:position">
+      <path value="Observation.value[x]" />
+      <sliceName value="position" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Stand" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80618" />
+        <comment value="Stand" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

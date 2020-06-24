@@ -89,6 +89,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
     </element>
     <element id="Encounter.episodeOfCare">
       <path value="Encounter.episodeOfCare" />
@@ -96,6 +101,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
     </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
@@ -118,19 +128,38 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.diagnosis:sliceDiagnosis">
+    <element id="Encounter.diagnosis:pregnancy">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Diagnosis" />
       </extension>
       <path value="Encounter.diagnosis" />
-      <sliceName value="sliceDiagnosis" />
+      <sliceName value="pregnancy" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-3" />
+        <comment value="Zwangerschap" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-17" />
+        <comment value="Obstetrische anamnese gegroepeerd per voorgaande zwangerschap" />
+      </mapping>
     </element>
-    <element id="Encounter.diagnosis:sliceDiagnosis.condition">
+    <element id="Encounter.diagnosis:pregnancy.condition">
       <path value="Encounter.diagnosis.condition" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82114" />
+        <comment value="Ziekenhuis baring" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

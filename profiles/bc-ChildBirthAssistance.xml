@@ -52,6 +52,14 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
   <derivation value="constraint" />
   <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80839" />
+        <comment value="Partusassistentie" />
+      </mapping>
+    </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
       <slicing>
@@ -71,6 +79,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40003" />
+        <comment value="Werkelijke plaats baring (type locatie)" />
+      </mapping>
     </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
