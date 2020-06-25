@@ -1,0 +1,92 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2013-01-10T12:22:05+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.20--20130110122205"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.20"/>
+    </identifier>
+    <version value="2013-01-10T12:22:05"/>
+    <name value="KleurVruchtwater"/>
+    <title value="KleurVruchtwater"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="KleurVruchtwater"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="overig"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.18"/>
+            <concept>
+                <code value="1"/>
+                <display value="kleurloos"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="meconium"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="bloederig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:66438e20-fdb8-4e83-9124-b004b24cdc9a"/>
+        <timestamp value="2020-06-25T15:40:22.507+02:00"/>
+        <total value="6"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.18"/>
+            <code value="1"/>
+            <display value="kleurloos"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.18"/>
+            <code value="2"/>
+            <display value="meconium"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.18"/>
+            <code value="3"/>
+            <display value="bloederig"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+    </expansion>
+</ValueSet>

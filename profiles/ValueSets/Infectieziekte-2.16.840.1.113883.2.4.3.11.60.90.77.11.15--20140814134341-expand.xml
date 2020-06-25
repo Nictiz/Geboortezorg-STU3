@@ -1,0 +1,237 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-08-14T13:43:41+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.15--20140814134341"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.15"/>
+    </identifier>
+    <version value="2014-08-14T13:43:41"/>
+    <name value="Infectieziekte"/>
+    <title value="Infectieziekten"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Infectieziekten"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="240589008"/>
+                <display value="Chlamydia trachomatis infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="15628003"/>
+                <display value="Gonorrhea (disorder)"/>
+            </concept>
+            <concept>
+                <code value="426933007"/>
+                <display value="Streptococcus agalactiae infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="266096002"/>
+                <display value="Methicillin resistant Staphylococcus aureus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="56717001"/>
+                <display value="Tuberculosis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="28944009"/>
+                <display value="Cytomegalovirus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="23513009"/>
+                <display value="Herpesvirus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="165806002"/>
+                <display value="Hepatitis B surface antigen positive (finding)"/>
+            </concept>
+            <concept>
+                <code value="86406008"/>
+                <display value="Human immunodeficiency virus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="66071002"/>
+                <display value="Type B viral hepatitis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="50711007"/>
+                <display value="Viral hepatitis C (disorder)"/>
+            </concept>
+            <concept>
+                <code value="36653000"/>
+                <display value="Rubella (disorder)"/>
+            </concept>
+            <concept>
+                <code value="309465005"/>
+                <display value="Varicella-zoster virus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="186748004"/>
+                <display value="Parvovirus infection (disorder)"/>
+            </concept>
+            <concept>
+                <code value="76272004"/>
+                <display value="Syphilis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="187192000"/>
+                <display value="Toxoplasmosis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="23502006"/>
+                <display value="Lyme disease (disorder)"/>
+            </concept>
+            <concept>
+                <code value="61462000"/>
+                <display value="Malaria (disorder)"/>
+            </concept>
+            <concept>
+                <code value="56335008"/>
+                <display value="Infection by Trichomonas (disorder)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:2ee33db2-86c2-460a-b79b-c4a2d0590dc7"/>
+        <timestamp value="2020-06-25T15:40:40.73+02:00"/>
+        <total value="23"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <abstract value="true"/>
+            <code value="87628006"/>
+            <display value="Bacterial infectious disease (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="240589008"/>
+            <display value="Chlamydia trachomatis infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="15628003"/>
+            <display value="Gonorrhea (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="426933007"/>
+            <display value="Streptococcus agalactiae infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="266096002"/>
+            <display value="Methicillin resistant Staphylococcus aureus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="56717001"/>
+            <display value="Tuberculosis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <abstract value="true"/>
+            <code value="34014006"/>
+            <display value="Viral disease (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="28944009"/>
+            <display value="Cytomegalovirus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="23513009"/>
+            <display value="Herpesvirus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="165806002"/>
+            <display value="Hepatitis B surface antigen positive (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="86406008"/>
+            <display value="Human immunodeficiency virus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="66071002"/>
+            <display value="Type B viral hepatitis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="50711007"/>
+            <display value="Viral hepatitis C (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="36653000"/>
+            <display value="Rubella (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="309465005"/>
+            <display value="Varicella-zoster virus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="186748004"/>
+            <display value="Parvovirus infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <abstract value="true"/>
+            <code value="17322007"/>
+            <display value="Disease caused by parasite (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="76272004"/>
+            <display value="Syphilis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="187192000"/>
+            <display value="Toxoplasmosis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="23502006"/>
+            <display value="Lyme disease (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="61462000"/>
+            <display value="Malaria (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="56335008"/>
+            <display value="Infection by Trichomonas (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

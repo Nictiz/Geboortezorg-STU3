@@ -24,14 +24,14 @@
     <immutable value="false"/>
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
             <concept>
                 <code value="NI"/>
                 <display value="Geen informatie"/>
             </concept>
         </include>
         <include>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+            <system value="urn:oid:2.16.840.1.113883.5.1053"/>
             <concept>
                 <code value="U"/>
                 <display value="Stated with uncertainty"/>
@@ -43,21 +43,21 @@
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:b6774d3f-df18-48b1-b669-0232bfd7abc3"/>
-        <timestamp value="2020-04-02T11:34:08.04+02:00"/>
+        <identifier value="urn:uuid:55d27517-e1ed-4538-85ba-b1179d228b5a"/>
+        <timestamp value="2020-06-25T15:41:03.873+02:00"/>
         <total value="3"/>
         <contains>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+            <system value="urn:oid:2.16.840.1.113883.5.1053"/>
             <code value="U"/>
             <display value="Stated with uncertainty"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+            <system value="urn:oid:2.16.840.1.113883.5.1053"/>
             <code value="N"/>
             <display value="Stated with no assertion of uncertainty"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
             <code value="NI"/>
             <display value="Geen informatie"/>
         </contains>

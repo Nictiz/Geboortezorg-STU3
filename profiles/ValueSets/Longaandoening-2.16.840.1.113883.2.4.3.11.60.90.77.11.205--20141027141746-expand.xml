@@ -1,0 +1,84 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-10-27T14:17:46+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.205--20141027141746"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.205"/>
+    </identifier>
+    <version value="2014-10-27T14:17:46"/>
+    <name value="Longaandoening"/>
+    <title value="Longaandoening"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Longaandoening"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="195967001"/>
+                <display value="Asthma (disorder)"/>
+            </concept>
+            <concept>
+                <code value="13645005"/>
+                <display value="Chronic obstructive lung disease (disorder)"/>
+            </concept>
+            <concept>
+                <code value="31541009"/>
+                <display value="Sarcoidosis (disorder)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:6a4a5074-c7d4-40c3-913c-495ccb63e1cd"/>
+        <timestamp value="2020-06-25T15:40:42.195+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="195967001"/>
+            <display value="Asthma (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="13645005"/>
+            <display value="Chronic obstructive lung disease (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="31541009"/>
+            <display value="Sarcoidosis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

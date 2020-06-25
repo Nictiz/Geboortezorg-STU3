@@ -1,0 +1,72 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-11-09T16:42:19+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.207--20141109164219"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.207"/>
+    </identifier>
+    <version value="2014-11-09T16:42:19"/>
+    <name value="FetalMovement"/>
+    <title value="Leven voelen"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Leven voelen"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="289431008"/>
+                <display value="Fetal movements present (finding)"/>
+            </concept>
+            <concept>
+                <code value="276372004"/>
+                <display value="Weak fetal movements (finding)"/>
+            </concept>
+            <concept>
+                <code value="276369006"/>
+                <display value="Reduced fetal movement (finding)"/>
+            </concept>
+            <concept>
+                <code value="289432001"/>
+                <display value="Fetal movements absent (context-dependent category)"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:7f40e913-a73d-40b3-a2b2-bd761e4c3fa3"/>
+        <timestamp value="2020-06-25T15:40:56.777+02:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="289431008"/>
+            <display value="Fetal movements present (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="276372004"/>
+            <display value="Weak fetal movements (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="276369006"/>
+            <display value="Reduced fetal movement (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="289432001"/>
+            <display value="Fetal movements absent (context-dependent category)"/>
+        </contains>
+    </expansion>
+</ValueSet>

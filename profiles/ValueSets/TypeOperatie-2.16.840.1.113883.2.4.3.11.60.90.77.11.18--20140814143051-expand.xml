@@ -1,0 +1,255 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-08-14T14:30:51+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.18--20140814143051"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.18"/>
+    </identifier>
+    <version value="2014-08-14T14:30:51"/>
+    <name value="TypeOperatie"/>
+    <title value="Type operatie"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Type operatie"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="12658000"/>
+                <display value="Operation on female genital organs (procedure)"/>
+            </concept>
+            <concept>
+                <code value="68688001"/>
+                <display value="Curettage (procedure)"/>
+            </concept>
+            <concept>
+                <code value="11466000"/>
+                <display value="Cesarean section (procedure)"/>
+            </concept>
+            <concept>
+                <code value="28233006"/>
+                <display value="Manual removal of retained placenta (procedure)"/>
+            </concept>
+            <concept>
+                <code value="79876008"/>
+                <display value="Operation on uterus (procedure)"/>
+            </concept>
+            <concept>
+                <code value="42010004"/>
+                <display value="Uterine myomectomy (procedure)"/>
+            </concept>
+            <concept>
+                <code value="64887002"/>
+                <display value="Operation on ovary (procedure)"/>
+            </concept>
+            <concept>
+                <code value="112697007"/>
+                <display value="Operation on musculoskeletal system (procedure)"/>
+            </concept>
+            <concept>
+                <code value="12745006"/>
+                <display value="Operative procedure on pelvis (procedure)"/>
+            </concept>
+            <concept>
+                <code value="129152004:260686004=129284003"/>
+                <display value="Operation on back (procedure)"/>
+            </concept>
+            <concept>
+                <code value="21371007"/>
+                <display value="Operation on abdominal region (procedure)"/>
+            </concept>
+            <concept>
+                <code value="86481000"/>
+                <display value="Laparotomy (procedure)"/>
+            </concept>
+            <concept>
+                <code value="80146002"/>
+                <display value="Appendectomy (procedure)"/>
+            </concept>
+            <concept>
+                <code value="177250006"/>
+                <display value="Abdominoplasty (procedure)"/>
+            </concept>
+            <concept>
+                <code value="34853001"/>
+                <display value="Operation on intestine (procedure)"/>
+            </concept>
+            <concept>
+                <code value="392090004"/>
+                <display value="Operation on breast (procedure)"/>
+            </concept>
+            <concept>
+                <code value="118717007:260686004=129284003"/>
+                <display value="Operation on organ (procedure)"/>
+            </concept>
+            <concept>
+                <code value="175898006"/>
+                <display value="Kidney operation (procedure)"/>
+            </concept>
+            <concept>
+                <code value="15463004"/>
+                <display value="Operation on thyroid gland (procedure)"/>
+            </concept>
+            <concept>
+                <code value="64915003"/>
+                <display value="Operation on heart (procedure)"/>
+            </concept>
+            <concept>
+                <code value="13119002"/>
+                <display value="Operation on adrenal gland (procedure)"/>
+            </concept>
+            <concept>
+                <code value="16545005"/>
+                <display value="Operation on nervous system (procedure)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="Onbekend"/>
+            </concept>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:95fc3203-86c6-4f26-b378-5026b53463f0"/>
+        <timestamp value="2020-06-25T15:40:43.298+02:00"/>
+        <total value="24"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="12658000"/>
+            <display value="Operation on female genital organs (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="68688001"/>
+            <display value="Curettage (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="11466000"/>
+            <display value="Cesarean section (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="28233006"/>
+            <display value="Manual removal of retained placenta (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="79876008"/>
+            <display value="Operation on uterus (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="42010004"/>
+            <display value="Uterine myomectomy (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="64887002"/>
+            <display value="Operation on ovary (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="112697007"/>
+            <display value="Operation on musculoskeletal system (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="12745006"/>
+            <display value="Operative procedure on pelvis (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="129152004:260686004=129284003"/>
+            <display value="Operation on back (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="21371007"/>
+            <display value="Operation on abdominal region (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="86481000"/>
+            <display value="Laparotomy (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="80146002"/>
+            <display value="Appendectomy (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="177250006"/>
+            <display value="Abdominoplasty (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="34853001"/>
+            <display value="Operation on intestine (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="392090004"/>
+            <display value="Operation on breast (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="118717007:260686004=129284003"/>
+            <display value="Operation on organ (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="175898006"/>
+            <display value="Kidney operation (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="15463004"/>
+            <display value="Operation on thyroid gland (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="64915003"/>
+            <display value="Operation on heart (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="13119002"/>
+            <display value="Operation on adrenal gland (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="16545005"/>
+            <display value="Operation on nervous system (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

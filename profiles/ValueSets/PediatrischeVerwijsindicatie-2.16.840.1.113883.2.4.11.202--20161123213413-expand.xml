@@ -1,0 +1,222 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2016-11-23T21:34:13+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.202"/>
+    </identifier>
+    <version value="2.2.0"/>
+    <name value="PediatrischeVerwijsindicatie"/>
+    <title value="Pediatrische verwijsindicatie"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Pediatrische verwijsindicatie"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="289261003"/>
+                <display value="Delivery problem (finding)"/>
+            </concept>
+            <concept>
+                <code value="8571000146103"/>
+                <display value="Fetal or neonatal effect of assisted delivery (disorder)"/>
+            </concept>
+            <concept>
+                <code value="289365005"/>
+                <display value="Finding of malposition of foetus (finding)"/>
+            </concept>
+            <concept>
+                <code value="12729009"/>
+                <display value="Prolonged rupture of membranes (disorder)"/>
+            </concept>
+            <concept>
+                <code value="168092006"/>
+                <display value="Amniotic fluid -meconium stain (finding)"/>
+            </concept>
+            <concept>
+                <code value="276614003"/>
+                <display value="Gestation abnormality (disorder)"/>
+            </concept>
+            <concept>
+                <code value="276609002"/>
+                <display value="Birth weight abnormality (disorder)"/>
+            </concept>
+            <concept>
+                <code value="413654009"/>
+                <display value="Birth asphyxia (disorder)"/>
+            </concept>
+            <concept>
+                <code value="34681009"/>
+                <display value="Perinatal respiratory distress (disorder)"/>
+            </concept>
+            <concept>
+                <code value="52767006"/>
+                <display value="Neonatal hypoglycemia (disorder)"/>
+            </concept>
+            <concept>
+                <code value="473130003"/>
+                <display value="Suspected infectious disease (situation)"/>
+            </concept>
+            <concept>
+                <code value="387712008"/>
+                <display value="Neonatal jaundice (disorder)"/>
+            </concept>
+            <concept>
+                <code value="161838002"/>
+                <display value="Infant feeding problem (finding)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <concept>
+                <code value="10"/>
+                <display value="Maternale indicatie"/>
+            </concept>
+            <concept>
+                <code value="20"/>
+                <display value="Verdenking op congenitale afwijking"/>
+            </concept>
+            <concept>
+                <code value="30"/>
+                <display value="(verdenking op) Convulsies"/>
+            </concept>
+            <concept>
+                <code value="40"/>
+                <display value="(te verwachten) Onttrekkingsverschijnselen"/>
+            </concept>
+            <concept>
+                <code value="50"/>
+                <display value="Psychosociale indicatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:0586bdae-6919-4368-affd-6c119d8e87bd"/>
+        <timestamp value="2020-06-25T15:40:24.169+02:00"/>
+        <total value="20"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <code value="10"/>
+            <display value="Maternale indicatie"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="289261003"/>
+            <display value="Delivery problem (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="8571000146103"/>
+            <display value="Fetal or neonatal effect of assisted delivery (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="289365005"/>
+            <display value="Finding of malposition of foetus (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="12729009"/>
+            <display value="Prolonged rupture of membranes (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="168092006"/>
+            <display value="Amniotic fluid -meconium stain (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="276614003"/>
+            <display value="Gestation abnormality (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="276609002"/>
+            <display value="Birth weight abnormality (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="413654009"/>
+            <display value="Birth asphyxia (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="34681009"/>
+            <display value="Perinatal respiratory distress (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="52767006"/>
+            <display value="Neonatal hypoglycemia (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="473130003"/>
+            <display value="Suspected infectious disease (situation)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <code value="20"/>
+            <display value="Verdenking op congenitale afwijking"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="387712008"/>
+            <display value="Neonatal jaundice (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <code value="30"/>
+            <display value="(verdenking op) Convulsies"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="161838002"/>
+            <display value="Infant feeding problem (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <code value="40"/>
+            <display value="(te verwachten) Onttrekkingsverschijnselen"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+            <code value="50"/>
+            <display value="Psychosociale indicatie"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

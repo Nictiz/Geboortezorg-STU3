@@ -1,0 +1,182 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-07-11T11:49:25+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.169"/>
+    </identifier>
+    <version value="2014-07-11T11:49:25"/>
+    <name value="PerinatalePeriodeOverdrachtConsult"/>
+    <title value="PerinatalePeriodeOverdrachtConsult"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="PerinatalePeriodeOverdrachtConsult"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="Onbekend"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <concept>
+                <code value="1"/>
+                <display value="Na eerste controle"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Voor 28e week"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="28e tot en met 36e week"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Vanaf 37e week"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="Tijdens ontsluiting"/>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="Tijdens uitdrijving"/>
+            </concept>
+            <concept>
+                <code value="7"/>
+                <display value="Nageboortetijdperk"/>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Direct postpartum"/>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="Tijdens kraambed"/>
+            </concept>
+            <concept>
+                <code value="91"/>
+                <display value="Binnen 24 uur"/>
+            </concept>
+            <concept>
+                <code value="92"/>
+                <display value="2e t/m 7e dag"/>
+            </concept>
+            <concept>
+                <code value="10"/>
+                <display value="2e week of later"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:6de9a1d1-a428-40c2-b985-ac474c01a80a"/>
+        <timestamp value="2020-06-25T15:40:59.064+02:00"/>
+        <total value="17"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <abstract value="true"/>
+            <code value="100"/>
+            <display value="Ante partum"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="1"/>
+            <display value="Na eerste controle"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="2"/>
+            <display value="Voor 28e week"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="3"/>
+            <display value="28e tot en met 36e week"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="4"/>
+            <display value="Vanaf 37e week"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <abstract value="true"/>
+            <code value="200"/>
+            <display value="Durante partu"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="5"/>
+            <display value="Tijdens ontsluiting"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="6"/>
+            <display value="Tijdens uitdrijving"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="7"/>
+            <display value="Nageboortetijdperk"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <abstract value="true"/>
+            <code value="300"/>
+            <display value="Postpartum"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="8"/>
+            <display value="Direct postpartum"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="9"/>
+            <display value="Tijdens kraambed"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="91"/>
+            <display value="Binnen 24 uur"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="92"/>
+            <display value="2e t/m 7e dag"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.52"/>
+            <code value="10"/>
+            <display value="2e week of later"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

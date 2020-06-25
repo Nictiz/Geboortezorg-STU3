@@ -1,0 +1,80 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2009-10-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.12--20091001000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.12"/>
+    </identifier>
+    <version value="2009-10-01T00:00:00"/>
+    <name value="ConclusieRisicostatus"/>
+    <title value="ConclusieRisicostatus"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="ConclusieRisicostatus"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <concept>
+                <code value="1"/>
+                <display value="1e lijn (VIL A)"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="overlegsituatie (VIL B)"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="2e lijn (VIL C)"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="1e lijn met plaatsindicatie (VIL D)"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="3e lijns zorg"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:e2e83fab-5099-496c-8f98-9c1adffc4154"/>
+        <timestamp value="2020-06-25T15:40:48.295+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <code value="1"/>
+            <display value="1e lijn (VIL A)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <code value="2"/>
+            <display value="overlegsituatie (VIL B)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <code value="3"/>
+            <display value="2e lijn (VIL C)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <code value="4"/>
+            <display value="1e lijn met plaatsindicatie (VIL D)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+            <code value="5"/>
+            <display value="3e lijns zorg"/>
+        </contains>
+    </expansion>
+</ValueSet>

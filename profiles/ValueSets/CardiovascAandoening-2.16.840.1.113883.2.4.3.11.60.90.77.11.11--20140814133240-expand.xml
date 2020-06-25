@@ -1,0 +1,84 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-08-14T13:32:40+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.11--20140814133240"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.11"/>
+    </identifier>
+    <version value="2014-08-14T13:32:40"/>
+    <name value="CardiovascAandoening"/>
+    <title value="Cardiovasculaire aandoeningen"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Cardiovasculaire aandoeningen"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="38341003"/>
+                <display value="Hypertensive disorder, systemic arterial (disorder)"/>
+            </concept>
+            <concept>
+                <code value="85898001"/>
+                <display value="Cardiomyopathy (disorder)"/>
+            </concept>
+            <concept>
+                <code value="698247007"/>
+                <display value="Cardiac arrhythmia (disorder)"/>
+            </concept>
+            <concept>
+                <code value="128599005"/>
+                <display value="Structural disorder of heart (disorder)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:bacaaced-91b9-493e-8694-1c37decf3946"/>
+        <timestamp value="2020-06-25T15:40:38.142+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="38341003"/>
+            <display value="Hypertensive disorder, systemic arterial (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="85898001"/>
+            <display value="Cardiomyopathy (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="698247007"/>
+            <display value="Cardiac arrhythmia (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="128599005"/>
+            <display value="Structural disorder of heart (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

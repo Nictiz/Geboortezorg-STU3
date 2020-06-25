@@ -1,0 +1,119 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-05-19T14:35:30+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.3"/>
+    </identifier>
+    <version value="2014-05-19T14:35:30"/>
+    <name value="EthnicGroup"/>
+    <title value="EthnicGroup"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="EthnicGroup"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <concept>
+                <code value="14"/>
+                <display value="Latijns Amerikaans"/>
+            </concept>
+            <concept>
+                <code value="13"/>
+                <display value="Hindoestaans"/>
+            </concept>
+            <concept>
+                <code value="12"/>
+                <display value="Kaukasisch"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="Noord-Afrikaans"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Overig Afrikaans"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="Turks"/>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Overig Aziatisch"/>
+            </concept>
+            <concept>
+                <code value="11"/>
+                <display value="Meervoudige afkomst / Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:5fab7d95-95e6-499b-b400-ce26297c9197"/>
+        <timestamp value="2020-06-25T15:41:02.652+02:00"/>
+        <total value="9"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="14"/>
+            <display value="Latijns Amerikaans"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="13"/>
+            <display value="Hindoestaans"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="12"/>
+            <display value="Kaukasisch"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="3"/>
+            <display value="Noord-Afrikaans"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="4"/>
+            <display value="Overig Afrikaans"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="5"/>
+            <display value="Turks"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="8"/>
+            <display value="Overig Aziatisch"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.28"/>
+            <code value="11"/>
+            <display value="Meervoudige afkomst / Overig"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+    </expansion>
+</ValueSet>

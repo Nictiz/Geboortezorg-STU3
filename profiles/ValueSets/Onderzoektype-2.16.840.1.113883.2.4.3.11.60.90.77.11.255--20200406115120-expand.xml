@@ -1,0 +1,108 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-04-06T11:51:20+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.255"/>
+    </identifier>
+    <version value="2020-04-06T11:51:20"/>
+    <name value="Onderzoektype"/>
+    <title value="Onderzoektype"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Onderzoektype"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="133601000146101"/>
+                <display value="echografie ter bepaling van geschatte datum van partus (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="241493005"/>
+                <display value="echografie voor foetale groei (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="414880004"/>
+                <display value="echografie van nekplooi (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="446522006"/>
+                <display value="Ultrasonography in first trimester (procedure)"/>
+            </concept>
+            <concept>
+                <code value="446208007"/>
+                <display value="echografie in tweede trimester (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="425551008"/>
+                <display value="prenatale echografie voor mogelijke afwijking (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="472825005"/>
+                <display value="Fetal chromosomal abnormality screening (procedure)"/>
+            </concept>
+            <concept>
+                <code value="7751000146103"/>
+                <display value="Non-invasive prenatal test (procedure)"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:f491c35f-7554-4617-bbed-033d0f20f517"/>
+        <timestamp value="2020-06-25T15:40:57.282+02:00"/>
+        <total value="8"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="133601000146101"/>
+            <display value="echografie ter bepaling van geschatte datum van partus (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="241493005"/>
+            <display value="echografie voor foetale groei (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="414880004"/>
+            <display value="echografie van nekplooi (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="446522006"/>
+            <display value="Ultrasonography in first trimester (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="446208007"/>
+            <display value="echografie in tweede trimester (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="425551008"/>
+            <display value="prenatale echografie voor mogelijke afwijking (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="472825005"/>
+            <display value="Fetal chromosomal abnormality screening (procedure)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="7751000146103"/>
+            <display value="Non-invasive prenatal test (procedure)"/>
+        </contains>
+    </expansion>
+</ValueSet>

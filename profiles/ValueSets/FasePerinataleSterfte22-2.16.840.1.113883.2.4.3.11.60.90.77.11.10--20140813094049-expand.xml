@@ -1,51 +1,75 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-   </meta>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2014-08-13T09:40:49+01:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049"/>
-   <identifier>
-      <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.10"/>
-   </identifier>
-   <version value="2014-08-13T09:40:49"/>
-   <name value="FasePerinataleSterfte22"/>
-   <title value="Fase Perinatale Sterfte (2.2)"/>
-   <status value="active"/>
-   <experimental value="false"/>
-   <publisher value="KNOV"/>
-   <description value="Fase Perinatale Sterfte (2.2)"/>
-   <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-   <expansion>
-      <identifier value="urn:uuid:5705ceb7-6649-4368-9cb0-4f40d79bc4f5"/>
-      <timestamp value="2019-12-23T13:46:04.777+01:00"/>
-      <total value="4"/>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="237361005"/>
-         <display value="Antepartum fetal death (event)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="237362003"/>
-         <display value="Intrapartum fetal death (event)"/>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="276506001"/>
-         <display value="Newborn death (event)"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="NI"/>
-         <display value="Geen informatie"/>
-      </contains>
-   </expansion>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-08-13T09:40:49+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.10"/>
+    </identifier>
+    <version value="2014-08-13T09:40:49"/>
+    <name value="FasePerinataleSterfte22"/>
+    <title value="Fase Perinatale Sterfte (2.2)"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Fase Perinatale Sterfte (2.2)"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <concept>
+                <code value="237361005"/>
+                <display value="Antepartum fetal death (event)"/>
+            </concept>
+            <concept>
+                <code value="237362003"/>
+                <display value="Intrapartum fetal death (event)"/>
+            </concept>
+            <concept>
+                <code value="276506001"/>
+                <display value="Newborn death (event)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="NI"/>
+                <display value="Geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:110590f8-217a-47e3-982d-efb224227c45"/>
+        <timestamp value="2020-06-25T15:40:21.987+02:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="237361005"/>
+            <display value="Antepartum fetal death (event)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="237362003"/>
+            <display value="Intrapartum fetal death (event)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="276506001"/>
+            <display value="Newborn death (event)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+        </contains>
+    </expansion>
 </ValueSet>

@@ -1,0 +1,74 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2013-01-10T13:26:16+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.161--20130110132616"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.161"/>
+    </identifier>
+    <version value="2013-01-10T13:26:16"/>
+    <name value="EpisiotomieType"/>
+    <title value="EpisiotomieType"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="EpisiotomieType"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.60"/>
+            <concept>
+                <code value="1"/>
+                <display value="mediolaterale episiotomie"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="mediane episiotomie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:4650bd9b-6f24-4455-839d-6bdd1e6e6d5b"/>
+        <timestamp value="2020-06-25T15:40:54.918+02:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.60"/>
+            <code value="1"/>
+            <display value="mediolaterale episiotomie"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.60"/>
+            <code value="2"/>
+            <display value="mediane episiotomie"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

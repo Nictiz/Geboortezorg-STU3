@@ -1,55 +1,83 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-   </meta>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2013-01-10T12:25:06+01:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.16--20130110122506"/>
-   <identifier>
-      <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.11.16"/>
-   </identifier>
-   <version value="2013-01-10T12:25:06"/>
-   <name value="WijzeBaringBegin"/>
-   <title value="WijzeBaringBegin"/>
-   <status value="active"/>
-   <experimental value="false"/>
-   <publisher value="KNOV"/>
-   <description value="WijzeBaringBegin"/>
-   <immutable value="false"/>
-   <expansion>
-      <identifier value="urn:uuid:984b2f29-e944-4f19-b639-b387c248f477"/>
-      <timestamp value="2019-12-23T13:46:06.892+01:00"/>
-      <total value="5"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
-         <code value="1"/>
-         <display value="spontane weeën"/>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
-         <code value="2"/>
-         <display value="spontane vliesscheur"/>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
-         <code value="3"/>
-         <display value="interventie om baring op gang te brengen"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="UNK"/>
-         <display value="onbekend"/>
-      </contains>
-      <contains>
-         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-         <code value="NI"/>
-         <display value="geen informatie"/>
-      </contains>
-   </expansion>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2013-01-10T12:25:06+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.16--20130110122506"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.16"/>
+    </identifier>
+    <version value="2013-01-10T12:25:06"/>
+    <name value="WijzeBaringBegin"/>
+    <title value="WijzeBaringBegin"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="WijzeBaringBegin"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+            <concept>
+                <code value="1"/>
+                <display value="spontane weeën"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="spontane vliesscheur"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="interventie om baring op gang te brengen"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:03aa92fc-e63d-46be-8e4b-564031afeef5"/>
+        <timestamp value="2020-06-25T15:40:28.782+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+            <code value="1"/>
+            <display value="spontane weeën"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+            <code value="2"/>
+            <display value="spontane vliesscheur"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+            <code value="3"/>
+            <display value="interventie om baring op gang te brengen"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.1008"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
 </ValueSet>
