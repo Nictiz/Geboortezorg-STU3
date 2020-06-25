@@ -199,6 +199,23 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.160--20120317000000" />
       </binding>
     </element>
+    <element id="Observation.value[x]:riskStatusBeforeBirth">
+      <path value="Observation.value[x]" />
+      <sliceName value="riskStatusBeforeBirth" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="RisicoBaring22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.180--20140102000000" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20530" />
+        <comment value="Risicostatus voor baring" />
+      </mapping>
+    </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />
       <max value="0" />

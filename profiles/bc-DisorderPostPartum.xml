@@ -92,9 +92,14 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:sliceCoding">
+    <element id="Condition.code.coding:pathology">
       <path value="Condition.code.coding" />
-      <sliceName value="sliceCoding" />
+      <sliceName value="pathology" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82209" />
+        <comment value="Pathologie vrouw" />
+      </mapping>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82209" />

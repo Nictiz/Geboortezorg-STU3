@@ -36,6 +36,34 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
   <derivation value="constraint" />
   <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82235" />
+        <comment value="Echoscopie" />
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.extension">
+      <path value="DiagnosticReport.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.extension:comments">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="comments" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
+      </type>
+    </element>
     <element id="DiagnosticReport.code.coding">
       <path value="DiagnosticReport.code.coding" />
       <slicing>
@@ -54,6 +82,11 @@
         <description value="OnderzoekType" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-83383" />
+        <comment value="Onderzoektype" />
+      </mapping>
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
@@ -61,6 +94,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
     </element>
     <element id="DiagnosticReport.context">
       <path value="DiagnosticReport.context" />
@@ -72,6 +110,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
     </element>
     <element id="DiagnosticReport.effective[x]">
       <path value="DiagnosticReport.effective[x]" />

@@ -27,11 +27,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/StructureDefinition/bc-Child" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-2" />
-        <comment value="Vrouw" />
-      </mapping>
     </element>
     <element id="Observation.context">
       <path value="Observation.context" />
@@ -74,31 +69,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60030" />
-        <comment value="BPD" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60060" />
-        <comment value="HC" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60080" />
-        <comment value="AC" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60100" />
-        <comment value="FL" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82340" />
-        <comment value="EFW" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-70011" />
         <comment value="Voeding kind (datum)" />
       </mapping>
@@ -106,35 +76,6 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-70030" />
         <comment value="Substantie voeding kind" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:position">
-      <path value="Observation.value[x]" />
-      <sliceName value="position" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Ligging" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.188--20140102000000" />
-      </binding>
-    </element>
-    <element id="Observation.value[x]:placentaLocalisation">
-      <path value="Observation.value[x]" />
-      <sliceName value="placentaLocalisation" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="PlacentaLokalisatie22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.209--20141128125356" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80946" />
-        <comment value="Placentalokalisatie" />
       </mapping>
     </element>
     <element id="Observation.interpretation.extension">
@@ -165,26 +106,6 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40060" />
         <comment value="Percentiel van het geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60031" />
-        <comment value="BPD percentiel" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60061" />
-        <comment value="HC percentiel" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60081" />
-        <comment value="AC percentiel" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-60101" />
-        <comment value="FL percentiel" />
       </mapping>
     </element>
     <element id="Observation.interpretation.extension:percentile.valueQuantity:valueQuantity.unit">
