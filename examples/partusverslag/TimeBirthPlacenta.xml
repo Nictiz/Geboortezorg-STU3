@@ -1,16 +1,11 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="wouden-datumtijd-geboorte-placenta" />
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaObservation" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation" />
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
         <valueReference>
             <reference value="Procedure/bevallingprocedure-wouden-zwanger3" />
-        </valueReference>
-    </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
-        <valueReference>
-            <reference value="BodySite/wouden-placenta" />
         </valueReference>
     </extension>
     <status value="final"/>
