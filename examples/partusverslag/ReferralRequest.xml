@@ -5,8 +5,8 @@
     <type> 
         <coding> 
             <system value="http://snomed.info/sct"/> 
-            <code value="308292007"/> 
-            <display value="Transfer of care (procedure)"/> 
+            <code value="3457005"/> 
+            <display value="Patient referral"/> 
         </coding> 
     </type> 
     <subject> 
@@ -18,18 +18,18 @@
     <authoredOn value="2017-06-01"/> 
     <requester> 
         <agent> 
-            <reference value="Practitioner/zorgverlener-delos"/> 
+            <reference value="Organization/verloskundigenpraktijk-A"/> 
         </agent> 
-    </requester> 
+    </requester>
     <specialty> 
         <coding> 
-            <system value="Specialisme"/> 
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
             <code value="02"/> 
             <display value="Gynaecoloog 2e lijn"/> 
         </coding> 
     </specialty> 
     <recipient> 
-        <reference value="Practitioner/zorgverlener-gyn"/>
+        <reference value="Organization/ziekenhuis-gyn"/>
     </recipient> 
     <reasonReference> 
         <reference value="Condition/pre-eclampsie"/> 
