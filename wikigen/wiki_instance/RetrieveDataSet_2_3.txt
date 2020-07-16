@@ -1,0 +1,386 @@
+=Addendum FHIR mapping=
+{{IssueBox|Generated code, do not change by hand}}
+
+=bc-BirthObservation=
+<section begin=bc-BirthObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80619
+||Tijdstip breken vliezen
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://snomed.info/sct
+||289251005
+||Time rupture of membranes detected
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||30030
+||Tijdstip actief meepersen
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||urn:oid:2.16.840.1.113883.2.4.3.22.1.1
+||PRN530401
+||Tijdstip actief meepersen
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80626
+||Type partus
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://snomed.info/sct
+||364336006
+||Pattern of delivery (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.182--20161122140045 TypePartus]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40140
+||Ligging bij geboorte
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||urn:oid:2.16.840.1.113883.2.4.3.22.1.1
+||LigGbrt
+||Ligging bij geboorte
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.177--20131224000000 LiggingBijGeboorte22]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80793
+||Navelstreng vaten
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://snomed.info/sct
+||249191003
+||Number of blood vessels in umbilical cord (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.231--20170201164126 Navelstreng vaten]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80761
+||Vitamine K?
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://snomed.info/sct
+||698350008
+||Administration of vitamin K1 via oral route (procedure)
+||valueBoolean
+||
+|| 
+|}
+
+<section end=bc-BirthObservation />
+
+=bc-ChildObservation=
+<section begin=bc-ChildObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80760
+||Schedelomtrek
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||http://snomed.info/sct
+||169876006
+||Birth head circumference (observable entity)
+||valueQuantity
+||
+|| cm
+|}
+
+<section end=bc-ChildObservation />
+
+=bc-DeliveryObservation=
+<section begin=bc-DeliveryObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20590
+||Tijdstip begin actieve ontsluiting
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||249120008
+||Onset of labour first stage
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80792
+||Compleetheid vliezen
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364351002
+||Completeness of membranes (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.230--20170201162016 Compleetheid vliezen]
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20640
+||Hoeveelheid bloedverlies
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364332008
+||Blood loss in labour
+||valueQuantity
+||
+|| ml
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80673
+||Conditie perineum postpartum
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364297003
+||Female perineum observable (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.192--20140122110447 Conditie perineum (2.2)]
+|| 
+|}
+
+<section end=bc-DeliveryObservation />
+
+=bc-MaternalObservation=
+<section begin=bc-MaternalObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20612
+||Portio
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||249021005
+||Effacement of cervix
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.158--20120317000000 Cervix Effacement]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82372
+||Positie portio
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||248920001
+||Position of uterine cervix (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.213--20160425122048 Positie portio (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20613
+||Ontsluiting
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||289761004
+||Finding of cervical dilatation
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.175--20130422173433 Cervical dilatation]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20614
+||Vliezen
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||112074005
+||Condition of fetal membrane
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.173--20130320000000 Vliezen]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20615
+||Indaling Hodge
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||364611006
+||Fetal descent in relation to ischial spines (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.159--20120317000000 Hodge Planes]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80616
+||Aard van het voorliggend deel
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||364612004
+||Presenting part palpable vaginally
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.172--20130320000000 Presentation of fetus]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80618
+||Stand
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||163520002
+||O/E - presenting part position
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.174--20151019205620 Stand]
+|| 
+|}
+
+<section end=bc-MaternalObservation />
+
+=bc-PlacentaObservation=
+<section begin=bc-PlacentaObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20631
+||Placenta Compleet
+||[https://simplifier.net/geboortezorg-stu3/bc-PlacentaObservation bc-PlacentaObservation]
+||http://snomed.info/sct
+||364343000
+||Completeness of placenta (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.160--20120317000000 Completeness placenta]
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80791
+||Datum/tijd geboorte placenta
+||[https://simplifier.net/geboortezorg-stu3/bc-PlacentaObservation bc-PlacentaObservation]
+||
+||
+||
+||valueDatetime
+||
+|| 
+|}
+
+<section end=bc-PlacentaObservation />
+
+=bc-PregnancyObservation=
+<section begin=bc-PregnancyObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20261
+||Voorgenomen plaats baring tijdens zwangerschap (type locatie)
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||urn:oid:2.16.840.1.113883.2.4.3.22.1.3
+||PRN4209
+||Voorgenomen plaats baring tijdens zwangerschap
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.179--20131230000000 VoorgenomenPlaatsBaring]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82009
+||Voorgenomen voeding
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||169740003
+||Infant feeding method (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.228--20170201140644 Voorgenomen voeding]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80625
+||Wijze einde zwangerschap
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||EindeZw
+||Wijze einde zwangerschap
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.171--20130320000000 WijzeEindeZwangerschap]
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20540
+||Datum einde zwangerschap
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||118951000146109
+||datum van einde van zwangerschap (waarneembare entiteit)
+||valueDatetime
+||
+|| 
+|}
+
+<section end=bc-PregnancyObservation />
