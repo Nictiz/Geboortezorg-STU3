@@ -1,0 +1,49 @@
+<Organization xmlns="http://hl7.org/fhir">
+   <id value="ziekenhuis"/>
+   <meta>
+      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+   </meta>
+   <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+      <value value="12341234" />
+   </identifier>
+   <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/ura" />
+      <value value="12341234" />
+   </identifier>
+   <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/oid" />
+      <value value="12341234" />
+   </identifier>
+   <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/lvr-instellingid" />
+      <value value="37" />
+   </identifier>
+   <name value="Ziekenhuis"/>
+   <address>
+      <line value="Hoofdweg 1a">
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+            <valueString value="Hoofdweg" />
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+            <valueString value="1" />
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+            <valueString value="a" />
+         </extension>
+      </line>
+      <city value="Amsterdam" />
+      <postalCode value="1000AA" />
+      <country value="NLD">
+         <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+               <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
+                  <code value="6030" />
+                  <display value="Nederland" />
+               </coding>
+            </valueCodeableConcept>
+         </extension>
+      </country>
+   </address>
+</Organization>
