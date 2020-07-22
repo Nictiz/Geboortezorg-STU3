@@ -1,0 +1,40 @@
+<ReferralRequest xmlns="http://hl7.org/fhir">
+    <id value="verwijsdetails"/> 
+    <status value="active"/> 
+    <intent value="order"/> 
+    <!-- Type verwijzing (peri23-dataelement-82581) -->
+    <type> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="308292007"/> 
+            <display value="Transfer of care (procedure)"/> 
+        </coding> 
+    </type> 
+    <!-- Perinatale periode (peri23-dataelement-20367) -->
+    <type>
+        <coding> 
+            <system value="PerinatalePeriodeOverdrachtConsult"/> 
+            <code value="6"/> 
+            <display value="Tijdens uitdrijving"/> 
+        </coding>         
+    </type>
+    <subject> 
+        <reference value="Patient/example"/> 
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/example"/> 
+    </context> 
+    <authoredOn value="2018-05-01"/> 
+    <!-- categorie reden overdracht (peri23-dataelement-20372) -->
+    <reasonCode> 
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="45757002"/>
+            <display value="Labour problem"/>
+        </coding>
+    </reasonCode> 
+    <!-- hoeveelheid bloedverlies tot acute overdracht (peri23-dataelement-20633) -->
+    <supportingInfo>
+        <reference value="Observation/bloodloss-in-labor"/>
+    </supportingInfo>
+</ReferralRequest> 

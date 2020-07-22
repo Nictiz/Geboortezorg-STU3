@@ -1,0 +1,63 @@
+<ReferralRequest xmlns="http://hl7.org/fhir">
+    <id value="verwijsdetails"/> 
+    <status value="active"/> 
+    <intent value="order"/> 
+    <!-- Type verwijzing (peri23-dataelement-82581) -->
+    <type> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="308292007"/> 
+            <display value="Transfer of care (procedure)"/> 
+        </coding> 
+    </type> 
+    <!-- Perinatale periode (peri23-dataelement-20367) -->
+    <type>
+        <coding> 
+            <system value="PerinatalePeriodeOverdrachtConsult"/> 
+            <code value="2"/> 
+            <display value="Voor 28e week"/> 
+        </coding>         
+    </type>
+    <subject> 
+        <reference value="Patient/example"/> 
+    </subject> 
+    <context> 
+        <reference value="EpisodeOfCare/example"/> 
+    </context> 
+    <authoredOn value="2019-01-18"/> 
+    <!-- verwijzing van (peri23-dataelement-82550) -->
+    <requester> 
+        <agent> 
+            <reference value="Practitioner/requestingagentexample"/> 
+        </agent> 
+        <!-- specialisme (peri23-dataelement-82554) -->
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requester-specialty">
+            <coding> 
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
+                <code value="01"/> 
+                <display value="Verloskundige"/> 
+            </coding> 
+        </extension>
+    </requester> 
+    <!-- verwijzing naar zorginstelling (specialisme) (peri23-dataelement-82580) -->
+    <specialty> 
+        <coding> 
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
+            <code value="02"/> 
+            <display value="Gynaecoloog 2e lijn"/> 
+        </coding> 
+    </specialty> 
+    <!-- zorginstelling (peri23-dataelement-82578) -->
+    <recipient> 
+        <reference value="Practitioner/recipientexample"/>
+    </recipient> 
+    <!-- overig (peri23-dataelement-82442) -->
+    <reasonCode> 
+        <coding>
+            <system value="VILLijst"/>
+            <code value="9999"/>
+            <display value="Overige verwijsreden"/>
+        </coding>
+        <text value="Op verzoek van mevrouw"/> 
+    </reasonCode> 
+</ReferralRequest> 
