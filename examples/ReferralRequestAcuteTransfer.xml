@@ -1,5 +1,18 @@
 <ReferralRequest xmlns="http://hl7.org/fhir">
     <id value="verwijsdetails"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
+    </meta>
+    <!-- Perinatale periode (peri23-dataelement-20367) -->
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requester-specialty">
+        <valueCodeableConcept>
+            <coding> 
+                <system value="PerinatalePeriodeOverdrachtConsult"/> 
+                <code value="6"/> 
+                <display value="Tijdens uitdrijving"/> 
+            </coding>    
+        </valueCodeableConcept>
+    </extension>
     <status value="active"/> 
     <intent value="order"/> 
     <!-- Type verwijzing (peri23-dataelement-82581) -->
@@ -10,14 +23,6 @@
             <display value="Transfer of care (procedure)"/> 
         </coding> 
     </type> 
-    <!-- Perinatale periode (peri23-dataelement-20367) -->
-    <type>
-        <coding> 
-            <system value="PerinatalePeriodeOverdrachtConsult"/> 
-            <code value="6"/> 
-            <display value="Tijdens uitdrijving"/> 
-        </coding>         
-    </type>
     <subject> 
         <reference value="Patient/example"/> 
     </subject> 

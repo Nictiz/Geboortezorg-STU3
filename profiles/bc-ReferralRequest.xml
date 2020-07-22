@@ -39,6 +39,38 @@
         <comment value="Verwijsdetails" />
       </mapping>
     </element>
+    <element id="ReferralRequest.extension">
+      <path value="ReferralRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ReferralRequest.extension:perinatalPeriod">
+      <path value="ReferralRequest.extension" />
+      <sliceName value="perinatalPeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodoftransfer" />
+      </type>
+    </element>
+    <element id="ReferralRequest.extension:perinatalPeriod.valueCodeableConcept:valueCodeableConcept">
+      <path value="ReferralRequest.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20367" />
+        <comment value="Perinatale periode" />
+      </mapping>
+    </element>
     <element id="ReferralRequest.intent">
       <path value="ReferralRequest.intent" />
       <fixedCode value="order" />
@@ -65,21 +97,6 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82581" />
         <comment value="Type verwijzing" />
-      </mapping>
-    </element>
-    <element id="ReferralRequest.type.coding:perinatalPeriod">
-      <path value="ReferralRequest.type.coding" />
-      <sliceName value="perinatalPeriod" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="PerinataleOverdrachtPeriodeConsult" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20367" />
-        <comment value="Perinatale periode" />
       </mapping>
     </element>
     <element id="ReferralRequest.subject">
@@ -143,7 +160,6 @@
     <element id="ReferralRequest.requester.extension:specialty">
       <path value="ReferralRequest.requester.extension" />
       <sliceName value="specialty" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

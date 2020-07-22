@@ -1,5 +1,18 @@
 <ReferralRequest xmlns="http://hl7.org/fhir">
     <id value="verwijsdetails"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
+    </meta>
+    <!-- Perinatale periode (peri23-dataelement-20367) -->
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requester-specialty">
+        <valueCodeableConcept>
+            <coding> 
+                <system value="PerinatalePeriodeOverdrachtConsult"/> 
+                <code value="2"/> 
+                <display value="Voor 28e week"/> 
+            </coding>   
+        </valueCodeableConcept>
+    </extension>
     <status value="active"/> 
     <intent value="order"/> 
     <!-- Type verwijzing (peri23-dataelement-82581) -->
@@ -10,14 +23,6 @@
             <display value="Transfer of care (procedure)"/> 
         </coding> 
     </type> 
-    <!-- Perinatale periode (peri23-dataelement-20367) -->
-    <type>
-        <coding> 
-            <system value="PerinatalePeriodeOverdrachtConsult"/> 
-            <code value="2"/> 
-            <display value="Voor 28e week"/> 
-        </coding>         
-    </type>
     <subject> 
         <reference value="Patient/example"/> 
     </subject> 
@@ -32,11 +37,13 @@
         </agent> 
         <!-- specialisme (peri23-dataelement-82554) -->
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requester-specialty">
-            <coding> 
-                <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
-                <code value="01"/> 
-                <display value="Verloskundige"/> 
-            </coding> 
+            <valueCodeableConcept>
+                <coding> 
+                    <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
+                    <code value="01"/> 
+                    <display value="Verloskundige"/> 
+                </coding> 
+            </valueCodeableConcept>
         </extension>
     </requester> 
     <!-- verwijzing naar zorginstelling (specialisme) (peri23-dataelement-82580) -->
