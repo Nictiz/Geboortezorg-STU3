@@ -239,13 +239,6 @@
     </element>
     <element id="ReferralRequest.reasonCode">
       <path value="ReferralRequest.reasonCode" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri22-dataelement-82014" />
