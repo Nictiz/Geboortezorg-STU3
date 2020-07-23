@@ -1,0 +1,45 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+    <id value="labuitslagen" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport" />
+    </meta>
+    <status value="final" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="4241000179101"/>
+            <display value="Laboratory report (record artifact)"/>
+        </coding>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="252275004"/>
+            <display value="Hematology"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="396550006"/>
+            <display value="Blood test (procedure)"/>    
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+    </context>
+    <effectiveDateTime value="2015-10-02T10:15:00+01:00" />
+    <performer>
+        <actor>
+            <reference value="Practitioner/laborant"/>
+        </actor>
+    </performer>
+    <result>
+        <reference value="Observation/hb" />
+        <reference value="Observation/bloedgroep" />
+        <reference value="Observation/rhesusd" />
+        <reference value="Observation/rhesusc" />
+    </result>
+    <conclusion value="Geen bijzonderheden." />
+</DiagnosticReport>
