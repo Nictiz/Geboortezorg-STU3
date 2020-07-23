@@ -78,6 +78,14 @@
         <comment value="Substantie voeding kind" />
       </mapping>
     </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10605" />
+        <comment value="Percentiel van het geboortegewicht" />
+      </mapping>
+    </element>
     <element id="Observation.interpretation.extension">
       <path value="Observation.interpretation.extension" />
       <slicing>
@@ -91,17 +99,11 @@
     <element id="Observation.interpretation.extension:percentile">
       <path value="Observation.interpretation.extension" />
       <sliceName value="percentile" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-percentile" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-10605" />
-        <comment value="Percentiel van het geboortegewicht" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40060" />
