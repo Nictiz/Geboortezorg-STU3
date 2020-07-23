@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- irregulaire_antistoffenq conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10812" -->
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="antistoffen"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-IrregularAntibodyPresent"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="49581000146104" />
+            <display value="Laboratory test finding (finding)" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="312457003"/>
+            <display value="Finding of irregular blood group antibody present (finding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger4"/>
+    </context>
+    <!-- irregulaire_antistoffenq conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10812" -->
+    <valueBoolean value="false"/>
+</Observation>
+
