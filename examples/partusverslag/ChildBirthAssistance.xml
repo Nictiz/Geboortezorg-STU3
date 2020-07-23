@@ -2,9 +2,16 @@
     <id value="partusassistentie"/> 
     <status value="finished"/> 
     <class> 
-         <system value="http://snomed.info/sct"/> 
-         <code value="22232009"/> 
-         <display value="Hospital (environment)"/> 
+        <system value="http://hl7.org/fhir/v3/ActCode"/>
+        <code value="SS"/>
+        <display value="short stay"/>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification" >
+            <valueCodeableConcept>
+                <system value="http://snomed.info/sct"/> 
+                <code value="22232009"/> 
+                <display value="Hospital (environment)"/> 
+            </valueCodeableConcept>            
+        </extension> 
     </class> 
     <subject> 
         <reference value="Patient/XXX-VDWOUDEN"/> 

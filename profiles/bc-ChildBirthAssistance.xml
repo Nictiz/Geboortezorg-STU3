@@ -70,20 +70,34 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.class:actualPlaceOfBirth">
-      <path value="Encounter.class" />
+    <element id="Encounter.class.extension">
+      <path value="Encounter.class.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.class.extension:actualPlaceOfBirth">
+      <path value="Encounter.class.extension" />
       <sliceName value="actualPlaceOfBirth" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+    </element>
+    <element id="Encounter.class.extension:actualPlaceOfBirth.valueCodeableConcept:valueCodeableConcept">
+      <path value="Encounter.class.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
-        </valueSetReference>
+        <description value="WerkelijkePlaatsBaring22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40003" />
-        <comment value="Werkelijke plaats baring (type locatie)" />
-      </mapping>
     </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
