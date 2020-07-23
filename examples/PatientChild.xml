@@ -1,0 +1,67 @@
+<?xml-model href="http://hl7.org/fhir/STU3/patient.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/patient.xsd"
+  xmlns="http://hl7.org/fhir">
+  <id value="examplechild"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-child"/>
+  </meta>
+  <identifier>
+    <use value="official" />
+    <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+    <value value="12345678" />
+  </identifier>
+  <identifier>
+    <use value="official" />
+    <system value="LocalIdentifierSystem" />
+    <value value="123456" />
+  </identifier>
+  <identifier>
+    <use value="official" />
+    <system value="PRN" />
+    <value value="0011223344201708012" />
+  </identifier>
+  <active value="true"/>
+  <name>
+    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+      <valueCode value="NL4"/>
+    </extension>
+    <use value="official"/>
+    <family value="Example">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Example"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
+      </extension>
+    </family>
+    <given value="Child">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+  </name>
+  <gender value="male">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>     
+          <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+          <code value="M"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-patient-birthsex">
+      <valueCodeableConcept>
+        <coding>
+          <system value="Medisch"/>
+          <code value="1"/>
+          <display value="mannelijk"/>          
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </gender>
+  <birthDate value="2017-08-12"/>
+  <multipleBirthInteger value="2"/>
+</Patient>
