@@ -1,0 +1,31 @@
+
+<!-- graviditeit conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20010" -->
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="aterm-wouden-zwanger4"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+        <valueReference>
+            <reference value="Condition/wouden-zwanger4" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="Perinatologische observatiecodes"/>
+            <code value="EDDDef"/>
+            <display value="Definitieve a terme datum"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger4"/>
+    </context>
+    <valueDateTime value="2020-01-19"/>
+</Observation>
+ 
