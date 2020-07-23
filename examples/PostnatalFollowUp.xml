@@ -29,9 +29,11 @@
     <participant>
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <reference value="PractitionerRole/zorgverlener-janssen-verloskundigenpraktijk-B" />
+                <valueReference>
+                    <reference value="PractitionerRole/zorgverlener-janssen-verloskundigenpraktijk-B" />
+                </valueReference>
             </extension>
-            <reference value="Practitioner/zorgverlener-janssen" />
+            <!--<reference value="Practitioner/zorgverlener-janssen" />-->
         </individual>
     </participant>
     <period>
