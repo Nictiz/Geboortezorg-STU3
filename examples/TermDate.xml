@@ -1,0 +1,50 @@
+
+<!-- graviditeit conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20010" -->
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="aterm-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+        <valueReference>
+            <reference value="Condition/zwangerschap" />
+        </valueReference>
+    </extension>
+    <status value="final">
+        <!-- actuele a terme datum? -->
+        <extension url="TODO">
+            <valueBoolean value="true"/>
+        </extension>
+        <!-- zeker? -->
+        <extension url="TODO">
+            <valueBoolean value="false"/>
+        </extension>
+    </status>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="11778-8"/>
+            <display value="Deliv date Clin est"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Patient Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapdossier"/>
+    </context>
+    <!-- datum bepaling term datum --> 
+    <effectiveDateTime value="2019-05-31"/>
+    <valueDateTime value="2020-01-19"/>
+    <!-- a terme datum obv -->
+    <method>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="31541000146106"/>
+            <display value="a terme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
+        </coding>
+    </method>
+</Observation>
+ 
