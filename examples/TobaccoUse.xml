@@ -1,0 +1,35 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="tobaccouse-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365980008"/>
+            <display value="Finding of tobacco use and exposure (finding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="Encounter/prenatalecontrole"/>
+    </context>
+    <valueCodeableConcept>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="RookgedragVMISLijst"/>
+                    <code value="5"/>
+                    <display value="gestopt vóór huidige zwangerschap"/>                    
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <system value="http://snomed.info/sct"/>
+        <code value="8517006"/>
+        <display value="Ex-smoker (finding)"/>
+    </valueCodeableConcept>
+</Observation>

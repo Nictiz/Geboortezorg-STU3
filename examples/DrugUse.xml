@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="druguse-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="228366006"/>
+            <display value="Finding relating to drug misuse behavior (finding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="Encounter/prenatalecontrole"/>
+    </context>
+    <!-- True: 361055000	Misuses drugs (finding)	gebruikt drugs
+        False: 228367002	Does not misuse drugs (finding) gebruikt geen drugs -->
+    <valueCodeableConcept>
+        <system value="http://snomed.info/sct"/>
+        <code value="228367002"/>
+        <display value="Does not misuse drugs (finding)"/>
+    </valueCodeableConcept>
+</Observation>
