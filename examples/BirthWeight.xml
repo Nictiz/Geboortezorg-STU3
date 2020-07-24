@@ -1,6 +1,6 @@
 
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="kind1-wouden-geboortegewicht"/>
+    <id value="birthweight-example-child"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation"/>
@@ -14,11 +14,11 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/XXX-KIND2VDWOUDEN" />
-        <display value="Kind 1 van der Wouden" />
+        <reference value="Patient/example-child" />
+        <display value="Example Child" />
     </subject>
     <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
+        <reference value="EpisodeOfCare/example"/>
     </context>
     <valueQuantity>
         <value value="2845"/>
