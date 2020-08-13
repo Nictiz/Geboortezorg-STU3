@@ -88,7 +88,6 @@
     <element id="Procedure.extension:decisionmoment">
       <path value="Procedure.extension" />
       <sliceName value="decisionmoment" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -96,7 +95,7 @@
       </type>
     </element>
     <element id="Procedure.extension:decisionmoment.valueCodeableConcept:valueCodeableConcept">
-      <path value="Procedure.extension.value[x]" />
+      <path value="Procedure.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <slicing>
         <discriminator>
@@ -106,8 +105,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.extension:decisionmoment.valueCodeableConcept:decisionMomentSC">
-      <path value="Procedure.extension.value[x]" />
+    <element id="Procedure.extension:decisionmoment.valueCodeableConcept:valueCodeableConcept:decisionMomentSC">
+      <path value="Procedure.extension.valueCodeableConcept" />
       <sliceName value="decisionMomentSC" />
       <binding>
         <strength value="extensible" />
@@ -410,7 +409,7 @@
       <sliceName value="ProcedureLaterality" />
     </element>
     <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept">
-      <path value="Procedure.bodySite.extension.value[x]" />
+      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <slicing>
         <discriminator>
@@ -420,8 +419,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:lateralityEpisiotomy">
-      <path value="Procedure.bodySite.extension.value[x]" />
+    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept:lateralityEpisiotomy">
+      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
       <sliceName value="lateralityEpisiotomy" />
       <binding>
         <strength value="extensible" />
@@ -447,10 +446,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.outcome.extension:successAssistedDelivery">
+    <element id="Procedure.outcome.extension:success">
       <path value="Procedure.outcome.extension" />
-      <sliceName value="successAssistedDelivery" />
-      <min value="0" />
+      <sliceName value="success" />
       <max value="1" />
       <type>
         <code value="Extension" />
