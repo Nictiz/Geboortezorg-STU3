@@ -1,0 +1,33 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="otherinterventions-example" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference>
+            <reference value="Procedure/geboorte" />
+        </valueReference>
+    </extension>
+    <status value="completed" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="386637004" />
+            <display value="Obstetric procedure (procedure)" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="237012001" />
+            <display value="Freeing the posterior arm (procedure)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example" />
+    </context>
+</Procedure>
