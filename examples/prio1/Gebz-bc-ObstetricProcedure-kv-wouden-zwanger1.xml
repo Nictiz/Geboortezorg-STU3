@@ -6,22 +6,30 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
         <valueReference>
-            <reference value="Observation/geboorte1-wouden" />
+            <reference value="Procedure/geboorte1-wouden" />
         </valueReference>
     </extension>
-     <status value='completed'/>
-    <category>
+    <status value='completed'/>
+    <!-- slechts 1 category toegestaan in procedure -->
+<!--    <category>
         <coding>
             <system value='http://snomed.info/sct'/>
             <code value="386637004"/>
             <display value='Obstetric procedure (procedure)'/>
         </coding>
-    </category>
-    <code>
+    </category>-->
+    <category>
         <coding>
             <system value='http://snomed.info/sct'/>
             <code value='3311000146109'/>
             <display value='Vaginale kunstverlossing'/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value='61586001'/>
+            <display value='Delivery by vacuum extraction (procedure)'/>
         </coding>
     </code>
     <subject>
@@ -31,10 +39,4 @@
     <context>
         <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
     </context>
-    <performedPeriod>
-        <start value = "2016-02-20"/>
-    </performedPeriod>
-    <reasonReference>
-        <reference value = "Condition/wouden-zwanger1"/>
-    </reasonReference>
 </Procedure>
