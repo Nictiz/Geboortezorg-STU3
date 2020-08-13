@@ -1,0 +1,36 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+    <id value="careteam" />
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/bc-CareTeam" />
+    </meta>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="example patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example"/>
+    </context>
+    <participant>
+        <role>
+            <coding>
+                <system value="AndereZorgverlenerBetrokken" />
+                <code value="1" />
+                <display value="consultatie" />
+            </coding>
+        </role>
+        <member>
+            <reference value="Organization/ZiekenhuisXAfdelingKindEnJKeugd" />
+            <display value="Ziekenhuis X Afdeling Kind en Jeugd" />
+        </member>
+        <period>
+            <start value="2013-02-01T08:53:00+01:00" />
+        </period>
+    </participant>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161838002"/>
+            <display value="Infant feeding problem (finding)"/>
+        </coding>
+    </reasonCode>
+</CareTeam>
