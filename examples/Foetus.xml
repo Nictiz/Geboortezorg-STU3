@@ -1,0 +1,18 @@
+<BodySite xmlns="http://hl7.org/fhir">
+    <id value="example-fetus"/> 
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-bodystructure-child">
+        <valueReference>
+            <reference value="Patient/examplechild"/>
+        </valueReference>
+    </extension>
+    <code> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="83418008"/> 
+            <display value="Entire fetus (body structure)"/> 
+        </coding> 
+    </code> 
+    <patient> 
+        <reference value="Patient/example"/> 
+    </patient> 
+</BodySite> 
