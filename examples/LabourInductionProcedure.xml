@@ -1,0 +1,48 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="intrauterinetreatment-example" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference>
+            <reference value="Procedure/bevalling" />
+        </valueReference>
+    </extension>
+    <status value="completed" />
+    <!-- slechts 1 category toegestaan in procedure -->
+<!--    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="386637004" />
+            <display value="Obstetric procedure (procedure)" />
+        </coding>
+    </category>-->
+    <category>
+        <coding>
+            <system value="PerinatologyProceduresPRN" />
+            <code value="PRN520102" />
+            <display value="Interventie begin baring" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="177135005" />
+            <display value="Oxytocin induction of labour (procedure)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example" />
+    </context>
+    <reasonCode>
+        <coding>
+            <system value="MotivatieInterventie"/>
+            <code value="7"/>
+            <display value="Wens patient"/>
+        </coding>
+    </reasonCode>
+</Procedure>
