@@ -1,0 +1,41 @@
+<!-- bevalling conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.6" -->
+<Procedure xmlns='http://hl7.org/fhir'>
+    <id value='sectiocaesarea-example'/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference>
+            <reference value="Procedure/geboorte1-wouden" />
+        </valueReference>
+    </extension>
+    <status value='completed'/>
+    <category>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value="386637004"/>
+            <display value='Obstetric procedure (procedure)'/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value='http://snomed.info/sct'/>
+            <code value='11466000'/>
+            <display value='Cesarean section (procedure)'/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example" />
+    </context>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="444433005:246090004=130955003"/>
+            <display value="Suspected fetal distress (situation)"/>
+        </coding>
+    </reasonCode>
+</Procedure>
