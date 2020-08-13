@@ -1,5 +1,8 @@
 <BodySite xmlns="http://hl7.org/fhir">
     <id value="example-fetus"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus"/>
+    </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-bodystructure-child">
         <valueReference>
             <reference value="Patient/examplechild"/>
