@@ -47,6 +47,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||Concept
 |style="width:40px;"| Card 
 || Profile
+|| Mapping
 || Example
 || Search URL</xsl:text>
             <!-- De rest van de rijen -->
@@ -107,8 +108,15 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>]]</xsl:text>
             </xsl:when>
-            <xsl:when test="@pattern">
+            <xsl:when test="@pattern and substring(@pattern,0,2)='bc'">
                 <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>
+                <xsl:value-of select="@pattern"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="@pattern"/>
+                <xsl:text>]</xsl:text>
+            </xsl:when>
+            <xsl:when test="@pattern and substring(@pattern,0,2)!='bc'">
+                <xsl:text>[https://simplifier.net/nictizstu3-zib2017/</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="@pattern"/>
@@ -117,10 +125,13 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         </xsl:choose>
         <xsl:text>
 ||</xsl:text>
+            <xsl:value-of select="@mapping"/>
+        <xsl:text>
+||</xsl:text>
         <xsl:if test="@example">
-            <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>
+<!--            <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>-->
             <xsl:value-of select="@example"/>
-            <xsl:text> example]</xsl:text>
+<!--            <xsl:text> example]</xsl:text>-->
         </xsl:if>
         <xsl:text>
 ||</xsl:text>

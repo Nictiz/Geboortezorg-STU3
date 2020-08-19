@@ -26,6 +26,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="data li ul ol div pre"/>
+    
+    <xsl:variable name="fhirmapping" select="document('../fhirmapping.xml')"/>
+    <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
 
     <xd:doc>
         <xd:desc>Required: Name of the community to look for in building info</xd:desc>
@@ -58,7 +61,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
         <!-- Get FHIR system, now SCT or LOINC or urn:oid:... -->
         <xsl:variable name="system" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then 'http://snomed.info/sct' else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then 'http://loinc.org' else if ($terminology) then concat('urn:oid:', $terminology/@codeSystem/string()) else ()"/>
-        <xsl:variable name="community" select="community[@name='fhirmapping']"/>
+        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>     
         <xsl:element name="mapping" namespace="">
             <xsl:attribute name="conceptId" select="$id"/>
             <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
@@ -67,25 +70,18 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:attribute name="name" select="./name/string()"/>
             <xsl:copy-of select="./@minimumMultiplicity"/>
             <xsl:copy-of select="./@maximumMultiplicity"/>
-            <xsl:if test="$community">
-                <xsl:variable name="pattern" select="$community/data[@type='base']/text()"/>
+            <xsl:if test="$fhirmapping">
+                <xsl:variable name="pattern" select="$fhirmapping/profile"/>
+                <xsl:attribute name="resource" select="$fhirmapping/resource"/>
                 <xsl:attribute name="bc-pattern" select="if (starts-with($pattern, 'bc-')) then true() else false()"/>
                 <xsl:attribute name="pattern" select="$pattern"/>
-                <xsl:attribute name="example" select="tokenize($community/data[@type='example']/text(), '/')[last()]"/>
-                <xsl:choose>
-                    <xsl:when test="$community/data[@type='searchurl']//li">
-                        <xsl:for-each select="$community/data[@type='searchurl']//li">
-                            <xsl:element name="search">
-                                <xsl:copy-of select=".//text()"></xsl:copy-of>
-                            </xsl:element>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:element name="search">
-                            <xsl:copy-of select="$community/data[@type='searchurl']//text()"/>
-                        </xsl:element>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:attribute name="mapping" select="$fhirmapping/mapping"/>
+                <xsl:attribute name="example" select="$fhirmapping/example"/>
+                <xsl:for-each select="$fhirmapping/searchurl">
+                    <xsl:element name="search">
+                        <xsl:copy-of select=".//text()"></xsl:copy-of>
+                    </xsl:element>
+                </xsl:for-each>
             </xsl:if>
         </xsl:element>
         
