@@ -1,0 +1,23 @@
+<BodySite xmlns="http://hl7.org/fhir">
+    <id value="example-fetus"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-bodystructure-child">
+        <valueReference>
+            <reference value="Patient/XXX-KIND1VDWOUDEN" />
+            <display value="Kind 1 van der Wouden" />
+        </valueReference>
+    </extension>
+    <code> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="83418008"/> 
+            <display value="Entire fetus (body structure)"/> 
+        </coding> 
+    </code> 
+    <patient> 
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
+    </patient> 
+</BodySite> 
