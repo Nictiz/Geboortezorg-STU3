@@ -108,16 +108,23 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>]]</xsl:text>
             </xsl:when>
-            <xsl:when test="@pattern and substring(@pattern,0,2)='bc'">
+            <xsl:when test="@pattern and starts-with(@pattern, 'bc-')">
                 <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>]</xsl:text>
             </xsl:when>
-            <xsl:when test="@pattern and substring(@pattern,0,2)!='bc'">
+            <xsl:when test="@pattern and starts-with(@pattern, 'nl-')">
                 <xsl:text>[https://simplifier.net/nictizstu3-zib2017/</xsl:text>
                 <xsl:value-of select="@pattern"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="@pattern"/>
+                <xsl:text>]</xsl:text>
+            </xsl:when>
+            <xsl:when test="@pattern and starts-with(@pattern, 'zib-')">
+                <xsl:text>[https://simplifier.net/nictizstu3-zib2017/</xsl:text>
+                <xsl:value-of select="replace(@pattern,'-','')"/>
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>]</xsl:text>
@@ -128,10 +135,10 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:value-of select="@mapping"/>
         <xsl:text>
 ||</xsl:text>
-        <xsl:if test="@example">
-<!--            <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>-->
+        <xsl:if test="@example and @example!=''">
+            <xsl:text>[</xsl:text>
             <xsl:value-of select="@example"/>
-<!--            <xsl:text> example]</xsl:text>-->
+            <xsl:text> example]</xsl:text>
         </xsl:if>
         <xsl:text>
 ||</xsl:text>
