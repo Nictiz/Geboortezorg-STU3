@@ -36,7 +36,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <!-- First make a map/mapping construct -->
         <!-- Now: for all profiles with a name like bc-{...}Observation
             Might do this for Procedure and Condition as well -->
-        <xsl:variable name="bc-profiles" select="distinct-values($fhirmapping/dataset/record/profile[starts-with(text(), 'bc-')][ends-with(text(), 'Observation')]/text())"/>
+        <xsl:variable name="bc-profiles" select="distinct-values($fhirmapping/dataset/record/profile[(starts-with(text(), 'bc-') and ends-with(text(), 'Observation')) or starts-with(text(), 'bc-Disorder')]/text())"/>
         <xsl:variable name="dataset" select="."/>
         <maps>
             <xsl:copy-of select="@*"/>
