@@ -25,6 +25,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+    
+    <xsl:variable name="fhirmapping" select="document('../fhirmapping1.xml')"/>
+    <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
 
     <xd:doc>
         <xd:desc>Make base table</xd:desc>
@@ -33,7 +36,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <!-- First make a map/mapping construct -->
         <!-- Now: for all profiles with a name like bc-{...}Observation
             Might do this for Procedure and Condition as well -->
-        <xsl:variable name="bc-profiles" select="distinct-values(.//community[@name='fhirmapping']/data[@type='base'][starts-with(text(), 'bc-')][ends-with(text(), 'Observation')]/text())"/>
+        <xsl:variable name="bc-profiles" select="distinct-values($fhirmapping/dataset/record/profile[starts-with(text(), 'bc-')][ends-with(text(), 'Observation')]/text())"/>
         <xsl:variable name="dataset" select="."/>
         <maps>
             <xsl:copy-of select="@*"/>
@@ -42,7 +45,10 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:sort select="."/>
                 <xsl:variable name="bc-profile" select="."/>
                 <map name="{$bc-profile}">
-                    <xsl:apply-templates select="$dataset//concept[community[@name='fhirmapping']/data[@type='base'] = $bc-profile]" mode="makeTables"/>
+                    <xsl:variable name="conceptIDs" select="$fhirmapping/dataset/record[profile=$bc-profile]/ID"/>
+                    <xsl:for-each select="$dataset//concept[@iddisplay = $conceptIDs]">
+                        <xsl:apply-templates select="." mode="makeTables"/>
+                    </xsl:for-each>
                 </map>
             </xsl:for-each>
         </maps>
@@ -59,7 +65,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
         <!-- Get FHIR system, now SCT or LOINC or urn:oid:... -->
         <xsl:variable name="system" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then 'http://snomed.info/sct' else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then 'http://loinc.org' else if ($terminology) then concat('urn:oid:', $terminology/@codeSystem/string()) else ()"/>
-        <xsl:variable name="community" select="community[@name='fhirmapping']"/>
+        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>  
         <xsl:element name="mapping" namespace="">
             <xsl:attribute name="conceptId" select="$id"/>
             <xsl:attribute name="type" select="if (./@type = 'group') then 'group' else ./valueDomain/@type"/>
@@ -86,12 +92,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:attribute name="valueSetId" select="valueSet/@id/string()"/>
                 <xsl:attribute name="valueSetEffectiveDate" select="valueSet/@effectiveDate/string()"/>
             </xsl:if>
-            <xsl:if test="./valueDomain/property/@unit"><xsl:copy-of select="(./valueDomain/property/@unit)[1]"/></xsl:if>
-            <xsl:choose>
-                <xsl:when test="$community">
-                    <xsl:attribute name="pattern" select="$community/data[@type='base']/text()"/>
-                </xsl:when>
-            </xsl:choose>
+            <!--<xsl:if test="$fhirpattern">-->
+                <xsl:attribute name="pattern" select="$fhirmapping/profile"/>
+            <!--</xsl:if>-->
         </xsl:element>
     </xsl:template>
     
