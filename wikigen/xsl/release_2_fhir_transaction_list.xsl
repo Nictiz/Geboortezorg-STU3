@@ -27,7 +27,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="data li ul ol div pre"/>
     
-    <xsl:variable name="fhirmapping" select="document('../fhirmapping1.xml')"/>
+    <xsl:variable name="fhirmapping" select="document('../fhirmapping.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
 
     <xd:doc>
@@ -77,9 +77,10 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:attribute name="pattern" select="$pattern"/>
                 <xsl:attribute name="mapping" select="$fhirmapping/mapping"/>
                 <xsl:attribute name="example" select="$fhirmapping/example"/>
-                <xsl:for-each select="$fhirmapping/searchurl">
+                <xsl:variable name="searchurls" select="tokenize($fhirmapping/searchurl, 'GET')[not(position()=1)]"/>
+                <xsl:for-each select="$searchurls">
                     <xsl:element name="search">
-                        <xsl:copy-of select=".//text()"></xsl:copy-of>
+                        <xsl:copy-of select="concat('GET', .)"></xsl:copy-of>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:if>

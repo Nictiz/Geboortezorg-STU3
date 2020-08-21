@@ -26,7 +26,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
-    <xsl:variable name="fhirmapping" select="document('../fhirmapping1.xml')"/>
+    <xsl:variable name="fhirmapping" select="document('../fhirmapping.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
 
     <xd:doc>
@@ -45,7 +45,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:sort select="."/>
                 <xsl:variable name="bc-profile" select="."/>
                 <map name="{$bc-profile}">
-                    <xsl:variable name="conceptIDs" select="$fhirmapping/dataset/record[profile=$bc-profile]/ID"/>
+                    <xsl:variable name="conceptIDs" select="$fhirmapping/dataset/record[profile=$bc-profile]/ID/string()"/>
                     <xsl:for-each select="$dataset//concept[@iddisplay = $conceptIDs]">
                         <xsl:apply-templates select="." mode="makeTables"/>
                     </xsl:for-each>

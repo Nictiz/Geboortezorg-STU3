@@ -18,6 +18,50 @@
 || unit
 
 |-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80624
+||Type partus
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://snomed.info/sct
+||364336006
+||Pattern of delivery (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.182--20161122140045 TypePartus]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40280
+||Perinatale sterfte?
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40290
+||Fase perinatale sterfte
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||FasePerinataleSterfte
+||Fase perinatale sterfte
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049 Fase Perinatale Sterfte (2.2)]
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40300
+||Datum/tijd vaststelling perinatale sterfte
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||
+||
+||
+||valueDatetime
+||
+|| 
+|-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||80619
 ||Tijdstip breken vliezen
@@ -29,6 +73,17 @@
 ||
 || 
 |-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20610
+||Kleur en consistentie vruchtwater
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||http://loinc.org
+||38386-9
+||Color of Amniotic fluid
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.20--20130110122205 KleurVruchtwater]
+|| 
+|-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||30030
 ||Tijdstip actief meepersen
@@ -37,6 +92,17 @@
 ||PRN530401
 ||Tijdstip actief meepersen
 ||valueDatetime
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82089
+||Ruggeprik gewenst, niet gekregen?
+||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||RuggeprikGewNGekr
+||Ruggeprik gewenst niet gekregen 
+||valueBoolean
 ||
 || 
 |-
@@ -61,28 +127,6 @@
 ||valueCodeableConcept
 ||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.177--20131224000000 LiggingBijGeboorte22]
 || 
-|-
-|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||80793
-||Navelstreng vaten
-||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
-||http://snomed.info/sct
-||249191003
-||Number of blood vessels in umbilical cord (observable entity)
-||valueCodeableConcept
-||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.231--20170201164126 Navelstreng vaten]
-|| 
-|-
-|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||80761
-||Vitamine K?
-||[https://simplifier.net/geboortezorg-stu3/bc-BirthObservation bc-BirthObservation]
-||http://snomed.info/sct
-||698350008
-||Administration of vitamin K1 via oral route (procedure)
-||valueBoolean
-||
-|| 
 |}
 
 <section end=bc-BirthObservation />
@@ -105,15 +149,81 @@
 
 |-
 |[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||80760
-||Schedelomtrek
+||10604
+||Geboortegewicht
 ||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
-||http://snomed.info/sct
-||169876006
-||Birth head circumference (observable entity)
+||http://loinc.org
+||8339-4
+||Geboortegewicht
 ||valueQuantity
 ||
-|| cm
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10605
+||Percentiel van het geboortegewicht
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||
+||
+||
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.176--20160720000000 PercentielGeboortegewicht]
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40060
+||Geboortegewicht
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||http://loinc.org
+||8339-4
+||Geboortegewicht
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80670
+||Percentiel van het geboortegewicht
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||http://snomed.info/sct
+||301334000
+||Birth weight centile (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.176--20160720000000 PercentielGeboortegewicht]
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70009
+||Voeding kind (groep)
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||http://snomed.info/sct
+||230126006
+||Finding relating to infant feeding (finding)
+||
+||
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70011
+||Voeding kind (datum)
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||
+||
+||
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70030
+||Substantie voeding kind
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildObservation bc-ChildObservation]
+||
+||
+||
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.212--20150610095527 Substantie voeding kind]
+|| 
 |}
 
 <section end=bc-ChildObservation />
@@ -135,6 +245,72 @@
 || unit
 
 |-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82543
+||Conditie perineum postpartum
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364297003
+||Female perineum observable (observable entity)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82336
+||Geboorte placenta
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||AfterBirthMethod
+||Geboorte placenta 
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.22--20140731160954 GeboortePlacenta]
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10598
+||Hoeveelheid bloedverlies
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364332008
+||Blood loss in labor (observable entity)
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80674
+||Conditie perineum postpartum
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||http://snomed.info/sct
+||364297003
+||Female perineum observable (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.192--20140122110447 Conditie perineum (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20530
+||Risicostatus vóór baring
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||urn:oid:2.16.840.1.113883.2.4.3.22.1.1
+||PRN5102
+||Risicostatus vóór baring
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.180--20140102000000 RisicoBaring22]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20550
+||Wijze waarop de baring begon
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||BeginDeliv
+||Wijze waarop de baring begon
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.16--20130110122506 WijzeBaringBegin]
+|| 
+|-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||20590
 ||Tijdstip begin actieve ontsluiting
@@ -147,14 +323,25 @@
 || 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||80792
-||Compleetheid vliezen
+||20630
+||Geboorte placenta
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||AfterBirthMethod
+||Geboorte placenta 
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.22--20140731160954 GeboortePlacenta]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20631
+||Placenta Compleet
 ||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryObservation bc-DeliveryObservation]
 ||http://snomed.info/sct
-||364351002
-||Completeness of membranes (observable entity)
+||364343000
+||Completeness of placenta (observable entity)
 ||valueCodeableConcept
-||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.230--20170201162016 Compleetheid vliezen]
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.160--20120317000000 Completeness placenta]
 || 
 |-
 |[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -166,7 +353,7 @@
 ||Blood loss in labour
 ||valueQuantity
 ||
-|| ml
+|| 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||80673
@@ -181,6 +368,1171 @@
 |}
 
 <section end=bc-DeliveryObservation />
+
+=bc-DisorderOfChild=
+<section begin=bc-DisorderOfChild />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80997
+||Congenitale afwijkingen?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||276654001 443341004
+||Congenital malformation (disorder) Congenital anomaly (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80998
+||Congenitale afwijkingen (groep)
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||276654001 443341004
+||Congenital malformation (disorder) Congenital anomaly (disorder)
+||
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||81002
+||Chromosomale afwijkingen?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||74345006
+||Congenital disorder due to abnormality of chromosome number OR structure (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40080
+||Congenitale afwijkingen?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||276654001 443341004
+||Congenital malformation (disorder) Congenital anomaly (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40081
+||Congenitale afwijkingen (groep)
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||276654001 443341004
+||Congenital malformation (disorder) Congenital anomaly (disorder)
+||
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40082
+||Specificatie congenitale afwijking (groep)
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||276654001 443341004
+||Congenital malformation (disorder) Congenital anomaly (disorder)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40090
+||Specificatie congenitale afwijking
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||443341004 276654001
+||Congenital anomaly (disorder) Congenital malformation (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.196--20191010091229 Congenitale afwijking]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40110
+||Chromosomale afwijkingen?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||74345006
+||Congenital disorder due to abnormality of chromosome number OR structure (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40111
+||Specificatie chromosomale afwijking (groep)
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||74345006
+||Congenital disorder due to abnormality of chromosome number OR structure (disorder)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40120
+||Specificatie chromosomale afwijking
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||http://snomed.info/sct
+||74345006
+||Congenital disorder due to abnormality of chromosome number OR structure (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.198--20161026164418 ChromosomaleAfwijkingen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82334
+||Problematiek kind?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||ProblematiekKind
+||Problematiek kind
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80789
+||Problematiek kind
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfChild bc-DisorderOfChild]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||ProblematiekKind
+||Problematiek kind
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.12--20191009125104 Problematiek kind]
+|| 
+|}
+
+<section end=bc-DisorderOfChild />
+
+=bc-DisorderOfLaborAndDelivery=
+<section begin=bc-DisorderOfLaborAndDelivery />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82530
+||PPROM?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||312974005
+||Preterm premature rupture of membranes (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82531
+||PROM?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||44223004
+||Premature rupture of membranes (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82532
+||Koorts?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||386661006
+||Fever (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82533
+||Niet vorderende ontsluiting?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||237320005
+||Failure to progress in first stage of labor (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82534
+||Niet vorderende uitdrijving?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||249166003
+||Failure to progress in second stage of labor (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82535
+||Verdenking foetale nood?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||609415007:246090004=12867002
+||Suspected fetal distress affecting management of mother (situation) 
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82536
+||Intra-uteriene vruchtdood
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||
+||
+||
+||
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82537
+||Vermoeden intra-uteriene vruchtdood?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82541
+||Vastzittende placenta?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||109894007
+||Retained placenta (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82542
+||Fluxus postpartum?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||47821001
+||Postpartum hemorrhage (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82291
+||Diagnose bevalling
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||439401001
+||Diagnosis (observable entity)
+||
+||
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82381
+||Datum
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||
+||
+||
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82338
+||PPROM?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||312974005
+||Preterm premature rupture of membranes (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82290
+||PROM?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||44223004
+||Premature rupture of membranes (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82292
+||Koorts?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||386661006
+||Fever (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82293
+||Niet vorderende ontsluiting?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||237320005
+||Failure to progress in first stage of labor (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82294
+||Niet vorderende uitdrijving?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||249166003
+||Failure to progress in second stage of labor (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82296
+||Verdenking foetale nood?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||609415007:246090004=12867002
+||Suspected fetal distress affecting management of mother (situation) 
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82295
+||Vastzittende placenta?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||109894007
+||Retained placenta (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82398
+||Fluxus postpartum?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfLaborAndDelivery bc-DisorderOfLaborAndDelivery]
+||http://snomed.info/sct
+||47821001
+||Postpartum hemorrhage (disorder)
+||valueBoolean
+||
+|| 
+|}
+
+<section end=bc-DisorderOfLaborAndDelivery />
+
+=bc-DisorderOfPregnancy=
+<section begin=bc-DisorderOfPregnancy />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82509
+||Gynaecologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||310789003
+||Disorder of female genital tract (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544 Gynaecologische aandoeningen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82510
+||Bloedverlies?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||131148009
+||Bleeding (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82511
+||Partiële mola?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||MolaPartieelIntacteZw
+||Partiële mola met intacte zwangerschap
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82512
+||Cervixinsufficiëntie?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||17382005
+||Cervical incompetence (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82513
+||Infectie
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||40733004
+||Infectious disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20200210164128 Infectie]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82514
+||Hyperemesis gravidarum?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||14094001
+||Excessive vomiting in pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82515
+||Hypertensieve aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||38341003
+||Hypertensive disorder, systemic arterial (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518 Hypertensieve aandoening]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82516
+||Zwangerschapscholestase?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||235888006
+||Cholestasis of pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82517
+||Diabetes gravidarum met insuline?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||46894009
+||Gestational diabetes mellitus, class A>2< (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82518
+||Afwijkende groei foetus
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||276604007
+||Fetal growth abnormality (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252 Groei afwijkend]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82519
+||Dreigende partus immaturus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusImmaturusDreig
+||Partus immaturus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82520
+||Dreigende partus prematurus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusPrematurusDreig
+||Partus prematurus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82521
+||Abruptio placentae?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||415105001
+||Placental abruption (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82522
+||Navelstrengprolaps?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||270500004
+||Prolapsed cord (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82523
+||Liggingsafwijking
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||80002007
+||Malpresentation of fetus (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.213--20151019164313 Ligging (afwijkend)]
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82314
+||Diagnose
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||439401001 439401001
+||Diagnosis (observable entity) Diagnosis (observable entity)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82317
+||Gynaecologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||310789003
+||Disorder of female genital tract (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544 Gynaecologische aandoeningen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82318
+||Bloedverlies?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||131148009
+||Bleeding (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82320
+||Cervixinsufficiëntie?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||17382005
+||Cervical incompetence (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82321
+||Infectie
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||40733004
+||Infectious disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20200210164128 Infectie]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82322
+||Hyperemesis gravidarum?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||14094001
+||Excessive vomiting in pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82323
+||Hypertensieve aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||38341003
+||Hypertensive disorder, systemic arterial (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518 Hypertensieve aandoening]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82324
+||Zwangerschapscholestase?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||235888006
+||Cholestasis of pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82325
+||Diabetes gravidarum met insuline?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||46894009
+||Gestational diabetes mellitus, class A>2< (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82326
+||Afwijkende groei foetus
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||276604007
+||Fetal growth abnormality (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252 Groei afwijkend]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82327
+||Dreigende partus immaturus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusImmaturusDreig
+||Partus immaturus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82328
+||Dreigende partus prematurus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusPrematurusDreig
+||Partus prematurus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82329
+||Abruptio placentae?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||415105001
+||Placental abruption (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82268
+||Diagnose
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||439401001
+||Diagnosis (observable entity)
+||
+||
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82272
+||Datum
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||
+||
+||
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82269
+||Gynaecologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||310789003
+||Disorder of female genital tract (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544 Gynaecologische aandoeningen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82270
+||Bloedverlies?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||131148009
+||Bleeding (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82286
+||Partiële mola?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||MolaPartieelIntacteZw
+||Partiële mola met intacte zwangerschap
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82271
+||Cervixinsufficiëntie?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||17382005
+||Cervical incompetence (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82273
+||Infectie
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||40733004
+||Infectious disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20200210164128 Infectie]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82274
+||Hyperemesis gravidarum?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||14094001
+||Excessive vomiting in pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82275
+||Hypertensieve aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||38341003
+||Hypertensive disorder, systemic arterial (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518 Hypertensieve aandoening]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82276
+||Zwangerschapscholestase?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||235888006
+||Cholestasis of pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82277
+||Diabetes gravidarum met insuline?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||46894009
+||Gestational diabetes mellitus, class A>2< (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82278
+||Afwijkende groei foetus
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||276604007
+||Fetal growth abnormality (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252 Groei afwijkend]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82279
+||Dreigende partus immaturus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusImmaturusDreig
+||Partus immaturus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82280
+||Dreigende partus prematurus?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusPrematurusDreig
+||Partus prematurus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82289
+||Abruptio placentae?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||415105001
+||Placental abruption (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82452
+||Navelstrengprolaps?
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||270500004
+||Prolapsed cord (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82380
+||Liggingsafwijking
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderOfPregnancy bc-DisorderOfPregnancy]
+||http://snomed.info/sct
+||80002007
+||Malpresentation of fetus (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.213--20151019164313 Ligging (afwijkend)]
+|| 
+|}
+
+<section end=bc-DisorderOfPregnancy />
+
+=bc-DisorderPostPartum=
+<section begin=bc-DisorderPostPartum />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82544
+||Postnatale fase
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderPostPartum bc-DisorderPostPartum]
+||http://snomed.info/sct
+||362973001
+||Disorder of puerperium (disorder)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82545
+||Pathologie vrouw
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderPostPartum bc-DisorderPostPartum]
+||http://snomed.info/sct
+||362973001
+||Disorder of puerperium (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.34--20141013154704 Postpartum complicatie (2.2)]
+|| 
+|}
+
+<section end=bc-DisorderPostPartum />
+
+=bc-DisorderPostPartum | bc-ObstetricProcedure=
+<section begin=bc-DisorderPostPartum | bc-ObstetricProcedure />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82297
+||Diagnose/interventie postnataal
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderPostPartum | bc-ObstetricProcedure bc-DisorderPostPartum | bc-ObstetricProcedure]
+||http://snomed.info/sct
+||439401001
+||Diagnosis (observable entity)
+||
+||
+|| 
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82298
+||Datum
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderPostPartum | bc-ObstetricProcedure bc-DisorderPostPartum | bc-ObstetricProcedure]
+||
+||
+||
+||valueDatetime
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82209
+||Pathologie vrouw
+||[https://simplifier.net/geboortezorg-stu3/bc-DisorderPostPartum | bc-ObstetricProcedure bc-DisorderPostPartum | bc-ObstetricProcedure]
+||http://snomed.info/sct
+||362973001
+||Disorder of puerperium (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.34--20191218092252 Postpartum complicatie]
+|| 
+|}
+
+<section end=bc-DisorderPostPartum | bc-ObstetricProcedure />
+
+=bc-FetusObservation=
+<section begin=bc-FetusObservation />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+|| Concept
+|| Profile
+|| System 
+|| Code
+|| Display 
+|| FHIR type 
+|| system+code 
+|| unit
+
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60080
+||AC
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||11979-2
+||AC
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60081
+||AC percentiel
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||X_AC_PRCTL
+||AC Percentiel
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60030
+||BPD
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||11820-8
+||BPD
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60031
+||BPD percentiel
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||X_BPD_PRCTL
+||BPD Percentiel
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82340
+||EFW
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||11727-5
+||Fetal Body weight estimated by US
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60100
+||FL
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||11963-6
+||Femur lengte
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60101
+||FL percentiel
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||X_FL_PRCTL
+||FL Percentiel
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60060
+||HC
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||8288-3 11984-2
+||Head Occipital-frontal circumference by US HC
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60061
+||HC percentiel
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||X_HC_PRCTL
+||HC Percentiel
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60070
+||TCD
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://loinc.org
+||11863-8
+||Fetal Cerebellum Diameter transverse US
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80944
+||Ligging
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://snomed.info/sct
+||249062004
+||Lie of fetus (observable entity)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.188--20140102000000 Ligging]
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82069
+||Placentalokalisatie
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||
+||
+||
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80946
+||Placentalokalisatie
+||[https://simplifier.net/geboortezorg-stu3/bc-FetusObservation bc-FetusObservation]
+||http://snomed.info/sct
+||7381000146107
+||Finding of placental position (finding)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.209--20141128125356 Placentalokalisatie (2.2)]
+|| 
+|}
+
+<section end=bc-FetusObservation />
 
 =bc-MaternalObservation=
 <section begin=bc-MaternalObservation />
@@ -200,6 +1552,391 @@
 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20305
+||Conclusie risicostatus na intake
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||RiskStat
+||Conclusie risicostatus na intake
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.12--20091001000000 ConclusieRisicostatus]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82456
+||Auto-immuun aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||85828009
+||Autoimmune disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.28--20140919141340 Auto-immuun aandoening (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82458
+||Cardiovasculaire aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||49601007
+||Disorder of cardiovascular system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.11--20140814133240 Cardiovasculaire aandoeningen]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82460
+||Urogenitale aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||42030000
+||Disorder of the genitourinary system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.30--20200114155725 Urogenitale aandoening (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82462
+||Oncologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||363346000
+||Malignant neoplastic disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.27--20140919131821 Oncologische aandoening (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82464
+||Schildklier aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||14304000
+||Disorder of thyroid gland (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.13--20140814134002 Schildklieraandoeningen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82465
+||Diabetes mellitus?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||73211009
+||Diabetes mellitus (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82467
+||Neurologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||118940003
+||Disorder of nervous system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.14--20140814134140 Neurologische aandoeningen]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82469
+||Infectieziekte
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||40733004
+||Infectious disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.15--20140814134341 Infectieziekten]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82471
+||MDL aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||53619000
+||Disorder of digestive system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.29--20140919144015 Maag Darm Lever aandoening (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82473
+||Anemie
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||271737000
+||Anemia (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.31--20140922095444 Anemie (2.2)]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82475
+||Longaandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||50043002
+||Disorder of respiratory system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.205--20141027141746 Longaandoening]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82477
+||Gynaecologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||310789003
+||Disorder of female genital tract (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544 Gynaecologische aandoeningen]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82479
+||Orthopedische afwijking
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||928000
+||Disorder of musculoskeletal system (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.17--20140814134642 Orthopedische afwijkingen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82481
+||Bloedtransfusie?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||116859006
+||Transfusion of blood product (procedure)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82482
+||Transfusiereactie?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||82545002
+||Blood transfusion reaction (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82484
+||Type operatie
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||387713003
+||Surgical procedure (procedure)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.18--20140814143051 Type operatie]
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82486
+||Type stollingsprobleem
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||64779008
+||Blood coagulation disorder (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.19--20140814144207 Type stollingsprobleem]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82488
+||Psychiatrie?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82490
+||Overige aandoening?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82492
+||Obstetrische anamnese
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||248983002
+||Obstetric history (context-dependent category)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82582
+||Gynaecologische aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||
+||
+||
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544 Gynaecologische aandoeningen]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82493
+||Bloedverlies?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||131148009
+||Bleeding (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82494
+||Partiële mola?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||MolaPartieelIntacteZw
+||Partiële mola met intacte zwangerschap
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82495
+||Cervixinsufficiëntie?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||17382005
+||Cervical incompetence (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82496
+||Infectie
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||40733004
+||Infectious disease (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20200210164128 Infectie]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82497
+||Hyperemesis gravidarum?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||14094001
+||Excessive vomiting in pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82498
+||Hypertensieve aandoening
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||38341003
+||Hypertensive disorder, systemic arterial (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518 Hypertensieve aandoening]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82499
+||Zwangerschapscholestase?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||235888006
+||Cholestasis of pregnancy (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82500
+||Diabetes gravidarum met insuline?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||46894009
+||Gestational diabetes mellitus, class A>2< (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82502
+||Dreigende partus immaturus?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusImmaturusDreig
+||Partus immaturus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82503
+||Dreigende partus prematurus?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||PartusPrematurusDreig
+||Partus prematurus - dreigend
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82504
+||Abruptio placentae?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||415105001
+||Placental abruption (disorder)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82505
+||Fluxus postpartum?
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||47821001
+||Postpartum hemorrhage (disorder)
+||valueBoolean
+||
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82506
+||Zwangerschap
+||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
+||http://snomed.info/sct
+||364320009
+||Pregnancy observable (observable entity)
+||
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||20612
 ||Portio
 ||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
@@ -208,17 +1945,6 @@
 ||Effacement of cervix
 ||valueCodeableConcept
 ||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.158--20120317000000 Cervix Effacement]
-|| 
-|-
-|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||82372
-||Positie portio
-||[https://simplifier.net/geboortezorg-stu3/bc-MaternalObservation bc-MaternalObservation]
-||http://snomed.info/sct
-||248920001
-||Position of uterine cervix (observable entity)
-||valueCodeableConcept
-||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.213--20160425122048 Positie portio (2.2)]
 || 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -279,48 +2005,6 @@
 
 <section end=bc-MaternalObservation />
 
-=bc-PlacentaObservation=
-<section begin=bc-PlacentaObservation />
-{| class="wikitable" 
-| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
-|-style="background-color: #1F497D;; color: white; text-align:left;"
-|style="width:30px;"| Type 
-|style="width:10px;"| # 
-|| Concept
-|| Profile
-|| System 
-|| Code
-|| Display 
-|| FHIR type 
-|| system+code 
-|| unit
-
-|-
-|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||20631
-||Placenta Compleet
-||[https://simplifier.net/geboortezorg-stu3/bc-PlacentaObservation bc-PlacentaObservation]
-||http://snomed.info/sct
-||364343000
-||Completeness of placenta (observable entity)
-||valueCodeableConcept
-||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.160--20120317000000 Completeness placenta]
-|| 
-|-
-|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||80791
-||Datum/tijd geboorte placenta
-||[https://simplifier.net/geboortezorg-stu3/bc-PlacentaObservation bc-PlacentaObservation]
-||
-||
-||
-||valueDatetime
-||
-|| 
-|}
-
-<section end=bc-PlacentaObservation />
-
 =bc-PregnancyObservation=
 <section begin=bc-PregnancyObservation />
 {| class="wikitable" 
@@ -339,6 +2023,72 @@
 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82501
+||Afwijkende groei foetus
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||276604007
+||Fetal growth abnormality (disorder)
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252 Groei afwijkend]
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82524
+||Intra-uteriene vruchtdood
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82525
+||Vermoeden intra-uteriene vruchtdood?
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80623
+||Wijze einde zwangerschap
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||urn:oid:2.16.840.1.113883.2.4.4.13
+||EindeZw
+||Wijze einde zwangerschap
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.171--20130320000000 WijzeEindeZwangerschap]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82214
+||Irregulaire antistoffen?
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||312457003
+||Finding of irregular blood group antibody present (finding)
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80617
+||Aantal levende kinderen
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueQuantity
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||20261
 ||Voorgenomen plaats baring tijdens zwangerschap (type locatie)
 ||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
@@ -350,14 +2100,58 @@
 || 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
-||82009
-||Voorgenomen voeding
+||80746
+||Leven voelen
 ||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
 ||http://snomed.info/sct
-||169740003
-||Infant feeding method (observable entity)
+||364618000
+||Pattern of fetal movement (observable entity)
 ||valueCodeableConcept
-||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.228--20170201140644 Voorgenomen voeding]
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.3.11.60.90.77.11.207--20141109164219 Leven voelen]
+|| 
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80613
+||Intra-uteriene vruchtdood
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||59291004
+||Undelivered in utero fetal death
+||
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82435
+||Vermoeden intra-uteriene vruchtdood?
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82436
+||Vermoeden iuvd op basis van
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.223--20161202162349 IUVD methode]
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20670
+||Maternale sterfte?
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueBoolean
+||
 || 
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -379,6 +2173,39 @@
 ||118951000146109
 ||datum van einde van zwangerschap (waarneembare entiteit)
 ||valueDatetime
+||
+|| 
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82444
+||Vermoeden intra-uteriene vruchtdood?
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueBoolean
+||
+|| 
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82445
+||Vermoeden iuvd op basis van
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||
+||
+||
+||valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/2.16.840.1.113883.2.4.11.223--20161202162349 IUVD methode]
+|| 
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20505
+||Aantal geboren kinderen
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyObservation bc-PregnancyObservation]
+||http://snomed.info/sct
+||118861000146102
+||aantal geboren kinderen uit zwangerschap (waarneembare entiteit)
+||valueQuantity
 ||
 || 
 |}

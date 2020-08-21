@@ -1,0 +1,6361 @@
+=Addendum Verloskundig dossier (2.3)=
+{{IssueBox|Generated code, do not change by hand}}
+=verloskundig_dossier_23=
+<section begin=transaction />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+||Concept
+|style="width:40px;"| Card 
+|| Profile
+|| Mapping
+|| Example
+|| Search URL
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1
+||Zorgverlener/Zorginstelling
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization | nl-core-practitioner nl-core-organization | nl-core-practitioner]
+||Organization | Practitioner
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10001
+||&#160;&#160;&#160;Zorgverlener
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+* GET [base]/Practitioner/[zorgverlenerid]
+* GET [base]/Practitioner?identifier=[lvrid]
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10002
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener UZI-nummer
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10003
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener AGB-ID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10004
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener LVR1-ID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner.identifier
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10006
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner.name
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10010
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlenertype
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitionerrole nl-core-practitionerrole]
+||PractitionerRole.specialty
+||[https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10012
+||&#160;&#160;&#160;&#160;&#160;&#160;Telefoon waar zorgverlener is te bereiken
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-practitioner nl-core-practitioner]
+||Practitioner.telecom
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10020
+||&#160;&#160;&#160;Zorginstelling
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+* GET [base]/Organization/[zorginstellingid]
+* GET [base]/Organization?identifier=[lvrid]
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10021
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling OID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10022
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling AGB-ID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10023
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling LVR-ID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10024
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling URA
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10026
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorginstelling
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.name
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10027
+||&#160;&#160;&#160;&#160;&#160;&#160;Adres zorginstelling
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10032
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Straatnaam
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.line.Extension.streetName
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10033
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.line.Extension.HouseNumber
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10034
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisletter/huisnummertoevoeging
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.line.Extension.BuildingNumberSuffix
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10041
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.postalCode
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10036
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Plaatsnaam
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.city
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10038
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.address.country
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10029
+||&#160;&#160;&#160;&#160;&#160;&#160;Type zorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82019
+||&#160;&#160;&#160;&#160;&#160;&#160;Type zorginstelling (bij verwijzing)
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2
+||Vrouw
+||1 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+* GET [base]/Patient/[vrouwid]
+* GET [base]/Patient?identifier=[bsn]
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10030
+||&#160;&#160;&#160;Burgerservicenummer
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10031
+||&#160;&#160;&#160;Lokale persoonsidentificatie
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10035
+||&#160;&#160;&#160;Naamgegevens
+||1 .. 2
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10042
+||&#160;&#160;&#160;&#160;&#160;&#160;Voornamen
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82359
+||&#160;&#160;&#160;&#160;&#160;&#160;Initialen
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82360
+||&#160;&#160;&#160;&#160;&#160;&#160;Roepnaam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82361
+||&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.family
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82362
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Soort naam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.family
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82363
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voorvoegsel
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.family
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10043
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||1 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.name.family
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10040
+||&#160;&#160;&#160;Geboortedatum
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.birthdate
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10300
+||&#160;&#160;&#160;Adres
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10301
+||&#160;&#160;&#160;&#160;&#160;&#160;Straatnaam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.line.Extension.streetName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10302
+||&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.line.Extension.HouseNumber
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10303
+||&#160;&#160;&#160;&#160;&#160;&#160;Huisletter/huisnummertoevoeging
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.line.Extension.BuildingNumberSuffix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10304
+||&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.postalCode
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10305
+||&#160;&#160;&#160;&#160;&#160;&#160;Plaatsnaam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.city
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10307
+||&#160;&#160;&#160;&#160;&#160;&#160;Land
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.country
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10308
+||&#160;&#160;&#160;&#160;&#160;&#160;Adrestype
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.address.type
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82694
+||&#160;&#160;&#160;Contactgegevens
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82695
+||&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummers
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82696
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82697
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TelecomType
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82698
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NummerSoort
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82699
+||&#160;&#160;&#160;&#160;&#160;&#160;EmailAdressen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82700
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;EmailAdres
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82701
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;EmailSoort
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10400
+||&#160;&#160;&#160;Etniciteit
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.extension
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10401
+||&#160;&#160;&#160;Taalvaardigheid vrouw Nederlandse taal
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Woman bc-Woman]
+||Patient.communication.extension
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82371
+||&#160;&#160;&#160;CommunicatieTaal
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82155
+||&#160;&#160;&#160;Opleidingsniveau
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82154
+||&#160;&#160;&#160;Beroep
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82157
+||&#160;&#160;&#160;Accepteert bloedtransfusie?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80649
+||&#160;&#160;&#160;Betrokken zorgverlener/zorginstelling
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82022
+||&#160;&#160;&#160;&#160;&#160;&#160;Huisarts
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82027
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener UZI-nummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82028
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82029
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82023
+||&#160;&#160;&#160;&#160;&#160;&#160;Apotheek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82030
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82031
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82024
+||&#160;&#160;&#160;&#160;&#160;&#160;Specialist
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82039
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener UZI-nummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82032
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82033
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82038
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type specialist
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82035
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82036
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82037
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80811
+||&#160;&#160;&#160;Anamnese
+||0 .. 1
+||
+||QuestionnaireResponse
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82020
+||&#160;&#160;&#160;&#160;&#160;&#160;Onder behandeling (geweest)?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-154 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80904
+||&#160;&#160;&#160;&#160;&#160;&#160;Algemene anamnese
+||0 .. 1
+||
+||QuestionnaireResponse
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82220
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Auto-immuun aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-117 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80906
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Cardiovasculaire aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-122 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82267
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Urogenitale aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-173 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82221
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Oncologische aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-153 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80909
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Schildklier aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-165 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80910
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Diabetes mellitus?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-128 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80912
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Neurologische aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-152 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82210
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Infectieziekte
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-142 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82219
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MDL aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-149 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82222
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Anemie
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-116 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82266
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Longaandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-147 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80917
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gynaecologische aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-136 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80918
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Orthopedische afwijking
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-155 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10805
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloedtransfusie?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-118 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82231
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Transfusiereactie?
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-169 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80818
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type operatie
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-170 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80817
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type stollingsprobleem
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-171 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82159
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Psychiatrie?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-161 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82332
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Psychiatrie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82212
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overige aandoening?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-157 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80919
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overige aandoening
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-156 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82158
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting alg. anamnese
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82021
+||&#160;&#160;&#160;&#160;&#160;&#160;Psychosociale anamnese
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80681
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Psychosociale problematiek?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10803
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Negatieve seksuele ervaringen?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-151 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80680
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huiselijk geweld?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82333
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting psychosociale anamnese
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10800
+||&#160;&#160;&#160;&#160;&#160;&#160;Relevante allergieën
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/zibAllergyIntolerance zib-AllergyIntolerance]
+||AllergyIntolerance
+||[https://simplifier.net/geboortezorg-stu3/allergyintolerance-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80727
+||&#160;&#160;&#160;&#160;&#160;&#160;Familie anamnese
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80728
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aandoening
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80729
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aandoening details
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80730
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type verwantschap
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80922
+||&#160;&#160;&#160;&#160;&#160;&#160;Indicatie prenatale diagnostiek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80937
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie invasieve prenatale diagnostiek?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80938
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie GUO1?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82339
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie NIPT?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10801
+||&#160;&#160;&#160;Medicatiegebruik?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-150 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80749
+||&#160;&#160;&#160;Medicatiegebruik
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10802
+||&#160;&#160;&#160;&#160;&#160;&#160;Soort medicatie
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibMedicationUse | zibMedication zib-MedicationUse | zib-Medication]
+||MedicationStatement.medicationReference | medicationCodeableConcept
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80751
+||&#160;&#160;&#160;&#160;&#160;&#160;Begindatum
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80752
+||&#160;&#160;&#160;&#160;&#160;&#160;Einddatum
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80750
+||&#160;&#160;&#160;&#160;&#160;&#160;Dosering medicatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80753
+||&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20212
+||&#160;&#160;&#160;Lengte (gemeten)
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibBodyHeight zib-BodyHeight]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-186 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80688
+||&#160;&#160;&#160;BMI
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80689
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum bepaling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10806
+||&#160;&#160;&#160;&#160;&#160;&#160;BMI vrouw
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-120 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80675
+||&#160;&#160;&#160;Vrouwelijke genitale verminking?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-177 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80676
+||&#160;&#160;&#160;Type vrouwelijke genitale verminking
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-observation nl-core-observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-172 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10810
+||&#160;&#160;&#160;Bloedgroep vrouw
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-79 example]
+||
+* GET [base]/Observation?code=883-9{&subject=[vrouwid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10811
+||&#160;&#160;&#160;Rhesus D Factor vrouw
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-81 example]
+||
+* GET [base]/Observation?code=1305-2{&subject=[vrouwid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10816
+||&#160;&#160;&#160;Rhesus c Factor
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-82 example]
+||
+* GET [base]/Observation?code=1159-3{&subject=[vrouwid]&context=[dossierid]}
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80633
+||&#160;&#160;&#160;Partner
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80638
+||&#160;&#160;&#160;&#160;&#160;&#160;Persoonsnaam
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80639
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voornamen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80640
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voorvoegsel
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80641
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternamen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80636
+||&#160;&#160;&#160;&#160;&#160;&#160;Etniciteit
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3
+||Zwangerschap
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancy zib-pregnancy]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10 example]
+||
+* GET [base]/Condition/[zwangerschapid]
+* GET [base]/Condition?clinicalstatus=active
+* GET [base]/Condition?clinicalstatus=inactive&_sort=_-id&_count=1
+* GET [base]/Condition?subject=[patientid]&_revinclude=Observation:focus
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80627
+||&#160;&#160;&#160;Identificatie van de zwangerschap
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancy zib-pregnancy]
+||Condition.identifier
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80664
+||&#160;&#160;&#160;Casemanager naam
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20010
+||&#160;&#160;&#160;Graviditeit
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyGravidity zib-pregnancy-Gravidity]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-84 example]
+||
+* GET [base]/Observation?code=11996-6{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20150
+||&#160;&#160;&#160;Pariteit (vóór deze zwangerschap)
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyParity zib-pregnancy-Parity]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-88 example]
+||
+* GET [base]/Observation?code=11977-6{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20153
+||&#160;&#160;&#160;Pariteit
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyParity zib-pregnancy-Parity]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-88 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80617
+||&#160;&#160;&#160;Aantal levende kinderen
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-112 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80678
+||&#160;&#160;&#160;Fetal Loss
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20029
+||&#160;&#160;&#160;A terme datum (groep)
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-83 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20030
+||&#160;&#160;&#160;&#160;&#160;&#160;A terme datum
+||1 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-83 example]
+||
+* GET [base]/Observation?code=11778-8{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20040
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum bepaling à terme datum
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-188 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20050
+||&#160;&#160;&#160;&#160;&#160;&#160;A terme datum o.b.v.
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-188 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20055
+||&#160;&#160;&#160;&#160;&#160;&#160;Actuele à terme datum?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation.extension
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-188 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80669
+||&#160;&#160;&#160;&#160;&#160;&#160;Zeker?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82160
+||&#160;&#160;&#160;Definitieve à terme datum
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibpregnancyTermDate zib-pregnancy-TermDate]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-126 example]
+||
+* GET [base]/Observation?code=11778-8{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80819
+||&#160;&#160;&#160;Foliumzuur gebruik
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20020
+||&#160;&#160;&#160;Hoeveelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20130
+||&#160;&#160;&#160;Amnioniciteit
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20140
+||&#160;&#160;&#160;Chorioniciteit
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80686
+||&#160;&#160;&#160;Consanguïniteit?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20060
+||&#160;&#160;&#160;Vals positieve zwangerschap?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20080
+||&#160;&#160;&#160;Subfertiliteitsbehandeling?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20081
+||&#160;&#160;&#160;Soort subfertiliteitsbehandeling (groep)
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20091
+||&#160;&#160;&#160;&#160;&#160;&#160;Ovulatie-inductie toegepast?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20095
+||&#160;&#160;&#160;&#160;&#160;&#160;Geassisteerde conceptie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20170
+||&#160;&#160;&#160;Trisomie in de anamnese?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80671
+||&#160;&#160;&#160;Voornemens
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82152
+||&#160;&#160;&#160;&#160;&#160;&#160;Risicostatus van de zwangerschap
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20261
+||&#160;&#160;&#160;&#160;&#160;&#160;Voorgenomen plaats baring tijdens zwangerschap (type locatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-100 example]
+||
+* GET [base]/Observation?code=PRN4209{&subject=[vrouwid]&context=[dossierid]}
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82011
+||&#160;&#160;&#160;&#160;&#160;&#160;Afspraken
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82009
+||&#160;&#160;&#160;&#160;&#160;&#160;Voorgenomen voeding
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82010
+||&#160;&#160;&#160;&#160;&#160;&#160;Voorgenomen achternaam
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80637
+||&#160;&#160;&#160;&#160;&#160;&#160;Kraamzorg
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20270
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kraamzorg aangevraagd
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80642
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kraamzorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|blob 
+||80672
+||&#160;&#160;&#160;&#160;&#160;&#160;Bevalplan
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80732
+||&#160;&#160;&#160;Prenatale controle
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Encounter bc-Encounter]
+||Encounter
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80737
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum controle
+||1 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Encounter bc-Encounter]
+||Encounter.period.start
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80736
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82067
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlenertype
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80738
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80746
+||&#160;&#160;&#160;&#160;&#160;&#160;Leven voelen
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-144 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80740
+||&#160;&#160;&#160;&#160;&#160;&#160;Ernst oedeem
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80810
+||&#160;&#160;&#160;&#160;&#160;&#160;Rookgedrag
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibTobaccoUse zib-TobaccoUse]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80747
+||&#160;&#160;&#160;&#160;&#160;&#160;Alcoholgebruik
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibAlcoholUse zib-AlcoholUse]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82102
+||&#160;&#160;&#160;&#160;&#160;&#160;Drugsgebruik?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibDrugUse zib-DrugUse]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82103
+||&#160;&#160;&#160;&#160;&#160;&#160;Soort drugs
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80832
+||&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80833
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk systolisch
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80834
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk diastolisch
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20211
+||&#160;&#160;&#160;&#160;&#160;&#160;Gewicht (gemeten)
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/zibBodyWeight zib-BodyWeight]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80836
+||&#160;&#160;&#160;&#160;&#160;&#160;Proteïne in urine o.b.v. strips
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80741
+||&#160;&#160;&#160;&#160;&#160;&#160;Fundushoogte
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80742
+||&#160;&#160;&#160;&#160;&#160;&#160;Fundusstand
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80621
+||&#160;&#160;&#160;&#160;&#160;&#160;Uitwendig onderzoek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80622
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ligging
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80744
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indaling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82104
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hartactie aanwezig?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82105
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hartactie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82106
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Regelmaat hartslag
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82107
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Frequentie hartslag
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80745
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hartactie op basis van
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20025
+||&#160;&#160;&#160;&#160;&#160;&#160;Actuele aantal levende foetus
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80748
+||&#160;&#160;&#160;&#160;&#160;&#160;Opmerkingen
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82268
+||&#160;&#160;&#160;Diagnose
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-26 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82272
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.assertedDate
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-21 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82285
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82269
+||&#160;&#160;&#160;&#160;&#160;&#160;Gynaecologische aandoening
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-26 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82270
+||&#160;&#160;&#160;&#160;&#160;&#160;Bloedverlies?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-17 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82286
+||&#160;&#160;&#160;&#160;&#160;&#160;Partiële mola?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-35 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82271
+||&#160;&#160;&#160;&#160;&#160;&#160;Cervixinsufficiëntie?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-18 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82273
+||&#160;&#160;&#160;&#160;&#160;&#160;Infectie
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-29 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82274
+||&#160;&#160;&#160;&#160;&#160;&#160;Hyperemesis gravidarum?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-27 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82275
+||&#160;&#160;&#160;&#160;&#160;&#160;Hypertensieve aandoening
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-28 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82276
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapscholestase?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-14 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82277
+||&#160;&#160;&#160;&#160;&#160;&#160;Diabetes gravidarum met insuline?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-22 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82278
+||&#160;&#160;&#160;&#160;&#160;&#160;Afwijkende groei foetus
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-16 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82279
+||&#160;&#160;&#160;&#160;&#160;&#160;Dreigende partus immaturus?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-23 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82280
+||&#160;&#160;&#160;&#160;&#160;&#160;Dreigende partus prematurus?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-24 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82289
+||&#160;&#160;&#160;&#160;&#160;&#160;Abruptio placentae?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-15 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82380
+||&#160;&#160;&#160;&#160;&#160;&#160;Liggingsafwijking
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-31 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82377
+||&#160;&#160;&#160;Interventie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82378
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82379
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82376
+||&#160;&#160;&#160;&#160;&#160;&#160;Interventie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82230
+||&#160;&#160;&#160;Intra-uteriene behandeling
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-9 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82232
+||&#160;&#160;&#160;Antenatale betrokkenheid kinderarts?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82233
+||&#160;&#160;&#160;Reden antenatale betrokkenheid kinderarts
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20670
+||&#160;&#160;&#160;Maternale sterfte?
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueBoolean | Patient.deceasedBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-148 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20680
+||&#160;&#160;&#160;Datum maternale sterfte
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80625
+||&#160;&#160;&#160;Wijze einde zwangerschap
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-72 example]
+||
+* GET [base]/Observation?code=EindeZw{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20540
+||&#160;&#160;&#160;Datum einde zwangerschap
+||0 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-69 example]
+||
+* GET [base]/Observation?code=code=118951000146109{&subject=[vrouwid]&context=[dossierid]&focus=[zwangerschapid]}
+|-
+|blob 
+||80897
+||&#160;&#160;&#160;Bijlage
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10
+||Counseling prenatale screening en prenatale diagnostiek
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82410
+||&#160;&#160;&#160;Zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82411
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener UZI-nummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82412
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82413
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener LVR1-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82415
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20120
+||&#160;&#160;&#160;Counseling prenatale gewenst
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82088
+||&#160;&#160;&#160;Reden verzending
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82161
+||&#160;&#160;&#160;Counseling combinatietest
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20455
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum counseling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20480
+||&#160;&#160;&#160;&#160;&#160;&#160;Direct IPD gewenst?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20485
+||&#160;&#160;&#160;&#160;&#160;&#160;Combinatietest gewenst?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82162
+||&#160;&#160;&#160;Counseling SEO
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82163
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum counseling
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82419
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82420
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener UZI-nummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82421
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener AGB-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82422
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener LVR1-ID
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82424
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20490
+||&#160;&#160;&#160;&#160;&#160;&#160;Direct GUO gewenst?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20495
+||&#160;&#160;&#160;&#160;&#160;&#160;SEO gewenst?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||6
+||Bevalling
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryProcedure bc-DeliveryProcedure]
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example example]
+||
+* GET [base]/Procedure?code=236973005{&subject=[vrouwid]&context=[dossierid]&reasonReference=[zwangerschapid]}
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20500
+||&#160;&#160;&#160;Partusnummer
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-DeliveryProcedure bc-DeliveryProcedure]
+||Procedure.identifier
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82291
+||&#160;&#160;&#160;Diagnose bevalling
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-43 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82381
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.assertedDate
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-25 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82382
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82338
+||&#160;&#160;&#160;&#160;&#160;&#160;PPROM?
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-37 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82290
+||&#160;&#160;&#160;&#160;&#160;&#160;PROM?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-39 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82292
+||&#160;&#160;&#160;&#160;&#160;&#160;Koorts?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-30 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82293
+||&#160;&#160;&#160;&#160;&#160;&#160;Niet vorderende ontsluiting?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82294
+||&#160;&#160;&#160;&#160;&#160;&#160;Niet vorderende uitdrijving?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82296
+||&#160;&#160;&#160;&#160;&#160;&#160;Verdenking foetale nood?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-43 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82295
+||&#160;&#160;&#160;&#160;&#160;&#160;Vastzittende placenta?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code | Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-42 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82398
+||&#160;&#160;&#160;&#160;&#160;&#160;Fluxus postpartum?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code | Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-25 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20505
+||&#160;&#160;&#160;Aantal geboren kinderen
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-111 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20530
+||&#160;&#160;&#160;Risicostatus vóór baring
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept | RiskAssessment.qualitativeRisk
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-162 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20555
+||&#160;&#160;&#160;Interventies begin baring
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82383
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82384
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20560
+||&#160;&#160;&#160;&#160;&#160;&#160;Interventie begin baring
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20570
+||&#160;&#160;&#160;&#160;&#160;&#160;Indicatie interventie begin baring
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.reasonCode
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20550
+||&#160;&#160;&#160;Wijze waarop de baring begon
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-178 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20590
+||&#160;&#160;&#160;Tijdstip begin actieve ontsluiting
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-63 example]
+||
+* GET [base]/Observation?code=249120008{&subject=[vrouwid]&context=[dossierid]&focus=[bevallingid]}
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20619
+||&#160;&#160;&#160;Medicatie nageboortetijdperk (groep)
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/zibMedicationUse zib-MedicationUse]
+||MedicationStatement | Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-262 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20620
+||&#160;&#160;&#160;&#160;&#160;&#160;Medicatie nageboortetijdperk?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibMedicationUse zib-MedicationUse]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-262 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20626
+||&#160;&#160;&#160;&#160;&#160;&#160;Soort medicatie nageboortetijdperk
+||0 .. *
+||[https://simplifier.net/nictizstu3-zib2017/zibMedicationUse zib-MedicationUse]
+||MedicationStatement.medicationReference | medicationCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-262 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80612
+||&#160;&#160;&#160;Placenta
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Placenta bc-Placenta]
+||BodySite
+||
+||
+* GET [base]/BodySite?subject=[vrouwid]
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20630
+||&#160;&#160;&#160;&#160;&#160;&#160;Geboorte placenta
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-135 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82224
+||&#160;&#160;&#160;&#160;&#160;&#160;Natasten?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20631
+||&#160;&#160;&#160;&#160;&#160;&#160;Placenta Compleet
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.CodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-95 example]
+||
+* GET [base]/Observation?code=364343000{&subject=[vrouwid]&context=[dossierid]&focus=placenta}
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80791
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum/tijd geboorte placenta
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80803
+||&#160;&#160;&#160;&#160;&#160;&#160;Placenta naar PA?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82392
+||&#160;&#160;&#160;&#160;&#160;&#160;Uitslag placenta PA
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80981
+||&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden placenta
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80792
+||&#160;&#160;&#160;Compleetheid vliezen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20640
+||&#160;&#160;&#160;Hoeveelheid bloedverlies
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-138 example]
+||
+* GET [base]/Observation?code=64332008{&subject=[vrouwid]&context=[dossierid]&focus=[bevallingid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80673
+||&#160;&#160;&#160;Conditie perineum postpartum
+||0 .. *
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-75 example]
+||
+* GET [base]/Observation?code=364297003{&subject=[vrouwid]&context=[dossierid]&focus=[bevallingid]}
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82125
+||&#160;&#160;&#160;Hechten?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80797
+||&#160;&#160;&#160;Wijze van hechten
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82127
+||&#160;&#160;&#160;Overig trauma?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82126
+||&#160;&#160;&#160;Overig trauma
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80799
+||&#160;&#160;&#160;Immunisatie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80831
+||&#160;&#160;&#160;&#160;&#160;&#160;Rhesus D immunisatie?
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80801
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum immunisatie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82130
+||&#160;&#160;&#160;&#160;&#160;&#160;Chargenummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82131
+||&#160;&#160;&#160;Partusassistentie?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80839
+||&#160;&#160;&#160;Partusassistentie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20650
+||&#160;&#160;&#160;&#160;&#160;&#160;Partusstadium assistentie gearriveerd
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82132
+||&#160;&#160;&#160;&#160;&#160;&#160;Rol partusassistent
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82057
+||&#160;&#160;&#160;Risicostatus uiteindelijk
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20660
+||&#160;&#160;&#160;Ontslagdatum post partum
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||7
+||Uitkomst (per kind)
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40002
+||&#160;&#160;&#160;Baring
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Birth bc-Birth]
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-4 example]
+||
+* GET [base]/Observation?code=3950001{&subject=[vrouwid]&context=[dossierid]&focus=[geboorteid]&focus=[kindid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40003
+||&#160;&#160;&#160;&#160;&#160;&#160;Werkelijke plaats baring (type locatie)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildBirthAssistance bc-ChildBirthAssistance]
+||Encounter.class:werkelijkePlaatsBaring
+||[https://simplifier.net/geboortezorg-stu3/encounter-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82114
+||&#160;&#160;&#160;&#160;&#160;&#160;Ziekenhuis baring
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Encounter bc-Encounter]
+||Encounter.serviceProvider
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-4 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40005
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ziekenhuisnummer (LVR-id)
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82116
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling AGB-ID
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82117
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorginstelling
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/nl-core-organization nl-core-organization]
+||Organization.name
+||[https://simplifier.net/geboortezorg-stu3/organization-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40006
+||&#160;&#160;&#160;&#160;&#160;&#160;Demografische gegevens
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient
+||
+||
+* GET [base]/Patient/[kindid]
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40007
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Identificaties kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40010
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BSN kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.identifier:BSN
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40011
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lokale identificatie kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40015
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Identificatie kind PRN formaat
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82051
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naamgegevens kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.name
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82353
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voornamen
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82354
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Initialen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82052
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Roepnaam
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82053
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.name.family
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82054
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voorvoegsel
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.name.family.humannamePrefix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82055
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.name.family.humannameOwnName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82364
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Contactgegevens
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82365
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummers
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82366
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Soort telefoonnummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82367
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummer
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40032
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Adres t.b.v. hielprik
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82133
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Straatnaam
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82134
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82135
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisletter/huisnummertoevoeging
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82136
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82137
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Plaatsnaam
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82138
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82139
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Adrestype
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40033
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Adres
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40034
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40040
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geslacht (administratief)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40041
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geslacht (medische observatie)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.gender.Extension
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40050
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geboortedatum
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.birthdate & patient.birthtime (extension)
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+* GET [base]/Patient/[kindid]
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40004
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geboorteplaats
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80629
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80630
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Plaatsnaam
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80632
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82087
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Meerlingindicatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40025
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rangnummer kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||Patient.multipleBirthInteger
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40279
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Perinatale sterfte (groep)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Child bc-Child]
+||patient.deceased
+||[nvt example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40280
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Perinatale sterfte?
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||patient.deceased | Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-159 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40290
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Fase perinatale sterfte
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-132 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40300
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum/tijd vaststelling perinatale sterfte
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-125 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40027
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Foetus identificatie (zoals ante partum gehanteerd)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40028
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Foetus volgletter (zoals ante partum gehanteerd)
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||71
+||&#160;&#160;&#160;&#160;&#160;&#160;Kindspecifieke maternale gegevens
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20616
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijstimulatie toegediend?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-6 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20579
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Amniotomie (groep)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20580
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Amniotomie?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20585
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Fase amniotomie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80619
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tijdstip breken vliezen
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-108 example]
+||
+* GET [base]/Observation?code=289251005{&subject=[vrouwid]&context=[dossierid]&focus=[geboorteid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20610
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kleur en consistentie vruchtwater
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueCodableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-143 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||30030
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tijdstip actief meepersen
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-65 example]
+||
+* GET [base]/Observation?code=249163006{&subject=[vrouwid]&context=[dossierid]&focus=[geboorteid]}
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||30050
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Episiotomie?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-8 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80794
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie episiotomie
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.reasonCode
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-8 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||30055
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Locatie episiotomie
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.bodySite.extension
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-8 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82089
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ruggeprik gewenst, niet gekregen?
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-163 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82090
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Pijnbestrijding?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.category | Observation.valueBoolean
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82091
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Pijnbestrijding
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.category
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82394
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum/tijd
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82093
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Methode
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.dosage.method
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82092
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Methode
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.dosage.method
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82094
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overig middel
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.dosage.route
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82095
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Middel
+||1 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.medicationCodeableConcept
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82096
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toediening
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.dosage.route
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82097
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Periode
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PainRelief bc-PainRelief]
+||MedicationAdministration.extension?
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82098
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Reden
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80827
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sedatie?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-Sedation bc-Sedation]
+||MedicationStatement.category | Observation.valueBoolean
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82099
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sedatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82395
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum/tijd
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82100
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Periode
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82101
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Reden
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||72
+||&#160;&#160;&#160;&#160;&#160;&#160;Kindspecifieke uitkomstgegevens
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80626
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type partus
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueCode
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+* GET [base]/Observation?code=364336006{&subject=[vrouwid]&context=[dossierid]&focus=[geboorteid]}
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82397
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TOP nav prenataal onderzoek?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20062
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40140
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ligging bij geboorte
+||0 .. 1
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.codeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-110 example]
+||
+* GET [base]/Observation?code=LigGbrt{&subject=[kindid]&context=[dossierid]}
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40149
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aanpakker kind (groep)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildBirthAssistance bc-ChildBirthAssistance]
+||Encounter.participant
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82058
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40150
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rol aanpakker kind
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildBirthAssistance bc-ChildBirthAssistance]
+||Encounter.participant.type|individual.extension:practitionerRole
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-4 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40160
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Identificatie aanpakker kind
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40169
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Supervisor (groep)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildBirthAssistance bc-ChildBirthAssistance]
+||Encounter.participant
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82059
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40170
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rol supervisor
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ChildBirthAssistance bc-ChildBirthAssistance]
+||Encounter.participant.type|individual.extension:practitionerRole
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-4 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40180
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Identificatie supervisor
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40189
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vaginale kunstverlossing (groep)
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40190
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vaginale kunstverlossing
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-3 example]
+||
+* GET [base]/Procedure?code=3311000146109{&subject=[vrouwid]&context=[dossierid]&partof=[bevallingid,uitdrijvingsfaseid]}
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40200
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Succes vaginale kunstverlossing?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.outcome.extension
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-7 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40210
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie vaginale kunstverlossing
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40219
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sectio caesarea (group)
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-11 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40225
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Beslismoment sectio caesarea
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.extension
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-11 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40240
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overige interventies
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-ObstetricProcedure bc-ObstetricProcedure]
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80766
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lichamelijk onderzoek kind
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-PhysicalExamination bc-PhysicalExamination]
+||DiagnosticReport
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40070
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Apgarscore na 1 min.
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40071
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Apgarscore na 5 min.
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibApgarScore zib-ApgarScore]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+* GET [base]/Observation?code=9274-2{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80757
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Apgarscore na 10 min.
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82206
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Afwijkende bevindingen kind?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82207
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Afwijkende bevindingen
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82168
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Algemene indruk
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82169
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zieke indruk?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82170
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bewustzijn
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82171
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Respiratie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82173
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dysmorfie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80769
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden huid
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80770
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hoofd
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80768
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Fontanel
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80771
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Schedel
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80772
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ogen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80773
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Oren
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80774
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Neus
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80775
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Mond
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80776
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kin - standafwijking?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80777
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden hals
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80778
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Thorax
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80784
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Inspectie
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82176
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Skelet
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82177
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Claviculae fractuur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82178
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overige afwijkingen ribben/sternum
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82179
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Mammae
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80786
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hart
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82180
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Longen
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80779
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Abdomen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82181
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Inspectie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82182
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Buikwand
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82183
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lever - vergroot?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82184
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Milt palpabel?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82225
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Darmen - afwijkende peristaltiek?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82185
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting darmen - afwijkende peristaltiek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82186
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Anus - atresie/fistel?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82187
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Andere palpabele weerstanden?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82188
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting palpabele weerstanden
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80780
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rug
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82189
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Inspectie / palpatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82190
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Overige bevindingen
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80781
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Extremiteiten
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82191
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Proportie - afwijkend?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82192
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vorm - afwijkend?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82226
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting afwijkende vorm
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82193
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Heupen - asymmetrisch / asymmetrische plooien?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82194
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Beweeglijkheid
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82195
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Handen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82196
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voeten
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80782
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Genitalia
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82197
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Mannelijk
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82198
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Penis
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82199
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vrouwelijk
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82200
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geslacht niet conclusief
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82201
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Neurologie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82202
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tonus
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82203
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Beweeglijkheid
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82204
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Reflexen - Moro
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40060
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geboortegewicht
+||0 .. 1
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-180 example]
+||
+* GET [base]/Observation?code=8339-4{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80670
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Percentiel van het geboortegewicht
+||0 .. 1
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation.interpretation.extension:percentile
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80759
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lengte
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80760
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Schedelomtrek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82385
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indaling testes
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80788
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden lichamelijk onderzoek kind
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40080
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Congenitale afwijkingen?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40081
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Congenitale afwijkingen (groep)
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40082
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Specificatie congenitale afwijking (groep)
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-41 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40090
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Specificatie congenitale afwijking
+||1 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-41 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40100
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Waarschijnlijkheid congenitale afwijking
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40110
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Chromosomale afwijkingen?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-19 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40111
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Specificatie chromosomale afwijking (groep)
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-40 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40120
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Specificatie chromosomale afwijking
+||1 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-19 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40130
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Waarschijnlijkheid chromosomale afwijking
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82334
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Problematiek kind?
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-38 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80789
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Problematiek kind
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfChild|bc-DisorderOfChild]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-21 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80793
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Navelstreng vaten
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80761
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vitamine K?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82369
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hepatitis B
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82368
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hepatitis B immunisatie?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82370
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hepatitis B vaccinatie?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82119
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kinderarts betrokken?
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.participant.member.extension:practitionerRole
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82120
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Betrokkenheid kinderarts
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.participant.member.extension:practitionerRole
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82122
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum betrokkenheid
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.participant.period
+||[https://simplifier.net/geboortezorg-stu3/careteam-example example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82123
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Reden betrokkenheid
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.reasonCode
+||[https://simplifier.net/geboortezorg-stu3/careteam-example example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82121
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type betrokkenheid
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.participant.role
+||[https://simplifier.net/geboortezorg-stu3/careteam-example example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82335
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorginstelling LVR-ID
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-CareTeam bc-CareTeam]
+||CareTeam.participant.member|onBehalfOf | Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/careteam-example example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80790
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden kind
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Birth bc-Birth]
+||Procedure.note | Observation.valueString
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-261 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80980
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Opmerkingen baring
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||73
+||&#160;&#160;&#160;&#160;&#160;&#160;Labonderzoek neonataal bloed
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23010
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum afname neonataal bloed
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23020
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Afnemer identificatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23030
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rol afnemer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23040
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam afnemer
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23050
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgaanbieder afnemer
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23060
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(HL7: Labaanvraag)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||23070
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Uitvoerend lab
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||14
+||Medisch onderzoek
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyUltraSound bc-PregnancyUltraSound]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-2 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50010
+||&#160;&#160;&#160;Onderzoek identificatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50020
+||&#160;&#160;&#160;Datum onderzoek
+||1 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyUltraSound bc-PregnancyUltraSound]
+||DiagnosticReport.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-2 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50021
+||&#160;&#160;&#160;Zwangerschapsduur op datum onderzoek
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyUltraSound bc-PregnancyUltraSound]
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50100
+||&#160;&#160;&#160;Onderzoektype 'Jonge zwangerschapsecho'
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50110
+||&#160;&#160;&#160;Onderzoektype 'NT-meting'
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50120
+||&#160;&#160;&#160;Onderzoektype 'SEO'
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50130
+||&#160;&#160;&#160;Onderzoektype 'GUO'
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||50140
+||&#160;&#160;&#160;Onderzoektype 'Kansbepaling combinatietest'
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||51020
+||&#160;&#160;&#160;Conclusie à terme datum
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80809
+||&#160;&#160;&#160;Uitslag screening
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20470
+||&#160;&#160;&#160;&#160;&#160;&#160;Indicatie prenatale diagnostiek obv screening
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||141
+||&#160;&#160;&#160;Foetusspecifieke (onderzoeks)gegevens
+||0 .. *
+||[https://simplifier.net/geboortezorg-stu3/bc-Fetus bc-Fetus]
+||BodySite
+||[https://simplifier.net/geboortezorg-stu3/bodysite-example-duplicate-2 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60005
+||&#160;&#160;&#160;&#160;&#160;&#160;Foetus identificatie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60010
+||&#160;&#160;&#160;&#160;&#160;&#160;Foetus volgletter
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82235
+||&#160;&#160;&#160;&#160;&#160;&#160;Echoscopie
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyUltraSound bc-PregnancyUltraSound]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-2 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80943
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hartactie aanwezig?
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||81006
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hartactie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||81007
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Regelmaat hartslag
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||81008
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Frequentie hartslag
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80944
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ligging
+||0 .. *
+||[[Gebz:FHIR_bc-FetusObservation|bc-FetusObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-145 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80985
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Beweging
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80945
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vruchtwater
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82069
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Placentalokalisatie
+||0 .. *
+||[[Gebz:FHIR_bc-FetusObservation|bc-FetusObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-160 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80946
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Placentalokalisatie
+||0 .. *
+||[[Gebz:FHIR_bc-FetusObservation|bc-FetusObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-160 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82071
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ostium
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82072
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Over sectio litteken?
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82287
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Afwijking placenta/vliezen/navelstreng?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82288
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Afwijking placenta/vliezen/navelstreng
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82073
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Cervixlengte
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80947
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Navelstreng vaten
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80948
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Opmerkingen
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-PregnancyUltraSound bc-PregnancyUltraSound]
+||DiagnosticReport.extension?
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-2 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82236
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bevindingen
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83421
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hart en perifeer vaatstelsel
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83396
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hart en perifeer vaatstelsel
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83422
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Verdenking afwijking
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83417
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hersenen, hersenstructuren, intracranieel
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83395
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hersenen, hersenstructuren, intracranieel
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83418
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Verdenking afwijking
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83419
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wervelkolom, ruggemerg
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||84105
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wervelkolom, ruggemerg
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83420
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Verdenking afwijking
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||60200
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Algehele beoordeling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82237
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Neuraalbuis van de wervelkolom
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82240
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hersenen neuraalbuisdefect
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82241
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hersenen overige
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82242
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aangezicht
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82243
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Nek / huid
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82244
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hart
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82245
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Longen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82246
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Diafragma
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82247
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Buikwand
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82248
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Maag-darm
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82249
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Nieren-blaas
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82251
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Skelet
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82250
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Extremiteiten
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82238
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sonomarkers
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82239
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Echodense focus in het hart
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82258
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Plexus choroideus cysten
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82259
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Verdikte nekplooi / nekhuid
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82260
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Echodense darmen
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82261
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Milde ventriculomegalie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82262
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Pyelectasie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82263
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Kort femur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82264
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 navelstrengvaten
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82252
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Beoordeling biometrie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82253
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vruchtwatercompartiment
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82254
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Navelstreng
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82255
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Placenta
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82256
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wervelkolom neuraalbuisdefect
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82257
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wervelkolom overige
+||0 .. 1
+||
+||
+||
+||
+|-
+|blob 
+||60102
+||&#160;&#160;&#160;&#160;&#160;&#160;Groeidiagrammen voor BPD, HC, AC, FL
+||0 .. *
+||
+||Binary.content
+||[https://simplifier.net/geboortezorg-stu3/binary-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82234
+||&#160;&#160;&#160;&#160;&#160;&#160;Combinatietest
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61010
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum kansbepaling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61040
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Methode kansbepaling
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61020
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Software kansbepaling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61025
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naam kansbepaling softwareapplicatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61030
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Versie softwareapplicatie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61050
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A priori kans op trisomie 21 (Down)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61060
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A priori kans op trisomie 18 (Edwards)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61070
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A priori kans op trisomie 13 (Patau)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61080
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Combinatietest kans op trisomie 21
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61100
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Combinatietest kans op trisomie 18
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61110
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Combinatietest kans op trisomie 13
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82313
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde gegevens
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82300
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82301
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Actuele aantal foetus
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82302
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Chorioniciteit
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82303
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lengte
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82304
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gewicht (gemeten)
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82305
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Diabetes mellitus?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82306
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IVF / ICSI graviditeit?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82307
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Trisomie in de anamnese?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61200
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde rookgewoonte?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82308
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Etniciteit
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61220
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde PAPP-A concentratie in mIU/l
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61230
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde PAPP-A in MoM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61240
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde vrij β-hCG concentratie in ng/ml
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61250
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde vrij β-hCG in MoM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61260
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde corrected PAPP-A
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61270
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde corrected vrij β-hCG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||61280
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gehanteerde datum NT-meting
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82309
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NT in mm
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82310
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NT in MoM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82311
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CRL
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82312
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BPD
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82228
+||&#160;&#160;&#160;&#160;&#160;&#160;NIPT?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82227
+||&#160;&#160;&#160;&#160;&#160;&#160;Invasieve prenatale diagnostiek
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||142
+||&#160;&#160;&#160;Maternale onderzoeksgegevens
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultDiagnosticReport zib-LaboratoryTestResult-DiagnosticReport]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80959
+||&#160;&#160;&#160;&#160;&#160;&#160;Urine-, bloed- en aanvullende onderzoeken
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultDiagnosticReport zib-LaboratoryTestResult-DiagnosticReport]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80949
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PSIE
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultDiagnosticReport zib-LaboratoryTestResult-DiagnosticReport]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80952
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloedgroep vrouw
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80953
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rhesus D Factor vrouw
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80954
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rhesus c Factor vrouw
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80955
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HBsAg
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80956
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HIV
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80957
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Lues
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10812
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Irregulaire antistoffen?
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-181 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10813
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Welke irregulaire antistoffen vrouw aanwezig.
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-260 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82374
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NIPT - uitslag
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82229
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NIPT - uitslag
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82375
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NIPT - geslacht
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||10814
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hb
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-80 example]
+||
+* GET [base]/Observation?code=718-7{&subject=[vrouwid]&context=[dossierid]}
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80991
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Anemie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80951
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MCV
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80992
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hb-pathie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80993
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vit. B12
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80994
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Actief-B12
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80995
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ferritine
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80996
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Foliumzuur
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80960
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Diabetes diagnostiek
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82079
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Glucose
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82074
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tijd
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80961
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Glucose
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82075
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80963
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Schildklier diagnostiek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80962
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TSH receptor antistoffen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80964
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vrij T4
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80965
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TSH
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80966
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TORCH
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80967
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toxoplasmose IgG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80968
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toxoplasmose IgM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80969
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rubella IgG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80970
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rubella IgM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80971
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CMV IgG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80972
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CMV IgM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80973
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Herpes IgG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80974
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Herpes IgM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80975
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Parvovirus IgG
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80976
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Parvovirus IgM
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40051
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rhesus D Factor foetus
+||0 .. 1
+||[https://simplifier.net/nictizstu3-zib2017/zibLaboratoryTestResultObservation zib-LaboratoryTestResult-Observation]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-81 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82076
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Urine
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82078
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sediment/stick
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82077
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ketonen
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82080
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Nitriet
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82082
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aantal g proteïne, 24 uurs
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20243
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Proteïne in urine
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80977
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Urinekweek
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20242
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Eiwit/creatinineratio
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80978
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vaginakweek
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1421
+||&#160;&#160;&#160;&#160;&#160;&#160;Vaginaal toucher
+||0 .. 1
+||[https://simplifier.net/geboortezorg-stu3/bc-DigitalVaginalExamination bc-DigitalVaginalExamination]
+||DiagnosticReport
+||[https://simplifier.net/geboortezorg-stu3/diagnosticreport-example example]
+||
+* GET [base]/DiagnosticReport?code=51597003{&subject=[vrouwid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20612
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Portio
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-103 example]
+||
+* GET [base]/Observation?code=[249021005]{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82372
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Positie portio
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20613
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Ontsluiting
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-97 example]
+||
+* GET [base]/Observation?code=[289761004]{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20614
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vliezen
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-96 example]
+||
+* GET [base]/Observation?code=[112074005]{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||20615
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indaling Hodge
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-98 example]
+||
+* GET [base]/Observation?code=[364611006]{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80616
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aard van het voorliggend deel
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-105 example]
+||
+* GET [base]/Observation?code=[364612004]{&subject=[kindid]&context=[dossierid]}
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80618
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Stand
+||0 .. 1
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-106 example]
+||
+* GET [base]/Observation?code=[163520002]{&subject=[kindid]&context=[dossierid]}
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||16
+||Postnatale fase
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82297
+||&#160;&#160;&#160;Diagnose/interventie postnataal
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderPostPartum | bc-ObstetricProcedure|bc-DisorderPostPartum | bc-ObstetricProcedure]]
+||Condition | Procedure
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-36 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82298
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderPostPartum | bc-ObstetricProcedure|bc-DisorderPostPartum | bc-ObstetricProcedure]]
+||Condition.assertedDate | Procedure.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-36 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82209
+||&#160;&#160;&#160;&#160;&#160;&#160;Pathologie vrouw
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderPostPartum | bc-ObstetricProcedure|bc-DisorderPostPartum | bc-ObstetricProcedure]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-36 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82373
+||&#160;&#160;&#160;&#160;&#160;&#160;Interventie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80843
+||&#160;&#160;&#160;Kraamzorg?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82083
+||&#160;&#160;&#160;Kraamzorginstelling
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82084
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorginstelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82085
+||&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummer instelling
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82124
+||&#160;&#160;&#160;Bloedverlies kraambed
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80982
+||&#160;&#160;&#160;Opmerkingen kraambed
+||0 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||161
+||&#160;&#160;&#160;Kindspecifieke gegevens
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||83377
+||&#160;&#160;&#160;&#160;&#160;&#160;Rangnummer kind
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70009
+||&#160;&#160;&#160;&#160;&#160;&#160;Voeding kind (groep)
+||0 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-246 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70011
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voeding kind (datum)
+||0 .. 1
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-246 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||70030
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Substantie voeding kind
+||1 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-166 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82118
+||&#160;&#160;&#160;&#160;&#160;&#160;Betrokkenheid andere zorgverlener?
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40249
+||&#160;&#160;&#160;&#160;&#160;&#160;Betrokkenheid andere zorgverlener
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40250
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type betrokkenheid
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40260
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Datum betrokkenheid
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||40261
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlenertype
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80765
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Reden betrokkenheid
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80844
+||&#160;&#160;&#160;Nacontrole
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80846
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum controle
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80847
+||&#160;&#160;&#160;&#160;&#160;&#160;Naam zorgverlener
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||82086
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlenertype
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80848
+||&#160;&#160;&#160;&#160;&#160;&#160;Kindspecifieke kraamperiodegegevens
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80851
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Substantie voeding kind
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80865
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden kind kraamperiode
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80983
+||&#160;&#160;&#160;&#160;&#160;&#160;Anticonceptie besproken?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80856
+||&#160;&#160;&#160;&#160;&#160;&#160;Type anticonceptie
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80857
+||&#160;&#160;&#160;&#160;&#160;&#160;Vloeien
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80858
+||&#160;&#160;&#160;&#160;&#160;&#160;Menstruatie?
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80986
+||&#160;&#160;&#160;&#160;&#160;&#160;Incontinentie?
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80859
+||&#160;&#160;&#160;&#160;&#160;&#160;Incontinentie
+||0 .. *
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80860
+||&#160;&#160;&#160;&#160;&#160;&#160;Episiotomie/ruptuur
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80984
+||&#160;&#160;&#160;&#160;&#160;&#160;Sectiowond
+||0 .. 1
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80852
+||&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80853
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk systolisch
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80854
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk diastolisch
+||1 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80855
+||&#160;&#160;&#160;&#160;&#160;&#160;Hb
+||0 .. 1
+||
+||
+||
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||80863
+||&#160;&#160;&#160;&#160;&#160;&#160;Bijzonderheden
+||0 .. *
+||
+||
+||
+||
+|}
+<section end=transaction />

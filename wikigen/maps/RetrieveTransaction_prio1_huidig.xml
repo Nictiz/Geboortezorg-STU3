@@ -36,7 +36,8 @@
                pattern="nl-core-organization"
                mapping="Organization"
                example="https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3">
-         <search>GET [base]/Organization/[zorginstellingid]GET [base]/Organization?identifier=[lvrid]</search>
+         <search>GET [base]/Organization/[zorginstellingid]</search>
+         <search>GET [base]/Organization?identifier=[lvrid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10021"
                level="3"
@@ -222,7 +223,8 @@
                pattern="bc-Woman"
                mapping="Patient"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3">
-         <search>GET [base]/Patient/[vrouwid]GET [base]/Patient?identifier=[bsn]</search>
+         <search>GET [base]/Patient/[vrouwid]</search>
+         <search>GET [base]/Patient?identifier=[bsn]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10030"
                level="2"
@@ -386,7 +388,10 @@
                pattern="zib-pregnancy"
                mapping="Condition"
                example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10">
-         <search>GET [base]/Condition/[zwangerschapid]GET [base]/Condition?clinicalstatus=activeGET [base]/Condition?clinicalstatus=inactive&amp;_sort=_-id&amp;_count=1GET [base]/Condition?subject=[patientid]&amp;_revinclude=Observation:focus</search>
+         <search>GET [base]/Condition/[zwangerschapid]</search>
+         <search>GET [base]/Condition?clinicalstatus=active</search>
+         <search>GET [base]/Condition?clinicalstatus=inactive&amp;_sort=_-id&amp;_count=1</search>
+         <search>GET [base]/Condition?subject=[patientid]&amp;_revinclude=Observation:focus</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20010"
                level="2"
