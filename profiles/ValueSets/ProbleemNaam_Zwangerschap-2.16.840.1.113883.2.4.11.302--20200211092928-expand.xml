@@ -1,0 +1,360 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-02-11T09:29:28+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.302--20200211092928"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.302"/>
+    </identifier>
+    <version value="2020-02-11T09:29:28"/>
+    <name value="ProbleemNaam_Zwangerschap"/>
+    <title value="ProbleemNaam_Zwangerschap"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="ProbleemNaam_Zwangerschap"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="129103003"/>
+                <display value="endometriose (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="95315005"/>
+                <display value="leiomyoom van uterus (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="37849005"/>
+                <display value="congenitale misvorming van uterus (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="301775005"/>
+                <display value="infectie van uterus (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="307534009"/>
+                <display value="urineweginfectie tijdens zwangerschap (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="45816000"/>
+                <display value="pyelonefritis (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="715852004"/>
+                <display value="infectieziekte van tractus gastrointestinalis (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="48194001"/>
+                <display value="zwangerschapsgeïnduceerde hypertensie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="398254007"/>
+                <display value="pre-eclampsie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="95605009"/>
+                <display value="HELLP-syndroom (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="15938005"/>
+                <display value="eclampsie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="199616008"/>
+                <display value="large for gestational age (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="267258002"/>
+                <display value="small for gestational age (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="6096002"/>
+                <display value="stuitligging (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="288203005"/>
+                <display value="Transverse/oblique lie (finding)"/>
+            </concept>
+            <concept>
+                <code value="7721000146107"/>
+                <display value="Unstable lie (finding)"/>
+            </concept>
+            <concept>
+                <code value="131148009"/>
+                <display value="bloeding (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="415105001"/>
+                <display value="abruptio placentae (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="17382005"/>
+                <display value="cervixinsufficiëntie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="14094001"/>
+                <display value="hyperemesis gravidarum (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="235888006"/>
+                <display value="Cholestasis of pregnancy (disorder)"/>
+            </concept>
+            <concept>
+                <code value="46894009"/>
+                <display value="diabetes gravidarum klasse A2 (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="284521000"/>
+                <display value="Pitting edema (finding)"/>
+            </concept>
+            <concept>
+                <code value="16356006"/>
+                <display value="meerlingzwangerschap (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="270500004"/>
+                <display value="navelstrengprolaps (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="59291004"/>
+                <display value="intra-uteriene vruchtdood (bevinding)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="overig"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+            <concept>
+                <code value="MolaPartieelIntacteZw"/>
+                <display value="Partiële mola met intacte zwangerschap"/>
+            </concept>
+            <concept>
+                <code value="PartusImmaturusDreig"/>
+                <display value="Partus immaturus - dreigend"/>
+            </concept>
+            <concept>
+                <code value="PartusPrematurusDreig"/>
+                <display value="Partus prematurus - dreigend"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:3e9532d6-a533-42c8-abd6-19c13662d490"/>
+        <timestamp value="2020-09-03T15:08:14.775+02:00"/>
+        <total value="37"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="310789003"/>
+            <display value="aandoening van tractus genitalis van vrouw (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="129103003"/>
+            <display value="endometriose (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="95315005"/>
+            <display value="leiomyoom van uterus (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="37849005"/>
+            <display value="congenitale misvorming van uterus (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="40733004"/>
+            <display value="aandoening door infectie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="301775005"/>
+            <display value="infectie van uterus (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="307534009"/>
+            <display value="urineweginfectie tijdens zwangerschap (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="45816000"/>
+            <display value="pyelonefritis (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="715852004"/>
+            <display value="infectieziekte van tractus gastrointestinalis (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="38341003"/>
+            <display value="hypertensieve aandoening (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="48194001"/>
+            <display value="zwangerschapsgeïnduceerde hypertensie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="398254007"/>
+            <display value="pre-eclampsie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="95605009"/>
+            <display value="HELLP-syndroom (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="15938005"/>
+            <display value="eclampsie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="276604007"/>
+            <display value="Fetal growth abnormality (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="199616008"/>
+            <display value="large for gestational age (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="267258002"/>
+            <display value="small for gestational age (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="80002007"/>
+            <display value="Malpresentation of fetus (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="6096002"/>
+            <display value="stuitligging (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="288203005"/>
+            <display value="Transverse/oblique lie (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="7721000146107"/>
+            <display value="Unstable lie (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="131148009"/>
+            <display value="bloeding (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+            <code value="MolaPartieelIntacteZw"/>
+            <display value="Partiële mola met intacte zwangerschap"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415105001"/>
+            <display value="abruptio placentae (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="17382005"/>
+            <display value="cervixinsufficiëntie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="14094001"/>
+            <display value="hyperemesis gravidarum (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="235888006"/>
+            <display value="Cholestasis of pregnancy (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="46894009"/>
+            <display value="diabetes gravidarum klasse A2 (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="284521000"/>
+            <display value="Pitting edema (finding)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+            <code value="PartusImmaturusDreig"/>
+            <display value="Partus immaturus - dreigend"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+            <code value="PartusPrematurusDreig"/>
+            <display value="Partus prematurus - dreigend"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="16356006"/>
+            <display value="meerlingzwangerschap (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="270500004"/>
+            <display value="navelstrengprolaps (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="59291004"/>
+            <display value="intra-uteriene vruchtdood (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+    </expansion>
+</ValueSet>

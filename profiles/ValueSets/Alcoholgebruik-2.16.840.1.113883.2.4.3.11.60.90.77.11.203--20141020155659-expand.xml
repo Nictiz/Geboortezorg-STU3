@@ -1,0 +1,62 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-10-20T15:56:59+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.203--20141020155659"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.203"/>
+    </identifier>
+    <version value="2014-10-20T15:56:59"/>
+    <name value="Alcoholgebruik"/>
+    <title value="Alcoholgebruik"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Alcoholgebruik"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.59"/>
+            <concept>
+                <code value="1"/>
+                <display value="geen"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="&lt; 2 eenheden per dag"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="≥ 2 eenheden per dag"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:c2bdfee1-d4a2-47e1-ac29-4e8287eefd91"/>
+        <timestamp value="2020-09-03T15:08:43.555+02:00"/>
+        <total value="3"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.59"/>
+            <code value="1"/>
+            <display value="geen"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.59"/>
+            <code value="2"/>
+            <display value="&lt; 2 eenheden per dag"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.59"/>
+            <code value="3"/>
+            <display value="≥ 2 eenheden per dag"/>
+        </contains>
+    </expansion>
+</ValueSet>

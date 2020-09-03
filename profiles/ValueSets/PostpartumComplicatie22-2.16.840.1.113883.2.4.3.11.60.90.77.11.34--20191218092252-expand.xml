@@ -1,0 +1,213 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2019-12-18T09:22:52+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.34--20191218092252"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.34"/>
+    </identifier>
+    <version value="2019-12-18T09:22:52"/>
+    <name value="PostpartumComplicatie22"/>
+    <title value="Postpartum complicatie"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Postpartum complicatie"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.1"/>
+            <concept>
+                <code value="6150"/>
+                <display value="Overige infecties"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="398254007"/>
+                <display value="Pre-eclampsia (disorder)"/>
+            </concept>
+            <concept>
+                <code value="67359005"/>
+                <display value="Pre-eclampsia added to pre-existing hypertension (disorder)"/>
+            </concept>
+            <concept>
+                <code value="303063000"/>
+                <display value="Eclampsia in puerperium (disorder)"/>
+            </concept>
+            <concept>
+                <code value="95605009"/>
+                <display value="Hemolysis-elevated liver enzymes-low platelet count syndrome (disorder)"/>
+            </concept>
+            <concept>
+                <code value="56272000"/>
+                <display value="Postpartum deep phlebothrombosis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="58703003"/>
+                <display value="Postpartum depression (disorder)"/>
+            </concept>
+            <concept>
+                <code value="18260003"/>
+                <display value="Postpartum psychosis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="301822002"/>
+                <display value="Abnormal vaginal bleeding (finding)"/>
+            </concept>
+            <concept>
+                <code value="414086009"/>
+                <display value="Embolism (disorder)"/>
+            </concept>
+            <concept>
+                <code value="385494008"/>
+                <display value="Hematoma (disorder)"/>
+            </concept>
+            <concept>
+                <code value="271737000"/>
+                <display value="Anemia (disorder)"/>
+            </concept>
+            <concept>
+                <code value="78623009"/>
+                <display value="Endometritis (disorder)"/>
+            </concept>
+            <concept>
+                <code value="266579006"/>
+                <display value="ontsteking van mamma (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="68566005"/>
+                <display value="Urinary tract infectious disease (disorder)"/>
+            </concept>
+            <concept>
+                <code value="300927001"/>
+                <display value="Episiotomy infection (disorder)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:467a1254-30fa-4a28-83e1-c420f30ed6ab"/>
+        <timestamp value="2020-09-03T15:08:15.431+02:00"/>
+        <total value="20"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.1"/>
+            <abstract value="true"/>
+            <code value="6010"/>
+            <display value="(Dreigende) eclampsie, (verdenking op) HELLP-syndroom"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="398254007"/>
+            <display value="Pre-eclampsia (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="67359005"/>
+            <display value="Pre-eclampsia added to pre-existing hypertension (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="303063000"/>
+            <display value="Eclampsia in puerperium (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="95605009"/>
+            <display value="Hemolysis-elevated liver enzymes-low platelet count syndrome (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="56272000"/>
+            <display value="Postpartum deep phlebothrombosis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="58703003"/>
+            <display value="Postpartum depression (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="18260003"/>
+            <display value="Postpartum psychosis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="301822002"/>
+            <display value="Abnormal vaginal bleeding (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="414086009"/>
+            <display value="Embolism (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="385494008"/>
+            <display value="Hematoma (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="271737000"/>
+            <display value="Anemia (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="178280004"/>
+            <display value="Postnatal infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="78623009"/>
+            <display value="Endometritis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <inactive value="true"/>
+            <code value="45198002"/>
+            <display value="Mastitis (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="266579006"/>
+            <display value="ontsteking van mamma (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="68566005"/>
+            <display value="Urinary tract infectious disease (disorder)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="300927001"/>
+            <display value="Episiotomy infection (disorder)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.1"/>
+            <code value="6150"/>
+            <display value="Overige infecties"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

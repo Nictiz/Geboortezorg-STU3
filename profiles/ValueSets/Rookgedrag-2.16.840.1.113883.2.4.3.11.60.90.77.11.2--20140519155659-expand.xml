@@ -1,0 +1,101 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-05-19T15:56:59+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.2--20140519155659"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.2"/>
+    </identifier>
+    <version value="2014-05-19T15:56:59"/>
+    <name value="Rookgedrag"/>
+    <title value="Rookgedrag"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Rookgedrag"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="Unknown"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <concept>
+                <code value="1"/>
+                <display value="niet gerookt"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="1 - 10 per dag"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="11 - 20 per dag"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="meer dan 20 per dag"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="gestopt vóór huidige zwangerschap"/>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="gestopt tijdens huidige zwangerschap"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:a2f1ff3e-ed8d-4bbe-b7ca-84779cccd621"/>
+        <timestamp value="2020-09-03T15:08:44.583+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="1"/>
+            <display value="niet gerookt"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="2"/>
+            <display value="1 - 10 per dag"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="3"/>
+            <display value="11 - 20 per dag"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="4"/>
+            <display value="meer dan 20 per dag"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="5"/>
+            <display value="gestopt vóór huidige zwangerschap"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.58"/>
+            <code value="6"/>
+            <display value="gestopt tijdens huidige zwangerschap"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="Unknown"/>
+        </contains>
+    </expansion>
+</ValueSet>
