@@ -164,9 +164,6 @@
       <fixedCode value="386637004" />
     </element>
     <element id="Procedure.category.coding:obstetricprocedure.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Procedure.category.coding.display" />
       <fixedString value="Obstetric procedure (procedure)" />
     </element>
@@ -181,14 +178,6 @@
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
       <sliceName value="VerrichtingTypeCodelijst" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Obstetrische verrichtingen" />
-        <valueSetReference>
-          <reference value="http://nictiz.nl/fhir/ValueSet/obstetricProcedures" />
-          <display value="VerrichtingTypeCodelijst" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement" />
@@ -271,9 +260,6 @@
       <fixedCode value="PRN540701" />
     </element>
     <element id="Procedure.code.coding:episiotomy.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Procedure.code.coding.display" />
       <fixedString value="Episiotomie" />
     </element>
@@ -296,9 +282,6 @@
       <fixedCode value="PRN540201" />
     </element>
     <element id="Procedure.code.coding:laborStimulation.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Procedure.code.coding.display" />
       <fixedString value="Bijstimulatie toegediend" />
     </element>
@@ -403,6 +386,16 @@
         <map value="peri23-dataelement-80794" />
         <comment value="Indicatie episiotomie" />
       </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension">
+      <path value="Procedure.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Procedure.bodySite.extension:ProcedureLaterality">
       <path value="Procedure.bodySite.extension" />
