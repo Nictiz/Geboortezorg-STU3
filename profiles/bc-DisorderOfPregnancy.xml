@@ -81,454 +81,57 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
+    <element id="Condition.category">
+      <path value="Condition.category" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:disorderFemaleGenitalTract">
-      <path value="Condition.code.coding" />
-      <sliceName value="disorderFemaleGenitalTract" />
+    <element id="Condition.category:disorderOfPregnancy">
+      <path value="Condition.category" />
+      <sliceName value="disorderOfPregnancy" />
       <max value="1" />
+    </element>
+    <element id="Condition.category:disorderOfPregnancy.coding">
+      <path value="Condition.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy">
+      <path value="Condition.category.coding" />
+      <sliceName value="disorderOfPregnancy" />
+      <max value="1" />
+    </element>
+    <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy.system">
+      <path value="Condition.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy.code">
+      <path value="Condition.category.coding.code" />
+      <fixedCode value="173300003" />
+    </element>
+    <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy.display">
+      <path value="Condition.category.coding.display" />
+      <fixedString value="Disorder of pregnancy (disorder)" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
       <binding>
         <strength value="extensible" />
-        <description value="GynaecologischeAandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82269" />
-        <comment value="Gynaecologische aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82317" />
-        <comment value="Gynaecologische aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82509" />
-        <comment value="Gynaecologische aandoening" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:bleeding">
-      <path value="Condition.code.coding" />
-      <sliceName value="bleeding" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82270" />
-        <comment value="Bloedverlies" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82318" />
-        <comment value="Bloedverlies" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82510" />
-        <comment value="Bloedverlies" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:bleeding.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:bleeding.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="131148009" />
-    </element>
-    <element id="Condition.code.coding:bleeding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Bleeding (finding)" />
-    </element>
-    <element id="Condition.code.coding:cervicalIncompetence">
-      <path value="Condition.code.coding" />
-      <sliceName value="cervicalIncompetence" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82271" />
-        <comment value="Cervixinsufficientie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82320" />
-        <comment value="Cervixinsufficientie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82512" />
-        <comment value="Cervixinsufficientie" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:cervicalIncompetence.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:cervicalIncompetence.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="17382005" />
-    </element>
-    <element id="Condition.code.coding:cervicalIncompetence.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Cervical incompetence (disorder)" />
-    </element>
-    <element id="Condition.code.coding:infectiousDisease">
-      <path value="Condition.code.coding" />
-      <sliceName value="infectiousDisease" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Infectie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20141021114554" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82273" />
-        <comment value="Infectie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82321" />
-        <comment value="Infectie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82513" />
-        <comment value="Infectie" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:excessiveVomiting">
-      <path value="Condition.code.coding" />
-      <sliceName value="excessiveVomiting" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82274" />
-        <comment value="HyperemesisGravidarum" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82322" />
-        <comment value="HyperemesisGravidarum" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82514" />
-        <comment value="HyperemesisGravidarum" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:excessiveVomiting.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:excessiveVomiting.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="14094001" />
-    </element>
-    <element id="Condition.code.coding:excessiveVomiting.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Excessive vomiting in pregnancy (disorder)" />
-    </element>
-    <element id="Condition.code.coding:hypertensiveDisorder">
-      <path value="Condition.code.coding" />
-      <sliceName value="hypertensiveDisorder" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="HypertensieveAandoening" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82275" />
-        <comment value="Hypertensieve aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82323" />
-        <comment value="Hypertensieve aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82515" />
-        <comment value="Hypertensieve aandoening" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:cholestatisOfPregnancy">
-      <path value="Condition.code.coding" />
-      <sliceName value="cholestatisOfPregnancy" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82276" />
-        <comment value="Zwangerschapscholestase" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82324" />
-        <comment value="Zwangerschapscholestase" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82516" />
-        <comment value="Zwangerschapscholestase" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:cholestatisOfPregnancy.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:cholestatisOfPregnancy.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="235888006" />
-    </element>
-    <element id="Condition.code.coding:cholestatisOfPregnancy.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Cholestasis of pregnancy (disorder)" />
-    </element>
-    <element id="Condition.code.coding:gestationalDiabetesMellitus">
-      <path value="Condition.code.coding" />
-      <sliceName value="gestationalDiabetesMellitus" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82277" />
-        <comment value="Diabetes gravidarum met insuline" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82325" />
-        <comment value="Diabetes gravidarum met insuline" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82517" />
-        <comment value="Diabetes gravidarum met insuline" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:gestationalDiabetesMellitus.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:gestationalDiabetesMellitus.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="46894009" />
-    </element>
-    <element id="Condition.code.coding:gestationalDiabetesMellitus.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Gestational diabetes mellitus, class A&gt;2&lt; (disorder)" />
-    </element>
-    <element id="Condition.code.coding:abnormalFetalGrowth">
-      <path value="Condition.code.coding" />
-      <sliceName value="abnormalFetalGrowth" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="GroeiAfwijkend" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82278" />
-        <comment value="Afwijkende groei foetus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82326" />
-        <comment value="Afwijkende groei foetus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82518" />
-        <comment value="Afwijkende groei foetus" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:nearImmatureParturition">
-      <path value="Condition.code.coding" />
-      <sliceName value="nearImmatureParturition" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82279" />
-        <comment value="Dreigende partus immaturus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82327" />
-        <comment value="Dreigende partus immaturus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82519" />
-        <comment value="Dreigende partus immaturus" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:nearImmatureParturition.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="urn:oid:2.16.840.1.113883.2.4.4.13" />
-    </element>
-    <element id="Condition.code.coding:nearImmatureParturition.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="PartusImmaturusDreig" />
-    </element>
-    <element id="Condition.code.coding:nearImmatureParturition.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Partus immaturus - dreigend" />
-    </element>
-    <element id="Condition.code.coding:nearPrematureParturition">
-      <path value="Condition.code.coding" />
-      <sliceName value="nearPrematureParturition" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82280" />
-        <comment value="Dreigende partus prematurus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82328" />
-        <comment value="Dreigende partus prematurus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82520" />
-        <comment value="Dreigende partus prematurus" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:nearPrematureParturition.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="urn:oid:2.16.840.1.113883.2.4.4.13" />
-    </element>
-    <element id="Condition.code.coding:nearPrematureParturition.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="PartusPrematurusDreig" />
-    </element>
-    <element id="Condition.code.coding:nearPrematureParturition.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Partus prematurus - dreigend" />
-    </element>
-    <element id="Condition.code.coding:abruptioPlacentae">
-      <path value="Condition.code.coding" />
-      <sliceName value="abruptioPlacentae" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82289" />
-        <comment value="Abruptio placentae" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82329" />
-        <comment value="Abruptio placentae" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82521" />
-        <comment value="Abruptio placentae" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:abruptioPlacentae.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:abruptioPlacentae.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="415105001" />
-    </element>
-    <element id="Condition.code.coding:abruptioPlacentae.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Placental abruption (disorder)" />
-    </element>
-    <element id="Condition.code.coding:prolapsedCord">
-      <path value="Condition.code.coding" />
-      <sliceName value="prolapsedCord" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82452" />
-        <comment value="Navelstrengprolaps?" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82522" />
-        <comment value="Navelstrengprolaps?" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:prolapsedCord.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Condition.code.coding:prolapsedCord.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="270500004" />
-    </element>
-    <element id="Condition.code.coding:prolapsedCord.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Prolapsed cord (disorder)" />
-    </element>
-    <element id="Condition.code.coding:partialMolarPregnancy">
-      <path value="Condition.code.coding" />
-      <sliceName value="partialMolarPregnancy" />
-      <max value="1" />
-    </element>
-    <element id="Condition.code.coding:partialMolarPregnancy.system">
-      <path value="Condition.code.coding.system" />
-      <fixedUri value="Perinatologische observatiecodes" />
-    </element>
-    <element id="Condition.code.coding:partialMolarPregnancy.code">
-      <path value="Condition.code.coding.code" />
-      <fixedCode value="MolaPartieelIntacteZw" />
-    </element>
-    <element id="Condition.code.coding:partialMolarPregnancy.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Condition.code.coding.display" />
-      <fixedString value="Partiële mola met intacte zwangerschap" />
-    </element>
-    <element id="Condition.code.coding:positionDisorder">
-      <path value="Condition.code.coding" />
-      <sliceName value="positionDisorder" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="LiggingAfwijkend" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.213--20151019164313" />
+        <description value="ProbleemNaam_Zwangerschap" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.302--20200211092928" />
+          <display value="ProbleemNaamCodelijst" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Condition.subject">

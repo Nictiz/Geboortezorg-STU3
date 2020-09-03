@@ -82,29 +82,57 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
       </type>
     </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
+    <element id="Condition.category">
+      <path value="Condition.category" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:pathology">
-      <path value="Condition.code.coding" />
-      <sliceName value="pathology" />
+    <element id="Condition.category:disorderPostpartum">
+      <path value="Condition.category" />
+      <sliceName value="disorderPostpartum" />
+      <max value="1" />
+    </element>
+    <element id="Condition.category:disorderPostpartum.coding">
+      <path value="Condition.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.category:disorderPostpartum.coding:disorderPostpartum">
+      <path value="Condition.category.coding" />
+      <sliceName value="disorderPostpartum" />
+    </element>
+    <element id="Condition.category:disorderPostpartum.coding:disorderPostpartum.system">
+      <path value="Condition.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Condition.category:disorderPostpartum.coding:disorderPostpartum.code">
+      <path value="Condition.category.coding.code" />
+      <fixedCode value="362973001" />
+    </element>
+    <element id="Condition.category:disorderPostpartum.coding:disorderPostpartum.display">
+      <path value="Condition.category.coding.display" />
+      <fixedString value="Postpartum disorder" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
       <binding>
         <strength value="extensible" />
         <description value="PostpartumComplicatie22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.34--20191218092252" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.34--20191218092252" />
+          <display value="ProbleemNaamCodelijst" />
+        </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82209" />
-        <comment value="Pathologie vrouw" />
-      </mapping>
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
