@@ -96,22 +96,21 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
+    <element id="Procedure.code.coding:birth">
       <path value="Procedure.code.coding" />
-      <sliceName value="VerrichtingTypeCodelijst" />
+      <sliceName value="birth" />
+      <min value="1" />
+      <max value="1" />
     </element>
-    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.system">
+    <element id="Procedure.code.coding:birth.system">
       <path value="Procedure.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.code">
+    <element id="Procedure.code.coding:birth.code">
       <path value="Procedure.code.coding.code" />
       <fixedCode value="3950001" />
     </element>
-    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
+    <element id="Procedure.code.coding:birth.display">
       <path value="Procedure.code.coding.display" />
       <fixedString value="Birth (finding)" />
     </element>
