@@ -102,6 +102,11 @@
       <sliceName value="birth" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="3950001" />
+        <display value="Birth (finding)" />
+      </patternCoding>
     </element>
     <element id="Procedure.code.coding:birth.system">
       <path value="Procedure.code.coding.system" />
@@ -113,7 +118,7 @@
     </element>
     <element id="Procedure.code.coding:birth.display">
       <path value="Procedure.code.coding.display" />
-      <fixedString value="Birth (finding)" />
+      <defaultValueString value="Birth (finding)" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
