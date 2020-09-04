@@ -315,8 +315,12 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Procedure.performedPeriod:performedPeriod.start">
-      <path value="Procedure.performedPeriod.start" />
+    <element id="Procedure.performed[x]:performedPeriod">
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedPeriod" />
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.start">
+      <path value="Procedure.performed[x].start" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82298" />
