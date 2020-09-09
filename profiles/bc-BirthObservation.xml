@@ -61,16 +61,6 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
       </type>
     </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
@@ -108,7 +98,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
