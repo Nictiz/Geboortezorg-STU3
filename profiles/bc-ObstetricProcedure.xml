@@ -156,6 +156,11 @@
       <path value="Procedure.category.coding" />
       <sliceName value="obstetricprocedure" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="386637004" />
+        <display value="Obstetric procedure (procedure)" />
+      </patternCoding>
     </element>
     <element id="Procedure.category.coding:obstetricprocedure.system">
       <path value="Procedure.category.coding.system" />
@@ -167,7 +172,7 @@
     </element>
     <element id="Procedure.category.coding:obstetricprocedure.display">
       <path value="Procedure.category.coding.display" />
-      <fixedString value="Obstetric procedure (procedure)" />
+      <defaultValueString value="Obstetric procedure (procedure)" />
     </element>
     <element id="Procedure.code">
       <path value="Procedure.code" />
@@ -269,6 +274,11 @@
       <path value="Procedure.code.coding" />
       <sliceName value="laborStimulation" />
       <max value="1" />
+      <patternCoding>
+        <system value="PerinatologyProceduresPRN" />
+        <code value="PRN540201" />
+        <display value="Bijstimulatie toegediend" />
+      </patternCoding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20616" />
@@ -285,7 +295,7 @@
     </element>
     <element id="Procedure.code.coding:laborStimulation.display">
       <path value="Procedure.code.coding.display" />
-      <fixedString value="Bijstimulatie toegediend" />
+      <defaultValueString value="Bijstimulatie toegediend" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />

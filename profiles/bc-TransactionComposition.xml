@@ -43,6 +43,11 @@
     <element id="Composition.type.coding:type">
       <path value="Composition.type.coding" />
       <sliceName value="type" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="15508-5" />
+        <display value="Labor and delivery records" />
+      </patternCoding>
     </element>
     <element id="Composition.type.coding:type.system">
       <path value="Composition.type.coding.system" />
@@ -53,11 +58,8 @@
       <fixedCode value="15508-5" />
     </element>
     <element id="Composition.type.coding:type.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.type.coding.display" />
-      <fixedString value="Labor and delivery records" />
+      <defaultValueString value="Labor and delivery records" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />

@@ -97,6 +97,11 @@
       <path value="Condition.category.coding" />
       <sliceName value="disorderOfLaborAndDelivery" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="362972006" />
+        <display value="Disorder of labor / delivery (disorder)" />
+      </patternCoding>
     </element>
     <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery.system">
       <path value="Condition.category.coding.system" />
@@ -108,7 +113,7 @@
     </element>
     <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery.display">
       <path value="Condition.category.coding.display" />
-      <fixedString value="Disorder of labor / delivery (disorder)" />
+      <defaultValueString value="Disorder of labor / delivery (disorder)" />
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />

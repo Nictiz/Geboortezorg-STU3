@@ -81,6 +81,11 @@
       <path value="Condition.category.coding" />
       <sliceName value="disorderOfChild" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="414025005" />
+        <display value="Disorder of fetus or newborn (disorder)" />
+      </patternCoding>
     </element>
     <element id="Condition.category:disorderOfChild.coding:disorderOfChild.system">
       <path value="Condition.category.coding.system" />
@@ -92,7 +97,7 @@
     </element>
     <element id="Condition.category:disorderOfChild.coding:disorderOfChild.display">
       <path value="Condition.category.coding.display" />
-      <fixedString value="Disorder of fetus or newborn (disorder)" />
+      <defaultValueString value="Disorder of fetus or newborn (disorder)" />
     </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />

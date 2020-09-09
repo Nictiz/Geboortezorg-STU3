@@ -49,6 +49,11 @@
       <path value="EpisodeOfCare.type.coding" />
       <sliceName value="maternalRecord" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364320009" />
+        <display value="Pregnancy observable (observable entity)" />
+      </patternCoding>
     </element>
     <element id="EpisodeOfCare.type.coding:maternalRecord.system">
       <path value="EpisodeOfCare.type.coding.system" />
@@ -59,11 +64,8 @@
       <fixedCode value="364320009" />
     </element>
     <element id="EpisodeOfCare.type.coding:maternalRecord.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="EpisodeOfCare.type.coding.display" />
-      <fixedString value="Pregnancy observable (observable entity)" />
+      <defaultValueString value="Pregnancy observable (observable entity)" />
     </element>
     <element id="EpisodeOfCare.type.coding:perinatalPeriod">
       <path value="EpisodeOfCare.type.coding" />

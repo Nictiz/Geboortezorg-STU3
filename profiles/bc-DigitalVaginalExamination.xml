@@ -57,6 +57,11 @@
     <element id="DiagnosticReport.code.coding:digitalVaginalExamination">
       <path value="DiagnosticReport.code.coding" />
       <sliceName value="digitalVaginalExamination" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="51597003" />
+        <display value="Manual palpation of vagina (procedure)" />
+      </patternCoding>
     </element>
     <element id="DiagnosticReport.code.coding:digitalVaginalExamination.system">
       <path value="DiagnosticReport.code.coding.system" />
@@ -67,11 +72,8 @@
       <fixedCode value="51597003" />
     </element>
     <element id="DiagnosticReport.code.coding:digitalVaginalExamination.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="DiagnosticReport.code.coding.display" />
-      <fixedString value="Manual palpation of vagina (procedure)" />
+      <defaultValueString value="Manual palpation of vagina (procedure)" />
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />

@@ -97,17 +97,27 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.category.coding.system">
+    <element id="Procedure.category.coding:obstetricProcedure">
+      <path value="Procedure.category.coding" />
+      <sliceName value="obstetricProcedure" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="386637004" />
+        <display value="Obstetric procedure (procedure)" />
+      </patternCoding>
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.system">
       <path value="Procedure.category.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Procedure.category.coding.code">
+    <element id="Procedure.category.coding:obstetricProcedure.code">
       <path value="Procedure.category.coding.code" />
       <fixedCode value="386637004" />
     </element>
-    <element id="Procedure.category.coding.display">
+    <element id="Procedure.category.coding:obstetricProcedure.display">
       <path value="Procedure.category.coding.display" />
-      <fixedString value="Obstetric procedure (procedure)" />
+      <defaultValueString value="Obstetric procedure (procedure)" />
     </element>
     <element id="Procedure.code.coding:delivery">
       <path value="Procedure.code.coding" />

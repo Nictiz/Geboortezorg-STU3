@@ -83,7 +83,6 @@
     <element id="Encounter.class.extension:actualPlaceOfBirth">
       <path value="Encounter.class.extension" />
       <sliceName value="actualPlaceOfBirth" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -113,6 +112,14 @@
       <path value="Encounter.type" />
       <sliceName value="childbirthAssistance" />
     </element>
+    <element id="Encounter.type:childbirthAssistance.coding">
+      <path value="Encounter.type.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="816968003" />
+        <display value="Labor and birth support (regime/therapy)" />
+      </patternCoding>
+    </element>
     <element id="Encounter.type:childbirthAssistance.coding.system">
       <path value="Encounter.type.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
@@ -122,11 +129,8 @@
       <fixedCode value="816968003" />
     </element>
     <element id="Encounter.type:childbirthAssistance.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Encounter.type.coding.display" />
-      <fixedString value="Labor and birth support (regime/therapy)" />
+      <defaultValueString value="Labor and birth support (regime/therapy)" />
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
@@ -185,11 +189,8 @@
       <fixedCode value="catcher" />
     </element>
     <element id="Encounter.participant.type.coding:babyCatcher.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Encounter.participant.type.coding.display" />
-      <fixedString value="Person who catches the baby" />
+      <defaultValueString value="Person who catches the baby" />
     </element>
     <element id="Encounter.participant.type.coding:supervisor">
       <path value="Encounter.participant.type.coding" />
@@ -204,6 +205,16 @@
     <element id="Encounter.participant.type.coding:supervisor.code">
       <path value="Encounter.participant.type.coding.code" />
       <fixedCode value="supervisor" />
+    </element>
+    <element id="Encounter.participant.individual.extension">
+      <path value="Encounter.participant.individual.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Encounter.participant.individual.extension:practitionerRole">
       <path value="Encounter.participant.individual.extension" />
@@ -225,9 +236,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Diagnosis" />
-      </extension>
       <path value="Encounter.diagnosis" />
       <slicing>
         <discriminator>
@@ -238,9 +246,6 @@
       </slicing>
     </element>
     <element id="Encounter.diagnosis:pregnancy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Diagnosis" />
-      </extension>
       <path value="Encounter.diagnosis" />
       <sliceName value="pregnancy" />
     </element>

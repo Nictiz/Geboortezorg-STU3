@@ -205,14 +205,6 @@
         <comment value="Naamgegevens" />
       </mapping>
     </element>
-    <element id="Patient.name.extension:humannameAssemblyOrder">
-      <path value="Patient.name.extension" />
-      <sliceName value="humannameAssemblyOrder" />
-    </element>
-    <element id="Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode">
-      <path value="Patient.name.extension.valueCode" />
-      <sliceName value="valueCode" />
-    </element>
     <element id="Patient.name.family">
       <path value="Patient.name.family" />
       <mapping>
@@ -220,6 +212,16 @@
         <map value="peri23-dataelement-10043" />
         <comment value="Achternaam" />
       </mapping>
+    </element>
+    <element id="Patient.name.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.name.family.extension:humannameOwnPrefix">
       <path value="Patient.name.family.extension" />
@@ -275,6 +277,16 @@
         <map value="peri23-dataelement-10308" />
         <comment value="Adrestype" />
       </mapping>
+    </element>
+    <element id="Patient.address.line.extension">
+      <path value="Patient.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.address.line.extension:streetName">
       <path value="Patient.address.line.extension" />
@@ -335,13 +347,53 @@
         <comment value="Land" />
       </mapping>
     </element>
-    <element id="Patient.contact.name.extension:humannameAssemblyOrder">
-      <path value="Patient.contact.name.extension" />
-      <sliceName value="humannameAssemblyOrder" />
+    <element id="Patient.address.country.extension">
+      <path value="Patient.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
-    <element id="Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode">
-      <path value="Patient.contact.name.extension.valueCode" />
-      <sliceName value="valueCode" />
+    <element id="Patient.address.country.extension:countryCode">
+      <path value="Patient.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension">
+      <path value="Patient.contact.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode">
+      <path value="Patient.contact.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.communication">
       <path value="Patient.communication" />
@@ -361,13 +413,42 @@
       <path value="Patient.communication" />
       <sliceName value="dutch" />
     </element>
+    <element id="Patient.communication:dutch.extension">
+      <path value="Patient.communication.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Patient.communication:dutch.extension:languageProficiency">
       <path value="Patient.communication.extension" />
       <sliceName value="languageProficiency" />
     </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension">
+      <path value="Patient.communication.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Patient.communication:dutch.extension:languageProficiency.extension:type">
       <path value="Patient.communication.extension.extension" />
       <sliceName value="type" />
+    </element>
+    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding">
+      <path value="Patient.communication.extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="RSP" />
+        <display value="Received spoken" />
+      </patternCoding>
     </element>
     <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.system">
       <path value="Patient.communication.extension.extension.valueCoding.system" />
@@ -378,11 +459,8 @@
       <fixedCode value="RSP" />
     </element>
     <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Patient.communication.extension.extension.valueCoding.display" />
-      <fixedString value="Received spoken" />
+      <defaultValueString value="Received spoken" />
     </element>
     <element id="Patient.communication:dutch.extension:languageProficiency.extension:level">
       <path value="Patient.communication.extension.extension" />
@@ -409,9 +487,6 @@
       <fixedCode value="nl" />
     </element>
     <element id="Patient.communication:dutch.language.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Patient.communication.language.coding.display" />
       <fixedString value="Dutch" />
     </element>

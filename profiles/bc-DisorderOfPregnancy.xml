@@ -110,6 +110,11 @@
       <path value="Condition.category.coding" />
       <sliceName value="disorderOfPregnancy" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="173300003" />
+        <display value="Disorder of pregnancy (disorder)" />
+      </patternCoding>
     </element>
     <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy.system">
       <path value="Condition.category.coding.system" />
@@ -121,7 +126,7 @@
     </element>
     <element id="Condition.category:disorderOfPregnancy.coding:disorderOfPregnancy.display">
       <path value="Condition.category.coding.display" />
-      <fixedString value="Disorder of pregnancy (disorder)" />
+      <defaultValueString value="Disorder of pregnancy (disorder)" />
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />

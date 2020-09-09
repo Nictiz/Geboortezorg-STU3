@@ -52,6 +52,11 @@
     <element id="RelatedPerson.relationship.coding:mother">
       <path value="RelatedPerson.relationship.coding" />
       <sliceName value="mother" />
+      <patternCoding>
+        <system value="http://hl7.org/fhir/v3/RoleCode" />
+        <code value="MTH" />
+        <display value="Mother" />
+      </patternCoding>
     </element>
     <element id="RelatedPerson.relationship.coding:mother.system">
       <path value="RelatedPerson.relationship.coding.system" />
@@ -62,11 +67,8 @@
       <fixedCode value="MTH" />
     </element>
     <element id="RelatedPerson.relationship.coding:mother.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="RelatedPerson.relationship.coding.display" />
-      <fixedString value="Mother" />
+      <defaultValueString value="Mother" />
     </element>
   </differential>
 </StructureDefinition>
