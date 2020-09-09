@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--auto generated example-->
-<!--edited assertedDate 13-08-2020-->
 <Condition xmlns="http://hl7.org/fhir">
    <id value="example-fluxus-postpartumq-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82542"/>
    <meta>
@@ -13,6 +12,13 @@
       </valueReference>
    </extension>
    <clinicalStatus value="active"/>
+   <category>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="362972006"/>
+         <display value="Disorder of labor / delivery (disorder)"/>
+      </coding>
+   </category>
    <code>
       <coding>
          <system value="2.16.840.1.113883.6.96"/>
@@ -27,5 +33,4 @@
    <context>
       <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
    </context>
-   <assertedDate value="2020-08-01" />
 </Condition>
