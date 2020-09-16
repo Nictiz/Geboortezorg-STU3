@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--auto generated example-->
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="example-cervixinsufficiëntieq-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82495"/>
+   <id value="example-vermoeden-intrauteriene-vruchtdoodq-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82444"/>
    <meta>
       <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
    </meta>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+      <valueReference>
+         <reference value="Condition/Zwangerschap"/>
+      </valueReference>
+   </extension>
    <status value="final"/>
    <code>
       <coding>
-         <system value="2.16.840.1.113883.6.96"/>
-         <code value="17382005"/>
-         <display value="Cervical incompetence (disorder)"/>
+         <system value=""/>
+         <code value=""/>
+         <display value=""/>
       </coding>
    </code>
    <subject>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--auto generated example-->
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="example-datum-tijd-vaststelling-perinatale-sterfte-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40300"/>
+   <id value="example-risicostatus-voor-baring-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.20530"/>
    <meta>
       <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
    </meta>
    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
       <valueReference>
-         <reference value="Procedure/Geboorte"/>
+         <reference value="Procedure/Bevalling"/>
       </valueReference>
    </extension>
    <status value="final"/>
    <code>
       <coding>
-         <system value=""/>
-         <code value=""/>
-         <display value=""/>
+         <system value="2.16.840.1.113883.2.4.3.22.1.1"/>
+         <code value="PRN5102"/>
+         <display value="Risicostatus vóór baring"/>
       </coding>
    </code>
    <subject>
@@ -26,5 +26,11 @@
    <context>
       <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
    </context>
-   <valueDateTime value="2020-07-16"/>
+   <valueCodeableConcept>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.25"/>
+         <code value="1"/>
+         <display value="1e lijn (VIL A)"/>
+      </coding>
+   </valueCodeableConcept>
 </Observation>
