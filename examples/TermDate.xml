@@ -11,16 +11,13 @@
             <reference value="Condition/zwangerschap" />
         </valueReference>
     </extension>
-    <status value="final">
-        <!-- actuele a terme datum? -->
-        <extension url="TODO">
-            <valueBoolean value="true"/>
-        </extension>
-        <!-- zeker? -->
-        <extension url="TODO">
-            <valueBoolean value="false"/>
-        </extension>
-    </status>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-observation-isCurrent">
+        <valueBoolean value="true"/>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-observation-isCertain">
+        <valueBoolean value="false"/>
+    </extension>
+    <status value="final"/>
     <code>
         <coding>
             <system value="http://loinc.org"/>
