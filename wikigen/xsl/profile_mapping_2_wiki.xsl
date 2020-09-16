@@ -100,11 +100,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:value-of select="@name"/>
         <xsl:text>
 ||</xsl:text>
-        <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>
+        <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
         <xsl:value-of select="@pattern"/>
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="@pattern"/>
-        <xsl:text>]</xsl:text>
+        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.1.0}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
         <xsl:value-of select="@system"/>
@@ -120,13 +118,11 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:text>
 ||</xsl:text>
         <xsl:if test="@valueSet">
-            <xsl:text>[https://simplifier.net/geboortezorg-stu3/</xsl:text>
+            <xsl:text>{{Simplifier|http://decor.nictiz.nl/fhir/ValueSet/</xsl:text>
             <xsl:value-of select="@valueSetId"/>
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate, 'T:-', '')"/>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="@valueSet"/>
-            <xsl:text>]</xsl:text>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.1.0}}</xsl:text>
         </xsl:if>
         <xsl:text>
 || </xsl:text>

@@ -458,10 +458,10 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource="Observation"
-               bc-pattern="false"
-               pattern="zib-pregnancy-TermDate"
+               bc-pattern="true"
+               pattern="bc-PregnancyObservation"
                mapping="Observation.valueDateTime"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-126">
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-263">
          <search>GET [base]/Observation?code=11778-8{&amp;subject=[vrouwid]&amp;context=[dossierid]&amp;focus=[zwangerschapid]}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82268"
