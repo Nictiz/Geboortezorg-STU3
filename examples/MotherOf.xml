@@ -1,0 +1,14 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+    <id value="example-mother" />
+    <patient>
+        <reference value="Patient/examplechild" />
+        <display value="Example Child" />
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/RoleCode" />
+            <code value="MTH" />
+            <display value="Mother" />
+        </coding>
+    </relationship>
+</RelatedPerson>
