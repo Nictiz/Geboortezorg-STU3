@@ -5,98 +5,89 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2014-09-19T11:58:14+02:00"/>
+            <start value="2016-01-08T11:01:23+02:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.26--20140919115814"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.21--20160108110123"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.26"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.21"/>
     </identifier>
-    <version value="2014-09-19T11:58:14"/>
-    <name value="IntraUterieneBehandeling22"/>
-    <title value="Intra-uteriene behandeling (2.2)"/>
+    <version value="2016-01-08T11:01:23"/>
+    <name value="TypeVrouwelijkeGenitaleVerminking"/>
+    <title value="Type vrouwelijke genitale verminking"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="KNOV"/>
-    <description value="Intra-uteriene behandeling (2.2)"/>
+    <description value="Type vrouwelijke genitale verminking"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="45460008"/>
-                <display value="Intrauterine transfusion (procedure)"/>
+                <code value="130631000119108"/>
+                <display value="Female genital mutilation type 1 (disorder)"/>
             </concept>
             <concept>
-                <code value="265633004"/>
-                <display value="Selective destruction of fetus (procedure)"/>
+                <code value="130621000119105"/>
+                <display value="Female genital mutilation type 2 (disorder)"/>
             </concept>
             <concept>
-                <code value="386809009"/>
-                <display value="Operation on fetus (procedure)"/>
+                <code value="130611000119103"/>
+                <display value="Female genital mutilation type 3 (disorder)"/>
             </concept>
             <concept>
-                <code value="177112007"/>
-                <display value="Therapeutic drainage of amniotic fluid (procedure)"/>
-            </concept>
-            <concept>
-                <code value="236949002"/>
-                <display value="Operation on placenta (procedure)"/>
+                <code value="107411000119108"/>
+                <display value="Female genital mutilation type 4 (disorder)"/>
             </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
+                <code value="UNK"/>
+                <display value="onbekend"/>
             </concept>
             <concept>
                 <code value="NI"/>
-                <display value="Geen informatie"/>
+                <display value="geen informatie"/>
             </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:9095792f-4813-4543-aa19-24bed0935ffb"/>
-        <timestamp value="2020-09-23T12:17:29.414+02:00"/>
-        <total value="7"/>
+        <identifier value="urn:uuid:6514b4d1-fdef-44ff-924e-8bcd9b477fbe"/>
+        <timestamp value="2020-09-23T12:17:26.52+02:00"/>
+        <total value="6"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="45460008"/>
-            <display value="Intrauterine transfusion (procedure)"/>
+            <code value="130631000119108"/>
+            <display value="Female genital mutilation type 1 (disorder)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="265633004"/>
-            <display value="Selective destruction of fetus (procedure)"/>
+            <code value="130621000119105"/>
+            <display value="Female genital mutilation type 2 (disorder)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="386809009"/>
-            <display value="Operation on fetus (procedure)"/>
+            <code value="130611000119103"/>
+            <display value="Female genital mutilation type 3 (disorder)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="177112007"/>
-            <display value="Therapeutic drainage of amniotic fluid (procedure)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="236949002"/>
-            <display value="Operation on placenta (procedure)"/>
+            <code value="107411000119108"/>
+            <display value="Female genital mutilation type 4 (disorder)"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <code value="OTH"/>
-            <display value="Overig"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <code value="NI"/>
-            <display value="Geen informatie"/>
+            <display value="geen informatie"/>
         </contains>
     </expansion>
 </ValueSet>
