@@ -4,11 +4,9 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure"/>
     </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
-        <valueReference>
-            <reference value="Procedure/geboorte1-wouden" />
-        </valueReference>
-    </extension>
+    <partOf>
+        <reference value="Procedure/geboorte1-wouden" />
+    </partOf>
     <status value='completed'/>
     <category>
         <coding>
