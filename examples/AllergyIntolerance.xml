@@ -4,7 +4,11 @@
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
   </meta>
   <clinicalStatus value="active"/>
-  <verificationStatus value="unconfirmed" />
+  <verificationStatus>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="unsupported"/>
+    </extension>
+  </verificationStatus>
   <code>
     <coding>
       <system value="http://snomed.info/sct" />
