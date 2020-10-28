@@ -56,6 +56,33 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-bodystructure-child" />
       </type>
     </element>
+    <element id="BodySite.code.coding">
+      <path value="BodySite.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="BodySite.code.coding:fetus">
+      <path value="BodySite.code.coding" />
+      <sliceName value="fetus" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="83418008" />
+        <display value="Entire fetus (body structure)" />
+      </patternCoding>
+    </element>
+    <element id="BodySite.code.coding:fetus.system">
+      <path value="BodySite.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="BodySite.code.coding:fetus.code">
+      <path value="BodySite.code.coding.code" />
+      <fixedCode value="83418008" />
+    </element>
     <element id="BodySite.patient">
       <path value="BodySite.patient" />
       <type>
