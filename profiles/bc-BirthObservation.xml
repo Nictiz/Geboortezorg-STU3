@@ -49,11 +49,7 @@
         <comment value="Vorige baring" />
       </mapping>
     </element>
-    <element id="Observation.extension:birth.url">
-      <path value="Observation.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
-    </element>
-    <element id="Observation.extension:birth.value[x]:valueReference">
+    <element id="Observation.extension:birth.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -206,6 +202,15 @@
         <strength value="extensible" />
         <description value="LiggingBijGeboorte22" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.177--20131224000000" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:umbilicalCordVessels">
+      <path value="Observation.value[x]" />
+      <sliceName value="umbilicalCordVessels" />
+      <binding>
+        <strength value="extensible" />
+        <description value="navelstreng_vaten" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.231--20170201164126" />
       </binding>
     </element>
   </differential>
