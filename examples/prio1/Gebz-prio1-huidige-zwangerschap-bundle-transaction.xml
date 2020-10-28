@@ -7,9 +7,6 @@
       <resource>
          <Composition>
             <id value="samenvatting-zwangerschap4-wouden"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TransactionComposition"/>
-            </meta>
             <status value="final"/>
             <type>
                <coding>
@@ -93,9 +90,6 @@
       <fullUrl value="urn:uuid:c75595d4-1904-11eb-6105-020000000000"/>
       <resource>
          <Patient>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -128,9 +122,6 @@
       <resource>
          <Organization>
             <id value="1504"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -161,9 +152,6 @@
       <resource>
          <Practitioner>
             <id value="c75595df-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -182,9 +170,6 @@
       <resource>
          <PractitionerRole>
             <id value="1504"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -225,10 +210,6 @@
       <resource>
          <EpisodeOfCare>
             <id value="c75595ba-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-            </meta>
             <status value="active"/>
             <type>
                <coding>
@@ -266,9 +247,6 @@
       <resource>
          <Condition>
             <id value="c755a91f-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
-            </meta>
             <clinicalStatus value="active"/>
             <code>
                <coding>
@@ -297,9 +275,6 @@
       <resource>
          <Observation>
             <id value="c7559976-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -374,9 +349,6 @@
       <resource>
          <Observation>
             <id value="c7559b10-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -451,9 +423,6 @@
       <resource>
          <Observation>
             <id value="c7559caa-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -528,9 +497,6 @@
       <resource>
          <Observation>
             <id value="c7559e44-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -607,10 +573,6 @@
       <resource>
          <Observation>
             <id value="c755a920-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-pregnancy-Gravidity"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/c755a91f-1904-11eb-6105-020000000000"/>
@@ -648,10 +610,6 @@
       <resource>
          <Observation>
             <id value="c755a921-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-pregnancy-Parity"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/c755a91f-1904-11eb-6105-020000000000"/>
@@ -689,10 +647,6 @@
       <resource>
          <Observation>
             <id value="c755a923-1904-11eb-6105-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-pregnancy-TermDate"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/c755a91f-1904-11eb-6105-020000000000"/>

@@ -7,9 +7,6 @@
       <resource>
          <Composition>
             <id value="samenvatting-zwangerschap1-wouden"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TransactionComposition"/>
-            </meta>
             <status value="final"/>
             <type>
                <coding>
@@ -25,6 +22,7 @@
             <date value="2020-10-28T11:11:44.303+01:00"/>
             <author>
                <reference value="Practitioner/fb16ae3f-1905-11eb-2364-020000000000"/>
+               <display value="Zorgverlener"/>
             </author>
             <title value="Example prio1 vorige zwangerschap"/>
             <section>
@@ -42,7 +40,7 @@
                </entry>
                <entry>
                   <reference value="Practitioner/fb16ae3f-1905-11eb-2364-020000000000"/>
-                  <display value=""/>
+                  <display value="Zorgverlener"/>
                </entry>
                <entry>
                   <reference value="PractitionerRole/1500"/>
@@ -120,9 +118,6 @@
       <fullUrl value="urn:uuid:fb16ae34-1905-11eb-2364-020000000000"/>
       <resource>
          <Patient>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -154,9 +149,7 @@
       <fullUrl value="urn:uuid:fb16b06e-1905-11eb-2364-020000000000"/>
       <resource>
          <Patient>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </meta>
+         <id value="fb16b06e-1905-11eb-2364-020000000000"/>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -168,7 +161,7 @@
       </resource>
       <request>
          <method value="PUT"/>
-         <url value="Patient?identifier="/>
+         <url value="Patient/fb16b06e-1905-11eb-2364-020000000000"/>
       </request>
    </entry>
    <entry>
@@ -176,9 +169,6 @@
       <resource>
          <Organization>
             <id value="1500"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -209,9 +199,6 @@
       <resource>
          <Practitioner>
             <id value="fb16ae3f-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -230,9 +217,6 @@
       <resource>
          <PractitionerRole>
             <id value="1500"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"/>
-            </meta>
             <text>
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml">
@@ -273,10 +257,6 @@
       <resource>
          <EpisodeOfCare>
             <id value="fb16ae1a-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-            </meta>
             <status value="finished"/>
             <type>
                <coding>
@@ -314,9 +294,6 @@
       <resource>
          <Condition>
             <id value="fb16c17d-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
-            </meta>
             <clinicalStatus value="inactive"/>
             <code>
                <coding>
@@ -345,10 +322,6 @@
       <resource>
          <Procedure>
             <id value="fb16c182-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
-            </meta>
             <status value="completed"/>
             <category>
                <coding>
@@ -391,10 +364,6 @@
       <resource>
          <Procedure>
             <id value="fb16c187-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth"/>
-            </meta>
             <partOf>
                <reference value="Procedure/fb16c182-1905-11eb-2364-020000000000"/>
                <display value="bevalling zwangerschap 1 wouden"/>
@@ -438,10 +407,6 @@
       <resource>
          <Observation>
             <id value="fb16c17e-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-pregnancy-Gravidity"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/fb16c17d-1905-11eb-2364-020000000000"/>
@@ -479,10 +444,6 @@
       <resource>
          <Observation>
             <id value="fb16c17f-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-pregnancy-Parity"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/fb16c17d-1905-11eb-2364-020000000000"/>
@@ -520,10 +481,6 @@
       <resource>
          <Observation>
             <id value="fb16c180-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/fb16c17d-1905-11eb-2364-020000000000"/>
@@ -565,10 +522,6 @@
       <resource>
          <Observation>
             <id value="fb16c181-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Condition/fb16c17d-1905-11eb-2364-020000000000"/>
@@ -604,10 +557,6 @@
       <resource>
          <Observation>
             <id value="fb16c183-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Procedure/fb16c182-1905-11eb-2364-020000000000"/>
@@ -643,10 +592,6 @@
       <resource>
          <Observation>
             <id value="fb16c184-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Procedure/fb16c182-1905-11eb-2364-020000000000"/>
@@ -687,10 +632,6 @@
       <resource>
          <Observation>
             <id value="fb16c185-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Procedure/fb16c182-1905-11eb-2364-020000000000"/>
@@ -732,10 +673,6 @@
       <resource>
          <Observation>
             <id value="fb16c18b-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Procedure/fb16c187-1905-11eb-2364-020000000000"/>
@@ -771,10 +708,6 @@
       <resource>
          <Observation>
             <id value="fb16c18d-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation"/>
-            </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
                <valueReference>
                   <reference value="Procedure/fb16c187-1905-11eb-2364-020000000000"/>
@@ -816,10 +749,6 @@
       <resource>
          <Observation>
             <id value="fb16c192-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore"/>
-            </meta>
             <status value="final"/>
             <code>
                <coding>
@@ -851,10 +780,6 @@
       <resource>
          <Observation>
             <id value="fb16c193-1905-11eb-2364-020000000000"/>
-            <meta>
-               <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-               <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation"/>
-            </meta>
             <status value="final"/>
             <code>
                <coding>
