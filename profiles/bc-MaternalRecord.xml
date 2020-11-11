@@ -84,30 +84,19 @@
     </element>
     <element id="EpisodeOfCare.diagnosis">
       <path value="EpisodeOfCare.diagnosis" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="condition.reference" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="EpisodeOfCare.diagnosis:pregnancy">
-      <path value="EpisodeOfCare.diagnosis" />
-      <sliceName value="pregnancy" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-3" />
-        <comment value="Zwangerschap" />
-      </mapping>
     </element>
-    <element id="EpisodeOfCare.diagnosis:pregnancy.condition">
+    <element id="EpisodeOfCare.diagnosis.condition">
       <path value="EpisodeOfCare.diagnosis.condition" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-3" />
+        <comment value="Zwangerschap" />
+      </mapping>
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
