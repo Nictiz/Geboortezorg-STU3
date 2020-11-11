@@ -49,11 +49,7 @@
         <comment value="Zwangerschap" />
       </mapping>
     </element>
-    <element id="Observation.extension:pregnancy.url">
-      <path value="Observation.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
-    </element>
-    <element id="Observation.extension:pregnancy.value[x]:valueReference">
+    <element id="Observation.extension:pregnancy.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -207,28 +203,24 @@
         <comment value="Afwijkende groei foetus" />
       </mapping>
     </element>
-    <element id="Observation.method">
-      <path value="Observation.method" />
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="coding" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.method:iuvdMethod">
-      <path value="Observation.method" />
+    <element id="Observation.method.coding:iuvdMethod">
+      <path value="Observation.method.coding" />
       <sliceName value="iuvdMethod" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationMethod" />
-        </extension>
         <strength value="extensible" />
         <description value="IUVDMethode" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
-        </valueSetReference>
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
