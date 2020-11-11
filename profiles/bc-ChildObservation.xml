@@ -85,6 +85,11 @@
         <map value="peri23-dataelement-10605" />
         <comment value="Percentiel van het geboortegewicht" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri-dataelement-80670" />
+        <comment value="Percentiel van het geboortegewicht" />
+      </mapping>
     </element>
     <element id="Observation.interpretation.extension">
       <path value="Observation.interpretation.extension" />
@@ -106,14 +111,16 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40060" />
+        <map value="peri23-dataelement-10605" />
+        <comment value="Percentiel van het geboortegewicht" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80670" />
         <comment value="Percentiel van het geboortegewicht" />
       </mapping>
     </element>
     <element id="Observation.interpretation.extension:percentile.valueQuantity:valueQuantity.unit">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Observation.interpretation.extension.valueQuantity.unit" />
       <fixedString value="%" />
     </element>
