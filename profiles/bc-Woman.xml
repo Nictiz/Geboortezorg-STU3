@@ -347,6 +347,54 @@
         <comment value="Land" />
       </mapping>
     </element>
+    <element id="Patient.address.country.extension">
+      <path value="Patient.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.address.country.extension:countryCode">
+      <path value="Patient.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension">
+      <path value="Patient.contact.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode">
+      <path value="Patient.contact.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Patient.communication">
       <path value="Patient.communication" />
       <slicing>
@@ -429,6 +477,11 @@
           <display value="TaalvaardigheidBegrijpenCodelijst" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10401" />
+        <comment value="Taalvaardigheid vrouw Nederlandse taal" />
+      </mapping>
     </element>
     <element id="Patient.communication:dutch.language.coding.system">
       <path value="Patient.communication.language.coding.system" />
