@@ -60,16 +60,6 @@
         <comment value="Partusassistentie" />
       </mapping>
     </element>
-    <element id="Encounter.class">
-      <path value="Encounter.class" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Encounter.class.extension">
       <path value="Encounter.class.extension" />
       <slicing>
