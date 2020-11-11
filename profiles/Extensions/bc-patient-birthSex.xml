@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-referralrequest-periodoftransfer"/>
-  <url value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodoftransfer" />
-  <name value="bc-referralrequest-periodoftransfer" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-birthSex" />
+  <name value="bc-patient-birthSex" />
   <status value="draft" />
-  <description value="Extension on ReferralRequest describing the perinatal period of transfer" />
+  <description value="Extension on (child) Patient describing the medical gender (note that Patient.gender is used for the administrative gender)." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="rim" />
@@ -14,14 +13,14 @@
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="ReferralRequest" />
+  <context value="Patient.gender" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodoftransfer" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-birthSex" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -29,11 +28,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="example" />
-        <description value="PerinataleOverdrachtPeriodeConsult" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
