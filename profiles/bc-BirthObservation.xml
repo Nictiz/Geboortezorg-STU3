@@ -93,7 +93,7 @@
       <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="value" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -134,17 +134,17 @@
         <comment value="Ruggeprik gewenst, niet gekregen?" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:parturitionType">
+    <element id="Observation.value[x]:birthObservation-value">
       <path value="Observation.value[x]" />
-      <sliceName value="parturitionType" />
+      <sliceName value="birthObservation-value" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="TypePartus" />
+        <description value="bc-BirthObservation-value" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045" />
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-value" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -157,18 +157,6 @@
         <map value="peri23-dataelement-80624" />
         <comment value="Type partus" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:phaseOfPerinatalDeath">
-      <path value="Observation.value[x]" />
-      <sliceName value="phaseOfPerinatalDeath" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="FasePerinataleSterfte22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20140813094049" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40290" />
@@ -179,39 +167,6 @@
         <map value="peri23-dataelement-80706" />
         <comment value="Fase perinatale sterfte" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:amnioticFluidColorAndConsistency">
-      <path value="Observation.value[x]" />
-      <sliceName value="amnioticFluidColorAndConsistency" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="KleurVruchtwater" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.20--20130110122205" />
-      </binding>
-    </element>
-    <element id="Observation.value[x]:positionChildAtBirth">
-      <path value="Observation.value[x]" />
-      <sliceName value="positionChildAtBirth" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="LiggingBijGeboorte22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.177--20131224000000" />
-      </binding>
-    </element>
-    <element id="Observation.value[x]:umbilicalCordVessels">
-      <path value="Observation.value[x]" />
-      <sliceName value="umbilicalCordVessels" />
-      <binding>
-        <strength value="extensible" />
-        <description value="navelstreng_vaten" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.231--20170201164126" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>

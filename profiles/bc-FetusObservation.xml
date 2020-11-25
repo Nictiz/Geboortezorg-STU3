@@ -40,11 +40,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
     </element>
-    <element id="Observation.extension:fetus.url">
-      <path value="Observation.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
-    </element>
-    <element id="Observation.extension:fetus.value[x]:valueReference">
+    <element id="Observation.extension:fetus.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -87,8 +83,8 @@
       <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="coding" />
+          <type value="type" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -118,28 +114,16 @@
         <comment value="EFW" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:position">
+    <element id="Observation.value[x]:fetusObservation-value">
       <path value="Observation.value[x]" />
-      <sliceName value="position" />
+      <sliceName value="fetusObservation-value" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Ligging" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.188--20140102000000" />
-      </binding>
-    </element>
-    <element id="Observation.value[x]:placentaLocalisation">
-      <path value="Observation.value[x]" />
-      <sliceName value="placentaLocalisation" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="PlacentaLokalisatie22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.209--20141128125356" />
+        <description value="bc-FetusObservation-value" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-value" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -160,7 +144,6 @@
     <element id="Observation.interpretation.extension:percentile">
       <path value="Observation.interpretation.extension" />
       <sliceName value="percentile" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -188,9 +171,6 @@
       </mapping>
     </element>
     <element id="Observation.interpretation.extension:percentile.valueQuantity:valueQuantity.unit">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Observation.interpretation.extension.valueQuantity.unit" />
       <fixedString value="%" />
     </element>

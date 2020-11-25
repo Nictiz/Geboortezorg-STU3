@@ -89,7 +89,7 @@
       <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -130,16 +130,16 @@
         <comment value="Datum maternale sterfte" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:endPregnancyType">
+    <element id="Observation.value[x]:pregnancyObservation-value">
       <path value="Observation.value[x]" />
-      <sliceName value="endPregnancyType" />
+      <sliceName value="pregnancyObservation-value" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="WijzeEindeZwangerschap" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.171--20130320000000" />
+        <description value="bc-PregnancyObservation-value" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-PregnancyObservation-value" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -151,56 +151,25 @@
         <map value="peri23-dataelement-80625" />
         <comment value="Wijze einde zwangerschap" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:placeOfBirthPreference">
-      <path value="Observation.value[x]" />
-      <sliceName value="placeOfBirthPreference" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="VoorgenomenPlaatsBaring" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.179--20131230000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20261" />
         <comment value="Voorgenomen plaats baring tijdens de zwangerschap (type locatie)" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:feelingFetalMovement">
-      <path value="Observation.value[x]" />
-      <sliceName value="feelingFetalMovement" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Leven voelen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.207--20141109164219" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80746" />
         <comment value="Leven voelen" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:fetalGrowthDisorder">
-      <path value="Observation.value[x]" />
-      <sliceName value="fetalGrowthDisorder" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="GroeiAfwijkend" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.37--20141020151252" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82518" />
         <comment value="Afwijkende groei foetus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82435" />
+        <comment value="Vermoeden iuvd op basis van" />
       </mapping>
     </element>
     <element id="Observation.method.coding">
@@ -222,11 +191,6 @@
         <description value="IUVDMethode" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82435" />
-        <comment value="Vermoeden iuvd op basis van" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

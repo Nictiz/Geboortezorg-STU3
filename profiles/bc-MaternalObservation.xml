@@ -57,7 +57,7 @@
       <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -138,439 +138,132 @@
         <comment value="Overige aandoening" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:autoImmuneDisease">
+    <element id="Observation.value[x]:maternalObservation-value">
       <path value="Observation.value[x]" />
-      <sliceName value="autoImmuneDisease" />
+      <sliceName value="maternalObservation-value" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Auto-immuun aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.28--20140919141340" />
+        <description value="bc-MaternalObservation-value" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-value" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82456" />
         <comment value="Auto-immuun aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:cardiovascularDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="cardiovascularDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Cardiovasculaire aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.11--20140814133240" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82458" />
         <comment value="Cardiovasculaire aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:urogenitalDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="urogenitalDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Urogenitale aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.30--20200114155725" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82460" />
         <comment value="Urogenitale aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:oncologicalDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="oncologicalDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Oncologische aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.27--20140919131821" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82462" />
         <comment value="Oncologische aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:thyroidDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="thyroidDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Schildklieraandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.13--20140814134002" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82464" />
         <comment value="Schildklier aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:neurologicalDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="neurologicalDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Neurologische aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.14--20140814134140" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82467" />
         <comment value="Neurologische aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:infectiousDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="infectiousDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Infectieziekten" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.15--20140814134341" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82467" />
         <comment value="Infectieziekte" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:gastroenterologicDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="gastroenterologicDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Maag Darm Lever aandoening" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.29--20140919144015" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82471" />
         <comment value="Maag Darm Lever aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:anemia">
-      <path value="Observation.value[x]" />
-      <sliceName value="anemia" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Anemie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.31--20140922095444" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82471" />
-        <comment value="Anemie" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:respiratoryDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="respiratoryDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Longaandoening" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.205--20141027141746" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82475" />
-        <comment value="Longaandoening" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:gynaecologicalDisease">
-      <path value="Observation.value[x]" />
-      <sliceName value="gynaecologicalDisease" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Gyneacologische aandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82477" />
-        <comment value="Gynaecologische aandoening" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:orthopedicDisorder">
-      <path value="Observation.value[x]" />
-      <sliceName value="orthopedicDisorder" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Orthopedische afwijkingen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.17--20140814134642" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82479" />
         <comment value="Orthopedische afwijking" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:surgicalProcedure">
-      <path value="Observation.value[x]" />
-      <sliceName value="surgicalProcedure" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Type operatie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.18--20140814143051" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82484" />
-        <comment value="Type operatie" />
+        <map value="peri23-dataelement-82471" />
+        <comment value="Anemie" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:clottingDisorder">
-      <path value="Observation.value[x]" />
-      <sliceName value="clottingDisorder" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Type stollingsprobleem" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.19--20140814144207" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82486" />
-        <comment value="Type stollingsprobleem" />
+        <map value="peri23-dataelement-82475" />
+        <comment value="Longaandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:disorderFemaleGenitalTract">
-      <path value="Observation.value[x]" />
-      <sliceName value="disorderFemaleGenitalTract" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="GynaecologischeAandoeningen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.16--20140814134544" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82477" />
         <comment value="Gynaecologische aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:infectiousDiseaseObstetric">
-      <path value="Observation.value[x]" />
-      <sliceName value="infectiousDiseaseObstetric" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Infectie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.204--20141021114554" />
-      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82486" />
+        <comment value="Type stollingsprobleem" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82484" />
+        <comment value="Type operatie" />
+      </mapping>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82496" />
         <comment value="Infectie" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:hypertensiveDisorder">
-      <path value="Observation.value[x]" />
-      <sliceName value="hypertensiveDisorder" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="HypertensieveAandoening" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.36--20141020145518" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82498" />
         <comment value="Hypertensieve aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:portio">
-      <path value="Observation.value[x]" />
-      <sliceName value="portio" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="CervixEffacement" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20120317000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20612" />
         <comment value="Portio" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:portioPosition">
-      <path value="Observation.value[x]" />
-      <sliceName value="portioPosition" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="PositiePortio22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20613" />
         <comment value="Ontsluiting" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:dilatation">
-      <path value="Observation.value[x]" />
-      <sliceName value="dilatation" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="CervicalDilatation" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20130422173433" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20613" />
-        <comment value="Ontsluiting" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:membranes">
-      <path value="Observation.value[x]" />
-      <sliceName value="membranes" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Vliezen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20130320000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20614" />
         <comment value="Vliezen" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:hodgePlanes">
-      <path value="Observation.value[x]" />
-      <sliceName value="hodgePlanes" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="HodgePlanes" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20120317000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20615" />
         <comment value="Indaling Hodge" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:fetusPresentation">
-      <path value="Observation.value[x]" />
-      <sliceName value="fetusPresentation" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="PresentationOfFetus" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.172--20130320000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80616" />
         <comment value="Aard van het voorliggend deel" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:position">
-      <path value="Observation.value[x]" />
-      <sliceName value="position" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Stand" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80618" />
         <comment value="Stand" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:riskStatusAfterIntake">
-      <path value="Observation.value[x]" />
-      <sliceName value="riskStatusAfterIntake" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="ConclusieRisicoStatus" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.12--20091001000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20305" />
         <comment value="Conclusie risicostatus na intake" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:femaleGenitalMutilation">
-      <path value="Observation.value[x]" />
-      <sliceName value="femaleGenitalMutilation" />
-      <binding>
-        <strength value="extensible" />
-        <description value="TypeVrouwelijkeGenitaleVerminking" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.21--20160108110123" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
