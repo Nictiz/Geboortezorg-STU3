@@ -94,7 +94,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
       </type>
     </element>
-    <element id="Procedure.extension:decisionmoment.valueCodeableConcept:valueCodeableConcept">
+    <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept">
       <path value="Procedure.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <slicing>
@@ -105,7 +105,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.extension:decisionmoment.valueCodeableConcept:valueCodeableConcept:decisionMomentSC">
+    <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept:decisionMomentSC">
       <path value="Procedure.extension.valueCodeableConcept" />
       <sliceName value="decisionMomentSC" />
       <binding>
@@ -190,112 +190,44 @@
         <map value="peri23-dataelement" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:startBirthIntervention">
+    <element id="Procedure.code.coding:obstetricProcedure-code">
       <path value="Procedure.code.coding" />
-      <sliceName value="startBirthIntervention" />
+      <sliceName value="obstetricProcedure-code" />
       <binding>
         <strength value="extensible" />
-        <description value="WijzeBaringBegin" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052" />
+        <description value="bc-ObstetricProcedure-code" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20560" />
         <comment value="Interventie begin baring" />
       </mapping>
-    </element>
-    <element id="Procedure.code.coding:assistedDelivery">
-      <path value="Procedure.code.coding" />
-      <sliceName value="assistedDelivery" />
-      <binding>
-        <strength value="extensible" />
-        <description value="VaginaleKunstverlossing" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40190" />
         <comment value="Vaginale kunstverlossing" />
       </mapping>
-    </element>
-    <element id="Procedure.code.coding:otherInterventions">
-      <path value="Procedure.code.coding" />
-      <sliceName value="otherInterventions" />
-      <binding>
-        <strength value="extensible" />
-        <description value="OverigeInterventies" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.20--20161123204523" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40240" />
-        <comment value="Overige interventies" />
-      </mapping>
-    </element>
-    <element id="Procedure.code.coding:intraUterinTreatment">
-      <path value="Procedure.code.coding" />
-      <sliceName value="intraUterinTreatment" />
-      <binding>
-        <strength value="extensible" />
-        <description value="IntraUterineBehandeling22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.26--20140919115814" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82230" />
         <comment value="Intra-uterine behandeling" />
       </mapping>
-    </element>
-    <element id="Procedure.code.coding:episiotomy">
-      <path value="Procedure.code.coding" />
-      <sliceName value="episiotomy" />
-      <max value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-30050" />
         <comment value="Episiotomie?" />
       </mapping>
-    </element>
-    <element id="Procedure.code.coding:episiotomy.system">
-      <path value="Procedure.code.coding.system" />
-      <fixedUri value="PerinatologyProceduresPRN" />
-    </element>
-    <element id="Procedure.code.coding:episiotomy.code">
-      <path value="Procedure.code.coding.code" />
-      <fixedCode value="PRN540701" />
-    </element>
-    <element id="Procedure.code.coding:episiotomy.display">
-      <path value="Procedure.code.coding.display" />
-      <fixedString value="Episiotomie" />
-    </element>
-    <element id="Procedure.code.coding:laborStimulation">
-      <path value="Procedure.code.coding" />
-      <sliceName value="laborStimulation" />
-      <max value="1" />
-      <patternCoding>
-        <system value="PerinatologyProceduresPRN" />
-        <code value="PRN540201" />
-        <display value="Bijstimulatie toegediend" />
-      </patternCoding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40240" />
+        <comment value="Overige interventies" />
+      </mapping>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20616" />
         <comment value="Bijstimulatie toegediend?" />
       </mapping>
-    </element>
-    <element id="Procedure.code.coding:laborStimulation.system">
-      <path value="Procedure.code.coding.system" />
-      <fixedUri value="PerinatologyProceduresPRN" />
-    </element>
-    <element id="Procedure.code.coding:laborStimulation.code">
-      <path value="Procedure.code.coding.code" />
-      <fixedCode value="PRN540201" />
-    </element>
-    <element id="Procedure.code.coding:laborStimulation.display">
-      <path value="Procedure.code.coding.display" />
-      <defaultValueString value="Bijstimulatie toegediend" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
@@ -347,56 +279,29 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.reasonCode.coding:reasonStartBirthIntervention">
+    <element id="Procedure.reasonCode.coding:bc-ObstetricProcedure-reasonCode">
       <path value="Procedure.reasonCode.coding" />
-      <sliceName value="reasonStartBirthIntervention" />
+      <sliceName value="bc-ObstetricProcedure-reasonCode" />
       <binding>
         <strength value="extensible" />
-        <description value="IndicatieInterventie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.190--20161106163758" />
+        <description value="bc-ObstetricProcedure-reasonCode" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20570" />
         <comment value="Indicatie interventie begin baring" />
       </mapping>
-    </element>
-    <element id="Procedure.reasonCode.coding:reasonPrimarySectio">
-      <path value="Procedure.reasonCode.coding" />
-      <sliceName value="reasonPrimarySectio" />
-      <binding>
-        <strength value="extensible" />
-        <description value="SCPrimIndicatie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.220--20180228115805" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82546" />
         <comment value="Indicatie primaire sectio" />
       </mapping>
-    </element>
-    <element id="Procedure.reasonCode.coding:reasonSecondarySectio">
-      <path value="Procedure.reasonCode.coding" />
-      <sliceName value="reasonSecondarySectio" />
-      <binding>
-        <strength value="extensible" />
-        <description value="SCIndicatieSec" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.219--20161124113309" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82547" />
         <comment value="Indicatie secundaire sectio" />
       </mapping>
-    </element>
-    <element id="Procedure.reasonCode.coding:reasonEpisiotomy">
-      <path value="Procedure.reasonCode.coding" />
-      <sliceName value="reasonEpisiotomy" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Indicatie episiotomie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.210--20141222154115" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80794" />
