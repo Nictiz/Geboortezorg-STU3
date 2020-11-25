@@ -71,7 +71,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="$this" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -104,51 +104,34 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:CongenitalDisorder">
+    <element id="Condition.code.coding:DisorderOfChildCode">
       <path value="Condition.code.coding" />
-      <sliceName value="CongenitalDisorder" />
+      <sliceName value="DisorderOfChildCode" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
-        <description value="CongenitaleAfwijkingen" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.196--20191010091229" />
+        <description value="bc-DisorderOfChild-code" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40090" />
         <comment value="Specificatie congenitale afwijking" />
       </mapping>
-    </element>
-    <element id="Condition.code.coding:ChromosomalDisorder">
-      <path value="Condition.code.coding" />
-      <sliceName value="ChromosomalDisorder" />
-      <binding>
-        <strength value="extensible" />
-        <description value="ChromosomaleAfwijking" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40120" />
-        <comment value="Specificatie chromosomale afwijking" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding:ProblemChild">
-      <path value="Condition.code.coding" />
-      <sliceName value="ProblemChild" />
-      <binding>
-        <strength value="extensible" />
-        <description value="ProblematiekKind" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.12--20191009125104" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80789" />
         <comment value="Problematiek kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40120" />
+        <comment value="Specificatie chromosomale afwijking" />
       </mapping>
     </element>
     <element id="Condition.subject">
