@@ -55,13 +55,13 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-MaternalObservation-value" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-value" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82493" />
@@ -137,18 +137,6 @@
         <map value="peri23-dataelement-82490" />
         <comment value="Overige aandoening" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:maternalObservation-value">
-      <path value="Observation.value[x]" />
-      <sliceName value="maternalObservation-value" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-MaternalObservation-value" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-value" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82456" />

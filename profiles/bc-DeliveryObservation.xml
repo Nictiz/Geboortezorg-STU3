@@ -103,14 +103,14 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-DeliveryObservation-value" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-DeliveryObservation-value" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20590" />
@@ -126,18 +126,6 @@
         <map value="peri23-dataelement-20640" />
         <comment value="Hoeveelheid bloedverlies" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:deliveryObservation-value">
-      <path value="Observation.value[x]" />
-      <sliceName value="deliveryObservation-value" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-DeliveryObservation-value" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-DeliveryObservation-value" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82336" />

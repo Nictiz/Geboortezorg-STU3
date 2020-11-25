@@ -81,13 +81,13 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-FetusObservation-value" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-value" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-60030" />
@@ -113,18 +113,6 @@
         <map value="peri23-dataelement-82340" />
         <comment value="EFW" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:fetusObservation-value">
-      <path value="Observation.value[x]" />
-      <sliceName value="fetusObservation-value" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-FetusObservation-value" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-value" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-80946" />
