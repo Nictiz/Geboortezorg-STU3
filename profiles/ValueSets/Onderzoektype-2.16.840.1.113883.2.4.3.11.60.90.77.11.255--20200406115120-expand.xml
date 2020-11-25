@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
@@ -40,31 +40,49 @@
                 <display value="echografie van nekplooi (verrichting)"/>
             </concept>
             <concept>
-                <code value="446522006"/>
-                <display value="Ultrasonography in first trimester (procedure)"/>
+                <code value="143691000146108"/>
+                <display value="structureel echoscopisch onderzoek tijdens eerste trimester (verrichting)"/>
             </concept>
             <concept>
-                <code value="446208007"/>
-                <display value="echografie in tweede trimester (verrichting)"/>
+                <code value="143701000146108"/>
+                <display value="structureel echoscopisch onderzoek tijdens tweede trimester (verrichting)"/>
             </concept>
             <concept>
-                <code value="425551008"/>
-                <display value="prenatale echografie voor mogelijke afwijking (verrichting)"/>
+                <code value="86531000146104"/>
+                <display value="geavanceerd ultrageluidonderzoek type I (verrichting)"/>
             </concept>
             <concept>
-                <code value="472825005"/>
-                <display value="screenen op foetale chromosomale afwijking (verrichting)"/>
+                <code value="86571000146102"/>
+                <display value="geavanceerd ultrageluidonderzoek type II (verrichting)"/>
             </concept>
             <concept>
                 <code value="7751000146103"/>
                 <display value="niet-invasieve prenatale test (verrichting)"/>
             </concept>
+            <concept>
+                <code value="34536000"/>
+                <display value="vruchtwaterpunctie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="303720006"/>
+                <display value="chorionvlokkenbiopsie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="6708002"/>
+                <display value="intra-uteriene cordocentese (verrichting)"/>
+            </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:74c9e805-f96a-4369-b454-38c60580a89c"/>
-        <timestamp value="2020-10-28T15:45:33.415+01:00"/>
-        <total value="8"/>
+        <identifier value="urn:uuid:989f8b9e-3176-4932-a2e5-603ced3c4d37"/>
+        <timestamp value="2020-11-23T15:40:18.155+01:00"/>
+        <total value="12"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="268445003"/>
+            <display value="obstetrische echografie (verrichting)"/>
+        </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="133601000146101"/>
@@ -82,28 +100,43 @@
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="446522006"/>
-            <display value="Ultrasonography in first trimester (procedure)"/>
+            <code value="143691000146108"/>
+            <display value="structureel echoscopisch onderzoek tijdens eerste trimester (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="446208007"/>
-            <display value="echografie in tweede trimester (verrichting)"/>
+            <code value="143701000146108"/>
+            <display value="structureel echoscopisch onderzoek tijdens tweede trimester (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="425551008"/>
-            <display value="prenatale echografie voor mogelijke afwijking (verrichting)"/>
+            <code value="86531000146104"/>
+            <display value="geavanceerd ultrageluidonderzoek type I (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="472825005"/>
-            <display value="screenen op foetale chromosomale afwijking (verrichting)"/>
+            <code value="86571000146102"/>
+            <display value="geavanceerd ultrageluidonderzoek type II (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="7751000146103"/>
             <display value="niet-invasieve prenatale test (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="34536000"/>
+            <display value="vruchtwaterpunctie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="303720006"/>
+            <display value="chorionvlokkenbiopsie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="6708002"/>
+            <display value="intra-uteriene cordocentese (verrichting)"/>
         </contains>
     </expansion>
 </ValueSet>
