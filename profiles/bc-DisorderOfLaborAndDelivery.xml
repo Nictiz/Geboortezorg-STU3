@@ -115,38 +115,24 @@
       <path value="Condition.category.coding.display" />
       <defaultValueString value="Disorder of labor / delivery (disorder)" />
     </element>
-    <element id="Condition.code">
-      <path value="Condition.code" />
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="$this" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code:maternal">
-      <path value="Condition.code" />
-      <sliceName value="maternal" />
+    <element id="Condition.code.coding:disorderOfLaborAndDeliveryCode">
+      <path value="Condition.code.coding" />
+      <sliceName value="disorderOfLaborAndDeliveryCode" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
-        <description value="ProbleemNaam_Maternaal" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.289--20200127101358" />
-          <display value="ProbleemNaamCodelijst" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Condition.code:childrelated">
-      <path value="Condition.code" />
-      <sliceName value="childrelated" />
-      <binding>
-        <strength value="extensible" />
-        <description value="ProbleemNaam_Kindspecifiek" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.304--20200213111855" />
-          <display value="ProbleemNaamCodelijst" />
-        </valueSetReference>
+        <description value="bc-DisorderOfLaborAndDelivery-code" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfLaborAndDelivery-code" />
       </binding>
     </element>
     <element id="Condition.subject">
