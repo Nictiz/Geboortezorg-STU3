@@ -94,7 +94,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-BirthObservation-value" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-value" />
+		<valueSetReference>
+			<reference value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-value" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

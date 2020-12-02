@@ -104,7 +104,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-DisorderOfChild-code" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code" />
+		<valueSetReference>
+			<reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

@@ -69,7 +69,9 @@
       <binding>
         <strength value="extensible" />
         <description value="AndereZorgverlenerBetrokken" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -126,7 +128,9 @@
         </extension>
         <strength value="extensible" />
         <description value="PediatrischeVerwijsindicatie" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz" />

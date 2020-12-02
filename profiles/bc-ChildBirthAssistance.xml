@@ -85,7 +85,9 @@
       <binding>
         <strength value="extensible" />
         <description value="WerkelijkePlaatsBaring22" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.178--20131230000000" />
+		</valueSetReference>
       </binding>
     </element>
     <element id="Encounter.type">
@@ -157,7 +159,9 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
+		<valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -182,7 +186,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-ChildBirthAssistance-type" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
+		<valueSetReference>
+			<reference value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

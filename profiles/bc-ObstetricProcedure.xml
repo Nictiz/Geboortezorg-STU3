@@ -187,7 +187,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-ObstetricProcedure-code" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
+		<valueSetReference>
+			<reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -276,7 +278,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-ObstetricProcedure-reasonCode" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
+		<valueSetReference>
+			<reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

@@ -74,7 +74,9 @@
       <binding>
         <strength value="extensible" />
         <description value="PeriodeZorgverlening" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828" />
+        <valueSetReference>
+			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828" />
+		</valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
