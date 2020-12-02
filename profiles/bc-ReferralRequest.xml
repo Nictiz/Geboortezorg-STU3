@@ -55,15 +55,12 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
       </type>
     </element>
     <element id="ReferralRequest.extension:perinatalPeriod.valueCodeableConcept:valueCodeableConcept">
       <path value="ReferralRequest.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <binding>
-        <strength value="extensible" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20367" />
@@ -201,9 +198,6 @@
     <element id="ReferralRequest.specialty">
       <path value="ReferralRequest.specialty" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ReferralSpecialty" />
-        </extension>
         <strength value="extensible" />
         <description value="Specialisme" />
         <valueSetReference>
@@ -331,9 +325,6 @@
       </mapping>
     </element>
     <element id="ReferralRequest.reasonCode.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="ReferralRequest.reasonCode.text" />
       <mapping>
         <identity value="gebz-peri-v2.3" />

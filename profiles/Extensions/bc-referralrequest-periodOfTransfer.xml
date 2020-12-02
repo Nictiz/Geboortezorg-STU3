@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-referralrequest-periodoftransfer"/>
-  <url value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
+  <id value="bc-referralrequest-periodOfTransfer" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
   <name value="bc-referralrequest-periodOfTransfer" />
   <status value="draft" />
   <description value="Extension on ReferralRequest describing the perinatal period of transfer" />
@@ -21,7 +21,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -32,7 +32,9 @@
       <binding>
         <strength value="example" />
         <description value="PerinataleOverdrachtPeriodeConsult" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925" />
+        </valueSetReference>
       </binding>
     </element>
   </differential>

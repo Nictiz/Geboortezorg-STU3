@@ -97,21 +97,12 @@
     <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept">
       <path value="Procedure.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept:decisionMomentSC">
-      <path value="Procedure.extension.valueCodeableConcept" />
-      <sliceName value="decisionMomentSC" />
       <binding>
         <strength value="extensible" />
         <description value="BesluitSC" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.38--20141106153416" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.38--20141106153416" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -318,30 +309,23 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.bodySite.extension:ProcedureLaterality">
+    <element id="Procedure.bodySite.extension:lateralityEpisiotomy">
       <path value="Procedure.bodySite.extension" />
-      <sliceName value="ProcedureLaterality" />
+      <sliceName value="lateralityEpisiotomy" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
+      </type>
     </element>
-    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept">
+    <element id="Procedure.bodySite.extension:lateralityEpisiotomy.valueCodeableConcept:valueCodeableConcept">
       <path value="Procedure.bodySite.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept:lateralityEpisiotomy">
-      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="lateralityEpisiotomy" />
+      <short value="Locatie episiotomie" />
       <binding>
         <strength value="extensible" />
         <description value="EpisiotomieType" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.161--20130110132616" />
-          <display value="ProcedureLateralityCodelist" />
         </valueSetReference>
       </binding>
       <mapping>

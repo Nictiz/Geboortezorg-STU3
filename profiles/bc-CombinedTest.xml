@@ -68,7 +68,9 @@
       <binding>
         <strength value="extensible" />
         <description value="CombiRiskMethod" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.78--20110128000000" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.78--20110128000000" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="RiskAssessment.method.extension">
@@ -128,34 +130,15 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
       </type>
     </element>
-    <element id="RiskAssessment.prediction">
-      <path value="RiskAssessment.prediction" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="outcome" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk">
-      <path value="RiskAssessment.prediction" />
-      <sliceName value="trisomyCutOffAndRisk" />
-    </element>
-    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk.outcome">
+    <element id="RiskAssessment.prediction.outcome">
       <path value="RiskAssessment.prediction.outcome" />
       <binding>
         <strength value="extensible" />
         <description value="Perinatologische observatiecodes (subset)" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.136--20141020120647" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.136--20141020120647" />
+        </valueSetReference>
       </binding>
-    </element>
-    <element id="RiskAssessment.prediction:trisomyCutOffAndRisk.probability[x]:probabilityDecimal">
-      <path value="RiskAssessment.prediction.probabilityDecimal" />
-      <sliceName value="probabilityDecimal" />
-      <type>
-        <code value="decimal" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
