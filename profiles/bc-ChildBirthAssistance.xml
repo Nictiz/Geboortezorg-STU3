@@ -165,37 +165,30 @@
         <comment value="Partusstadium assistente gearriveerd" />
       </mapping>
     </element>
-    <element id="Encounter.participant.type.coding:babyCatcher">
+    <element id="Encounter.participant.type.coding">
       <path value="Encounter.participant.type.coding" />
-      <sliceName value="babyCatcher" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.participant.type.coding:childBirthAssistance-type">
+      <path value="Encounter.participant.type.coding" />
+      <sliceName value="childBirthAssistance-type" />
       <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-ChildBirthAssistance-type" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
+      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40149" />
         <comment value="Aanpakker kind" />
       </mapping>
-    </element>
-    <element id="Encounter.participant.type.coding:babyCatcher.code">
-      <path value="Encounter.participant.type.coding.code" />
-      <fixedCode value="catcher" />
-    </element>
-    <element id="Encounter.participant.type.coding:babyCatcher.display">
-      <path value="Encounter.participant.type.coding.display" />
-      <defaultValueString value="Person who catches the baby" />
-    </element>
-    <element id="Encounter.participant.type.coding:supervisor">
-      <path value="Encounter.participant.type.coding" />
-      <sliceName value="supervisor" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40169" />
-        <comment value="Supervisor" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.type.coding:supervisor.code">
-      <path value="Encounter.participant.type.coding.code" />
-      <fixedCode value="supervisor" />
     </element>
     <element id="Encounter.participant.individual.extension">
       <path value="Encounter.participant.individual.extension" />
