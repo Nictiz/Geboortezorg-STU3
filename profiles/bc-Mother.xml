@@ -2,9 +2,21 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-MotherOf" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MotherOf" />
+  <version value="1.0.0" />
   <name value="bc-MotherOf" />
+  <title value="bc-MotherOf" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="A RelatedPerson profile describing the relation between mother and child as defined by BabyConnect. The RelatedPerson is the mother, which is a related person of the child Patient (RelatedPerson.patient). The mother Patient (bc-Woman) is linked to the RelatedPerson (Patient.link of type seealso)." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="rim" />

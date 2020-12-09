@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-Birth" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
+  <version value="1.0.0" />
   <name value="bc-Birth" />
+  <title value="bc-Birth" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="A Procedure profile describing the birth of a child as defined by BabyConnect. A birth is related to a delivery Procedure (Procedure.partOf), the child (Procedure.subject) and the pregnancy (Procedure.reasonReference). A pregnancy can lead to one delivery Procedure and one or multiple birth Procedures. In multiple birth, multiple birth instances point to the same delivery Procedure. A birth also provides the relation between a child and its mother: The mother Patient is the subject of the delivery Procedure and the child Patient is the subject of the birth Procedure." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-procedurefortransfer-v1.2-2015EN" />

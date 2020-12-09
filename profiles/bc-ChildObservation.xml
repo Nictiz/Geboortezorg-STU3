@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-ChildBirthAssistance" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation" />
+  <version value="0.1.1" />
   <name value="bc-ChildObservation" />
+  <title value="bc-ChildObservation" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="An Observation profile describing child-related Observations, which are not captured in other existing profiles, as defined by BabyConnect. Child-related Observations are about the child, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />

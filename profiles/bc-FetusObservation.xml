@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FetusObservation" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <version value="1.0.0" />
   <name value="bc-FetusObservation" />
+  <title value="bc-FetusObservation" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="An Observation profile describing fetus-related Observations in a pregnancy, such as movement and heart action, as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
