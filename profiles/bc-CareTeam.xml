@@ -69,9 +69,9 @@
       <binding>
         <strength value="extensible" />
         <description value="AndereZorgverlenerBetrokken" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -86,6 +86,16 @@
         <map value="peri23-dataelement-82335" />
         <comment value="Zorginstelling LVR-ID" />
       </mapping>
+    </element>
+    <element id="CareTeam.participant.member.extension">
+      <path value="CareTeam.participant.member.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="CareTeam.participant.member.extension:practitionerRole">
       <path value="CareTeam.participant.member.extension" />
@@ -118,22 +128,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="CareTeam.reasonCode:reasonInvolvementPediatrician">
-      <path value="CareTeam.reasonCode" />
-      <sliceName value="reasonInvolvementPediatrician" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CareTeamReason" />
-        </extension>
-        <strength value="extensible" />
+        <strength value="preferred" />
         <description value="PediatrischeVerwijsindicatie" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413" />
-		</valueSetReference>
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413" />
       </binding>
       <mapping>
-        <identity value="gebz" />
+        <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82123" />
         <comment value="Reden betrokkenheid van de kinderarts: pediatrische verwijsindicaties." />
       </mapping>
