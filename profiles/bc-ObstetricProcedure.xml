@@ -188,20 +188,13 @@
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
       <sliceName value="VerrichtingTypeCodelijst" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement" />
-      </mapping>
-    </element>
-    <element id="Procedure.code.coding:obstetricProcedure-code">
-      <path value="Procedure.code.coding" />
-      <sliceName value="obstetricProcedure-code" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="bc-ObstetricProcedure-code" />
-		<valueSetReference>
-			<reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
+          <display value="VerrichtingTypeCodelijst" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -290,9 +283,9 @@
       <binding>
         <strength value="extensible" />
         <description value="bc-ObstetricProcedure-reasonCode" />
-		<valueSetReference>
-			<reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
