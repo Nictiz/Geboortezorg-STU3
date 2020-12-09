@@ -1,0 +1,175 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-01-02T00:00:00+01:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.186--20140102000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.186"/>
+    </identifier>
+    <version value="2014-01-02T00:00:00"/>
+    <name value="RolZorgverlener22"/>
+    <title value="RolZorgverlener22"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="RolZorgverlener22"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+            <concept>
+                <code value="01.046"/>
+                <display value="gynaecoloog"/>
+            </concept>
+            <concept>
+                <code value="01.015"/>
+                <display value="huisarts"/>
+            </concept>
+            <concept>
+                <code value="30.000"/>
+                <display value="verpleegkundige"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <concept>
+                <code value="11"/>
+                <display value="1e lijns verloskundige"/>
+            </concept>
+            <concept>
+                <code value="25"/>
+                <display value="klinisch verloskundige"/>
+            </concept>
+            <concept>
+                <code value="12"/>
+                <display value="verloskundige in opleiding"/>
+            </concept>
+            <concept>
+                <code value="22"/>
+                <display value="gynaecoloog in opleiding"/>
+            </concept>
+            <concept>
+                <code value="24"/>
+                <display value="arts-assistent"/>
+            </concept>
+            <concept>
+                <code value="13"/>
+                <display value="co-assistent"/>
+            </concept>
+            <concept>
+                <code value="15"/>
+                <display value="huisarts in opleiding"/>
+            </concept>
+            <concept>
+                <code value="23"/>
+                <display value="arts, niet in opleiding"/>
+            </concept>
+            <concept>
+                <code value="32"/>
+                <display value="kraamverzorgende"/>
+            </concept>
+            <concept>
+                <code value="33"/>
+                <display value="niet medisch geschoolde"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:9b54bd0d-60a8-4230-a197-ef3a0de44938"/>
+        <timestamp value="2020-12-09T15:58:52.627+01:00"/>
+        <total value="15"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="11"/>
+            <display value="1e lijns verloskundige"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="25"/>
+            <display value="klinisch verloskundige"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="12"/>
+            <display value="verloskundige in opleiding"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+            <code value="01.046"/>
+            <display value="gynaecoloog"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="22"/>
+            <display value="gynaecoloog in opleiding"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="24"/>
+            <display value="arts-assistent"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="13"/>
+            <display value="co-assistent"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+            <code value="01.015"/>
+            <display value="huisarts"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="15"/>
+            <display value="huisarts in opleiding"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="23"/>
+            <display value="arts, niet in opleiding"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+            <code value="30.000"/>
+            <display value="verpleegkundige"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="32"/>
+            <display value="kraamverzorgende"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+            <code value="33"/>
+            <display value="niet medisch geschoolde"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>
