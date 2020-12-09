@@ -172,9 +172,9 @@
       <binding>
         <strength value="extensible" />
         <description value="EthnicGroup" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -411,11 +411,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.communication:dutch">
-      <path value="Patient.communication" />
-      <sliceName value="dutch" />
-    </element>
-    <element id="Patient.communication:dutch.extension">
+    <element id="Patient.communication.extension">
       <path value="Patient.communication.extension" />
       <slicing>
         <discriminator>
@@ -425,11 +421,11 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency">
+    <element id="Patient.communication.extension:languageProficiency">
       <path value="Patient.communication.extension" />
       <sliceName value="languageProficiency" />
     </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension">
+    <element id="Patient.communication.extension:languageProficiency.extension">
       <path value="Patient.communication.extension.extension" />
       <slicing>
         <discriminator>
@@ -439,36 +435,11 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type">
-      <path value="Patient.communication.extension.extension" />
-      <sliceName value="type" />
-    </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding">
-      <path value="Patient.communication.extension.extension.valueCoding" />
-      <sliceName value="valueCoding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="RSP" />
-        <display value="Received spoken" />
-      </patternCoding>
-    </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.system">
-      <path value="Patient.communication.extension.extension.valueCoding.system" />
-      <fixedUri value="http://hl7.org/fhir/v3/LanguageAbilityMode" />
-    </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.code">
-      <path value="Patient.communication.extension.extension.valueCoding.code" />
-      <fixedCode value="RSP" />
-    </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:type.valueCoding:valueCoding.display">
-      <path value="Patient.communication.extension.extension.valueCoding.display" />
-      <defaultValueString value="Received spoken" />
-    </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:level">
+    <element id="Patient.communication.extension:languageProficiency.extension:level">
       <path value="Patient.communication.extension.extension" />
       <sliceName value="level" />
     </element>
-    <element id="Patient.communication:dutch.extension:languageProficiency.extension:level.valueCoding:valueCoding">
+    <element id="Patient.communication.extension:languageProficiency.extension:level.valueCoding:valueCoding">
       <path value="Patient.communication.extension.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <binding>
@@ -484,18 +455,6 @@
         <map value="peri23-dataelement-10401" />
         <comment value="Taalvaardigheid vrouw Nederlandse taal" />
       </mapping>
-    </element>
-    <element id="Patient.communication:dutch.language.coding.system">
-      <path value="Patient.communication.language.coding.system" />
-      <fixedUri value="urn:ietf:bcp:47" />
-    </element>
-    <element id="Patient.communication:dutch.language.coding.code">
-      <path value="Patient.communication.language.coding.code" />
-      <fixedCode value="nl" />
-    </element>
-    <element id="Patient.communication:dutch.language.coding.display">
-      <path value="Patient.communication.language.coding.display" />
-      <fixedString value="Dutch" />
     </element>
     <element id="Patient.link">
       <path value="Patient.link" />
