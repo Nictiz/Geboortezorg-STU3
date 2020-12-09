@@ -132,23 +132,21 @@
       <path value="Procedure.category.coding.display" />
       <defaultValueString value="Obstetric procedure (procedure)" />
     </element>
-    <element id="Procedure.code.coding:delivery">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
-      <sliceName value="delivery" />
-      <min value="1" />
-      <max value="1" />
+      <sliceName value="VerrichtingTypeCodelijst" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="236973005" />
+      </patternCoding>
     </element>
-    <element id="Procedure.code.coding:delivery.system">
-      <path value="Procedure.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.code.coding:delivery.code">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.code">
       <path value="Procedure.code.coding.code" />
       <fixedCode value="236973005" />
     </element>
-    <element id="Procedure.code.coding:delivery.display">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.display">
       <path value="Procedure.code.coding.display" />
-      <fixedString value="Delivery procedure (procedure)" />
+      <defaultValueString value="Delivery procedure (procedure)" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
