@@ -36,6 +36,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
             </meta>
             <url value="http://nictiz.nl/fhir/ValueSet/{@name}-code"/>
+            <version value="1.0.0"/>
             <name value="{@name}-code"/>
             <title value="{@name}-code"/>
             <status value="draft"/>
