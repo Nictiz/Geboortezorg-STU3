@@ -61,6 +61,16 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
       </type>
     </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-FetusObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-code" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>

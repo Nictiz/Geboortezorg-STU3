@@ -70,6 +70,16 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-PregnancyObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-PregnancyObservation-code" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
@@ -178,9 +188,9 @@
       <binding>
         <strength value="extensible" />
         <description value="IUVDMethode" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
-		</valueSetReference>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
