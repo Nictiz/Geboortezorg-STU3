@@ -52,8 +52,11 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                     <xsl:if test="$system!=''"> 
                         <include>
                             <system value="{$system}"/>
-                            <xsl:for-each select="$mappings[@system=$system]">
-                                <xsl:call-template name="mappingsToConcepts"/>
+                            <xsl:for-each select="distinct-values($mappings[@system=$system]/@code)">
+                                <xsl:variable name="code" select="."/>
+                                <xsl:for-each select="$mappings[@system=$system and @code=$code][1]"> <!-- nodig voor het ontdubbelen van codes -->
+                                    <xsl:call-template name="mappingsToConcepts"/>
+                                </xsl:for-each>
                             </xsl:for-each>
                         </include>
                     </xsl:if>
