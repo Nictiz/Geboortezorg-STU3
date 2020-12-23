@@ -16,18 +16,10 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://nictiz.nl/fhir/ValueSet/bc-PregnancyObservation-code"/>
+         <system value="http://snomed.info/sct"/>
          <concept>
             <code value="276604007"/>
             <display value="Fetal growth abnormality (disorder)"/>
-         </concept>
-         <concept>
-            <code value="EindeZw"/>
-            <display value="Wijze einde zwangerschap"/>
-         </concept>
-         <concept>
-            <code value="EDDDef"/>
-            <display value="Definitieve à terme datum"/>
          </concept>
          <concept>
             <code value="439401001 439401001"/>
@@ -70,14 +62,6 @@
             <display value="Fetal growth abnormality (disorder)"/>
          </concept>
          <concept>
-            <code value="PartusImmaturusDreig"/>
-            <display value="Partus immaturus - dreigend"/>
-         </concept>
-         <concept>
-            <code value="PartusPrematurusDreig"/>
-            <display value="Partus prematurus - dreigend"/>
-         </concept>
-         <concept>
             <code value="415105001"/>
             <display value="Placental abruption (disorder)"/>
          </concept>
@@ -88,14 +72,6 @@
          <concept>
             <code value="143881000146107"/>
             <display value="aantal levende nakomelingen (waarneembare entiteit)"/>
-         </concept>
-         <concept>
-            <code value="EDDDef"/>
-            <display value="Definitieve à terme datum"/>
-         </concept>
-         <concept>
-            <code value="PRN4209"/>
-            <display value="Voorgenomen plaats baring tijdens zwangerschap"/>
          </concept>
          <concept>
             <code value="364618000"/>
@@ -114,16 +90,46 @@
             <display value="maternale sterfte (gebeurtenis)"/>
          </concept>
          <concept>
-            <code value="EindeZw"/>
-            <display value="Wijze einde zwangerschap"/>
-         </concept>
-         <concept>
             <code value="118951000146109"/>
             <display value="datum van einde van zwangerschap (waarneembare entiteit)"/>
          </concept>
          <concept>
             <code value="118861000146102"/>
             <display value="aantal geboren kinderen uit zwangerschap (waarneembare entiteit)"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+         <concept>
+            <code value="EindeZw"/>
+            <display value="Wijze einde zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="EDDDef"/>
+            <display value="Definitieve à terme datum"/>
+         </concept>
+         <concept>
+            <code value="PartusImmaturusDreig"/>
+            <display value="Partus immaturus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="PartusPrematurusDreig"/>
+            <display value="Partus prematurus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="EDDDef"/>
+            <display value="Definitieve à terme datum"/>
+         </concept>
+         <concept>
+            <code value="EindeZw"/>
+            <display value="Wijze einde zwangerschap"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3"/>
+         <concept>
+            <code value="PRN4209"/>
+            <display value="Voorgenomen plaats baring tijdens zwangerschap"/>
          </concept>
       </include>
    </compose>

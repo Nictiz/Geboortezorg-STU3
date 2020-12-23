@@ -45,17 +45,23 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <description value="{@name}-code"/>
             <immutable value="false"/>
             <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-            <compose>
-                <include>
-                    <system value="http://nictiz.nl/fhir/ValueSet/{@name}-code"/>
-                    <xsl:for-each select="mapping">
-                        <xsl:call-template name="mappingsToConcepts"/>
-                    </xsl:for-each>
-                </include>
+            <compose>             
+                <xsl:variable name="mappings" select="mapping"/>
+                <xsl:for-each select="distinct-values(mapping/@system)">
+                    <xsl:variable name="system" select="."/>
+                    <xsl:if test="$system!=''"> 
+                        <include>
+                            <system value="{$system}"/>
+                            <xsl:for-each select="$mappings[@system=$system]">
+                                <xsl:call-template name="mappingsToConcepts"/>
+                            </xsl:for-each>
+                        </include>
+                    </xsl:if>
+                </xsl:for-each>   
             </compose>    
         </ValueSet>       
     </xsl:template>
-    
+
     <xsl:template match="mapping" name="mappingsToConcepts" as="element()*">
         <xsl:if test="@code!=''"> 
             <concept>

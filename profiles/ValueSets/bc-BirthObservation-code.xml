@@ -16,7 +16,7 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-code"/>
+         <system value="http://snomed.info/sct"/>
          <concept>
             <code value="364336006"/>
             <display value="Pattern of delivery (observable entity)"/>
@@ -24,10 +24,6 @@
          <concept>
             <code value="10588007"/>
             <display value="perinatale sterfte (gebeurtenis)"/>
-         </concept>
-         <concept>
-            <code value="FasePerinataleSterfte"/>
-            <display value="Fase perinatale sterfte"/>
          </concept>
          <concept>
             <code value="398299004 399753006"/>
@@ -38,20 +34,33 @@
             <display value="Time rupture of membranes detected"/>
          </concept>
          <concept>
-            <code value="38386-9"/>
-            <display value="Color of Amniotic fluid"/>
+            <code value="364336006"/>
+            <display value="Pattern of delivery (observable entity)"/>
          </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
          <concept>
-            <code value="PRN530401"/>
-            <display value="Tijdstip actief meepersen"/>
+            <code value="FasePerinataleSterfte"/>
+            <display value="Fase perinatale sterfte"/>
          </concept>
          <concept>
             <code value="RuggeprikGewNGekr"/>
             <display value="Ruggeprik gewenst niet gekregen"/>
          </concept>
+      </include>
+      <include>
+         <system value="http://loinc.org"/>
          <concept>
-            <code value="364336006"/>
-            <display value="Pattern of delivery (observable entity)"/>
+            <code value="38386-9"/>
+            <display value="Color of Amniotic fluid"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.1"/>
+         <concept>
+            <code value="PRN530401"/>
+            <display value="Tijdstip actief meepersen"/>
          </concept>
          <concept>
             <code value="LigGbrt"/>

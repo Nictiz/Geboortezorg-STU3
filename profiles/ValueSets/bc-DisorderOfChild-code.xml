@@ -16,7 +16,7 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code"/>
+         <system value="http://snomed.info/sct"/>
          <concept>
             <code value="276654001 443341004"/>
             <display value="Congenital malformation (disorder) Congenital anomaly (disorder)"/>
@@ -57,6 +57,9 @@
             <code value="74345006"/>
             <display value="Congenital disorder due to abnormality of chromosome number OR structure (disorder)"/>
          </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
          <concept>
             <code value="ProblematiekKind"/>
             <display value="Problematiek kind"/>

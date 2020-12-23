@@ -16,11 +16,38 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-code"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
          <concept>
             <code value="RiskStat"/>
             <display value="Conclusie risicostatus na intake"/>
          </concept>
+         <concept>
+            <code value="MolaPartieelIntacteZw"/>
+            <display value="Partiële mola met intacte zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="PartusImmaturusDreig"/>
+            <display value="Partus immaturus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="PartusPrematurusDreig"/>
+            <display value="Partus prematurus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="OnderBehandeling"/>
+            <display value="Onder behandeling (geweest)?"/>
+         </concept>
+         <concept>
+            <code value="OverigeAandoeningenAnamnese"/>
+            <display value="Overige aandoeningen / afwijkingen uit algemene anamnese vrouw"/>
+         </concept>
+         <concept>
+            <code value="OverigeAandoeningenAnamnese"/>
+            <display value="Overige aandoeningen / afwijkingen uit algemene anamnese vrouw"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
          <concept>
             <code value="85828009"/>
             <display value="Autoimmune disease (disorder)"/>
@@ -98,10 +125,6 @@
             <display value="Bleeding (finding)"/>
          </concept>
          <concept>
-            <code value="MolaPartieelIntacteZw"/>
-            <display value="Partiële mola met intacte zwangerschap"/>
-         </concept>
-         <concept>
             <code value="17382005"/>
             <display value="Cervical incompetence (disorder)"/>
          </concept>
@@ -126,14 +149,6 @@
             <display value="Gestational diabetes mellitus, class A&gt;2&lt; (disorder)"/>
          </concept>
          <concept>
-            <code value="PartusImmaturusDreig"/>
-            <display value="Partus immaturus - dreigend"/>
-         </concept>
-         <concept>
-            <code value="PartusPrematurusDreig"/>
-            <display value="Partus prematurus - dreigend"/>
-         </concept>
-         <concept>
             <code value="415105001"/>
             <display value="Placental abruption (disorder)"/>
          </concept>
@@ -144,10 +159,6 @@
          <concept>
             <code value="364320009"/>
             <display value="Pregnancy observable (observable entity)"/>
-         </concept>
-         <concept>
-            <code value="OnderBehandeling"/>
-            <display value="Onder behandeling (geweest)?"/>
          </concept>
          <concept>
             <code value="85828009"/>
@@ -222,24 +233,12 @@
             <display value="Mental disorder (disorder)"/>
          </concept>
          <concept>
-            <code value="OverigeAandoeningenAnamnese"/>
-            <display value="Overige aandoeningen / afwijkingen uit algemene anamnese vrouw"/>
-         </concept>
-         <concept>
-            <code value="OverigeAandoeningenAnamnese"/>
-            <display value="Overige aandoeningen / afwijkingen uit algemene anamnese vrouw"/>
-         </concept>
-         <concept>
             <code value="313216003"/>
             <display value="History of sexual abuse (situation)"/>
          </concept>
          <concept>
             <code value="129019007"/>
             <display value="Taking medication, function (observable entity)"/>
-         </concept>
-         <concept>
-            <code value="39156-5"/>
-            <display value="Body mass index (BMI) [Ratio]"/>
          </concept>
          <concept>
             <code value="95041000119101"/>
@@ -272,6 +271,13 @@
          <concept>
             <code value="163520002"/>
             <display value="O/E - presenting part position"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="39156-5"/>
+            <display value="Body mass index (BMI) [Ratio]"/>
          </concept>
       </include>
    </compose>
