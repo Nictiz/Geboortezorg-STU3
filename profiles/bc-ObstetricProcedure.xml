@@ -11,7 +11,7 @@
     <name value="Nictiz" />
     <telecom>
       <system value="email" />
-      <value value="info@nictiz.nl" />
+      <value value="geboortezorg@nictiz.nl" />
       <use value="work" />
     </telecom>
   </contact>
@@ -106,9 +106,12 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
       </type>
     </element>
-    <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept">
-      <path value="Procedure.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Procedure.extension:decisionMoment.url">
+      <path value="Procedure.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
+    </element>
+    <element id="Procedure.extension:decisionMoment.value[x]">
+      <path value="Procedure.extension.value[x]" />
       <binding>
         <strength value="extensible" />
         <description value="BesluitSC" />
@@ -188,10 +191,13 @@
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
       <sliceName value="VerrichtingTypeCodelijst" />
-      <definition value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
       <binding>
         <strength value="required" />
         <description value="bc-ObstetricProcedure-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code" />
+          <display value="VerrichtingTypeCodelijst" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

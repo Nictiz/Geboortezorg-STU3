@@ -11,7 +11,7 @@
     <name value="Nictiz" />
     <telecom>
       <system value="email" />
-      <value value="info@nictiz.nl" />
+      <value value="geboortezorg@nictiz.nl" />
       <use value="work" />
     </telecom>
   </contact>
@@ -409,20 +409,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.communication">
-      <path value="Patient.communication" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="language" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="extension.value[x]" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Patient.communication.extension">
       <path value="Patient.communication.extension" />
       <slicing>
@@ -456,7 +442,7 @@
       <sliceName value="valueCoding" />
       <binding>
         <strength value="extensible" />
-        <description value="Language Ability Proficiency" />
+        <description value="TaalvaardigheidBegrijpenCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.141--20130320000000" />
           <display value="TaalvaardigheidBegrijpenCodelijst" />
