@@ -111,7 +111,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:when test="@pattern and starts-with(@pattern, 'bc-')">
                 <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                 <xsl:value-of select="@pattern"/>
-                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.1.0}}</xsl:text>
+                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.9.0}}</xsl:text>
             </xsl:when>
             <xsl:when test="@pattern and starts-with(@pattern, 'nl-')">
                 <xsl:text>{{Simplifier|http://fhir.nl/fhir/StructureDefinition/</xsl:text>
