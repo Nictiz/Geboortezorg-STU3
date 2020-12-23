@@ -57,9 +57,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xsl:template>
     
     <xsl:template match="mapping" name="mappingsToConcepts" as="element()*">
-        <concept>
-            <code value = "{@code}"/>
-        </concept>
+        <xsl:if test="@code!=''"> 
+            <concept>
+                <code value = "{@code}"/>
+                <display value = "{@display}"/>
+            </concept>
+        </xsl:if>
     </xsl:template>
     
     <xd:doc>
