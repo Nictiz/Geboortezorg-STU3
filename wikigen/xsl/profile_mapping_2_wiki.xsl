@@ -102,7 +102,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||</xsl:text>
         <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
         <xsl:value-of select="@pattern"/>
-        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.9.0}}</xsl:text>
+        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.9.0|title=</xsl:text>
+                <xsl:value-of select="@pattern"/>
+                <xsl:text>}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
         <xsl:value-of select="@system"/>
@@ -122,7 +124,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:value-of select="@valueSetId"/>
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate, 'T:-', '')"/>
-            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.9.0}}</xsl:text>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=0.9.0|title=</xsl:text>
+                <xsl:value-of select="@pattern"/>
+                <xsl:text>}}</xsl:text>
         </xsl:if>
         <xsl:text>
 || </xsl:text>
