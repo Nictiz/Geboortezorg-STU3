@@ -26,7 +26,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
-    <xsl:variable name="fhirmapping" select="document('../fhirmapping.xml')"/>
+    <xsl:variable name="fhirmapping" select="document('../../fhirmapping.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
 
     <xd:doc>
