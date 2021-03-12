@@ -51,10 +51,17 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 || System 
 || Code
 || Display 
+            </xsl:text>           
+<xsl:if test="contains(@name,'Observation')">
+    <xsl:text>
 || FHIR type 
+    </xsl:text>
+</xsl:if>
+    <xsl:text>
 || system+code 
-|| unit
-</xsl:text>
+<!-- deze is altijd leeg en alleen van toepassing op observation, voor nu weglaten -->
+<!--  || unit -->
+    </xsl:text>          
             <!-- De rest van de rijen -->
             <xsl:apply-templates select="mapping" mode="wiki"/>
             
@@ -107,16 +114,24 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:text>}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="@system"/>
+        <xsl:if test="not(@fhirtype='valueCodeableConcept') or contains(@pattern,'Observation')">
+            <xsl:value-of select="@system"/>
+        </xsl:if>
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="@code"/>
+        <xsl:if test="not(@fhirtype='valueCodeableConcept') or contains(@pattern,'Observation')">
+            <xsl:value-of select="@code"/>
+        </xsl:if>
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="@display"/>
+        <xsl:if test="not(@fhirtype='valueCodeableConcept') or contains(@pattern,'Observation')">
+            <xsl:value-of select="@display"/>
+        </xsl:if>
+<xsl:if test="contains(@pattern,'Observation')">
         <xsl:text>
 ||</xsl:text>
         <xsl:value-of select="@fhirtype"/>
+</xsl:if>
         <xsl:text>
 ||</xsl:text>
         <xsl:if test="@valueSet">
@@ -125,12 +140,13 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate, 'T:-', '')"/>
             <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.0.0|title=</xsl:text>
-                <xsl:value-of select="@pattern"/>
+                <xsl:value-of select="@valueSet"/>
                 <xsl:text>}}</xsl:text>
         </xsl:if>
-        <xsl:text>
+<!--    deze is nu altijd leeg en alleen van toepassing bij Observation, voor nu weglaten-->
+<!--        <xsl:text>
 || </xsl:text>
-        <xsl:value-of select="@unit"/>
+        <xsl:value-of select="@unit"/>-->
     </xsl:template>
     
 </xsl:stylesheet>
