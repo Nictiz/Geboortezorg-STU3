@@ -106,12 +106,9 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
       </type>
     </element>
-    <element id="Procedure.extension:decisionMoment.url">
-      <path value="Procedure.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
-    </element>
     <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept">
       <path value="Procedure.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
         <description value="BesluitSC" />
@@ -310,6 +307,25 @@
         <map value="peri23-dataelement-80794" />
         <comment value="Indicatie episiotomie" />
       </mapping>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.reasonReference:pregnancy">
+      <path value="Procedure.reasonReference" />
+      <sliceName value="pregnancy" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy" />
+      </type>
     </element>
     <element id="Procedure.bodySite.extension">
       <path value="Procedure.bodySite.extension" />
