@@ -14,7 +14,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 -->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
     <xd:doc scope="stylesheet">
-        <xd:desc>Produces a wiki table from FHNIR mapping/<xd:ref name="dataset-name" type="parameter"/> to FHIR for upload to e.g. somewhere on the <xd:a href="https://informatiestandaarden.nictiz.nl/wiki/Categorie:Mappings">Nictiz Information Standards wiki</xd:a>
+        <xd:desc>Produces a wiki table from FHIR mapping/<xd:ref name="dataset-name" type="parameter"/> to FHIR for upload to e.g. somewhere on the <xd:a href="https://informatiestandaarden.nictiz.nl/wiki/Categorie:Mappings">Nictiz Information Standards wiki</xd:a>
             <xd:p><xd:b>Expected input</xd:b> Mapping generated with release_2__fhirmapping</xd:p>
             <xd:p><xd:b>History:</xd:b>
                 <xd:ul>
@@ -50,18 +50,16 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 || Profile
 || System 
 || Code
-|| Display 
-            </xsl:text>           
-<xsl:if test="contains(@name,'Observation')">
+|| Display </xsl:text>           
+<!--<xsl:if test="contains(@name,'Observation')">-->
     <xsl:text>
-|| FHIR type 
-    </xsl:text>
-</xsl:if>
+|| FHIR element </xsl:text>
+<!--</xsl:if>-->
     <xsl:text>
-|| system+code 
+|| ValueSet </xsl:text>
 <!-- deze is altijd leeg en alleen van toepassing op observation, voor nu weglaten -->
 <!--  || unit -->
-    </xsl:text>          
+         
             <!-- De rest van de rijen -->
             <xsl:apply-templates select="mapping" mode="wiki"/>
             
@@ -84,15 +82,20 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     <xsl:template match="mapping" mode="wiki">
         <xsl:variable name="bgcolor" select="if (@level='1') then '#E8D7BE;' else if (./@type = 'group') then '#E3E3E3;' else ()"/>
+        <xsl:variable name="parent" select="@parent"/>  
+        <xsl:variable name="siblings" select="preceding-sibling::*[@parent=$parent and @baseelement=false()] | following-sibling::*[@parent=$parent and @baseelement=false()]"/>
         <xsl:text>
 |-</xsl:text>
         <!-- Type dependent stuff -->
-        <xsl:choose>
-            <xsl:when test="./@type = 'group'">
-                <xsl:text>style="vertical-align:top; </xsl:text>
-                <xsl:if test="$bgcolor"> background-color: <xsl:value-of select="$bgcolor"/>"</xsl:if>
-            </xsl:when>
-        </xsl:choose>
+        <xsl:if test="./@type = 'group' or @baseelement=false()">
+            <xsl:text>style="</xsl:text>
+            <xsl:if test="./@type = 'group'">
+                <xsl:text>vertical-align:top; </xsl:text>
+                <xsl:if test="$bgcolor"> background-color: <xsl:value-of select="$bgcolor"/></xsl:if>
+            </xsl:if>
+            <xsl:if test="@baseelement=false()">font-style: italic;</xsl:if>
+            <xsl:text>"</xsl:text>
+        </xsl:if>
         <xsl:text>
 |</xsl:text>
         <xsl:call-template name="addType">
@@ -103,7 +106,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:value-of select="@shortId"/>
         <xsl:text>
 ||</xsl:text>
-        <!-- Indent only for entire transactions, not subsets -->
+        <!-- Indent for additional (non-base) elements -->
+        <xsl:if test="@baseelement=false()">
+            <!--<xsl:for-each select="2 to xs:int(@level)">-->
+                <xsl:text disable-output-escaping="yes"><![CDATA[&#160;&#160;&#160;]]></xsl:text>
+            <!--</xsl:for-each>-->
+        </xsl:if>
         <xsl:value-of select="@name"/>
         <xsl:text>
 ||</xsl:text>
@@ -127,11 +135,11 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:if test="not(@fhirtype='valueCodeableConcept') or contains(@pattern,'Observation')">
             <xsl:value-of select="@display"/>
         </xsl:if>
-<xsl:if test="contains(@pattern,'Observation')">
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="@fhirtype"/>
-</xsl:if>
+        <xsl:if test="not(substring-after(@fhirelement, '.')='code')">
+            <xsl:value-of select="substring-after(@fhirelement, '.')"/>
+        </xsl:if>
         <xsl:text>
 ||</xsl:text>
         <xsl:if test="@valueSet">
@@ -147,6 +155,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 <!--        <xsl:text>
 || </xsl:text>
         <xsl:value-of select="@unit"/>-->
+        <!--<xsl:value-of select="count($siblings)>0"/>-->
+
     </xsl:template>
     
 </xsl:stylesheet>

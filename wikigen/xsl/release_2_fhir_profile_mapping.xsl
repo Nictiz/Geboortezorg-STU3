@@ -36,7 +36,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <!-- First make a map/mapping construct -->
         <!-- Now: for all profiles with a name like bc-{...}Observation
             Might do this for Procedure and Condition as well -->
-        <xsl:variable name="bc-profiles" select="distinct-values($fhirmapping/dataset/record/profile[(starts-with(text(), 'bc-') and ends-with(text(), 'Observation')) or starts-with(text(), 'bc-Disorder')]/text())"/>
+        <xsl:variable name="bc-profiles" select="distinct-values($fhirmapping/dataset/record/profile[(starts-with(text(), 'bc-') and ends-with(text(), 'Observation')) or starts-with(text(), 'bc-Disorder') or (text() = 'bc-ObstetricProcedure')]/text())"/>
         <xsl:variable name="dataset" select="."/>
         <maps>
             <xsl:copy-of select="@*"/>
@@ -58,7 +58,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xd:desc>Creates a table row for a concept</xd:desc>
     </xd:doc>
     <xsl:template match="concept" mode="makeTables">
-        <xsl:variable name="id" select="@id/string()"/>
+         <xsl:variable name="id" select="@id/string()"/>
         <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>
         <!-- For terminology, prefer Snomed or LOINC, else take the first one -->
         <xsl:variable name="terminologies" select="./terminologyAssociation[(@conceptId=$id) or (@conceptId=$inheritId)]"/>
@@ -69,6 +69,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:element name="mapping" namespace="">
             <xsl:attribute name="conceptId" select="$id"/>
             <xsl:attribute name="type" select="if (./@type = 'group') then 'group' else ./valueDomain/@type"/>
+            <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
+            <xsl:attribute name="parent" select="tokenize(ancestor::concept[1]/@id, '\.')[last()]"/>
             <xsl:attribute name="shortId" select="tokenize(./@id, '\.')[last()]"/>
             <xsl:attribute name="name" select="./name/string()"/>
             <xsl:attribute name="system" select="$system"/>
@@ -95,6 +97,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <!--<xsl:if test="$fhirpattern">-->
                 <xsl:attribute name="pattern" select="$fhirmapping/profile"/>
             <!--</xsl:if>-->
+            <xsl:attribute name="fhirelement" select="$fhirmapping/mapping"/>
+            <xsl:attribute name="baseelement" select="substring-after($fhirmapping/mapping,'.')=('code','') or starts-with(substring-after($fhirmapping/mapping,'.'), 'value')"/>
         </xsl:element>
     </xsl:template>
     
