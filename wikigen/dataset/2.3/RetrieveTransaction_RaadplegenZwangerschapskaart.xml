@@ -1,0 +1,258 @@
+<dataset id="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" effectiveDate="2016-09-08T00:00:00" statusCode="draft" prefix="peri20-" transactionId="2.16.840.1.113883.2.4.3.11.60.90.77.4.2571" transactionEffectiveDate="2021-03-30T11:51:52" transactionStatusCode="draft" transactionType="initial" transactionIddisplay="peri-transaction-2571" shortName="raadplegen_zwangerschapskaart" iddisplay="peri23-dataset-"><!--
+ This is a view of the transaction "Raadplegen Zwangerschapskaart" containing DECOR specifications for a transaction or dataset in a single, hierarchical view. 
+ All inheritances are resolved, for transactions the dataset is filtered for those concepts occurring in the transaction.
+ Valuesets are contained within the concept for easy reference. 
+ Xpaths are calculated on a best effort basis. The should be considered a starting point for application logic, not an endpoint. -->
+    <name language="nl-NL">Raadplegen Zwangerschapskaart</name>
+    <desc language="nl-NL">
+        <div>Patiënt wil zijn gegevens op de zwangerschapskaart gaan raadplegen</div>
+    </desc>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.2" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-2" shortName="vrouw">
+        <implementation shortName="vrouw"></implementation>
+        <name language="nl-NL">Vrouw</name>
+        <desc language="nl-NL">Vrouw die obstetrische zorgdiensten afneemt / heeft afgenomen.</desc>
+        <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.5.2" flexibility="2013-09-10T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.5" datasetEffectiveDate="2013-09-10T00:00:00" datasetStatusCode="final" iType="group" iStatusCode="final" iEffectiveDate="2013-09-10T00:00:00" iVersionLabel="22" refdisplay="peri22-dataelement-2">
+            <name language="nl-NL">Vrouw</name>
+        </relationship>
+        <community name="prn">
+            <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Deze rubriek bevat voor PRN aanlevering essentiele data elementen. Er is geen rechtstreekse mapping van de rubriek naar een PRN data element. </data>
+        </community>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10031" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="*" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10031" shortName="lokale_persoonsidentificatie">
+            <implementation shortName="lokale_persoonsidentificatie"></implementation>
+            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.1.10031" effectiveDate="2009-10-01T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.1" datasetEffectiveDate="2009-10-01T00:00:00" datasetStatusCode="deprecated" iType="item" iStatusCode="final" iEffectiveDate="2009-10-01T00:00:00" refdisplay="spirit1a-dataelement-10031"></inherit>
+            <name language="nl-NL">Lokale persoonsidentificatie</name>
+            <desc language="nl-NL">Unieke identificatie van de vrouw binnen de praktijk. Het betreft hier dus bijvoorbeeld het cliëntnummer voor de 1e lijn of het patiëntnummer voor de 2e lijn. </desc>
+            <valueDomain type="identifier"></valueDomain>
+            <community name="prn">
+                <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text"> 1.2.08</data>
+                <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Vrouw, PID nr in uw praktijk</data>
+            </community>
+            <community name="23Naar32">
+                <data type="Mapping" label="Zorginformatiebouwstenen" datatype="text">
+                    <div>nl.zorg.Patient,&#160;<span id="10762" title="EN: PatientIdentificationNumber">Identificatienummer ConceptId&#160;NL-CM:0.1.7</span>
+                    </div>
+                </data>
+            </community>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10035" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10035" shortName="naamgegevens">
+            <implementation shortName="naamgegevens"></implementation>
+            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.5.10035" effectiveDate="2013-09-10T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.5" datasetEffectiveDate="2013-09-10T00:00:00" datasetStatusCode="final" iType="group" iStatusCode="final" iEffectiveDate="2013-09-10T00:00:00" iVersionLabel="22" refdisplay="peri22-dataelement-10035"></inherit>
+            <name language="nl-NL">Naamgegevens</name>
+            <desc language="nl-NL">Naamgegevens van de vrouw.</desc>
+            <community name="prn">
+                <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text"> 1.2.02.01 t/m 1.2.02.05</data>
+            </community>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10042" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="*" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10042" shortName="voornamen">
+                <implementation shortName="voornamen"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10020" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10020"></inherit>
+                <name language="nl-NL">Voornamen</name>
+                <desc language="nl-NL">De verzameling officiële voornamen die bij de geboorte zijn vastgelegd.</desc>
+                <valueDomain type="string">
+                    <example>Johanna Henriette Maria</example>
+                </valueDomain>
+                <community name="prn">
+                    <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text">1.2.02.01</data>
+                    <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Vrouw, voorletters</data>
+                    <data type="prn13bijzonderheden" label="PRN dataset 1.3 bijzonderheden" datatype="text">PRN is alleen geïnteresseerd in de voorletters van de vrouw, niet in de hele voornaam.</data>
+                </community>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82359" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="*" isMandatory="false" iddisplay="peri23-dataelement-82359" shortName="initialen">
+                <implementation shortName="initialen"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10030" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10030"></inherit>
+                <name language="nl-NL">Initialen</name>
+                <desc language="nl-NL">Voorletters gebaseerd op de voornamen van de persoon.</desc>
+                <valueDomain type="string">
+                    <example>J.H.M.</example>
+                </valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82360" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="*" isMandatory="false" iddisplay="peri23-dataelement-82360" shortName="roepnaam">
+                <implementation shortName="roepnaam"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10040" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10040"></inherit>
+                <name language="nl-NL">Roepnaam</name>
+                <desc language="nl-NL">Naam, die de persoon voert en die niet de officiële naam is.</desc>
+                <valueDomain type="string">
+                    <example>Jet</example>
+                </valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82361" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-82361" shortName="achternaam">
+                <implementation shortName="achternaam"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10050" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="group" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10050"></inherit>
+                <name language="nl-NL">Achternaam</name>
+                <desc language="nl-NL">Container van het concept Geslachtsnaam en het concept Partnernaam.</desc>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82362" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-82362" shortName="soort_naam">
+                    <implementation shortName="soort_naam"></implementation>
+                    <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10060" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10060"></inherit>
+                    <name language="nl-NL">Soort naam</name>
+                    <desc language="nl-NL">Aanduiding die aangeeft welke functie de naam heeft.</desc>
+                    <valueDomain type="code">
+                        <conceptList id="2.16.840.1.113883.2.4.3.11.60.101.2.1.10060.0"></conceptList>
+                        <example>Geboortenaam partner</example>
+                    </valueDomain>
+                    <valueSet id="2.16.840.1.113883.2.4.3.11.60.101.11.9" name="AchternaamSoort" displayName="Achternaam soort" effectiveDate="2013-03-25T14:13:00" statusCode="final">
+                        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.101.2.1.10060.0" valueSet="2.16.840.1.113883.2.4.3.11.60.101.11.9"></terminologyAssociation>
+                        <sourceCodeSystem id="2.16.840.1.113883.5.43" identifierName="Entity&#160;Name&#160;Part&#160;Qualifier" canonicalUri="http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier" canonicalUriDSTU2="http://hl7.org/fhir/v3/EntityNamePartQualifier" canonicalUriSTU3="http://hl7.org/fhir/v3/EntityNamePartQualifier" canonicalUriR4="http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier"></sourceCodeSystem>
+                        <publishingAuthority name="KNOV">
+                            <addrLine>Koninklijke Nederlandse Organisatie van Verloskundigen</addrLine>
+                            <addrLine>Mercatorlaan 1200</addrLine>
+                            <addrLine>3528 BL Utrecht</addrLine>
+                            <addrLine>T 030 282 31 00</addrLine>
+                        </publishingAuthority>
+                        <conceptList id="2.16.840.1.113883.2.4.3.11.60.101.2.1.10060.0">
+                            <concept localId="1" code="BR" codeSystem="2.16.840.1.113883.5.43" displayName="Geslachtsnaam" level="0" type="L">
+                                <name language="nl-NL">Geslachtsnaam</name>
+                                <desc language="nl-NL">Geslachtsnaam</desc>
+                            </concept>
+                            <concept localId="2" code="SP" codeSystem="2.16.840.1.113883.5.43" displayName="Geslachtsnaam partner" level="0" type="L">
+                                <name language="nl-NL">Geslachtsnaam partner</name>
+                                <desc language="nl-NL">Geslachtsnaam partner</desc>
+                            </concept>
+                        </conceptList>
+                    </valueSet>
+                    <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.101.2.1.10060.0" valueSet="2.16.840.1.113883.2.4.3.11.60.101.11.9"></terminologyAssociation>
+                </concept>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82363" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-82363" shortName="voorvoegsel">
+                    <implementation shortName="voorvoegsel"></implementation>
+                    <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10070" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10070"></inherit>
+                    <name language="nl-NL">Voorvoegsel</name>
+                    <desc language="nl-NL">Deel van de achternaam dat het voorvoegsel bevat.</desc>
+                    <comment language="nl-NL">GBA tabel 36 is een opsomming van te gebruiken voorvoegsels zonder bijbehorende code. Het gebruik wordt aanbevolen, maar is niet verplicht. Bij vulling via de SBV-Z zullen de voorzetsels overeenkomen met tabel 36.</comment>
+                    <operationalization language="nl-NL">GBA tabel 36</operationalization>
+                    <valueDomain type="string">
+                        <example>van</example>
+                    </valueDomain>
+                </concept>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10043" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10043" shortName="achternaam">
+                    <implementation shortName="achternaam"></implementation>
+                    <inherit ref="2.16.840.1.113883.2.4.3.11.60.101.2.1.10080" effectiveDate="2013-03-25T21:46:30" prefix="naw-" datasetId="2.16.840.1.113883.2.4.3.11.60.101.1.1" datasetEffectiveDate="2013-03-25T14:13:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-03-25T21:46:30" refdisplay="naw-dataelement-10080"></inherit>
+                    <name language="nl-NL">Achternaam</name>
+                    <desc language="nl-NL">De achternaam van een persoon die bij de geboorte is vastgelegd. Afhankeljk van de soort naam is dit de geboortenaam van de persoon of van de partner</desc>
+                    <valueDomain type="string">
+                        <example>Putten</example>
+                    </valueDomain>
+                    <community name="prn">
+                        <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text">1.2.02.02, 1.2.02.03, 1.2.02.04 en 1.2.02.05</data>
+                        <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Vrouw, meisjesachternaam<br clear="none" />Vrouw, tussenvoegsel meisjesachternaam<br clear="none" />Vrouw, naam partner/huwelijksnaam<br clear="none" />Vrouw, tussenvoegsel naam partner/huwelijksnaam<br clear="none" /><br clear="none" />PRN verwacht de gehele uitwerking uit de persoonsgegevens conform HL7 CMET.</data>
+                    </community>
+                </concept>
+            </concept>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10040" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10040" shortName="geboortedatum">
+            <implementation shortName="geboortedatum"></implementation>
+            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.5.10040" effectiveDate="2013-09-10T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.5" datasetEffectiveDate="2013-09-10T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2013-09-10T00:00:00" refdisplay="peri22-dataelement-10040"></inherit>
+            <name language="nl-NL">Geboortedatum</name>
+            <desc language="nl-NL">Geboortedatum.<br clear="none" /><br clear="none" />Indien de dag en/of maand van de geboortedatum niet bekend zijn, vult u dit in als 01-01-xxxx. Wanneer het geboortejaar ook onbekend is, is schatten van het geboortejaar toegestaan.</desc>
+            <valueDomain type="date">
+                <property timeStampPrecision="YMD"></property>
+            </valueDomain>
+            <community name="prn">
+                <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text"> 1.2.04</data>
+                <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Vrouw, geboortedatum</data>
+                <data type="prn13bijzonderheden" label="PRN dataset 1.3 bijzonderheden" datatype="text">Voor PRN is een volledige datum gewenst. In geval van onbekend graag 1-1-1900.</data>
+            </community>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10300" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10300" shortName="adres">
+            <implementation shortName="adres"></implementation>
+            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1200" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="group" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1200"></inherit>
+            <name language="nl-NL">Adres</name>
+            <desc language="nl-NL">Adres</desc>
+            <community name="prn">
+                <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Voor PRN is uit de rubriek adres alleen de postcode relevant. Die wordt uit de HL7 v3 componenten van de XML geextraheerd. </data>
+            </community>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10301" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10301" shortName="straatnaam">
+                <implementation shortName="straatnaam"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1205" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1205"></inherit>
+                <name language="nl-NL">Straatnaam</name>
+                <desc language="nl-NL">Straatnaam (zonder nummer) van het adres</desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10302" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10302" shortName="huisnummer">
+                <implementation shortName="huisnummer"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1210" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1210"></inherit>
+                <name language="nl-NL">Huisnummer</name>
+                <desc language="nl-NL">Huisnummer van het adres. Het is verplicht indien de straatnaam ook wordt doorgegeven.</desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10303" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" isMandatory="false" iddisplay="peri23-dataelement-10303" shortName="huisletterhuisnummertoevoeging">
+                <implementation shortName="huisletterhuisnummertoevoeging"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1215" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1215"></inherit>
+                <name language="nl-NL">Huisletter/huisnummertoevoeging</name>
+                <desc language="nl-NL">Huisletter/huisnummertoevoeging van het huisnummer</desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10304" statusCode="final" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10304" shortName="postcode">
+                <implementation shortName="postcode"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1220" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1220"></inherit>
+                <name language="nl-NL">Postcode</name>
+                <desc language="nl-NL">Postcode van het adres</desc>
+                <valueDomain type="string"></valueDomain>
+                <community name="prn">
+                    <data type="prn13mapping" label="PRN dataset 1.3 mapping" datatype="text">1.2.05</data>
+                    <data type="prn13info" label="PRN dataset 1.3 info" datatype="text">Vrouw, postcode</data>
+                    <data type="prn13bijzonderheden" label="PRN dataset 1.3 bijzonderheden" datatype="text">In principe gaat het bij PRN alleen om Nederlandse postcodes (4 cijfers, 2 letters). Voor de Antillen zijn echter ook postcodes bedacht: <br clear="none" />Aruba: 0000 AR<br clear="none" />Bonaire: 0000 BO<br clear="none" />Curacao: 0000 CU<br clear="none" />Saba: 0000 SA<br clear="none" />St. Eustatius: 0000 SE<br clear="none" />St Maarten: 0000 SM</data>
+                </community>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10305" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri23-dataelement-10305" shortName="plaatsnaam">
+                <implementation shortName="plaatsnaam"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1225" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1225"></inherit>
+                <name language="nl-NL">Plaatsnaam</name>
+                <desc language="nl-NL">Plaatsnaam als onderdeel van het adres; De naam van een stad, dorp of ander woongebied of bezorgcentrum. Merk op: dit is de woonplaats, niet de eventuele gemeente waartoe de woonplaats behoort. Voorbeeld: Haren, gemeente Groningen.</desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10306" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" isMandatory="false" iddisplay="peri23-dataelement-10306" shortName="gemeentenaam">
+                <implementation shortName="gemeentenaam"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1230" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1230"></inherit>
+                <name language="nl-NL">Gemeentenaam</name>
+                <desc language="nl-NL">Gemeentenaam als onderdeel van het adres; In Nederland wordt dit element gebruikt om de gemeente door te geven (in andere landen kan een ander type administratieve eenheid binnen een staat/provincie gebruikt worden). De gemeente kan, maar hoeft niet, overeen te komen met de stad. Sommige gemeenten, bijvoorbeeld "Waterland", hebben een naam die geheel afwijkt van de steden die erin gelegen zijn. </desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10307" statusCode="pending" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" isMandatory="false" iddisplay="peri23-dataelement-10307" shortName="land">
+                <implementation shortName="land"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1235" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1235"></inherit>
+                <name language="nl-NL">Land</name>
+                <desc language="nl-NL">Land</desc>
+                <valueDomain type="string"></valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10308" statusCode="draft" effectiveDate="2016-09-08T00:00:00" type="item" minimumMultiplicity="0" maximumMultiplicity="1" isMandatory="false" iddisplay="peri23-dataelement-10308" shortName="adrestype">
+                <implementation shortName="adrestype"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.4.1240" effectiveDate="2012-08-06T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.4" datasetEffectiveDate="2012-08-06T00:00:00" datasetStatusCode="final" iType="item" iStatusCode="final" iEffectiveDate="2012-08-06T00:00:00" refdisplay="peri21-dataelement-1240"></inherit>
+                <name language="nl-NL">Adrestype</name>
+                <desc language="nl-NL">Adrestype</desc>
+                <valueDomain type="code">
+                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.0">
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.1">
+                            <name language="nl-NL">thuisadres</name>
+                            <desc language="nl-NL">Het primaire thuisadres</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.2">
+                            <name language="nl-NL">bezoekadres</name>
+                            <desc language="nl-NL">Het primaire telecommunicatiecontact, om een persoon te bereiken, kan meerdere malen voorkomen</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.3">
+                            <name language="nl-NL">postadres</name>
+                            <desc language="nl-NL">Gebruikt om post naar te sturen; voorbeeld: postbusnummer, antwoordnummer, (voor personen) postadres dat anders is dan verblijfsadres</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.4">
+                            <name language="nl-NL">vakantie huis</name>
+                            <desc language="nl-NL">Een vakantiehuis, om een persoon te bereiken tijdens de vakantie</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.5">
+                            <name language="nl-NL">fysiek woonadres</name>
+                            <desc language="nl-NL">Een adres dat bezocht kan worden (dus bijvoorbeeld geen postbus</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.6">
+                            <name language="nl-NL">tijdelijk adres</name>
+                            <desc language="nl-NL">Een tijdelijk adres</desc>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.7">
+                            <name language="nl-NL">tijdelijk fysiek woonadres</name>
+                            <desc language="nl-NL">Een tijdelijk bezoekadres, om bijvoorbeeld materiaal af te nemen zodat hierop uitslagen kunnen worden gegenereerd</desc>
+                        </concept>
+                    </conceptList>
+                </valueDomain>
+                <valueSet>
+                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.8.4.1240.0"></conceptList>
+                </valueSet>
+            </concept>
+        </concept>
+    </concept>
+</dataset>
