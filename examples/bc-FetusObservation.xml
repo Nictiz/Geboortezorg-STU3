@@ -1,0 +1,41 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="[[reference to the fetus | BodySite/fetus]]" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="249062004"/>
+            <display value="Lie of fetus"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/Example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/dossier-example"/>
+        <display value="Zwangershcap"/>
+    </context>
+    <performer>
+        <reference value="Practitioner/example" />
+        <display value="Vera de Los" />
+    </performer>
+    [[#observation.value see below]]
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="70028003"/>
+            <display value="Vertex presentation (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+    [[/observation.value]]
+</Observation>

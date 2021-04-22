@@ -7,20 +7,49 @@
     <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-child"/>
   </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/birthPlace">
+    <valueAddress>
+      <line value="Dorpstraat 80A">
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+          <valueString value="Dorpstraat"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+          <valueString value="80"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+          <valueString value="A"/>
+        </extension>
+      </line>
+      <city value="Spanbroek"/>
+      <district value="Opmeer"/>
+      <postalCode value="1234XY"/>
+      <country value="NLD">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34"/>
+              <code value="6030"/>
+              <display value="Nederland"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </country>
+    </valueAddress>
+  </extension>
   <identifier>
-    <use value="official" />
-    <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
-    <value value="12345678" />
+    <use value="official"/>
+    <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
+    <value value="12345678"/>
   </identifier>
   <identifier>
-    <use value="official" />
-    <system value="LocalIdentifierSystem" />
-    <value value="123456" />
+    <use value="official"/>
+    <system value="LocalIdentifierSystem"/>
+    <value value="123456"/>
   </identifier>
   <identifier>
-    <use value="official" />
-    <system value="PRN" />
-    <value value="0011223344201708012" />
+    <use value="official"/>
+    <system value="PRN"/>
+    <value value="0011223344201708012"/>
   </identifier>
   <active value="true"/>
   <name>
@@ -45,7 +74,7 @@
   <gender value="male">
     <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
       <valueCodeableConcept>
-        <coding>     
+        <coding>
           <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
           <code value="M"/>
           <display value="Male"/>
@@ -57,11 +86,38 @@
         <coding>
           <system value="Medisch"/>
           <code value="1"/>
-          <display value="mannelijk"/>          
+          <display value="mannelijk"/>
         </coding>
       </valueCodeableConcept>
     </extension>
   </gender>
   <birthDate value="2017-08-12"/>
+  <address>
+    <line value="Dorpstraat 80A">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Dorpstraat"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="80"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+        <valueString value="A"/>
+      </extension>
+    </line>
+    <city value="Spanbroek"/>
+    <district value="Opmeer"/>
+    <postalCode value="1234XY"/>
+    <country value="NLD">
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34"/>
+            <code value="6030"/>
+            <display value="Nederland"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
   <multipleBirthInteger value="2"/>
 </Patient>
