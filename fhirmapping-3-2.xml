@@ -1711,6 +1711,13 @@
 		<in>true</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3358</ID>
+		<naam>MeerlingIndicator</naam>
+		<mapping>Patient.multipleInteger</mapping>
+		<profile>nl-core-patient</profile>
+		<in>true</in>
+	</record>
+	<record>
 		<ID>peri32-dataelement-685</ID>
 		<naam>MeerlingIndicator</naam>
 		<mapping>Patient.multipleBirthBoolean</mapping>
@@ -2216,10 +2223,29 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-1314</ID>
-		<naam> Zorgverlening</naam>
-		<mapping>nvt</mapping>
-		<profile>nvt</profile>
-		<in>nvt</in>
+		<naam>Zorgverlening</naam>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3399</ID>
+		<naam>ZorgEpisode</naam>
+		<mapping>EpisodeOfCare</mapping>
+		<profile>bc-MaternalRecord</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3400</ID>
+		<naam>BeginDatum</naam>
+		<mapping>EpisodeOfCare.period.start</mapping>
+		<profile>bc-MaternalRecord</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3401</ID>
+		<naam>EindDatum</naam>
+		<mapping>EpisodeOfCare.period.end</mapping>
+		<profile>bc-MaternalRecord</profile>
+		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1350</ID>
@@ -3785,30 +3811,37 @@
 	<record>
 		<ID>peri32-dataelement-1165</ID>
 		<naam>Voorschrijver</naam>
-		<mapping>MedicationUse.extension:prescriber</mapping>
+		<mapping>MedicationStatement.extension:prescriber</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.23290</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1166</ID>
+		<ID>peri32-dataelement-3494</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>MedicationUse.extension:prescriber</mapping>
-		<profile>zib-MedicationUse</profile>
+		<mapping>Practitioner</mapping>
+		<profile>nl-core-practitioner</profile>
 		<in>true</in>
-		<zib>NL-CM-2017-116</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1167</ID>
 		<naam>Gebruiksproduct</naam>
-		<mapping>MedicationUse.medicationReference</mapping>
+		<mapping>MedicationStatement.medicationReference</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1695</ID>
 		<naam>FarmaceutischProduct</naam>
-		<mapping>MedicationUse.medicationReference</mapping>
+		<mapping>MedicationStatement.medicationReference</mapping>
+		<profile>zib-MedicationUse</profile>
+		<in>true</in>
+		<zib>peri32-dataelement-1684</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3493</ID>
+		<naam>GebruiksInstructie</naam>
+		<mapping>MedicationStatement.dosage</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-1684</zib>
@@ -3816,7 +3849,7 @@
 	<record>
 		<ID>peri32-dataelement-1171</ID>
 		<naam>MedicatieGebruikDatumTijd</naam>
-		<mapping>MedicationUse.dateAsserted</mapping>
+		<mapping>MedicationStatement.dateAsserted</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.22398</zib>
@@ -3824,14 +3857,14 @@
 	<record>
 		<ID>peri32-dataelement-1172</ID>
 		<naam>Gebruiksperiode</naam>
-		<mapping>MedicationUse.effectivePeriod</mapping>
+		<mapping>MedicationStatement.effectivePeriod</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1696</ID>
 		<naam>TijdsInterval</naam>
-		<mapping>MedicationUse.effectivePeriod</mapping>
+		<mapping>MedicationStatement.effectivePeriod</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-1333</zib>
@@ -3839,7 +3872,7 @@
 	<record>
 		<ID>peri32-dataelement-1174</ID>
 		<naam>VolgensAfspraakIndicator</naam>
-		<mapping>MedicationUse.extension:asAgreedIndicator</mapping>
+		<mapping>MedicationStatement.extension:asAgreedIndicator</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.22492</zib>
@@ -3847,7 +3880,7 @@
 	<record>
 		<ID>peri32-dataelement-1175</ID>
 		<naam>GebruikIndicator</naam>
-		<mapping>MedicationUse.taken</mapping>
+		<mapping>MedicationStatement.taken</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.22399</zib>
@@ -3855,7 +3888,7 @@
 	<record>
 		<ID>peri32-dataelement-1176</ID>
 		<naam>RedenGebruik</naam>
-		<mapping>MedicationUse.reasonCode.text</mapping>
+		<mapping>MedicationStatement.reasonCode.text</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.22491</zib>
@@ -3863,7 +3896,7 @@
 	<record>
 		<ID>peri32-dataelement-1177</ID>
 		<naam>MedicatieGebruikStopType</naam>
-		<mapping>MedicationUse.status</mapping>
+		<mapping>MedicationStatement.status</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>VALIDEREN</in>
 		<zib>NL-CM-9.11.23132</zib>
@@ -3871,7 +3904,7 @@
 	<record>
 		<ID>peri32-dataelement-1178</ID>
 		<naam>RedenWijzigenOfStoppenGebruik</naam>
-		<mapping>MedicationUse.extension:reasonForChangeOrDiscontinuationOfUse</mapping>
+		<mapping>MedicationStatement.extension:reasonForChangeOrDiscontinuationOfUse</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.22493</zib>
@@ -3879,7 +3912,7 @@
 	<record>
 		<ID>peri32-dataelement-1179</ID>
 		<naam>Toelichting</naam>
-		<mapping>MedicationUse.note</mapping>
+		<mapping>MedicationStatement.note</mapping>
 		<profile>zib-MedicationUse</profile>
 		<in>true</in>
 		<zib>NL-CM-9.11.21624</zib>
@@ -3916,38 +3949,24 @@
 		<zib>peri32-dataelement-1667</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1697</ID>
-		<naam>BMI (Meting)</naam>
+		<ID>peri32-dataelement-3427</ID>
+		<naam>Body Mass Index (BMI) (Meting)</naam>
 		<mapping>Observation</mapping>
-		<profile>nieuw</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2282</ID>
-		<naam>BMIDatumTijd</naam>
+		<ID>peri32-dataelement-3433</ID>
+		<naam>BMIDatumBeginTijd</naam>
 		<mapping>Observation.effectiveDateTime</mapping>
-		<profile>nieuw</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2283</ID>
-		<naam>BMImethode</naam>
-		<mapping>Observation.method</mapping>
-		<profile>nieuw</profile>
-		<in>false</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2285</ID>
+		<ID>peri32-dataelement-3429</ID>
 		<naam>BMIWaarde</naam>
 		<mapping>Observation.valueQuantity</mapping>
-		<profile>nieuw</profile>
-		<in>false</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2287</ID>
-		<naam>Toelichting</naam>
-		<mapping>Observation.comment</mapping>
-		<profile>nieuw</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
@@ -5073,6 +5092,12 @@
 		<in>true</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3408</ID>
+		<naam>Zwangerschapsduur</naam>
+		<mapping>Observation.valueQuantity</mapping>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>	
+	</record>
+	<record>
 		<ID>peri32-dataelement-1185</ID>
 		<naam>ProbleemBeginDatum</naam>
 		<mapping>nvt</mapping>
@@ -5099,8 +5124,8 @@
 	<record>
 		<ID>peri32-dataelement-1188</ID>
 		<naam>VerificatieStatus</naam>
-		<mapping>nvt</mapping>
-		<profile>nvt</profile>
+		<mapping>Condition.verificationStatus</mapping>
+		<profile>zib-Pregnancy</profile>
 		<in>nvt</in>
 		<zib>NL-CM-5.1.10</zib>
 	</record>
@@ -5295,23 +5320,93 @@
 		<in>true</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3411</ID>
+		<naam>Partusnummer</naam>
+		<mapping>Procedure.identifier</mapping>
+		<profile>bc-DeliveryProcedure</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3972</ID>
+		<naam>Zwangerschapsduur</naam>
+		<mapping>Observation.valueQuantity</mapping>
+		<profile>bc-PregnancyObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
 		<ID>peri32-dataelement-38</ID>
 		<naam>Ontsluitingsfase</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping></mapping>
+		<profile></profile>
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1524</ID>
-		<naam>Datum/Tijd begin actieve ontsluiting</naam>
+		<ID>peri32-dataelement-4084</ID>
+		<naam>Actieve Ontsluiting (Observatie)</naam>
+		<mapping>Observation.code</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4085</ID>
+		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.valueDateTime</mapping>
 		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1527</ID>
-		<naam>Wijze begin baring</naam>
+		<ID>peri32-dataelement-4087</ID>
+		<naam>BeginActieveOntsluitingWaarde</naam>
+		<mapping>Observation.valueDateTime</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4088</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4095</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4096</ID>
+		<naam>Wijze Begin Baring (Observatie)</naam>
+		<mapping>Observation</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4097</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effectiveDateTime</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4099</ID>
+		<naam>BeginBaringWaarde</naam>
 		<mapping>Observation.valueCodeableConcept</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4100</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4107</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
 		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 	</record>
@@ -5543,8 +5638,8 @@
 	<record>
 		<ID>peri32-dataelement-39</ID>
 		<naam>Uitdrijvingsfase</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping></mapping>
+		<profile></profile>
 		<in>false</in>
 	</record>
 	<record>
@@ -5555,9 +5650,37 @@
 		<in>true</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1589</ID>
-		<naam>Type partus</naam>
+		<ID>peri32-dataelement-4144</ID>
+		<naam>Type partus (Observatie)</naam>
+		<mapping>Observation.code</mapping>
+		<profile>bc-BirthObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4145</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effectiveDateTime</mapping>
+		<profile>bc-BirthObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4147</ID>
+		<naam>TypePartusWaarde</naam>
 		<mapping>Observation.valueCodeableConcept</mapping>
+		<profile>bc-BirthObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4148</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-BirthObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4155</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
 		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 	</record>
@@ -5833,14 +5956,49 @@
 		<zib>peri32-dataelement-978</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1586</ID>
-		<naam>Aantal geboren kinderen</naam>
-		<mapping>Observation.valueQuantity</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<ID>peri32-dataelement-4181</ID>
+		<naam>Aantal Geboren Kinderen (Observatie)</naam>
+		<mapping>Observation.code</mapping>
+		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-1585</ID>
+		<ID>peri32-dataelement-4182</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effectiveDateTime</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4184</ID>
+		<naam>AantalGeborenKinderenWaarde</naam>
+		<mapping>Observation.valueQuantity</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4185</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4192</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-DeliveryObservation</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4193</ID>
+		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
+		<mapping>Encounter.class.extension:actualPlaceOfBirth</mapping>
+		<profile>bc-ChildBirthAssistance</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-4196</ID>
 		<naam>Werkelijke plaats baring (type locatie)</naam>
 		<mapping>Encounter.class.extension:actualPlaceOfBirth</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
@@ -8963,6 +9121,27 @@
 		<profile>zib-LaboratoryTestResult-Observation</profile>
 		<in>false</in>
 		<zib>NL-CM-13.1.14</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3501</ID>
+		<naam>Irregulaire antistoffen (Observatie)</naam>
+		<mapping>Observation</mapping>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3503</ID>
+		<naam>IrregulaireAntistoffenWaarde</naam>
+		<mapping>Observation.valueBoolean</mapping>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3504</ID>
+		<naam>WelkeAntistoffenWaarde</naam>
+		<mapping>Observation.valueCodeableConcept</mapping>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2379</ID>
