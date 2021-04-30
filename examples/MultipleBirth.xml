@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+   <id value="example-meerlingzwangerschap"/>
+   <meta>
+      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+   </meta>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+      <valueReference>
+         <reference value="Condition/Zwangerschap"/>
+      </valueReference>
+   </extension>
+   <status value="final"/>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="65147003"/>
+         <display value="tweelingzwangerschap (aandoening)"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/EXAMPLE"/>
+      <display value="example"/>
+   </subject>
+   <context>
+      <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
+   </context>
+   <effectiveDateTime value="2020-04-15+02:00"/>
+   <valueCodeableConcept>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="459171002"/>
+         <display value="monochoriale monoamniotische tweelingzwangerschap (aandoening)"/>
+      </coding>
+   </valueCodeableConcept>
+   <comment value="Geen bijzonderheden"/>
+   <method>
+      <coding>
+         <system value="https://snomed.info/sct"/>
+         <code value=" 	418799008"/>
+         <display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)"/>
+      </coding>
+   </method>
+   <related>
+      <target value="Observation/example-aantalfoetussen"/>
+   </related>
+</Observation>
