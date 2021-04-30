@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--auto generated example-->
+<Observation xmlns="http://hl7.org/fhir">
+   <id value="example-aantal-levende-kinderen"/>
+   <meta>
+      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+   </meta>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+      <valueReference>
+         <reference value="Condition/Zwangerschap"/>
+      </valueReference>
+   </extension>
+   <status value="final"/>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="143881000146107"/>
+         <display value="aantal levende nakomelingen (waarneembare entiteit)"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/EXAMPLE"/>
+      <display value="example"/>
+   </subject>
+   <context>
+      <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
+   </context>
+   <effectiveDateTime value="2020-04-15+02:00"/>
+   <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+   </valueQuantity>
+   <comment value="Gezonde nakomeling"/>
+   <method>
+      <coding>
+         <system value="https://snomed.info/sct"/>
+         <code value=" 	418799008"/>
+         <display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)"/>
+      </coding>
+   </method>
+</Observation>
