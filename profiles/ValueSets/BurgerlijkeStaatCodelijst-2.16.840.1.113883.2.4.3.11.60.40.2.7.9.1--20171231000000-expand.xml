@@ -1,0 +1,185 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2017-12-31T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1"/>
+    </identifier>
+    <version value="2017-12-31T00:00:00"/>
+    <name value="BurgerlijkeStaatCodelijst"/>
+    <title value="BurgerlijkeStaatCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="BurgerlijkeStaatCodelijst"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Gescheiden (huwelijk/geregistreerd partnerschap ontbonden)"/>
+                </extension>
+                <code value="D"/>
+                <display value="Divorced"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Gescheiden"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="M"/>
+                <display value="Married"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Gehuwd"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="S"/>
+                <display value="Never Married"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Nooit gehuwd geweest/ geregistreerd partnerschap gehad"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="T"/>
+                <display value="Domestic partner"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Geregistreerd partnerschap"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="W"/>
+                <display value="Widowed"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Weduwe/weduwnaar"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:e48af300-406b-4172-a8cf-d0f754dc2c9c"/>
+        <timestamp value="2021-05-07T16:41:47.398+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <code value="D"/>
+            <display value="Divorced"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Gescheiden"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <code value="M"/>
+            <display value="Married"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Gehuwd"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <code value="S"/>
+            <display value="Never Married"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Nooit gehuwd geweest/ geregistreerd partnerschap gehad"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <code value="T"/>
+            <display value="Domestic partner"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Geregistreerd partnerschap"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+            <code value="W"/>
+            <display value="Widowed"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Weduwe/weduwnaar"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

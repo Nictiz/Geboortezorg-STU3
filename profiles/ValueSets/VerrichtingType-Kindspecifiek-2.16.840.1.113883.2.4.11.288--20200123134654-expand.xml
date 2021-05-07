@@ -1,0 +1,316 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.288--20200123134654"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-01-23T13:46:54+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.288--20200123134654"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.288"/>
+    </identifier>
+    <version value="2020-01-23T13:46:54"/>
+    <name value="VerrichtingType-Kindspecifiek"/>
+    <title value="VerrichtingType_Kindspecifiek"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="VerrichtingType_Kindspecifiek"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="80771000146107"/>
+                <display value="primaire sectio caesarea (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="80801000146105"/>
+                <display value="secundaire sectio caesarea (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="302383004"/>
+                <display value="kunstverlossing met forceps (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="61586001"/>
+                <display value="kunstverlossing met vacuümextractie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="699999008"/>
+                <display value="obstetrische versie met extractie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="359940006"/>
+                <display value="extractie van foetus in half volkomen stuitligging (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="416055001"/>
+                <display value="stuitextractie van foetus in volkomen stuitligging (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="40792007"/>
+                <display value="fundusexpressie volgens Kristeller"/>
+            </concept>
+            <concept>
+                <code value="237009004"/>
+                <display value="handgreep van McRoberts (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="237010009"/>
+                <display value="suprapubische impressie op schouder van foetus (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="237012001"/>
+                <display value="afhalen van achterste arm (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="237011008"/>
+                <display value="handgreep van Woods (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="272541000"/>
+                <display value="geknield op één knie (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="32189006"/>
+                <display value="symfysiotomie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="5880005:370131001=133931009"/>
+                <display value="Lichamelijk onderzoek zuigeling"/>
+            </concept>
+            <concept>
+                <code value="57485005"/>
+                <display value="zuurstoftherapie (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="313191000"/>
+                <display value="injectie van adrenaline (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="182686001"/>
+                <display value="endotracheale ademhalingsondersteuning (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="428311008"/>
+                <display value="non-invasieve beademing (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="33631000146101"/>
+                <display value="mechanische thoraxcompressies (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="698350008:370131001=133933007"/>
+                <display value="vitamine K toediening aan neonaat"/>
+            </concept>
+            <concept>
+                <code value="16584000"/>
+                <display value="vaccinatie tegen hepatitis B (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="116800003"/>
+                <display value="toedienen van humaan hepatitis-B-immunoglobuline (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="28520004:370131001=133933007"/>
+                <display value="bloedafname bij neonaat"/>
+            </concept>
+            <concept>
+                <code value="183517000"/>
+                <display value="verwijzen naar kinderarts (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="243140006"/>
+                <display value="inflatie van long door intermitterende compressie van reservoirballon"/>
+            </concept>
+            <concept>
+                <code value="830077005"/>
+                <display value="opname op intensivecareafdeling gespecialiseerd in neonaten (verrichting)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:680ed812-ad79-477d-9777-65ce05ef52ec"/>
+        <timestamp value="2021-05-07T16:42:27.87+02:00"/>
+        <total value="32"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="11466000"/>
+            <display value="sectio caesarea (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="80771000146107"/>
+            <display value="primaire sectio caesarea (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="80801000146105"/>
+            <display value="secundaire sectio caesarea (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="3311000146109"/>
+            <display value="geassisteerde vaginale verlossing (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="302383004"/>
+            <display value="kunstverlossing met forceps (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="61586001"/>
+            <display value="kunstverlossing met vacuümextractie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="699999008"/>
+            <display value="obstetrische versie met extractie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="359940006"/>
+            <display value="extractie van foetus in half volkomen stuitligging (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="416055001"/>
+            <display value="stuitextractie van foetus in volkomen stuitligging (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="40792007"/>
+            <display value="fundusexpressie volgens Kristeller"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="237008007"/>
+            <display value="handgrepen voor partus bij schouderdystocie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="237009004"/>
+            <display value="handgreep van McRoberts (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="237010009"/>
+            <display value="suprapubische impressie op schouder van foetus (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="237012001"/>
+            <display value="afhalen van achterste arm (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="237011008"/>
+            <display value="handgreep van Woods (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="272541000"/>
+            <display value="geknield op één knie (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="32189006"/>
+            <display value="symfysiotomie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="5880005:370131001=133931009"/>
+            <display value="Lichamelijk onderzoek zuigeling"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <abstract value="true"/>
+            <code value="59201000146107"/>
+            <display value="ondersteunende therapie voor opname (regime/therapie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="57485005"/>
+            <display value="zuurstoftherapie (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="313191000"/>
+            <display value="injectie van adrenaline (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="182686001"/>
+            <display value="endotracheale ademhalingsondersteuning (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="428311008"/>
+            <display value="non-invasieve beademing (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="33631000146101"/>
+            <display value="mechanische thoraxcompressies (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="698350008:370131001=133933007"/>
+            <display value="vitamine K toediening aan neonaat"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="16584000"/>
+            <display value="vaccinatie tegen hepatitis B (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="116800003"/>
+            <display value="toedienen van humaan hepatitis-B-immunoglobuline (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="28520004:370131001=133933007"/>
+            <display value="bloedafname bij neonaat"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="183517000"/>
+            <display value="verwijzen naar kinderarts (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="243140006"/>
+            <display value="inflatie van long door intermitterende compressie van reservoirballon"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="830077005"/>
+            <display value="opname op intensivecareafdeling gespecialiseerd in neonaten (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

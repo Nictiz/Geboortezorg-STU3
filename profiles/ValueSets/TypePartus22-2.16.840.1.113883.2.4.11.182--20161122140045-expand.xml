@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2016-11-22T14:00:45+01:00"/>
+            <start value="2016-11-22T14:00:45+02:00"/>
         </valuePeriod>
     </extension>
     <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045"/>
@@ -29,31 +29,31 @@
             <system value="http://snomed.info/sct"/>
             <concept>
                 <code value="177184002"/>
-                <display value="Normal delivery procedure (procedure)"/>
+                <display value="begeleiding van normale bevalling (verrichting)"/>
             </concept>
             <concept>
                 <code value="3311000146109"/>
-                <display value="Assisted delivery of fetus (procedure)"/>
+                <display value="geassisteerde vaginale verlossing (verrichting)"/>
             </concept>
             <concept>
                 <code value="11466000"/>
-                <display value="Cesarean section (procedure)"/>
+                <display value="sectio caesarea (verrichting)"/>
             </concept>
             <concept>
                 <code value="177141003"/>
-                <display value="Elective cesarian delivery (procedure)"/>
+                <display value="electieve sectio caesarea (verrichting)"/>
             </concept>
             <concept>
                 <code value="274130007"/>
-                <display value="Emergency cesarian section (procedure)"/>
+                <display value="spoedkeizersnede (verrichting)"/>
             </concept>
             <concept>
                 <code value="447972007"/>
-                <display value="Medical termination of pregnancy using prostaglandin (procedure)"/>
+                <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
             </concept>
             <concept>
                 <code value="236990004"/>
-                <display value="Postmortem cesarean section (procedure)"/>
+                <display value="postmortale keizersnede (verrichting)"/>
             </concept>
         </include>
         <include>
@@ -66,6 +66,9 @@
         <include>
             <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Overige TOP (Termination of Pregnancy - zwangerschapsafbreking ná 16 weken)"/>
+                </extension>
                 <code value="9"/>
                 <display value="Overig"/>
             </concept>
@@ -79,33 +82,33 @@
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:01e47d59-12af-4edd-a739-3798c585abc9"/>
-        <timestamp value="2020-11-23T15:39:33.441+01:00"/>
+        <identifier value="urn:uuid:d629753b-666d-4099-a9c9-b69b761a7b54"/>
+        <timestamp value="2021-05-07T16:42:06.072+02:00"/>
         <total value="10"/>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="177184002"/>
-            <display value="Normal delivery procedure (procedure)"/>
+            <display value="begeleiding van normale bevalling (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="3311000146109"/>
-            <display value="Assisted delivery of fetus (procedure)"/>
+            <display value="geassisteerde vaginale verlossing (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="11466000"/>
-            <display value="Cesarean section (procedure)"/>
+            <display value="sectio caesarea (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="177141003"/>
-            <display value="Elective cesarian delivery (procedure)"/>
+            <display value="electieve sectio caesarea (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="274130007"/>
-            <display value="Emergency cesarian section (procedure)"/>
+            <display value="spoedkeizersnede (verrichting)"/>
         </contains>
         <contains>
             <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
@@ -115,12 +118,12 @@
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="447972007"/>
-            <display value="Medical termination of pregnancy using prostaglandin (procedure)"/>
+            <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="236990004"/>
-            <display value="Postmortem cesarean section (procedure)"/>
+            <display value="postmortale keizersnede (verrichting)"/>
         </contains>
         <contains>
             <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
