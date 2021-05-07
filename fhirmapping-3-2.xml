@@ -5099,14 +5099,16 @@
 		<ID>peri32-dataelement-1776</ID>
 		<naam>Foetale hartslag (Hartfrequentie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1778</ID>
 		<naam>HartfrequentieDatumTijd</naam>
 		<mapping>Observation.effectiveDateTime</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 		<zib>NL-CM-12.3.4</zib>
 	</record>
@@ -5114,35 +5116,40 @@
 		<ID>peri32-dataelement-1777</ID>
 		<naam>HartfrequentieWaarde</naam>
 		<mapping>Observation.valueQuantity</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1779</ID>
 		<naam>HartslagMeetMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1781</ID>
 		<naam>HartslagRegelmatigheid</naam>
-		<mapping>Observation.component of interpretation?</mapping>
-		<profile>bc-FetusObservation</profile>
+		<mapping>Observation.component</mapping>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1782</ID>
 		<naam>InterpretatieFrequentie</naam>
 		<mapping>Observation.interpretation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1780</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-FetalHeartRate</profile>
+		<example>https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag</example>
 		<in>false</in>
 		<zib>NL-CM-12.3.3</zib>
 	</record>
@@ -5461,7 +5468,7 @@
 		<ID>peri32-dataelement-3972</ID>
 		<naam>Zwangerschapsduur</naam>
 		<mapping>Observation.valueQuantity</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
 		<in>true</in>
 	</record>
 	<record>
@@ -6134,22 +6141,22 @@
 	<record>
 		<ID>peri32-dataelement-4193</ID>
 		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
-		<mapping>Encounter.class.extension:actualPlaceOfBirth</mapping>
-		<profile>bc-ChildBirthAssistance</profile>
+		<mapping>Observation</mapping>
+		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4196</ID>
 		<naam>Werkelijke plaats baring (type locatie)</naam>
-		<mapping>Encounter.class.extension:actualPlaceOfBirth</mapping>
-		<profile>bc-ChildBirthAssistance</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1587</ID>
 		<naam>Ziekenhuis baring</naam>
-		<mapping>Encounter.serviceProvider</mapping>
-		<profile>bc-ChildBirthAssistance</profile>
+		<mapping>Procedure.performer.actor/onBehalfOf</mapping>
+		<profile>bc-DeliveryProcedure</profile>
 		<in>true</in>
 	</record>
 	<record>
@@ -8276,7 +8283,7 @@
 		<ID>peri32-dataelement-2436</ID>
 		<naam>Zwangerschapsduur</naam>
 		<mapping>Observation.valueQuantity</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-1707</zib>
 	</record>
