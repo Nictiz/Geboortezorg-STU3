@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--auto generated example-->
 <Condition xmlns="http://hl7.org/fhir">
    <id value="example-niet-vorderende-ontsluitingq-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82533"/>
    <meta>
@@ -27,10 +26,13 @@
       </coding>
    </code>
    <subject>
-      <reference value="Patient/EXAMPLE"/>
-      <display value="example"/>
+      <reference value="Patient/XXX-VDWOUDEN" />
+      <display value="Patient van der Wouden" />
    </subject>
    <context>
-      <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
+      <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+      <display value="zwangerschap Wouden 1"/>
    </context>
+   <onsetDateTime value="2015-02-20"/>
+   <abatementDateTime value="2015-02-21"/>
 </Condition>

@@ -24,12 +24,17 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
     </subject>
     <context>
-        <reference value="EpisodeOfCare/example" />
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+        <display value="zwangerschap Wouden 1"/>
     </context>
+    <performedPeriod>
+        <start value="2016-02-19"/>
+        <end value="2016-02-20"/>
+    </performedPeriod>
     <reasonCode>
         <coding>
             <system value="IndicatieEpisiotomie"/>
@@ -37,7 +42,11 @@
             <display value="Preventie ruptuur"/>
         </coding>
     </reasonCode>
-    <bodySite>
+    <reasonReference>
+        <reference value="Condition/Problem-child"/>
+        <display value="complicatie bevalling"/>
+    </reasonReference>
+    <bodysite>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
             <valueCodeableConcept>
                 <coding>
@@ -47,5 +56,5 @@
                 </coding>
             </valueCodeableConcept>
         </extension>      
-    </bodySite>
+    </bodysite>
 </Procedure>

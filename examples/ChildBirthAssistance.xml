@@ -1,5 +1,8 @@
 <Encounter xmlns="http://hl7.org/fhir">
     <id value="partusassistentie"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
+    </meta>
     <status value="finished"/> 
     <class> 
         <system value="http://hl7.org/fhir/v3/ActCode"/>
@@ -15,11 +18,13 @@
             </valueCodeableConcept>            
         </extension> 
     </class> 
-    <subject> 
-        <reference value="Patient/XXX-VDWOUDEN"/> 
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
     </subject> 
     <episodeOfCare> 
         <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+        <display value="zwangerschap Wouden 3"/>
     </episodeOfCare> 
     <participant>
         <type>

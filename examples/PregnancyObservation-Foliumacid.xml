@@ -1,0 +1,49 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+        <valueReference>
+            <reference value="Observation/wouden-zwanger3" />
+            <display value="Wouden Swanger dossier"/>
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="792807003"/>
+            <display value="intake van foliumzuur"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/Example"/>
+        <display value="Z Wangere"/>
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/dossier-example"/>
+        <display value="Zwangershcap"/>
+    </context>
+    <effectiveDateTime value="2021-03-01"/>
+    <performer>
+        <reference value="Practitioner/example"/>
+        <display value="Vera de Los"/>
+    </performer>
+    <valueQuantity>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="30391000146101"/>
+            <display value="geen preconceptionele intake van foliumzuur via voeding (bevinding)"/>
+        </coding>
+    </valueQuantity>
+    <comment value="Geen foliumzuur toegediend, vanwege eigen voorkeur"/>
+    <method>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="711490008"/>
+            <display value="Doppler fetal echocardiography (procedure)"/>
+        </coding>
+    </method>
+</Observation>

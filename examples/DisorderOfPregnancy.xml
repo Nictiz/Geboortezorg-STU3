@@ -6,6 +6,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/condition-partOf">
         <valueReference>
             <reference value="Condition/wouden-zwanger3" />
+            <display value="Wouden zwangerschap3"/>
         </valueReference>
     </extension>
     <clinicalStatus value="active"/> 
@@ -16,10 +17,13 @@
             <display value="Cholestasis of pregnancy (disorder)"/> 
         </coding> 
     </code> 
-    <subject> 
-        <reference value="Patient/XXX-VDWOUDEN"/> 
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
     </subject> 
     <context> 
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
+        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/>
+        <display value="zwangerschap Wouden 3"/>
     </context> 
+    <note value="tijdig geconstateerd"/>
 </Condition> 

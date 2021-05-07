@@ -18,6 +18,10 @@
     <context>
         <reference value="Encounter/prenatalecontrole"/>
     </context>
+    <effectivePeriod>
+        <start value="2000"/>
+        <end value="2019"/>
+    </effectivePeriod>
     <valueCodeableConcept>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
             <valueCodeableConcept>
@@ -34,4 +38,34 @@
             <display value="Ex-smoker (finding)"/>   
         </coding>
     </valueCodeableConcept>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="266918002"/>
+                <display value="Tobacco smoking consumption (observable entity)"/>
+            </coding>
+        </code>
+        <valueQuantity>
+                <value value="2" />
+                <unit value="packs per week" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="{packs}/wk" />
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="401201003" />
+                <display value="Cigarette pack-years (observable entity)" />
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="19" />
+            <unit value="PackYears" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="{PackYears}" />
+        </valueQuantity>
+    </component>
 </Observation>
