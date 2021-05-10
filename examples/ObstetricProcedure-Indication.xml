@@ -35,13 +35,10 @@
         <start value="2016-02-19"/>
         <end value="2016-02-20"/>
     </performedPeriod>
-    <reasonCode>
-        <coding>
-            <system value="IndicatieEpisiotomie"/>
-            <code value="21"/>
-            <display value="Preventie ruptuur"/>
-        </coding>
-    </reasonCode>
+    <reasonReference>
+        <reference value="Condition/Problem-child"/>
+        <display value="complicatie bevalling"/>
+    </reasonReference>
     <bodysite>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
             <valueCodeableConcept>
