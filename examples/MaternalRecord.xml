@@ -49,6 +49,12 @@
         <end value="2016-08-04"/>
     </period>
     <careManager>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/zorgverlener-gyn"/>
+                <display value="Dr. Gyn Gynaecoloog"/>
+            </valueReference>
+        </extension>
         <reference value="Practitioner/zorgverlener-gyn" />
         <display value="Dr. Gyn" />
     </careManager>

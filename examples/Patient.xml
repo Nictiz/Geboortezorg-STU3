@@ -27,9 +27,15 @@
       <valueCode value="NL4"/>
     </extension>
     <use value="official"/>
-    <family value="Example">
+    <family value="Bakker-de Boer">
       <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-        <valueString value="Example"/>
+        <valueString value="Bakker"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+        <valueString value="de" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+        <valueString value="Boer" />
       </extension>
     </family>
     <given value="X.Y.">
@@ -38,9 +44,30 @@
       </extension>
     </given>
   </name>
+  <telecom>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+          <code value="LL" />
+          <display value="Vast telefoonnummer" />
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <system value="phone" />
+    <value value="0226-213456" />
+    <use value="home" />
+  </telecom>
+  <telecom>
+    <system value="email" />
+    <value value="user@home.nl" />
+    <use value="home" />
+  </telecom>
   <gender value="female"/>
   <birthDate value="1981-06-03"/>
+  <deceasedBoolean value="false"/>
   <address>
+    <use value="home"/>
     <line value="Dorpstraat 80A">
       <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
         <valueString value="Dorpstraat" />
@@ -50,6 +77,12 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
         <valueString value="A" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+        <valueString value="Gebouw G"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+        <valueString value="hoog"/>
       </extension>
     </line>
     <city value="Spanbroek" />
@@ -67,6 +100,7 @@
       </extension>
     </country>
   </address>
+  <multipleBirthBoolean value="false"/>
   <communication>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/patient-proficiency">
       <extension url="type">
