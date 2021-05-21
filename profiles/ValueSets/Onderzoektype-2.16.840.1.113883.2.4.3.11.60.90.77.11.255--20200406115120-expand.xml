@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2020-04-06T11:51:20+01:00"/>
+            <start value="2020-04-06T11:51:20+02:00"/>
         </valuePeriod>
     </extension>
     <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
@@ -28,6 +28,29 @@
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
+                <code value="169711001"/>
+                <display value="prenatale intake (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="15220000"/>
+                <display value="laboratoriumonderzoek (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="384682003"/>
+                <display value="multidisciplinair overleg (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="409010002"/>
+                <display value="evaluatie van prenatale zorg (verrichting)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Bijvoorbeeld de R4U. R4U screent op medische en niet medische risico factoren in de zwangerschap."/>
+                </extension>
+                <code value="713076009"/>
+                <display value="prenatale risico-evaluatie (verrichting)"/>
+            </concept>
+            <concept>
                 <code value="133601000146101"/>
                 <display value="echografie ter bepaling van geschatte datum van partus (verrichting)"/>
             </concept>
@@ -40,10 +63,16 @@
                 <display value="echografie van nekplooi (verrichting)"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Eerste trimester SEO ofwel ET."/>
+                </extension>
                 <code value="143691000146108"/>
                 <display value="structureel echoscopisch onderzoek tijdens eerste trimester (verrichting)"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Tweede trimester SEO ofwel TT."/>
+                </extension>
                 <code value="143701000146108"/>
                 <display value="structureel echoscopisch onderzoek tijdens tweede trimester (verrichting)"/>
             </concept>
@@ -54,6 +83,10 @@
             <concept>
                 <code value="86571000146102"/>
                 <display value="geavanceerd ultrageluidonderzoek type II (verrichting)"/>
+            </concept>
+            <concept>
+                <code value="51597003"/>
+                <display value="vaginaal toucher (verrichting)"/>
             </concept>
             <concept>
                 <code value="7751000146103"/>
@@ -74,9 +107,34 @@
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:989f8b9e-3176-4932-a2e5-603ced3c4d37"/>
-        <timestamp value="2020-11-23T15:40:18.155+01:00"/>
-        <total value="12"/>
+        <identifier value="urn:uuid:dca8a34e-32d7-460c-a5e7-d19569f790ba"/>
+        <timestamp value="2021-05-07T16:41:57.804+02:00"/>
+        <total value="18"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="169711001"/>
+            <display value="prenatale intake (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="15220000"/>
+            <display value="laboratoriumonderzoek (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="384682003"/>
+            <display value="multidisciplinair overleg (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409010002"/>
+            <display value="evaluatie van prenatale zorg (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="713076009"/>
+            <display value="prenatale risico-evaluatie (verrichting)"/>
+        </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <abstract value="true"/>
@@ -117,6 +175,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="86571000146102"/>
             <display value="geavanceerd ultrageluidonderzoek type II (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="51597003"/>
+            <display value="vaginaal toucher (verrichting)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>

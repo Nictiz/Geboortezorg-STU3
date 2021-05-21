@@ -1,0 +1,39 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="aterm-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+        <valueReference>
+            <reference value="Condition/zwangerschap" />
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="161714006"/>
+            <display value="geschatte datum van partus (waarneembare entiteit)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Patient Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapdossier"/>
+    </context>
+    <!-- datum bepaling term datum --> 
+    <effectiveDateTime value="2019-05-31"/>
+    <valueDateTime value="2020-01-20"/>
+    <!-- a terme datum obv -->
+    <method>
+        <coding>
+            <system value="https://snomed.info/sct"/>
+            <code value="31541000146106"/>
+            <display value="Date of delivery estimation based on diagnostic ultrasonography"/>
+        </coding>
+    </method>
+</Observation>
+ 

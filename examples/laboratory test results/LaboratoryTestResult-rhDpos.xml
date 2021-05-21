@@ -1,0 +1,45 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="example-rhDpos"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="49581000146104" />
+            <display value="Laboratory test finding (finding)" />
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="" />
+            <code value="PSIE" />
+            <display value="Prenatale Sceening Infectieziekten en Erytrocytenimmunisatie" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="1305-2"/>
+            <display value="D Ag [Presence] in Blood"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example Patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example"/>
+    </context>
+    <effectiveDateTime value="2019-11-13"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="165747007"/>         
+            <display value="fenotype D-positief (bevinding)"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
+ 

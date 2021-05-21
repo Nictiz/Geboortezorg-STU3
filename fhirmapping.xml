@@ -924,6 +924,14 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-10037</ID>
+		<Naam>Gemeentenaam</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.address.district</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
 		<ID>peri23-dataelement-10038</ID>
 		<Naam>Land</Naam>
 		<profile>nl-core-organization</profile>
@@ -931,6 +939,30 @@
 		<mapping>Organization.address.country</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
+	<record>
+		<ID>peri23-dataelement-10039</ID>
+		<Naam>Adrestype</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.address.extension:AddressType</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-10029</ID>
+		<Naam>Type zorginstelling</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.type:organizationType</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82019</ID>
+		<Naam>Type zorginstelling (bij verwijzing)</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.type:organizationTypee</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>	
 	<record>
 		<ID>peri23-dataelement-2</ID>
 		<Naam>Vrouw</Naam>
@@ -1101,6 +1133,198 @@
 		<mapping>Patient.address.type</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
+	<record>
+		<ID>peri23-dataelement-82694</ID>
+		<Naam>Contactgegevens</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82695</ID>
+		<Naam>Telefoonnummers</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82696</ID>
+		<Naam>Telefoonnummer</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82697</ID>
+		<Naam>TelecomType</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping></mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82698</ID>
+		<Naam>NummerSoort</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.use</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82699</ID>
+		<Naam>EmailAdressen</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82700</ID>
+		<Naam>EmailAdres</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82701</ID>
+		<Naam>EmailSoort</Naam>
+		<profile>bc-Woman</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.use</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80649</ID>
+		<Naam>Betrokken zorgverlener/zorginstelling</Naam>
+		<profile>nl-core-practitioner/nl-core-organization</profile>
+		<resource>Practitioner/Organization</resource>
+		<mapping>Practitioner/Organization</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82022</ID>
+		<Naam>Huisarts</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82027</ID>
+		<Naam>Zorgverlener UZI-nummer</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.identifier:UZI</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82028</ID>
+		<Naam>Zorgverlener AGB-ID</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.identifier:AGB</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82029</ID>
+		<Naam>Naam zorgverlener</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.name.text</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82023</ID>
+		<Naam>Apotheek</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82030</ID>
+		<Naam>Zorginstelling AGB-ID</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.identifier:AGB</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82031</ID>
+		<Naam>Naam zorginstelling</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.name.text</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82024</ID>
+		<Naam>Specialist</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82039</ID>
+		<Naam>Zorgverlener UZI-nummer</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.identifier:UZI</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82032</ID>
+		<Naam>Zorgverlener AGB-ID</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.identifier:AGB</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82033</ID>
+		<Naam>Naam zorgverlener</Naam>
+		<profile>nl-core-practitioner</profile>
+		<resource>Practitioner</resource>
+		<mapping>Practitioner.name.text</mapping>
+		<example></example>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-82038</ID>
+		<Naam>Type specialist</Naam>
+		<profile>nl-core-practitionerrole</profile>
+		<resource>PractitionerRole</resource>
+		<mapping>PractitionerRole.specialty.text</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82035</ID>
+		<Naam>Zorginstelling</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization</mapping>
+		<example></example>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-82036</ID>
+		<Naam>Zorginstelling AGB-ID</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.identifier:AGB</mapping>
+		<example></example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82037</ID>
+		<Naam>Naam zorginstelling</Naam>
+		<profile>nl-core-organization</profile>
+		<resource>Organization</resource>
+		<mapping>Organization.name</mapping>
+		<example></example>
+	</record>	
 	<record>
 		<ID>peri23-dataelement-10400</ID>
 		<Naam>Etniciteit</Naam>
@@ -1318,6 +1542,14 @@
 		<example>https://simplifier.net/geboortezorg-stu3/allergyintolerance-example</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-80749</ID>
+		<Naam>Medicatiegebruik</Naam>
+		<profile>zib-MedicationUse</profile>
+		<resource>MedicationStatement</resource>
+		<mapping>MedicationStatement</mapping>
+		<example></example>
+	</record>
+	<record>
 		<ID>peri23-dataelement-10801</ID>
 		<Naam>Medicatiegebruik?</Naam>
 		<profile>bc-MaternalObservation</profile>
@@ -1328,9 +1560,37 @@
 	<record>
 		<ID>peri23-dataelement-10802</ID>
 		<Naam>Soort medicatie</Naam>
+		<profile>zib-MedicationUse|zib-Product</profile>
+		<resource>MedicationStatement|Medication</resource>
+		<mapping>MedicationStatement.medicationReference|Medication.code.text</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80751</ID>
+		<Naam>Begindatum</Naam>
 		<profile>zib-MedicationUse</profile>
-		<resource>MedicationStatement | Medication</resource>
-		<mapping>MedicationStatement.medicationReference | medicationCodeableConcept</mapping>
+		<resource>MedicationStatement</resource>
+		<mapping>MedicationStatement.effectivePeriod.start</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80752</ID>
+		<Naam>Einddatum</Naam>
+		<profile>zib-MedicationUse</profile>
+		<resource>MedicationStatement</resource>
+		<mapping>MedicationStatement.effectivePeriod.end</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80750</ID>
+		<Naam>Dosering medicatie</Naam>
+		<profile>zib-MedicationUse</profile>
+		<resource>MedicationStatement</resource>
+		<mapping>MedicationStatement.dosage.doseQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80753</ID>
+		<Naam>Bijzonderheden</Naam>
+		<profile>zib-MedicationUse</profile>
+		<resource>MedicationStatement</resource>
+		<mapping>MedicationStatement.effectivePeriod.note</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-20212</ID>
@@ -1728,6 +1988,13 @@
 		<mapping>Condition.identifier</mapping>
 	</record>
 	<record>
+		<ID>peri23-dataelement-80664</ID>
+		<Naam>Casemanager naam</Naam>
+		<profile>bc-MaternalRecord</profile>
+		<resource>EpisodeOfCare</resource>
+		<mapping>EpisodeOfCare.careManager.display</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-20010</ID>
 		<Naam>Graviditeit</Naam>
 		<profile>zib-pregnancy-Gravidity</profile>
@@ -1846,8 +2113,25 @@
 		<example>https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-80736</ID>
+		<Naam>Naam zorgverlener</Naam>
+		<profile>bc-Encounter</profile>
+		<resource>EpisodeOfCare</resource>
+		<mapping>EpisodeOfCare.participant.individual.display | Practitioner.name</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82067</ID>
+		<Naam>Zorgverlenertype</Naam>
+		<profile>bc-Encounter</profile>
+		<resource>EpisodeOfCare</resource>
+		<mapping>EpisodeOfCare.participant.individual.extension:practitionerRole.specialty | PractitionerRole.specialty</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-80738</ID>
 		<Naam>Zwangerschapsduur</Naam>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-80746</ID>
@@ -1885,12 +2169,65 @@
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-82103</ID>
+		<Naam>Soort drugs</Naam>
+		<ZIB_2017>nl.zorg.DrugsGebruik</ZIB_2017>
+		<profile>zib-DrugUse</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.component:DrugOrMedicationType.valueCodeableConcept</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80832</ID>
+		<Naam>Bloeddruk</Naam>
+		<ZIB_2017>nl.zorg.Bloeddruk</ZIB_2017>
+		<profile>zib-BloodPressure</profile>
+		<resource>Observation</resource>
+		<mapping>Observation</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80833</ID>
+		<Naam>Bloeddruk systolisch</Naam>
+		<ZIB_2017>nl.zorg.Bloeddruk</ZIB_2017>
+		<profile>zib-BloodPressure</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.component:SystolicBP.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80834</ID>
+		<Naam>Bloeddruk diastolisch</Naam>
+		<ZIB_2017>nl.zorg.Bloeddruk</ZIB_2017>
+		<profile>zib-BloodPressure</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.component:DiastolicBP.valueQuantity</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-20211</ID>
 		<Naam>Gewicht (gemeten)</Naam>
 		<profile>zib-BodyWeight</profile>
 		<resource>Observation</resource>
 		<mapping>Observation.valueQuantity</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187</example>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82106</ID>
+		<Naam>Regelmaat hartslag</Naam>
+		<profile>bc-FetusObservation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-82107</ID>
+		<Naam>Frequentie hartslag</Naam>
+		<profile>bc-FetusObservation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-80745</ID>
+		<Naam>Hartactie op basis van</Naam>
+		<profile>bc-FetusObservation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.method</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82268</ID>
@@ -1912,6 +2249,9 @@
 	<record>
 		<ID>peri23-dataelement-82285</ID>
 		<Naam>Zwangerschapsduur</Naam>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82269</ID>
@@ -2057,6 +2397,15 @@
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-255</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-82377</ID>
+		<Naam>Interventie</Naam>
+		<ZIB_2017>nl.zorg.Verrichting</ZIB_2017>
+		<profile>bc-ObstetricProcedure</profile>
+		<resource>Procedure</resource>
+		<mapping>Procedure</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-9</example>
+	</record>
+	<record>
 		<ID>peri23-dataelement-82230</ID>
 		<Naam>Intra-uteriene behandeling</Naam>
 		<ZIB_2017>nl.zorg.Verrichting</ZIB_2017>
@@ -2128,6 +2477,9 @@
 	<record>
 		<ID>peri23-dataelement-82382</ID>
 		<Naam>Zwangerschapsduur</Naam>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82338</ID>
@@ -2180,6 +2532,10 @@
 	<record>
 		<ID>peri23-dataelement-82443</ID>
 		<Naam>Intra-uteriene vruchtdood</Naam>
+		<profile>bc-DisorderOfLaborAndDelivery</profile>
+		<resource>Condition</resource>
+		<mapping>Condition.code</mapping>
+		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-254</example>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82444</ID>
@@ -2452,6 +2808,20 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-82354</ID>
+		<Naam>Initialen</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.name.given</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82052</ID>
+		<Naam>Roepnaam</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.name.given</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-82053</ID>
 		<Naam>Achternaam</Naam>
 		<profile>bc-Child</profile>
@@ -2476,6 +2846,97 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-82364</ID>
+		<Naam>Contactgegevens</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82365</ID>
+		<Naam>Telefoonnummers</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82366</ID>
+		<Naam>Soort telefoonnummer</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.use</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82367</ID>
+		<Naam>Telefoonnummer</Naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.telecom.value</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82133</ID>
+		<naam>Straatnaam</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.line.extension:streetName</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82134</ID>
+		<naam>Huisnummer</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.line.extension:houseNumber</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82135</ID>
+		<naam>Huisletter/huisnummertoevoeging</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.line.extension:buildingNumbersuffix</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82136</ID>
+		<naam>Postcode</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.postalCode</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82137</ID>
+		<naam>Plaatsnaam</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patientaddress.city</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82138</ID>
+		<naam>Land</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.country</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82139</ID>
+		<naam>Adrestype</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.extension:AddressType</mapping>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-40033</ID>
+		<naam>Adres</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-40034</ID>
+		<naam>Postcode</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.address.postalCode</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-40041</ID>
 		<Naam>Geslacht (medische observatie)</Naam>
 		<profile>bc-Child</profile>
@@ -2491,6 +2952,48 @@
 		<mapping>Patient.birthdate &amp; patient.birthtime (extension)</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5</example>
 		<searchurl>GET [base]/Patient/[kindid]</searchurl>
+	</record>
+	<record>
+		<ID>peri23-dataelement-40004</ID>
+		<naam>Geboorteplaats</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.extension:birthPlace</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80629</ID>
+		<naam>Postcode</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.extension:birthPlace.postalCode</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80630</ID>
+		<naam>Plaatsnaam</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.extension:birthPlace.city</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80631</ID>
+		<naam>Gemeentenaam</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.extension:birthPlace.district</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80632</ID>
+		<naam>Land</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.extension.birthPlace.country</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-82087</ID>
+		<naam>Meerlingindicatie</naam>
+		<profile>bc-Child</profile>
+		<resource>Patient</resource>
+		<mapping>Patient.multipleBirthBoolean</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-40025</ID>
@@ -2571,6 +3074,14 @@
 		<searchurl>GET [base]/Observation?code=249163006{&amp;subject=[vrouwid]&amp;context=[dossierid]&amp;focus=[geboorteid]}</searchurl>
 	</record>
 	<record>
+		<ID>peri23-dataelement-20580</ID>
+		<Naam>Amniotomie?</Naam>
+		<ZIB_2017>nl.zorg.Verrichting</ZIB_2017>
+		<profile>bc-ObstetricProcedure</profile>
+		<resource>Procedure</resource>
+		<mapping>Procedure.code</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-30050</ID>
 		<Naam>Episiotomie?</Naam>
 		<ZIB_2017>nl.zorg.Verrichting</ZIB_2017>
@@ -2606,63 +3117,60 @@
 	<record>
 		<ID>peri23-dataelement-82090</ID>
 		<Naam>Pijnbestrijding?</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.category</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82091</ID>
 		<Naam>Pijnbestrijding</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.category</mapping>
 	</record>
 	<record>
+		<ID>peri23-dataelement-82394</ID>
+		<Naam>Datum/tijd</Naam>
+		<resource>MedicationAdministration</resource>
+		<mapping>MedicationAdministration.effectiveDateTime</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-82093</ID>
 		<Naam>Methode</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.dosage.method</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82092</ID>
 		<Naam>Methode</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.dosage.method</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82094</ID>
 		<Naam>Overig middel</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.dosage.route</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82095</ID>
 		<Naam>Middel</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.medicationCodeableConcept</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82096</ID>
 		<Naam>Toediening</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.dosage.route</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-82097</ID>
 		<Naam>Periode</Naam>
-		<profile>bc-PainRelief</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationAdministration.extension?</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-80827</ID>
 		<Naam>Sedatie?</Naam>
-		<profile>bc-Sedation</profile>
 		<resource>MedicationAdministration</resource>
 		<mapping>MedicationStatement.category</mapping>
 	</record>
@@ -2680,8 +3188,11 @@
 		<searchurl>GET [base]/Observation?code=364336006{&amp;subject=[vrouwid]&amp;context=[dossierid]&amp;focus=[geboorteid]}</searchurl>
 	</record>
 	<record>
-		<ID>peri23-dataelement-20062</ID>
+		<ID>peri23-dataelement-82341</ID>
 		<Naam>Zwangerschapsduur</Naam>
+		<profile>zib-Pregnancy-PregnancyDuration</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-40140</ID>
@@ -2797,9 +3308,16 @@
 	<record>
 		<ID>peri23-dataelement-80766</ID>
 		<Naam>Lichamelijk onderzoek kind</Naam>
-		<profile>bc-PhysicalExamination</profile>
 		<resource>DiagnosticReport</resource>
 		<mapping>DiagnosticReport</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-40070</ID>
+		<Naam>Apgarscore na 1 min.</Naam>
+		<ZIB_2017>nl.zorg.ApgarScore</ZIB_2017>
+		<profile>zib-ApgarScore</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-40071</ID>
@@ -2810,6 +3328,14 @@
 		<mapping>Observation.valueQuantity</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77</example>
 		<searchurl>GET [base]/Observation?code=9274-2{&amp;subject=[kindid]&amp;context=[dossierid]}</searchurl>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80757</ID>
+		<Naam>Apgarscore na 10 min.</Naam>
+		<ZIB_2017>nl.zorg.ApgarScore</ZIB_2017>
+		<profile>zib-ApgarScore</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-40060</ID>
@@ -2829,6 +3355,22 @@
 		<mapping>Observation.interpretation.extension:percentile</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185</example>
 	</record>
+	<record>
+		<ID>peri23-dataelement-80759</ID>
+		<Naam>Lengte</Naam>
+		<ZIB_2017>nl.zorg.Lichaamslengte</ZIB_2017>
+		<profile>zib-BodyHeight</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80760</ID>
+		<Naam>Schedelomtrek</Naam>
+		<ZIB_2017>nl.zorg.Schedelomvang</ZIB_2017>
+		<profile>zib-HeadCircumference</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>	
 	<record>
 		<ID>peri23-dataelement-40080</ID>
 		<Naam>Congenitale afwijkingen?</Naam>
@@ -3142,6 +3684,42 @@
 		<example>https://simplifier.net/geboortezorg-stu3/diagnosticreport-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri23-dataelement-80952</ID>
+		<naam>Bloedgroep vrouw</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80953</ID>
+		<naam>Rhesus D Factor vrouw</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80954</ID>
+		<naam>Rhesus c Factor vrouw</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-80955</ID>
+		<naam>HBsAg</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80956</ID>
+		<naam>HIV</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80957</ID>
+		<naam>Lues</naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<mapping>Observation.valueCodeableConcept</mapping>
+	</record>
+	<record>
 		<ID>peri23-dataelement-10812</ID>
 		<Naam>Irregulaire antistoffen?</Naam>
 		<profile>zib-LaboratoryTestResult-Observation</profile>
@@ -3165,6 +3743,153 @@
 		<mapping>Observation.valueQuantity</mapping>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-80</example>
 		<searchurl>GET [base]/Observation?code=718-7{&amp;subject=[vrouwid]&amp;context=[dossierid]}</searchurl>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80991</ID>
+		<Naam>Anemie</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80951</ID>
+		<Naam>MCV</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80992</ID>
+		<Naam>Hb-pathie</Naam>
+		<profile>zib-Problem</profile>
+		<resource>Condition</resource>
+		<mapping>Condition.code</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80993</ID>
+		<Naam>Vit. B12</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80994</ID>
+		<Naam>Actief-B12</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80995</ID>
+		<Naam>Ferritine</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>	
+	<record>
+		<ID>peri23-dataelement-80996</ID>
+		<Naam>Foliumzuur</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80962</ID>
+		<Naam>TSH receptor antistoffen</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80964</ID>
+		<Naam>Vrij T4</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80965</ID>
+		<Naam>TSH</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80966</ID>
+		<Naam>TORCH</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80967</ID>
+		<Naam>Toxoplasmose IgG</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80968</ID>
+		<Naam>Toxoplasmose IgM</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80969</ID>
+		<Naam>Rubella IgG</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80970</ID>
+		<Naam>Rubella IgM</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80971</ID>
+		<Naam>CMV IgG</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80972</ID>
+		<Naam>CMV IgM</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80973</ID>
+		<Naam>Herpes IgG</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80974</ID>
+		<Naam>Herpes IgM</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80975</ID>
+		<Naam>Parvovirus IgG</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
+	</record>
+	<record>
+		<ID>peri23-dataelement-80976</ID>
+		<Naam>Parvovirus IgM</Naam>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
+		<resource>Observation</resource>
+		<mapping>Observation.valueQuantity</mapping>
 	</record>
 	<record>
 		<ID>peri23-dataelement-40051</ID>

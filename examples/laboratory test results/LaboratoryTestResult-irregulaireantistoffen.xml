@@ -1,0 +1,45 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="example-irregulaireantistoffen"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="49581000146104" />
+            <display value="Laboratory test finding (finding)" />
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="" />
+            <code value="PSIE" />
+            <display value="Prenatale Sceening Infectieziekten en Erytrocytenimmunisatie" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="312457003"/>
+            <display value="Finding of irregular blood group antibody present (finding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example Patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example"/>
+    </context>
+    <effectiveDateTime value ="2019-11-13"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="25453008"/>
+            <display value="antilichaam tegen antigeen in Kidd-bloedgroepensysteem (substantie)"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
+ 

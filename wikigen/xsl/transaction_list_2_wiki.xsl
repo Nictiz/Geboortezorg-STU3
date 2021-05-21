@@ -40,7 +40,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 =</xsl:text><xsl:value-of select="@shortName"/><xsl:text>=
 &lt;section begin=transaction /&gt;
 {| class="wikitable" 
-| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 2.3 to FHIR
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 3.2 to FHIR
 |-style="background-color: #1F497D;; color: white; text-align:left;"
 |style="width:30px;"| Type 
 |style="width:10px;"| # 

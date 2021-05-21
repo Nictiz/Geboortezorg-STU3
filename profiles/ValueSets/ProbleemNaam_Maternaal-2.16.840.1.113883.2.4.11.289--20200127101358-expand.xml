@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2020-01-27T10:13:58+01:00"/>
+            <start value="2020-01-27T10:13:58+02:00"/>
         </valuePeriod>
     </extension>
     <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.289--20200127101358"/>
@@ -49,7 +49,7 @@
             </concept>
             <concept>
                 <code value="237320005"/>
-                <display value="Failure to progress in first stage of labor (finding)"/>
+                <display value="niet-vorderende eerste fase van partus (bevinding)"/>
             </concept>
             <concept>
                 <code value="249166003"/>
@@ -57,15 +57,11 @@
             </concept>
             <concept>
                 <code value="12867002"/>
-                <display value="foetale nood met invloed op beleid van moeder (aandoening)"/>
+                <display value="foetale nood met invloed op behandeling voor moeder (aandoening)"/>
             </concept>
             <concept>
                 <code value="168092006"/>
                 <display value="meconiumhoudend vruchtwater (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="59291004"/>
-                <display value="intra-uteriene vruchtdood (bevinding)"/>
             </concept>
             <concept>
                 <code value="109894007"/>
@@ -76,20 +72,16 @@
                 <display value="postpartumbloeding (aandoening)"/>
             </concept>
             <concept>
-                <code value="312850006:246090004=10217006"/>
-                <display value="Derdegraads perineumruptuur in ziektegeschiedenis"/>
+                <code value="199930000"/>
+                <display value="derdegraads perineumruptuur durante partu - bevallen (aandoening)"/>
             </concept>
             <concept>
-                <code value="312850006:24609004=399031001"/>
-                <display value="Vierdegraads perineumruptuur in ziektegeschiedenis"/>
+                <code value="199934009"/>
+                <display value="vierdegraads perineumruptuur durante partu - bevallen (aandoening)"/>
             </concept>
             <concept>
                 <code value="249221003"/>
                 <display value="laceratie van labia (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="249220002"/>
-                <display value="laceratie van vagina tijdens partus (aandoening)"/>
             </concept>
             <concept>
                 <code value="262935001"/>
@@ -111,10 +103,6 @@
                 <code value="121681000146107"/>
                 <display value="verhoogd risico op laceratie van perineum (situatie)|"/>
             </concept>
-            <concept>
-                <code value="130611000119103"/>
-                <display value="Female genital mutilation type 3 (disorder)"/>
-            </concept>
         </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
@@ -129,9 +117,9 @@
         </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:6469d68f-67a8-414c-af58-267ac68b638f"/>
-        <timestamp value="2020-11-23T15:39:46.395+01:00"/>
-        <total value="25"/>
+        <identifier value="urn:uuid:ad3379ba-0519-4541-a930-5525f651f943"/>
+        <timestamp value="2021-05-07T16:42:36.653+02:00"/>
+        <total value="22"/>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="312974005"/>
@@ -160,7 +148,7 @@
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="237320005"/>
-            <display value="Failure to progress in first stage of labor (finding)"/>
+            <display value="niet-vorderende eerste fase van partus (bevinding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
@@ -170,17 +158,12 @@
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="12867002"/>
-            <display value="foetale nood met invloed op beleid van moeder (aandoening)"/>
+            <display value="foetale nood met invloed op behandeling voor moeder (aandoening)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="168092006"/>
             <display value="meconiumhoudend vruchtwater (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="59291004"/>
-            <display value="intra-uteriene vruchtdood (bevinding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
@@ -200,23 +183,18 @@
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="312850006:246090004=10217006"/>
-            <display value="Derdegraads perineumruptuur in ziektegeschiedenis"/>
+            <code value="199930000"/>
+            <display value="derdegraads perineumruptuur durante partu - bevallen (aandoening)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="312850006:24609004=399031001"/>
-            <display value="Vierdegraads perineumruptuur in ziektegeschiedenis"/>
+            <code value="199934009"/>
+            <display value="vierdegraads perineumruptuur durante partu - bevallen (aandoening)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="249221003"/>
             <display value="laceratie van labia (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="249220002"/>
-            <display value="laceratie van vagina tijdens partus (aandoening)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
@@ -242,11 +220,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="121681000146107"/>
             <display value="verhoogd risico op laceratie van perineum (situatie)|"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="130611000119103"/>
-            <display value="Female genital mutilation type 3 (disorder)"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>

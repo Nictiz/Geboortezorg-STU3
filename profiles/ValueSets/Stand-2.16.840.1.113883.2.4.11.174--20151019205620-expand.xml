@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2015-10-19T20:56:20+01:00"/>
+            <start value="2015-10-19T20:56:20+02:00"/>
         </valuePeriod>
     </extension>
     <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620"/>
@@ -23,7 +23,43 @@
     <publisher value="KNOV"/>
     <description value="Stand"/>
     <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="255549009"/>
+                <display value="anterior (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="264065008"/>
+                <display value="links anterieur (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="146371000146105"/>
+                <display value="links transversaal (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="277594003"/>
+                <display value="links posterieur (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="255551008"/>
+                <display value="posterior (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="264176005"/>
+                <display value="rechts anterieur (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="146361000146104"/>
+                <display value="rechts transversaal (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="277593009"/>
+                <display value="rechts posterieur (kwalificatiewaarde)"/>
+            </concept>
+        </include>
         <include>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
             <concept>
@@ -31,94 +67,50 @@
                 <display value="geen informatie"/>
             </concept>
         </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <concept>
-                <code value="1"/>
-                <display value="Voor"/>
-            </concept>
-            <concept>
-                <code value="2"/>
-                <display value="Links voor"/>
-            </concept>
-            <concept>
-                <code value="3"/>
-                <display value="Links dwars"/>
-            </concept>
-            <concept>
-                <code value="4"/>
-                <display value="Links achter"/>
-            </concept>
-            <concept>
-                <code value="5"/>
-                <display value="Achter"/>
-            </concept>
-            <concept>
-                <code value="6"/>
-                <display value="Rechts voor"/>
-            </concept>
-            <concept>
-                <code value="7"/>
-                <display value="Rechts dwars"/>
-            </concept>
-            <concept>
-                <code value="8"/>
-                <display value="Rechts achter"/>
-            </concept>
-            <concept>
-                <code value="9"/>
-                <display value="Niet te beoordelen"/>
-            </concept>
-        </include>
     </compose>
     <expansion>
-        <identifier value="urn:uuid:f2935cc5-07bf-4f9a-a5a8-0ee550371726"/>
-        <timestamp value="2020-11-23T15:40:07.171+01:00"/>
-        <total value="10"/>
+        <identifier value="urn:uuid:90bade74-924c-4d2f-adcf-02905e48086e"/>
+        <timestamp value="2021-05-07T16:42:22.397+02:00"/>
+        <total value="9"/>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="1"/>
-            <display value="Voor"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="255549009"/>
+            <display value="anterior (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="2"/>
-            <display value="Links voor"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="264065008"/>
+            <display value="links anterieur (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="3"/>
-            <display value="Links dwars"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="146371000146105"/>
+            <display value="links transversaal (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="4"/>
-            <display value="Links achter"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="277594003"/>
+            <display value="links posterieur (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="5"/>
-            <display value="Achter"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="255551008"/>
+            <display value="posterior (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="6"/>
-            <display value="Rechts voor"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="264176005"/>
+            <display value="rechts anterieur (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="7"/>
-            <display value="Rechts dwars"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="146361000146104"/>
+            <display value="rechts transversaal (kwalificatiewaarde)"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="8"/>
-            <display value="Rechts achter"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.48"/>
-            <code value="9"/>
-            <display value="Niet te beoordelen"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="277593009"/>
+            <display value="rechts posterieur (kwalificatiewaarde)"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>
