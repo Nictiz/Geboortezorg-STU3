@@ -1,5 +1,5 @@
 <Procedure xmlns="http://hl7.org/fhir">
-    <id value="episiotomy-example" />
+    <id value="obstetricprocedure-episiotomy" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
     </meta>
@@ -31,17 +31,14 @@
         <reference value="EpisodeOfCare/example" />
         <display value="Zwangerschapsdossier" />
     </context>
-        <performedPeriod>
+    <performedPeriod>
         <start value="2016-02-19"/>
         <end value="2016-02-20"/>
     </performedPeriod>
-    <reasonCode>
-        <coding>
-            <system value="IndicatieEpisiotomie"/>
-            <code value="21"/>
-            <display value="Preventie ruptuur"/>
-        </coding>
-    </reasonCode>
+    <reasonReference>
+        <reference value="Condition/complicatie" />
+        <display value="Complicatie" />
+    </reasonReference>
     <bodySite>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
             <valueCodeableConcept>
@@ -52,5 +49,5 @@
                 </coding>
             </valueCodeableConcept>
         </extension>      
-    </bodysite>
+    </bodySite>
 </Procedure>
