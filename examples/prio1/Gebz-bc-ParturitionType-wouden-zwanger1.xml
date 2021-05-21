@@ -1,5 +1,3 @@
-
-<!-- type_partus conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80626" -->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="typepartus-wouden-zwanger1"/>
     <meta>
@@ -31,13 +29,21 @@
     <context>
         <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
     </context>
+    <effectiveDateTime value="2016-02-20"/>
     <valueCodeableConcept>
-        <!-- type_partus conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80626" -->
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="3311000146109"/>
-            <display value="Vaginale kunstverlossing"/>
+            <display value="Assisted delivery of fetus (procedure)"/>
         </coding>
     </valueCodeableConcept>
+    <comment value="Toelichting op de Partus"/>
+    <method>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value=" 225308005"/>
+            <display value="observatie (regime/therapie)"/>
+        </coding>
+    </method>
 </Observation>
     

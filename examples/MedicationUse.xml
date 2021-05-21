@@ -1,0 +1,120 @@
+<MedicationStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/medicationstatement.xsd">
+    <id value="example-MedicationUse"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreedIndicator">
+        <valueBoolean value="true"/>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Author">
+        <valueReference>
+            <reference value="PractitionerRole/example"/>
+            <display value="Verloskundige"/>
+        </valueReference>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment">
+        <valueIdentifier>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.77.1.1"/>
+            <value value="#MB_01i1"/>
+        </valueIdentifier>
+    </extension>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.77.6.1"/>
+        <value value="#MB_01i1#GE_01"/>
+    </identifier>
+    <status>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+        </extension>
+    </status>
+    <category>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3"/>
+            <code value="6"/>
+            <display value="Medicatiegebruik"/>
+        </coding>
+        <text value="Medicatiegebruik"/>
+    </category>
+    <medicationReference>
+        <reference value="Medication/example"/>
+        <display value="PARACETAMOL TABLET 500MG"/>
+    </medicationReference>
+    <effectivePeriod>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
+            <valueDuration>
+                <value value="30"/>
+                <unit value="dag"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+            </valueDuration>
+        </extension>
+        <start value="2020-07-21"/>
+        <end value="2022-01-02"/>
+    </effectivePeriod>
+    <dateAsserted value="2020-07-21"/>
+    <subject>
+        <reference value="Patient/Example"/>
+        <display value="Example"/>
+    </subject>
+    <derivedFrom>
+        <identifier>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.77.16076005.1"/>
+            <value value="#MB_01i1#MA_01"/>
+        </identifier>
+        <display value="relatie naar medicatieafspraak"/>
+    </derivedFrom>
+    <taken value="y"/>
+    <dosage>
+        <sequence value="1"/>
+        <text value="Vanaf 21 jul 2020, gedurende 30 dagen, zo nodig maal per dag 1 à 2 stuks , maximaal 6 stuks per dag, ORAAL"/>
+        <timing>
+            <repeat>
+                <frequencyMax value="4"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <asNeededCodeableConcept>
+            <coding>
+                <system value="https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek"/>
+                <code value="1137"/>
+                <display value="zo nodig"/>
+            </coding>
+        </asNeededCodeableConcept>
+        <route>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                <code value="9"/>
+                <display value="ORAAL"/>
+            </coding>
+        </route>
+        <doseRange>
+            <low>
+                <value value="1"/>
+                <unit value="Stuk"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+                <code value="245"/>
+            </low>
+            <high>
+                <value value="2"/>
+                <unit value="Stuk"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+                <code value="245"/>
+            </high>
+        </doseRange>
+        <maxDosePerPeriod>
+            <numerator>
+                <value value="6"/>
+                <unit value="Stuk"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+                <code value="245"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="dag"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+            </denominator>
+        </maxDosePerPeriod>
+    </dosage>
+</MedicationStatement>
