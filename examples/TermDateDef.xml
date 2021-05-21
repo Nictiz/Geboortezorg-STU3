@@ -8,6 +8,7 @@
    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
       <valueReference>
          <reference value="Condition/Zwangerschap"/>
+         <display value="Zwangerschap"/>
       </valueReference>
    </extension>
    <status value="final"/>
@@ -24,9 +25,15 @@
    </subject>
    <context>
       <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
+      <display value="Zwangerschapsdossier"/>
    </context>
    <effectiveDateTime value="2020-04-15+02:00"/>
+   <performer>
+        <reference value="Practitioner/example"/>
+        <display value="Vera de Los" />
+    </performer>
    <valueDateTime value="2020-09-17+02:00"/>
+   <comment value="definitieve schatting"/>
    <method>
       <coding>
          <system value="https://snomed.info/sct"/>
