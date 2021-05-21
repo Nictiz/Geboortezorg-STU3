@@ -36,11 +36,12 @@
     <context>
         <reference value="EpisodeOfCare/example" />
     </context>
-    <reasonCode>
-        <coding>
-            <system value="MotivatieInterventie"/>
-            <code value="7"/>
-            <display value="Wens patient"/>
-        </coding>
-    </reasonCode>
+    <performedPeriod>
+        <start value="2016-02-21T09:15:00+01:00"/>
+        <end value="2016-02-21T11:00:00+01:00"/>
+    </performedPeriod>
+    <reasonReference>
+        <reference value="Condition/zwangerschapsprobleem"/>
+        <display value="Probleem bij zwangerschap"/>
+    </reasonReference>
 </Procedure>
