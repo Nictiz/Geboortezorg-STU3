@@ -5,9 +5,10 @@
       <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
       <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
    </meta>
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
       <valueReference>
          <reference value="Condition/Zwangerschap"/>
+         <display value="Zwangerschap"/>
       </valueReference>
    </extension>
    <status value="final"/>
@@ -24,8 +25,13 @@
    </subject>
    <context>
       <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
+      <display value="Zwangerschapsdossier"/>
    </context>
    <effectiveDateTime value="2020-04-15+02:00"/>
+   <performer>
+        <reference value="Practitioner/example"/>
+        <display value="Vera de Los" />
+    </performer>
    <valueCodeableConcept>
       <coding>
          <system value="http://snomed.info/sct"/>
