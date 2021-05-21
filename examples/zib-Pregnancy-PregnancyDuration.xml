@@ -4,10 +4,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
         <valueReference>
-            <reference value="Observation/wouden-zwanger3" />
-            <display value="Wouden Swanger dossier"/>
+            <reference value="Condition/zwangerschap" />
+            <display value="Zwangerschap"/>
         </valueReference>
     </extension>
     <status value="final"/>
@@ -24,7 +24,7 @@
     </subject>
     <context>
         <reference value="EpisodeOfCare/dossier-example"/>
-        <display value="Zwangershcap"/>
+        <display value="Zwangerschapsdossier"/>
     </context>
     <effectiveDateTime>
         <valueDatetime value="2021-04-16"/>

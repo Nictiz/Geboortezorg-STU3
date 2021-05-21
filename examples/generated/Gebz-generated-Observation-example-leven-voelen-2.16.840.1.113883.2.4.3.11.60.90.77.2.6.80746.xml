@@ -9,6 +9,7 @@
    <extension url="http://nictiz.nl/fhir/StructureDefinition/Observation-focusSTU3">
       <valueReference>
          <reference value="Condition/Zwangerschap"/>
+         <display value="Zwangerschap"/>
       </valueReference>
    </extension>
    <status value="final"/>
@@ -26,6 +27,7 @@
    <context>
       <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
    </context>
+   <effectiveDateTime value="2021-04-31"/>
    <valueCodeableConcept>
       <coding>
          <system value="http://snomed.info/sct"/>
@@ -33,4 +35,12 @@
          <display value="Fetal movements present (finding)"/>
       </coding>
    </valueCodeableConcept>
+   <comment value="moeder voelt regelmatig leven"/>
+   <method>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="711490008"/>
+         <display value="Doppler fetal echocardiography (procedure)"/>
+      </coding>
+   </method>
 </Observation>
