@@ -79,7 +79,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     <xsl:template match="maps">
         <xsl:for-each select="map">
-            <xsl:result-document href="../../profiles/ValueSets/{@name}-code.xml"> 
+            <xsl:result-document href="../../profiles/ValueSets/generated/{@name}-code.xml"> 
                 <xsl:call-template name="mapsToValueSet"/>
             </xsl:result-document>          
         </xsl:for-each>
