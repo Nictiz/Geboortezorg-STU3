@@ -1,203 +1,228 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-DisorderOfLaborAndDelivery" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery" />
-  <version value="1.0.0" />
-  <name value="bc-DisorderOfLaborAndDelivery" />
-  <title value="bc-DisorderOfLaborAndDelivery" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="bc-DisorderOfLaborAndDelivery"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery"/>
+  <version value="1.0.0"/>
+  <name value="bc-DisorderOfLaborAndDelivery"/>
+  <title value="bc-DisorderOfLaborAndDelivery"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="geboortezorg@nictiz.nl" />
-      <use value="work" />
-    </telecom>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
   </contact>
-  <description value="A Condition profile describing post partum disorders or complications as defined by BabyConnect. These disorders are part of the delivery, which is defined in the part of extension." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.2" />
+  <description value="A Condition profile describing post partum disorders or complications as defined by BabyConnect. These disorders are part of the delivery, which is defined in the part of extension."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
   <mapping>
-    <identity value="hcim-concernfortransfer-v1.2-2015EN" />
-    <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)" />
-    <name value="HCIM ConcernForTransfer-v1.2(2015EN)" />
+      <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+      <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)"/>
+      <name value="HCIM ConcernForTransfer-v1.2(2015EN)"/>
   </mapping>
   <mapping>
-    <identity value="hcim-concernfortransfer-v3.0-2016EN" />
-    <uri value="https://zibs.nl/wiki/ConcernForTransfer-v3.0(2016EN)" />
-    <name value="HCIM ConcernForTransfer-v3.0(2016EN)" />
+      <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
+      <uri value="https://zibs.nl/wiki/ConcernForTransfer-v3.0(2016EN)"/>
+      <name value="HCIM ConcernForTransfer-v3.0(2016EN)"/>
   </mapping>
   <mapping>
-    <identity value="hcim-problem-v1.2-2017EN" />
-    <uri value="https://zibs.nl/wiki/Problem-v4.1(2017EN)" />
-    <name value="HCIM Problem-v4.1(2017EN)" />
-    <comment value="ConcernForTransfer is renamed to Problem with release 2017 of the HCIMs." />
+      <identity value="hcim-problem-v1.2-2017EN"/>
+      <uri value="https://zibs.nl/wiki/Problem-v4.1(2017EN)"/>
+      <name value="HCIM Problem-v4.1(2017EN)"/>
+      <comment value="ConcernForTransfer is renamed to Problem with release 2017 of the HCIMs."/>
   </mapping>
   <mapping>
-    <identity value="hcim-basicelements-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
-    <name value="HCIM BasicElements-v1.0(2017EN)" />
+      <identity value="hcim-basicelements-v1.0-2017EN"/>
+      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
+      <name value="HCIM BasicElements-v1.0(2017EN)"/>
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Condition" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
-  <derivation value="constraint" />
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Condition"/>
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
+  <derivation value="constraint"/>
   <differential>
-    <element id="Condition.extension">
-      <path value="Condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.extension:delivery">
-      <path value="Condition.extension" />
-      <sliceName value="delivery" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/condition-partOf" />
-      </type>
-    </element>
-    <element id="Condition.extension:delivery.value[x]:valueReference">
-      <path value="Condition.extension.value[x]" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
-      </type>
-    </element>
-    <element id="Condition.category">
-      <path value="Condition.category" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.category:disorderOfLaborAndDelivery">
-      <path value="Condition.category" />
-      <sliceName value="disorderOfLaborAndDelivery" />
-      <max value="1" />
-    </element>
-    <element id="Condition.category:disorderOfLaborAndDelivery.coding">
-      <path value="Condition.category.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery">
-      <path value="Condition.category.coding" />
-      <sliceName value="disorderOfLaborAndDelivery" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="362972006" />
-        <display value="Disorder of labor / delivery (disorder)" />
-      </patternCoding>
-    </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.code.coding:disorderOfLaborAndDeliveryCode">
-      <path value="Condition.code.coding" />
-      <sliceName value="disorderOfLaborAndDeliveryCode" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-DisorderOfLaborAndDelivery-code" />
-        <valueSetReference>
-			<reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfLaborAndDelivery-code" />
-		</valueSetReference>
-      </binding>
-    </element>
-    <element id="Condition.subject">
-      <path value="Condition.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-2" />
-        <comment value="Vrouw" />
-      </mapping>
-    </element>
-    <element id="Condition.context">
-      <path value="Condition.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
-        <comment value="Zorgverlening" />
-      </mapping>
-    </element>
-    <element id="Condition.assertedDate">
-      <path value="Condition.assertedDate" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82381" />
-        <comment value="Datum" />
-      </mapping>
-    </element>
-    <element id="Condition.evidence.code">
-      <path value="Condition.evidence.code" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.evidence.code:suspectedIntraUterinFetalDeath">
-      <path value="Condition.evidence.code" />
-      <sliceName value="suspectedIntraUterinFetalDeath" />
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82445" />
-        <comment value="Vermoeden iuvd op basis van" />
-      </mapping>
-    </element>
+      <element id="Condition.extension">
+         <path value="Condition.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Condition.extension:delivery">
+         <path value="Condition.extension"/>
+         <sliceName value="delivery"/>
+         <max value="1"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/condition-partOf"/>
+         </type>
+      </element>
+      <element id="Condition.extension:delivery.value[x]:valueReference">
+         <path value="Condition.extension.value[x]"/>
+         <sliceName value="valueReference"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
+         </type>
+      </element>
+      <element id="Condition.category">
+         <path value="Condition.category"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="coding"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1567"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1594"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+      </element>
+      <element id="Condition.category:disorderOfLaborAndDelivery">
+         <path value="Condition.category"/>
+         <sliceName value="disorderOfLaborAndDelivery"/>
+         <max value="1"/>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1567"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1594"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+      </element>
+      <element id="Condition.category:disorderOfLaborAndDelivery.coding">
+         <path value="Condition.category.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="pattern"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery">
+         <path value="Condition.category.coding"/>
+         <sliceName value="disorderOfLaborAndDelivery"/>
+         <max value="1"/>
+         <patternCoding>
+            <system value="http://snomed.info/sct"/>
+            <code value="362972006"/>
+            <display value="Disorder of labor / delivery (disorder)"/>
+         </patternCoding>
+      </element>
+      <element id="Condition.code.coding">
+         <path value="Condition.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Condition.code.coding:disorderOfLaborAndDeliveryCode">
+         <path value="Condition.code.coding"/>
+         <sliceName value="disorderOfLaborAndDeliveryCode"/>
+         <max value="1"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="bc-DisorderOfLaborAndDelivery-code"/>
+            <valueSetReference>
+			            <reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfLaborAndDelivery-code"/>
+		          </valueSetReference>
+         </binding>
+      </element>
+      <element id="Condition.subject">
+         <path value="Condition.subject"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-2"/>
+            <comment value="Vrouw"/>
+         </mapping>
+      </element>
+      <element id="Condition.context">
+         <path value="Condition.context"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-4"/>
+            <comment value="Zorgverlening"/>
+         </mapping>
+      </element>
+      <element id="Condition.assertedDate">
+         <path value="Condition.assertedDate"/>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82381"/>
+            <comment value="Datum"/>
+         </mapping>
+      </element>
+      <element id="Condition.evidence.code">
+         <path value="Condition.evidence.code"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="coding.code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Condition.evidence.code:suspectedIntraUterinFetalDeath">
+         <path value="Condition.evidence.code"/>
+         <sliceName value="suspectedIntraUterinFetalDeath"/>
+         <binding>
+            <strength value="extensible"/>
+            <valueSetReference>
+               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349"/>
+            </valueSetReference>
+         </binding>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82445"/>
+            <comment value="Vermoeden iuvd op basis van"/>
+         </mapping>
+      </element>
   </differential>
 </StructureDefinition>

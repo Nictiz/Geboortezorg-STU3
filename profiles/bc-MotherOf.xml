@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-MotherOf"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MotherOf"/>
+  <version value="1.0.0"/>
+  <name value="bc-MotherOf"/>
+  <title value="bc-MotherOf"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
+  <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
+  </contact>
+  <description value="A RelatedPerson profile describing the relation between mother and child as defined by BabyConnect. The RelatedPerson is the mother, which is a related person of the child Patient (RelatedPerson.patient). The mother Patient (bc-Woman) is linked to the RelatedPerson (Patient.link of type seealso)."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
+  <mapping>
+      <identity value="rim"/>
+      <uri value="http://hl7.org/v3"/>
+      <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+      <identity value="w5"/>
+      <uri value="http://hl7.org/fhir/w5"/>
+      <name value="W5 Mapping"/>
+  </mapping>
+  <mapping>
+      <identity value="v2"/>
+      <uri value="http://hl7.org/v2"/>
+      <name value="HL7 v2 Mapping"/>
+  </mapping>
+  <mapping>
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
+  </mapping>
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="RelatedPerson"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+  <derivation value="constraint"/>
+  <differential>
+      <element id="RelatedPerson.patient">
+         <path value="RelatedPerson.patient"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child"/>
+         </type>
+      </element>
+      <element id="RelatedPerson.relationship.coding">
+         <path value="RelatedPerson.relationship.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="RelatedPerson.relationship.coding:mother">
+         <path value="RelatedPerson.relationship.coding"/>
+         <sliceName value="mother"/>
+         <patternCoding>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="MTH"/>
+            <display value="Mother"/>
+         </patternCoding>
+      </element>
+      <element id="RelatedPerson.relationship.coding:mother.system">
+         <path value="RelatedPerson.relationship.coding.system"/>
+         <fixedUri value="http://hl7.org/fhir/v3/RoleCode"/>
+      </element>
+      <element id="RelatedPerson.relationship.coding:mother.code">
+         <path value="RelatedPerson.relationship.coding.code"/>
+         <fixedCode value="MTH"/>
+      </element>
+      <element id="RelatedPerson.relationship.coding:mother.display">
+         <path value="RelatedPerson.relationship.coding.display"/>
+         <defaultValueString value="Mother"/>
+      </element>
+  </differential>
+</StructureDefinition>

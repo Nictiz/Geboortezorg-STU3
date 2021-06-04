@@ -1,164 +1,264 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-DisorderOfChild" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfChild" />
-  <version value="1.0.0" />
-  <name value="bc-DisorderOfChild" />
-  <title value="bc-DisorderOfChild" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="bc-DisorderOfChild"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfChild"/>
+  <version value="1.0.0"/>
+  <name value="bc-DisorderOfChild"/>
+  <title value="bc-DisorderOfChild"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="geboortezorg@nictiz.nl" />
-      <use value="work" />
-    </telecom>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
   </contact>
-  <description value="A Condition profile describing child disorders, such as chromosomal and congenital abnormalities or other problems, as defined by BabyConnect." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.2" />
+  <description value="A Condition profile describing child disorders, such as chromosomal and congenital abnormalities or other problems, as defined by BabyConnect."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
   <mapping>
-    <identity value="hcim-concernfortransfer-v1.2-2015EN" />
-    <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)" />
-    <name value="HCIM ConcernForTransfer-v1.2(2015EN)" />
+      <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+      <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)"/>
+      <name value="HCIM ConcernForTransfer-v1.2(2015EN)"/>
   </mapping>
   <mapping>
-    <identity value="hcim-concernfortransfer-v3.0-2016EN" />
-    <uri value="https://zibs.nl/wiki/ConcernForTransfer-v3.0(2016EN)" />
-    <name value="HCIM ConcernForTransfer-v3.0(2016EN)" />
+      <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
+      <uri value="https://zibs.nl/wiki/ConcernForTransfer-v3.0(2016EN)"/>
+      <name value="HCIM ConcernForTransfer-v3.0(2016EN)"/>
   </mapping>
   <mapping>
-    <identity value="hcim-problem-v1.2-2017EN" />
-    <uri value="https://zibs.nl/wiki/Problem-v4.1(2017EN)" />
-    <name value="HCIM Problem-v4.1(2017EN)" />
-    <comment value="ConcernForTransfer is renamed to Problem with release 2017 of the HCIMs." />
+      <identity value="hcim-problem-v1.2-2017EN"/>
+      <uri value="https://zibs.nl/wiki/Problem-v4.1(2017EN)"/>
+      <name value="HCIM Problem-v4.1(2017EN)"/>
+      <comment value="ConcernForTransfer is renamed to Problem with release 2017 of the HCIMs."/>
   </mapping>
   <mapping>
-    <identity value="hcim-basicelements-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
-    <name value="HCIM BasicElements-v1.0(2017EN)" />
+      <identity value="hcim-basicelements-v1.0-2017EN"/>
+      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
+      <name value="HCIM BasicElements-v1.0(2017EN)"/>
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Condition" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
-  <derivation value="constraint" />
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Condition"/>
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
+  <derivation value="constraint"/>
   <differential>
-    <element id="Condition.verificationStatus">
-      <path value="Condition.verificationStatus" />
-      <comment value="A ConceptMap (https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-ConditionVerificationStatus) is available." />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40100" />
-        <comment value="Waarschijnlijkheid congenitale afwijking" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40130" />
-        <comment value="Waarschijnlijkheid chromosomale afwijking" />
-      </mapping>
-    </element>
-    <element id="Condition.category">
-      <path value="Condition.category" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.category:disorderOfChild">
-      <path value="Condition.category" />
-      <sliceName value="disorderOfChild" />
-      <max value="1" />
-    </element>
-    <element id="Condition.category:disorderOfChild.coding">
-      <path value="Condition.category.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <max value="1" />
-    </element>
-    <element id="Condition.category:disorderOfChild.coding:disorderOfChild">
-      <path value="Condition.category.coding" />
-      <sliceName value="disorderOfChild" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="414025005" />
-        <display value="Disorder of fetus or newborn (disorder)" />
-      </patternCoding>
-    </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.code.coding:DisorderOfChildCode">
-      <path value="Condition.code.coding" />
-      <sliceName value="DisorderOfChildCode" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-DisorderOfChild-code" />
-		<valueSetReference>
-			<reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code" />
-		</valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40090" />
-        <comment value="Specificatie congenitale afwijking" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80789" />
-        <comment value="Problematiek kind" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40120" />
-        <comment value="Specificatie chromosomale afwijking" />
-      </mapping>
-    </element>
-    <element id="Condition.subject">
-      <path value="Condition.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
-      </type>
-    </element>
-    <element id="Condition.context">
-      <path value="Condition.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
-        <comment value="Zorgverlening" />
-      </mapping>
-    </element>
+      <element id="Condition.verificationStatus">
+         <path value="Condition.verificationStatus"/>
+         <comment value="A ConceptMap (https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-ConditionVerificationStatus) is available."/>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-40100"/>
+            <comment value="Waarschijnlijkheid congenitale afwijking"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-40130"/>
+            <comment value="Waarschijnlijkheid chromosomale afwijking"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-2704"/>
+            <comment value="VerificatieStatus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1511"/>
+            <comment value="VerificatieStatus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1501"/>
+            <comment value="VerificatieStatus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1522"/>
+            <comment value="VerificatieStatus"/>
+         </mapping>
+      </element>
+      <element id="Condition.category">
+         <path value="Condition.category"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="coding"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1932"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1974"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-2699"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1506"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1496"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1517"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+      </element>
+      <element id="Condition.category:disorderOfChild">
+         <path value="Condition.category"/>
+         <sliceName value="disorderOfChild"/>
+         <max value="1"/>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1932"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1974"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-2699"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1506"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1496"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1517"/>
+            <comment value="ProbleemType"/>
+         </mapping>
+      </element>
+      <element id="Condition.category:disorderOfChild.coding">
+         <path value="Condition.category.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="pattern"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <max value="1"/>
+      </element>
+      <element id="Condition.category:disorderOfChild.coding:disorderOfChild">
+         <path value="Condition.category.coding"/>
+         <sliceName value="disorderOfChild"/>
+         <max value="1"/>
+         <patternCoding>
+            <system value="http://snomed.info/sct"/>
+            <code value="414025005"/>
+            <display value="Disorder of fetus or newborn (disorder)"/>
+         </patternCoding>
+      </element>
+      <element id="Condition.code.coding">
+         <path value="Condition.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Condition.code.coding:DisorderOfChildCode">
+         <path value="Condition.code.coding"/>
+         <sliceName value="DisorderOfChildCode"/>
+         <max value="1"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="bc-DisorderOfChild-code"/>
+		          <valueSetReference>
+			            <reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code"/>
+		          </valueSetReference>
+         </binding>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-40090"/>
+            <comment value="Specificatie congenitale afwijking"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-80789"/>
+            <comment value="Problematiek kind"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-40120"/>
+            <comment value="Specificatie chromosomale afwijking"/>
+         </mapping>
+      </element>
+      <element id="Condition.subject">
+         <path value="Condition.subject"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1985"/>
+            <comment value="Kind"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1929"/>
+            <comment value="Probleem (Geboortetrauma)"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1971"/>
+            <comment value="Probleem (Congenitale afwijkingen"/>
+         </mapping>
+      </element>
+      <element id="Condition.context">
+         <path value="Condition.context"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-4"/>
+            <comment value="Zorgverlening"/>
+         </mapping>
+      </element>
   </differential>
 </StructureDefinition>

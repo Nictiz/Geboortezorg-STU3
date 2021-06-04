@@ -1,182 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-PregnancyUltraSound" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
-  <version value="1.0.0" />
-  <name value="bc-PregnancyUltraSound" />
-  <title value="bc-PregnancyUltraSound" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="bc-PregnancyUltraSound"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound"/>
+  <version value="1.0.0"/>
+  <name value="bc-PregnancyUltraSound"/>
+  <title value="bc-PregnancyUltraSound"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="geboortezorg@nictiz.nl" />
-      <use value="work" />
-    </telecom>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
   </contact>
-  <description value="A DiagnosticReport profile describing a pregnancy ultrasound as defined by BabyConnect. The DiagnosticReport groups Observations related to the pregnancy ultrasound." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.2" />
+  <description value="A DiagnosticReport profile describing a pregnancy ultrasound as defined by BabyConnect. The DiagnosticReport groups Observations related to the pregnancy ultrasound."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
   <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Mapping" />
+      <identity value="workflow"/>
+      <uri value="http://hl7.org/fhir/workflow"/>
+      <name value="Workflow Mapping"/>
   </mapping>
   <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
+      <identity value="v2"/>
+      <uri value="http://hl7.org/v2"/>
+      <name value="HL7 v2 Mapping"/>
   </mapping>
   <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
+      <identity value="rim"/>
+      <uri value="http://hl7.org/v3"/>
+      <name value="RIM Mapping"/>
   </mapping>
   <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/w5" />
-    <name value="W5 Mapping" />
+      <identity value="w5"/>
+      <uri value="http://hl7.org/fhir/w5"/>
+      <name value="W5 Mapping"/>
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="DiagnosticReport" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
-  <derivation value="constraint" />
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="DiagnosticReport"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
+  <derivation value="constraint"/>
   <differential>
-    <element id="DiagnosticReport">
-      <path value="DiagnosticReport" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82235" />
-        <comment value="Echoscopie" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.extension">
-      <path value="DiagnosticReport.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="DiagnosticReport.extension:comments">
-      <path value="DiagnosticReport.extension" />
-      <sliceName value="comments" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
-      </type>
-    </element>
-    <element id="DiagnosticReport.code.coding">
-      <path value="DiagnosticReport.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="DiagnosticReport.code.coding:ultraSoundType">
-      <path value="DiagnosticReport.code.coding" />
-      <sliceName value="ultraSoundType" />
-      <binding>
-        <strength value="extensible" />
-        <description value="OnderzoekType" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120" />
-		</valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-83383" />
-        <comment value="Onderzoektype" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.subject">
-      <path value="DiagnosticReport.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-2" />
-        <comment value="Vrouw" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.context">
-      <path value="DiagnosticReport.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
-        <comment value="Zorgverlening" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.effective[x]">
-      <path value="DiagnosticReport.effective[x]" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-50020" />
-        <comment value="Datum onderzoek" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.performer.role.coding">
-      <path value="DiagnosticReport.performer.role.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="DiagnosticReport.performer.role.coding:RoleCodeNL-extension">
-      <path value="DiagnosticReport.performer.role.coding" />
-      <sliceName value="RoleCodeNL-extension" />
-      <binding>
-        <strength value="extensible" />
-        <description value="RolZorgverlenerMedischOnderzoek" />
-		<valueSetReference>
-			<reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.187--20140102000000" />
-		</valueSetReference>
-      </binding>
-    </element>
-    <element id="DiagnosticReport.performer.actor">
-      <path value="DiagnosticReport.performer.actor" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-    </element>
-    <element id="DiagnosticReport.specimen">
-      <path value="DiagnosticReport.specimen" />
-      <max value="0" />
-    </element>
-    <element id="DiagnosticReport.result">
-      <path value="DiagnosticReport.result" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
-      </type>
-    </element>
+      <element id="DiagnosticReport">
+         <path value="DiagnosticReport"/>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82235"/>
+            <comment value="Echoscopie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1209"/>
+            <comment value="Echoscopie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v3.2"/>
+            <map value="peri32-dataelement-1210"/>
+            <comment value="Biometrie"/>
+         </mapping>
+      </element>
+      <element id="DiagnosticReport.extension">
+         <path value="DiagnosticReport.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="DiagnosticReport.extension:comments">
+         <path value="DiagnosticReport.extension"/>
+         <sliceName value="comments"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment"/>
+         </type>
+      </element>
+      <element id="DiagnosticReport.code.coding">
+         <path value="DiagnosticReport.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="DiagnosticReport.code.coding:ultraSoundType">
+         <path value="DiagnosticReport.code.coding"/>
+         <sliceName value="ultraSoundType"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="OnderzoekType"/>
+		          <valueSetReference>
+			            <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
+		          </valueSetReference>
+         </binding>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-83383"/>
+            <comment value="Onderzoektype"/>
+         </mapping>
+      </element>
+      <element id="DiagnosticReport.subject">
+         <path value="DiagnosticReport.subject"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-2"/>
+            <comment value="Vrouw"/>
+         </mapping>
+      </element>
+      <element id="DiagnosticReport.context">
+         <path value="DiagnosticReport.context"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-4"/>
+            <comment value="Zorgverlening"/>
+         </mapping>
+      </element>
+      <element id="DiagnosticReport.effective[x]">
+         <path value="DiagnosticReport.effective[x]"/>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-50020"/>
+            <comment value="Datum onderzoek"/>
+         </mapping>
+      </element>
+      <element id="DiagnosticReport.performer.role.coding">
+         <path value="DiagnosticReport.performer.role.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="DiagnosticReport.performer.role.coding:RoleCodeNL-extension">
+         <path value="DiagnosticReport.performer.role.coding"/>
+         <sliceName value="RoleCodeNL-extension"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="RolZorgverlenerMedischOnderzoek"/>
+		          <valueSetReference>
+			            <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.187--20140102000000"/>
+		          </valueSetReference>
+         </binding>
+      </element>
+      <element id="DiagnosticReport.performer.actor">
+         <path value="DiagnosticReport.performer.actor"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+         </type>
+      </element>
+      <element id="DiagnosticReport.specimen">
+         <path value="DiagnosticReport.specimen"/>
+         <max value="0"/>
+      </element>
+      <element id="DiagnosticReport.result">
+         <path value="DiagnosticReport.result"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
+         </type>
+      </element>
   </differential>
 </StructureDefinition>

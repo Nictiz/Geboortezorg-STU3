@@ -26,49 +26,41 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     
     <xsl:output method="xml" indent="yes"/>
-             
+    <xsl:variable name="inputDir" select="'../profiles/'"/>
+    <xsl:variable name="outputDir" select="'../profiles/generatedProfiles/'"/>
+    <xsl:variable name="mappingFile" select="document('../fhirmapping-3-2.xml')"/>
+    
+    <xd:doc>
+        <xd:desc/>
+    </xd:doc>
+    <xsl:template name="main" match="/">
+        <xsl:for-each select="collection(concat($inputDir, '?select=*.xml'))">
+            <xsl:variable name="id" select="f:StructureDefinition/f:id/@value"/>
+            <xsl:result-document href="{concat($outputDir, $id, '.xml')}">
+                    <xsl:call-template name="createMappings">
+                        <xsl:with-param name="record"> 
+                            <xsl:copy-of select="$mappingFile/dataset/record[profile=$id]"/>
+                        </xsl:with-param>
+                    </xsl:call-template>
+            </xsl:result-document>    
+        </xsl:for-each>
+    </xsl:template>
+         
     <xd:doc>
         <xd:desc>For each record get ID, name and mapping and add mappings to profile.xml</xd:desc>
     </xd:doc>
-    <xsl:template name="createMappings" match="record">
-        <xsl:if test="ID='peri32-dataelement-37'">
-        <xsl:variable name="ID" select="ID"/>
-        <xsl:variable name="naam" select="naam"/>
-        <xsl:variable name="mapping" select="mapping"/>
-        <xsl:variable name="fileName" select="profile"/>
-            <xsl:variable name="file" select="document(concat('../profiles/',profile,'.xml'))"/>
+    <xsl:template name="createMappings" match="f:StructureDefinition" mode="doCreateMappings">
+        <xsl:param name="record"/>
         <xsl:variable name="tempOutput">
-            <xsl:for-each select="$file">
                 <xsl:call-template name="addMappingsProfileLevel"/>    
-            </xsl:for-each>
         </xsl:variable>
-        <xsl:variable name="finalOutput">
-            <xsl:for-each select="$tempOutput">
-                <xsl:call-template name="addMappingsElementLevel">
-                    <xsl:with-param name="ID" select="$ID"/>
-                    <xsl:with-param name="naam" select="$naam"/>
-                    <xsl:with-param name="path" select="$mapping"/>
-                </xsl:call-template>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:for-each select="$finalOutput">
-            <xsl:call-template name="createDocument">
-                <xsl:with-param name="fileName"><xsl:value-of select="concat('generatedProfiles/',$fileName)"/></xsl:with-param>
+        <xsl:for-each select="$tempOutput">
+            <xsl:call-template name="addMappingsElementLevel">
+                <xsl:with-param name="record" select="$record"/>
             </xsl:call-template>
         </xsl:for-each>
-        </xsl:if>
     </xsl:template>    
-    
-    <xd:doc>
-        <xd:desc>Creates xml document for a FHIR resource</xd:desc>
-    </xd:doc>
-    <xsl:template name="createDocument" match="/" mode="doCreateDocument">
-        <xsl:param name="fileName"></xsl:param>
-        <xsl:result-document href="../profiles/{$fileName}.xml"> 
-            <xsl:copy-of select="."/>
-        </xsl:result-document>
-    </xsl:template>   
-    
+       
     <xd:doc>
         <xd:desc>Add profile level mappings to profile.xml</xd:desc>/>
     </xd:doc>
@@ -113,14 +105,10 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xd:desc>Add element level mappings to profile.xml</xd:desc>/>
     </xd:doc>
     <xsl:template name="addMappingsElementLevel" match="node() | @*" mode="doAddMappings doAddMappingElements">
-        <xsl:param name="ID"/>
-        <xsl:param name="naam"/>
-        <xsl:param name="path"/>
+        <xsl:param name="record"/>
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="doAddMappingElements">
-                <xsl:with-param name="ID" select="$ID"/>
-                <xsl:with-param name="naam" select="$naam"/>
-                <xsl:with-param name="path" select="$path"/>
+                <xsl:with-param name="record" select="$record"/>
             </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>
@@ -129,22 +117,20 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xd:desc>Add element level mappings to profile.xml</xd:desc>/>
     </xd:doc>
     <xsl:template name="addMappingsElement" match="f:element" mode="doAddMappingElements">
-        <xsl:param name="ID"/>
-        <xsl:param name="naam"/>
-        <xsl:param name="path"/>
-        <xsl:choose>
-            <xsl:when test="not(f:mapping/f:map[@value=$ID]) and f:path/@value=$path">
-                <xsl:copy-of select="."/>
+        <xsl:param name="record"/>
+        <xsl:variable name="this" select="."/>
+        <element id="{$this/@id}">
+            <xsl:copy-of select="$this/*"/>
+        <xsl:for-each select="$record/record">
+            <xsl:if test="not($this/f:mapping/f:map[@value=ID]) and $this/f:path/@value=mapping">
                 <mapping>
                     <identity value="gebz-peri-v3.2" />
-                    <map value="{$ID}" />
-                    <comment value="{$naam}" />
-                </mapping>
-            </xsl:when>    
-            <xsl:otherwise>
-                <xsl:copy-of select="."/>
-            </xsl:otherwise>
-        </xsl:choose>   
+                    <map value="{ID}" />
+                    <comment value="{naam}" />
+                </mapping>                 
+            </xsl:if>
+        </xsl:for-each>
+        </element>
     </xsl:template>
     
 </xsl:stylesheet>

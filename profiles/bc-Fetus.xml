@@ -1,106 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-Fetus" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
-  <version value="1.0.0" />
-  <name value="bc-Fetus" />
-  <title value="bc-Fetus" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="bc-Fetus"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus"/>
+  <version value="1.0.0"/>
+  <name value="bc-Fetus"/>
+  <title value="bc-Fetus"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="geboortezorg@nictiz.nl" />
-      <use value="work" />
-    </telecom>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
   </contact>
-  <description value="A BodySite profile referring to the unborn fetus when no fetal record (yet) exists as defined by BabyConnect. In case a fetal record is created the unborn fetus will be registered as a Patient." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.2" />
+  <description value="A BodySite profile referring to the unborn fetus when no fetal record (yet) exists as defined by BabyConnect. In case a fetal record is created the unborn fetus will be registered as a Patient."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
   <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
+      <identity value="rim"/>
+      <uri value="http://hl7.org/v3"/>
+      <name value="RIM Mapping"/>
   </mapping>
   <mapping>
-    <identity value="openehr" />
-    <uri value="http://openehr.org" />
-    <name value="Open EHR Archetype Mapping" />
+      <identity value="openehr"/>
+      <uri value="http://openehr.org"/>
+      <name value="Open EHR Archetype Mapping"/>
   </mapping>
   <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/w5" />
-    <name value="W5 Mapping" />
+      <identity value="w5"/>
+      <uri value="http://hl7.org/fhir/w5"/>
+      <name value="W5 Mapping"/>
   </mapping>
   <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
+      <identity value="v2"/>
+      <uri value="http://hl7.org/v2"/>
+      <name value="HL7 v2 Mapping"/>
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="BodySite" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodySite" />
-  <derivation value="constraint" />
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="BodySite"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodySite"/>
+  <derivation value="constraint"/>
   <differential>
-    <element id="BodySite.extension">
-      <path value="BodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="BodySite.extension:child">
-      <path value="BodySite.extension" />
-      <sliceName value="child" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-bodysite-child" />
-      </type>
-    </element>
-    <element id="BodySite.code.coding">
-      <path value="BodySite.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="BodySite.code.coding:fetus">
-      <path value="BodySite.code.coding" />
-      <sliceName value="fetus" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="83418008" />
-        <display value="Entire fetus (body structure)" />
-      </patternCoding>
-    </element>
-    <element id="BodySite.code.coding:fetus.system">
-      <path value="BodySite.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="BodySite.code.coding:fetus.code">
-      <path value="BodySite.code.coding.code" />
-      <fixedCode value="83418008" />
-    </element>
-    <element id="BodySite.patient">
-      <path value="BodySite.patient" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-    </element>
+      <element id="BodySite.extension">
+         <path value="BodySite.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="BodySite.extension:child">
+         <path value="BodySite.extension"/>
+         <sliceName value="child"/>
+         <max value="1"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-bodysite-child"/>
+         </type>
+      </element>
+      <element id="BodySite.code.coding">
+         <path value="BodySite.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="pattern"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="BodySite.code.coding:fetus">
+         <path value="BodySite.code.coding"/>
+         <sliceName value="fetus"/>
+         <patternCoding>
+            <system value="http://snomed.info/sct"/>
+            <code value="83418008"/>
+            <display value="Entire fetus (body structure)"/>
+         </patternCoding>
+      </element>
+      <element id="BodySite.code.coding:fetus.system">
+         <path value="BodySite.code.coding.system"/>
+         <fixedUri value="http://snomed.info/sct"/>
+      </element>
+      <element id="BodySite.code.coding:fetus.code">
+         <path value="BodySite.code.coding.code"/>
+         <fixedCode value="83418008"/>
+      </element>
+      <element id="BodySite.patient">
+         <path value="BodySite.patient"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
+         </type>
+      </element>
   </differential>
 </StructureDefinition>

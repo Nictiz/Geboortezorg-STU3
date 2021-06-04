@@ -1,273 +1,278 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-MaternalObservation" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation" />
-  <version value="1.0.0" />
-  <name value="bc-MaternalObservation" />
-  <title value="bc-MaternalObservation" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="bc-MaternalObservation"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation"/>
+  <version value="1.0.0"/>
+  <name value="bc-MaternalObservation"/>
+  <title value="bc-MaternalObservation"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="geboortezorg@nictiz.nl" />
-      <use value="work" />
-    </telecom>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="geboortezorg@nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
   </contact>
-  <description value="An Observation profile describing patient-related Observations, which are not captured in other existing profiles, as defined by BabyConnect. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.2" />
+  <description value="An Observation profile describing patient-related Observations, which are not captured in other existing profiles, as defined by BabyConnect. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation."/>
+  <copyright value="CC0"/>
+  <fhirVersion value="3.0.2"/>
   <mapping>
-    <identity value="hcim-basicelements-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
-    <name value="HCIM BasicElements-v1.0(2017EN)" />
+      <identity value="hcim-basicelements-v1.0-2017EN"/>
+      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
+      <name value="HCIM BasicElements-v1.0(2017EN)"/>
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
+      <identity value="gebz-peri-v2.3"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg Perinatologie 2.3"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
-  <derivation value="constraint" />
+  <mapping>
+      <identity value="gebz-peri-v3.2"/>
+      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
+      <name value="Geboortezorg 3.2"/>
+   </mapping>
+   <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+  <derivation value="constraint"/>
   <differential>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-MaternalObservation-code" />
-        <valueSetReference>
-          <reference value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-code" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-2" />
-        <comment value="Vrouw" />
-      </mapping>
-    </element>
-    <element id="Observation.context">
-      <path value="Observation.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
-        <comment value="Zorgverlening" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82493" />
-        <comment value="Bloedverlies" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82494" />
-        <comment value="Partiele mola" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82495" />
-        <comment value="Cervixinsufficientie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82497" />
-        <comment value="HyperemesisGravidarum" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82499" />
-        <comment value="Zwangerschapscholestase" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82500" />
-        <comment value="Diabetes gravidarum met insuline" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82502" />
-        <comment value="Dreigende partus immaturus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82503" />
-        <comment value="Dreigende partus prematurus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82504" />
-        <comment value="Abruptio placentae" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82505" />
-        <comment value="Fluxus postpartum" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82465" />
-        <comment value="Diabetes Mellitus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82481" />
-        <comment value="Bloedtransfusie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82482" />
-        <comment value="Transfusiereactie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82488" />
-        <comment value="Psychiatrie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82490" />
-        <comment value="Overige aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82456" />
-        <comment value="Auto-immuun aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82458" />
-        <comment value="Cardiovasculaire aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82460" />
-        <comment value="Urogenitale aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82462" />
-        <comment value="Oncologische aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82464" />
-        <comment value="Schildklier aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82467" />
-        <comment value="Neurologische aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82467" />
-        <comment value="Infectieziekte" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82471" />
-        <comment value="Maag Darm Lever aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82479" />
-        <comment value="Orthopedische afwijking" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82471" />
-        <comment value="Anemie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82475" />
-        <comment value="Longaandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82477" />
-        <comment value="Gynaecologische aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82486" />
-        <comment value="Type stollingsprobleem" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82484" />
-        <comment value="Type operatie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82496" />
-        <comment value="Infectie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-82498" />
-        <comment value="Hypertensieve aandoening" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20612" />
-        <comment value="Portio" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20613" />
-        <comment value="Ontsluiting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20614" />
-        <comment value="Vliezen" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20615" />
-        <comment value="Indaling Hodge" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80616" />
-        <comment value="Aard van het voorliggend deel" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-80618" />
-        <comment value="Stand" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20305" />
-        <comment value="Conclusie risicostatus na intake" />
-      </mapping>
-    </element>
+      <element id="Observation.code">
+         <path value="Observation.code"/>
+         <binding>
+            <strength value="extensible"/>
+            <description value="bc-MaternalObservation-code"/>
+            <valueSetReference>
+               <reference value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-code"/>
+            </valueSetReference>
+         </binding>
+      </element>
+      <element id="Observation.subject">
+         <path value="Observation.subject"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-2"/>
+            <comment value="Vrouw"/>
+         </mapping>
+      </element>
+      <element id="Observation.context">
+         <path value="Observation.context"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
+         </type>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
+         </type>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-4"/>
+            <comment value="Zorgverlening"/>
+         </mapping>
+      </element>
+      <element id="Observation.value[x]">
+         <path value="Observation.value[x]"/>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82493"/>
+            <comment value="Bloedverlies"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82494"/>
+            <comment value="Partiele mola"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82495"/>
+            <comment value="Cervixinsufficientie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82497"/>
+            <comment value="HyperemesisGravidarum"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82499"/>
+            <comment value="Zwangerschapscholestase"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82500"/>
+            <comment value="Diabetes gravidarum met insuline"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82502"/>
+            <comment value="Dreigende partus immaturus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82503"/>
+            <comment value="Dreigende partus prematurus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82504"/>
+            <comment value="Abruptio placentae"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82505"/>
+            <comment value="Fluxus postpartum"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82465"/>
+            <comment value="Diabetes Mellitus"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82481"/>
+            <comment value="Bloedtransfusie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82482"/>
+            <comment value="Transfusiereactie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82488"/>
+            <comment value="Psychiatrie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82490"/>
+            <comment value="Overige aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82456"/>
+            <comment value="Auto-immuun aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82458"/>
+            <comment value="Cardiovasculaire aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82460"/>
+            <comment value="Urogenitale aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82462"/>
+            <comment value="Oncologische aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82464"/>
+            <comment value="Schildklier aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82467"/>
+            <comment value="Neurologische aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82467"/>
+            <comment value="Infectieziekte"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82471"/>
+            <comment value="Maag Darm Lever aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82479"/>
+            <comment value="Orthopedische afwijking"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82471"/>
+            <comment value="Anemie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82475"/>
+            <comment value="Longaandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82477"/>
+            <comment value="Gynaecologische aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82486"/>
+            <comment value="Type stollingsprobleem"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82484"/>
+            <comment value="Type operatie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82496"/>
+            <comment value="Infectie"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-82498"/>
+            <comment value="Hypertensieve aandoening"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-20612"/>
+            <comment value="Portio"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-20613"/>
+            <comment value="Ontsluiting"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-20614"/>
+            <comment value="Vliezen"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-20615"/>
+            <comment value="Indaling Hodge"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-80616"/>
+            <comment value="Aard van het voorliggend deel"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-80618"/>
+            <comment value="Stand"/>
+         </mapping>
+         <mapping>
+            <identity value="gebz-peri-v2.3"/>
+            <map value="peri23-dataelement-20305"/>
+            <comment value="Conclusie risicostatus na intake"/>
+         </mapping>
+      </element>
   </differential>
 </StructureDefinition>
