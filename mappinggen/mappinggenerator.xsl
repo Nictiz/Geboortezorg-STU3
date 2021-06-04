@@ -16,7 +16,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         
     <xd:doc scope="stylesheet">
         <xd:desc>Produces valuesets from FHIR mapping
-            <xd:p><xd:b>Expected input</xd:b> Mapping generated with release_2__fhirmapping</xd:p>
+            <xd:p><xd:b>Expected input</xd:b> Reads xml files (profiles) from input directory and FHIR mapping from mapping xml file</xd:p>
             <xd:p><xd:b>History:</xd:b>
                 <xd:ul>
                     <xd:li>2020-12-02 version 0.1 LM</xd:li>
@@ -31,7 +31,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:variable name="mappingFile" select="document('../fhirmapping-3-2.xml')"/>
     
     <xd:doc>
-        <xd:desc/>
+        <xd:desc>
+            Starts in the main template, reads collection of xml files (profiles) from input directory and calls create mappings template from here
+        </xd:desc>/>
     </xd:doc>
     <xsl:template name="main" match="/">
         <xsl:for-each select="collection(concat($inputDir, '?select=*.xml'))">
