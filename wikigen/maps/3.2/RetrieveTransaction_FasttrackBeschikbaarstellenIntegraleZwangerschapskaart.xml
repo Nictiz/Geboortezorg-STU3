@@ -21,8 +21,8 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern="nvt"
-               mapping="nvt"
+               pattern=""
+               mapping=""
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675"
                level="2"
@@ -290,7 +290,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.address"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3219"
                level="4"
                type="code"
@@ -302,7 +302,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.address.use"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3220"
                level="3"
                type="group"
@@ -314,7 +314,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3221"
                level="4"
                type="group"
@@ -326,7 +326,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.value"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3222"
                level="5"
                type="string"
@@ -338,7 +338,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.value"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3223"
                level="5"
                type="code"
@@ -350,7 +350,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom:extension:TelecomType"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3224"
                level="5"
                type="code"
@@ -362,7 +362,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.use"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3225"
                level="4"
                type="group"
@@ -374,7 +374,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.value"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3226"
                level="5"
                type="string"
@@ -386,7 +386,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.value"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3227"
                level="5"
                type="code"
@@ -398,7 +398,7 @@
                bc-pattern="false"
                pattern="nl-core-patient"
                mapping="Patient.telecom.use"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.682"
                level="3"
                type="identifier"
@@ -1115,8 +1115,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="*"
                resource=""
-               bc-pattern="false"
-               pattern="zib-Pregnancy-TermDate/bc-Pregnancy-TermDate"
+               bc-pattern="true"
+               pattern="bc-PregnancyObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/aterm-example"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3347"
@@ -1127,8 +1127,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="false"
-               pattern="zib-Pregnancy-TermDate/bc-Pregnancy-TermDate"
+               bc-pattern="true"
+               pattern="bc-PregnancyObservation"
                mapping="Observation.valueDateTime"
                example="https://simplifier.net/geboortezorg-stu3/aterm-example"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3348"
@@ -1139,8 +1139,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="false"
-               pattern="zib-Pregnancy-TermDate/bc-Pregnancy-TermDate"
+               bc-pattern="true"
+               pattern="bc-PregnancyObservation"
                mapping="Observation.method"
                example="https://simplifier.net/geboortezorg-stu3/aterm-example"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3349"
@@ -1151,8 +1151,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="false"
-               pattern="zib-Pregnancy-TermDate/bc-Pregnancy-TermDate"
+               bc-pattern="true"
+               pattern="bc-PregnancyObservation"
                mapping="Observation.effectiveDateTime"
                example="https://simplifier.net/geboortezorg-stu3/aterm-example"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2220"
@@ -2389,7 +2389,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-BirthObservation"
-               mapping="Observation.code"
+               mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4145"
                level="4"
@@ -3084,7 +3084,7 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern="nvt"
+               pattern=""
                mapping=""
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2416"
@@ -3518,7 +3518,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-vitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2514"
                level="6"
                type="code"
@@ -3530,7 +3530,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation.code"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-vitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2517"
                level="6"
                type="quantity"
@@ -3542,7 +3542,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation.valueQuantity"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-vitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2545"
                level="5"
                type="group"
@@ -3554,7 +3554,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-actvitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2546"
                level="6"
                type="code"
@@ -3566,7 +3566,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation.code"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-actvitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2549"
                level="6"
                type="quantity"
@@ -3578,7 +3578,7 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation.valueQuantity"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/example-actvitb12"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2524"
                level="5"
                type="group"
@@ -3662,7 +3662,7 @@
                bc-pattern="false"
                pattern="zib-Problem"
                mapping="Condition"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/hb-pathie"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2539"
                level="6"
                type="code"
@@ -3674,7 +3674,7 @@
                bc-pattern="false"
                pattern="zib-Problem"
                mapping="Condition.code"
-               example=""/>
+               example="https://simplifier.net/geboortezorg-stu3/hb-pathie"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1651"
                level="4"
                type="group"
