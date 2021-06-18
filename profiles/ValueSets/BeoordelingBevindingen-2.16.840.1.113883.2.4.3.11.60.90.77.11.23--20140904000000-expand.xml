@@ -1,0 +1,78 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-09-04T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.23"/>
+    </identifier>
+    <version value="2014-09-04T00:00:00"/>
+    <name value="BeoordelingBevindingen"/>
+    <title value="Beoordeling Bevindingen"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Beoordeling Bevindingen"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <concept>
+                <code value="1"/>
+                <display value="Geen bijzonderheden"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Verdenking afwijking"/>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Niet beoordeelbaar"/>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="Niet beoordeeld"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:3785a12d-2b7f-4b03-a75e-6b15b7101159"/>
+        <timestamp value="2021-06-18T15:20:13.308+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="1"/>
+            <display value="Geen bijzonderheden"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="2"/>
+            <display value="Verdenking afwijking"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <inactive value="true"/>
+            <code value="3"/>
+            <display value="Niet beoordeeld/beoordeelbaar"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="8"/>
+            <display value="Niet beoordeelbaar"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="9"/>
+            <display value="Niet beoordeeld"/>
+        </contains>
+    </expansion>
+</ValueSet>

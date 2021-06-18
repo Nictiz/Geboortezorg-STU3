@@ -1,0 +1,103 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.337--20201207162228"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-12-07T16:22:28+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.337--20201207162228"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.337"/>
+    </identifier>
+    <version value="2020-12-07T16:22:28"/>
+    <name value="ObservatieKind_Abdomen"/>
+    <title value="ObservatieKind_Abdomen"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="ObservatieKind_Abdomen"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="281900007"/>
+                <display value="geen afwijkingen vastgesteld (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="56446007"/>
+                <display value="ingevallen abdomen (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="60728008"/>
+                <display value="gezwollen abdomen (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="43478001"/>
+                <display value="gevoeligheid van abdomen (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="60612008"/>
+                <display value="abnormaal darmgeruis (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="302945005"/>
+                <display value="afwezigheid van bloedvat in navelstreng (aandoening)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:68aa2ba5-3454-4e68-a906-0002a44330ee"/>
+        <timestamp value="2021-06-18T15:19:55.279+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="281900007"/>
+            <display value="geen afwijkingen vastgesteld (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="56446007"/>
+            <display value="ingevallen abdomen (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="60728008"/>
+            <display value="gezwollen abdomen (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="43478001"/>
+            <display value="gevoeligheid van abdomen (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="60612008"/>
+            <display value="abnormaal darmgeruis (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="302945005"/>
+            <display value="afwezigheid van bloedvat in navelstreng (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

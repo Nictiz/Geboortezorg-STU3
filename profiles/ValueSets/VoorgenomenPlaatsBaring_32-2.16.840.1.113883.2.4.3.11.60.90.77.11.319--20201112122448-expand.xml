@@ -1,0 +1,106 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.319--20201112122448"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-11-12T12:24:48+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.319--20201112122448"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.319"/>
+    </identifier>
+    <version value="2020-11-12T12:24:48"/>
+    <name value="VoorgenomenPlaatsBaring_32"/>
+    <title value="VoorgenomenPlaatsBaring (3.2)"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="VoorgenomenPlaatsBaring (3.2)"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="264362003"/>
+                <display value="thuis (omgeving)"/>
+            </concept>
+            <concept>
+                <code value="91154008"/>
+                <display value="zelfstandig geboortecentrum (omgeving)"/>
+            </concept>
+            <concept>
+                <code value="285201006"/>
+                <display value="ziekenhuisomgeving (omgeving)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="UNK"/>
+                <display value="onbekend"/>
+            </concept>
+            <concept>
+                <code value="NI"/>
+                <display value="geen informatie"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.8.7"/>
+            <concept>
+                <code value="05"/>
+                <display value="nog niet bepaald"/>
+            </concept>
+            <concept>
+                <code value="00"/>
+                <display value="geen voorkeur"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:615e2ac6-8f6d-411e-840e-2e997267fb2b"/>
+        <timestamp value="2021-06-18T15:20:27.927+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="264362003"/>
+            <display value="thuis (omgeving)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="91154008"/>
+            <display value="zelfstandig geboortecentrum (omgeving)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="285201006"/>
+            <display value="ziekenhuisomgeving (omgeving)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.8.7"/>
+            <code value="05"/>
+            <display value="nog niet bepaald"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.8.7"/>
+            <code value="00"/>
+            <display value="geen voorkeur"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
+</ValueSet>

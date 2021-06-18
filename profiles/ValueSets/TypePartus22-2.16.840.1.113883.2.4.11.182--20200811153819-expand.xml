@@ -1,7 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.11.182--20200811153819"/>
+   <id value="2.16.840.1.113883.2.4.11.182--20200811153819"/>
     <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
@@ -71,4 +72,59 @@
             </concept>
         </include>
     </compose>
+    <expansion>
+        <identifier value="urn:uuid:e9243a76-9aca-4bfd-8fc6-77e5eba20f7f"/>
+        <timestamp value="2021-06-18T15:19:52.057+02:00"/>
+        <total value="10"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="177184002"/>
+            <display value="begeleiding van normale bevalling (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="3311000146109"/>
+            <display value="geassisteerde vaginale verlossing (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="11466000"/>
+            <display value="sectio caesarea (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="177141003"/>
+            <display value="electieve sectio caesarea (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="274130007"/>
+            <display value="spoedkeizersnede (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="386639001"/>
+            <display value="afbreken van zwangerschap (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="447972007"/>
+            <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="236990004"/>
+            <display value="postmortale keizersnede (verrichting)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+        </contains>
+    </expansion>
 </ValueSet>

@@ -1,0 +1,202 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.326--20201201113630"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-12-01T11:36:30+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.326--20201201113630"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.326"/>
+    </identifier>
+    <version value="2020-12-01T11:36:30"/>
+    <name value="ObservatieKind_Hoofd_Hals"/>
+    <title value="ObservatieKind_Hoofd-Hals"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="ObservatieKind_Hoofd-Hals"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="281900007"/>
+                <display value="geen afwijkingen vastgesteld (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="248381006"/>
+                <display value="bevinding betreffende fontanel (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="8381001"/>
+                <display value="ingezonken fontanel (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="103019006"/>
+                <display value="bomberende fontanel (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="301318003"/>
+                <display value="afwijkende vorm van hoofd (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="118235002"/>
+                <display value="bevinding betreffende oog of gezichtsvermogen (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="89091004"/>
+                <display value="oedeem van ooglid (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="11934000"/>
+                <display value="ptosis van ooglid (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="409668002"/>
+                <display value="fotofobie (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="64634000"/>
+                <display value="troebeling van cornea (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="147761000146102"/>
+                <display value="afwijkende ooglidspleet (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="247234006"/>
+                <display value="bevinding betreffende oor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="300088007"/>
+                <display value="asymmetrie van oren (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="95515009"/>
+                <display value="laag ingeplante oren (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="204245004"/>
+                <display value="bijoortje (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="112630007"/>
+                <display value="afwijkend aangezicht (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="232209000"/>
+                <display value="nasale obstructie (aandoening)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="Overig"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:fa39e4dc-9254-41ac-9d85-177eabf9e2e1"/>
+        <timestamp value="2021-06-18T15:19:54.186+02:00"/>
+        <total value="18"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="281900007"/>
+            <display value="geen afwijkingen vastgesteld (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="248381006"/>
+            <display value="bevinding betreffende fontanel (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="8381001"/>
+            <display value="ingezonken fontanel (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="103019006"/>
+            <display value="bomberende fontanel (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="301318003"/>
+            <display value="afwijkende vorm van hoofd (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="118235002"/>
+            <display value="bevinding betreffende oog of gezichtsvermogen (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="89091004"/>
+            <display value="oedeem van ooglid (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="11934000"/>
+            <display value="ptosis van ooglid (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409668002"/>
+            <display value="fotofobie (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="64634000"/>
+            <display value="troebeling van cornea (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="147761000146102"/>
+            <display value="afwijkende ooglidspleet (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="247234006"/>
+            <display value="bevinding betreffende oor (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="300088007"/>
+            <display value="asymmetrie van oren (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="95515009"/>
+            <display value="laag ingeplante oren (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="204245004"/>
+            <display value="bijoortje (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="112630007"/>
+            <display value="afwijkend aangezicht (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="232209000"/>
+            <display value="nasale obstructie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+        </contains>
+    </expansion>
+</ValueSet>

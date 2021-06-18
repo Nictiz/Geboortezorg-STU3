@@ -1,7 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.10--20200901000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.10--20200901000000"/>
     <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
@@ -19,7 +20,18 @@
     <title value="BadenDouchenCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="KNOV"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
     <description value="BadenDouchenCodelijst"/>
     <immutable value="false"/>
     <compose>
@@ -65,4 +77,37 @@
             </concept>
         </include>
     </compose>
+    <expansion>
+        <identifier value="urn:uuid:e42a6c57-c8f1-4263-904e-afb7b981308b"/>
+        <timestamp value="2021-06-18T15:19:48.774+02:00"/>
+        <total value="2"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.10"/>
+            <code value="BATH0"/>
+            <display value="Afhankelijk"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Afhankelijk"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.10"/>
+            <code value="BATH1"/>
+            <display value="Onafhankelijk"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="900000000000013009"/>
+                    <display value="Synonym"/>
+                </use>
+                <value value="Onafhankelijk"/>
+            </designation>
+        </contains>
+    </expansion>
 </ValueSet>

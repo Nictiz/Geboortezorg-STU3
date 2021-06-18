@@ -1,7 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.313--20201027113825"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.313--20201027113825"/>
     <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
@@ -59,4 +60,44 @@
             </concept>
         </include>
     </compose>
+    <expansion>
+        <identifier value="urn:uuid:eeee8c49-345b-4fb4-95cb-2f382af54297"/>
+        <timestamp value="2021-06-18T15:20:50.959+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="68913001"/>
+            <display value="alfathalassemie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="65959000"/>
+            <display value="bètathalassemie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="36472007"/>
+            <display value="sikkelcelthalassemie (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="61777009"/>
+            <display value="thalassemie-hemoglobine C-ziekte (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="66729008"/>
+            <display value="hemoglobine-D-ziekte (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="25065001"/>
+            <display value="hemoglobine-E-ziekte (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+    </expansion>
 </ValueSet>

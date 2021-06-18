@@ -1,0 +1,103 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.191--20140121165337"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2014-01-21T16:53:37+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.191--20140121165337"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.11.191"/>
+    </identifier>
+    <version value="2014-01-21T16:53:37"/>
+    <name value="Vruchtwater"/>
+    <title value="Vruchtwater"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="KNOV"/>
+    <description value="Vruchtwater"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="278092006"/>
+                <display value="normaal vruchtwatervolume (bevinding)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Te weinig vruchtwater"/>
+                </extension>
+                <code value="59566000"/>
+                <display value="oligohydramnion (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Te veel vruchtwater"/>
+                </extension>
+                <code value="86203003"/>
+                <display value="polyhydramnion (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Geen vruchtwater"/>
+                </extension>
+                <code value="313017000"/>
+                <display value="anhydramnion (aandoening)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <concept>
+                <code value="8"/>
+                <display value="niet beoordeelbaar"/>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="niet beoordeeld"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="urn:uuid:3e70d49e-3659-4af5-ba8f-450b6497cb1a"/>
+        <timestamp value="2021-06-18T15:20:12.73+02:00"/>
+        <total value="6"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="278092006"/>
+            <display value="normaal vruchtwatervolume (bevinding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="59566000"/>
+            <display value="oligohydramnion (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="86203003"/>
+            <display value="polyhydramnion (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="313017000"/>
+            <display value="anhydramnion (aandoening)"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="8"/>
+            <display value="niet beoordeelbaar"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
+            <code value="9"/>
+            <display value="niet beoordeeld"/>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,7 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.11.309--20210128112703"/>
+   <id value="2.16.840.1.113883.2.4.11.309--20210128112703"/>
     <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
@@ -63,4 +64,49 @@
             </concept>
         </include>
     </compose>
+    <expansion>
+        <identifier value="urn:uuid:b22a6f32-5033-40a6-ab97-678ef2e4269f"/>
+        <timestamp value="2021-06-18T15:20:45.922+02:00"/>
+        <total value="8"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="112162009"/>
+            <display value="anti-D-antistof (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="8362009"/>
+            <display value="bloedgroepantilichaam tegen c-antigeen (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="62523009"/>
+            <display value="bloedgroepantilichaam tegen e-antigeen (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="405844003"/>
+            <display value="antilichaam tegen antigeen in Kell-bloedgroepensysteem (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="8376005"/>
+            <display value="antilichaam tegen antigeen in Duffy-bloedgroepensysteem (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="25453008"/>
+            <display value="antilichaam tegen antigeen in Kidd-bloedgroepensysteem (substantie)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="overig"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+        </contains>
+    </expansion>
 </ValueSet>
