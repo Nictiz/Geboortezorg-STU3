@@ -1,0 +1,2879 @@
+=Addendum MedMij 0.1 Beschikbaarstellen integrale zwangerschapskaart=
+{{IssueBox|Generated code, do not change by hand}}
+=med_mij_01_beschikbaarstellen_integrale_zwangerschapskaart=
+<section begin=transaction />
+{| class="wikitable" 
+| style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 3.2 to FHIR
+|-style="background-color: #1F497D;; color: white; text-align:left;"
+|style="width:30px;"| Type 
+|style="width:10px;"| # 
+||Concept
+|style="width:40px;"| Card 
+|| Profile
+|| Mapping
+|| Example
+|| Search URL
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1313
+||Administratief
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||675
+||&#160;&#160;&#160;Patient
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient*
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+* GET [base]/Patient/[patientid]
+* GET [base]/Patient?identifier=[bsn]
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3197
+||&#160;&#160;&#160;&#160;&#160;&#160;Naamgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3198
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voornamen
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3199
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Initialen
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.given
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3201
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naamgebruik
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.use
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3202
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geslachtsnaam
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannameOwnName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3203
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voorvoegsels
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannameOwnPrefix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3204
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannameOwnName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3205
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GeslachtsnaamPartner
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannamePartnerName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3206
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VoorvoegselsPartner
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannamePartnerPrefix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3207
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AchternaamPartner
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.name.family:humannamePartnerName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3208
+||&#160;&#160;&#160;&#160;&#160;&#160;Adresgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3209
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Straat
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.line.streetName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3210
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.line.houseNumber
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3211
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummerletter
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.line.buildingNumbersuffix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3212
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummertoevoeging
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.line.additionalLocator
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3213
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AanduidingBijNummer
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.line.additionalLocator
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3214
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.postalCode
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3215
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Woonplaats
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.city
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3216
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gemeente
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.district
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3217
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.country
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3218
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AdditioneleInformatie
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3219
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AdresSoort
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.address.use
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3220
+||&#160;&#160;&#160;&#160;&#160;&#160;Contactgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3221
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummers
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3222
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummer
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3223
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TelecomType
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom:extension:TelecomType
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3224
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NummerSoort
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.use
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3225
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;EmailAdressen
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3226
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;EmailAdres
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3227
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;EmailSoort
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.telecom.use
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||682
+||&#160;&#160;&#160;&#160;&#160;&#160;Identificatienummer
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.identifier
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||683
+||&#160;&#160;&#160;&#160;&#160;&#160;Geboortedatum
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.birthDate
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||684
+||&#160;&#160;&#160;&#160;&#160;&#160;Geslacht
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.gender
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||685
+||&#160;&#160;&#160;&#160;&#160;&#160;MeerlingIndicator
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.multipleBirthBoolean
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3358
+||&#160;&#160;&#160;&#160;&#160;&#160;Rangnummer
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.multipleInteger
+||
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||686
+||&#160;&#160;&#160;&#160;&#160;&#160;OverlijdensIndicator
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.deceasedBoolean
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||687
+||&#160;&#160;&#160;&#160;&#160;&#160;DatumOverlijden
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-patient|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-patient}}
+||Patient.deceasedDateTime
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||956
+||&#160;&#160;&#160;Zorgaanbieder
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+* GET [base]/Organization
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||957
+||&#160;&#160;&#160;&#160;&#160;&#160;ZorgaanbiederIdentificatienummer
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.identifier
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||958
+||&#160;&#160;&#160;&#160;&#160;&#160;OrganisatieNaam
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.name
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3236
+||&#160;&#160;&#160;&#160;&#160;&#160;Adresgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3237
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Straat
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.line.streetName
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3238
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.line.houseNumber
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3239
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummerletter
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.line:extension:buildingNumbersuffix
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3240
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummertoevoeging
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.line:extension:buildingNumbersuffix
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3242
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.postalCode
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3243
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Woonplaats
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.city
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3244
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gemeente
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.district
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3245
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.address.country
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||965
+||&#160;&#160;&#160;&#160;&#160;&#160;OrganisatieType
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization.type
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||978
+||&#160;&#160;&#160;Zorgverlener
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||979
+||&#160;&#160;&#160;&#160;&#160;&#160;ZorgverlenerIdentificatienummer
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.identifier
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3248
+||&#160;&#160;&#160;&#160;&#160;&#160;Naamgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3249
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voornamen
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.given
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3250
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Initialen
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.given
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3251
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Roepnaam
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.given
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3252
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naamgebruik
+||0 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name:extension:humannameAssemblyOrder
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3253
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Geslachtsnaam
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humannameOwnName
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3254
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Voorvoegsels
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humannameOwnPrefix
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3255
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Achternaam
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humanNameOwnName
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3256
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GeslachtsnaamPartner
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humannamePartnerName
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3257
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VoorvoegselsPartner
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humannamePartnerPrefix
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3258
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AchternaamPartner
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name.family:extension:humannamePartnerName
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2219
+||&#160;&#160;&#160;&#160;&#160;&#160;Specialisme
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitionerrole}}
+||PractitionerRole.specialty
+||[https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3271
+||&#160;&#160;&#160;&#160;&#160;&#160;Contactgegevens
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.telecom
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3272
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummers
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3273
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Telefoonnummer
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.telecom.value
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3274
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TelecomType
+||1 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.telecom:extension:TelecomType
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1678
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgaanbieder
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||989
+||&#160;&#160;&#160;&#160;&#160;&#160;ZorgverlenersRol
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitionerrole}}
+||PractitionerRole
+||[https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1314
+||Zorgverlening
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3399
+||&#160;&#160;&#160;ZorgEpisode
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-MaternalRecord}}
+||EpisodeOfCare
+||[https://simplifier.net/geboortezorg-stu3/episodeofcare-example example]
+||
+* GET [base]/EpisodeofCare/[id for pregnancy episode]
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3400
+||&#160;&#160;&#160;&#160;&#160;&#160;BeginDatum
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-MaternalRecord}}
+||EpisodeOfCare.period.start
+||[https://simplifier.net/geboortezorg-stu3/episodeofcare-example example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3401
+||&#160;&#160;&#160;&#160;&#160;&#160;EindDatum
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-MaternalRecord}}
+||EpisodeOfCare.period.end
+||[https://simplifier.net/geboortezorg-stu3/episodeofcare-example example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||674
+||Vrouw
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Woman}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1713
+||&#160;&#160;&#160;Demografische gegevens
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Woman}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1434
+||&#160;&#160;&#160;&#160;&#160;&#160;Patient
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Woman}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1127
+||&#160;&#160;&#160;Bloedonderzoek
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-79 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1139
+||&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Bloedgroep
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-79 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1151
+||&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Rhesus D
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-81 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1163
+||&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Rhesus c
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-82 example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||25
+||Zwangerschap
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10 example]
+||
+* GET [base]/Condition?code=http://snomed.info/sct|364320009
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1699
+||&#160;&#160;&#160;Casemanager
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-MaternalRecord}}
+||EpisodeOfCare.careManager
+||[https://simplifier.net/geboortezorg-stu3/episodeofcare-example-duplicate-3 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1700
+||&#160;&#160;&#160;&#160;&#160;&#160;ZorgverlenersRol
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-MaternalRecord}}
+||EpisodeOfCare.careManager.extension:practitionerRole
+||[https://simplifier.net/geboortezorg-stu3/episodeofcare-example-duplicate-3 example]
+||
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1701
+||&#160;&#160;&#160;&#160;&#160;&#160;ZorgverlenerIdentificatienummer
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.identifier
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||7787
+||&#160;&#160;&#160;&#160;&#160;&#160;Naamgegevens
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitioner}}
+||Practitioner.name
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3341
+||&#160;&#160;&#160;Zwangerschap
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy}}
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10 example]
+||
+* GET [base]/Condition?code=http://snomed.info/sct|364320009
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3343
+||&#160;&#160;&#160;&#160;&#160;&#160;Pariteit
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Parity|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy-Parity}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-90 example]
+||
+* GET [base]/Observation?code=http://loinc.org|11977-6
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3344
+||&#160;&#160;&#160;&#160;&#160;&#160;Graviditeit
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Gravidity|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy-Gravidity}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-86 example]
+||
+* GET [base]/Observation?code=http://loinc.org|11996-6
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3346
+||&#160;&#160;&#160;&#160;&#160;&#160;ATermeDatumItems
+||1 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/aterm-example example]
+||
+* GET [base]/Observation?code=urn:oid:2.16.840.1.113883.2.4.4.13|147781000146105
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3347
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ATermeDatum
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/aterm-example example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|161714006
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3348
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BepalingsMethode
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/aterm-example example]
+||
+* GET [base]/Observation?method=http://snomed.info/sct|31541000146106
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3349
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DatumBepaling
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/aterm-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2220
+||&#160;&#160;&#160;Definitieve à terme datum (Observatie)
+||0 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2221
+||&#160;&#160;&#160;&#160;&#160;&#160;Definitieve à terme DatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2223
+||&#160;&#160;&#160;&#160;&#160;&#160;Definitieve à terme Waarde
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2224
+||&#160;&#160;&#160;&#160;&#160;&#160;Definitieve à terme Methode
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2225
+||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1711
+||&#160;&#160;&#160;Meerling zwangerschap (Observatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|65147003
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1825
+||&#160;&#160;&#160;&#160;&#160;&#160;MeerlingZwangerschapDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2231
+||&#160;&#160;&#160;&#160;&#160;&#160;TyperingGemellizwangerschapWaarde
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1845
+||&#160;&#160;&#160;&#160;&#160;&#160;Aantal foetussen (Observatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.related
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|65147003
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1833
+||&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1826
+||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1734
+||&#160;&#160;&#160;Aantal levende kinderen (Observatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen example]
+||
+* GET [base}/Observation?code=http://snomed.info/sct|143881000146107
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1735
+||&#160;&#160;&#160;&#160;&#160;&#160;AantalLevendeKinderenDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1740
+||&#160;&#160;&#160;&#160;&#160;&#160;AantalLevendeKinderenWaarde
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1736
+||&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1738
+||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1817
+||&#160;&#160;&#160;Fetal loss (Observatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-fetalloss example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|713651007
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1818
+||&#160;&#160;&#160;&#160;&#160;&#160;FetalLossDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-fetalloss example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1820
+||&#160;&#160;&#160;&#160;&#160;&#160;FetalLossWaarde
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-fetalloss example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1821
+||&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/example-fetalloss example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1824
+||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/example-fetalloss example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1742
+||&#160;&#160;&#160;Foliumzuurgebruik (Observatie)
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||111
+||&#160;&#160;&#160;Prenatale controle
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Encounter|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Encounter}}
+||Encounter
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3 example]
+||
+* GET [base]/Encounter?code=http://snomed.info/sct|18114009
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1811
+||&#160;&#160;&#160;&#160;&#160;&#160;Datum prenatale controle
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Encounter|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Encounter}}
+||Encounter.period
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1814
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BeginDatumTijd
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Encounter|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Encounter}}
+||Encounter.period.start
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||7025
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/pregnancyduration-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||176
+||&#160;&#160;&#160;&#160;&#160;&#160;Zorgverlener
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Encounter|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Encounter}}
+||Encounter.participant.individual
+||[https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3 example]
+||
+* GET [base]/Encounter?code=http://snomed.info/sct|18114009&_include=Encounter.participant.individual
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||7788
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Naamgegevens
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-Practitioner|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-Practitioner}}
+||Practitioner.name
+||[https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-2 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2233
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Specialisme
+||1 .. *
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-practitionerrole}}
+||PractitionerRole.specialty
+||[https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-2 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2134
+||&#160;&#160;&#160;&#160;&#160;&#160;Leven voelen (Observatie)
+||1 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|364618000
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2135
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LevenVoelenDatumTijd
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2137
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LevenVoelenWaarde
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2138
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||1 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2141
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1078
+||&#160;&#160;&#160;&#160;&#160;&#160;Lichaamsgewicht
+||1 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.related (zib-BodyWeight)
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187 example]
+||
+* GET [base]/Observation?code=http://loinc.org|29463-7
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1072
+||&#160;&#160;&#160;&#160;&#160;&#160;Bloeddruk
+||1 .. *
+||[[Gebz:FHIR_bc-PregnancyObservation|bc-PregnancyObservation]]
+||Observation.related (zib-BloodPressure)
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-184 example]
+||
+* GET [base]/Observation?code=http://loinc.org|85354-9
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||121
+||&#160;&#160;&#160;&#160;&#160;&#160;AlcoholGebruik
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|228273003
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||122
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||123
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AlcoholGebruikStatus
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||124
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;WaarnemingGebruik
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.effectivePeriod
+||[https://simplifier.net/nictizstu3-zib2017/zib-alcoholuse-01 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||125
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StartDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.effectivePeriod.start
+||[https://simplifier.net/nictizstu3-zib2017/zib-alcoholuse-01 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||126
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StopDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.effectivePeriod.end
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||127
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hoeveelheid
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-AlcoholUse}}
+||Observation.component:amount.valueQuantity
+||[https://simplifier.net/nictizstu3-zib2017/zib-alcoholuse-01 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||112
+||&#160;&#160;&#160;&#160;&#160;&#160;DrugsGebruik
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||113
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;WaarnemingGebruik
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.effectivePeriod
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|228366006
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||114
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StartDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.effectivePeriod.start
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||115
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StopDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.effectivePeriod.end
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||116
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hoeveelheid
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.component:amount.valueQuantity
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||117
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.comment
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||118
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DrugsOfGeneesmiddelSoort
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.component:DrugOrMedicationType.valueCodeableConcept
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||119
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DrugsGebruikStatus
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||120
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toedieningsweg
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-DrugUse}}
+||Observation.component:RouteOfAdministration.valueCodeableConcept
+||[https://simplifier.net/nictizstu3-zib2017/zib-druguse-01 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2243
+||&#160;&#160;&#160;&#160;&#160;&#160;TabakGebruik
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2244
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2245
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SoortTabakGebruik
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.component:TypeOfTobaccoUsed.valueCodeabelConcet
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2246
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TabakGebruikStatus
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2247
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;WaarnemingGebruik
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.effectivePeriod
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|365980008
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2248
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StartDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.effectivePeriod.start
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2249
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StopDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.effectivePeriod.end
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2250
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hoeveelheid
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.component:amount.valueQuantity
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2251
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PackYears
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-TobaccoUse}}
+||Observation.component:PackYears.valueQuantity
+||[https://simplifier.net/nictizstu3-zib2017/zib-tobaccouse-01 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1775
+||&#160;&#160;&#160;&#160;&#160;&#160;Uitwendig onderzoek
+||1 .. *
+||
+||DiagnosticReport
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1776
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Foetale hartslag (Hartfrequentie)
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|249043002
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1778
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartfrequentieDatumTijd
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1777
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartfrequentieWaarde
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1779
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartslagMeetMethode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1781
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartslagRegelmatigheid
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.component
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1782
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;InterpretatieFrequentie
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.interpretation
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1780
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-FetalHeartRate}}
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1180
+||&#160;&#160;&#160;Probleem (Zwangerschap)
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder example]
+||
+* GET [base]/Condition?code=http://snomed.info/sct|282291009
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1183
+||&#160;&#160;&#160;&#160;&#160;&#160;ProbleemType
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.category
+||[https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1184
+||&#160;&#160;&#160;&#160;&#160;&#160;ProbleemNaam
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfPregnancy|bc-DisorderOfPregnancy]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3409
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy-PregnancyDuration}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/pregnancyduration-example example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1189
+||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy}}
+||Condition.note
+||[https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1190
+||&#160;&#160;&#160;Verrichting (Zwangerschap)
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/prenataal-onderzoek example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|18114009
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3408
+||&#160;&#160;&#160;&#160;&#160;&#160;Zwangerschapsduur
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy-PregnancyDuration}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/pregnancyduration-example example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1197
+||&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingType
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/prenataal-onderzoek example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||37
+||Bevalling
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-DeliveryProcedure}}
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|236973005
+|-
+|[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3411
+||&#160;&#160;&#160;Partusnummer
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-DeliveryProcedure}}
+||Procedure.identifier
+||[https://simplifier.net/geboortezorg-stu3/procedure-example example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3972
+||&#160;&#160;&#160;Zwangerschapsduur
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Pregnancy-PregnancyDuration}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/pregnancyduration-example example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||38
+||&#160;&#160;&#160;Ontsluitingsfase
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4084
+||&#160;&#160;&#160;&#160;&#160;&#160;Actieve Ontsluiting (Observatie)
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|249120008
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4085
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4087
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BeginActieveOntsluitingWaarde
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueDateTime
+||[https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4088
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4095
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4096
+||&#160;&#160;&#160;&#160;&#160;&#160;Wijze Begin Baring (Observatie)
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/wijze-begin-baring example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|249120008
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4097
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/wijze-begin-baring example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4099
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BeginBaringWaarde
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/wijze-begin-baring example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4100
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/wijze-begin-baring example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4107
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/wijze-begin-baring example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1564
+||&#160;&#160;&#160;&#160;&#160;&#160;Probleem (Maternaal)
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33 example]
+||
+* GET [base]/Condition?code=http://snomed.info/sct|362972006
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1568
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemNaam
+||1 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1569
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemBeginDatum
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.onsetDateTime
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1570
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemEindDatum
+||0 .. 1
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.abatementDateTime
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1547
+||&#160;&#160;&#160;&#160;&#160;&#160;Verrichting (Maternaal)
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|177135005
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1548
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingStartDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.performedPeriod.start
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1549
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingEindDatum
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.performedPeriod.end
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1552
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.reasonReference
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|177135005
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1583
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Probleem (Maternaal)
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.reasonReference
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|177135005
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1554
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingType
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||39
+||&#160;&#160;&#160;Uitdrijvingsfase
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4144
+||&#160;&#160;&#160;&#160;&#160;&#160;Type Partus (Observatie)
+||1 .. *
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|364336006
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4145
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
+||1 .. *
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4147
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TypePartusWaarde
+||1 .. *
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4148
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. *
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4155
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. *
+||[[Gebz:FHIR_bc-BirthObservation|bc-BirthObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4181
+||&#160;&#160;&#160;&#160;&#160;&#160;Aantal Geboren Kinderen (Observatie)
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|118861000146102
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4182
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4184
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AantalGeborenKinderenWaarde
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4185
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4192
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4193
+||&#160;&#160;&#160;&#160;&#160;&#160;Werkelijke plaats baring (type locatie) (Observatie) 
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|169812000
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4194
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4196
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;WerkelijkePlaatsBaringWaarde
+||1 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4197
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.method
+||[https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||4204
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
+||0 .. 1
+||[[Gebz:FHIR_bc-DeliveryObservation|bc-DeliveryObservation]]
+||Observation.comment
+||[https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1587
+||&#160;&#160;&#160;&#160;&#160;&#160;Ziekenhuis baring
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-DeliveryProcedure}}
+||Procedure.performer.actor/onBehalfOf
+||[https://simplifier.net/geboortezorg-stu3/bevalling example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1588
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgaanbieder
+||0 .. 1
+||{{Simplifier|http://fhir.nl/fhir/StructureDefinition/nl-core-organization|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=nl-core-organization}}
+||Organization
+||[https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3 example]
+||
+* GET [base]/Organization
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1591
+||&#160;&#160;&#160;&#160;&#160;&#160;Probleem (Kindspecifiek)
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1595
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemNaam
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1596
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemBeginDatum
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.onsetDateTime
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1597
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemEindDatum
+||0 .. *
+||[[Gebz:FHIR_bc-DisorderOfLaborAndDelivery|bc-DisorderOfLaborAndDelivery]]
+||Condition.abatementDateTime
+||[https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1603
+||&#160;&#160;&#160;&#160;&#160;&#160;Verrichting (Kindspecifiek)
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1604
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingStartDatum
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.performedPeriod.start
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1605
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingEindDatum
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.performedPeriod.end
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1608
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indicatie
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.reasonReference
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1620
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Probleem (Kindspecifiek)
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.reasonReference
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12 example]
+||
+* GET [base]/Procedure?code=http://snomed.info/sct|386637004
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1610
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingType
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.code
+||[https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-11 example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1404
+||Kind
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+* GET [base]/Patient/[child-id]
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1754
+||&#160;&#160;&#160;Demografische gegevens
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1378
+||&#160;&#160;&#160;&#160;&#160;&#160;Patient
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1391
+||&#160;&#160;&#160;&#160;&#160;&#160;Geboorteplaats
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension:birthPlace
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1392
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Adresgegevens
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension:birthPlace
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1398
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension:birthPlace.postalCode
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1399
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Woonplaats
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension:birthPlace.city
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1400
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gemeente
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension:birthPlace.district
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1401
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Land
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.extension.birthPlace.country
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1379
+||&#160;&#160;&#160;&#160;&#160;&#160;Adresgegevens (tbv hielprik)
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1380
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Straat
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:streetName
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1381
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummer
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:houseNumber
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1382
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummerletter
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:buildingNumbersuffix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1383
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Huisnummertoevoeging
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:buildingNumbersuffix
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1384
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AanduidingBijNummer
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:additionalLocator
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1385
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Postcode
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.postalCode
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1386
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Woonplaats
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patientaddress.city
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1387
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Gemeente
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.district
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-
+|[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1389
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AdditioneleInformatie
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-Child}}
+||Patient.address.line.extension:unitID
+||[https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1407
+||&#160;&#160;&#160;Lichamelijk onderzoek kind
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1418
+||&#160;&#160;&#160;&#160;&#160;&#160;Geboortegewicht (Lichaamsgewicht)
+||1 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185 example]
+||
+* GET [base]/Observation?code=http://loinc.org|8339-4
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1419
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GewichtWaarde
+||1 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1424
+||&#160;&#160;&#160;&#160;&#160;&#160;Lichaamslengte
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-BodyHeight}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-186 example]
+||
+* GET [base]/Observation?code=http://loinc.org|8302-2
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1425
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LengteWaarde
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-BodyHeight}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-186 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1429
+||&#160;&#160;&#160;&#160;&#160;&#160;Schedelomvang
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-HeadCircumference|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-HeadCircumference}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-99 example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|56792006
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1432
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SchedelomvangWaarde
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-HeadCircumference|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-HeadCircumference}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-99 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1765
+||&#160;&#160;&#160;&#160;&#160;&#160;Bevindingen
+||1 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+* GET [base]/Observation?code=http://loinc.org|9274-2
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2706
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Algemene indruk
+||1 .. *
+||[[Gebz:FHIR_bc-ChildObservation|bc-ChildObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1408
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ApgarScore
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-ApgarScore}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1409
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ApgarScoreDatumTijd
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-ApgarScore}}
+||Observation.effectiveDateTime
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+|-
+|[[Bestand:INT.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1410
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ApgarScoreTotaal
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-ApgarScore}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77 example]
+||
+|-style="vertical-align:top;  background-color: #E8D7BE;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1123
+||Medisch onderzoek
+||1 .. *
+||
+||
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2416
+||&#160;&#160;&#160;Verrichting (Onderzoek)
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure
+||
+||
+* GET [base]/Procedure?category=http://snomed.info/sct|386637004
+|-
+|[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2417
+||&#160;&#160;&#160;&#160;&#160;&#160;VerrichtingStartDatum
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=bc-ObstetricProcedure}}
+||Procedure.effectivePeriod.start
+||
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1124
+||&#160;&#160;&#160;Maternale onderzoeksgegevens
+||1 .. *
+||[[Gebz:FHIR_bc-MaternalObservation|bc-MaternalObservation]]
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1125
+||&#160;&#160;&#160;&#160;&#160;&#160;Urine-, bloed- en aanvullende onderzoeken
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+* GET [base]/Observation?code=http://snomed.info/sct|49581000146104
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1126
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PSIE
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1128
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Bloedgroep
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1129
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1132
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-bloedgroepab example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1140
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Rhesus D
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-rhdpos example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1141
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-rhdpos example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1144
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-rhdpos example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1152
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Rhesus c
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-rhcneg example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1153
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-rhcneg example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1156
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-rhcneg example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1640
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_ HBsAg
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-hbsag example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2367
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-hbsag example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1644
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-hbsag example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1649
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;InterpretatieVlaggen
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.interpretation
+||[https://simplifier.net/geboortezorg-stu3/example-hbsag example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2356
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_HIV
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-hiv example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2357
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-hiv example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2360
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-hiv example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2368
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Lues
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-lues example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2369
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-lues example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2372
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-lues example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2377
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;InterpretatieVlaggen
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.interpretation
+||[https://simplifier.net/geboortezorg-stu3/example-lues example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3501
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Irregulaire antistoffen (Observatie)
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-irregulaireantistoffen example]
+||
+|-
+|[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3503
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IrregulaireAntistoffenWaarde
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueBoolean
+||[https://simplifier.net/geboortezorg-stu3/example-irregulaireantistoffen example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||3504
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;WelkeAntistoffenWaarde
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueCodeableConcept
+||[https://simplifier.net/geboortezorg-stu3/example-irregulaireantistoffen example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2379
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Hb
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-hb example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2380
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-hb example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2383
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-hb example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2401
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Anemie
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-mcv example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2491
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_MCV
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-mcv example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2492
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-mcv example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2495
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-mcv example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2513
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Vitamine B12
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-vitb12 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2514
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-vitb12 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2517
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-vitb12 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2545
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Actief-B12
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-actvitb12 example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2546
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-actvitb12 example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2549
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-actvitb12 example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2524
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Ferritine
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-ferritine example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2525
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-ferritine example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2528
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-ferritine example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2502
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_Foliumzuur
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-foliumzuur example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2503
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-foliumzuur example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2506
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-foliumzuur example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2535
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Probleem_Hb-pathie
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Problem|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Problem}}
+||Condition
+||[https://simplifier.net/geboortezorg-stu3/hb-pathie example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2539
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ProbleemNaam
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-Problem|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-Problem}}
+||Condition.code
+||[https://simplifier.net/geboortezorg-stu3/hb-pathie example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1651
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Schildklierdiagnostiek
+||0 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1652
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_VrijT4, TSH & TSH receptor antistoffen
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1653
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1656
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||0 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||1663
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TORCH
+||1 .. 1
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-torch example]
+||
+|-style="vertical-align:top;  background-color: #E3E3E3;"
+|[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2390
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LaboratoriumTest_TORCH
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation
+||[https://simplifier.net/geboortezorg-stu3/example-torch example]
+||
+|-
+|[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2391
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestCode
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.code
+||[https://simplifier.net/geboortezorg-stu3/example-torch example]
+||
+|-
+|[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
+||2394
+||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TestUitslag
+||1 .. *
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.0.0|title=zib-LaboratoryTestResult-Observation}}
+||Observation.valueQuantity
+||[https://simplifier.net/geboortezorg-stu3/example-torch example]
+||
+|}
+<section end=transaction />
