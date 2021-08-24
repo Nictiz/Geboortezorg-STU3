@@ -1,0 +1,40 @@
+<Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/coverage.xsd">
+    <id value="zib-payer-vdwouden" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
+    </meta>
+    <type>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="B"/>
+            <display value="Basis"/>
+        </coding>
+    </type>
+    <subscriber>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </subscriber>
+    <beneficiary>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </beneficiary>
+    <period>
+        <start value="2003-01-01"/>
+        <end value="2021-12-31"/>
+    </period>
+    <payor>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation">
+            <extension url="BankName">
+                <valueString value="ING" />
+            </extension>
+            <extension url="AccountNumber">
+                <valueString value="NL85INGB0001234567" />
+            </extension>
+            <extension url="Bankcode">
+                <valueString value="INGBNL2A" />
+            </extension>
+        </extension>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Sara van der Wouden" />
+    </payor>
+</Coverage>
