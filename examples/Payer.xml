@@ -1,5 +1,5 @@
 <Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/coverage.xsd">
-    <id value="zib-payer-vdwouden" />
+    <id value="zib-payer-example" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
     </meta>
@@ -11,12 +11,12 @@
         </coding>
     </type>
     <subscriber>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Sara van der Wouden" />
+        <reference value="Patient/example" />
+        <display value="mevr Bakker-de Boer" />
     </subscriber>
     <beneficiary>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Sara van der Wouden" />
+        <reference value="Patient/example" />
+        <display value="mevr Bakker-de Boer" />
     </beneficiary>
     <period>
         <start value="2003-01-01"/>
@@ -34,7 +34,7 @@
                 <valueString value="INGBNL2A" />
             </extension>
         </extension>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Sara van der Wouden" />
+        <reference value="Patient/example" />
+        <display value="mevr Bakker-de Boer" />
     </payor>
 </Coverage>

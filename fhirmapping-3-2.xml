@@ -10,7 +10,7 @@
 		<mapping>Coverage</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-01</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<searchurl><pre>GET [base]/Coverage?_include=Coverage:payor:Patient</pre></searchurl>
 	</record>
 	<record>
@@ -19,14 +19,14 @@
 		<mapping>Coverage.payor</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-01</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1292</ID>
 		<naam>BetalerNaam</naam>
 		<mapping>Patient/RelatedPerson.name</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
-		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<in>true</in>
 		<zib>NL-CM-1.1.5</zib>
 	</record>
@@ -36,7 +36,7 @@
 		<mapping>Coverage.payor:extension:bankInformation</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.4</zib>
 	</record>
 	<record>
@@ -45,7 +45,7 @@
 		<mapping>Coverage.payor:extension:bankInformation.extension:BankName</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.9</zib>
 	</record>
 	<record>
@@ -54,7 +54,7 @@
 		<mapping>Coverage.payor:extension:bankInformation.extension:AccountNumber</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.10</zib>
 	</record>
 	<record>
@@ -63,7 +63,7 @@
 		<mapping>Coverage.payor:extension:bankInformation.extension:Bankcode</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.11</zib>
 	</record>
 	<record>
@@ -72,7 +72,7 @@
 		<mapping>Coverage</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.3</zib>
 		<searchurl><pre>GET [base]/Coverage?_include=Coverage:payor:Patient?_include=Coverage:payor:Organization</pre></searchurl>
 	</record>
@@ -82,7 +82,7 @@
 		<mapping>Coverage.payor</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
-		<example>https://simplifier.net/nictizstu3-zib2017/zib-payer-02</example>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.8</zib>
 	</record>
 	<record>
@@ -91,6 +91,7 @@
 		<mapping>Coverage.period.start</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.13</zib>
 	</record>
 	<record>
@@ -99,6 +100,7 @@
 		<mapping>Coverage.period.end</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.14</zib>
 	</record>
 	<record>
@@ -131,6 +133,7 @@
 		<mapping>Coverage.subscriberId</mapping>
 		<profile>zib-Payer</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/zib-payer-vdwouden</example>
 		<zib>NL-CM-1.1.6</zib>
 	</record>
 	<record>
@@ -146,6 +149,7 @@
 		<mapping>Patient/RelatedPerson.address.line:line.streetName</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.2</zib>
 	</record>
 	<record>
@@ -154,6 +158,7 @@
 		<mapping>Patient/RelatedPerson.address.line:houseNumber</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.12</zib>
 	</record>
 	<record>
@@ -162,6 +167,7 @@
 		<mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.11</zib>
 	</record>
 	<record>
@@ -170,6 +176,7 @@
 		<mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.10</zib>
 	</record>
 	<record>
@@ -178,6 +185,7 @@
 		<mapping>Patient/RelatedPerson.address.line.extension:additionalLocator</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.9</zib>
 	</record>
 	<record>
@@ -186,6 +194,7 @@
 		<mapping>Patient/RelatedPerson.address.line.postalCode</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.6</zib>
 	</record>
 	<record>
@@ -194,6 +203,7 @@
 		<mapping>Patient/RelatedPerson.address.line.city</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.3</zib>
 	</record>
 	<record>
@@ -202,6 +212,7 @@
 		<mapping>Patient/RelatedPerson.address.line.district</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.4</zib>
 	</record>
 	<record>
@@ -210,6 +221,7 @@
 		<mapping>Patient/RelatedPersonaddress.country</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.5</zib>
 	</record>
 	<record>
@@ -218,6 +230,7 @@
 		<mapping>Patient/RelatedPerson.address.line.extension:unitID</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.7</zib>
 	</record>
 	<record>
@@ -226,6 +239,7 @@
 		<mapping>Patient/RelatedPerson.address.type/.use (via conceptmap)</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.5.8</zib>
 	</record>
 	<record>
@@ -234,6 +248,7 @@
 		<mapping>Patient/RelatedPerson.telecom</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.1</zib>
 	</record>
 	<record>
@@ -242,6 +257,7 @@
 		<mapping>Patient/RelatedPerson.telecom</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.2</zib>
 	</record>
 	<record>
@@ -250,6 +266,7 @@
 		<mapping>Patient/RelatedPerson.telecom.value</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.4</zib>
 	</record>
 	<record>
@@ -258,6 +275,7 @@
 		<mapping>Patient/RelatedPerson.telecom:extension:TelecomType</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.5</zib>
 	</record>
 	<record>
@@ -266,6 +284,7 @@
 		<mapping>Patient/RelatedPerson.telecom.use</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.6</zib>
 	</record>
 	<record>
@@ -274,6 +293,7 @@
 		<mapping>Patient/RelatedPerson.telecom.value</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.3</zib>
 	</record>
 	<record>
@@ -282,6 +302,7 @@
 		<mapping>Patient/RelatedPerson.telecom.value</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.7</zib>
 	</record>
 	<record>
@@ -290,6 +311,7 @@
 		<mapping>Patient/RelatedPerson.telecom.use</mapping>
 		<profile>nl-core-patient/nl-core-relatedperson</profile>
 		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<zib>NL-CM-20.6.8</zib>
 	</record>
 	<record>
