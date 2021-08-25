@@ -379,7 +379,7 @@
    <record>
       <ID>peri32-dataelement-751</ID>
       <naam>ContactType</naam>
-      <mapping>Encounter.type</mapping>
+      <mapping>Encounter.class</mapping>
       <profile>bc-Encounter/bc-Encounter</profile>
       <in>true</in>
       <zib>NL-CM-15.1.2</zib>
@@ -389,11 +389,11 @@
    <record>
       <ID>peri32-dataelement-3690</ID>
       <naam>ContactSoort</naam>
-      <mapping/>
-      <profile/>
+   	<mapping>Encounter.type</mapping>
+   	<profile>bc-Encounter/bc-Encounter</profile>
       <in/>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -419,8 +419,8 @@
    <record>
       <ID>peri32-dataelement-754</ID>
       <naam>Locatie</naam>
-      <mapping>Organization.serviceProvider</mapping>
-      <profile>nl-core-organization</profile>
+      <mapping>Encounter.serviceProvider</mapping>
+      <profile>bc-Encounter</profile>
       <in>true</in>
       <zib/>
       <example/>
@@ -429,18 +429,18 @@
    <record>
       <ID>peri32-dataelement-1881</ID>
       <naam>Zorgaanbieder</naam>
-      <mapping>Organization.serviceProvider</mapping>
+      <mapping>Organization</mapping>
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>peri32-dataelement-956</zib>
       <example/>
-      <searchurl>GET [base]/Encounter?_include=Encounter:service-provider</searchurl>
+      <searchurl>GET [base]/Organization</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-756</ID>
       <naam>BeginDatumTijd</naam>
       <mapping>Encounter.period.start</mapping>
-      <profile>bc-Encounter/bc-Encounter</profile>
+      <profile>bc-Encounter</profile>
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2</example>
@@ -450,7 +450,7 @@
       <ID>peri32-dataelement-757</ID>
       <naam>EindDatumTijd</naam>
       <mapping>Encounter.period.start</mapping>
-      <profile>bc-Encounter/bc-Encounter</profile>
+      <profile>bc-Encounter</profile>
       <in>true</in>
       <zib>NL-CM-15.1.4</zib>
       <example>https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2</example>
@@ -463,7 +463,7 @@
       <profile>bc-Encounter</profile>
       <in>false</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2</example>
       <searchurl>GET [base]/Encounter?_include=Encounter:diagnosis</searchurl>
    </record>
    <record>
@@ -473,7 +473,7 @@
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib/>
-      <example/>
+      <example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-14</example>
       <searchurl>GET [base]/Encounter?_include=Encounter:diagnosis:Condition</searchurl>
    </record>
    <record>
@@ -483,14 +483,14 @@
       <profile>zib-Problem</profile>
       <in>true</in>
       <zib/>
-      <example/>
+      <example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-14</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-3828</ID>
       <naam>Probleem (Algemene anamnese)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Problem</profile>
       <in/>
       <zib/>
       <example/>
@@ -499,8 +499,8 @@
    <record>
       <ID>peri32-dataelement-3831</ID>
       <naam>Probleem (Psychiatrie)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Problem</profile>
       <in/>
       <zib/>
       <example/>
@@ -509,8 +509,8 @@
    <record>
       <ID>peri32-dataelement-3829</ID>
       <naam>Probleem (Sociale problemen)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Problem</profile>
       <in/>
       <zib/>
       <example/>
@@ -519,8 +519,8 @@
    <record>
       <ID>peri32-dataelement-3832</ID>
       <naam>Probleem (Misbruik)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Problem</profile>
       <in/>
       <zib/>
       <example/>
@@ -529,28 +529,28 @@
    <record>
       <ID>peri32-dataelement-3830</ID>
       <naam>Probleem (Zwangerschap)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Pregnancy</profile>
       <in/>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-14</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-1928</ID>
       <naam>Probleem (Maternaal)</naam>
       <mapping>Condition</mapping>
-      <profile>zib-Problem, bc-DisorderOfPregnancy, bc-DisorderOfLaborAndDelivery, bc-DisorderPostPartum</profile>
+      <profile>zib-Problem bc-DisorderOfPregnancy bc-DisorderOfLaborAndDelivery bc-DisorderPostPartum</profile>
       <in>true</in>
       <zib>peri32-dataelement-1564</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-3833</ID>
       <naam>Probleem (Postpartum complicatie)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>bc-DisorderPostPartum</profile>
       <in/>
       <zib/>
       <example/>
@@ -563,7 +563,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20</example>
       <searchurl/>
    </record>
    <record>
@@ -573,7 +573,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1591</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20</example>
       <searchurl>GET [base]/Condition?code=http://snomed.info/sct|362972006</searchurl>
    </record>
    <record>
@@ -583,7 +583,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1503</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20</example>
       <searchurl/>
    </record>
    <record>
@@ -593,7 +593,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-46</example>
       <searchurl/>
    </record>
    <record>
@@ -623,7 +623,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1496</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-46</example>
       <searchurl/>
    </record>
    <record>
@@ -633,7 +633,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1497</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-46</example>
       <searchurl/>
    </record>
    <record>
@@ -663,7 +663,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1500</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-46</example>
       <searchurl/>
    </record>
    <record>
@@ -693,7 +693,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-7</example>
       <searchurl/>
    </record>
    <record>
@@ -733,7 +733,7 @@
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>peri32-dataelement-1518</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-7</example>
       <searchurl/>
    </record>
    <record>
@@ -793,7 +793,7 @@
       <profile>nl-core-procedure</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy</example>
       <searchurl/>
    </record>
    <record>
@@ -803,14 +803,14 @@
       <profile>nl-core-procedure</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-3834</ID>
       <naam>Verrichting (Algemene anamnese)</naam>
-      <mapping/>
-      <profile/>
+   	<mapping>Procedure</mapping>
+   	<profile>bc-ObstetricProcedure</profile>
       <in/>
       <zib/>
       <example/>
@@ -819,8 +819,8 @@
    <record>
       <ID>peri32-dataelement-3835</ID>
       <naam>Verrichting (Zwangerschap)</naam>
-      <mapping/>
-      <profile/>
+   	<mapping>Procedure</mapping>
+   	<profile>bc-ObstetricProcedure</profile>
       <in/>
       <zib/>
       <example/>
@@ -833,24 +833,24 @@
       <profile>bc-ObstetricProcedure</profile>
       <in>true</in>
       <zib>peri32-dataelement-1547</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-3836</ID>
       <naam>Verrichting (Onderzoek)</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Procedure</mapping>
+      <profile>bc-ObstetricProcedure</profile>
       <in/>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/prenataal-onderzoek</example>
       <searchurl/>
    </record>
    <record>
       <ID>peri32-dataelement-3837</ID>
       <naam>Verrichting (Postpartum complicatie)</naam>
-      <mapping/>
-      <profile/>
+   	<mapping>Procedure</mapping>
+   	<profile>bc-ObstetricProcedure</profile>
       <in/>
       <zib/>
       <example/>
@@ -860,10 +860,10 @@
       <ID>peri32-dataelement-1987</ID>
       <naam>Kind</naam>
       <mapping>Procedure.subject</mapping>
-      <profile>bc-ObstetricProcedure</profile>
+      <profile>bc-Birth</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-4</example>
       <searchurl/>
    </record>
    <record>
@@ -873,7 +873,7 @@
       <profile>bc-ObstetricProcedure</profile>
       <in>true</in>
       <zib>peri32-dataelement-1603</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-11</example>
       <searchurl>GET [base]/Procedure?code=http://snomed.info/sct|386637004</searchurl>
    </record>
    <record>
@@ -913,8 +913,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3299</ID>
@@ -923,8 +923,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3300</ID>
@@ -933,7 +933,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.4</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -943,7 +943,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.5</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -953,7 +953,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.6</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -963,7 +963,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.7</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -973,8 +973,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.2</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3305</ID>
@@ -983,7 +983,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.11</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -993,7 +993,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.4.10</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1004,7 +1004,7 @@
       <in>true</in>
       <zib>NL-CM-20.4.3</zib>
       <example/>
-      <searchurl/>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3308</ID>
@@ -1033,8 +1033,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3311</ID>
@@ -1043,8 +1043,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.2</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3312</ID>
@@ -1053,7 +1053,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.4</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1063,7 +1063,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.5</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1073,7 +1073,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.6</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1083,8 +1083,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.3</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3316</ID>
@@ -1093,7 +1093,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.7</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1103,7 +1103,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.6.8</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1113,8 +1113,8 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+   	<searchurl>GET [base]/RelatedPerson?patient=[id]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3319</ID>
@@ -1123,7 +1123,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.2</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1133,7 +1133,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.12</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1143,7 +1143,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.11</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1153,7 +1153,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.10</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1163,7 +1163,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.9</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1173,7 +1173,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.6</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1183,7 +1183,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.3</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1193,7 +1193,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.4</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1203,7 +1203,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.5</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1213,7 +1213,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>false</in>
       <zib>NL-CM-20.5.7</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1223,7 +1223,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-20.5.8</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1233,7 +1233,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>NL-CM-3.1.2</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1243,7 +1243,7 @@
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
       <searchurl/>
    </record>
    <record>
@@ -1264,7 +1264,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3198</ID>
@@ -1314,7 +1314,7 @@
       <in>true</in>
       <zib>NL-CM-20.4.2</zib>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3203</ID>
@@ -1344,7 +1344,7 @@
       <in>true</in>
       <zib>NL-CM-20.4.3</zib>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3206</ID>
@@ -1374,7 +1374,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3209</ID>
@@ -1494,7 +1494,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3221</ID>
@@ -1504,7 +1504,7 @@
       <in>true</in>
       <zib>NL-CM-20.6.2</zib>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3222</ID>
@@ -1544,7 +1544,7 @@
       <in>true</in>
       <zib>NL-CM-20.6.3</zib>
       <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3226</ID>
@@ -1693,8 +1693,8 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib/>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+   	<searchurl>GET [base]/Organization</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3229</ID>
@@ -1703,8 +1703,8 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.2</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+   	<searchurl>GET [base]/Organization</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3230</ID>
@@ -1713,7 +1713,7 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.4</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -1723,7 +1723,7 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.5</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -1733,7 +1733,7 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.6</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -1743,8 +1743,8 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.3</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+   	<searchurl>GET [base]/Organization</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3234</ID>
@@ -1753,7 +1753,7 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.7</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -1763,7 +1763,7 @@
       <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>NL-CM-20.6.8</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -1774,7 +1774,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Organization</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3237</ID>
@@ -1904,7 +1904,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-979</ID>
@@ -1924,7 +1924,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3249</ID>
@@ -1974,7 +1974,7 @@
       <in>true</in>
       <zib>NL-CM-20.4.2</zib>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3254</ID>
@@ -2004,7 +2004,7 @@
       <in>true</in>
       <zib>NL-CM-20.4.3</zib>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3257</ID>
@@ -2043,8 +2043,8 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.1</zib>
-      <example/>
-      <searchurl/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3260</ID>
@@ -2053,7 +2053,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.2</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2063,7 +2063,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.12</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2073,7 +2073,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.11</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2083,7 +2083,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.10</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2093,7 +2093,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.9</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2103,7 +2103,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.6</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2113,7 +2113,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.3</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2123,7 +2123,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.4</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2133,7 +2133,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.5</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2143,7 +2143,7 @@
       <profile>nl-core-practitioner</profile>
       <in>false</in>
       <zib>NL-CM-20.5.7</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2153,7 +2153,7 @@
       <profile>nl-core-practitioner</profile>
       <in>true</in>
       <zib>NL-CM-20.5.8</zib>
-      <example/>
+   	<example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
       <searchurl/>
    </record>
    <record>
@@ -2164,7 +2164,7 @@
       <in>true</in>
       <zib/>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3272</ID>
@@ -2174,7 +2174,7 @@
       <in>true</in>
       <zib>NL-CM-20.6.2</zib>
       <example>https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3273</ID>
@@ -2214,7 +2214,7 @@
       <in>true</in>
       <zib>NL-CM-20.6.3</zib>
       <example/>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3277</ID>
@@ -2244,7 +2244,7 @@
       <in>true</in>
       <zib>peri32-dataelement-956</zib>
       <example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
-      <searchurl/>
+   	<searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-989</ID>
@@ -6209,28 +6209,28 @@
    <record>
       <ID>peri32-dataelement-3402</ID>
       <naam>FocusZorgEpisode</naam>
-      <mapping/>
-      <profile/>
+      <mapping>EpisodeOfCare.diagnosis.condition</mapping>
+      <profile>bc-MaternalRecord</profile>
       <in/>
       <zib/>
-      <example/>
-      <searchurl/>
+      <example>https://simplifier.net/geboortezorg-stu3/episodeofcare-example</example>
+      <searchurl>GET [base]/EpisodeofCare/[id for pregnancy episode]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3403</ID>
       <naam>Probleem</naam>
-      <mapping/>
-      <profile/>
+      <mapping>Condition</mapping>
+      <profile>zib-Pregnancy</profile>
       <in/>
       <zib/>
-      <example/>
-      <searchurl/>
+      <example>https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-12</example>
+      <searchurl>GET [base]/Condition?context=[id for pregnancy episode]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-3404</ID>
       <naam>ZorgEpisodeNaam</naam>
-      <mapping/>
-      <profile/>
+      <mapping>EpisodeOfCare.extension:title</mapping>
+      <profile>bc-MaternalRecord</profile>
       <in/>
       <zib/>
       <example/>
@@ -6244,7 +6244,7 @@
       <in>true</in>
       <zib>peri32-dataelement-978</zib>
       <example/>
-      <searchurl/>
+      <searchurl>GET [base]/Practitioner</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-2165</ID>
@@ -6259,7 +6259,7 @@
    <record>
       <ID>peri32-dataelement-2166</ID>
       <naam>DatumEersteContact</naam>
-      <mapping>Encounterperiod.start</mapping>
+      <mapping>Encounter.period.start</mapping>
       <profile>bc-Encounter</profile>
       <in>true</in>
       <zib/>
@@ -6269,7 +6269,7 @@
    <record>
       <ID>peri32-dataelement-2167</ID>
       <naam>DatumLaatsteContact</naam>
-      <mapping>Encounterperiod.start</mapping>
+      <mapping>Encounter.period.start</mapping>
       <profile>bc-Encounter</profile>
       <in>true</in>
       <zib/>
@@ -6299,8 +6299,8 @@
    <record>
       <ID>peri32-dataelement-3388</ID>
       <naam>ZorgTeam</naam>
-      <mapping/>
-      <profile/>
+      <mapping>CareTeam</mapping>
+      <profile>bc-CareTeam</profile>
       <in/>
       <zib/>
       <example/>
@@ -6309,8 +6309,8 @@
    <record>
       <ID>peri32-dataelement-3389</ID>
       <naam>ZorgTeamNaam</naam>
-      <mapping/>
-      <profile/>
+      <mapping>CareTeam.name</mapping>
+      <profile>bc-CareTeam</profile>
       <in/>
       <zib/>
       <example/>
@@ -6319,8 +6319,8 @@
    <record>
       <ID>peri32-dataelement-3390</ID>
       <naam>Probleem</naam>
-      <mapping/>
-      <profile/>
+      <mapping>CareTeam.reasonReference</mapping>
+      <profile>bc-CareTeam</profile>
       <in/>
       <zib/>
       <example/>
@@ -6329,7 +6329,7 @@
    <record>
       <ID>peri32-dataelement-2687</ID>
       <naam>Probleem</naam>
-      <mapping>CareTeamreasonReference</mapping>
+      <mapping>CareTeam.reasonReference</mapping>
       <profile>bc-CareTeam</profile>
       <in>true</in>
       <zib>peri32-dataelement-2611</zib>
@@ -6339,8 +6339,8 @@
    <record>
       <ID>peri32-dataelement-3392</ID>
       <naam>ZorgTeamLid</naam>
-      <mapping/>
-      <profile/>
+      <mapping>CareTeam.participant.member</mapping>
+      <profile>bc-CareTeam</profile>
       <in/>
       <zib/>
       <example/>
@@ -6349,7 +6349,7 @@
    <record>
       <ID>peri32-dataelement-2128</ID>
       <naam>Contactpersoon</naam>
-      <mapping>CareTeamparticipant.member</mapping>
+      <mapping>CareTeam.participant.member</mapping>
       <profile>bc-CareTeam</profile>
       <in>true</in>
       <zib>peri32-dataelement-947</zib>
@@ -6359,7 +6359,7 @@
    <record>
       <ID>peri32-dataelement-1320</ID>
       <naam>Patient</naam>
-      <mapping>CareTeamsubject</mapping>
+      <mapping>CareTeam.subject</mapping>
       <profile>bc-CareTeam</profile>
       <in>true</in>
       <zib>peri32-dataelement-675</zib>
@@ -6369,7 +6369,7 @@
    <record>
       <ID>peri32-dataelement-1331</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CareTeamparticipant.member</mapping>
+      <mapping>CareTeam.participant.member</mapping>
       <profile>bc-CareTeam</profile>
       <in>true</in>
       <zib>peri32-dataelement-978</zib>
@@ -6379,7 +6379,7 @@
    <record>
       <ID>peri32-dataelement-1337</ID>
       <naam>TijdsInterval</naam>
-      <mapping>CareTeamparticipant.period</mapping>
+      <mapping>CareTeam.participant.period</mapping>
       <profile>bc-CareTeam</profile>
       <in>true</in>
       <zib>peri32-dataelement-1333</zib>

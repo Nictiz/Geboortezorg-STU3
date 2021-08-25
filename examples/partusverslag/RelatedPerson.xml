@@ -34,5 +34,67 @@
             </extension>
         </given>
     </name>       
+    <telecom>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                    <code value="LL" />
+                    <display value="Vast telefoonnummer" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <system value="phone" />
+        <value value="0226-213456" />
+        <use value="home" />
+    </telecom>
+    <telecom>
+        <system value="email" />
+        <value value="user@home.nl" />
+        <use value="home" />
+    </telecom>
+    <address>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                    <code value="HP" />
+                    <display value="Officieel adres" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <use value="home"/>
+        <line value="Dorpstraat 80A">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Dorpstraat" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="80" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                <valueString value="A" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+                <valueString value="Gebouw G"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+                <valueString value="hoog"/>
+            </extension>
+        </line>
+        <city value="Spanbroek" />
+        <district value="Opmeer" />
+        <postalCode value="1234XY" />
+        <country value="NLD">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
+                        <code value="6030" />
+                        <display value="Nederland" />
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </country>
+    </address>
 </RelatedPerson>
 

@@ -66,4 +66,35 @@
         <value value="0612345678" />
         <use value="work"/>
     </telecom>
+    <telecom>
+        <system value="email" />
+        <value value="vdelos@ziekenhuis.nl" />
+        <use value="work" />
+    </telecom>
+    <address>
+        <line value="Hoofdweg 1a">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Hoofdweg" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                <valueString value="a" />
+            </extension>
+        </line>
+        <city value="Amsterdam" />
+        <postalCode value="1000AA" />
+        <country value="NLD">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
+                        <code value="6030" />
+                        <display value="Nederland" />
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </country>
+    </address>
 </Practitioner>

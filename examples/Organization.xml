@@ -27,6 +27,25 @@
       </coding>
    </type>
    <name value="Ziekenhuis"/>
+   <telecom>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+         <valueCodeableConcept>
+            <coding>
+               <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+               <code value="LL" />
+               <display value="Vast telefoonnummer" />
+            </coding>
+         </valueCodeableConcept>
+      </extension>
+      <system value="phone" />
+      <value value="020-5561356" />
+      <use value="work" />
+   </telecom>
+   <telecom>
+      <system value="email" />
+      <value value="info@ziekenhuis.nl" />
+      <use value="work" />
+   </telecom>
    <address>
       <line value="Hoofdweg 1a">
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
