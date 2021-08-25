@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="family-situation" />
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/bc-CareTeam" />
+    </meta>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365470003"/>
+            <display value="bevinding betreffende gegevens over gezin en gezinssamenstelling (bevinding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="example patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example"/>
+    </context>
+    <comment value="luidruchtige buren"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="EENGEZW"/>
+            <display value="Eengezinswoning"/>
+        </coding>           
+    </valueCodeableConcept>
+</Observation>

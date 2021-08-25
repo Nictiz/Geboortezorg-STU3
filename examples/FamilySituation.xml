@@ -29,8 +29,8 @@
         <valueCodeableConcept>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="8871000146101"/>
-                <display value="Lives with underage children"/>
+                <code value="160756002"/>
+                <display value="Lives with relatives"/>
             </coding>           
         </valueCodeableConcept>
     </component>
@@ -69,6 +69,9 @@
         <valueString value="Eerste dochter heeft verstandelijke beperking"/>
     </component>    
     <component>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FamilySituation-LivingAtHomeIndicator">
+            <valueBoolean value="true"/>
+        </extension>
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
