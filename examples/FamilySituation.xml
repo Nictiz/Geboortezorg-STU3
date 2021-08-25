@@ -1,0 +1,81 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="family-situation" />
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/bc-CareTeam" />
+    </meta>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365470003"/>
+            <display value="bevinding betreffende gegevens over gezin en gezinssamenstelling (bevinding)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="example patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example"/>
+    </context>
+    <comment value="veel hulp naaste familie en vrienden"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="224130005"/>
+                <display value="gezinssamenstelling (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="8871000146101"/>
+                <display value="Lives with underage children"/>
+            </coding>           
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="224118004"/>
+                <display value="aantal nakomelingen (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="1"/>    
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="55811000146107"/>
+                <display value="aantal thuiswonende kinderen (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="1"/>    
+        </valueQuantity>
+    </component>    
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="406192005"/>
+                <display value="Caregiver behavior (observable entity)"/>
+            </coding>
+        </code>
+        <valueString value="Eerste dochter heeft verstandelijke beperking"/>
+    </component>    
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="67822003"/>
+                <display value="kind (persoon)"/>
+            </coding>
+        </code>
+        <valueDateTime value="2016-05-03"/>
+    </component>    
+</Observation>

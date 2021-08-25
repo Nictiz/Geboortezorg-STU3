@@ -6419,7 +6419,7 @@
    <record>
       <ID>peri32-dataelement-900</ID>
       <naam>Partner</naam>
-      <mapping>Relatedperson</mapping>
+      <mapping>RelatedPerson</mapping>
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib/>
@@ -6429,7 +6429,7 @@
    <record>
       <ID>peri32-dataelement-990</ID>
       <naam>Contactpersoon</naam>
-      <mapping>Relatedperson</mapping>
+      <mapping>RelatedPerson</mapping>
       <profile>nl-core-relatedperson</profile>
       <in>true</in>
       <zib>peri32-dataelement-947</zib>
@@ -6439,12 +6439,12 @@
    <record>
       <ID>peri32-dataelement-7773</ID>
       <naam>Geboortedatum </naam>
-      <mapping/>
-      <profile/>
+      <mapping>RelatedPerson.birthDate</mapping>
+      <profile>nl-core-relatedperson</profile>
       <in/>
       <zib/>
-      <example/>
-      <searchurl/>
+      <example>https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2</example>
+      <searchurl>GET [base]/RelatedPerson?patient=[patientid]</searchurl>
    </record>
    <record>
       <ID>peri32-dataelement-915</ID>
@@ -6473,7 +6473,7 @@
       <profile>bc-Woman</profile>
       <in>true</in>
       <zib>peri32-dataelement-2688</zib>
-      <example/>
+      <example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
       <searchurl/>
    </record>
    <record>
