@@ -1,0 +1,38 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="medicalinvestigation" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
+        <valueReference>
+            <reference value="Procedure/geboorte" />
+        </valueReference>
+    </extension>
+    <status value="completed" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="103693007" />
+            <display value="Diagnostic procedure (procedure)" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="71388002" />
+            <display value="verrichting (verrichting)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/XXX-VDWOUDEN" />
+        <display value="Patient van der Wouden" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example" />
+        <display value="Zwangerschapsdossier" />
+    </context>
+    <performedPeriod>
+        <start value="2016-02-19"/>
+        <end value="2016-02-20"/>
+    </performedPeriod>
+</Procedure>

@@ -37,7 +37,7 @@
                mapping="Patient*"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3">
          <search>GET [base]/Patient/[patientid]</search>
-         <search>GET [base]/Patient?identifier=[bsn]</search>
+         <search>GET [base]/Patient?_id=[patientid or childid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3197"
                level="3"
@@ -494,7 +494,9 @@
                bc-pattern="false"
                pattern="nl-core-organization"
                mapping="Organization"
-               example="https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3">
+         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]&amp;_include=EpisodeOfCare:organization</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.957"
                level="3"
                type="identifier"
@@ -650,7 +652,9 @@
                bc-pattern="false"
                pattern="nl-core-practitioner"
                mapping="Practitioner"
-               example="https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/practitioner-example-duplicate-3">
+         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]&amp;_include=EpisodeOfCare:care-manager</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.979"
                level="3"
                type="identifier"
@@ -902,7 +906,10 @@
                bc-pattern="false"
                pattern="bc-MaternalRecord"
                mapping="EpisodeOfCare"
-               example="https://simplifier.net/geboortezorg-stu3/episodeofcare-example"/>
+               example="https://simplifier.net/geboortezorg-stu3/episodeofcare-example">
+         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct |364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}</search>
+         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3400"
                level="3"
                type="datetime"
@@ -938,7 +945,10 @@
                bc-pattern="false"
                pattern="bc-Woman"
                mapping="Patient"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3">
+         <search>GET [base]/Patient/[patientid]</search>
+         <search>GET [base]/Patient?_id=[patientid]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1713"
                level="2"
                type="group"
@@ -974,7 +984,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-79"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-79">
+         <search>GET See laboratory test result observations in section 1123 below</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1139"
                level="3"
                type="group"
@@ -1020,9 +1032,12 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern="zib-Pregnancy"
-               mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10"/>
+               pattern="bc-MaternalRecord"
+               mapping="EpisodeOfCare"
+               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10">
+         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct |364320009&amp;patient=[patientid]&amp;status=[active/inactive]&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager</search>
+         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1699"
                level="2"
                type="group"
@@ -1082,7 +1097,9 @@
                bc-pattern="false"
                pattern="zib-Pregnancy"
                mapping="Condition"
-               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10"/>
+               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10">
+         <search>GET [base]/Condition?code=http://snomed.info/sct |364320009&amp;context=[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3343"
                level="3"
                type="count"
@@ -1094,7 +1111,9 @@
                bc-pattern="false"
                pattern="zib-Pregnancy-Parity"
                mapping="Observation.valueQuantity"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-90"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-90">
+         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org |11977-6}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3344"
                level="3"
                type="count"
@@ -1106,7 +1125,9 @@
                bc-pattern="false"
                pattern="zib-Pregnancy-Gravidity"
                mapping="Observation.valueQuantity"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-86"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-86">
+         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org |11996-6}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3346"
                level="3"
                type="group"
@@ -1118,7 +1139,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/aterm-example"/>
+               example="https://simplifier.net/geboortezorg-stu3/aterm-example">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |161714006}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3347"
                level="4"
                type="datetime"
@@ -1166,7 +1189,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |147781000146105}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2221"
                level="3"
                type="datetime"
@@ -1226,7 +1251,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |65147003}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1825"
                level="3"
                type="datetime"
@@ -1261,8 +1288,10 @@
                resource=""
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
-               mapping="Observation.related"
-               example="https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap"/>
+               mapping="Observation"
+               example="https://simplifier.net/geboortezorg-stu3/example-meerlingzwangerschap">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |65147003}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1833"
                level="3"
                type="code"
@@ -1298,7 +1327,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-aantal-levende-kinderen">
+         <search>GET [base}/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |143881000146107}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1735"
                level="3"
                type="datetime"
@@ -1358,7 +1389,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-fetalloss"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-fetalloss">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |713651007}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1818"
                level="3"
                type="datetime"
@@ -1416,9 +1449,11 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-PregnancyObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |792807003}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.111"
                level="2"
                type="group"
@@ -1430,7 +1465,9 @@
                bc-pattern="false"
                pattern="bc-Encounter"
                mapping="Encounter"
-               example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3">
+         <search>GET [base]/Encounter?type=http://snomed.info/sct |18114009&amp;episodeofcare=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Encounter:participant:Practitioner</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1811"
                level="3"
                type="group"
@@ -1478,7 +1515,9 @@
                bc-pattern="false"
                pattern="bc-Encounter"
                mapping="Encounter.participant.individual"
-               example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3"/>
+               example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3">
+         <search>GET [base]/Encounter?type=http://snomed.info/sct |18114009&amp;episodeofcare=[id for pregnancy episode]&amp;_include=Encounter:participant:Practitioner</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.7788"
                level="4"
                type="group"
@@ -1514,7 +1553,9 @@
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-224">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |364618000}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2135"
                level="4"
                type="datetime"
@@ -1573,8 +1614,10 @@
                resource=""
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
-               mapping="Observation.related (zib-BodyWeight)"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187"/>
+               mapping="Observation"
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://loinc.org |29463-7}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1072"
                level="3"
                type="group"
@@ -1585,8 +1628,10 @@
                resource=""
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
-               mapping="Observation.related (zib-BloodPressure)"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-184"/>
+               mapping="Observation"
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-184">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://loinc.org |85354-9}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.121"
                level="3"
                type="group"
@@ -1598,7 +1643,9 @@
                bc-pattern="false"
                pattern="zib-AlcoholUse"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |228273003}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.122"
                level="4"
                type="string"
@@ -1682,7 +1729,9 @@
                bc-pattern="false"
                pattern="zib-DrugUse"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |228366006}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.113"
                level="4"
                type="group"
@@ -1790,7 +1839,9 @@
                bc-pattern="false"
                pattern="zib-TobaccoUse"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |365980008}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2244"
                level="4"
                type="string"
@@ -1897,7 +1948,7 @@
                resource=""
                bc-pattern="false"
                pattern=""
-               mapping="DiagnosticReport"
+               mapping=""
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1776"
                level="4"
@@ -1910,7 +1961,9 @@
                bc-pattern="false"
                pattern="bc-FetalHeartRate"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-foetale-hartslag">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]&amp;code=http://snomed.info/sct |249043002}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1778"
                level="5"
                type="datetime"
@@ -1994,7 +2047,9 @@
                bc-pattern="true"
                pattern="bc-DisorderOfPregnancy"
                mapping="Condition"
-               example="https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder">
+         <search>GET [base]/Condition?category=http://snomed.info/sct |173300003&amp;context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1183"
                level="3"
                type="code"
@@ -2039,8 +2094,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="false"
-               pattern="zib-Pregnancy"
+               bc-pattern="true"
+               pattern="bc-DisorderOfPregnancy"
                mapping="Condition.note"
                example="https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1190"
@@ -2054,7 +2109,9 @@
                bc-pattern="false"
                pattern="bc-ObstetricProcedure"
                mapping="Procedure"
-               example="https://simplifier.net/geboortezorg-stu3/prenataal-onderzoek"/>
+               example="https://simplifier.net/geboortezorg-stu3/prenataal-onderzoek">
+         <search>GET [base]/Procedure?category=http://snomed.info/sct |386637004&amp;context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3408"
                level="3"
                type="quantity"
@@ -2090,7 +2147,9 @@
                bc-pattern="false"
                pattern="bc-DeliveryProcedure"
                mapping="Procedure"
-               example="https://simplifier.net/geboortezorg-stu3/procedure-example"/>
+               example="https://simplifier.net/geboortezorg-stu3/procedure-example">
+         <search>GET [base]/Procedure?code=http://snomed.info/sct |236973005&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3411"
                level="2"
                type="identifier"
@@ -2138,7 +2197,9 @@
                bc-pattern="true"
                pattern="bc-DeliveryObservation"
                mapping="Observation.code"
-               example="https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1"/>
+               example="https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |249120008}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4085"
                level="4"
                type="datetime"
@@ -2198,7 +2259,9 @@
                bc-pattern="true"
                pattern="bc-DeliveryObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/wijze-begin-baring"/>
+               example="https://simplifier.net/geboortezorg-stu3/wijze-begin-baring">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |249120008}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4097"
                level="4"
                type="datetime"
@@ -2258,7 +2321,9 @@
                bc-pattern="true"
                pattern="bc-DisorderOfLaborAndDelivery"
                mapping="Condition"
-               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33"/>
+               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-33">
+         <search>GET [base]/Condition?category=http://snomed.info/sct |362972006&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1568"
                level="4"
                type="code"
@@ -2306,7 +2371,9 @@
                bc-pattern="false"
                pattern="bc-ObstetricProcedure"
                mapping="Procedure"
-               example="https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10"/>
+               example="https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-10">
+         <search>GET [base]/Procedure?context=EpisodeOfCare/[id for pregnancy episode]&amp;part-of[delivery procedure id]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1548"
                level="4"
                type="datetime"
@@ -2376,9 +2443,11 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern=""
-               mapping=""
-               example=""/>
+               pattern="bc-Birth"
+               mapping="Procedure"
+               example="">
+         <search>GET [base]/Procedure?code=http://snomed.info/sct |3950001&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4144"
                level="3"
                type="group"
@@ -2390,7 +2459,9 @@
                bc-pattern="true"
                pattern="bc-BirthObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |364336006}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4145"
                level="4"
                type="datetime"
@@ -2450,7 +2521,9 @@
                bc-pattern="true"
                pattern="bc-DeliveryObservation"
                mapping="Observation.code"
-               example="https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1"/>
+               example="https://simplifier.net/geboortezorg-stu3/aantal-kinderen-wouden-zwanger1">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |118861000146102}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4182"
                level="4"
                type="datetime"
@@ -2510,7 +2583,9 @@
                bc-pattern="true"
                pattern="bc-DeliveryObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring"/>
+               example="https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |169812000}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4194"
                level="4"
                type="datetime"
@@ -2570,7 +2645,9 @@
                bc-pattern="false"
                pattern="bc-DeliveryProcedure"
                mapping="Procedure.performer.actor/onBehalfOf"
-               example="https://simplifier.net/geboortezorg-stu3/bevalling"/>
+               example="https://simplifier.net/geboortezorg-stu3/bevalling">
+         <search>GET [base]/Procedure?code=http://snomed.info/sct |236973005&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:performer{&amp;performer:Organization.type=V4,V5,V6,Z4,P4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1588"
                level="4"
                type="group"
@@ -2594,7 +2671,9 @@
                bc-pattern="true"
                pattern="bc-DisorderOfLaborAndDelivery"
                mapping="Condition"
-               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34"/>
+               example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-34">
+         <search>GET [base]/Condition?category=http://snomed.info/sct |362972006&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1595"
                level="4"
                type="code"
@@ -2642,7 +2721,9 @@
                bc-pattern="false"
                pattern="bc-ObstetricProcedure"
                mapping="Procedure"
-               example="https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12"/>
+               example="https://simplifier.net/geboortezorg-stu3/procedure-example-duplicate-12">
+         <search>GET [base]/Procedure?category=http://snomed.info/sct |386637004&amp;context=EpisodeOfCare/[id for pregnancy episode]{&amp;part-of[birth procedure id]}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1604"
                level="4"
                type="datetime"
@@ -2714,7 +2795,10 @@
                bc-pattern="false"
                pattern="bc-Child"
                mapping="Patient"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5"/>
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5">
+         <search>GET [base]/Procedure?code=http://snomed.info/sct |3950001&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</search>
+         <search>GET [base]/Patient/[child-id]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1754"
                level="2"
                type="group"
@@ -2954,7 +3038,9 @@
                bc-pattern="true"
                pattern="bc-ChildObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |8339-4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1419"
                level="4"
                type="quantity"
@@ -2978,7 +3064,9 @@
                bc-pattern="false"
                pattern="zib-BodyHeight"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-186"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-186">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |8302-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1425"
                level="4"
                type="quantity"
@@ -3002,7 +3090,9 @@
                bc-pattern="false"
                pattern="zib-HeadCircumference"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-99"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-99">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://snomed.info/sct |56792006}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1432"
                level="4"
                type="quantity"
@@ -3026,7 +3116,9 @@
                bc-pattern="true"
                pattern="bc-ChildObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |9274-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2706"
                level="4"
                type="group"
@@ -3050,7 +3142,9 @@
                bc-pattern="false"
                pattern="zib-ApgarScore"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77"/>
+               example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |9274-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1409"
                level="6"
                type="datetime"
@@ -3098,7 +3192,9 @@
                bc-pattern="false"
                pattern="bc-ObstetricProcedure"
                mapping="Procedure"
-               example=""/>
+               example="">
+         <search>GET [base]/Procedure?category=http://snomed.info/sct |386637004&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2417"
                level="3"
                type="datetime"
@@ -3122,7 +3218,9 @@
                bc-pattern="true"
                pattern="bc-MaternalObservation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab">
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;{category=http://snomed.info/sct |49581000146104}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1125"
                level="3"
                type="group"
@@ -3134,7 +3232,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://snomed.info/sct |49581000146104}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1126"
                level="4"
                type="group"
@@ -3158,7 +3258,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |883-9}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1129"
                level="6"
                type="code"
@@ -3194,7 +3296,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-rhdpos"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-rhdpos">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |1305-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1141"
                level="6"
                type="code"
@@ -3230,7 +3334,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-rhcneg"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-rhcneg">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |1159-3}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1153"
                level="6"
                type="code"
@@ -3266,7 +3372,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-hbsag"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-hbsag">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |58452-4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2367"
                level="6"
                type="code"
@@ -3314,7 +3422,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-hiv"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-hiv">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |29893-5}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2357"
                level="6"
                type="code"
@@ -3350,7 +3460,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-lues"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-lues">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |11597-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2369"
                level="6"
                type="code"
@@ -3398,7 +3510,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-irregulaireantistoffen"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-irregulaireantistoffen">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://snomed.info/sct |312457003}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3503"
                level="6"
                type="boolean"
@@ -3434,7 +3548,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-hb"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-hb">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |93846-4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2380"
                level="5"
                type="code"
@@ -3482,7 +3598,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-mcv"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-mcv">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |787-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2492"
                level="6"
                type="code"
@@ -3518,7 +3636,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-vitb12"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-vitb12">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |14685-2}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2514"
                level="6"
                type="code"
@@ -3554,7 +3674,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-actvitb12"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-actvitb12">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |72160-5}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2546"
                level="6"
                type="code"
@@ -3590,7 +3712,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-ferritine"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-ferritine">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |2276-4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2525"
                level="6"
                type="code"
@@ -3626,7 +3750,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-foliumzuur"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-foliumzuur">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |2276-4}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2503"
                level="6"
                type="code"
@@ -3662,7 +3788,9 @@
                bc-pattern="false"
                pattern="zib-Problem"
                mapping="Condition"
-               example="https://simplifier.net/geboortezorg-stu3/hb-pathie"/>
+               example="https://simplifier.net/geboortezorg-stu3/hb-pathie">
+         <search>GET [base]/Condition?context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://snomed.info/sct |36472007}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2539"
                level="6"
                type="code"
@@ -3698,7 +3826,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-vrijt4-tsh">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |24348-5}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1653"
                level="6"
                type="code"
@@ -3746,7 +3876,9 @@
                bc-pattern="false"
                pattern="zib-LaboratoryTestResult-Observation"
                mapping="Observation"
-               example="https://simplifier.net/geboortezorg-stu3/example-torch"/>
+               example="https://simplifier.net/geboortezorg-stu3/example-torch">
+         <search>GET [base]/Observation?patient=[patientid]&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;{code=http://loinc.org |47983-0}</search>
+      </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2391"
                level="6"
                type="code"
