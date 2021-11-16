@@ -1,75 +1,74 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.141--20130320000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2013-03-20T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.141--20130320000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.141"/>
-    </identifier>
-    <version value="2013-03-20T00:00:00"/>
-    <name value="LanguageAbilityProficiency2"/>
-    <title value="Language Ability Proficiency"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Language Ability Proficiency"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="NI"/>
-                <display value="geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
-            <concept>
-                <code value="G"/>
-                <display value="Good"/>
-            </concept>
-            <concept>
-                <code value="P"/>
-                <display value="Poor"/>
-            </concept>
-            <concept>
-                <code value="N"/>
-                <display value="None"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:4a30897f-2b7c-4d5f-92b7-e18172362f53"/>
-        <timestamp value="2021-06-18T15:19:43.715+02:00"/>
-        <total value="4"/>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
-            <code value="G"/>
-            <display value="Good"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
-            <code value="P"/>
-            <display value="Poor"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
-            <code value="N"/>
-            <display value="None"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-03-20T00:00:00+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.141--20130320000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.141"/>
+   </identifier>
+   <version value="2013-03-20T00:00:00"/>
+   <name value="LanguageAbilityProficiency2"/>
+   <title value="Language Ability Proficiency"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Language Ability Proficiency"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="NI"/>
             <display value="geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
+         <concept>
+            <code value="G"/>
+            <display value="Good"/>
+         </concept>
+         <concept>
+            <code value="P"/>
+            <display value="Poor"/>
+         </concept>
+         <concept>
+            <code value="N"/>
+            <display value="None"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:32845ef0-bedd-4de9-845e-f0bedd4de962"/>
+      <timestamp value="2021-11-16T14:31:04.129+01:00"/>
+      <total value="4"/>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
+         <code value="G"/>
+         <display value="Good"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
+         <code value="P"/>
+         <display value="Poor"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/LanguageAbilityProficiency"/>
+         <code value="N"/>
+         <display value="None"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

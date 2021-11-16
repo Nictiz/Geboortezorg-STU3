@@ -1,88 +1,87 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.195--20140102000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2014-01-02T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.195"/>
-    </identifier>
-    <version value="2014-01-02T00:00:00"/>
-    <name value="PartusStadium"/>
-    <title value="Partus stadium"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Partus stadium"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="6893006"/>
-                <display value="eerste fase van bevalling (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="42857002"/>
-                <display value="tweede fase van partus (bevinding)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="UNK"/>
-                <display value="Onbekend"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
-            <concept>
-                <code value="3"/>
-                <display value="Na geboorte gearriveerd"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:43779e86-bb99-4d6c-9267-a959fbd0607a"/>
-        <timestamp value="2021-06-18T15:19:25.515+02:00"/>
-        <total value="5"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="6893006"/>
-            <display value="eerste fase van bevalling (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="42857002"/>
-            <display value="tweede fase van partus (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
-            <code value="3"/>
-            <display value="Na geboorte gearriveerd"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-02T00:00:00+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.195"/>
+   </identifier>
+   <version value="2014-01-02T00:00:00"/>
+   <name value="PartusStadium"/>
+   <title value="Partus stadium"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Partus stadium"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="UNK"/>
             <display value="Onbekend"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
+         <concept>
+            <code value="3"/>
+            <display value="Na geboorte gearriveerd"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="6893006"/>
+            <display value="eerste fase van bevalling (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="42857002"/>
+            <display value="tweede fase van partus (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:58549908-615a-4319-9499-08615af3193e"/>
+      <timestamp value="2021-11-16T14:30:40.289+01:00"/>
+      <total value="5"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="6893006"/>
+         <display value="eerste fase van bevalling (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="42857002"/>
+         <display value="tweede fase van partus (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.98"/>
+         <code value="3"/>
+         <display value="Na geboorte gearriveerd"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="Onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

@@ -1,94 +1,93 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-04-06T10:06:40+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.254"/>
-    </identifier>
-    <version value="2020-04-06T10:06:40"/>
-    <name value="A_terme_datum_obv_23"/>
-    <title value="a terme datum obv (23)"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="a terme datum obv (23)"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="31541000146106"/>
-                <display value="aterme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="31521000146100"/>
-                <display value="aterme datum berekend op basis van laatste menstruatie (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="31531000146103"/>
-                <display value="aterme datum berekend op basis van ovulatie (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="142941000146103"/>
-                <display value="a terme datum berekend op basis van in-vitrofertilisatie (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="142951000146100"/>
-                <display value="a terme datum berekend op basis van intra-uteriene inseminatie (bevinding)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="other"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:946f6adb-1f71-4ac9-87c9-eea3726c408f"/>
-        <timestamp value="2021-06-18T15:19:37.676+02:00"/>
-        <total value="6"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="31541000146106"/>
-            <display value="aterme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="31521000146100"/>
-            <display value="aterme datum berekend op basis van laatste menstruatie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="31531000146103"/>
-            <display value="aterme datum berekend op basis van ovulatie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="142941000146103"/>
-            <display value="a terme datum berekend op basis van in-vitrofertilisatie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="142951000146100"/>
-            <display value="a terme datum berekend op basis van intra-uteriene inseminatie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-04-06T10:06:40+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.254"/>
+   </identifier>
+   <version value="2020-04-06T10:06:40"/>
+   <name value="A_terme_datum_obv_23"/>
+   <title value="a terme datum obv (23)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="a terme datum obv (23)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="other"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="31541000146106"/>
+            <display value="aterme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="31521000146100"/>
+            <display value="aterme datum berekend op basis van laatste menstruatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="31531000146103"/>
+            <display value="aterme datum berekend op basis van ovulatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="142941000146103"/>
+            <display value="a terme datum berekend op basis van in-vitrofertilisatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="142951000146100"/>
+            <display value="a terme datum berekend op basis van intra-uteriene inseminatie (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:7c770d59-03f6-47ea-b70d-5903f637ead6"/>
+      <timestamp value="2021-11-16T14:30:56.158+01:00"/>
+      <total value="6"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="31541000146106"/>
+         <display value="aterme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="31521000146100"/>
+         <display value="aterme datum berekend op basis van laatste menstruatie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="31531000146103"/>
+         <display value="aterme datum berekend op basis van ovulatie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="142941000146103"/>
+         <display value="a terme datum berekend op basis van in-vitrofertilisatie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="142951000146100"/>
+         <display value="a terme datum berekend op basis van intra-uteriene inseminatie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="other"/>
+      </contains>
+   </expansion>
 </ValueSet>

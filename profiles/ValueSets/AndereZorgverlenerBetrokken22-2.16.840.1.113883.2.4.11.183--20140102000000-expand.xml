@@ -1,75 +1,74 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.183--20140102000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2014-01-02T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.183"/>
-    </identifier>
-    <version value="2014-01-02T00:00:00"/>
-    <name value="AndereZorgverlenerBetrokken22"/>
-    <title value="AndereZorgverlenerBetrokken22"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="AndereZorgverlenerBetrokken22"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="UNK"/>
-                <display value="onbekend"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
-            <concept>
-                <code value="1"/>
-                <display value="consultatie"/>
-            </concept>
-            <concept>
-                <code value="2"/>
-                <display value="overdracht"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:64aceb6e-6a44-49a0-ba0e-40860c2d5ff6"/>
-        <timestamp value="2021-06-18T15:19:17.621+02:00"/>
-        <total value="4"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-02T00:00:00+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.183--20140102000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.183"/>
+   </identifier>
+   <version value="2014-01-02T00:00:00"/>
+   <name value="AndereZorgverlenerBetrokken22"/>
+   <title value="AndereZorgverlenerBetrokken22"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="AndereZorgverlenerBetrokken22"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
+         <concept>
             <code value="1"/>
             <display value="consultatie"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
+         </concept>
+         <concept>
             <code value="2"/>
             <display value="overdracht"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="UNK"/>
             <display value="onbekend"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:091c8465-74a2-4e7d-9c84-6574a2ae7ddc"/>
+      <timestamp value="2021-11-16T14:30:37.356+01:00"/>
+      <total value="4"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
+         <code value="1"/>
+         <display value="consultatie"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.17"/>
+         <code value="2"/>
+         <display value="overdracht"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

@@ -1,250 +1,249 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.308--20201006103803"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-10-06T10:38:03+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.308--20201006103803"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.308"/>
-    </identifier>
-    <version value="2020-10-06T10:38:03"/>
-    <name value="ZorgverlenerType_32"/>
-    <title value="ZorgverlenerType (3.2)"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="ZorgverlenerType (3.2)"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="405277009"/>
-                <display value="arts in opleiding (beroep)"/>
-            </concept>
-            <concept>
-                <code value="224532007"/>
-                <display value="arts niet in opleiding tot specialist (beroep)"/>
-            </concept>
-            <concept>
-                <code value="309327004"/>
-                <display value="huisarts in opleiding (beroep)"/>
-            </concept>
-            <concept>
-                <code value="28411006"/>
-                <display value="neonatoloog (beroep)"/>
-            </concept>
-            <concept>
-                <code value="158971006"/>
-                <display value="arts in opleiding tot specialist in ziekenhuis (beroep)"/>
-            </concept>
-            <concept>
-                <code value="449161006+310188001"/>
-                <display value="physician assistant (beroep)+klinisch verloskundige (beroep)"/>
-            </concept>
-            <concept>
-                <code value="398130009"/>
-                <display value="student geneeskunde (beroep)"/>
-            </concept>
-            <concept>
-                <code value="309453006"/>
-                <display value="gediplomeerd verloskundige (beroep)"/>
-            </concept>
-            <concept>
-                <code value="158999002"/>
-                <display value="eerstelijnsverloskundige (beroep)"/>
-            </concept>
-            <concept>
-                <code value="310188001"/>
-                <display value="klinisch verloskundige (beroep)"/>
-            </concept>
-            <concept>
-                <code value="309454000"/>
-                <display value="student verloskunde (beroep)"/>
-            </concept>
-            <concept>
-                <code value="225726006"/>
-                <display value="lactatiekundige (beroep)"/>
-            </concept>
-            <concept>
-                <code value="789543004"/>
-                <display value="echoscopist (beroep)"/>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Een kraamverzorgende die geen MBO opleiding heeft (geen verzorgende individuele gezondheidszorg, VIG), maar een andere opleiding."/>
-                </extension>
-                <code value="151531000146108"/>
-                <display value="kraamverzorgende (beroep)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
-            <concept>
-                <code value="01.000"/>
-                <display value="arts"/>
-            </concept>
-            <concept>
-                <code value="01.015"/>
-                <display value="huisarts"/>
-            </concept>
-            <concept>
-                <code value="01.019"/>
-                <display value="kinderarts"/>
-            </concept>
-            <concept>
-                <code value="01.046"/>
-                <display value="gynaecoloog"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="UNK"/>
-                <display value="onbekend"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
-            <concept>
-                <code value="0801"/>
-                <display value="Verloskundigen, met bevoegdheid echoscopie"/>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG)."/>
-                </extension>
-                <code value="86.000"/>
-                <display value="VIG-er"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:f5295b8a-e611-4f3e-8f48-b0987f6e5dbf"/>
-        <timestamp value="2021-06-18T15:19:37.049+02:00"/>
-        <total value="22"/>
-        <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
-            <code value="01.000"/>
-            <display value="arts"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="405277009"/>
-            <display value="arts in opleiding (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="224532007"/>
-            <display value="arts niet in opleiding tot specialist (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
-            <code value="01.015"/>
-            <display value="huisarts"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="309327004"/>
-            <display value="huisarts in opleiding (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
-            <code value="01.019"/>
-            <display value="kinderarts"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="28411006"/>
-            <display value="neonatoloog (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
-            <code value="01.046"/>
-            <display value="gynaecoloog"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="158971006"/>
-            <display value="arts in opleiding tot specialist in ziekenhuis (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="449161006+310188001"/>
-            <display value="physician assistant (beroep)+klinisch verloskundige (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="398130009"/>
-            <display value="student geneeskunde (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="309453006"/>
-            <display value="gediplomeerd verloskundige (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="158999002"/>
-            <display value="eerstelijnsverloskundige (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="310188001"/>
-            <display value="klinisch verloskundige (beroep)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
-            <code value="0801"/>
-            <display value="Verloskundigen, met bevoegdheid echoscopie"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="309454000"/>
-            <display value="student verloskunde (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="225726006"/>
-            <display value="lactatiekundige (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="789543004"/>
-            <display value="echoscopist (beroep)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="151531000146108"/>
-            <display value="kraamverzorgende (beroep)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
-            <code value="86.000"/>
-            <display value="VIG-er"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-10-06T10:38:03+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.308--20201006103803"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.308"/>
+   </identifier>
+   <version value="2020-10-06T10:38:03"/>
+   <name value="ZorgverlenerType_32"/>
+   <title value="ZorgverlenerType (3.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="ZorgverlenerType (3.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="UNK"/>
             <display value="onbekend"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+         <concept>
+            <code value="0801"/>
+            <display value="Verloskundigen, met bevoegdheid echoscopie"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG)."/>
+            </extension>
+            <code value="86.000"/>
+            <display value="VIG-er"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <concept>
+            <code value="01.000"/>
+            <display value="arts"/>
+         </concept>
+         <concept>
+            <code value="01.015"/>
+            <display value="huisarts"/>
+         </concept>
+         <concept>
+            <code value="01.019"/>
+            <display value="kinderarts"/>
+         </concept>
+         <concept>
+            <code value="01.046"/>
+            <display value="gynaecoloog"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="405277009"/>
+            <display value="arts in opleiding (beroep)"/>
+         </concept>
+         <concept>
+            <code value="224532007"/>
+            <display value="arts niet in opleiding tot specialist (beroep)"/>
+         </concept>
+         <concept>
+            <code value="309327004"/>
+            <display value="huisarts in opleiding (beroep)"/>
+         </concept>
+         <concept>
+            <code value="28411006"/>
+            <display value="neonatoloog (beroep)"/>
+         </concept>
+         <concept>
+            <code value="158971006"/>
+            <display value="arts in opleiding tot specialist in ziekenhuis (beroep)"/>
+         </concept>
+         <concept>
+            <code value="449161006+310188001"/>
+            <display value="physician assistant (beroep)+klinisch verloskundige (beroep)"/>
+         </concept>
+         <concept>
+            <code value="398130009"/>
+            <display value="student geneeskunde (beroep)"/>
+         </concept>
+         <concept>
+            <code value="309453006"/>
+            <display value="gediplomeerd verloskundige (beroep)"/>
+         </concept>
+         <concept>
+            <code value="158999002"/>
+            <display value="eerstelijnsverloskundige (beroep)"/>
+         </concept>
+         <concept>
+            <code value="310188001"/>
+            <display value="klinisch verloskundige (beroep)"/>
+         </concept>
+         <concept>
+            <code value="309454000"/>
+            <display value="student verloskunde (beroep)"/>
+         </concept>
+         <concept>
+            <code value="225726006"/>
+            <display value="lactatiekundige (beroep)"/>
+         </concept>
+         <concept>
+            <code value="789543004"/>
+            <display value="echoscopist (beroep)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Een kraamverzorgende die geen MBO opleiding heeft (geen verzorgende individuele gezondheidszorg, VIG), maar een andere opleiding."/>
+            </extension>
+            <code value="151531000146108"/>
+            <display value="kraamverzorgende (beroep)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:1e017ca9-74fc-466d-817c-a974fce66ddd"/>
+      <timestamp value="2021-11-16T14:30:55.311+01:00"/>
+      <total value="22"/>
+      <contains>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <code value="01.000"/>
+         <display value="arts"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="405277009"/>
+         <display value="arts in opleiding (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="224532007"/>
+         <display value="arts niet in opleiding tot specialist (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <code value="01.015"/>
+         <display value="huisarts"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="309327004"/>
+         <display value="huisarts in opleiding (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <code value="01.019"/>
+         <display value="kinderarts"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="28411006"/>
+         <display value="neonatoloog (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <code value="01.046"/>
+         <display value="gynaecoloog"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="158971006"/>
+         <display value="arts in opleiding tot specialist in ziekenhuis (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="449161006+310188001"/>
+         <display value="physician assistant (beroep)+klinisch verloskundige (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="398130009"/>
+         <display value="student geneeskunde (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="309453006"/>
+         <display value="gediplomeerd verloskundige (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="158999002"/>
+         <display value="eerstelijnsverloskundige (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="310188001"/>
+         <display value="klinisch verloskundige (beroep)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+         <code value="0801"/>
+         <display value="Verloskundigen, met bevoegdheid echoscopie"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="309454000"/>
+         <display value="student verloskunde (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="225726006"/>
+         <display value="lactatiekundige (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="789543004"/>
+         <display value="echoscopist (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="151531000146108"/>
+         <display value="kraamverzorgende (beroep)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+         <code value="86.000"/>
+         <display value="VIG-er"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

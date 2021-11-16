@@ -1,66 +1,65 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.224--20161122112107"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2016-11-22T11:21:07+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.224--20161122112107"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.224"/>
-    </identifier>
-    <version value="2016-11-22T11:21:07"/>
-    <name value="RedenVerw2to1"/>
-    <title value="Reden Verwijzing (2e naar 1e lijn)"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Reden Verwijzing (2e naar 1e lijn)"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
-            <concept>
-                <code value="1"/>
-                <display value="Zwangerschap/baring/kind ongestoord, fysiologie"/>
-            </concept>
-            <concept>
-                <code value="2"/>
-                <display value="Zwangerschap/baring/kind ongestoord, met advies"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="overig"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:96816d9f-0a86-484c-84c9-8fe8dd71f3e0"/>
-        <timestamp value="2021-06-18T15:19:40.943+02:00"/>
-        <total value="3"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
-            <code value="1"/>
-            <display value="Zwangerschap/baring/kind ongestoord, fysiologie"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
-            <code value="2"/>
-            <display value="Zwangerschap/baring/kind ongestoord, met advies"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-22T11:21:07+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.224--20161122112107"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.224"/>
+   </identifier>
+   <version value="2016-11-22T11:21:07"/>
+   <name value="RedenVerw2to1"/>
+   <title value="Reden Verwijzing (2e naar 1e lijn)"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Reden Verwijzing (2e naar 1e lijn)"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="overig"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
+         <concept>
+            <code value="1"/>
+            <display value="Zwangerschap/baring/kind ongestoord, fysiologie"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="Zwangerschap/baring/kind ongestoord, met advies"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:8b8ef28d-47a9-4a44-8ef2-8d47a93a44b7"/>
+      <timestamp value="2021-11-16T14:31:00.468+01:00"/>
+      <total value="3"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
+         <code value="1"/>
+         <display value="Zwangerschap/baring/kind ongestoord, fysiologie"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.10.3"/>
+         <code value="2"/>
+         <display value="Zwangerschap/baring/kind ongestoord, met advies"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="overig"/>
+      </contains>
+   </expansion>
 </ValueSet>

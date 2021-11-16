@@ -1,139 +1,102 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-05-26T17:29:02+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.282"/>
-    </identifier>
-    <version value="2020-05-26T17:29:02"/>
-    <name value="MeetMethode_GZ"/>
-    <title value="MeetMethode_GZ"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="MeetMethode_GZ"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="225308005"/>
-                <display value="observatie (regime/therapie)"/>
-            </concept>
-            <concept>
-                <code value="113011001"/>
-                <display value="palpatie (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="37931006"/>
-                <display value="auscultatie (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="122869004"/>
-                <display value="meten (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="258090004"/>
-                <display value="Calculated (qualifier value)"/>
-            </concept>
-            <concept>
-                <code value="386053000"/>
-                <display value="beoordeling (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="241491007"/>
-                <display value="echografie van foetus (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="167226008"/>
-                <display value="bepalen in urine met dipstick (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="151791000146104"/>
-                <display value="vaststellen van bevinding door zorgverlener (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="418799008"/>
-                <display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Anders"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:4f5dc210-1013-4217-8a1c-c89aad7a816a"/>
-        <timestamp value="2021-06-18T15:19:16.956+02:00"/>
-        <total value="11"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="225308005"/>
-            <display value="observatie (regime/therapie)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="113011001"/>
-            <display value="palpatie (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="37931006"/>
-            <display value="auscultatie (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="122869004"/>
-            <display value="meten (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="258090004"/>
-            <display value="Calculated (qualifier value)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="386053000"/>
-            <display value="beoordeling (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="241491007"/>
-            <display value="echografie van foetus (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="167226008"/>
-            <display value="bepalen in urine met dipstick (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="151791000146104"/>
-            <display value="vaststellen van bevinding door zorgverlener (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="418799008"/>
-            <display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-05-26T17:29:02+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.282"/>
+   </identifier>
+   <version value="2020-05-26T17:29:02"/>
+   <name value="MeetMethode_GZ"/>
+   <title value="MeetMethode_GZ"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="MeetMethode_GZ"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="Anders"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem = waarnemen"/>
+            </extension>
+            <code value="129268004"/>
+            <display value="observeren (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <code value="129434008"/>
+            <display value="palperen (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <code value="129436005"/>
+            <display value="auscultatie (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem = meten. Deze waarde ook gebruiken voor berekenen van waarde."/>
+            </extension>
+            <code value="129266000"/>
+            <display value="bepalen (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem = beoordeling"/>
+            </extension>
+            <code value="129265001"/>
+            <display value="evaluatie (kwalificatiewaarde)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:f642e561-5609-49a4-82e5-61560979a4a4"/>
+      <timestamp value="2021-11-16T14:30:36.632+01:00"/>
+      <total value="6"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="129268004"/>
+         <display value="observeren (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="129434008"/>
+         <display value="palperen (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="129436005"/>
+         <display value="auscultatie (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="129266000"/>
+         <display value="bepalen (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="129265001"/>
+         <display value="evaluatie (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Anders"/>
+      </contains>
+   </expansion>
 </ValueSet>

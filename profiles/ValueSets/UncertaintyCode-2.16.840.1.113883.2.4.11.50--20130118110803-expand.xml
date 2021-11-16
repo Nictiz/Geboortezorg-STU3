@@ -1,66 +1,65 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.50--20130118110803"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2013-01-18T11:08:03+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.50--20130118110803"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.50"/>
-    </identifier>
-    <version value="2013-01-18T11:08:03"/>
-    <name value="UncertaintyCode"/>
-    <title value="UncertaintyCode"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="UncertaintyCode"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
-            <concept>
-                <code value="U"/>
-                <display value="Stated with uncertainty"/>
-            </concept>
-            <concept>
-                <code value="N"/>
-                <display value="Stated with no assertion of uncertainty"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:b43a3221-0c0a-47a6-b895-aa5632e205e9"/>
-        <timestamp value="2021-06-18T15:19:45.896+02:00"/>
-        <total value="3"/>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
-            <code value="U"/>
-            <display value="Stated with uncertainty"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
-            <code value="N"/>
-            <display value="Stated with no assertion of uncertainty"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-01-18T11:08:03+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.50--20130118110803"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.50"/>
+   </identifier>
+   <version value="2013-01-18T11:08:03"/>
+   <name value="UncertaintyCode"/>
+   <title value="UncertaintyCode"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="UncertaintyCode"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+         <concept>
+            <code value="U"/>
+            <display value="Stated with uncertainty"/>
+         </concept>
+         <concept>
+            <code value="N"/>
+            <display value="Stated with no assertion of uncertainty"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:7e4b3923-1ff8-4d1b-8b39-231ff89d1b33"/>
+      <timestamp value="2021-11-16T14:31:07.068+01:00"/>
+      <total value="3"/>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+         <code value="U"/>
+         <display value="Stated with uncertainty"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/ActUncertainty"/>
+         <code value="N"/>
+         <display value="Stated with no assertion of uncertainty"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

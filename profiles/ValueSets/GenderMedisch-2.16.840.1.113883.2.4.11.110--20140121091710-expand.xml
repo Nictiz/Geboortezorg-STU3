@@ -1,84 +1,83 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.110--20140121091710"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2014-01-21T09:17:10+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.110--20140121091710"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.110"/>
-    </identifier>
-    <version value="2014-01-21T09:17:10"/>
-    <name value="GenderMedisch"/>
-    <title value="GenderMedisch"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="GenderMedisch"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="UNK"/>
-                <display value="Onbekend"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
-            <concept>
-                <code value="1"/>
-                <display value="Mannelijk"/>
-            </concept>
-            <concept>
-                <code value="2"/>
-                <display value="Vrouwelijk"/>
-            </concept>
-            <concept>
-                <code value="3"/>
-                <display value="Niet conclusief"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:40656fd3-466f-42f4-8844-13562741f4cb"/>
-        <timestamp value="2021-06-18T15:19:20.694+02:00"/>
-        <total value="5"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-21T09:17:10+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.110--20140121091710"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.110"/>
+   </identifier>
+   <version value="2014-01-21T09:17:10"/>
+   <name value="GenderMedisch"/>
+   <title value="GenderMedisch"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="GenderMedisch"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         <concept>
             <code value="1"/>
             <display value="Mannelijk"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         </concept>
+         <concept>
             <code value="2"/>
             <display value="Vrouwelijk"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         </concept>
+         <concept>
             <code value="3"/>
             <display value="Niet conclusief"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="UNK"/>
             <display value="Onbekend"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:4b1eea91-f7b7-45d4-9eea-91f7b7c5d415"/>
+      <timestamp value="2021-11-16T14:30:38.853+01:00"/>
+      <total value="5"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         <code value="1"/>
+         <display value="Mannelijk"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         <code value="2"/>
+         <display value="Vrouwelijk"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         <code value="3"/>
+         <display value="Niet conclusief"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="Onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>
