@@ -1,189 +1,215 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-MaternalRecord"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-  <version value="1.0.0"/>
-  <name value="bc-MaternalRecord"/>
-  <title value="bc-MaternalRecord"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-MaternalRecord" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+  <version value="1.0.0" />
+  <name value="bc-MaternalRecord" />
+  <title value="bc-MaternalRecord" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="An EpisodeOfCare profile describing the maternal record (or pregnancy file) as defined by BabyConnect. The maternal record groups all data related to one pregnancy."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="An EpisodeOfCare profile describing the maternal record (or pregnancy file) as defined by BabyConnect. The maternal record groups all data related to one pregnancy." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
-      <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)"/>
-      <name value="HCIM ConcernForTransfer-v1.2(2015EN)"/>
+    <identity value="hcim-concernfortransfer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)" />
+    <name value="HCIM ConcernForTransfer-v1.2(2015EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="EpisodeOfCare"/>
-  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="EpisodeOfCare" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare" />
+  <derivation value="constraint" />
   <differential>
-      <element id="EpisodeOfCare">
-         <path value="EpisodeOfCare"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-4"/>
-            <comment value="Zorgverlening"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-3399"/>
-            <comment value="ZorgEpisode"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-1338"/>
-            <comment value="Zorgepisode"/>
-         </mapping>
-      </element>
-      <element id="EpisodeOfCare.type.coding">
-         <path value="EpisodeOfCare.type.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="EpisodeOfCare.type.coding:maternalRecord">
-         <path value="EpisodeOfCare.type.coding"/>
-         <sliceName value="maternalRecord"/>
-         <max value="1"/>
-         <patternCoding>
-            <system value="http://snomed.info/sct"/>
-            <code value="364320009"/>
-            <display value="Pregnancy observable (observable entity)"/>
-         </patternCoding>
-      </element>
-      <element id="EpisodeOfCare.type.coding:maternalRecord.system">
-         <path value="EpisodeOfCare.type.coding.system"/>
-         <fixedUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="EpisodeOfCare.type.coding:maternalRecord.code">
-         <path value="EpisodeOfCare.type.coding.code"/>
-         <fixedCode value="364320009"/>
-      </element>
-      <element id="EpisodeOfCare.type.coding:maternalRecord.display">
-         <path value="EpisodeOfCare.type.coding.display"/>
-         <defaultValueString value="Pregnancy observable (observable entity)"/>
-      </element>
-      <element id="EpisodeOfCare.type.coding:perinatalPeriod">
-         <path value="EpisodeOfCare.type.coding"/>
-         <sliceName value="perinatalPeriod"/>
-         <max value="1"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="PeriodeZorgverlening"/>
-            <valueSetReference>
-			            <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828"/>
-		          </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20355"/>
-            <comment value="Eindverantwoordelijk in welke perinatale periode?"/>
-         </mapping>
-      </element>
-      <element id="EpisodeOfCare.diagnosis">
-         <path value="EpisodeOfCare.diagnosis"/>
-         <max value="1"/>
-      </element>
-      <element id="EpisodeOfCare.diagnosis.condition">
-         <path value="EpisodeOfCare.diagnosis.condition"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-3"/>
-            <comment value="Zwangerschap"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-2132"/>
-            <comment value="FocusZorgEpisode"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-2686"/>
-            <comment value="Probleem"/>
-         </mapping>
-      </element>
-      <element id="EpisodeOfCare.patient">
-         <path value="EpisodeOfCare.patient"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-2"/>
-            <comment value="Vrouw"/>
-         </mapping>
-      </element>
-      <element id="EpisodeOfCare.period.start">
-         <path value="EpisodeOfCare.period.start"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20290"/>
-            <comment value="Datum start zorgverantwoordelijkheid"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-3400"/>
-            <comment value="BeginDatum"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-2130"/>
-            <comment value="BeginDatum"/>
-         </mapping>
-      </element>
-      <element id="EpisodeOfCare.period.end">
-         <path value="EpisodeOfCare.period.end"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20340"/>
-            <comment value="Datum einde zorgverantwoordelijkheid"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-3401"/>
-            <comment value="EindDatum"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-2131"/>
-            <comment value="EindDatum"/>
-         </mapping>
-      </element>
+    <element id="EpisodeOfCare">
+      <path value="EpisodeOfCare" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3399" />
+        <comment value="ZorgEpisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1338" />
+        <comment value="Zorgepisode" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.extension">
+      <path value="EpisodeOfCare.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="EpisodeOfCare.extension:comment">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="comment" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3405" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.type.coding">
+      <path value="EpisodeOfCare.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="EpisodeOfCare.type.coding:maternalRecord">
+      <path value="EpisodeOfCare.type.coding" />
+      <sliceName value="maternalRecord" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364320009" />
+        <display value="Pregnancy observable (observable entity)" />
+      </patternCoding>
+    </element>
+    <element id="EpisodeOfCare.type.coding:maternalRecord.system">
+      <path value="EpisodeOfCare.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="EpisodeOfCare.type.coding:maternalRecord.code">
+      <path value="EpisodeOfCare.type.coding.code" />
+      <fixedCode value="364320009" />
+    </element>
+    <element id="EpisodeOfCare.type.coding:maternalRecord.display">
+      <path value="EpisodeOfCare.type.coding.display" />
+      <defaultValueString value="Pregnancy observable (observable entity)" />
+    </element>
+    <element id="EpisodeOfCare.type.coding:perinatalPeriod">
+      <path value="EpisodeOfCare.type.coding" />
+      <sliceName value="perinatalPeriod" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="PeriodeZorgverlening" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20355" />
+        <comment value="Eindverantwoordelijk in welke perinatale periode?" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.diagnosis">
+      <path value="EpisodeOfCare.diagnosis" />
+      <max value="1" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.condition">
+      <path value="EpisodeOfCare.diagnosis.condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-3" />
+        <comment value="Zwangerschap" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2132" />
+        <comment value="FocusZorgEpisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2686" />
+        <comment value="Probleem" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.patient">
+      <path value="EpisodeOfCare.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.period.start">
+      <path value="EpisodeOfCare.period.start" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20290" />
+        <comment value="Datum start zorgverantwoordelijkheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3400" />
+        <comment value="BeginDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2130" />
+        <comment value="BeginDatum" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.period.end">
+      <path value="EpisodeOfCare.period.end" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20340" />
+        <comment value="Datum einde zorgverantwoordelijkheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3401" />
+        <comment value="EindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2131" />
+        <comment value="EindDatum" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>

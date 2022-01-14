@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-encounter-reasonreference" />
+  <name value="bc-encounter-reasonreference" />
+  <status value="draft" />
+  <description value="Extension on Encounter backported from R4 to add reason reference" />
+  <fhirVersion value="3.0.2" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Encounter" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://nictiz.nl/fhir/StructureDefinition/bc-encounter-reasonreference" />
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.value[x]" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
