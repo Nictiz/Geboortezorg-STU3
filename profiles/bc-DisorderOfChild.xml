@@ -262,6 +262,7 @@
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
+      <definition value="The subject of the condition is either the child patient or the (unborn) fetus patient in case a fetus record exists for the fetus. In case there is no fetal record (and hence no fetus patient) the fetus extension SHALL be used instead." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
@@ -281,6 +282,37 @@
         <map value="peri32-dataelement-1971" />
         <comment value="Probleem (Congenitale afwijkingen" />
       </mapping>
+    </element>
+    <element id="Condition.subject.extension">
+      <path value="Condition.subject.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Condition.subject.extension:fetus">
+      <path value="Condition.subject.extension" />
+      <sliceName value="fetus" />
+      <short value="Fetus bodysite reference" />
+      <definition value="In case the subject of the condition is the fetus and there is no fetal record for the fetus (and hence no patient resource), the subject reference will include a reference to the fetus bodysite." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
+      </type>
+    </element>
+    <element id="Condition.subject.extension:fetus.valueReference:valueReference">
+      <path value="Condition.subject.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
     </element>
     <element id="Condition.context">
       <path value="Condition.context" />
