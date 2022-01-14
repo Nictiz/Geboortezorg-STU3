@@ -5,18 +5,18 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2017-12-31T00:00:00+01:00"/>
+         <start value="2020-09-01T00:00:00+01:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20171231000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.2--20200901000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.15.2.2"/>
    </identifier>
-   <version value="2017-12-31T00:00:00"/>
-   <name value="ProbleemTypeCodelijst"/>
-   <title value="ProbleemTypeCodelijst"/>
+   <version value="2020-09-01T00:00:00"/>
+   <name value="RolDeelnemerCodelijst"/>
+   <title value="RolDeelnemerCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -28,18 +28,26 @@
       </telecom>
       <telecom>
          <system value="url"/>
-         <value value="https://zibs.nl"/>
+         <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="ProbleemTypeCodelijst"/>
+   <description value="RolDeelnemerCodelijst"/>
    <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://snomed.info/sct"/>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
          <concept>
-            <code value="282291009"/>
-            <display value="Diagnosis"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Other"/>
+            </designation>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -47,12 +55,34 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Diagnose"/>
+               <value value="Anders"/>
+            </designation>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Voorzitter van de patiëntbespreking"/>
+            </extension>
+            <code value="VOORZ"/>
+            <display value="voorzitter"/>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="voorzitter"/>
             </designation>
          </concept>
          <concept>
-            <code value="418799008"/>
-            <display value="Symptom"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Aanmelder van de patiënt bij de bespreking"/>
+            </extension>
+            <code value="AANM"/>
+            <display value="aanmelder"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -60,12 +90,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Symptoom"/>
+               <value value="aanmelder"/>
             </designation>
          </concept>
          <concept>
-            <code value="409586006"/>
-            <display value="Complaint"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Inhoudelijk expert bij de bespreking"/>
+            </extension>
+            <code value="EXPR"/>
+            <display value="expert"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -73,45 +106,19 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Klacht"/>
-            </designation>
-         </concept>
-         <concept>
-            <code value="248536006"/>
-            <display value="Functional Limitation"/>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Functionele Beperking"/>
-            </designation>
-         </concept>
-         <concept>
-            <code value="116223007"/>
-            <display value="Complication"/>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Complicatie"/>
+               <value value="expert"/>
             </designation>
          </concept>
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:b71c05fd-672a-4cb4-9c05-fd672a3cb4ef"/>
-      <timestamp value="2022-01-14T13:15:45.69+01:00"/>
-      <total value="5"/>
+      <identifier value="urn:uuid:5463363a-3128-4f56-a336-3a31283f56ec"/>
+      <timestamp value="2022-01-14T13:15:55.125+01:00"/>
+      <total value="4"/>
       <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="282291009"/>
-         <display value="Diagnosis"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1"/>
+         <code value="VOORZ"/>
+         <display value="voorzitter"/>
          <designation>
             <language value="nl-NL"/>
             <use>
@@ -119,13 +126,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Diagnose"/>
+            <value value="voorzitter"/>
          </designation>
       </contains>
       <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="418799008"/>
-         <display value="Symptom"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1"/>
+         <code value="AANM"/>
+         <display value="aanmelder"/>
          <designation>
             <language value="nl-NL"/>
             <use>
@@ -133,13 +140,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Symptoom"/>
+            <value value="aanmelder"/>
          </designation>
       </contains>
       <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="409586006"/>
-         <display value="Complaint"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1"/>
+         <code value="EXPR"/>
+         <display value="expert"/>
          <designation>
             <language value="nl-NL"/>
             <use>
@@ -147,27 +154,22 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Klacht"/>
+            <value value="expert"/>
          </designation>
       </contains>
       <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="248536006"/>
-         <display value="Functional Limitation"/>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Other"/>
          <designation>
-            <language value="nl-NL"/>
+            <language value="en-US"/>
             <use>
                <system value="http://snomed.info/sct"/>
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Functionele Beperking"/>
+            <value value="Other"/>
          </designation>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="116223007"/>
-         <display value="Complication"/>
          <designation>
             <language value="nl-NL"/>
             <use>
@@ -175,7 +177,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Complicatie"/>
+            <value value="Anders"/>
          </designation>
       </contains>
    </expansion>

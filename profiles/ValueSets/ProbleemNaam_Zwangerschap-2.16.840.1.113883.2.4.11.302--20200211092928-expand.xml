@@ -42,6 +42,10 @@
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
+            <code value="77386006"/>
+            <display value="zwangerschap (bevinding)"/>
+         </concept>
+         <concept>
             <code value="129103003"/>
             <display value="endometriose (aandoening)"/>
          </concept>
@@ -56,6 +60,10 @@
          <concept>
             <code value="301775005"/>
             <display value="infectie van uterus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="840539006"/>
+            <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
          </concept>
          <concept>
             <code value="307534009"/>
@@ -139,7 +147,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="EUG"/>
+               <valueString value="EUG&#xA;                    "/>
             </extension>
             <code value="34801009"/>
             <display value="ectopische zwangerschap (aandoening)"/>
@@ -198,7 +206,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Psychische decompensatie ofwel Surmenage.Disbalans tussen draaglast en draagkracht bij de zwangerschap."/>
+               <valueString value="Psychische decompensatie ofwel Surmenage.Disbalans tussen draaglast en draagkracht bij de zwangerschap.&#xA;                    "/>
             </extension>
             <code value="87228002"/>
             <display value="decompensatie (bevinding)"/>
@@ -218,9 +226,14 @@
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:7b50e049-ac81-472f-90e0-49ac81472f5a"/>
-      <timestamp value="2021-11-16T14:30:46.493+01:00"/>
-      <total value="53"/>
+      <identifier value="urn:uuid:30374a6d-496f-4e07-b74a-6d496fae07f0"/>
+      <timestamp value="2022-01-14T13:15:48.882+01:00"/>
+      <total value="55"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="77386006"/>
+         <display value="zwangerschap (bevinding)"/>
+      </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
          <abstract value="true"/>
@@ -252,6 +265,11 @@
          <system value="http://snomed.info/sct"/>
          <code value="301775005"/>
          <display value="infectie van uterus (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="840539006"/>
+         <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>

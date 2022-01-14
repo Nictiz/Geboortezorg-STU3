@@ -5,33 +5,69 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2021-03-29T10:07:41+01:00"/>
+         <start value="2020-09-01T00:00:00+01:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20210329100741"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1--20200901000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1"/>
    </identifier>
-   <version value="2021-03-29T10:07:41"/>
-   <name value="ProbleemTypeCodelijst"/>
-   <title value="ProbleemTypeCodelijst"/>
-   <status value="draft"/>
+   <version value="2020-09-01T00:00:00"/>
+   <name value="IntentieBehandelingCodelijst"/>
+   <title value="IntentieBehandelingCodelijst"/>
+   <status value="active"/>
    <experimental value="false"/>
-   <publisher value="KNOV"/>
-   <description value="ProbleemTypeCodelijst"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="IntentieBehandelingCodelijst"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Other"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Other"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Anders"/>
+            </designation>
+         </concept>
+      </include>
+      <include>
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Diagnose"/>
+               <valueString value="Behandeling conform richtlijn"/>
             </extension>
-            <code value="282291009"/>
-            <display value="Interpretatie van diagnose"/>
+            <code value="370858005"/>
+            <display value="volgen van klinisch zorgpad"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -39,7 +75,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Diagnosis interpretation"/>
+               <value value="Following clinical pathway protocol"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -48,15 +84,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Interpretatie van diagnose"/>
+               <value value="volgen van klinisch zorgpad"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Symptoom"/>
+               <valueString value="Curatieve behandeling"/>
             </extension>
-            <code value="418799008"/>
-            <display value="Symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis"/>
+            <code value="373808002"/>
+            <display value="curatieve intentie"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -64,7 +100,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Finding reported by subject or history provider"/>
+               <value value="Curative - procedure intent"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -73,15 +109,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis"/>
+               <value value="curatieve intentie"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Bevinding"/>
+               <valueString value="Palliatieve zorg"/>
             </extension>
-            <code value="404684003"/>
-            <display value="Klinische bevinding"/>
+            <code value="103735009"/>
+            <display value="palliatieve zorg"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -89,7 +125,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Clinical finding"/>
+               <value value="Palliative care"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -98,15 +134,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Klinische bevinding"/>
+               <value value="palliatieve zorg"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Klacht"/>
+               <valueString value="Toetsing van inclusiecriteria voor clinical trial"/>
             </extension>
-            <code value="409586006"/>
-            <display value="Klacht"/>
+            <code value="450332002"/>
+            <display value="beoordelen van geschiktheid voor deelname aan klinisch wetenschappelijk onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -114,7 +150,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Complaint"/>
+               <value value="Assessment of eligibility for clinical trial"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -123,69 +159,19 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Klacht"/>
-            </designation>
-         </concept>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Functionele Beperking"/>
-            </extension>
-            <code value="248536006"/>
-            <display value="Bevinding van functionele prestatie en activiteit"/>
-            <designation>
-               <language value="en-US"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Finding of functional performance and activity"/>
-            </designation>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Bevinding van functionele prestatie en activiteit"/>
-            </designation>
-         </concept>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Complicatie"/>
-            </extension>
-            <code value="116223007"/>
-            <display value="Complicatie"/>
-            <designation>
-               <language value="en-US"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Complication"/>
-            </designation>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Complicatie"/>
+               <value value="beoordelen van geschiktheid voor deelname aan klinisch wetenschappelijk onderzoek"/>
             </designation>
          </concept>
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:6021d62f-8f9b-452f-a1d6-2f8f9bb52f64"/>
-      <timestamp value="2022-01-14T13:15:43.442+01:00"/>
-      <total value="6"/>
+      <identifier value="urn:uuid:3ee455a6-bb3d-413c-a455-a6bb3d213c38"/>
+      <timestamp value="2022-01-14T13:15:54.449+01:00"/>
+      <total value="5"/>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="282291009"/>
-         <display value="Interpretatie van diagnose"/>
+         <code value="370858005"/>
+         <display value="volgen van klinisch zorgpad"/>
          <designation>
             <language value="en-US"/>
             <use>
@@ -193,7 +179,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Diagnosis interpretation"/>
+            <value value="Following clinical pathway protocol"/>
          </designation>
          <designation>
             <language value="nl-NL"/>
@@ -202,13 +188,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Interpretatie van diagnose"/>
+            <value value="volgen van klinisch zorgpad"/>
          </designation>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="418799008"/>
-         <display value="Symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis"/>
+         <code value="373808002"/>
+         <display value="curatieve intentie"/>
          <designation>
             <language value="en-US"/>
             <use>
@@ -216,7 +202,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Finding reported by subject or history provider"/>
+            <value value="Curative - procedure intent"/>
          </designation>
          <designation>
             <language value="nl-NL"/>
@@ -225,13 +211,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis"/>
+            <value value="curatieve intentie"/>
          </designation>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="404684003"/>
-         <display value="Klinische bevinding"/>
+         <code value="103735009"/>
+         <display value="palliatieve zorg"/>
          <designation>
             <language value="en-US"/>
             <use>
@@ -239,7 +225,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Clinical finding"/>
+            <value value="Palliative care"/>
          </designation>
          <designation>
             <language value="nl-NL"/>
@@ -248,13 +234,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Klinische bevinding"/>
+            <value value="palliatieve zorg"/>
          </designation>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="409586006"/>
-         <display value="Klacht"/>
+         <code value="450332002"/>
+         <display value="beoordelen van geschiktheid voor deelname aan klinisch wetenschappelijk onderzoek"/>
          <designation>
             <language value="en-US"/>
             <use>
@@ -262,7 +248,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Complaint"/>
+            <value value="Assessment of eligibility for clinical trial"/>
          </designation>
          <designation>
             <language value="nl-NL"/>
@@ -271,13 +257,13 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Klacht"/>
+            <value value="beoordelen van geschiktheid voor deelname aan klinisch wetenschappelijk onderzoek"/>
          </designation>
       </contains>
       <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="248536006"/>
-         <display value="Bevinding van functionele prestatie en activiteit"/>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Other"/>
          <designation>
             <language value="en-US"/>
             <use>
@@ -285,7 +271,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Finding of functional performance and activity"/>
+            <value value="Other"/>
          </designation>
          <designation>
             <language value="nl-NL"/>
@@ -294,30 +280,7 @@
                <code value="900000000000013009"/>
                <display value="Synonym"/>
             </use>
-            <value value="Bevinding van functionele prestatie en activiteit"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="http://snomed.info/sct"/>
-         <code value="116223007"/>
-         <display value="Complicatie"/>
-         <designation>
-            <language value="en-US"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Complication"/>
-         </designation>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Complicatie"/>
+            <value value="Anders"/>
          </designation>
       </contains>
    </expansion>

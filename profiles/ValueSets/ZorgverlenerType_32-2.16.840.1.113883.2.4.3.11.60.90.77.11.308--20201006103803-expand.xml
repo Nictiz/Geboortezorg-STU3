@@ -43,7 +43,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG)."/>
+               <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG).&#xA;                    "/>
             </extension>
             <code value="86.000"/>
             <display value="VIG-er"/>
@@ -66,6 +66,10 @@
          <concept>
             <code value="01.046"/>
             <display value="gynaecoloog"/>
+         </concept>
+         <concept>
+            <code value="30.000"/>
+            <display value="verpleegkundige"/>
          </concept>
       </include>
       <include>
@@ -123,8 +127,12 @@
             <display value="echoscopist (beroep)"/>
          </concept>
          <concept>
+            <code value="6816002"/>
+            <display value="gespecialiseerd verpleegkundige (beroep)"/>
+         </concept>
+         <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Een kraamverzorgende die geen MBO opleiding heeft (geen verzorgende individuele gezondheidszorg, VIG), maar een andere opleiding."/>
+               <valueString value="Een kraamverzorgende die geen MBO opleiding heeft (geen verzorgende individuele gezondheidszorg, VIG), maar een andere opleiding.&#xA;                    "/>
             </extension>
             <code value="151531000146108"/>
             <display value="kraamverzorgende (beroep)"/>
@@ -132,9 +140,9 @@
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:1e017ca9-74fc-466d-817c-a974fce66ddd"/>
-      <timestamp value="2021-11-16T14:30:55.311+01:00"/>
-      <total value="22"/>
+      <identifier value="urn:uuid:ec473bcd-063d-4785-873b-cd063d0785f1"/>
+      <timestamp value="2022-01-14T13:15:58.813+01:00"/>
+      <total value="24"/>
       <contains>
          <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
          <code value="01.000"/>
@@ -224,6 +232,16 @@
          <system value="http://snomed.info/sct"/>
          <code value="789543004"/>
          <display value="echoscopist (beroep)"/>
+      </contains>
+      <contains>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <code value="30.000"/>
+         <display value="verpleegkundige"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="6816002"/>
+         <display value="gespecialiseerd verpleegkundige (beroep)"/>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>

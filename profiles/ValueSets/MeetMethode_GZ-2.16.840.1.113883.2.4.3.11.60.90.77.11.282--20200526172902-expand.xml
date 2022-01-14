@@ -35,7 +35,7 @@
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Synoniem = waarnemen"/>
+               <valueString value="&#xA;                        Synoniem = waarnemen&#xA;                    "/>
             </extension>
             <code value="129268004"/>
             <display value="observeren (kwalificatiewaarde)"/>
@@ -50,24 +50,28 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Synoniem = meten. Deze waarde ook gebruiken voor berekenen van waarde."/>
+               <valueString value="&#xA;                        Synoniem = meten. Deze waarde ook gebruiken voor berekenen van waarde.&#xA;                    "/>
             </extension>
             <code value="129266000"/>
             <display value="bepalen (kwalificatiewaarde)"/>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Synoniem = beoordeling"/>
+               <valueString value="&#xA;                        Synoniem = beoordeling&#xA;                    "/>
             </extension>
             <code value="129265001"/>
             <display value="evaluatie (kwalificatiewaarde)"/>
          </concept>
+         <concept>
+            <code value="268445003"/>
+            <display value="obstetrische echografie (verrichting)"/>
+         </concept>
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:f642e561-5609-49a4-82e5-61560979a4a4"/>
-      <timestamp value="2021-11-16T14:30:36.632+01:00"/>
-      <total value="6"/>
+      <identifier value="urn:uuid:f0d731ba-4616-4ef8-9731-ba46164ef8ee"/>
+      <timestamp value="2022-01-14T13:15:36.595+01:00"/>
+      <total value="7"/>
       <contains>
          <system value="http://snomed.info/sct"/>
          <code value="129268004"/>
@@ -92,6 +96,11 @@
          <system value="http://snomed.info/sct"/>
          <code value="129265001"/>
          <display value="evaluatie (kwalificatiewaarde)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="268445003"/>
+         <display value="obstetrische echografie (verrichting)"/>
       </contains>
       <contains>
          <system value="http://hl7.org/fhir/v3/NullFlavor"/>

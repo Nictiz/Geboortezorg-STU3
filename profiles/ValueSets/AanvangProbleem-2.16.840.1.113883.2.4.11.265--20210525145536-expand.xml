@@ -5,50 +5,56 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2017-02-03T16:13:04+01:00"/>
+         <start value="2021-05-25T14:55:36+01:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.265--20210525145536"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.11.234"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.265"/>
    </identifier>
-   <version value="2017-02-03T16:13:04"/>
-   <name value="Regelmaat_hartslag"/>
-   <title value="Regelmaat hartslag"/>
+   <version value="2021-05-25T14:55:36"/>
+   <name value="AanvangProbleem"/>
+   <title value="Aanvang Probleem"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="KNOV"/>
-   <description value="Regelmaat hartslag"/>
+   <description value="Aanvang Probleem"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
-            <code value="289443009"/>
-            <display value="regelmatig hartritme van foetus (bevinding)"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Eigen ziekenhuis"/>
+            </extension>
+            <code value="58841000146101"/>
+            <display value="zorginstelling waar patiënt geregistreerd is (omgeving)"/>
          </concept>
          <concept>
-            <code value="289444003"/>
-            <display value="onregelmatig hartritme van foetus (bevinding)"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Ander ziekenhuis"/>
+            </extension>
+            <code value="58831000146109"/>
+            <display value="zorginstelling waar patiënt niet geregistreerd is (omgeving)"/>
          </concept>
       </include>
    </compose>
    <expansion>
-      <identifier value="urn:uuid:d567a0ec-5287-49d0-a7a0-ec528779d00f"/>
-      <timestamp value="2022-01-14T13:15:52.442+01:00"/>
+      <identifier value="urn:uuid:e0bb0aa5-69d7-42e9-bb0a-a569d772e919"/>
+      <timestamp value="2022-01-14T13:15:42.783+01:00"/>
       <total value="2"/>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="289443009"/>
-         <display value="regelmatig hartritme van foetus (bevinding)"/>
+         <code value="58841000146101"/>
+         <display value="zorginstelling waar patiënt geregistreerd is (omgeving)"/>
       </contains>
       <contains>
          <system value="http://snomed.info/sct"/>
-         <code value="289444003"/>
-         <display value="onregelmatig hartritme van foetus (bevinding)"/>
+         <code value="58831000146109"/>
+         <display value="zorginstelling waar patiënt niet geregistreerd is (omgeving)"/>
       </contains>
    </expansion>
 </ValueSet>
