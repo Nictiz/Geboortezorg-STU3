@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An EpisodeOfCare profile describing the maternal record (or pregnancy file) as defined by BabyConnect. The maternal record groups all data related to one pregnancy." />
+  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)&#xD;&#xA;2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -77,7 +77,6 @@
       <path value="EpisodeOfCare.extension" />
       <sliceName value="comment" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
@@ -87,6 +86,26 @@
         <map value="peri32-dataelement-3405" />
         <comment value="Toelichting" />
       </mapping>
+    </element>
+    <element id="EpisodeOfCare.extension:partOf">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="partOf" />
+      <short value="Overarching maternal record" />
+      <definition value="The overarching maternal record the perinatal period is part of" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-episodeofcare-partof" />
+      </type>
+    </element>
+    <element id="EpisodeOfCare.extension:partOf.valueReference:valueReference">
+      <path value="EpisodeOfCare.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
     </element>
     <element id="EpisodeOfCare.type.coding">
       <path value="EpisodeOfCare.type.coding" />
@@ -101,6 +120,8 @@
     <element id="EpisodeOfCare.type.coding:maternalRecord">
       <path value="EpisodeOfCare.type.coding" />
       <sliceName value="maternalRecord" />
+      <short value="Maternal record code" />
+      <definition value="Use this code to indicate the overarching maternal record of an organization. For a specific period of perinatal care use the perinatal period code instead." />
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
@@ -123,6 +144,8 @@
     <element id="EpisodeOfCare.type.coding:perinatalPeriod">
       <path value="EpisodeOfCare.type.coding" />
       <sliceName value="perinatalPeriod" />
+      <short value="Perinatal period code" />
+      <definition value="Use this code to specify a perinatal period in which care responsibility was assumed. In case a perinatal period is given, the record will be part of an overarching maternal care record as specified in the partOf element." />
       <max value="1" />
       <binding>
         <strength value="extensible" />
