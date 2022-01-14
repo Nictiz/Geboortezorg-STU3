@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting-Plan" />
+  <name value="bc-MultidisciplinaryTeamMeeting-Plan" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CarePlan" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CarePlan.extension">
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CarePlan.extension:intentTreatment">
+      <path value="CarePlan.extension" />
+      <sliceName value="intentTreatment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-multidisciplinaryteammeeting-intenttreatment" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="IntentieBehandelingCodelijst" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1--20200901000000" />
+      </binding>
+    </element>
+    <element id="CarePlan.status">
+      <path value="CarePlan.status" />
+      <comment value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.&#xD;&#xA;&#xD;&#xA;For zib MultidisciplinaryTeamMeeting, this will normally be _active_, but the context may specify a more suitable status." />
+    </element>
+    <element id="CarePlan.intent">
+      <path value="CarePlan.intent" />
+      <definition value="Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.&#xD;&#xA;&#xD;&#xA;For zib MultidisciplinaryTeamMeeting, this will normally be _plan_, but the context may specify a more suitable intent." />
+    </element>
+    <element id="CarePlan.category">
+      <path value="CarePlan.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CarePlan.category:multidisciplinaryTeamMeetingCode">
+      <path value="CarePlan.category" />
+      <sliceName value="multidisciplinaryTeamMeetingCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="CarePlan.subject">
+      <path value="CarePlan.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-woman" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+    </element>
+    <element id="CarePlan.context">
+      <path value="CarePlan.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MultidisciplinaryTeamMeeting" />
+      </type>
+    </element>
+    <element id="CarePlan.activity.reference">
+      <path value="CarePlan.activity.reference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
