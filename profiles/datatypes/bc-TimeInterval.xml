@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-TimeInterval" />
+  <name value="bc-TimeInterval" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Period" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Period" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Period.extension">
+      <path value="Period.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Period.extension:duration">
+      <path value="Period.extension" />
+      <sliceName value="duration" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-timeinterval-duration" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
