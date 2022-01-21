@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FetalMonitoring" />
   <url value="https://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
   <name value="bc-FetalMonitoring" />
   <status value="draft" />
+  <description value="An Observation profile derived from the fetus Observation profile describing fetal monitoring as defined by BabyConnect. Fetal monitoring is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="gebz-peri-v3.2" />
@@ -91,7 +93,7 @@
       <slicing>
         <discriminator>
           <type value="type" />
-          <path value="$this" />
+          <path value="target" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -241,7 +243,9 @@
       <binding>
         <strength value="extensible" />
         <description value="FoetaleHartslagVariabiliteit" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.296--20200129155035" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.296--20200129155035" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Observation.component:conclusionFIGO">
@@ -263,7 +267,9 @@
       <binding>
         <strength value="extensible" />
         <description value="FIGO_ScoreCodelijst" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.297--20200129155847" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.297--20200129155847" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Observation.component:conclusionFisher">
