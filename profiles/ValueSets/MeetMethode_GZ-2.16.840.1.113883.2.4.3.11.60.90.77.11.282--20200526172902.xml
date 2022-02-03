@@ -1,0 +1,72 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-05-26T17:29:02+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.282"/>
+   </identifier>
+   <version value="2020-05-26T17:29:02"/>
+   <name value="MeetMethode_GZ"/>
+   <title value="MeetMethode_GZ"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="MeetMethode_GZ"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Anders"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="&#xA;                        Synoniem = waarnemen&#xA;                    "/>
+            </extension>
+            <code value="129268004"/>
+            <display value="observeren (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <code value="129434008"/>
+            <display value="palperen (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <code value="129436005"/>
+            <display value="auscultatie (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="&#xA;                        Synoniem = meten. Deze waarde ook gebruiken voor berekenen van waarde.&#xA;                    "/>
+            </extension>
+            <code value="129266000"/>
+            <display value="bepalen (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="&#xA;                        Synoniem = beoordeling&#xA;                    "/>
+            </extension>
+            <code value="129265001"/>
+            <display value="evaluatie (kwalificatiewaarde)"/>
+         </concept>
+         <concept>
+            <code value="268445003"/>
+            <display value="obstetrische echografie (verrichting)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

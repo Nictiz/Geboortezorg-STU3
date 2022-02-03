@@ -1,0 +1,154 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.275--20200513143542"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-05-13T14:35:42+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.275--20200513143542"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.275"/>
+   </identifier>
+   <version value="2020-05-13T14:35:42"/>
+   <name value="Type_BiologischeRelatie"/>
+   <title value="Type Biologische Relatie"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Type Biologische Relatie"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/RoleCode"/>
+         <concept>
+            <code value="MGRFTH"/>
+            <display value="Maternal Grandfather"/>
+         </concept>
+         <concept>
+            <code value="MGRMTH"/>
+            <display value="Maternal Grandmother"/>
+         </concept>
+         <concept>
+            <code value="PGRFTH"/>
+            <display value="Paternal Grandfather"/>
+         </concept>
+         <concept>
+            <code value="PGRMTH"/>
+            <display value="Paternal Grandmother"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="125678001"/>
+            <display value="bloedverwant in eerste graad (persoon)"/>
+         </concept>
+         <concept>
+            <code value="65656005"/>
+            <display value="biologische moeder (persoon)"/>
+         </concept>
+         <concept>
+            <code value="9947008"/>
+            <display value="biologische vader (persoon)"/>
+         </concept>
+         <concept>
+            <code value="60614009"/>
+            <display value="biologische broer (persoon)"/>
+         </concept>
+         <concept>
+            <code value="73678001"/>
+            <display value="biologische zus (persoon)"/>
+         </concept>
+         <concept>
+            <code value="699110007"/>
+            <display value="bloedverwant in tweede graad (persoon)"/>
+         </concept>
+         <concept>
+            <code value="719762005"/>
+            <display value="halfbroer met dezelfde vader (persoon)"/>
+         </concept>
+         <concept>
+            <code value="719766008"/>
+            <display value="halfbroer van moederszijde (persoon)"/>
+         </concept>
+         <concept>
+            <code value="719764006"/>
+            <display value="halfzus met dezelfde vader (persoon)"/>
+         </concept>
+         <concept>
+            <code value="719765007"/>
+            <display value="Maternal half sister (person)"/>
+         </concept>
+         <concept>
+            <code value="135681000146106"/>
+            <display value="bloedverwant in derde graad (persoon)"/>
+         </concept>
+         <concept>
+            <code value="442031000124102"/>
+            <display value="maternale oom (persoon)"/>
+         </concept>
+         <concept>
+            <code value="736454006"/>
+            <display value="maternale tante (persoon)"/>
+         </concept>
+         <concept>
+            <code value="442041000124107"/>
+            <display value="paternale oom (persoon)"/>
+         </concept>
+         <concept>
+            <code value="736455007"/>
+            <display value="paternale tante (persoon)"/>
+         </concept>
+         <concept>
+            <code value="135691000146108"/>
+            <display value="bloedverwant in vierde graad (persoon)"/>
+         </concept>
+         <concept>
+            <code value="136911000146104"/>
+            <display value="dochter van broer van moeder"/>
+         </concept>
+         <concept>
+            <code value="136921000146109"/>
+            <display value="dochter van zus van moeder"/>
+         </concept>
+         <concept>
+            <code value="136931000146106"/>
+            <display value="zoon van broer van moeder"/>
+         </concept>
+         <concept>
+            <code value="136941000146103"/>
+            <display value="zoon van zus van moeder"/>
+         </concept>
+         <concept>
+            <code value="136951000146100"/>
+            <display value="dochter van broer van vader"/>
+         </concept>
+         <concept>
+            <code value="136961000146102"/>
+            <display value="dochter van zus van vader"/>
+         </concept>
+         <concept>
+            <code value="136971000146108"/>
+            <display value="zoon van broer van vader"/>
+         </concept>
+         <concept>
+            <code value="136981000146105"/>
+            <display value="zoon van zus van vader"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

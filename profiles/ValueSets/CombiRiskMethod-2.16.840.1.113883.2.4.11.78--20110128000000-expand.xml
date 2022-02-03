@@ -1,54 +1,54 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.11.78--20110128000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2011-01-28T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.78--20110128000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.78"/>
-    </identifier>
-    <version value="2011-01-28T00:00:00"/>
-    <name value="CombiRiskMethod"/>
-    <title value="CombiRiskMethod"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="CombiRiskMethod"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
-            <concept>
-                <code value="1"/>
-                <display value="Elipse"/>
-            </concept>
-            <concept>
-                <code value="2"/>
-                <display value="FMF"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:100321b5-77da-44a3-908b-1fa32210b1b6"/>
-        <timestamp value="2021-06-18T15:20:47.065+02:00"/>
-        <total value="2"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2011-01-28T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.78--20110128000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.78"/>
+   </identifier>
+   <version value="2011-01-28T00:00:00"/>
+   <name value="CombiRiskMethod"/>
+   <title value="CombiRiskMethod"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="CombiRiskMethod"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
+         <concept>
             <code value="1"/>
             <display value="Elipse"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
+         </concept>
+         <concept>
             <code value="2"/>
             <display value="FMF"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:100321b5-77da-44a3-908b-1fa32210b1b6"/>
+      <timestamp value="2021-06-18T15:20:47.065+02:00"/>
+      <total value="2"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
+         <code value="1"/>
+         <display value="Elipse"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.39"/>
+         <code value="2"/>
+         <display value="FMF"/>
+      </contains>
+   </expansion>
 </ValueSet>

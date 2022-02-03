@@ -1,137 +1,137 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1--20171231000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2017-12-31T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1--20171231000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1"/>
-    </identifier>
-    <version value="2017-12-31T00:00:00"/>
-    <name value="WondWeefselWCSCodelijst"/>
-    <title value="WondWeefselWCSCodelijst"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="Registratie aan de bron"/>
-    <contact>
-        <name value="Registratie aan de bron"/>
-        <telecom>
-            <system value="url"/>
-            <value value="https://www.registratieaandebron.nl"/>
-        </telecom>
-        <telecom>
-            <system value="url"/>
-            <value value="https://zibs.nl"/>
-        </telecom>
-    </contact>
-    <description value="WondWeefselWCSCodelijst"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="granulerend weefsel"/>
-                </extension>
-                <code value="ROOD"/>
-                <display value="Rode wond"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Rode wond"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="met infectieverschijnselen of fibrinebeslag"/>
-                </extension>
-                <code value="GEEL"/>
-                <display value="Gele wond"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Gele wond"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="met necrose"/>
-                </extension>
-                <code value="ZWART"/>
-                <display value="Zwarte wond"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Zwarte wond"/>
-                </designation>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:45e39e8d-39b6-4ebd-b48f-ca234b620561"/>
-        <timestamp value="2021-06-18T15:20:30.219+02:00"/>
-        <total value="3"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2017-12-31T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1--20171231000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1"/>
+   </identifier>
+   <version value="2017-12-31T00:00:00"/>
+   <name value="WondWeefselWCSCodelijst"/>
+   <title value="WondWeefselWCSCodelijst"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="WondWeefselWCSCodelijst"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="granulerend weefsel"/>
+            </extension>
             <code value="ROOD"/>
             <display value="Rode wond"/>
             <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="900000000000013009"/>
-                    <display value="Synonym"/>
-                </use>
-                <value value="Rode wond"/>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Rode wond"/>
             </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="met infectieverschijnselen of fibrinebeslag"/>
+            </extension>
             <code value="GEEL"/>
             <display value="Gele wond"/>
             <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="900000000000013009"/>
-                    <display value="Synonym"/>
-                </use>
-                <value value="Gele wond"/>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gele wond"/>
             </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="met necrose"/>
+            </extension>
             <code value="ZWART"/>
             <display value="Zwarte wond"/>
             <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="900000000000013009"/>
-                    <display value="Synonym"/>
-                </use>
-                <value value="Zwarte wond"/>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Zwarte wond"/>
             </designation>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:45e39e8d-39b6-4ebd-b48f-ca234b620561"/>
+      <timestamp value="2021-06-18T15:20:30.219+02:00"/>
+      <total value="3"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         <code value="ROOD"/>
+         <display value="Rode wond"/>
+         <designation>
+            <language value="nl-NL"/>
+            <use>
+               <system value="http://snomed.info/sct"/>
+               <code value="900000000000013009"/>
+               <display value="Synonym"/>
+            </use>
+            <value value="Rode wond"/>
+         </designation>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         <code value="GEEL"/>
+         <display value="Gele wond"/>
+         <designation>
+            <language value="nl-NL"/>
+            <use>
+               <system value="http://snomed.info/sct"/>
+               <code value="900000000000013009"/>
+               <display value="Synonym"/>
+            </use>
+            <value value="Gele wond"/>
+         </designation>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.7.2"/>
+         <code value="ZWART"/>
+         <display value="Zwarte wond"/>
+         <designation>
+            <language value="nl-NL"/>
+            <use>
+               <system value="http://snomed.info/sct"/>
+               <code value="900000000000013009"/>
+               <display value="Synonym"/>
+            </use>
+            <value value="Zwarte wond"/>
+         </designation>
+      </contains>
+   </expansion>
 </ValueSet>

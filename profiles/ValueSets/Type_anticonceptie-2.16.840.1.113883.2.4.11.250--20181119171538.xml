@@ -1,0 +1,83 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.250--20181119171538"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2018-11-19T17:15:38+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.250--20181119171538"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.250"/>
+   </identifier>
+   <version value="2018-11-19T17:15:38"/>
+   <name value="Type_anticonceptie"/>
+   <title value="Type anticonceptie"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Type anticonceptie"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="268458002"/>
+            <display value="gebruik van gecombineerde orale anticonceptie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="169467008"/>
+            <display value="orale anticonceptie met alleen progestageen (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="449038007"/>
+            <display value="gebruikt intra-uterien anticonceptiemiddel (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="448962006"/>
+            <display value="gebruikt koperhoudend intra-uterien anticonceptiemiddel (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="450850003"/>
+            <display value="gebruikt anticonceptiering (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="268464009"/>
+            <display value="depotanticonceptie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="268461001"/>
+            <display value="anticonceptie met condoom (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="428987008"/>
+            <display value="subcutaan anticonceptie-implantaat aanwezig (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="10114008"/>
+            <display value="vrouwelijke steriliteit (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="49408009"/>
+            <display value="mannelijke steriliteit (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="2314005"/>
+            <display value="onbeschermde geslachtsgemeenschap (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

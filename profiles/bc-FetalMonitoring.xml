@@ -2,9 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-FetalMonitoring" />
   <url value="https://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
+  <version value="1.0.0" />
   <name value="bc-FetalMonitoring" />
+  <title value="bc-FetalMonitoring" />
   <status value="draft" />
+  <publisher value="Nictiz" />
   <description value="An Observation profile derived from the fetus Observation profile describing fetal monitoring as defined by BabyConnect. Fetal monitoring is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="gebz-peri-v3.2" />
@@ -204,6 +208,88 @@
     <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.code">
       <path value="Observation.component.valueQuantity.code" />
       <defaultValueCode value="min" />
+    </element>
+    <element id="Observation.component:fetalAccelerations">
+      <path value="Observation.component" />
+      <sliceName value="fetalAccelerations" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3910" />
+        <comment value="FoetaleAcceleraties" />
+      </mapping>
+    </element>
+    <element id="Observation.component:fetalAccelerations.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://unitsofmeasure.org" />
+        <code value="251676007" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:fetalAccelerations.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:fetalAccelerations.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="251676007" />
+    </element>
+    <element id="Observation.component:fetalAccelerations.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="acceleratie van foetale hartfrequentie (bevinding)" />
+    </element>
+    <element id="Observation.component:fetalAccelerations.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="v2 Yes/no Indicator" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/v2-0136" />
+      </binding>
+    </element>
+    <element id="Observation.component:fetalDecelerations">
+      <path value="Observation.component" />
+      <sliceName value="fetalDecelerations" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3911" />
+        <comment value="FoetaleDeceleraties" />
+      </mapping>
+    </element>
+    <element id="Observation.component:fetalDecelerations.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://unitsofmeasure.org" />
+        <code value="251673004" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:fetalDecelerations.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:fetalDecelerations.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="251673004" />
+    </element>
+    <element id="Observation.component:fetalDecelerations.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="deceleratie van foetale hartfrequentie (bevinding)" />
+    </element>
+    <element id="Observation.component:fetalDecelerations.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="DeceleratiesCodelijst" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.295--20200129154254" />
+      </binding>
     </element>
     <element id="Observation.component:heartFrequencyVariability">
       <path value="Observation.component" />

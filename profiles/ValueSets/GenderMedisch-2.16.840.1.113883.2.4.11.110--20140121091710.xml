@@ -1,0 +1,54 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.110--20140121091710"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-21T09:17:10+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.110--20140121091710"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.110"/>
+   </identifier>
+   <version value="2014-01-21T09:17:10"/>
+   <name value="GenderMedisch"/>
+   <title value="GenderMedisch"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="GenderMedisch"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.21"/>
+         <concept>
+            <code value="1"/>
+            <display value="Mannelijk"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="Vrouwelijk"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="Niet conclusief"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

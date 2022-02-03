@@ -1,0 +1,82 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-02-08T16:26:03+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.218"/>
+   </identifier>
+   <version value="2016-02-08T16:26:03"/>
+   <name value="Specialisme"/>
+   <title value="Specialisme"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Specialisme"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/>
+         <concept>
+            <code value="01"/>
+            <display value="Verloskundige"/>
+         </concept>
+         <concept>
+            <code value="02"/>
+            <display value="Gynaecoloog 2e lijn"/>
+         </concept>
+         <concept>
+            <code value="03"/>
+            <display value="Gynaecoloog 3e lijn"/>
+         </concept>
+         <concept>
+            <code value="04"/>
+            <display value="Kinderarts 2e lijn"/>
+         </concept>
+         <concept>
+            <code value="05"/>
+            <display value="Kinderarts 3e lijn"/>
+         </concept>
+         <concept>
+            <code value="06"/>
+            <display value="Huisarts"/>
+         </concept>
+         <concept>
+            <code value="07"/>
+            <display value="Echoscopist"/>
+         </concept>
+         <concept>
+            <code value="08"/>
+            <display value="Klinisch geneticus"/>
+         </concept>
+         <concept>
+            <code value="09"/>
+            <display value="Psychiater"/>
+         </concept>
+         <concept>
+            <code value="10"/>
+            <display value="Medisch specialist overig"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

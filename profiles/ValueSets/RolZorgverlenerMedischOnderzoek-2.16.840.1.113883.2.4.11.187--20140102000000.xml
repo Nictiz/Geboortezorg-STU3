@@ -1,0 +1,92 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.187--20140102000000"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-02T00:00:00+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.187--20140102000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.187"/>
+   </identifier>
+   <version value="2014-01-02T00:00:00"/>
+   <name value="RolZorgverlenerMedischOnderzoek"/>
+   <title value="RolZorgverlener Medisch Onderzoek"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="RolZorgverlener Medisch Onderzoek"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.59"/>
+         <concept>
+            <code value="11"/>
+            <display value="1e lijns Verloskundige"/>
+         </concept>
+         <concept>
+            <code value="25"/>
+            <display value="Klinisch verloskundige"/>
+         </concept>
+         <concept>
+            <code value="12"/>
+            <display value="Verloskundige in opleiding"/>
+         </concept>
+         <concept>
+            <code value="22"/>
+            <display value="Gynaecoloog in opleiding"/>
+         </concept>
+         <concept>
+            <code value="24"/>
+            <display value="Arts-assistent"/>
+         </concept>
+         <concept>
+            <code value="13"/>
+            <display value="Co-assistent"/>
+         </concept>
+         <concept>
+            <code value="15"/>
+            <display value="Huisarts in opleiding"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
+         <concept>
+            <code value="01.046"/>
+            <display value="Gynaecoloog"/>
+         </concept>
+         <concept>
+            <code value="01.015"/>
+            <display value="Huisarts"/>
+         </concept>
+         <concept>
+            <code value="30.000"/>
+            <display value="Verpleegkundige"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.98.111"/>
+         <concept>
+            <code value="AA.001"/>
+            <display value="Echoscopist"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

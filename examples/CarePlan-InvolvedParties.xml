@@ -1,0 +1,54 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+    <id value="careplan-involvedparties" />
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/bc-CarePlan-InvolvedParties" />
+    </meta>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="example patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
+        <display value="Zwangerschapsdossier zwangerschap 1" />
+    </context>
+    <period>
+        <start value="2016-02-20"/>
+        <end value="2016-06-16"/>
+    </period>
+    <participant>
+        <role>
+            <text value="coordinator" />
+        </role>
+        <member>
+            <reference value="PractitionerRole/ZorgverlenerA" />
+            <display value="Zorgverlener A" />
+        </member>
+    </participant>
+    <participant>
+        <role>
+            <text value="uitvoerder" />
+        </role>
+        <member>
+            <reference value="PractitionerRole/ZorgverlenerA" />
+            <display value="Zorgverlener A" />
+        </member>
+    </participant>
+    <participant>
+        <role>
+            <text value="uitvoerder" />
+        </role>
+        <member>
+            <reference value="Patient/example" />
+            <display value="Example" />
+        </member>
+    </participant>
+    <participant>
+        <role>
+            <text value="uitvoerder" />
+        </role>
+        <member>
+            <reference value="RelatedPerson/partner" />
+            <display value="Partner" />
+        </member>
+    </participant>
+</CareTeam>

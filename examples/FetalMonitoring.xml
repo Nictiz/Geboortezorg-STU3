@@ -1,0 +1,180 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="fetalMonitoring" />
+    <meta>
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+        <valueReference>
+            <reference value="BodySite/fetusA" />
+        </valueReference>
+    </extension>
+    <status value="final" />
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="281568006" />
+            <display value="monitoren van foetale hart (regime/therapie)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/fetusA" />
+        <display value="Fetus A" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapsdossier1" />
+        <display value="Zwangerschapsdossier example zwangerschap 1" />
+    </context>
+    <effectivePeriod>
+        <start value="2016-02-21T21:45:00+01:00" />
+        <end value="2016-02-21T23:45:00+01:00" />
+        <extension url="https://nictiz.nl/fhir/StructureDefinition/bc-timeinterval-duration">
+            <valueQuantity>
+                <value value="2" />
+                <unit value="h" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="h" />
+            </valueQuantity>
+        </extension>
+    </effectivePeriod>
+    <performer>
+        <reference value="Practitioner/zorgverlenerX" />
+        <display value="Zorgverlener X" />
+    </performer>
+    <method>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="36708009" />
+            <display value="bewaken met externe foetale monitor (regime/therapie)" />
+        </coding>
+    </method>
+    <related>
+        <type value="has-member" />
+        <target>
+            <reference value="Observation/fetalHeartRate1" />
+            <display value="Foetale hartslag 1" />
+        </target>
+    </related>
+    <related>
+        <type value="has-member" />
+        <target>
+            <reference value="Observation/fetalHeartRate2" />
+            <display value="Foetale hartslag 2" />
+        </target>
+    </related>
+    <related>
+        <type value="has-member" />
+        <target>
+            <reference value="Observation/fetalHeartRate3" />
+            <display value="Foetale hartslag 3" />
+        </target>
+    </related>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="xxx"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="386276009"/>
+                <display value="cardiotocografische bewaking antepartum (regime/therapie)"/>            
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="251670001"/>
+                <display value="basishartfrequentie van foetus (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueQuantity>
+                <value value="110" />
+                <unit value="min"/>  
+                <system value="http://unitsofmeasure.org"/>
+                <code value="min"/>        
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="251676007"/>
+                <display value="acceleratie van foetale hartfrequentie (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0136"/>
+                <code value="N"/>
+                <display value="Nee"/>            
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="251673004"/>
+                <display value="deceleratie van foetale hartfrequentie (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="113551000146106"/>
+                <display value="ongecompliceerde deceleratie van foetale hartfrequentie (bevinding)"/>            
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="366337000"/>
+                <display value="bevinding betreffende variabiliteit van foetale hartfrequentie (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="4289339006"/>
+                <display value="goede variabiliteit van basishartfrequentie van foetus (bevinding)"/>            
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="xxx"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="289342000"/>
+                <display value="patroon op cardiotocogram normaal (bevinding)"/>            
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="xxx"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="10" />
+            <system value="http://unitsofmeasure.org"/>
+            <code value="1"/>        
+        </valueQuantity>
+    </component>
+</Observation>

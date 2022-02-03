@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FamilyMemberHistory" />
+  <url value="https://nictiz.nlfhir/StructureDefinition/bc-FamilyMemberHistory" />
+  <version value="1.0.0" />
+  <name value="bc-FamilyMemberHistory" />
+  <title value="bc-FamilyMemberHistory" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="A FamilyMemberHistory profile as defined by BabyConnect describing the relevant family history of a pregnant woman." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="FamilyMemberHistory" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="FamilyMemberHistory">
+      <path value="FamilyMemberHistory" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1112" />
+        <comment value="Familieanamnese" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.patient">
+      <path value="FamilyMemberHistory.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="FamilyMemberHistory.date">
+      <path value="FamilyMemberHistory.date" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1113" />
+        <comment value="Datum" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.relationship">
+      <path value="FamilyMemberHistory.relationship" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type_BiologischeRelatie" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.275--20200513143542" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1114" />
+        <comment value="Familielid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1115" />
+        <comment value="BiologischeRelatie" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1117" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1118" />
+        <comment value="LeeftijdBijOverlijden" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.note">
+      <path value="FamilyMemberHistory.note" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1116" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.condition">
+      <path value="FamilyMemberHistory.condition" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1119" />
+        <comment value="Aandoening" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.condition.code">
+      <path value="FamilyMemberHistory.condition.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProbleemNaam_InfectiesGezin" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.358--20220117155944" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="FamilyMemberHistory.condition.outcome">
+      <path value="FamilyMemberHistory.condition.outcome" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1122" />
+        <comment value="IsDoodsoorzaak" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

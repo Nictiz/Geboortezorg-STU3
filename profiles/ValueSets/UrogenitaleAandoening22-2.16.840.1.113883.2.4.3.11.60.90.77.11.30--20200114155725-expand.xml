@@ -1,70 +1,70 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.30--20200114155725"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-01-14T15:57:25+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.30--20200114155725"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.30"/>
-    </identifier>
-    <version value="2020-01-14T15:57:25"/>
-    <name value="UrogenitaleAandoening22"/>
-    <title value="Urogenitale aandoening (2.2)"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Urogenitale aandoening (2.2)"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="45816000"/>
-                <display value="pyelonefritis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="61373006"/>
-                <display value="bacteriurie (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="90688005"/>
-                <display value="chronisch nierfalen (aandoening)"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:fdbf9ad8-2b64-4ddc-b4f2-fd8c543f5197"/>
-        <timestamp value="2021-06-18T15:20:14.732+02:00"/>
-        <total value="4"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-01-14T15:57:25+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.30--20200114155725"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.30"/>
+   </identifier>
+   <version value="2020-01-14T15:57:25"/>
+   <name value="UrogenitaleAandoening22"/>
+   <title value="Urogenitale aandoening (2.2)"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Urogenitale aandoening (2.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="45816000"/>
             <display value="pyelonefritis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="61373006"/>
             <display value="bacteriurie (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <inactive value="true"/>
-            <code value="236425005"/>
-            <display value="Chronic renal impairment (disorder)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="90688005"/>
             <display value="chronisch nierfalen (aandoening)"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:fdbf9ad8-2b64-4ddc-b4f2-fd8c543f5197"/>
+      <timestamp value="2021-06-18T15:20:14.732+02:00"/>
+      <total value="4"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="45816000"/>
+         <display value="pyelonefritis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="61373006"/>
+         <display value="bacteriurie (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <inactive value="true"/>
+         <code value="236425005"/>
+         <display value="Chronic renal impairment (disorder)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="90688005"/>
+         <display value="chronisch nierfalen (aandoening)"/>
+      </contains>
+   </expansion>
 </ValueSet>

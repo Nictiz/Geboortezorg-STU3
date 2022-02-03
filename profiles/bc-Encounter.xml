@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-Encounter" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="bc-Encounter" />
   <title value="bc-Encounter" />
   <status value="draft" />
@@ -148,6 +148,56 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1814" />
         <comment value="BeginDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.reason.extension">
+      <path value="Encounter.reason.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Encounter.reason.extension:reasonReference">
+      <path value="Encounter.reason.extension" />
+      <sliceName value="reasonReference" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-encounter-reasonreference" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8748" />
+        <comment value="Verrichting" />
+      </mapping>
+    </element>
+    <element id="Encounter.reason.extension:reasonReference.value[x]:valueReference">
+      <path value="Encounter.reason.extension.value[x]" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+      </type>
+    </element>
+    <element id="Encounter.reason.text">
+      <path value="Encounter.reason.text" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-763" />
+        <comment value="AfwijkendeUitslag" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8780" />
+        <comment value="Toelichting reden contact" />
       </mapping>
     </element>
     <element id="Encounter.diagnosis">

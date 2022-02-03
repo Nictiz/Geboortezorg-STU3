@@ -1,76 +1,76 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.214--20160125115042"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2016-01-25T11:50:42+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.214--20160125115042"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.214"/>
-    </identifier>
-    <version value="2016-01-25T11:50:42"/>
-    <name value="AfwijkingPlacenta_ed22"/>
-    <title value="Specificatie van de afwijking van placenta en/of vliezen en/of navelstreng (2.2)"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Specificatie van de afwijking van placenta en/of vliezen en/of navelstreng (2.2)"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="79668009"/>
-                <display value="vasa praevia (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="60574005"/>
-                <display value="tweelingplacenta (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="77278008"/>
-                <display value="velamenteuze insertie van navelstreng (aandoening)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="overig"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:e353a1f3-acc3-47d2-90a9-a51c08416c02"/>
-        <timestamp value="2021-06-18T15:20:09.464+02:00"/>
-        <total value="4"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-01-25T11:50:42+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.214--20160125115042"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.214"/>
+   </identifier>
+   <version value="2016-01-25T11:50:42"/>
+   <name value="AfwijkingPlacenta_ed22"/>
+   <title value="Specificatie van de afwijking van placenta en/of vliezen en/of navelstreng (2.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Specificatie van de afwijking van placenta en/of vliezen en/of navelstreng (2.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="79668009"/>
             <display value="vasa praevia (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="60574005"/>
             <display value="tweelingplacenta (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="77278008"/>
             <display value="velamenteuze insertie van navelstreng (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="overig"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:e353a1f3-acc3-47d2-90a9-a51c08416c02"/>
+      <timestamp value="2021-06-18T15:20:09.464+02:00"/>
+      <total value="4"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="79668009"/>
+         <display value="vasa praevia (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="60574005"/>
+         <display value="tweelingplacenta (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="77278008"/>
+         <display value="velamenteuze insertie van navelstreng (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="overig"/>
+      </contains>
+   </expansion>
 </ValueSet>

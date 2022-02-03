@@ -1,139 +1,139 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.11.182--20161122140045"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2016-11-22T14:00:45+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.182"/>
-    </identifier>
-    <version value="2016-11-22T14:00:45"/>
-    <name value="TypePartus22"/>
-    <title value="TypePartus"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="TypePartus"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="177184002"/>
-                <display value="begeleiding van normale bevalling (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="3311000146109"/>
-                <display value="geassisteerde vaginale verlossing (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="11466000"/>
-                <display value="sectio caesarea (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="177141003"/>
-                <display value="electieve sectio caesarea (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="274130007"/>
-                <display value="spoedkeizersnede (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="447972007"/>
-                <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
-            </concept>
-            <concept>
-                <code value="236990004"/>
-                <display value="postmortale keizersnede (verrichting)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Overige TOP (Termination of Pregnancy - zwangerschapsafbreking ná 16 weken)"/>
-                </extension>
-                <code value="9"/>
-                <display value="Overig"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
-            <concept>
-                <code value="10"/>
-                <display value="Termination of Pregnancy (TOP)"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:6dbdb83a-d9a7-44fe-a048-895a66aa612f"/>
-        <timestamp value="2021-06-18T15:19:49.339+02:00"/>
-        <total value="10"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-22T14:00:45+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.182--20161122140045"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.182"/>
+   </identifier>
+   <version value="2016-11-22T14:00:45"/>
+   <name value="TypePartus22"/>
+   <title value="TypePartus"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="TypePartus"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="177184002"/>
             <display value="begeleiding van normale bevalling (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="3311000146109"/>
             <display value="geassisteerde vaginale verlossing (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="11466000"/>
             <display value="sectio caesarea (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="177141003"/>
             <display value="electieve sectio caesarea (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="274130007"/>
             <display value="spoedkeizersnede (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
-            <code value="10"/>
-            <display value="Termination of Pregnancy (TOP)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="447972007"/>
             <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="236990004"/>
             <display value="postmortale keizersnede (verrichting)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
-            <code value="9"/>
-            <display value="Overig"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Overige TOP (Termination of Pregnancy - zwangerschapsafbreking ná 16 weken)"/>
+            </extension>
+            <code value="9"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
+         <concept>
+            <code value="10"/>
+            <display value="Termination of Pregnancy (TOP)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:6dbdb83a-d9a7-44fe-a048-895a66aa612f"/>
+      <timestamp value="2021-06-18T15:19:49.339+02:00"/>
+      <total value="10"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="177184002"/>
+         <display value="begeleiding van normale bevalling (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="3311000146109"/>
+         <display value="geassisteerde vaginale verlossing (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="11466000"/>
+         <display value="sectio caesarea (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="177141003"/>
+         <display value="electieve sectio caesarea (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="274130007"/>
+         <display value="spoedkeizersnede (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14"/>
+         <code value="10"/>
+         <display value="Termination of Pregnancy (TOP)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="447972007"/>
+         <display value="medicamenteuze zwangerschapsafbreking met prostaglandine (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="236990004"/>
+         <display value="postmortale keizersnede (verrichting)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.14.10"/>
+         <code value="9"/>
+         <display value="Overig"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

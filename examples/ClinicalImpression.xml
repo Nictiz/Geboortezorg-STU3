@@ -1,0 +1,65 @@
+<ClinicalImpression xmlns="http://hl7.org/fhir">
+    <id value="clinicalImpression" />
+    <meta>
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
+    </meta>
+    <extension url="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="149861000146102" />
+                <display value="invasieve prenatale diagnostiek geïndiceerd (situatie)" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <status value="completed" />
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapsdossier" />
+        <display value="Zwangerschapsdossier zwangerschap 1" />
+    </context>
+    <effectiveDateTime value = "2016-02-21T16:00:00+01:00" />
+    <assessor>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/ZorgverlenerA" />
+                <display value="Zorgverlener A" />
+            </valueReference>
+        </extension>
+        <reference value="Practitioner/zorgverlenerA" />
+        <display value="Zorgverlener A" />
+    </assessor>
+    <investigation>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="271336007" />
+                <display value="Examination / signs" />   
+            </coding>
+        </code>
+        <item>
+            <extension url="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure">
+                <valueReference>
+                    <reference value="Procedure/nipt-test" />
+                    <display value="Nipt test" />
+                </valueReference>
+            </extension>
+        </item>
+    </investigation>
+    <summary>
+        <text value="Indicatie prenatale diagnostiek" />
+    </summary>
+    <finding>
+        <itemCodeableConcept>
+            <system value="http://snomed.info/sct" />
+            <code value="47200007" />
+            <display value="hoogrisicozwangerschap (bevinding)" />   
+        </itemCodeableConcept>
+    </finding>
+    <note>
+        <text value="verhoogd risico down syndroom"/>
+    </note>
+</ClinicalImpression>

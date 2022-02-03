@@ -1,102 +1,102 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.210--20141222154115"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2014-12-22T15:41:15+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.210--20141222154115"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.210"/>
-    </identifier>
-    <version value="2014-12-22T15:41:15"/>
-    <name value="IndicatieEpisiotomie"/>
-    <title value="Indicatie episiotomie"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Indicatie episiotomie"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <concept>
-                <code value="10"/>
-                <display value="Foetale indicatie"/>
-            </concept>
-            <concept>
-                <code value="20"/>
-                <display value="Maternale indicatie"/>
-            </concept>
-            <concept>
-                <code value="21"/>
-                <display value="Preventie ruptuur"/>
-            </concept>
-            <concept>
-                <code value="22"/>
-                <display value="Gesloten vulva tgv besnijdenis"/>
-            </concept>
-            <concept>
-                <code value="30"/>
-                <display value="Kunstverlossing (routine handeling)"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:f4fdd7af-bce9-4d71-beab-77290d4ab6d1"/>
-        <timestamp value="2021-06-18T15:20:41.079+02:00"/>
-        <total value="7"/>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <code value="10"/>
-            <display value="Foetale indicatie"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <code value="20"/>
-            <display value="Maternale indicatie"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <code value="21"/>
-            <display value="Preventie ruptuur"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <code value="22"/>
-            <display value="Gesloten vulva tgv besnijdenis"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
-            <code value="30"/>
-            <display value="Kunstverlossing (routine handeling)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-12-22T15:41:15+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.210--20141222154115"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.210"/>
+   </identifier>
+   <version value="2014-12-22T15:41:15"/>
+   <name value="IndicatieEpisiotomie"/>
+   <title value="Indicatie episiotomie"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Indicatie episiotomie"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="Overig"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <concept>
+            <code value="10"/>
+            <display value="Foetale indicatie"/>
+         </concept>
+         <concept>
+            <code value="20"/>
+            <display value="Maternale indicatie"/>
+         </concept>
+         <concept>
+            <code value="21"/>
+            <display value="Preventie ruptuur"/>
+         </concept>
+         <concept>
+            <code value="22"/>
+            <display value="Gesloten vulva tgv besnijdenis"/>
+         </concept>
+         <concept>
+            <code value="30"/>
+            <display value="Kunstverlossing (routine handeling)"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:f4fdd7af-bce9-4d71-beab-77290d4ab6d1"/>
+      <timestamp value="2021-06-18T15:20:41.079+02:00"/>
+      <total value="7"/>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <code value="10"/>
+         <display value="Foetale indicatie"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <code value="20"/>
+         <display value="Maternale indicatie"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <code value="21"/>
+         <display value="Preventie ruptuur"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <code value="22"/>
+         <display value="Gesloten vulva tgv besnijdenis"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.61"/>
+         <code value="30"/>
+         <display value="Kunstverlossing (routine handeling)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Overig"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

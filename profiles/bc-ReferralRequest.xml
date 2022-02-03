@@ -1,430 +1,639 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-ReferralRequest"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
-  <version value="1.0.0"/>
-  <name value="bc-ReferralRequest"/>
-  <title value="bc-ReferralRequest"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-ReferralRequest" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest" />
+  <version value="1.0.0" />
+  <name value="bc-ReferralRequest" />
+  <title value="bc-ReferralRequest" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="A ReferralRequest profile describing referral details as defined by BabyConnect."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="A ReferralRequest profile describing referral details as defined by BabyConnect." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="w5"/>
-      <uri value="http://hl7.org/fhir/w5"/>
-      <name value="W5 Mapping"/>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/w5" />
+    <name value="W5 Mapping" />
   </mapping>
   <mapping>
-      <identity value="v2"/>
-      <uri value="http://hl7.org/v2"/>
-      <name value="HL7 v2 Mapping"/>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
   </mapping>
   <mapping>
-      <identity value="rim"/>
-      <uri value="http://hl7.org/v3"/>
-      <name value="RIM Mapping"/>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="ReferralRequest"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ReferralRequest"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ReferralRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ReferralRequest" />
+  <derivation value="constraint" />
   <differential>
-      <element id="ReferralRequest">
-         <path value="ReferralRequest"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82012"/>
-            <comment value="Verwijsdetails"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.extension">
-         <path value="ReferralRequest.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="ReferralRequest.extension:perinatalPeriod">
-         <path value="ReferralRequest.extension"/>
-         <sliceName value="perinatalPeriod"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer"/>
-         </type>
-      </element>
-      <element id="ReferralRequest.extension:perinatalPeriod.valueCodeableConcept:valueCodeableConcept">
-         <path value="ReferralRequest.extension.valueCodeableConcept"/>
-         <sliceName value="valueCodeableConcept"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20367"/>
-            <comment value="Perinatale periode"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.intent">
-         <path value="ReferralRequest.intent"/>
-         <fixedCode value="order"/>
-      </element>
-      <element id="ReferralRequest.type.coding">
-         <path value="ReferralRequest.type.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="ReferralRequest.type.coding:referralType">
-         <path value="ReferralRequest.type.coding"/>
-         <sliceName value="referralType"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Type verwijzing"/>
-            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.221--20161201112008"/>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82581"/>
-            <comment value="Type verwijzing"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.subject">
-         <path value="ReferralRequest.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-2"/>
-            <comment value="Vrouw"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.context">
-         <path value="ReferralRequest.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-4"/>
-            <comment value="Zorgverlening"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.authoredOn">
-         <path value="ReferralRequest.authoredOn"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82013"/>
-            <comment value="Datum van de verwijzing"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.requester">
-         <path value="ReferralRequest.requester"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82550"/>
-            <comment value="Verwijzing van"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.requester.extension">
-         <path value="ReferralRequest.requester.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="ReferralRequest.requester.extension:specialty">
-         <path value="ReferralRequest.requester.extension"/>
-         <sliceName value="specialty"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requesterSpecialty"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Specialisme"/>
-		          <valueSetReference>
-			            <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603"/>
-		          </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82580"/>
-            <comment value="Specialisme"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.requester.agent">
-         <path value="ReferralRequest.requester.agent"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82551"/>
-            <comment value="Zorginstelling"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.requester.onBehalfOf">
-         <path value="ReferralRequest.requester.onBehalfOf"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-         </type>
-      </element>
-      <element id="ReferralRequest.specialty">
-         <path value="ReferralRequest.specialty"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Specialisme"/>
-            <valueSetReference>
-               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82580"/>
-            <comment value="Verwijzing naar zorginstelling (specialisme)"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.recipient">
-         <path value="ReferralRequest.recipient"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-organization"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82577"/>
-            <comment value="Verwijzing naar"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82578"/>
-            <comment value="Zorginstelling"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode">
-         <path value="ReferralRequest.reasonCode"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri22-dataelement-82014"/>
-            <comment value="Redenen van de verwijzing"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode.coding">
-         <path value="ReferralRequest.reasonCode.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="ReferralRequest.reasonCode.coding:reasonReferralSecondToFirstLine">
-         <path value="ReferralRequest.reasonCode.coding"/>
-         <sliceName value="reasonReferralSecondToFirstLine"/>
-         <max value="1"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Reden verwijzing (2e naar 1e lijn)"/>
-            <valueSetReference>
-               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.224--20161122112107"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82448"/>
-            <comment value="Reden verwijzing van 2e naar 1e lijn"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode.coding:reasonReferralCategory">
-         <path value="ReferralRequest.reasonCode.coding"/>
-         <sliceName value="reasonReferralCategory"/>
-         <max value="1"/>
-         <binding>
-            <strength value="extensible"/>
-            <valueSetReference>
-               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.153--20120829000000"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20372"/>
-            <comment value="Categorie Reden (Acute Overdracht)"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode.coding:reasonReferralThirdToSecondLine">
-         <path value="ReferralRequest.reasonCode.coding"/>
-         <sliceName value="reasonReferralThirdToSecondLine"/>
-         <max value="1"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Reden verwijzing (van 3e naar 2e lijn)"/>
-            <valueSetReference>
-               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.225--20161122112107"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82449"/>
-            <comment value="Reden verwijzing van 3e naar 2e lijn"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode.coding:reasonReferralFirstToSecondLineEndPregnancy">
-         <path value="ReferralRequest.reasonCode.coding"/>
-         <sliceName value="reasonReferralFirstToSecondLineEndPregnancy"/>
-         <max value="1"/>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="ReferralReason"/>
-            </extension>
-            <strength value="extensible"/>
-            <description value="Einde zwangerschap (verwijsreden)"/>
-            <valueSetReference>
-               <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.219--20161122103657"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82450"/>
-            <comment value="Reden verwijzing van 1e naar 2e lijn"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82453"/>
-            <comment value="Einde zwangerschap"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonCode.text">
-         <path value="ReferralRequest.reasonCode.text"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82451"/>
-            <comment value="Reden verwijzing van 2e naar 3e lijn"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82442"/>
-            <comment value="Overig"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.reasonReference">
-         <path value="ReferralRequest.reasonReference"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderAfterBirth"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82454"/>
-            <comment value="Reden van verwijzing vanuit algemene anamnese"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82492"/>
-            <comment value="Reden van verwijzing vanuit obstetrische anamnese"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82506"/>
-            <comment value="Reden van verwijzing vanuit huidige zwangerschap"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82527"/>
-            <comment value="Reden verwijzing tijdens de bevalling"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82544"/>
-            <comment value="Reden verwijzing in postnatale fase"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82450"/>
-            <comment value="Reden verwijzing 1e naar 2e lijn"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.supportingInfo">
-         <path value="ReferralRequest.supportingInfo"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20633"/>
-            <comment value="Hoeveelheid bloedverlies tot acute overdracht"/>
-         </mapping>
-      </element>
-      <element id="ReferralRequest.note">
-         <path value="ReferralRequest.note"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82016"/>
-            <comment value="Toelichting reden verwijzing"/>
-         </mapping>
-      </element>
+    <element id="ReferralRequest">
+      <path value="ReferralRequest" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82012" />
+        <comment value="Verwijsdetails" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8877" />
+        <comment value="Verwijsgegevens" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.extension">
+      <path value="ReferralRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ReferralRequest.extension:perinatalPeriod">
+      <path value="ReferralRequest.extension" />
+      <sliceName value="perinatalPeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer" />
+      </type>
+    </element>
+    <element id="ReferralRequest.extension:perinatalPeriod.valueCodeableConcept:valueCodeableConcept">
+      <path value="ReferralRequest.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20367" />
+        <comment value="Perinatale periode" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.extension:contactType">
+      <path value="ReferralRequest.extension" />
+      <sliceName value="contactType" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype" />
+      </type>
+    </element>
+    <element id="ReferralRequest.extension:contactType.valueCodeableConcept:valueCodeableConcept">
+      <path value="ReferralRequest.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ContactSoort" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.284--20200610131200" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10487" />
+        <comment value="ContactSoort" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.intent">
+      <path value="ReferralRequest.intent" />
+      <fixedCode value="order" />
+    </element>
+    <element id="ReferralRequest.type.extension">
+      <path value="ReferralRequest.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ReferralRequest.type.extension:referralType">
+      <path value="ReferralRequest.type.extension" />
+      <sliceName value="referralType" />
+      <short value="Referral type" />
+      <definition value="Referral type as defined in 3.2" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-referraltype" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="TypeVerwijzing_32" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.348--20211101122336" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10297" />
+        <comment value="Type van de verwijzing" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.type.coding">
+      <path value="ReferralRequest.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ReferralRequest.type.coding:referralType">
+      <path value="ReferralRequest.type.coding" />
+      <sliceName value="referralType" />
+      <short value="Referral type" />
+      <definition value="Referral type as defined in 2.3 and 3.2. The receiving party decides if a referral results in a consult or handover." />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type verwijzing" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.221--20161201112008" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82581" />
+        <comment value="Type verwijzing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9683" />
+        <comment value="Type verwijzing" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.subject">
+      <path value="ReferralRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.context">
+      <path value="ReferralRequest.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.authoredOn">
+      <path value="ReferralRequest.authoredOn" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82013" />
+        <comment value="Datum van de verwijzing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8878" />
+        <comment value="Datum verwijzing" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.requester">
+      <path value="ReferralRequest.requester" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82550" />
+        <comment value="Verwijzing van" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8879" />
+        <comment value="Verwijzing van/ afkomstig van" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.requester.extension">
+      <path value="ReferralRequest.requester.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ReferralRequest.requester.extension:specialty">
+      <path value="ReferralRequest.requester.extension" />
+      <sliceName value="specialty" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requesterSpecialty" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Specialisme" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82580" />
+        <comment value="Specialisme" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.requester.agent">
+      <path value="ReferralRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82551" />
+        <comment value="Zorginstelling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9660" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.requester.onBehalfOf">
+      <path value="ReferralRequest.requester.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element id="ReferralRequest.specialty">
+      <path value="ReferralRequest.specialty" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Specialisme" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.218--20160208162603" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82580" />
+        <comment value="Verwijzing naar zorginstelling (specialisme)" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.recipient">
+      <path value="ReferralRequest.recipient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82577" />
+        <comment value="Verwijzing naar" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82578" />
+        <comment value="Zorginstelling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8881" />
+        <comment value="Verwijzing naar" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8882" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode">
+      <path value="ReferralRequest.reasonCode" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri22-dataelement-82014" />
+        <comment value="Redenen van de verwijzing" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode.coding">
+      <path value="ReferralRequest.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ReferralRequest.reasonCode.coding:reasonReferralSecondToFirstLine">
+      <path value="ReferralRequest.reasonCode.coding" />
+      <sliceName value="reasonReferralSecondToFirstLine" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Reden verwijzing (2e naar 1e lijn)" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.224--20161122112107" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82448" />
+        <comment value="Reden verwijzing van 2e naar 1e lijn" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode.coding:reasonReferralCategory">
+      <path value="ReferralRequest.reasonCode.coding" />
+      <sliceName value="reasonReferralCategory" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.153--20120829000000" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20372" />
+        <comment value="Categorie Reden (Acute Overdracht)" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode.coding:reasonReferralThirdToSecondLine">
+      <path value="ReferralRequest.reasonCode.coding" />
+      <sliceName value="reasonReferralThirdToSecondLine" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Reden verwijzing (van 3e naar 2e lijn)" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.225--20161122112107" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82449" />
+        <comment value="Reden verwijzing van 3e naar 2e lijn" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode.coding:reasonReferralFirstToSecondLineEndPregnancy">
+      <path value="ReferralRequest.reasonCode.coding" />
+      <sliceName value="reasonReferralFirstToSecondLineEndPregnancy" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ReferralReason" />
+        </extension>
+        <strength value="extensible" />
+        <description value="Einde zwangerschap (verwijsreden)" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.219--20161122103657" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82450" />
+        <comment value="Reden verwijzing van 1e naar 2e lijn" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82453" />
+        <comment value="Einde zwangerschap" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonCode.text">
+      <path value="ReferralRequest.reasonCode.text" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82451" />
+        <comment value="Reden verwijzing van 2e naar 3e lijn" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82442" />
+        <comment value="Overig" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonReference">
+      <path value="ReferralRequest.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PostPartumDisorder" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82454" />
+        <comment value="Reden van verwijzing vanuit algemene anamnese" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82492" />
+        <comment value="Reden van verwijzing vanuit obstetrische anamnese" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82506" />
+        <comment value="Reden van verwijzing vanuit huidige zwangerschap" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82527" />
+        <comment value="Reden verwijzing tijdens de bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82544" />
+        <comment value="Reden verwijzing in postnatale fase" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82450" />
+        <comment value="Reden verwijzing 1e naar 2e lijn" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8884" />
+        <comment value="Reden van verwijzing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9140" />
+        <comment value="Probleem (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9141" />
+        <comment value="Probleem (Psychiatrie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9142" />
+        <comment value="Probleem (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9144" />
+        <comment value="Conditie perineum en sfincter postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9661" />
+        <comment value="Probleem (Postpartum complicatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9882" />
+        <comment value="Probleem (Kindspecifieke maternale problemen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9139" />
+        <comment value="Probleem (Algemene anamnese)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8885" />
+        <comment value="Probleem acute overdracht" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.reasonReference.extension">
+      <path value="ReferralRequest.reasonReference.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ReferralRequest.reasonReference.extension:procedureReference">
+      <path value="ReferralRequest.reasonReference.extension" />
+      <sliceName value="procedureReference" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-reasonReference" />
+      </type>
+    </element>
+    <element id="ReferralRequest.reasonReference.extension:procedureReference.valueReference:valueReference">
+      <path value="ReferralRequest.reasonReference.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-procedure" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9883" />
+        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9881" />
+        <comment value="Verrichting (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9880" />
+        <comment value="Verrichting (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9143" />
+        <comment value="Verrichting (Algemene anamnese)" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.supportingInfo">
+      <path value="ReferralRequest.supportingInfo" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20633" />
+        <comment value="Hoeveelheid bloedverlies tot acute overdracht" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9171" />
+        <comment value="Hoeveelheid bloedverlies tot acute overdracht (Observatie)" />
+      </mapping>
+    </element>
+    <element id="ReferralRequest.note">
+      <path value="ReferralRequest.note" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82016" />
+        <comment value="Toelichting reden verwijzing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8883" />
+        <comment value="Toelichting op verwijzing" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>

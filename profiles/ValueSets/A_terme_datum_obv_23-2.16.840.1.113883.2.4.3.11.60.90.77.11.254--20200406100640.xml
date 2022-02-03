@@ -1,0 +1,59 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-04-06T10:06:40+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.254"/>
+   </identifier>
+   <version value="2020-04-06T10:06:40"/>
+   <name value="A_terme_datum_obv_23"/>
+   <title value="a terme datum obv (23)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="a terme datum obv (23)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="other"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="31541000146106"/>
+            <display value="aterme datum berekend door middel van diagnostische ultrasonografie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="31521000146100"/>
+            <display value="aterme datum berekend op basis van laatste menstruatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="31531000146103"/>
+            <display value="aterme datum berekend op basis van ovulatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="142941000146103"/>
+            <display value="a terme datum berekend op basis van in-vitrofertilisatie (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="142951000146100"/>
+            <display value="a terme datum berekend op basis van intra-uteriene inseminatie (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

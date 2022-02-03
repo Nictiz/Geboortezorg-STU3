@@ -1,0 +1,111 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.358--20220117155944"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2022-01-17T15:59:44+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.358--20220117155944"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.358"/>
+   </identifier>
+   <version value="3.2.0"/>
+   <name value="ProbleemNaam_InfectiesGezin"/>
+   <title value="ProbleemNaam_InfectiesGezin"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="ProbleemNaam_InfectiesGezin"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="302809008"/>
+            <display value="infectie door Streptococcus pyogenes (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="426933007"/>
+            <display value="infectie door Streptococcus agalactiae (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="1475003"/>
+            <display value="herpes labialis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="266096002"/>
+            <display value="infectie door meticillineresistente Staphylococcus aureus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="840539006"/>
+            <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="36989005"/>
+            <display value="bof (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="4740000"/>
+            <display value="herpes zoster (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="40468003"/>
+            <display value="hepatitis A (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="66071002"/>
+            <display value="hepatitis B (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="235871004"/>
+            <display value="drager van hepatitis-B-virus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="48277006"/>
+            <display value="impetigo (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="27836007"/>
+            <display value="kinkhoest (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="275498002"/>
+            <display value="infectie van luchtwegen (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="14189004"/>
+            <display value="mazelen (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="7180009"/>
+            <display value="meningitis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="36653000"/>
+            <display value="rubella (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="30242009"/>
+            <display value="scarlatina (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="38907003"/>
+            <display value="varicella (aandoening)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

@@ -1,88 +1,88 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.11.173--20130320000000"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2013-03-20T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20130320000000"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.173"/>
-    </identifier>
-    <version value="2013-03-20T00:00:00"/>
-    <name value="Vliezen"/>
-    <title value="Vliezen"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Vliezen"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="46914009"/>
-                <display value="intacte foetale membranen (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="237264000"/>
-                <display value="spontaan breken van vliezen achter voorliggend deel (bevinding)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="UNK"/>
-                <display value="onbekend"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.47"/>
-            <concept>
-                <code value="2"/>
-                <display value="Gebroken"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:1d707371-56c9-4349-ab74-3fbace214d46"/>
-        <timestamp value="2021-06-18T15:20:23.518+02:00"/>
-        <total value="5"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-03-20T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20130320000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.173"/>
+   </identifier>
+   <version value="2013-03-20T00:00:00"/>
+   <name value="Vliezen"/>
+   <title value="Vliezen"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Vliezen"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="46914009"/>
             <display value="intacte foetale membranen (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.47"/>
-            <code value="2"/>
-            <display value="Gebroken"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="237264000"/>
             <display value="spontaan breken van vliezen achter voorliggend deel (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="UNK"/>
             <display value="onbekend"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.47"/>
+         <concept>
+            <code value="2"/>
+            <display value="Gebroken"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:1d707371-56c9-4349-ab74-3fbace214d46"/>
+      <timestamp value="2021-06-18T15:20:23.518+02:00"/>
+      <total value="5"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="46914009"/>
+         <display value="intacte foetale membranen (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.47"/>
+         <code value="2"/>
+         <display value="Gebroken"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="237264000"/>
+         <display value="spontaan breken van vliezen achter voorliggend deel (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="UNK"/>
+         <display value="onbekend"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

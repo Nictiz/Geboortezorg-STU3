@@ -1,97 +1,97 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.11.198--20161026164418"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2016-10-26T16:44:18+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.11.198"/>
-    </identifier>
-    <version value="2.3.0"/>
-    <name value="ChromosomaleAfwijkingen22"/>
-    <title value="ChromosomaleAfwijkingen"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="ChromosomaleAfwijkingen"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="41040004"/>
-                <display value="Down-syndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="51500006"/>
-                <display value="trisomie 18 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="21111006"/>
-                <display value="trisomie 13 (aandoening)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Overige chromosomale afwijkingen"/>
-            </concept>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.22"/>
-            <concept>
-                <code value="7"/>
-                <display value="Andere numerieke chromosomale afwijkingen"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:46a5ed27-1d4b-4a10-9f52-38e9a980d6d5"/>
-        <timestamp value="2021-06-18T15:20:46.463+02:00"/>
-        <total value="6"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-10-26T16:44:18+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.198--20161026164418"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.11.198"/>
+   </identifier>
+   <version value="2.3.0"/>
+   <name value="ChromosomaleAfwijkingen22"/>
+   <title value="ChromosomaleAfwijkingen"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="ChromosomaleAfwijkingen"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="41040004"/>
             <display value="Down-syndroom (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="51500006"/>
             <display value="trisomie 18 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="21111006"/>
             <display value="trisomie 13 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.13.22"/>
-            <code value="7"/>
-            <display value="Andere numerieke chromosomale afwijkingen"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="Overige chromosomale afwijkingen"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.22"/>
+         <concept>
+            <code value="7"/>
+            <display value="Andere numerieke chromosomale afwijkingen"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:46a5ed27-1d4b-4a10-9f52-38e9a980d6d5"/>
+      <timestamp value="2021-06-18T15:20:46.463+02:00"/>
+      <total value="6"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="41040004"/>
+         <display value="Down-syndroom (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="51500006"/>
+         <display value="trisomie 18 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="21111006"/>
+         <display value="trisomie 13 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.22"/>
+         <code value="7"/>
+         <display value="Andere numerieke chromosomale afwijkingen"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="Overige chromosomale afwijkingen"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

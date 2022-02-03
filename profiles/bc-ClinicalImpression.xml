@@ -2,9 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ClinicalImpression" />
   <url value="https://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
+  <version value="1.0.0" />
   <name value="bc-ClinicalImpression" />
+  <title value="bc-ClinicalImpression" />
   <status value="draft" />
+  <publisher value="Nictiz" />
   <description value="A ClinicalImpression profile describing the caregiver's professional assessment around the woman's pregnancy as defined by BabyConnect." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="gebz-peri-v3.2" />
@@ -40,7 +44,6 @@
       <path value="ClinicalImpression.extension" />
       <sliceName value="management" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
@@ -60,6 +63,24 @@
         <comment value="Beleid" />
       </mapping>
     </element>
+    <element id="ClinicalImpression.subject">
+      <path value="ClinicalImpression.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.context">
+      <path value="ClinicalImpression.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
     <element id="ClinicalImpression.effective[x]:effectiveDateTime">
       <path value="ClinicalImpression.effectiveDateTime" />
       <sliceName value="effectiveDateTime" />
@@ -76,13 +97,33 @@
       <path value="ClinicalImpression.assessor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2627" />
         <comment value="Zorgverlener" />
       </mapping>
+    </element>
+    <element id="ClinicalImpression.assessor.extension">
+      <path value="ClinicalImpression.assessor.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ClinicalImpression.assessor.extension:practitionerRole">
+      <path value="ClinicalImpression.assessor.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
+      </type>
     </element>
     <element id="ClinicalImpression.investigation.item.extension">
       <path value="ClinicalImpression.investigation.item.extension" />

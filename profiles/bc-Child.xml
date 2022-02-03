@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-Child" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
-  <version value="0.1.1" />
+  <version value="1.1.0" />
   <name value="bc-Child" />
   <title value="bc-Child" />
   <status value="draft" />
@@ -170,10 +170,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
@@ -186,30 +188,6 @@
         <code value="Address" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address" />
       </type>
-    </element>
-    <element id="Patient.extension:birthPlace.valueAddress:valueAddress.country.extension">
-      <path value="Patient.extension.valueAddress.country.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.extension:birthPlace.valueAddress:valueAddress.country.extension:countryCode">
-      <path value="Patient.extension.valueAddress.country.extension" />
-      <sliceName value="countryCode" />
-    </element>
-    <element id="Patient.extension:birthPlace.valueAddress:valueAddress.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="Patient.extension.valueAddress.country.extension.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -263,10 +241,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.name.family.extension:humannameOwnPrefix">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannameOwnPrefix" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82054" />
@@ -276,6 +256,7 @@
     <element id="Patient.name.family.extension:humannamePartnerPrefix">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannamePartnerPrefix" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82054" />
@@ -307,10 +288,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.gender.extension:birthSex">
       <path value="Patient.gender.extension" />
       <sliceName value="birthSex" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -350,10 +333,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.birthDate.extension:birthTime">
       <path value="Patient.birthDate.extension" />
       <sliceName value="birthTime" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
@@ -389,10 +374,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.address.country.extension:countryCode">
       <path value="Patient.address.country.extension" />
       <sliceName value="countryCode" />
+      <min value="0" />
     </element>
     <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
       <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
@@ -421,10 +408,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.contact.address.country.extension:countryCode">
       <path value="Patient.contact.address.country.extension" />
       <sliceName value="countryCode" />
+      <min value="0" />
     </element>
     <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
       <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
@@ -435,6 +424,14 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Patient.communication.language">
+      <path value="Patient.communication.language" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9743" />
+        <comment value="Hoofdtaal thuis" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

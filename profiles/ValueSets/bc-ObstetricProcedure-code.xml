@@ -1,49 +1,50 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="bc-ObstetricProcedure-code"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <url value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code"/>
-    <version value="1.0.0"/>
-    <name value="bc-ObstetricProcedure-code"/>
-    <title value="bc-ObstetricProcedure-code"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="Nictiz"/>
-    <description value="bc-ObstetricProcedure-code"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
+   <id value="bc-ObstetricProcedure-code"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <url value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-code"/>
+   <version value="1.0.0"/>
+   <name value="bc-ObstetricProcedure-code"/>
+   <title value="bc-ObstetricProcedure-code"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="bc-ObstetricProcedure-code"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
             <!-- 2.3 -->
             <!-- InterventieBeginBaring -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052" />
-            <!-- VaginaleKunstverlossing -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000" />
-            <!-- OverigeInterventies -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.20--20161123204523" />
-            <!-- IntraUterineBehandeling22 -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.26--20140919115814" />
-            <!-- 3.2 -->
-            <!-- VerrichtingType_Zwangerschap -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.307--20200226094046"/>
-            <!-- VerrichtingType_Maternaal -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.303--20200213102349"/>
-            <!-- VerrichtingType_Kindspecifiek -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.288--20200123134654"/>
-            <!-- Onderzoektype -->
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120" />
-        </include>
-        <include>
-            <system value="PerinatologyProceduresPRN"/>
-            <concept>
-                <code value="PRN540701"/>
-                 <display value="Episiotomie"/>
-            </concept>
-            <concept>
-                <code value="PRN540201"/>
-                <display value="Bijstimulatie toegediend"/>
-            </concept>
-        </include>
-    </compose>    
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052"/>
+         <!-- VaginaleKunstverlossing -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.181--20140102000000"/>
+         <!-- OverigeInterventies -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.20--20161123204523"/>
+         <!-- IntraUterineBehandeling22 -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.26--20140919115814"/>
+         <!-- 3.2 -->
+         <!-- VerrichtingType_Zwangerschap -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.307--20200226094046"/>
+         <!-- VerrichtingType_Maternaal -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.303--20200213102349"/>
+         <!-- VerrichtingType_Kindspecifiek -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.288--20200123134654"/>
+         <!-- Onderzoektype -->
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120"/>
+      </include>
+      <include>
+         <system value="PerinatologyProceduresPRN"/>
+         <concept>
+            <code value="PRN540701"/>
+            <display value="Episiotomie"/>
+         </concept>
+         <concept>
+            <code value="PRN540201"/>
+            <display value="Bijstimulatie toegediend"/>
+         </concept>
+      </include>
+   </compose>
 </ValueSet>

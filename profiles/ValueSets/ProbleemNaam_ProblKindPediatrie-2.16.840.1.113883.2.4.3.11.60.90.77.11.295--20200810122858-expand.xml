@@ -1,1096 +1,1096 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.295--20200810122858"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-08-10T12:28:58+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.295--20200810122858"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.295"/>
-    </identifier>
-    <version value="2020-08-10T12:28:58"/>
-    <name value="ProbleemNaam_ProblKindPediatrie"/>
-    <title value="ProbleemNaam_Problematiek Kind (Pediatrie)"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="ProbleemNaam_Problematiek Kind (Pediatrie)"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="363225006"/>
-                <display value="neonatale aandoening van ademhalingsstelsel (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="7550008"/>
-                <display value="passagère tachypneu van neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="IRDS (Ongeclassificeerd)"/>
-                </extension>
-                <code value="46775006"/>
-                <display value="'respiratory distress'-syndroom bij pasgeborene (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="42971000146104"/>
-                <display value="'respiratory distress'-syndroom bij pasgeborene graad 1 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="42981000146102"/>
-                <display value="'respiratory distress'-syndroom bij pasgeborene graad 2 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="42991000146100"/>
-                <display value="'respiratory distress'-syndroom bij pasgeborene graad 3 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="43001000146101"/>
-                <display value="'respiratory distress'-syndroom bij pasgeborene graad 4 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="80423007"/>
-                <display value="spontane pneumothorax (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="36118008"/>
-                <display value="pneumothorax (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="49756002"/>
-                <display value="perinatale pneumothorax (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="278927005"/>
-                <display value="meconium-aspiratie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276533002"/>
-                <display value="neonataal aspiratiesyndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206292002"/>
-                <display value="meconiumaspiratiesyndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="67569000"/>
-                <display value="bronchopulmonale dysplasie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="22021000146102"/>
-                <display value="bronchopulmonale dysplasie graad 1 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="22031000146100"/>
-                <display value="bronchopulmonale dysplasie graad 2 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="22041000146108"/>
-                <display value="bronchopulmonale dysplasie graad 3 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="363696006"/>
-                <display value="neonatale cardiovasculaire aandoening (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276519002"/>
-                <display value="neonatale hypotensie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206596003"/>
-                <display value="neonatale hypertensie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="83330001"/>
-                <display value="persisterende ductus arteriosus (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="698247007"/>
-                <display value="hartritmestoornis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="195506001"/>
-                <display value="idiopathische hypotensie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="234171009"/>
-                <display value="medicatiegeïnduceerde hypotensie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="45007003"/>
-                <display value="hypotensie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="72654001"/>
-                <display value="supraventriculaire hartritmestoornis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="128271002"/>
-                <display value="neonatale infectieziekte (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="82353009"/>
-                <display value="congenitale infectieziekte (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="52079000"/>
-                <display value="congenitale humaan-immunodeficiëntievirus-infectie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="59527008"/>
-                <display value="congenitale cytomegalovirusinfectie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="35742006"/>
-                <display value="congenitale syfilis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="73893000"/>
-                <display value="congenitale toxoplasmose (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="1857005"/>
-                <display value="congenitaal rubellasyndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="91576008"/>
-                <display value="congenitale infectie door herpes-simplexvirus (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276660001"/>
-                <display value="congenitale virusinfectie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="9331000146100"/>
-                <display value="verdenking op sepsis (situatie)"/>
-            </concept>
-            <concept>
-                <code value="7180009"/>
-                <display value="meningitis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="473130003"/>
-                <display value="verdenking op infectieziekte (situatie)"/>
-            </concept>
-            <concept>
-                <code value="10001005"/>
-                <display value="bacteriële sepsis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206376005"/>
-                <display value="neonatale sepsis (aandoening)"/>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Ontstaan van een nosocomiale infectie minstens 48 uur nadat een lijn is ingebracht tot 48 uur nadat een lijn is verwijderd.Start infectie: &gt; 72 uur na geboorte EN Centrale lijn minstens 2 kalenderdagen in situ OF Infectie start op dag van verwijdering lijn of de daaropvolgende dag* Criterium 1 (bloedkweek positief, geen huidflora):Er zijn voor de patiënt één of meer, door het laboratorium gerapporteerde, positieve bloedkweken EN het gekweekte micro-organisme is geen normale huidflora EN deze bevindingen kunnen niet worden toegeschreven aan een infectie elders in het lichaam.* Criterium 2 (bloedkweek positief met huidflora)De patiënt heeft klinische verschijnselen van sepsis.2AEN tenminste twee, op verschillende momenten* van elkaar afgenomen positieve bloedkweken met normale huidflora.EN deze symptomen en het in het bloed gekweekte micro-organisme zijn niet afkomstig van een infectiebron elders in het lichaam.* Op dezelfde danwel daaropvolgende kalenderdag / verschillende afname plekkenNB: verschijnselen moeten optreden in ‘infectiewindow’: 3 dagen voor en/of 3 dagen na dag van afname bloedkweek.2BEN tenminste één, positieve bloedkweek met normale huidflora.EN deze symptomen en de door het laboratorium gerapporteerde in het bloed gekweekte micro- organisme is niet afkomstig van een infectiebron elders in het lichaam, bijv NECEN het CRP is &gt; 10 mg/L in de eerste 36 uur na start infectie."/>
-                </extension>
-                <code value="736152001"/>
-                <display value="bloedbaaninfectie gelijktijdig met en door centraal veneuze katheter in situ (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="68566005"/>
-                <display value="urineweginfectie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="21841000146106"/>
-                <display value="urineweginfectie bij congenitale afwijking van urinewegen (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="233619008"/>
-                <display value="neonatale pneumonie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="4120002"/>
-                <display value="bronchiolitis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="42052009"/>
-                <display value="infectie van navelstrengstomp bij neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="63171007"/>
-                <display value="acute infectieziekte (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="39367000"/>
-                <display value="inflammatoire aandoening van centraal zenuwstelsel (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="119292006"/>
-                <display value="aandoening van tractus gastrointestinalis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="2707005"/>
-                <display value="necrotiserende enterocolitis bij foetus of pasgeborene (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="788988003"/>
-                <display value="necrotiserende enterocolitis bij neonaat stadium IIA volgens Bell (aandoening) Bell stadium 2a (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="788989006"/>
-                <display value="necrotiserende enterocolitis bij neonaat stadium IIB volgens Bell (aandoening)ell stadium 2b (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="788990002"/>
-                <display value="necrotiserende enterocolitis bij neonaat stadium IIIA volgens Bell (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="788991003"/>
-                <display value="necrotiserende enterocolitis bij neonaat stadium IIIB volgens Bell (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="56905009"/>
-                <display value="darmperforatie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="69800000"/>
-                <display value="reuscelhepatitis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="21401000146106"/>
-                <display value="hematologische aandoening (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="111293003"/>
-                <display value="veneuze trombose (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="32984002"/>
-                <display value="polycythaemia neonatorum (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="41661000146105"/>
-                <display value="neonatale arteriële trombose (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="271737000"/>
-                <display value="anemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="82835005"/>
-                <display value="neonatale trombocytopenie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="414028007"/>
-                <display value="aandoening van hemopoëtisch systeem bij neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="13404009"/>
-                <display value="tweelingtransfusiesyndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="736652002+736653007"/>
-                <display value="neonatale stoornis van metabolisme (aandoening) + Neonatal disorder of endocrine system (disorder)"/>
-            </concept>
-            <concept>
-                <code value="80006005"/>
-                <display value="stoornis van bilirubinemetabolisme (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="14783006"/>
-                <display value="hyperbilirubinemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="281610001"/>
-                <display value="neonatale hyperbilirubinemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="18165001"/>
-                <display value="icterus (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="9326001"/>
-                <display value="geconjugeerde hyperbilirubinemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="7752002"/>
-                <display value="niet-geconjugeerde hyperbilirubinemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="50143004"/>
-                <display value="kernicterus (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="302866003"/>
-                <display value="hypoglykemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="52767006"/>
-                <display value="neonatale hypoglykemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="190268003"/>
-                <display value="congenitale hypothyroïdie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276565004"/>
-                <display value="neonatale struma (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="428300000"/>
-                <display value="verdenking op congenitale hypothyreoïdie (situatie)"/>
-            </concept>
-            <concept>
-                <code value="80394007"/>
-                <display value="hyperglykemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276557002"/>
-                <display value="neonatale hyperglykemie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="44513007"/>
-                <display value="congenitale malformatie van nier (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="118940003"/>
-                <display value="aandoening van zenuwstelsel (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="703300001"/>
-                <display value="hypoxisch-ischemische encefalopathie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="95628005"/>
-                <display value="neonatale encefalopathie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="413654009"/>
-                <display value="asfyxie bij geboorte (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="87476004"/>
-                <display value="neonatale convulsies (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="442731005"/>
-                <display value="afwijking op beeldvormend onderzoek van hersenen (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="206395003"/>
-                <display value="niet-traumatische intraventriculaire bloeding graad 1 bij foetus en/of neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206396002"/>
-                <display value="niet-traumatische intraventriculaire bloeding graad 2 bij foetus en/of neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206397006"/>
-                <display value="niet-traumatische intraventriculaire bloeding graad 3 bij foetus en/of neonaat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="722580004"/>
-                <display value="foetale of neonatale niet-traumatische intraventriculaire bloeding graad 4 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="371116000"/>
-                <display value="posthemorragische hydrocefalie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="206576006"/>
-                <display value="cerebrale ischemie bij pasgeborene (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="22711000146109"/>
-                <display value="cerebrale ischemie in stroomgebied van arteria cerebri anterior (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="22731000146102"/>
-                <display value="cerebrale ischemie in stroomgebied van arteria cerebri posterior (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="432504007"/>
-                <display value="cerebraal infarct (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="230690007"/>
-                <display value="cerebrovasculair accident (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="230769007"/>
-                <display value="periventriculaire leukomalacie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="17281000146102"/>
-                <display value="perinatale cerebellaire bloeding (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="75038005"/>
-                <display value="cerebellaire bloeding (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276647007"/>
-                <display value="perinatale intracraniële bloeding (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="205294008"/>
-                <display value="neonatale hypotonie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="398151007"/>
-                <display value="verminderde spiertonus (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="56731001"/>
-                <display value="verhoogde spiertonus (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="267574006"/>
-                <display value="aandoeningen van zenuwstelsel en zintuigen (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="415297005"/>
-                <display value="prematurenretinopathie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="408847006"/>
-                <display value="prematurenretinopathie stadium 1 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="408848001"/>
-                <display value="prematurenretinopathie stadium 2 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="408849009"/>
-                <display value="prematurenretinopathie stadium 3 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="115861000146106"/>
-                <display value="prematurenretinopathie stadium 4a (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="115871000146100"/>
-                <display value="prematurenretinopathie stadium 4b (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="408851008"/>
-                <display value="prematurenretinopathie stadium 5 (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="56341000146109"/>
-                <display value="plus disease (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="115881000146103"/>
-                <display value="agressieve posterieure prematurenretinopathie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="95827002"/>
-                <display value="congenitale gehoorstoornis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="771299009"/>
-                <display value="prematuriteit van zuigeling (aandoening)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="overig"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:5307a624-085d-484b-9dea-98cf20d0709a"/>
-        <timestamp value="2021-06-18T15:20:05.883+02:00"/>
-        <total value="117"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-08-10T12:28:58+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.295--20200810122858"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.295"/>
+   </identifier>
+   <version value="2020-08-10T12:28:58"/>
+   <name value="ProbleemNaam_ProblKindPediatrie"/>
+   <title value="ProbleemNaam_Problematiek Kind (Pediatrie)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="ProbleemNaam_Problematiek Kind (Pediatrie)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="363225006"/>
             <display value="neonatale aandoening van ademhalingsstelsel (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="7550008"/>
             <display value="passagère tachypneu van neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="IRDS (Ongeclassificeerd)"/>
+            </extension>
             <code value="46775006"/>
             <display value="'respiratory distress'-syndroom bij pasgeborene (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="42971000146104"/>
             <display value="'respiratory distress'-syndroom bij pasgeborene graad 1 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="42981000146102"/>
             <display value="'respiratory distress'-syndroom bij pasgeborene graad 2 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="42991000146100"/>
             <display value="'respiratory distress'-syndroom bij pasgeborene graad 3 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="43001000146101"/>
             <display value="'respiratory distress'-syndroom bij pasgeborene graad 4 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="80423007"/>
             <display value="spontane pneumothorax (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="36118008"/>
             <display value="pneumothorax (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="49756002"/>
             <display value="perinatale pneumothorax (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="278927005"/>
             <display value="meconium-aspiratie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276533002"/>
             <display value="neonataal aspiratiesyndroom (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206292002"/>
             <display value="meconiumaspiratiesyndroom (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="67569000"/>
             <display value="bronchopulmonale dysplasie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="22021000146102"/>
             <display value="bronchopulmonale dysplasie graad 1 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="22031000146100"/>
             <display value="bronchopulmonale dysplasie graad 2 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="22041000146108"/>
             <display value="bronchopulmonale dysplasie graad 3 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="363696006"/>
             <display value="neonatale cardiovasculaire aandoening (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276519002"/>
             <display value="neonatale hypotensie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206596003"/>
             <display value="neonatale hypertensie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="83330001"/>
             <display value="persisterende ductus arteriosus (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="698247007"/>
             <display value="hartritmestoornis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="195506001"/>
             <display value="idiopathische hypotensie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="234171009"/>
             <display value="medicatiegeïnduceerde hypotensie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="45007003"/>
             <display value="hypotensie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="72654001"/>
             <display value="supraventriculaire hartritmestoornis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="128271002"/>
             <display value="neonatale infectieziekte (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="82353009"/>
             <display value="congenitale infectieziekte (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="52079000"/>
             <display value="congenitale humaan-immunodeficiëntievirus-infectie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="59527008"/>
             <display value="congenitale cytomegalovirusinfectie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="35742006"/>
             <display value="congenitale syfilis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="73893000"/>
             <display value="congenitale toxoplasmose (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="1857005"/>
             <display value="congenitaal rubellasyndroom (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="91576008"/>
             <display value="congenitale infectie door herpes-simplexvirus (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276660001"/>
             <display value="congenitale virusinfectie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="9331000146100"/>
             <display value="verdenking op sepsis (situatie)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="7180009"/>
             <display value="meningitis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="473130003"/>
             <display value="verdenking op infectieziekte (situatie)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="10001005"/>
             <display value="bacteriële sepsis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206376005"/>
             <display value="neonatale sepsis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Ontstaan van een nosocomiale infectie minstens 48 uur nadat een lijn is ingebracht tot 48 uur nadat een lijn is verwijderd.Start infectie: &gt; 72 uur na geboorte EN Centrale lijn minstens 2 kalenderdagen in situ OF Infectie start op dag van verwijdering lijn of de daaropvolgende dag* Criterium 1 (bloedkweek positief, geen huidflora):Er zijn voor de patiënt één of meer, door het laboratorium gerapporteerde, positieve bloedkweken EN het gekweekte micro-organisme is geen normale huidflora EN deze bevindingen kunnen niet worden toegeschreven aan een infectie elders in het lichaam.* Criterium 2 (bloedkweek positief met huidflora)De patiënt heeft klinische verschijnselen van sepsis.2AEN tenminste twee, op verschillende momenten* van elkaar afgenomen positieve bloedkweken met normale huidflora.EN deze symptomen en het in het bloed gekweekte micro-organisme zijn niet afkomstig van een infectiebron elders in het lichaam.* Op dezelfde danwel daaropvolgende kalenderdag / verschillende afname plekkenNB: verschijnselen moeten optreden in ‘infectiewindow’: 3 dagen voor en/of 3 dagen na dag van afname bloedkweek.2BEN tenminste één, positieve bloedkweek met normale huidflora.EN deze symptomen en de door het laboratorium gerapporteerde in het bloed gekweekte micro- organisme is niet afkomstig van een infectiebron elders in het lichaam, bijv NECEN het CRP is &gt; 10 mg/L in de eerste 36 uur na start infectie."/>
+            </extension>
             <code value="736152001"/>
             <display value="bloedbaaninfectie gelijktijdig met en door centraal veneuze katheter in situ (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="68566005"/>
             <display value="urineweginfectie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="21841000146106"/>
             <display value="urineweginfectie bij congenitale afwijking van urinewegen (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="233619008"/>
             <display value="neonatale pneumonie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="4120002"/>
             <display value="bronchiolitis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="42052009"/>
             <display value="infectie van navelstrengstomp bij neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="63171007"/>
             <display value="acute infectieziekte (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="39367000"/>
             <display value="inflammatoire aandoening van centraal zenuwstelsel (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="119292006"/>
             <display value="aandoening van tractus gastrointestinalis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="2707005"/>
             <display value="necrotiserende enterocolitis bij foetus of pasgeborene (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="788988003"/>
             <display value="necrotiserende enterocolitis bij neonaat stadium IIA volgens Bell (aandoening) Bell stadium 2a (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="788989006"/>
             <display value="necrotiserende enterocolitis bij neonaat stadium IIB volgens Bell (aandoening)ell stadium 2b (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="788990002"/>
             <display value="necrotiserende enterocolitis bij neonaat stadium IIIA volgens Bell (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="788991003"/>
             <display value="necrotiserende enterocolitis bij neonaat stadium IIIB volgens Bell (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="56905009"/>
             <display value="darmperforatie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="69800000"/>
             <display value="reuscelhepatitis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="21401000146106"/>
             <display value="hematologische aandoening (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="111293003"/>
             <display value="veneuze trombose (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="32984002"/>
             <display value="polycythaemia neonatorum (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="41661000146105"/>
             <display value="neonatale arteriële trombose (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="271737000"/>
             <display value="anemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="82835005"/>
             <display value="neonatale trombocytopenie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="414028007"/>
             <display value="aandoening van hemopoëtisch systeem bij neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="13404009"/>
             <display value="tweelingtransfusiesyndroom (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="736652002+736653007"/>
             <display value="neonatale stoornis van metabolisme (aandoening) + Neonatal disorder of endocrine system (disorder)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="80006005"/>
             <display value="stoornis van bilirubinemetabolisme (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="14783006"/>
             <display value="hyperbilirubinemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="281610001"/>
             <display value="neonatale hyperbilirubinemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="18165001"/>
             <display value="icterus (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="9326001"/>
             <display value="geconjugeerde hyperbilirubinemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="7752002"/>
             <display value="niet-geconjugeerde hyperbilirubinemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="50143004"/>
             <display value="kernicterus (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="302866003"/>
             <display value="hypoglykemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="52767006"/>
             <display value="neonatale hypoglykemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="190268003"/>
             <display value="congenitale hypothyroïdie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276565004"/>
             <display value="neonatale struma (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="428300000"/>
             <display value="verdenking op congenitale hypothyreoïdie (situatie)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="80394007"/>
             <display value="hyperglykemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276557002"/>
             <display value="neonatale hyperglykemie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="44513007"/>
             <display value="congenitale malformatie van nier (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="118940003"/>
             <display value="aandoening van zenuwstelsel (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="703300001"/>
             <display value="hypoxisch-ischemische encefalopathie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="95628005"/>
             <display value="neonatale encefalopathie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="413654009"/>
             <display value="asfyxie bij geboorte (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="87476004"/>
             <display value="neonatale convulsies (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="442731005"/>
             <display value="afwijking op beeldvormend onderzoek van hersenen (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <abstract value="true"/>
-            <code value="70611002"/>
-            <display value="perinatale intraventriculaire bloeding (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206395003"/>
             <display value="niet-traumatische intraventriculaire bloeding graad 1 bij foetus en/of neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206396002"/>
             <display value="niet-traumatische intraventriculaire bloeding graad 2 bij foetus en/of neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206397006"/>
             <display value="niet-traumatische intraventriculaire bloeding graad 3 bij foetus en/of neonaat (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="722580004"/>
             <display value="foetale of neonatale niet-traumatische intraventriculaire bloeding graad 4 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="371116000"/>
             <display value="posthemorragische hydrocefalie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="206576006"/>
             <display value="cerebrale ischemie bij pasgeborene (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="22711000146109"/>
             <display value="cerebrale ischemie in stroomgebied van arteria cerebri anterior (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="22731000146102"/>
             <display value="cerebrale ischemie in stroomgebied van arteria cerebri posterior (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="432504007"/>
             <display value="cerebraal infarct (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="230690007"/>
             <display value="cerebrovasculair accident (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="230769007"/>
             <display value="periventriculaire leukomalacie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="17281000146102"/>
             <display value="perinatale cerebellaire bloeding (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="75038005"/>
             <display value="cerebellaire bloeding (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="276647007"/>
             <display value="perinatale intracraniële bloeding (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="205294008"/>
             <display value="neonatale hypotonie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="398151007"/>
             <display value="verminderde spiertonus (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="56731001"/>
             <display value="verhoogde spiertonus (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="267574006"/>
             <display value="aandoeningen van zenuwstelsel en zintuigen (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="415297005"/>
             <display value="prematurenretinopathie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="408847006"/>
             <display value="prematurenretinopathie stadium 1 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="408848001"/>
             <display value="prematurenretinopathie stadium 2 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="408849009"/>
             <display value="prematurenretinopathie stadium 3 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="115861000146106"/>
             <display value="prematurenretinopathie stadium 4a (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="115871000146100"/>
             <display value="prematurenretinopathie stadium 4b (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="408851008"/>
             <display value="prematurenretinopathie stadium 5 (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="56341000146109"/>
             <display value="plus disease (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="115881000146103"/>
             <display value="agressieve posterieure prematurenretinopathie (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="95827002"/>
             <display value="congenitale gehoorstoornis (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="771299009"/>
             <display value="prematuriteit van zuigeling (aandoening)"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="OTH"/>
             <display value="overig"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:5307a624-085d-484b-9dea-98cf20d0709a"/>
+      <timestamp value="2021-06-18T15:20:05.883+02:00"/>
+      <total value="117"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="363225006"/>
+         <display value="neonatale aandoening van ademhalingsstelsel (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="7550008"/>
+         <display value="passagère tachypneu van neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="46775006"/>
+         <display value="'respiratory distress'-syndroom bij pasgeborene (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="42971000146104"/>
+         <display value="'respiratory distress'-syndroom bij pasgeborene graad 1 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="42981000146102"/>
+         <display value="'respiratory distress'-syndroom bij pasgeborene graad 2 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="42991000146100"/>
+         <display value="'respiratory distress'-syndroom bij pasgeborene graad 3 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="43001000146101"/>
+         <display value="'respiratory distress'-syndroom bij pasgeborene graad 4 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="80423007"/>
+         <display value="spontane pneumothorax (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="36118008"/>
+         <display value="pneumothorax (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="49756002"/>
+         <display value="perinatale pneumothorax (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="278927005"/>
+         <display value="meconium-aspiratie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276533002"/>
+         <display value="neonataal aspiratiesyndroom (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206292002"/>
+         <display value="meconiumaspiratiesyndroom (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="67569000"/>
+         <display value="bronchopulmonale dysplasie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="22021000146102"/>
+         <display value="bronchopulmonale dysplasie graad 1 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="22031000146100"/>
+         <display value="bronchopulmonale dysplasie graad 2 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="22041000146108"/>
+         <display value="bronchopulmonale dysplasie graad 3 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="363696006"/>
+         <display value="neonatale cardiovasculaire aandoening (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276519002"/>
+         <display value="neonatale hypotensie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206596003"/>
+         <display value="neonatale hypertensie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="83330001"/>
+         <display value="persisterende ductus arteriosus (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="698247007"/>
+         <display value="hartritmestoornis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="195506001"/>
+         <display value="idiopathische hypotensie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="234171009"/>
+         <display value="medicatiegeïnduceerde hypotensie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="45007003"/>
+         <display value="hypotensie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="72654001"/>
+         <display value="supraventriculaire hartritmestoornis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="128271002"/>
+         <display value="neonatale infectieziekte (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="82353009"/>
+         <display value="congenitale infectieziekte (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="52079000"/>
+         <display value="congenitale humaan-immunodeficiëntievirus-infectie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="59527008"/>
+         <display value="congenitale cytomegalovirusinfectie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="35742006"/>
+         <display value="congenitale syfilis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="73893000"/>
+         <display value="congenitale toxoplasmose (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="1857005"/>
+         <display value="congenitaal rubellasyndroom (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="91576008"/>
+         <display value="congenitale infectie door herpes-simplexvirus (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276660001"/>
+         <display value="congenitale virusinfectie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="9331000146100"/>
+         <display value="verdenking op sepsis (situatie)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="7180009"/>
+         <display value="meningitis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="473130003"/>
+         <display value="verdenking op infectieziekte (situatie)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="10001005"/>
+         <display value="bacteriële sepsis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206376005"/>
+         <display value="neonatale sepsis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="736152001"/>
+         <display value="bloedbaaninfectie gelijktijdig met en door centraal veneuze katheter in situ (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="68566005"/>
+         <display value="urineweginfectie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="21841000146106"/>
+         <display value="urineweginfectie bij congenitale afwijking van urinewegen (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="233619008"/>
+         <display value="neonatale pneumonie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="4120002"/>
+         <display value="bronchiolitis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="42052009"/>
+         <display value="infectie van navelstrengstomp bij neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="63171007"/>
+         <display value="acute infectieziekte (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="39367000"/>
+         <display value="inflammatoire aandoening van centraal zenuwstelsel (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="119292006"/>
+         <display value="aandoening van tractus gastrointestinalis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="2707005"/>
+         <display value="necrotiserende enterocolitis bij foetus of pasgeborene (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="788988003"/>
+         <display value="necrotiserende enterocolitis bij neonaat stadium IIA volgens Bell (aandoening) Bell stadium 2a (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="788989006"/>
+         <display value="necrotiserende enterocolitis bij neonaat stadium IIB volgens Bell (aandoening)ell stadium 2b (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="788990002"/>
+         <display value="necrotiserende enterocolitis bij neonaat stadium IIIA volgens Bell (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="788991003"/>
+         <display value="necrotiserende enterocolitis bij neonaat stadium IIIB volgens Bell (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="56905009"/>
+         <display value="darmperforatie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="69800000"/>
+         <display value="reuscelhepatitis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="21401000146106"/>
+         <display value="hematologische aandoening (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="111293003"/>
+         <display value="veneuze trombose (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="32984002"/>
+         <display value="polycythaemia neonatorum (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="41661000146105"/>
+         <display value="neonatale arteriële trombose (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="271737000"/>
+         <display value="anemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="82835005"/>
+         <display value="neonatale trombocytopenie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="414028007"/>
+         <display value="aandoening van hemopoëtisch systeem bij neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="13404009"/>
+         <display value="tweelingtransfusiesyndroom (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="736652002+736653007"/>
+         <display value="neonatale stoornis van metabolisme (aandoening) + Neonatal disorder of endocrine system (disorder)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="80006005"/>
+         <display value="stoornis van bilirubinemetabolisme (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="14783006"/>
+         <display value="hyperbilirubinemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="281610001"/>
+         <display value="neonatale hyperbilirubinemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="18165001"/>
+         <display value="icterus (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="9326001"/>
+         <display value="geconjugeerde hyperbilirubinemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="7752002"/>
+         <display value="niet-geconjugeerde hyperbilirubinemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="50143004"/>
+         <display value="kernicterus (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="302866003"/>
+         <display value="hypoglykemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="52767006"/>
+         <display value="neonatale hypoglykemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="190268003"/>
+         <display value="congenitale hypothyroïdie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276565004"/>
+         <display value="neonatale struma (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="428300000"/>
+         <display value="verdenking op congenitale hypothyreoïdie (situatie)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="80394007"/>
+         <display value="hyperglykemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276557002"/>
+         <display value="neonatale hyperglykemie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="44513007"/>
+         <display value="congenitale malformatie van nier (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="118940003"/>
+         <display value="aandoening van zenuwstelsel (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="703300001"/>
+         <display value="hypoxisch-ischemische encefalopathie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="95628005"/>
+         <display value="neonatale encefalopathie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="413654009"/>
+         <display value="asfyxie bij geboorte (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="87476004"/>
+         <display value="neonatale convulsies (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="442731005"/>
+         <display value="afwijking op beeldvormend onderzoek van hersenen (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <abstract value="true"/>
+         <code value="70611002"/>
+         <display value="perinatale intraventriculaire bloeding (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206395003"/>
+         <display value="niet-traumatische intraventriculaire bloeding graad 1 bij foetus en/of neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206396002"/>
+         <display value="niet-traumatische intraventriculaire bloeding graad 2 bij foetus en/of neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206397006"/>
+         <display value="niet-traumatische intraventriculaire bloeding graad 3 bij foetus en/of neonaat (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="722580004"/>
+         <display value="foetale of neonatale niet-traumatische intraventriculaire bloeding graad 4 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="371116000"/>
+         <display value="posthemorragische hydrocefalie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="206576006"/>
+         <display value="cerebrale ischemie bij pasgeborene (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="22711000146109"/>
+         <display value="cerebrale ischemie in stroomgebied van arteria cerebri anterior (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="22731000146102"/>
+         <display value="cerebrale ischemie in stroomgebied van arteria cerebri posterior (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="432504007"/>
+         <display value="cerebraal infarct (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="230690007"/>
+         <display value="cerebrovasculair accident (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="230769007"/>
+         <display value="periventriculaire leukomalacie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="17281000146102"/>
+         <display value="perinatale cerebellaire bloeding (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="75038005"/>
+         <display value="cerebellaire bloeding (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="276647007"/>
+         <display value="perinatale intracraniële bloeding (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="205294008"/>
+         <display value="neonatale hypotonie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="398151007"/>
+         <display value="verminderde spiertonus (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="56731001"/>
+         <display value="verhoogde spiertonus (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="267574006"/>
+         <display value="aandoeningen van zenuwstelsel en zintuigen (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="415297005"/>
+         <display value="prematurenretinopathie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="408847006"/>
+         <display value="prematurenretinopathie stadium 1 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="408848001"/>
+         <display value="prematurenretinopathie stadium 2 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="408849009"/>
+         <display value="prematurenretinopathie stadium 3 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="115861000146106"/>
+         <display value="prematurenretinopathie stadium 4a (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="115871000146100"/>
+         <display value="prematurenretinopathie stadium 4b (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="408851008"/>
+         <display value="prematurenretinopathie stadium 5 (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="56341000146109"/>
+         <display value="plus disease (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="115881000146103"/>
+         <display value="agressieve posterieure prematurenretinopathie (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="95827002"/>
+         <display value="congenitale gehoorstoornis (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="771299009"/>
+         <display value="prematuriteit van zuigeling (aandoening)"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="OTH"/>
+         <display value="overig"/>
+      </contains>
+   </expansion>
 </ValueSet>

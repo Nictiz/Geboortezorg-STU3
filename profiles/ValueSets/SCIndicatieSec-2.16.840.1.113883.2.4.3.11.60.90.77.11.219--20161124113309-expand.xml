@@ -1,106 +1,106 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.219--20161124113309"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2016-11-24T11:33:09+02:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.219--20161124113309"/>
-    <identifier>
-        <use value="official"/>
-        <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.219"/>
-    </identifier>
-    <version value="2.3.0"/>
-    <name value="SCIndicatieSec"/>
-    <title value="Indicatie secundaire sectio"/>
-    <status value="active"/>
-    <experimental value="false"/>
-    <publisher value="KNOV"/>
-    <description value="Indicatie secundaire sectio"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="237320005"/>
-                <display value="niet-vorderende eerste fase van partus (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="249166003"/>
-                <display value="niet-vorderende uitdrijving (bevinding)"/>
-            </concept>
-            <concept>
-                <code value="444433005:246090004=130955003"/>
-                <display value="Suspected fetal distress (situation)"/>
-            </concept>
-            <concept>
-                <code value="418138009"/>
-                <display value="bevinding betreffende toestand van patiënt (bevinding)"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="NI"/>
-                <display value="Geen informatie"/>
-            </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
-            <concept>
-                <code value="E"/>
-                <display value="Overig, medische reden"/>
-            </concept>
-            <concept>
-                <code value="F"/>
-                <display value="Overig, niet-medische reden"/>
-            </concept>
-        </include>
-    </compose>
-    <expansion>
-        <identifier value="urn:uuid:94b9288f-875f-4f90-af29-e76cc70b719b"/>
-        <timestamp value="2021-06-18T15:20:40.512+02:00"/>
-        <total value="7"/>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-24T11:33:09+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.219--20161124113309"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/vs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.60.90.77.11.219"/>
+   </identifier>
+   <version value="2.3.0"/>
+   <name value="SCIndicatieSec"/>
+   <title value="Indicatie secundaire sectio"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Indicatie secundaire sectio"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
             <code value="237320005"/>
             <display value="niet-vorderende eerste fase van partus (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="249166003"/>
             <display value="niet-vorderende uitdrijving (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="444433005:246090004=130955003"/>
             <display value="Suspected fetal distress (situation)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
+         </concept>
+         <concept>
             <code value="418138009"/>
             <display value="bevinding betreffende toestand van patiënt (bevinding)"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
-            <code value="E"/>
-            <display value="Overig, medische reden"/>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
-            <code value="F"/>
-            <display value="Overig, niet-medische reden"/>
-        </contains>
-        <contains>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
             <code value="NI"/>
             <display value="Geen informatie"/>
-        </contains>
-    </expansion>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
+         <concept>
+            <code value="E"/>
+            <display value="Overig, medische reden"/>
+         </concept>
+         <concept>
+            <code value="F"/>
+            <display value="Overig, niet-medische reden"/>
+         </concept>
+      </include>
+   </compose>
+   <expansion>
+      <identifier value="urn:uuid:94b9288f-875f-4f90-af29-e76cc70b719b"/>
+      <timestamp value="2021-06-18T15:20:40.512+02:00"/>
+      <total value="7"/>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="237320005"/>
+         <display value="niet-vorderende eerste fase van partus (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="249166003"/>
+         <display value="niet-vorderende uitdrijving (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="444433005:246090004=130955003"/>
+         <display value="Suspected fetal distress (situation)"/>
+      </contains>
+      <contains>
+         <system value="http://snomed.info/sct"/>
+         <code value="418138009"/>
+         <display value="bevinding betreffende toestand van patiënt (bevinding)"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
+         <code value="E"/>
+         <display value="Overig, medische reden"/>
+      </contains>
+      <contains>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
+         <code value="F"/>
+         <display value="Overig, niet-medische reden"/>
+      </contains>
+      <contains>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <code value="NI"/>
+         <display value="Geen informatie"/>
+      </contains>
+   </expansion>
 </ValueSet>

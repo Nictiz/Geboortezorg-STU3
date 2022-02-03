@@ -1,0 +1,118 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.202--20161123213413"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-23T21:34:13+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.202--20161123213413"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.202"/>
+   </identifier>
+   <version value="2.2.0"/>
+   <name value="PediatrischeVerwijsindicatie"/>
+   <title value="Pediatrische verwijsindicatie"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Pediatrische verwijsindicatie"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.52"/>
+         <concept>
+            <code value="10"/>
+            <display value="Maternale indicatie"/>
+         </concept>
+         <concept>
+            <code value="20"/>
+            <display value="Verdenking op congenitale afwijking"/>
+         </concept>
+         <concept>
+            <code value="30"/>
+            <display value="(verdenking op) Convulsies"/>
+         </concept>
+         <concept>
+            <code value="40"/>
+            <display value="(te verwachten) Onttrekkingsverschijnselen"/>
+         </concept>
+         <concept>
+            <code value="50"/>
+            <display value="Psychosociale indicatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="289261003"/>
+            <display value="probleem bij partus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="8571000146103"/>
+            <display value="gevolgen voor foetus of neonaat van kunstverlossing (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="289365005"/>
+            <display value="bevinding betreffende afwijkende stand van foetus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="12729009"/>
+            <display value="langdurig gebroken vliezen (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="168092006"/>
+            <display value="meconiumhoudend vruchtwater (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="276614003"/>
+            <display value="afwijking bij zwangerschap (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="276609002"/>
+            <display value="afwijking van geboortegewicht (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="413654009"/>
+            <display value="asfyxie bij geboorte (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="34681009"/>
+            <display value="perinatale respiratoire distress (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="52767006"/>
+            <display value="neonatale hypoglykemie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="473130003"/>
+            <display value="verdenking op infectieziekte (situatie)"/>
+         </concept>
+         <concept>
+            <code value="387712008"/>
+            <display value="neonatale icterus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="161838002"/>
+            <display value="probleem met eetgedrag (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

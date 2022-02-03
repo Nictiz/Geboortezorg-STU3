@@ -1,0 +1,58 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.19--20141222113040"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-12-22T11:30:40+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.19--20141222113040"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.19"/>
+   </identifier>
+   <version value="2014-12-22T11:30:40"/>
+   <name value="AmniotomieMoment"/>
+   <title value="AmniotomieMoment"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="AmniotomieMoment"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.3.101"/>
+         <concept>
+            <code value="4"/>
+            <display value="Als interventie begin baring"/>
+         </concept>
+         <concept>
+            <code value="1"/>
+            <display value="Tijdens ontsluitingsperiode &lt;= 3 cm"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="Tijdens ontsluitingsperiode &gt; 3 cm"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="Tijdens uitdrijving"/>
+         </concept>
+         <concept>
+            <code value="5"/>
+            <display value="Bij sectio"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
