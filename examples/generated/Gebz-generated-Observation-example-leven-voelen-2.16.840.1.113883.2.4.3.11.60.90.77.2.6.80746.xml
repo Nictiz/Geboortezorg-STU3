@@ -1,45 +1,45 @@
-<!-- auto generated example -->
-<Observation xmlns="http://hl7.org/fhir">
-   <id value="example-leven-voelen-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80746" />
+<Condition xmlns="http://hl7.org/fhir">
+   
+   <id value="example-leven-voelen-2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80746"/>
    <meta>
-      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
+      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
    </meta>
    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
       <valueReference>
-         <reference value="Condition/Zwangerschap" />
-         <display value="Zwangerschap" />
+         <reference value="Condition/Zwangerschap"/>
+         <display value="Zwangerschap"/>
       </valueReference>
    </extension>
-   <status value="final" />
+   <status value="final"/>
    <code>
       <coding>
-         <system value="http://snomed.info/sct" />
-         <code value="364618000" />
-         <display value="Pattern of fetal movement (observable entity)" />
+         <system value="http://snomed.info/sct"/>
+         <code value="364618000"/>
+         <display value="Pattern of fetal movement (observable entity)"/>
       </coding>
    </code>
    <subject>
-      <reference value="Patient/EXAMPLE" />
-      <display value="example" />
+      <reference value="Patient/EXAMPLE"/>
+      <display value="example"/>
    </subject>
    <context>
-      <reference value="EpisodeOfCare/Zwangerschapsdossier" />
+      <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
    </context>
-   <effectiveDateTime value="2021-03-01" />
+   <effectiveDateTime value="2021-03-01"/>
    <valueCodeableConcept>
       <coding>
-         <system value="http://snomed.info/sct" />
-         <code value="289431008" />
-         <display value="Fetal movements present (finding)" />
+         <system value="http://snomed.info/sct"/>
+         <code value="289431008"/>
+         <display value="Fetal movements present (finding)"/>
       </coding>
    </valueCodeableConcept>
-   <comment value="moeder voelt regelmatig leven" />
+   <comment value="moeder voelt regelmatig leven"/>
    <method>
       <coding>
-         <system value="http://snomed.info/sct" />
-         <code value="711490008" />
-         <display value="Doppler fetal echocardiography (procedure)" />
+         <system value="http://snomed.info/sct"/>
+         <code value="711490008"/>
+         <display value="Doppler fetal echocardiography (procedure)"/>
       </coding>
    </method>
-</Observation>
+</Condition>
