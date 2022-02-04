@@ -86,6 +86,107 @@
         <comment value="Aanvang" />
       </mapping>
     </element>
+    <element id="Condition.extension:causativeAgent">
+      <path value="Condition.extension" />
+      <sliceName value="causativeAgent" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-dueTo" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7896" />
+        <comment value="MicroorganismeSepsisMeningitis" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7897" />
+        <comment value="MicroorganismeCongenitaleInfectie" />
+      </mapping>
+    </element>
+    <element id="Condition.extension:causativeAgent.value[x]:valueCodeableConcept">
+      <path value="Condition.extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Condition.extension:causativeAgent.value[x]:microOrganismSepsisMeningitis">
+      <path value="Condition.extension.value[x]" />
+      <sliceName value="microOrganismSepsisMeningitis" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="MicroorganismeSepsisMeningCodelijst_LNR" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.249--20191205111425" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.extension:causativeAgent.value[x]:microOrganismCongenitalInfection">
+      <path value="Condition.extension.value[x]" />
+      <sliceName value="microOrganismCongenitalInfection" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="MicroorganismeCongInfectCodelijst_LNR" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.226--20180816141641" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.extension:lineSepsis">
+      <path value="Condition.extension" />
+      <sliceName value="lineSepsis" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-condition-linesepsis" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7899" />
+        <comment value="Lijnsepsis?" />
+      </mapping>
+    </element>
+    <element id="Condition.extension:onsetPeriod">
+      <path value="Condition.extension" />
+      <sliceName value="onsetPeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-condition-onsetPeriod" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7898" />
+        <comment value="Onset" />
+      </mapping>
+    </element>
+    <element id="Condition.extension:onsetPeriod.valueCodeableConcept:valueCodeableConcept">
+      <path value="Condition.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="OnsetCodelijst" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.283--20200101130352" />
+      </binding>
+    </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
       <comment value="A ConceptMap (https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-ConditionVerificationStatus) is available." />
