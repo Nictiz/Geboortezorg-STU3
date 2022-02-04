@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-clinicalimpression-procedure" />
-  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
   <name value="bc-clinicalimpression-procedure" />
   <status value="draft" />
   <description value="Extension on ClinicalImpression.investigation.item referring to the medical investigation Procedure." />
@@ -16,14 +16,14 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
     </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://nictiz.nl/fhir/StructureDefinition/nl-core-procedure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-procedure" />
       </type>
     </element>
   </differential>

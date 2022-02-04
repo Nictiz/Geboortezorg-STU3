@@ -1,9 +1,9 @@
 <ClinicalImpression xmlns="http://hl7.org/fhir">
     <id value="clinicalImpression" />
     <meta>
-        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
     </meta>
-    <extension url="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management">
         <valueCodeableConcept>
             <coding>
                 <system value="http://snomed.info/sct" />
@@ -41,7 +41,7 @@
             </coding>
         </code>
         <item>
-            <extension url="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure">
                 <valueReference>
                     <reference value="Procedure/nipt-test" />
                     <display value="Nipt test" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ClinicalImpression" />
-  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
   <version value="1.0.0" />
   <name value="bc-ClinicalImpression" />
   <title value="bc-ClinicalImpression" />
@@ -46,7 +46,7 @@
       <min value="0" />
       <type>
         <code value="Extension" />
-        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
       </type>
     </element>
     <element id="ClinicalImpression.extension:management.valueCodeableConcept:valueCodeableConcept">
@@ -143,7 +143,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-procedure" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
