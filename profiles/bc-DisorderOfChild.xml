@@ -90,7 +90,6 @@
       <path value="Condition.extension" />
       <sliceName value="causativeAgent" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-dueTo" />
@@ -105,6 +104,16 @@
         <map value="peri32-dataelement-7897" />
         <comment value="MicroorganismeCongenitaleInfectie" />
       </mapping>
+    </element>
+    <element id="Condition.extension:causativeAgent.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Condition.extension:causativeAgent.value[x]:valueCodeableConcept">
       <path value="Condition.extension.value[x]" />
@@ -133,6 +142,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.249--20191205111425" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7896" />
+        <comment value="MicroorganismeSepsisMeningitis" />
+      </mapping>
     </element>
     <element id="Condition.extension:causativeAgent.value[x]:microOrganismCongenitalInfection">
       <path value="Condition.extension.value[x]" />
@@ -147,6 +161,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.226--20180816141641" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7897" />
+        <comment value="MicroorganismeCongenitaleInfectie" />
+      </mapping>
     </element>
     <element id="Condition.extension:lineSepsis">
       <path value="Condition.extension" />

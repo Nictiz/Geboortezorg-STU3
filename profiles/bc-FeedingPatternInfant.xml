@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FeedingPatternInfant" />
+  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-FeedingPatternInfant" />
+  <name value="bc-FeedingPatternInfant" />
+  <title value="bc-FeedingPatternInfant" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="An Observation profile describing the infant's feeding pattern as defined by BabyConnect." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7937" />
+        <comment value="VoedingspatroonZuigeling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8757" />
+        <comment value="VoedingspatroonZuigeling" />
+      </mapping>
+    </element>
+    <element id="Observation.effectiveDateTime:effectiveDateTime">
+      <path value="Observation.effectiveDateTime" />
+      <sliceName value="effectiveDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7938" />
+        <comment value="VoedingspatroonZuigelingDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7941" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingSupplement">
+      <path value="Observation.component" />
+      <sliceName value="FeedingSupplement" />
+    </element>
+    <element id="Observation.component:FeedingSupplement.valueString:valueString">
+      <path value="Observation.component.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7939" />
+        <comment value="VoedingToevoeging" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingFrequency">
+      <path value="Observation.component" />
+      <sliceName value="FeedingFrequency" />
+    </element>
+    <element id="Observation.component:FeedingFrequency.valueQuantity:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7940" />
+        <comment value="VoedingFrequentie" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingType">
+      <path value="Observation.component" />
+      <sliceName value="FeedingType" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7944" />
+        <comment value="Voeding" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingType.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.component:FeedingType.extension:feedingMethod">
+      <path value="Observation.component.extension" />
+      <sliceName value="feedingMethod" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7946" />
+        <comment value="VoedingMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7945" />
+        <comment value="VoedingSoort" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingAdvice">
+      <path value="Observation.component" />
+      <sliceName value="FeedingAdvice" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7942" />
+        <comment value="Voedingsadvies" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingAdvice.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="11816003" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:FeedingAdvice.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:FeedingAdvice.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="11816003" />
+    </element>
+    <element id="Observation.component:FeedingAdvice.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="voorlichten over dieet (verrichting)" />
+    </element>
+    <element id="Observation.component:FeedingAdvice.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7943" />
+        <comment value="Voedingsadvies" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

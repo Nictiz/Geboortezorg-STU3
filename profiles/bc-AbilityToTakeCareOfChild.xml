@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-AbilityToTakeCareOfChild" />
+  <url value="https://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild" />
+  <name value="bc-AbilityToTakeCareOfChild" />
+  <title value="bc-AbilityToTakeCareOfChild" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="An Observation profile describing the woman's ability to take care of her child as defined by BabyConnect. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9982" />
+        <comment value="ZorgKind (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9983" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueBoolean">
+      <path value="Observation.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9992" />
+        <comment value="VaardigheidWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9986" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9986" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:uncertainty">
+      <path value="Observation.component" />
+      <sliceName value="uncertainty" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:uncertainty.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="405175009" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:uncertainty.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:uncertainty.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="405175009" />
+    </element>
+    <element id="Observation.component:uncertainty.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="gedrag omtrent ouderschap (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:uncertainty.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Zorg_voor_kind" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.292--20200623140138" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9985" />
+        <comment value="OnzekerheidWaarde" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

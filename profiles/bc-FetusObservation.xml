@@ -1,149 +1,161 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-FetusObservation"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
-  <version value="1.0.0"/>
-  <name value="bc-FetusObservation"/>
-  <title value="bc-FetusObservation"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-FetusObservation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <version value="1.0.0" />
+  <name value="bc-FetusObservation" />
+  <title value="bc-FetusObservation" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="An Observation profile describing fetus-related Observations in a pregnancy, such as movement and heart action, as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="An Observation profile describing fetus-related Observations in a pregnancy, such as movement and heart action, as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
   <differential>
-      <element id="Observation.extension">
-         <path value="Observation.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.extension:fetus">
-         <path value="Observation.extension"/>
-         <sliceName value="fetus"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3"/>
-         </type>
-      </element>
-      <element id="Observation.extension:fetus.valueReference:valueReference">
-         <path value="Observation.extension.valueReference"/>
-         <sliceName value="valueReference"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus"/>
-         </type>
-      </element>
-      <element id="Observation.code">
-         <path value="Observation.code"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="bc-FetusObservation-code"/>
-            <valueSetReference>
-               <reference value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-code"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-2446"/>
-            <comment value="ObservatieNaam"/>
-         </mapping>
-      </element>
-      <element id="Observation.subject">
-         <path value="Observation.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-      </element>
-      <element id="Observation.context">
-         <path value="Observation.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-4"/>
-            <comment value="Zorgverlening"/>
-         </mapping>
-      </element>
-      <element id="Observation.value[x]">
-         <path value="Observation.value[x]"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-60030"/>
-            <comment value="BPD"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-60060"/>
-            <comment value="HC"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-60080"/>
-            <comment value="AC"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-60100"/>
-            <comment value="FL"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82340"/>
-            <comment value="EFW"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80946"/>
-            <comment value="Placentalokalisatie"/>
-         </mapping>
-      </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.extension:fetus">
+      <path value="Observation.extension" />
+      <sliceName value="fetus" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
+      </type>
+    </element>
+    <element id="Observation.extension:fetus.valueReference:valueReference">
+      <path value="Observation.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-FetusObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-code" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2446" />
+        <comment value="ObservatieNaam" />
+      </mapping>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-60030" />
+        <comment value="BPD" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-60060" />
+        <comment value="HC" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-60080" />
+        <comment value="AC" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-60100" />
+        <comment value="FL" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82340" />
+        <comment value="EFW" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80946" />
+        <comment value="Placentalokalisatie" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <binding>
+        <strength value="extensible" />
+        <description value="MeetMethode_GZ" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
+        </valueSetReference>
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
