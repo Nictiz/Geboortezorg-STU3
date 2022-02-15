@@ -1,0 +1,56 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="birth-control-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthControl"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="408967003"/>
+            <display value="evaluatie van contraceptieve zorg (verrichting)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/kraamzorg"/>
+    </context>
+    <effectiveDateTime value="2011-09-02"/>
+    <valueBoolean value="true"/>
+    <comment value="vrouw gewezen op risico's nieuwe zwangerschap"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="364354005"/>
+                <display value="hoeveelheid vruchtwater (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="278092006"/>
+                <display value="normaal vruchtwatervolume (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="13197004"/>
+                <display value="gebruikt anticonceptie (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="169450001"/>
+                <display value="geen anticonceptie (situatie)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+</Observation>

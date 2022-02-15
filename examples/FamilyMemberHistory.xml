@@ -1,0 +1,22 @@
+<FamilyMemberHistory xmlns="http://hl7.org/fhir">
+    <id value="familymemberhistory-example" />
+    <status value="completed" />
+    <patient>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="65656005"/>
+            <display value="biologische moeder (persoon)"/>
+        </coding>
+    </relationship>
+    <deceasedBoolean value="false" />
+    <note>
+        <text value="Moeder van zwangere heeft diabetes type 2" />
+    </note>
+    <condition>
+        <reference value="Condition/diabetes"/>
+    </condition>
+</FamilyMemberHistory>

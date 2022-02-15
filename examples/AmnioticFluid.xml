@@ -1,0 +1,84 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="amniotic-fluid-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value=""/>
+            <display value=""/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/kraamzorg"/>
+    </context>
+    <effectiveDateTime value="2011-09-02"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="364354005"/>
+                <display value="hoeveelheid vruchtwater (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="278092006"/>
+                <display value="normaal vruchtwatervolume (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="249129009"/>
+                <display value="conditie van vruchtwater (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1"/>
+                <display value="Geen bijzonderheden"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value=""/>
+                <display value="SDP"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="5"/>
+            <unit value="cm"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="cm"/>            
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value=""/>
+                <display value="AFI"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="7"/>
+            <unit value="cm"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="cm"/>            
+        </valueQuantity>
+    </component>
+</Observation>

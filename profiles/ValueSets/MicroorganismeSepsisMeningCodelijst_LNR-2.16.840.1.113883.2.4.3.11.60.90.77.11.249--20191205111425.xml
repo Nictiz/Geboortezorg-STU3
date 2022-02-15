@@ -1,0 +1,138 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.249--20191205111425"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2019-12-05T11:14:25+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.249--20191205111425"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.249"/>
+   </identifier>
+   <version value="2019-12-05T11:14:25"/>
+   <name value="MicroorganismeSepsisMeningCodelijst_LNR"/>
+   <title value="MicroorganismeSepsisMeningCodelijst_LNR"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Subset van micro-organismen als verwekker van sepsis en meningitis t.b.v. Landelijke Neonatale Registratie (LNR) - SNOMED CT: ^2581000146104 |simpele referentieset voor micro-organismen (foundation metadata concept)|"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Anders, specificieer"/>
+            </extension>
+            <code value="OTH"/>
+            <display value="Other, specify"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="43492007"/>
+            <display value="Streptococcus agalactiae (organisme)"/>
+         </concept>
+         <concept>
+            <code value="3092008"/>
+            <display value="Staphylococcus aureus (organisme)"/>
+         </concept>
+         <concept>
+            <code value="78065002"/>
+            <display value="Enterococcus faecalis (organisme)"/>
+         </concept>
+         <concept>
+            <code value="36094007"/>
+            <display value="Listeria monocytogenes (organisme)"/>
+         </concept>
+         <concept>
+            <code value="112283007"/>
+            <display value="Escherichia coli (organisme)"/>
+         </concept>
+         <concept>
+            <code value="56415008"/>
+            <display value="Klebsiella pneumoniae (organisme)"/>
+         </concept>
+         <concept>
+            <code value="52499004"/>
+            <display value="Pseudomonas aeruginosa (organisme)"/>
+         </concept>
+         <concept>
+            <code value="44470000"/>
+            <display value="Haemophilus influenzae (organisme)"/>
+         </concept>
+         <concept>
+            <code value="17872004"/>
+            <display value="Neisseria meningitidis (organisme)"/>
+         </concept>
+         <concept>
+            <code value="9861002"/>
+            <display value="Streptococcus pneumoniae (organisme)"/>
+         </concept>
+         <concept>
+            <code value="14385002"/>
+            <display value="Enterobacter cloacae (organisme)"/>
+         </concept>
+         <concept>
+            <code value="73457008"/>
+            <display value="Proteus mirabilis (organisme)"/>
+         </concept>
+         <concept>
+            <code value="33522002"/>
+            <display value="Serratia marcescens (organisme)"/>
+         </concept>
+         <concept>
+            <code value="27268008"/>
+            <display value="Genus Salmonella (organisme)"/>
+         </concept>
+         <concept>
+            <code value="75972000"/>
+            <display value="Genus Citrobacter (organisme)"/>
+         </concept>
+         <concept>
+            <code value="116197008"/>
+            <display value="coagulasenegatieve stafylokok (organisme)"/>
+         </concept>
+         <concept>
+            <code value="12006007"/>
+            <display value="Ureaplasma urealyticum (organisme)"/>
+         </concept>
+         <concept>
+            <code value="16241000"/>
+            <display value="genus Chlamydia (organisme)"/>
+         </concept>
+         <concept>
+            <code value="699877004"/>
+            <display value="Pneumocystis carinii (organisme)"/>
+         </concept>
+         <concept>
+            <code value="3265006"/>
+            <display value="Genus Candida (organisme)"/>
+         </concept>
+         <concept>
+            <code value="19965007"/>
+            <display value="herpes-simplexvirus (organisme)"/>
+         </concept>
+         <concept>
+            <code value="243633006"/>
+            <display value="genus Enterovirus (organisme)"/>
+         </concept>
+         <concept>
+            <code value="450612006"/>
+            <display value="genus Parechovirus (organisme)"/>
+         </concept>
+         <concept>
+            <code value="63603005"/>
+            <display value="Primate erythroparvovirus 1 (organisme)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

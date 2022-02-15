@@ -1,0 +1,40 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="ability-care-child-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value=""/>
+            <display value=""/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/kraamzorg"/>
+    </context>
+    <effectiveDateTime value="2011-09-02"/>
+    <valueBoolean value="true"/>
+    <comment value="moeder is nog wat onzeker en vermoeid na een zware bevalling"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="405175009"/>
+                <display value="gedrag omtrent ouderschap (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="126321000146108"/>
+                <display value="meestal in staat om voor kind te zorgen (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+</Observation>

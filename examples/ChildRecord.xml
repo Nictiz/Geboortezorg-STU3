@@ -1,0 +1,29 @@
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+    <id value="kind-followup"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildRecord"/>
+    </meta>
+    <status value="finished"/>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="406151001"/>
+            <display value="follow-up na ontslag (bevinding)"/>
+        </coding>
+    </type>
+    <patient>
+        <reference value="Patient/example"/>
+        <display value="Example"/>
+    </patient>
+    <managingOrganization>
+        <reference value="Organization/jeugdzorg" />
+        <display value="Jeugdzorg" />
+    </managingOrganization>
+    <period>
+        <start value="2016-07-30"/>
+    </period>
+    <careManager>
+        <reference value="Practitioner/jeugdverpleegkundige" />
+        <display value="Jeugdverpleegkundige" />
+    </careManager>
+</EpisodeOfCare>

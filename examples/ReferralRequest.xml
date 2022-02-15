@@ -4,7 +4,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
     </meta>
     <!-- Perinatale periode (peri23-dataelement-20367) -->
-    <extension url="hhttp://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer">
         <valueCodeableConcept>
             <coding> 
                 <system value="PerinatalePeriodeOverdrachtConsult"/> 
@@ -13,10 +13,30 @@
             </coding>   
         </valueCodeableConcept>
     </extension>
+    <!-- Contactsoort (peri32-dataelement-10487) -->
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype">
+        <valueCodeableConcept>
+            <coding> 
+                <system value="http://snomed.info/sct"/> 
+                <code value="18114009"/> 
+                <display value="prenataal onderzoek en zorg voor moeder (procedure)"/> 
+            </coding>   
+        </valueCodeableConcept>
+    </extension>
     <status value="active"/> 
     <intent value="order"/> 
     <!-- Type verwijzing (peri23-dataelement-82581) -->
     <type> 
+        <!-- Type verwijzing (peri32-dataelement-9683) -->
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-referraltype">
+            <valueCodeableConcept>
+                <coding> 
+                    <system value="http://snomed.info/sct"/> 
+                    <code value="308292007"/> 
+                    <display value="overdracht van zorg (verrichting)"/> 
+                </coding>   
+            </valueCodeableConcept>
+        </extension>
         <coding> 
             <system value="http://snomed.info/sct"/> 
             <code value="308292007"/> 

@@ -102,6 +102,13 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="datum van overlijden (waarneembare entiteit)" />
     </element>
+    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime">
+      <path value="Observation.component.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
     <element id="Observation.component:perinatalPhase">
       <path value="Observation.component" />
       <sliceName value="perinatalPhase" />
@@ -121,6 +128,21 @@
     <element id="Observation.component:perinatalPhase.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="FasePerinataleSterfte22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20201117115600" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

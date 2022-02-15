@@ -1,0 +1,48 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.292--20200623140138"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-06-23T14:01:38+01:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.292--20200623140138"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.292"/>
+   </identifier>
+   <version value="2020-06-23T14:01:38"/>
+   <name value="Zorg_voor_kind"/>
+   <title value="Zorg voor kind"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="KNOV"/>
+   <description value="Zorg voor kind"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="126321000146108"/>
+            <display value="meestal in staat om voor kind te zorgen (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="126301000146100"/>
+            <display value="soms in staat om voor kind te zorgen (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="126311000146103"/>
+            <display value="nooit in staat om voor kind te zorgen (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="126291000146104"/>
+            <display value="altijd in staat om voor kind te zorgen (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

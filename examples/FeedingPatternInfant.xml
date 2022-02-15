@@ -1,0 +1,83 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="feedingpatterninfant-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FeedingPatternInfant"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="2289145007"/>
+            <display value="Bevinding betreffende voedingspatroon van zuigeling"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example Child Patient" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
+        <display value="Zwangerschapsdossier Example"/>
+    </context>
+    <effectiveDateTime value="2011-08-03"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value=""/>
+                <display value=""/>
+            </coding>
+        </code>
+        <valueString value = "voeding supplement"/>           
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value=""/>
+                <display value=""/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="8"/>
+            <unit value="d"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>            
+        </valueQuantity>          
+    </component>
+    <component>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant-FeedingMethod">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="169741004"/>
+                    <display value="Breast fed (finding)"/>                    
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value=""/>
+                <display value=""/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="226790003"/>
+                <display value="Expressed breast milk"/>
+            </coding>
+        </valueCodeableConcept>         
+    </component> 
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="11816003"/>
+                <display value="voorlichten over dieet (verrichting)"/>
+            </coding>
+        </code>
+        <valueString value = "nog niet duidelijk wat data type hier moet zijn en hoe dit element gevuld moet worden"/>          
+    </component> 
+</Observation>

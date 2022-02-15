@@ -86,17 +86,27 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="hoeveelheid vruchtwater (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
-        <code value="Quantity" />
+        <code value="CodeableConcept" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2413" />
         <comment value="HoeveelheidVruchtwaterWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Vruchtwater" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.191--20140121165337" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component:amnioticFluidCompartment">
       <path value="Observation.component" />

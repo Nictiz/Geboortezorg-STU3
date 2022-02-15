@@ -141,6 +141,11 @@
         <map value="peri32-dataelement-2416" />
         <comment value="Verrichting (Onderzoek)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7875" />
+        <comment value="Verrichting (Onderzoek)" />
+      </mapping>
     </element>
     <element id="Procedure.extension">
       <path value="Procedure.extension" />
@@ -590,6 +595,22 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40200" />
         <comment value="Succes vaginale kunstverlossing" />
+      </mapping>
+    </element>
+    <element id="Procedure.report">
+      <path value="Procedure.report" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TextResult" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7870" />
+        <comment value="Verrichting" />
       </mapping>
     </element>
   </differential>
