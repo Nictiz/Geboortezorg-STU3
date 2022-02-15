@@ -85,14 +85,6 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition">
-      <path value="FamilyMemberHistory.condition" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1119" />
-        <comment value="Aandoening" />
-      </mapping>
-    </element>
     <element id="FamilyMemberHistory.condition.code">
       <path value="FamilyMemberHistory.condition.code" />
       <binding>
@@ -102,6 +94,32 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.358--20220117155944" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="FamilyMemberHistory.condition.code.extension">
+      <path value="FamilyMemberHistory.condition.code.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="FamilyMemberHistory.condition.code.extension:conditionReference">
+      <path value="FamilyMemberHistory.condition.code.extension" />
+      <sliceName value="conditionReference" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-condition" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1119" />
+        <comment value="Aandoening" />
+      </mapping>
     </element>
     <element id="FamilyMemberHistory.condition.outcome">
       <path value="FamilyMemberHistory.condition.outcome" />

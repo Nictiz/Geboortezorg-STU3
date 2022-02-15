@@ -17,6 +17,12 @@
         <text value="Moeder van zwangere heeft diabetes type 2" />
     </note>
     <condition>
-        <reference value="Condition/diabetes"/>
+        <code>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-referraltype">
+                <valueReference>
+                    <reference value="Condition/diabetes"/>
+                </valueReference>
+            </extension>
+        </code>
     </condition>
 </FamilyMemberHistory>
