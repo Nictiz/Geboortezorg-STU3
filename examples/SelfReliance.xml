@@ -1,0 +1,167 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="self-reliance-example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-SelfReliance"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value=""/>
+            <display value=""/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/kraamzorg"/>
+    </context>
+    <effectiveDateTime value="2011-09-02"/>
+    <comment value="moeder is nog wat onzeker en vermoeid na een zware bevalling"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="704435007"/>
+                <display value="Personal grooming activities, function (observable entity)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="126321000146108"/>
+                <display value="meestal in staat om voor kind te zorgen (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="704435007"/>
+                <display value="Personal grooming activities, function (observable entity)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="704437004"/>
+                <display value="in staat tot zelfstandige uiterlijke verzorging (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="284906000"/>
+                <display value="vermogen toilet te gebruiken (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="284907009"/>
+                <display value="in staat om toilet te gebruiken (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="288883002"/>
+                <display value="vermogen om te eten (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="289000006"/>
+                <display value="in staat om zelf te eten (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="364666007"/>
+                <display value="vermogen tot transfer (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="715127003"/>
+                <display value="minimale hulp nodig bij transfer van stoel naar bed (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="301438001"/>
+                <display value="vermogen om zich te mobiliseren (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="160697000"/>
+                <display value="mobiliteit redelijk (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="365222007"/>
+                <display value="bevinding betreffende vermogen om activiteit uit te voeren om zich te kleden (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="284985004+284973007"/>
+                <display value="in staat om zich uit te kleden (bevinding)+ in staat om zich aan te kleden (bevinding"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="365182004"/>
+                <display value="bevinding betreffende vermogen om trap te nemen (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="301589003"/>
+                <display value="niet in staat trap te lopen (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="365182004"/>
+                <display value="bevinding betreffende vermogen om te douchen (bevinding)"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="284792004"/>
+                <display value="in staat om zelf te douchen (bevinding)"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+</Observation>
