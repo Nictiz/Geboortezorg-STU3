@@ -52,7 +52,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xd:doc>
         <xd:desc>Creates a table row for a concept</xd:desc>
     </xd:doc>
-    <xsl:template match="concept" mode="makeTables">
+    <xsl:template match="concept[@statusCode!='cancelled']" mode="makeTables">
         <xsl:param name="level">1</xsl:param>
         <xsl:variable name="id" select="@id/string()"/>
         <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>

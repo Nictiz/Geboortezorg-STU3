@@ -36,7 +36,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="dataset" select="."/>
         <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <xsl:copy-of select="@*"/>
-            <xsl:for-each select="$dataset//concept[@type=('group','item')]">
+            <xsl:for-each select="$dataset//concept[@type=('group','item') and @statusCode!='cancelled']">
                  <xsl:apply-templates select="." mode="createRecords"/>
             </xsl:for-each>
         </dataset>
