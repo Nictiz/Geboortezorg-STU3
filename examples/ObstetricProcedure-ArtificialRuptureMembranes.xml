@@ -1,0 +1,42 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="episiotomy-example" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-partusphase">
+        <valueCodeableConcept>
+            <coding>
+                <system value = "AmniotomieMoment"/>
+                <code value = "3"/>
+                <display value="Tijdens uitdrijving" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <status value="completed" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="386637004" />
+            <display value="Obstetric procedure (procedure)" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="408816000" />
+            <display value="kunstmatig breken van vliezen (verrichting)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/Example" />
+        <display value="Example" />
+    </subject>
+    <context>
+        <reference value="EpisodeOfCare/example" />
+        <display value="Zwangerschapsdossier" />
+    </context>
+    <performedPeriod>
+        <start value="2016-02-19"/>
+        <end value="2016-02-20"/>
+    </performedPeriod>
+</Procedure>
