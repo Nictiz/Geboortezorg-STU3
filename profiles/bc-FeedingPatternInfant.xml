@@ -50,6 +50,16 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Observation.component:FeedingSupplement">
       <path value="Observation.component" />
       <sliceName value="FeedingSupplement" />
