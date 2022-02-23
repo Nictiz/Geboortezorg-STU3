@@ -1,0 +1,39 @@
+- name: id-mandatory
+  status: "Checking if all resources have an id"
+  files: 
+    - examples/*.xml
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: Resource
+  predicate: id.exists()
+  error-message: "Resource must have an id"
+
+- name: id-unique
+  status: "Checking if all resources have a unique id"
+  files: 
+    - examples/*.xml
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: Resource
+  unique: id
+  # custom error messages for unique checks do not work.
+
+- name: id-starts-bc
+  status: "Checking if all profile ids start with 'bc-'"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: id.startsWith('bc-')
+  error-message: "Resource id does not start with 'bc-'" 

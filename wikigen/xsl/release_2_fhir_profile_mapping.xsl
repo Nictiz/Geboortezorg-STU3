@@ -58,8 +58,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xd:desc>Creates a table row for a concept</xd:desc>
     </xd:doc>
     <xsl:template match="concept" mode="makeTables">
-         <xsl:variable name="id" select="@id/string()"/>
+        <xsl:variable name="id" select="@id/string()"/>
         <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>
+        <xsl:variable name="referenceId" select="substring-after(./contains/@refdisplay, 'peri32-dataelement-')"/>
         <!-- For terminology, prefer Snomed or LOINC, else take the first one -->
         <xsl:variable name="terminologies" select="./terminologyAssociation[(@conceptId=$id) or (@conceptId=$inheritId)]"/>
         <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
@@ -68,6 +69,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>  
         <xsl:element name="mapping" namespace="">
             <xsl:attribute name="conceptId" select="$id"/>
+            <xsl:attribute name="referenceId" select="$referenceId"/>
             <xsl:attribute name="type" select="if (./@type = 'group') then 'group' else ./valueDomain/@type"/>
             <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
             <xsl:attribute name="parent" select="tokenize(ancestor::concept[1]/@id, '\.')[last()]"/>

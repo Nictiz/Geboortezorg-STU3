@@ -1,0 +1,113 @@
+- name: name-mandatory
+  status: "Checking if all conformance resources contain a name"
+  files: 
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: name.exists()
+  error-message: "Resource does not contain a name" 
+
+- name: name-conformance
+  status: "Checking if all profile naming is conform to profiling guidelines"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: name.startsWith('bc-')
+  error-message: "Resource name does not conform to profiling guidelines" 
+
+- name: title-mandatory
+  status: "Checking if all conformance resources contain a title"
+  files: 
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: title.exists()
+  error-message: "Resource does not contain a title" 
+
+- name: description-mandatory
+  status: "Checking if all conformance resources contain a description"
+  files: 
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: description.exists()
+  error-message: "Resource does not contain a description" 
+
+- name: copyright-mandatory
+  status: "Checking if all conformance resources contain a copyright"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: copyright.exists()
+  error-message: "Resource does not contain a copyright" 
+
+- name: contact-filled
+  status: "Checking if all profiles have 'Nictiz' as contact"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: contact.name.exists() and ('Nictiz' in contact.name) and contact.telecom.exists()
+  error-message: "Contact not filled (correctly)" 
+
+- name: publisher-filled
+  status: "Checking if all profiles have 'Nictiz' as publisher"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: publisher = 'Nictiz'
+  error-message: "Incorrect publisher info, should be 'Nictiz'"  
+
+- name: publisher-equals-contact
+  status: "Checking if publisher is one of the contacts"
+  files: 
+    - profiles/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+  filter: StructureDefinition.exists()
+  predicate: iif(publisher.exists() and contact.name.exists(), publisher in contact.name)
+  error-message: "Resource has publisher not listed as one of the contacts"
+
+- name: abstract-false
+  status: "Checking if all profiles are not considered abstract"
+  files: 
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: Conformance
+  predicate: abstract = false
+  error-message: "Resource has abstract = true" 
+
+- name: example-profile-mandatory
+  status: "Checking if example has a meta.profile"
+  files: 
+    - examples/*.xml
+  filter: Resource
+  predicate: meta.profile.exists()
+  error-message: "Resource does not claim conformance to a profile" 

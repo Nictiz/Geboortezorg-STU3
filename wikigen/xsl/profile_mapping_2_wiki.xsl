@@ -47,6 +47,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 |style="width:30px;"| Type 
 |style="width:10px;"| # 
 || Concept
+|| Reference
 || Profile
 || System 
 || Code
@@ -113,6 +114,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <!--</xsl:for-each>-->
         </xsl:if>
         <xsl:value-of select="@name"/>
+        <xsl:text>
+||</xsl:text>
+        <xsl:value-of select="@referenceId"/>
         <xsl:text>
 ||</xsl:text>
         <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>

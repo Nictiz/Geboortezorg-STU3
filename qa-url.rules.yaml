@@ -1,0 +1,48 @@
+- name: url-unique
+  status: "Checking if all resources have a unique url"
+  files: 
+    - examples/*.xml
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  unique: url
+  # custom error messages for unique checks do not work.
+
+- name: url-starts-with-correct-base
+  status: "Checking if all resources have a canonical URL that start with the correct base"
+  files: 
+    - examples/*.xml
+    - profiles/*.xml
+    - profiles/conceptmaps/*.xml
+    - profiles/datatypes/*.xml
+    - profiles/extensions/*.xml
+    - profiles/NamingSystems/*.xml
+    - profiles/SearchParameters/*.xml
+    - profiles/ValueSets/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: url.exists() and url.startsWith('http://nictiz.nl/fhir/')
+  error-message: "Resource canonical URL doesn't start with 'http://nictiz.nl/fhir/'"  
+
+- name: url-profiles
+  status: "Checking if all StructureDefinition canonical URLs conform to the profiling guidelines"
+  files: 
+    - profiles/*.xml
+    - profiles/extensions/*.xml
+  filter: 
+    - Profile
+    - Extension
+  predicate: url = 'http://nictiz.nl/fhir/StructureDefinition/' + id
+  error-message: "Resource canonical URL pattern doesn't conform to 'http://nictiz.nl/fhir/[id]'"  
+
+- name: url-valuesets
+  status: "Checking if all ValueSet canonical URLs confrom to the profiling guidelines"
+  files: 
+    - profiles/ValueSets/*.xml
+  filter: ValueSet.exists()
+  predicate: (ValueSet.url = 'http://decor.nictiz.nl/fhir/ValueSet/' + ValueSet.id) or (ValueSet.url = 'http://nictiz.nl/fhir/ValueSet/' + ValueSet.id))
+  error-message: "Resource canonical URL doesn't conform to 'http://decor.nictiz.nl/fhir/ValueSet/[id]' or 'http://nictiz.nl/fhir/ValueSet/[id]'" 
