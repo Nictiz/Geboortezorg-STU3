@@ -9462,7 +9462,7 @@
    <record>
       <ID>peri32-dataelement-4205</ID>
       <naam>Partusassistentie (Observatie)</naam>
-      <mapping>Observation</mapping>
+      <mapping>Encounter</mapping>
       <profile>bc-ChildBirthAssistance</profile>
       <in/>
       <zib/>
@@ -9472,7 +9472,7 @@
    <record>
       <ID>peri32-dataelement-4206</ID>
       <naam>OproepDatumTijd</naam>
-      <mapping>Observation.effectiveDateTime</mapping>
+      <mapping>Encounter.participant.extension:timeWhenCalled</mapping>
       <profile>bc-ChildBirthAssistance</profile>
       <in/>
       <zib/>
@@ -9480,9 +9480,19 @@
       <searchurl/>
    </record>
    <record>
-      <ID>peri32-dataelement-10531</ID>
+      <ID>peri32-dataelement-10716</ID>
       <naam>AankomstDatumTijd</naam>
-      <mapping>Observation.arrivalDateTime</mapping>
+      <mapping>Encounter.participant.period.start</mapping>
+      <profile>bc-ChildBirthAssistance</profile>
+      <in/>
+      <zib/>
+      <example/>
+      <searchurl/>
+   </record>
+   <record>
+      <ID>peri32-dataelement-10717</ID>
+      <naam>EindDatumTijd</naam>
+      <mapping>Encounter.participant.period.end</mapping>
       <profile>bc-ChildBirthAssistance</profile>
       <in/>
       <zib/>
@@ -9492,7 +9502,7 @@
    <record>
       <ID>peri32-dataelement-4208</ID>
       <naam>RolPartusassistentie</naam>
-      <mapping>Observation.component.valueReference</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-ChildBirthAssistance</profile>
       <in/>
       <zib/>
@@ -9512,27 +9522,7 @@
    <record>
       <ID>peri32-dataelement-4217</ID>
       <naam>PartusStadiumWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
-      <profile>bc-ChildBirthAssistance</profile>
-      <in/>
-      <zib/>
-      <example/>
-      <searchurl/>
-   </record>
-   <record>
-      <ID>peri32-dataelement-4209</ID>
-      <naam>ObservatieMethode</naam>
-      <mapping>Observation.method</mapping>
-      <profile>bc-ChildBirthAssistance</profile>
-      <in/>
-      <zib/>
-      <example/>
-      <searchurl/>
-   </record>
-   <record>
-      <ID>peri32-dataelement-4216</ID>
-      <naam>Toelichting</naam>
-      <mapping>Observation.comment</mapping>
+      <mapping>Encounter.participant.extension:arrival</mapping>
       <profile>bc-ChildBirthAssistance</profile>
       <in/>
       <zib/>
