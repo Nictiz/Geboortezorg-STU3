@@ -126,6 +126,22 @@
         <map value="peri32-dataelement-3866" />
         <comment value="Contactpersoon" />
       </mapping>
+    </element>
+    <element id="CarePlan.author.extension">
+      <path value="CarePlan.author.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CarePlan.author.extension:practitionerRole">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3849" />
@@ -179,7 +195,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3861" />
-        <comment value="Activiteit" />
+        <comment value="Toelichting" />
       </mapping>
     </element>
   </differential>

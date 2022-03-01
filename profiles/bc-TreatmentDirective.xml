@@ -102,7 +102,7 @@
       <min value="0" />
       <type>
         <code value="Extension" />
-        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-endreason" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-endreason" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -156,6 +156,22 @@
         <map value="peri32-dataelement-10413" />
         <comment value="Vertegenwoordiger" />
       </mapping>
+    </element>
+    <element id="Consent.consentingParty.extension">
+      <path value="Consent.consentingParty.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Consent.consentingParty.extension:practitionerRole">
+      <path value="Consent.consentingParty.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10415" />

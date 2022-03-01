@@ -40,6 +40,16 @@
         <comment value="Uitvoerder" />
       </mapping>
     </element>
+    <element id="CareTeam.participant:performer.role.coding">
+      <path value="CareTeam.participant.role.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="CareTeam.participant:performer.role.text">
       <path value="CareTeam.participant.role.text" />
       <fixedString value="performer" />
@@ -78,6 +88,22 @@
         <map value="peri32-dataelement-3869" />
         <comment value="Contactpersoon" />
       </mapping>
+    </element>
+    <element id="CareTeam.participant:performer.member.extension">
+      <path value="CareTeam.participant.member.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CareTeam.participant:performer.member.extension:practitionerRole">
+      <path value="CareTeam.participant.member.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3856" />
@@ -105,12 +131,38 @@
         <comment value="Coordinator" />
       </mapping>
     </element>
+    <element id="CareTeam.participant:coordinator.role.coding">
+      <path value="CareTeam.participant.role.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="CareTeam.participant:coordinator.member">
       <path value="CareTeam.participant.member" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
+    </element>
+    <element id="CareTeam.participant:coordinator.member.extension">
+      <path value="CareTeam.participant.member.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CareTeam.participant:coordinator.member.extension:practitionerRole">
+      <path value="CareTeam.participant.member.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3864" />
