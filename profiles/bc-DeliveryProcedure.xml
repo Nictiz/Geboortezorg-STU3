@@ -1,196 +1,212 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-DeliveryProcedure"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
-  <version value="1.0.0"/>
-  <name value="bc-DeliveryProcedure"/>
-  <title value="bc-DeliveryProcedure"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-DeliveryProcedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+  <version value="1.0.0" />
+  <name value="bc-DeliveryProcedure" />
+  <title value="bc-DeliveryProcedure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="A Procedure profile describing the delivery as defined by BabyConnect. A pregnancy (Procedure.reasonReference) can lead to one delivery Procedure, even in multiple birth. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure. The mother Patient is the subject of the delivery Procedure (Procedure.subject)."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="A Procedure profile describing the delivery as defined by BabyConnect. A pregnancy (Procedure.reasonReference) can lead to one delivery Procedure, even in multiple birth. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure. The mother Patient is the subject of the delivery Procedure (Procedure.subject)." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="hcim-procedurefortransfer-v1.2-2015EN"/>
-      <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)"/>
-      <name value="HCIM ProcedureForTransfer-v1.2(2015EN)"/>
+    <identity value="hcim-procedurefortransfer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)" />
+    <name value="HCIM ProcedureForTransfer-v1.2(2015EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-procedurefortransfer-v3.0-2016EN"/>
-      <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v3.0(2016EN)"/>
-      <name value="HCIM ProcedureForTransfer-v3.0(2016EN)"/>
+    <identity value="hcim-procedurefortransfer-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v3.0(2016EN)" />
+    <name value="HCIM ProcedureForTransfer-v3.0(2016EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-procedure-v4.1-2017EN"/>
-      <uri value="https://zibs.nl/wiki/Procedure-v4.1(2017EN)"/>
-      <name value="HCIM ProcedureForTransfer-v4.1(2017EN)"/>
+    <identity value="hcim-procedure-v4.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Procedure-v4.1(2017EN)" />
+    <name value="HCIM ProcedureForTransfer-v4.1(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-textresultfortransfer-v1.2-2015EN"/>
-      <uri value="https://zibs.nl/wiki/TextResultForTransfer-v1.2.2(2015EN)"/>
-      <name value="HCIM TextResultForTransfer-v1.2.2(2015EN)"/>
+    <identity value="hcim-textresultfortransfer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/TextResultForTransfer-v1.2.2(2015EN)" />
+    <name value="HCIM TextResultForTransfer-v1.2.2(2015EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-textresultfortransfer-v3.0-2016EN"/>
-      <uri value="https://zibs.nl/wiki/TextResultForTransfer-v3.0(2016EN)"/>
-      <name value="HCIM TextResultForTransfer-v3.0(2016EN)"/>
+    <identity value="hcim-textresultfortransfer-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/TextResultForTransfer-v3.0(2016EN)" />
+    <name value="HCIM TextResultForTransfer-v3.0(2016EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-textresult-v4.1-2017EN"/>
-      <uri value="https://zibs.nl/wiki/TextResult-v4.1(2017EN)"/>
-      <name value="HCIM textresult-v3.0(2017EN)"/>
+    <identity value="hcim-textresult-v4.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/TextResult-v4.1(2017EN)" />
+    <name value="HCIM textresult-v3.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
-      <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
-      <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-healthprofessional-v3.0-2016EN"/>
-      <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)"/>
-      <name value="HCIM HealthProfessional-v3.0(2016EN)"/>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-healthprofessional-v3.2-2017EN"/>
-      <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)"/>
-      <name value="HCIM HealthProfessional-v3.2(2017EN)"/>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Procedure"/>
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+  <derivation value="constraint" />
   <differential>
-      <element id="Procedure">
-         <path value="Procedure"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-6"/>
-            <comment value="Bevalling"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-18"/>
-            <comment value="Eerdere bevalling"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-37"/>
-            <comment value=" Bevalling"/>
-         </mapping>
-      </element>
-      <element id="Procedure.identifier">
-         <path value="Procedure.identifier"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20500"/>
-            <comment value="Partusnummer"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-3411"/>
-            <comment value="Partusnummer"/>
-         </mapping>
-      </element>
-      <element id="Procedure.category.coding">
-         <path value="Procedure.category.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Procedure.category.coding:obstetricProcedure">
-         <path value="Procedure.category.coding"/>
-         <sliceName value="obstetricProcedure"/>
-         <max value="1"/>
-         <patternCoding>
-            <system value="http://snomed.info/sct"/>
-            <code value="386637004"/>
-            <display value="Obstetric procedure (procedure)"/>
-         </patternCoding>
-      </element>
-      <element id="Procedure.category.coding:obstetricProcedure.system">
-         <path value="Procedure.category.coding.system"/>
-         <fixedUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="Procedure.category.coding:obstetricProcedure.code">
-         <path value="Procedure.category.coding.code"/>
-         <fixedCode value="386637004"/>
-      </element>
-      <element id="Procedure.category.coding:obstetricProcedure.display">
-         <path value="Procedure.category.coding.display"/>
-         <defaultValueString value="Obstetric procedure (procedure)"/>
-      </element>
-      <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
-         <path value="Procedure.code.coding"/>
-         <sliceName value="VerrichtingTypeCodelijst"/>
-         <patternCoding>
-            <system value="http://snomed.info/sct"/>
-            <code value="236973005"/>
-         </patternCoding>
-      </element>
-      <element id="Procedure.code.coding:VerrichtingTypeCodelijst.code">
-         <path value="Procedure.code.coding.code"/>
-         <fixedCode value="236973005"/>
-      </element>
-      <element id="Procedure.code.coding:VerrichtingTypeCodelijst.display">
-         <path value="Procedure.code.coding.display"/>
-         <defaultValueString value="Delivery procedure (procedure)"/>
-      </element>
-      <element id="Procedure.subject">
-         <path value="Procedure.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-      </element>
-      <element id="Procedure.context">
-         <path value="Procedure.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
-         </type>
-      </element>
-      <element id="Procedure.reasonReference">
-         <path value="Procedure.reasonReference"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
-         </type>
-      </element>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-6" />
+        <comment value="Bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-18" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-37" />
+        <comment value="Bevalling" />
+      </mapping>
+    </element>
+    <element id="Procedure.identifier">
+      <path value="Procedure.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20500" />
+        <comment value="Partusnummer" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3411" />
+        <comment value="Partusnummer" />
+      </mapping>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure">
+      <path value="Procedure.category.coding" />
+      <sliceName value="obstetricProcedure" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="386637004" />
+        <display value="Obstetric procedure (procedure)" />
+      </patternCoding>
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.system">
+      <path value="Procedure.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.code">
+      <path value="Procedure.category.coding.code" />
+      <fixedCode value="386637004" />
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.display">
+      <path value="Procedure.category.coding.display" />
+      <defaultValueString value="Obstetric procedure (procedure)" />
+    </element>
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.code.coding:deliveryProcedure">
+      <path value="Procedure.code.coding" />
+      <sliceName value="deliveryProcedure" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="236973005" />
+      </patternCoding>
+    </element>
+    <element id="Procedure.code.coding:deliveryProcedure.system">
+      <path value="Procedure.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.code.coding:deliveryProcedure.code">
+      <path value="Procedure.code.coding.code" />
+      <fixedCode value="236973005" />
+    </element>
+    <element id="Procedure.code.coding:deliveryProcedure.display">
+      <path value="Procedure.code.coding.display" />
+      <defaultValueString value="Delivery procedure (procedure)" />
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Procedure.context">
+      <path value="Procedure.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+      </type>
+    </element>
   </differential>
 </StructureDefinition>
