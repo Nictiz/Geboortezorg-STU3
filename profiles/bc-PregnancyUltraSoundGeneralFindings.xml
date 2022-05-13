@@ -46,6 +46,22 @@
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8929" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method:SEO">
+      <path value="Observation.method" />
+      <sliceName value="SEO" />
       <binding>
         <strength value="extensible" />
         <description value="Methode_1e_trimester_SEO" />
