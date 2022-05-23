@@ -11,6 +11,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Period" />
   <derivation value="constraint" />
   <differential>
+    <element id="Period">
+      <path value="Period" />
+      <comment value="A time interval indicates the time between two moments in time. Interval can be defined by a start time and end time, start time and duration or duration and end time. For intervals in the future, only duration or start date may be known and one or more of the other elements may be unknown. To specify duration, use the time interval duration extension." />
+    </element>
     <element id="Period.extension">
       <path value="Period.extension" />
       <slicing>

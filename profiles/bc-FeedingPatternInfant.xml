@@ -64,6 +64,14 @@
       <path value="Observation.component" />
       <sliceName value="FeedingSupplement" />
     </element>
+    <element id="Observation.component:FeedingSupplement.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:FeedingSupplement.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="373453009" />
+    </element>
     <element id="Observation.component:FeedingSupplement.valueString:valueString">
       <path value="Observation.component.valueString" />
       <sliceName value="valueString" />
@@ -76,6 +84,14 @@
     <element id="Observation.component:FeedingFrequency">
       <path value="Observation.component" />
       <sliceName value="FeedingFrequency" />
+    </element>
+    <element id="Observation.component:FeedingFrequency.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:FeedingFrequency.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364653007" />
     </element>
     <element id="Observation.component:FeedingFrequency.valueQuantity:valueQuantity">
       <path value="Observation.component.valueQuantity" />
@@ -116,6 +132,50 @@
         <comment value="VoedingMethode" />
       </mapping>
     </element>
+    <element id="Observation.component:FeedingType.extension:feedingQuantity">
+      <path value="Observation.component.extension" />
+      <sliceName value="feedingQuantity" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingquantity" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10504" />
+        <comment value="VoedingHoeveelheid" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingType.extension:feedingDuration">
+      <path value="Observation.component.extension" />
+      <sliceName value="feedingDuration" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingduration" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10505" />
+        <comment value="VoedingDuur" />
+      </mapping>
+    </element>
+    <element id="Observation.component:FeedingType.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:FeedingType.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="109021000146107" />
+    </element>
+    <element id="Observation.component:FeedingType.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="Infant food type" />
+    </element>
     <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
@@ -124,6 +184,13 @@
         <map value="peri32-dataelement-7945" />
         <comment value="VoedingSoort" />
       </mapping>
+    </element>
+    <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="230126006" />
+      </patternCoding>
     </element>
     <element id="Observation.component:FeedingAdvice">
       <path value="Observation.component" />
@@ -164,6 +231,42 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7943" />
         <comment value="Voedingsadvies" />
+      </mapping>
+    </element>
+    <element id="Observation.component:SupplementaryFeeding">
+      <path value="Observation.component" />
+      <sliceName value="SupplementaryFeeding" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="158451000146107" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="158451000146107" />
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="type bijvoeding voor zuigeling (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10506" />
+        <comment value="Bijvoeding?" />
       </mapping>
     </element>
   </differential>

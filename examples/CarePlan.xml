@@ -18,8 +18,8 @@
         <display value="Example" />
     </subject>
     <context>
-        <reference value="Encounter/prenataalconsult" />
-        <display value="Prenataal consult" />
+        <reference value="EpisodeOfCare/zwangerschap1" />
+        <display value="Zwangerschap 1" />
     </context>
     <period>
         <start value="2016-02-20"/>
@@ -32,7 +32,7 @@
                 <display value="Zorgverlener A" />
             </valueReference>
         </extension>
-        <reference value="PractitionerRole/ZorgverlenerA" />
+        <reference value="Practitioner/ZorgverlenerA" />
         <display value="Zorgverlener A" />
     </author>
     <author>
@@ -52,9 +52,12 @@
         <display value="Complicatie zwangerschap" />
     </addresses>
     <activity>
-        <reference>
-            <reference value="ProcedureRequest/procedurerequest" />
-            <display value="ProcedureRequest example" />
-        </reference>
+        <detail>
+            <code>
+                <text value="elke week zelf bloeddruk thuis meten"/>                
+            </code>
+            <status value="in-progress"/>
+            <description value="Elke week op dezelfde tijd na 5 minuten rust de bloeddruk meten en noteren."/>
+        </detail>
     </activity>
 </CarePlan>

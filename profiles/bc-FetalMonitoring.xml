@@ -77,6 +77,27 @@
         <comment value="Beoordelaar" />
       </mapping>
     </element>
+    <element id="Observation.performer.extension">
+      <path value="Observation.performer.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.performer.extension:practitionerRole">
+      <path value="Observation.performer.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3908" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
     <element id="Observation.method">
       <path value="Observation.method" />
       <binding>
@@ -421,6 +442,14 @@
       <type>
         <code value="Quantity" />
       </type>
+    </element>
+    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.system">
+      <path value="Observation.component.valueQuantity.system" />
+      <fixedUri value="http://unitsofmeasure.org" />
+    </element>
+    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code" />
+      <fixedCode value="1" />
     </element>
   </differential>
 </StructureDefinition>

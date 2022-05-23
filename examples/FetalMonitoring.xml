@@ -17,8 +17,8 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/fetusA" />
-        <display value="Fetus A" />
+        <reference value="Patient/example" />
+        <display value="Vrouw" />
     </subject>
     <context>
         <reference value="EpisodeOfCare/zwangerschapsdossier1" />
@@ -26,7 +26,6 @@
     </context>
     <effectivePeriod>
         <start value="2016-02-21T21:45:00+01:00" />
-        <end value="2016-02-21T23:45:00+01:00" />
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-timeinterval-duration">
             <valueQuantity>
                 <value value="2" />
@@ -37,6 +36,12 @@
         </extension>
     </effectivePeriod>
     <performer>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/ZorgverlenerA" />
+                <display value="Zorgverlener A" />
+            </valueReference>
+        </extension>
         <reference value="Practitioner/zorgverlenerX" />
         <display value="Zorgverlener X" />
     </performer>
@@ -72,8 +77,8 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="xxx"/>
-                <display value="xxx"/>
+                <code value="160201000146101"/>
+                <display value="periode van cardiotocografische monitoring (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
@@ -151,8 +156,8 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="xxx"/>
-                <display value="xxx"/>
+                <code value="160211000146104"/>
+                <display value="resultaat van FIGO-classificatie (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
@@ -167,8 +172,8 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="xxx"/>
-                <display value="xxx"/>
+                <code value="160221000146109"/>
+                <display value="Fischer-score voor foetale hartfrequentie (waarneembare entiteit"/>
             </coding>
         </code>
         <valueQuantity>

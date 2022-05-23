@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2020-02-11T09:29:28+01:00"/>
+         <start value="2020-02-11T09:29:28+02:00"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.302--20200211092928"/>
@@ -20,11 +20,12 @@
    <title value="ProbleemNaam_Zwangerschap"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <publisher value="KNOV"/>
+   <publisher value="Nictiz"/>
    <description value="ProbleemNaam_Zwangerschap"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
+      <inactive value="true"/>
       <include>
          <system value="http://hl7.org/fhir/v3/NullFlavor"/>
          <concept>
@@ -47,10 +48,6 @@
             <display value="zwangerschap (bevinding)"/>
          </concept>
          <concept>
-            <code value="129103003"/>
-            <display value="endometriose (aandoening)"/>
-         </concept>
-         <concept>
             <code value="95315005"/>
             <display value="leiomyoom van uterus (aandoening)"/>
          </concept>
@@ -61,10 +58,6 @@
          <concept>
             <code value="301775005"/>
             <display value="infectie van uterus (aandoening)"/>
-         </concept>
-         <concept>
-            <code value="840539006"/>
-            <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
          </concept>
          <concept>
             <code value="307534009"/>
@@ -99,8 +92,18 @@
             <display value="large for gestational age (aandoening)"/>
          </concept>
          <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
             <code value="267258002"/>
             <display value="small for gestational age (aandoening)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="intra-uteriene groeirestrictie"/>
+            </extension>
+            <code value="22033007"/>
+            <display value="intra-uteriene groeiretardatie (aandoening)"/>
          </concept>
          <concept>
             <code value="6096002"/>
@@ -148,7 +151,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        EUG&#xA;                    "/>
+               <valueString value="EUG"/>
             </extension>
             <code value="34801009"/>
             <display value="ectopische zwangerschap (aandoening)"/>
@@ -207,7 +210,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        Psychische decompensatie ofwel Surmenage.Disbalans tussen draaglast en draagkracht bij de zwangerschap.&#xA;                    "/>
+               <valueString value="Psychische decompensatie ofwel Surmenage.Disbalans tussen draaglast en draagkracht bij de zwangerschap."/>
             </extension>
             <code value="87228002"/>
             <display value="decompensatie (bevinding)"/>
@@ -223,6 +226,106 @@
          <concept>
             <code value="59291004"/>
             <display value="intra-uteriene vruchtdood (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="40733004"/>
+            <display value="aandoening door infectie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="95883001"/>
+            <display value="bacteriële meningitis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="48277006"/>
+            <display value="impetigo (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="266096002"/>
+            <display value="infectie door meticillineresistente Staphylococcus aureus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="426933007"/>
+            <display value="infectie door Streptococcus agalactiae (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="302809008"/>
+            <display value="infectie door Streptococcus pyogenes (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="27836007"/>
+            <display value="kinkhoest (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="30242009"/>
+            <display value="scarlatina (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="56717001"/>
+            <display value="tuberculose (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="840539006"/>
+            <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="36989005"/>
+            <display value="bof (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="23513009"/>
+            <display value="herpesvirus-infectie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="40468003"/>
+            <display value="hepatitis A (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="165806002"/>
+            <display value="hepatitis-B-oppervlakteantigeen positief (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="66071002"/>
+            <display value="hepatitis type B (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="50711007"/>
+            <display value="hepatitis C (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="309465005"/>
+            <display value="infectie door humaan herpesvirus type 3 (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="14189004"/>
+            <display value="mazelen (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="186748004"/>
+            <display value="parvovirusinfectie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="36653000"/>
+            <display value="rubella (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="38907003"/>
+            <display value="varicella (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="58170007"/>
+            <display value="virale meningitis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="128869009"/>
+            <display value="scabiës (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="184003006"/>
+            <display value="verzoek van zorgafnemer om behandeling (situatie)"/>
+         </concept>
+         <concept>
+            <code value="441703003"/>
+            <display value="verzoek van zorgafnemer om verwijzing (situatie)"/>
          </concept>
       </include>
    </compose>

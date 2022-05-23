@@ -42,17 +42,26 @@
     </element>
     <element id="CareTeam.participant:performer.role.coding">
       <path value="CareTeam.participant.role.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="420158005" />
+      </patternCoding>
     </element>
-    <element id="CareTeam.participant:performer.role.text">
-      <path value="CareTeam.participant.role.text" />
-      <fixedString value="performer" />
+    <element id="CareTeam.participant:performer.role.coding:healthProfessionalRole">
+      <path value="CareTeam.participant.role.coding" />
+      <sliceName value="healthProfessionalRole" />
+    </element>
+    <element id="CareTeam.participant:performer.role.coding:healthProfessionalRole.system">
+      <path value="CareTeam.participant.role.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="CareTeam.participant:performer.role.coding:healthProfessionalRole.code">
+      <path value="CareTeam.participant.role.coding.code" />
+      <fixedCode value="420158005" />
+    </element>
+    <element id="CareTeam.participant:performer.role.coding:healthProfessionalRole.display">
+      <path value="CareTeam.participant.role.coding.display" />
+      <defaultValueString value="Uitvoerder van methode" />
     </element>
     <element id="CareTeam.participant:performer.member">
       <path value="CareTeam.participant.member" />
@@ -131,15 +140,25 @@
         <comment value="Coordinator" />
       </mapping>
     </element>
-    <element id="CareTeam.participant:coordinator.role.coding">
+    <element id="CareTeam.participant:coordinator.role.coding:healthProfessionalRole">
       <path value="CareTeam.participant.role.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <sliceName value="healthProfessionalRole" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="768820003" />
+      </patternCoding>
+    </element>
+    <element id="CareTeam.participant:coordinator.role.coding:healthProfessionalRole.system">
+      <path value="CareTeam.participant.role.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="CareTeam.participant:coordinator.role.coding:healthProfessionalRole.code">
+      <path value="CareTeam.participant.role.coding.code" />
+      <fixedCode value="768820003" />
+    </element>
+    <element id="CareTeam.participant:coordinator.role.coding:healthProfessionalRole.display">
+      <path value="CareTeam.participant.role.coding.display" />
+      <defaultValueString value="Zorgcoördinator" />
     </element>
     <element id="CareTeam.participant:coordinator.member">
       <path value="CareTeam.participant.member" />

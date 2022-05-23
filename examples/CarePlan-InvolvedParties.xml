@@ -17,7 +17,11 @@
     </period>
     <participant>
         <role>
-            <text value="coordinator" />
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="420158005"/>
+                <display value="Uitvoerder van methode"/>
+            </coding>
         </role>
         <member>
             <reference value="PractitionerRole/ZorgverlenerA" />
@@ -26,7 +30,11 @@
     </participant>
     <participant>
         <role>
-            <text value="uitvoerder" />
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="768820003"/>
+                <display value="Zorgcoördinator"/>
+            </coding>
         </role>
         <member>
             <reference value="PractitionerRole/ZorgverlenerA" />
@@ -34,18 +42,22 @@
         </member>
     </participant>
     <participant>
-        <role>
-            <text value="uitvoerder" />
-        </role>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="420158005"/>
+            <display value="Uitvoerder van methode"/>
+        </coding>
         <member>
             <reference value="Patient/example" />
             <display value="Example" />
         </member>
     </participant>
     <participant>
-        <role>
-            <text value="uitvoerder" />
-        </role>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="420158005"/>
+            <display value="Uitvoerder van methode"/>
+        </coding>
         <member>
             <reference value="RelatedPerson/partner" />
             <display value="Partner" />

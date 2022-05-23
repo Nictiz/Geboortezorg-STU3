@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2021-03-22T15:40:57+01:00"/>
+         <start value="2021-03-22T15:40:57+02:00"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.317--20210322154057"/>
@@ -20,7 +20,7 @@
    <title value="BeleidProfessioneelOnderzoek 3.2"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <publisher value="KNOV"/>
+   <publisher value="Nictiz"/>
    <description value="BeleidProfessioneelOnderzoek 3.2"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
@@ -28,10 +28,9 @@
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
-            <code value="11501000146101"/>
-            <display value="intercollegiaal consult (verrichting)"/>
-         </concept>
-         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem is Zorgpad."/>
+            </extension>
             <code value="370858005"/>
             <display value="volgen van klinisch zorgpad (regime/therapie)"/>
          </concept>
@@ -40,6 +39,9 @@
             <display value="invasieve prenatale diagnostiek geïndiceerd (situatie)"/>
          </concept>
          <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="GUO1"/>
+            </extension>
             <code value="149851000146100"/>
             <display value="geavanceerd ultrageluidsonderzoek type I geïndiceerd (situatie)"/>
          </concept>

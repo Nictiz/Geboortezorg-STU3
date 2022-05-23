@@ -1,133 +1,162 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-FetalHeartRate"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate"/>
-  <name value="bc-FetalHeartRate"/>
-  <status value="draft"/>
-  <fhirVersion value="3.0.2"/>
+  <id value="bc-FetalHeartRate" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
+  <name value="bc-FetalHeartRate" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <derivation value="constraint" />
   <differential>
-      <element id="Observation.code.coding.system">
-         <path value="Observation.code.coding.system"/>
-         <patternUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="Observation.code.coding.code">
-         <path value="Observation.code.coding.code"/>
-         <patternCode value="249043002"/>
-      </element>
-      <element id="Observation.value[x]:valueQuantity">
-         <path value="Observation.valueQuantity"/>
-         <sliceName value="valueQuantity"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-1777"/>
-            <comment value="HartfrequentieWaarde"/>
-         </mapping>
-      </element>
-      <element id="Observation.interpretation.coding">
-         <path value="Observation.interpretation.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.interpretation.coding:interpretationFrequency">
-         <path value="Observation.interpretation.coding"/>
-         <sliceName value="interpretationFrequency"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Frequentie hartslag"/>
-            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.235--20170203161446"/>
-         </binding>
-      </element>
-      <element id="Observation.method.coding">
-         <path value="Observation.method.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.method.coding:heartActionBasedOn">
-         <path value="Observation.method.coding"/>
-         <sliceName value="heartActionBasedOn"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Hartactie op basis van"/>
-            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659"/>
-         </binding>
-      </element>
-      <element id="Observation.component">
-         <path value="Observation.component"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code.coding.code"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-1781"/>
-            <comment value="HartslagRegelmatigheid"/>
-         </mapping>
-      </element>
-      <element id="Observation.component:heartRateRegularity">
-         <path value="Observation.component"/>
-         <sliceName value="heartRateRegularity"/>
-         <max value="1"/>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-1781"/>
-            <comment value="HartslagRegelmatigheid"/>
-         </mapping>
-      </element>
-      <element id="Observation.component:heartRateRegularity.code.coding.system">
-         <path value="Observation.component.code.coding.system"/>
-         <patternUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="Observation.component:heartRateRegularity.code.coding.code">
-         <path value="Observation.component.code.coding.code"/>
-         <patternCode value="249044008"/>
-      </element>
-      <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
-         <path value="Observation.component.valueCodeableConcept"/>
-         <sliceName value="valueCodeableConcept"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Regelmaat hartslag"/>
-            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304"/>
-         </binding>
-      </element>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1776" />
+        <comment value="Foetale hartslag (Hartfrequentie)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <patternUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <patternCode value="249043002" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1778" />
+        <comment value="HartfrequentieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1777" />
+        <comment value="HartfrequentieWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.interpretation.coding">
+      <path value="Observation.interpretation.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.interpretation.coding:interpretationFrequency">
+      <path value="Observation.interpretation.coding" />
+      <sliceName value="interpretationFrequency" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Frequentie hartslag" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.235--20170203161446" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1782" />
+        <comment value="InterpretatieFrequentie" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1780" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.method.coding:heartActionBasedOn">
+      <path value="Observation.method.coding" />
+      <sliceName value="heartActionBasedOn" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Hartactie op basis van" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1779" />
+        <comment value="HartslagMeetMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:heartRateRegularity">
+      <path value="Observation.component" />
+      <sliceName value="heartRateRegularity" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1781" />
+        <comment value="HartslagRegelmatigheid" />
+      </mapping>
+    </element>
+    <element id="Observation.component:heartRateRegularity.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <patternUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:heartRateRegularity.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <patternCode value="249044008" />
+    </element>
+    <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Regelmaat hartslag" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>

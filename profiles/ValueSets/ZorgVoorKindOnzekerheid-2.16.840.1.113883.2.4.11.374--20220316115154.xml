@@ -1,43 +1,47 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.11.298--20200129160647"/>
+   <id value="2.16.840.1.113883.2.4.11.374--20220316115154"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2020-01-29T16:06:47+02:00"/>
+         <start value="2022-03-16T11:51:54+02:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.298--20200129160647"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.374--20220316115154"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.11.298"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.374"/>
    </identifier>
-   <version value="2020-01-29T16:06:47"/>
-   <name value="FoetaleMonitoringMethode"/>
-   <title value="FoetaleMonitoringMethode"/>
+   <version value="2022-03-16T11:51:54"/>
+   <name value="ZorgVoorKindOnzekerheid"/>
+   <title value="ZorgVoorKindOnzekerheid"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
-   <description value="FoetaleMonitoringMethode"/>
+   <description value="ZorgVoorKindOnzekerheid"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
-            <code value="81855008"/>
-            <display value="inwendig monitoren van foetus tijdens bevalling (regime/therapie)"/>
+            <code value="159891000146105"/>
+            <display value="voelt zich altijd onzeker om voor kind te zorgen (bevinding)"/>
          </concept>
          <concept>
-            <code value="36708009"/>
-            <display value="bewaken met externe foetale monitor (regime/therapie)"/>
+            <code value="159921000146103"/>
+            <display value="voelt zich nooit onzeker om voor kind te zorgen (bevinding)"/>
          </concept>
          <concept>
-            <code value="284020009"/>
-            <display value="elektrocardiografische bewaking van ST-segment (verrichting)"/>
+            <code value="159911000146108"/>
+            <display value="voelt zich soms onzeker om voor kind te zorgen (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="159901000146106"/>
+            <display value="voelt zich meestal onzeker om voor kind te zorgen (bevinding)"/>
          </concept>
       </include>
    </compose>

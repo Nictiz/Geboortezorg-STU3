@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2022-01-10T11:44:06+01:00"/>
+         <start value="2022-01-10T11:44:06+02:00"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.354--20220110114406"/>
@@ -20,7 +20,7 @@
    <title value="Conditie VrouwelijkeGeslachtsorganen"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <publisher value="KNOV"/>
+   <publisher value="Nictiz"/>
    <description value="Conditie VrouwelijkeGeslachtsorganen"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
@@ -43,11 +43,8 @@
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        Geen laceratie van vagina na bevalling.&#xA;                "/>
-            </extension>
-            <code value="289609008"/>
-            <display value="normale vagina (bevinding)"/>
+            <code value="159781000146100"/>
+            <display value="wand van vagina normaal (bevinding)"/>
          </concept>
          <concept>
             <code value="262935001"/>
@@ -55,7 +52,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        Geen laceratie van de cervix na bevalling.&#xA;                "/>
+               <valueString value="Geen laceratie van de cervix na bevalling."/>
             </extension>
             <code value="289829007"/>
             <display value="cervix uteri normaal (bevinding)"/>
@@ -66,7 +63,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        Geen laceratie van de vulva, buitenste schaamlippen en binnenste schaamlippen, na bevalling.&#xA;                "/>
+               <valueString value="Geen laceratie van de vulva, buitenste schaamlippen en binnenste schaamlippen, na bevalling."/>
             </extension>
             <code value="289499007"/>
             <display value="vulva normaal (bevinding)"/>
@@ -77,7 +74,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="&#xA;                        Geen laceratie van de uterus na bevalling.&#xA;                "/>
+               <valueString value="Geen laceratie van de uterus na bevalling."/>
             </extension>
             <code value="289620008"/>
             <display value="uterus normaal (bevinding)"/>
@@ -85,6 +82,10 @@
          <concept>
             <code value="283963001"/>
             <display value="laceratie van uterus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="159771000146102"/>
+            <display value="urethra normaal (bevinding)"/>
          </concept>
          <concept>
             <code value="283922007"/>
