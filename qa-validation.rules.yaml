@@ -10,6 +10,11 @@
     - profiles/NamingSystems/*.xml
     - profiles/SearchParameters/*.xml
     - profiles/ValueSets/*.xml
+  suppress:
+    - 6005
+    - eld-16
+    - 1001 
+    # ivm onterechte foutmeldingen
 
 # Validate examples
 - action: validate
@@ -17,6 +22,11 @@
   status: "Validating all examples"
   files: 
     - examples/*.xml
+  suppress:
+    - 6005
+    - eld-16
+    - 1001 
+    # ivm onterechte foutmeldingen
 
 # Include business rules to check conformance to profiling guidelines 
 - include: qa-id

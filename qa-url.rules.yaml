@@ -23,8 +23,7 @@
     - profiles/extensions/*.xml
     - profiles/NamingSystems/*.xml
     - profiles/SearchParameters/*.xml
-    - profiles/ValueSets/*.xml
-  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  filter: (StructureDefinitionor CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
   predicate: url.exists() and url.startsWith('http://nictiz.nl/fhir/')
   error-message: "Resource canonical URL doesn't start with 'http://nictiz.nl/fhir/'"  
 

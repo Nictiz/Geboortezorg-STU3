@@ -4,4 +4,4 @@
     - profiles/*.xml
   filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension')
   predicate: StructureDefinition.mapping.where(identity='gebz-peri-v3.2').exists() 
-  error-message: "Resource does not have a mapping on the root to a CBB logical model" 
+  error-message: "Resource does not have a mapping on the root to PWD 3.2" 
