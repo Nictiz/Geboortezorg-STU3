@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing child-related Observations, which are not captured in other existing profiles, as defined by BabyConnect. Child-related Observations are about the child, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead." />
+  <description value="An Observation profile describing child-related Observations (not captured in other existing profiles), as defined by BabyConnect. Child-related Observations, such as Apgar score and birthweight, pertain to the child Patient, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead.&#xD;&#xA;- Child observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -39,6 +39,39 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9733" />
+        <comment value="ROP Screening (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9303" />
+        <comment value="ROP Screening (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9732" />
+        <comment value="AABR (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9644" />
+        <comment value="AABR (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9878" />
+        <comment value="BERA (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9313" />
+        <comment value="BERA (Observatie)" />
+      </mapping>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <binding>
@@ -102,6 +135,21 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-70030" />
         <comment value="Substantie voeding kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9306" />
+        <comment value="ROPScreeningAfgeslotenWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9647" />
+        <comment value="AABRAfwijkendWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9316" />
+        <comment value="BERAAfwijkendWaarde" />
       </mapping>
     </element>
     <element id="Observation.interpretation">

@@ -37,12 +37,12 @@
     - Profile
     - Extension
   predicate: url = 'http://nictiz.nl/fhir/StructureDefinition/' + id
-  error-message: "Resource canonical URL pattern doesn't conform to 'http://nictiz.nl/fhir/[id]'"  
+  error-message: "Resource canonical URL pattern doesn't conform to 'http://nictiz.nl/fhir/StructureDefinition/[id]'"  
 
 - name: url-valuesets
   status: "Checking if all ValueSet canonical URLs confrom to the profiling guidelines"
   files: 
     - profiles/ValueSets/*.xml
   filter: ValueSet.exists()
-  predicate: (ValueSet.url = 'http://decor.nictiz.nl/fhir/ValueSet/' + ValueSet.id) or (ValueSet.url = 'http://nictiz.nl/fhir/ValueSet/' + ValueSet.id))
+  predicate: (ValueSet.url = 'http://decor.nictiz.nl/fhir/ValueSet/' + ValueSet.id) or (ValueSet.url = 'http://nictiz.nl/fhir/ValueSet/' + ValueSet.id)
   error-message: "Resource canonical URL doesn't conform to 'http://decor.nictiz.nl/fhir/ValueSet/[id]' or 'http://nictiz.nl/fhir/ValueSet/[id]'" 

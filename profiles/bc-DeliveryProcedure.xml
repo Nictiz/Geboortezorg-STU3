@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Procedure profile describing the delivery as defined by BabyConnect. A pregnancy (Procedure.reasonReference) can lead to one delivery Procedure, even in multiple birth. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure. The mother Patient is the subject of the delivery Procedure (Procedure.subject)." />
+  <description value="A Procedure profile describing the delivery (including uncomplicated natural births for consistency), as defined by BabyConnect. A pregnancy can lead to one delivery Procedure, even in multiple birth. The mother Patient is the subject of the delivery Procedure.&#xD;&#xA;- Delivery refers to the EpisodeOfCare with Procedure.context.reference&#xD;&#xA;- Delivery refers to the Pregnancy with Procedure.reasonReference.reference&#xD;&#xA;&#xD;&#xA;A delivery Procedure is related to one or more birth Procedures. The child Patient is the subject of the birth Procedure. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>

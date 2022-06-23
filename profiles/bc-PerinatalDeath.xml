@@ -46,7 +46,7 @@
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <defaultValueString value="foetale sterfte (gebeurtenis)|" />
+      <defaultValueString value="foetale sterfte (gebeurtenis)" />
     </element>
     <element id="Observation.value[x]:valueBoolean">
       <path value="Observation.valueBoolean" />
@@ -109,6 +109,10 @@
         <code value="dateTime" />
       </type>
     </element>
+    <element id="Observation.component:deceasedDateTime.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:perinatalPhase">
       <path value="Observation.component" />
       <sliceName value="perinatalPhase" />
@@ -143,6 +147,10 @@
         <description value="FasePerinataleSterfte22" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20201117115600" />
       </binding>
+    </element>
+    <element id="Observation.component:perinatalPhase.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

@@ -1,160 +1,160 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-DigitalVaginalExamination"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExamination"/>
-  <version value="1.0.0"/>
-  <name value="bc-DigitalVaginalExamination"/>
-  <title value="bc-DigitalVaginalExamination"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-DigitalVaginalExamination" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExamination" />
+  <version value="1.0.0" />
+  <name value="bc-DigitalVaginalExamination" />
+  <title value="bc-DigitalVaginalExamination" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="A DiagnosticReport profile describing a digital vaginal examination as defined by BabyConnect. The DiagnosticReport groups Observations related to the digital vaginal examination."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="A DiagnosticReport profile describing a digital vaginal examination as defined by BabyConnect. &#xD;&#xA;The digital vaginal examination DiagnosticReport groups Observations related to the digital vaginal examination. The woman Patient is the subject of the report.&#xD;&#xA;- This report refers to the EpisodeOfCare with DiagnosticReport.context.reference" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="workflow"/>
-      <uri value="http://hl7.org/fhir/workflow"/>
-      <name value="Workflow Mapping"/>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Mapping" />
   </mapping>
   <mapping>
-      <identity value="v2"/>
-      <uri value="http://hl7.org/v2"/>
-      <name value="HL7 v2 Mapping"/>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
   </mapping>
   <mapping>
-      <identity value="rim"/>
-      <uri value="http://hl7.org/v3"/>
-      <name value="RIM Mapping"/>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
   </mapping>
   <mapping>
-      <identity value="w5"/>
-      <uri value="http://hl7.org/fhir/w5"/>
-      <name value="W5 Mapping"/>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/w5" />
+    <name value="W5 Mapping" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="DiagnosticReport"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint" />
   <differential>
-      <element id="DiagnosticReport">
-         <path value="DiagnosticReport"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-1421"/>
-            <comment value="Vaginaal toucher"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-1849"/>
-            <comment value="Vaginaal toucher (Meting)"/>
-         </mapping>
-      </element>
-      <element id="DiagnosticReport.code.coding">
-         <path value="DiagnosticReport.code.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="DiagnosticReport.code.coding:digitalVaginalExamination">
-         <path value="DiagnosticReport.code.coding"/>
-         <sliceName value="digitalVaginalExamination"/>
-         <patternCoding>
-            <system value="http://snomed.info/sct"/>
-            <code value="51597003"/>
-            <display value="Manual palpation of vagina (procedure)"/>
-         </patternCoding>
-      </element>
-      <element id="DiagnosticReport.subject">
-         <path value="DiagnosticReport.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-2"/>
-            <comment value="Vrouw"/>
-         </mapping>
-      </element>
-      <element id="DiagnosticReport.context">
-         <path value="DiagnosticReport.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-4"/>
-            <comment value="Zorgverlening"/>
-         </mapping>
-      </element>
-      <element id="DiagnosticReport.result">
-         <path value="DiagnosticReport.result"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20612"/>
-            <comment value="Portio"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82372"/>
-            <comment value="Positie portio"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80613"/>
-            <comment value="Ontsluiting"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80614"/>
-            <comment value="Vliezen"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80615"/>
-            <comment value="Indaling Hodge"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80616"/>
-            <comment value="Aard van het voorliggend deel"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80618"/>
-            <comment value="Stand"/>
-         </mapping>
-      </element>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-1421" />
+        <comment value="Vaginaal toucher" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1849" />
+        <comment value="Vaginaal toucher (Meting)" />
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.code.coding">
+      <path value="DiagnosticReport.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.code.coding:digitalVaginalExamination">
+      <path value="DiagnosticReport.code.coding" />
+      <sliceName value="digitalVaginalExamination" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="51597003" />
+        <display value="Manual palpation of vagina (procedure)" />
+      </patternCoding>
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.context">
+      <path value="DiagnosticReport.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20612" />
+        <comment value="Portio" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82372" />
+        <comment value="Positie portio" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80613" />
+        <comment value="Ontsluiting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80614" />
+        <comment value="Vliezen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80615" />
+        <comment value="Indaling Hodge" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80616" />
+        <comment value="Aard van het voorliggend deel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80618" />
+        <comment value="Stand" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>

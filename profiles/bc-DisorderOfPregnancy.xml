@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Condition profile describing disorders related to a pregnancy as defined by BabyConnect. These disorders are part of the pregnancy, which is defined in the part of extension." />
+  <description value="A Condition profile describing disorders related to a pregnancy as defined by BabyConnect. For example, Conditions such as cholestasis and hypertension do not (only) pertain to the Patient but to a particular pregnancy.&#xD;&#xA;- Pregnancy-related Observations use partOf extension to point to Condition they're about.&#xD;&#xA;- In some cases the partOf Condition may not be available. The BGZ for instance does not relate Conditions to particular pregnancies.&#xD;&#xA;- Pregnancy-related Conditions refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DisorderOfPregnancy]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>

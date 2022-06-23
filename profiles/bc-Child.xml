@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Patient profile for the child Patient as defined by BabyConnect." />
+  <description value="A Patient profile for the child Patient as defined by BabyConnect.&#xD;&#xA;Child is a separate Patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -365,32 +365,6 @@
         <comment value="Datum/tijd vaststelling perinatale sterfte" />
       </mapping>
     </element>
-    <element id="Patient.address.country.extension">
-      <path value="Patient.address.country.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Patient.address.country.extension:countryCode">
-      <path value="Patient.address.country.extension" />
-      <sliceName value="countryCode" />
-      <min value="0" />
-    </element>
-    <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Patient.multipleBirth[x]">
       <path value="Patient.multipleBirth[x]" />
       <mapping>
@@ -398,32 +372,6 @@
         <map value="peri23-dataelement-40025" />
         <comment value="Rangnummer kind" />
       </mapping>
-    </element>
-    <element id="Patient.contact.address.country.extension">
-      <path value="Patient.contact.address.country.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Patient.contact.address.country.extension:countryCode">
-      <path value="Patient.contact.address.country.extension" />
-      <sliceName value="countryCode" />
-      <min value="0" />
-    </element>
-    <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />

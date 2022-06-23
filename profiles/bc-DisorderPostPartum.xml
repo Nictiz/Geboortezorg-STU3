@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Condition profile describing post partum disorders or complications as defined by BabyConnect. These disorders are related to the delivery, which is defined in the part of extension." />
+  <description value="A Condition profile describing post partum disorders or complications as defined by BabyConnect. Post partum disorders, such as post partum depression, occur after delivery and are related to the Delivery Procedure. &#xD;&#xA;- A partOf extension is used to point to the Delivery.&#xD;&#xA;- The context is the Maternal Record or an Encounter." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -82,10 +82,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Condition.extension:delivery">
       <path value="Condition.extension" />
       <sliceName value="delivery" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

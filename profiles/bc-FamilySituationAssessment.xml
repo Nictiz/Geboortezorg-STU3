@@ -103,6 +103,10 @@
         <comment value="InstabieleGezinssituatieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:unstableFamilySituation.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:alarmingFamilySituation">
       <path value="Observation.component" />
       <sliceName value="alarmingFamilySituation" />
@@ -138,6 +142,10 @@
         <comment value="ZorgelijkeGezinssituatieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:alarmingFamilySituation.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:intoxication">
       <path value="Observation.component" />
       <sliceName value="intoxication" />
@@ -145,7 +153,7 @@
     <element id="Observation.component:intoxication.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://unitsofmeasure.org" />
+        <system value="http://snomed.info/sct" />
         <code value="160251000146100" />
       </patternCoding>
     </element>
@@ -172,6 +180,10 @@
         <map value="peri32-dataelement-2921" />
         <comment value="IntoxicatiesWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:intoxication.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

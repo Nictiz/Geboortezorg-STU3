@@ -179,18 +179,18 @@
     <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="VoedingSoort_GZ" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.331--20210607115708" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7945" />
         <comment value="VoedingSoort" />
       </mapping>
-    </element>
-    <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="230126006" />
-      </patternCoding>
     </element>
     <element id="Observation.component:FeedingAdvice">
       <path value="Observation.component" />
@@ -233,6 +233,10 @@
         <comment value="Voedingsadvies" />
       </mapping>
     </element>
+    <element id="Observation.component:FeedingAdvice.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:SupplementaryFeeding">
       <path value="Observation.component" />
       <sliceName value="SupplementaryFeeding" />
@@ -268,6 +272,10 @@
         <map value="peri32-dataelement-10506" />
         <comment value="Bijvoeding?" />
       </mapping>
+    </element>
+    <element id="Observation.component:SupplementaryFeeding.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

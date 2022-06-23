@@ -1,214 +1,215 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-DeliveryObservation"/>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
-  <version value="1.0.0"/>
-  <name value="bc-DeliveryObservation"/>
-  <title value="bc-DeliveryObservation"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <id value="bc-DeliveryObservation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation" />
+  <version value="1.0.0" />
+  <name value="bc-DeliveryObservation" />
+  <title value="bc-DeliveryObservation" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-      <name value="Nictiz"/>
-      <telecom>
-         <system value="email"/>
-         <value value="geboortezorg@nictiz.nl"/>
-         <use value="work"/>
-      </telecom>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
   </contact>
-  <description value="An Observation profile describing delivery-related Observations, such as onset of first stage of labor, as defined by BabyConnect. Delivery-related Observations are Observations about a delivery, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation."/>
-  <copyright value="CC0"/>
-  <fhirVersion value="3.0.2"/>
+  <description value="An Observation profile describing delivery-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as onset of labor or blood loss pertain to a delivery Procedure.&#xD;&#xA;- Delivery-related Observations use focus extension to point to the delivery Procedure they're about.&#xD;&#xA;- Delivery-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DeliveryObservation]]" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
-      <identity value="hcim-basicelements-v1.0-2017EN"/>
-      <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
-      <name value="HCIM BasicElements-v1.0(2017EN)"/>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v2.3"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg Perinatologie 2.3"/>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
   </mapping>
   <mapping>
-      <identity value="gebz-peri-v3.2"/>
-      <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00"/>
-      <name value="Geboortezorg 3.2"/>
-   </mapping>
-   <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-  <derivation value="constraint"/>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+  <derivation value="constraint" />
   <differential>
-      <element id="Observation.extension">
-         <path value="Observation.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.extension:delivery">
-         <path value="Observation.extension"/>
-         <sliceName value="delivery"/>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-6"/>
-            <comment value="Bevalling"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-18"/>
-            <comment value="Eerdere bevalling"/>
-         </mapping>
-      </element>
-      <element id="Observation.extension:delivery.valueReference:valueReference">
-         <path value="Observation.extension.valueReference"/>
-         <sliceName value="valueReference"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
-         </type>
-      </element>
-      <element id="Observation.code">
-         <path value="Observation.code"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="bc-DeliveryObservation-code"/>
-            <valueSetReference>
-               <reference value="http://nictiz.nl/fhir/ValueSet/bc-DeliveryObservation-code"/>
-            </valueSetReference>
-         </binding>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-4084"/>
-            <comment value="Actieve Ontsluiting (Observatie)"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v3.2"/>
-            <map value="peri32-dataelement-4181"/>
-            <comment value="Aantal Geboren Kinderen (Observatie)"/>
-         </mapping>
-      </element>
-      <element id="Observation.code.coding">
-         <path value="Observation.code.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.subject">
-         <path value="Observation.subject"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-2"/>
-            <comment value="Vrouw"/>
-         </mapping>
-      </element>
-      <element id="Observation.context">
-         <path value="Observation.context"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-         </type>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
-         </type>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-4"/>
-            <comment value="Zorgverlening"/>
-         </mapping>
-      </element>
-      <element id="Observation.value[x]">
-         <path value="Observation.value[x]"/>
-         <min value="1"/>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20590"/>
-            <comment value="Tijdstip begin actieve ontsluiting"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-30030"/>
-            <comment value="Tijdstip actief meepersen"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20640"/>
-            <comment value="Hoeveelheid bloedverlies"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-82336"/>
-            <comment value="Geboorte placenta"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20630"/>
-            <comment value="Geboorte placenta"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80674"/>
-            <comment value="Conditie perineum postpartum"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-80673"/>
-            <comment value="Conditie perineum postpartum"/>
-         </mapping>
-         <mapping>
-            <identity value="gebz-peri-v2.3"/>
-            <map value="peri23-dataelement-20530"/>
-            <comment value="Risicostatus voor baring"/>
-         </mapping>
-      </element>
-      <element id="Observation.method.coding">
-         <path value="Observation.method.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation.method.coding:measurementMethod">
-         <path value="Observation.method.coding"/>
-         <sliceName value="measurementMethod"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="MeetMethode_GZ"/>
-            <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902"/>
-         </binding>
-      </element>
-      <element id="Observation.specimen">
-         <path value="Observation.specimen"/>
-         <max value="0"/>
-      </element>
-      <element id="Observation.device">
-         <path value="Observation.device"/>
-         <max value="0"/>
-      </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.extension:delivery">
+      <path value="Observation.extension" />
+      <sliceName value="delivery" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-6" />
+        <comment value="Bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-18" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
+    </element>
+    <element id="Observation.extension:delivery.valueReference:valueReference">
+      <path value="Observation.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+      </type>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-DeliveryObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-DeliveryObservation-code" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4084" />
+        <comment value="Actieve Ontsluiting (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4181" />
+        <comment value="Aantal Geboren Kinderen (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <min value="1" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20590" />
+        <comment value="Tijdstip begin actieve ontsluiting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-30030" />
+        <comment value="Tijdstip actief meepersen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20640" />
+        <comment value="Hoeveelheid bloedverlies" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82336" />
+        <comment value="Geboorte placenta" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20630" />
+        <comment value="Geboorte placenta" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80674" />
+        <comment value="Conditie perineum postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80673" />
+        <comment value="Conditie perineum postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20530" />
+        <comment value="Risicostatus voor baring" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.method.coding:measurementMethod">
+      <path value="Observation.method.coding" />
+      <sliceName value="measurementMethod" />
+      <binding>
+        <strength value="extensible" />
+        <description value="MeetMethode_GZ" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
+      </binding>
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <max value="0" />
+    </element>
   </differential>
 </StructureDefinition>

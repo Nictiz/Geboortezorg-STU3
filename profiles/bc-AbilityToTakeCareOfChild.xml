@@ -45,7 +45,7 @@
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <fixedString value="bevinding betreffende ouderschap (bevinding)" />
+      <defaultValueString value="bevinding betreffende ouderschap (bevinding)" />
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
@@ -143,6 +143,10 @@
         <comment value="OnzekerheidWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:uncertainty.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:ability">
       <path value="Observation.component" />
       <sliceName value="ability" />
@@ -185,6 +189,10 @@
         <map value="peri32-dataelement-9992" />
         <comment value="VaardigheidWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:ability.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
