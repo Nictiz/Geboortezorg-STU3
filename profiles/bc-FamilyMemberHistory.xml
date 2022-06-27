@@ -7,6 +7,14 @@
   <title value="bc-FamilyMemberHistory" />
   <status value="draft" />
   <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="A FamilyMemberHistory profile as defined by BabyConnect describing the relevant family history of a pregnant woman.&#xD;&#xA;- FamilyMemberHistory.patient points to the woman Patient&#xD;&#xA;- FamilyMemberHistory.relationship describes the relation (e.g. father or sister) of the family member to the woman Patient&#xD;&#xA;- FamilyMemberHistory.condition points to the (significant) condition(s) of the family member. The optional contributedToDeath extension can be used to indicate if a specific condition caused death&#xD;&#xA;- FamilyMemberHistory.deceased[x] indicates whether the family member has deceased. This can either be a boolean (true/false) or more specific information can be provided like age. If an age is present, it implies that the family member is deceased and in this case the boolean value should be left out." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
@@ -145,7 +153,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-condition" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-condition" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />

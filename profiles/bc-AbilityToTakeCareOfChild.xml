@@ -6,6 +6,14 @@
   <title value="bc-AbilityToTakeCareOfChild" />
   <status value="draft" />
   <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="An Observation profile describing the woman's ability to take care of her child as defined by BabyConnect. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
@@ -94,8 +102,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>

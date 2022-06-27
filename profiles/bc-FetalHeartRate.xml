@@ -2,9 +2,21 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-FetalHeartRate" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
+  <version value="1.0.0" />
   <name value="bc-FetalHeartRate" />
   <status value="draft" />
   <fhirVersion value="3.0.2" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing fetal heart rate as defined by BabyConnect. The base definition is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
