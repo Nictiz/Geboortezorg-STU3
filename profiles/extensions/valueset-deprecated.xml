@@ -14,8 +14,8 @@
     <experimental value="false"/>
     <date value="2021-01-17T07:06:13+11:00"/>
     <publisher value="HL7"/>
-    <description value="if ture, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn."/>
-    <fhirVersion value="4.3.0"/>
+    <description value="if true, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn."/>
+    <fhirVersion value="3.0.2"/>
     <mapping>
         <identity value="rim"/>
         <uri value="http://hl7.org/v3"/>
@@ -23,10 +23,8 @@
     </mapping>
     <kind value="complex-type"/>
     <abstract value="false"/>
-    <context>
-        <type value="element"/>
-        <expression value="ValueSet.compose.include.concept"/>
-    </context>
+    <contextType value="resource" />
+    <context value="ValueSet.compose.include.concept"/>
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
@@ -75,10 +73,7 @@
                 <max value="1"/>
             </base>
             <type>
-                <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-                    <valueUrl value="id"/>
-                </extension>
-                <code value="http://hl7.org/fhirpath/System.String"/>
+                <code value="string"/>
             </type>
             <isModifier value="false"/>
             <isSummary value="false"/>
@@ -142,10 +137,7 @@
                 <max value="1"/>
             </base>
             <type>
-                <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-                    <valueUrl value="uri"/>
-                </extension>
-                <code value="http://hl7.org/fhirpath/System.String"/>
+                <code value="string"/>
             </type>
             <fixedUri value="http://hl7.org/fhir/StructureDefinition/valueset-deprecated"/>
             <isModifier value="false"/>
