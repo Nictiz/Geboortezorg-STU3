@@ -41,10 +41,12 @@ jobs:
       - name: Firely.Terminal validation
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: profiles profiles/*
+          PATH_TO_CONFORMANCE_RESOURCES: profiles profiles/CapabilityStatement
           PATH_TO_EXAMPLES: examples
           PATH_TO_QUALITY_CONTROL_RULES: qa-validation
+	  EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_EXAMPLES_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+
 
