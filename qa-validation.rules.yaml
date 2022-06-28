@@ -15,9 +15,6 @@
     - 6005
     - eld-16
     - 1001
-    # ivm allergyintolerance code tijdelijke ignore totdat issue is opgelost:
-    - 6007
-    
 
 # Validate examples
 - action: validate
@@ -25,6 +22,8 @@
   status: "Validating all examples"
   files: 
     - examples/*.xml
+    - "!examples/AllergyIntolerance.xml"
+    # tijdelijke ignore ivm foutmelding op code gaat ook mis in zib 2017 zelf
   suppress:
     - 6005
     - eld-16
@@ -38,10 +37,7 @@
 - include: qa-mapping
 
 # TO DO CHECKS 
-  # Do all references resolve?
   # Do all referenced resource conform to the type in the profile?
-  # Provide warning if CodeadbleConcept does not have a binding in the logical model.
-  # Given a CBB logical model -- is every element account for by a mapping in a profile?
   
 
 
