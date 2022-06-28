@@ -67,8 +67,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -135,6 +135,10 @@
       <path value="Observation.component.valueCodeableConcept.coding.display" />
       <defaultValueString value="observatie betreffende feces (waarneembare entiteit)" />
     </element>
+    <element id="Observation.component:feces.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:fecalDiapers">
       <path value="Observation.component" />
       <sliceName value="fecalDiapers" />
@@ -170,6 +174,10 @@
       <type>
         <code value="Quantity" />
       </type>
+    </element>
+    <element id="Observation.component:fecalDiapers.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:urine">
       <path value="Observation.component" />
@@ -212,6 +220,10 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.291--20200623135655" />
       </binding>
     </element>
+    <element id="Observation.component:urine.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:urineDiapers">
       <path value="Observation.component" />
       <sliceName value="urineDiapers" />
@@ -247,6 +259,10 @@
       <type>
         <code value="Quantity" />
       </type>
+    </element>
+    <element id="Observation.component:urineDiapers.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

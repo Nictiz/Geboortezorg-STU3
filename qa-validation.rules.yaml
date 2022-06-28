@@ -11,10 +11,13 @@
     - profiles/SearchParameters/*.xml
     - profiles/ValueSets/*.xml
   suppress:
+    # ivm onterechte foutmeldingen:
     - 6005
     - eld-16
-    - 1001 
-    # ivm onterechte foutmeldingen
+    - 1001
+    # ivm allergyintolerance code tijdelijke ignore totdat issue is opgelost:
+    - 6007
+    
 
 # Validate examples
 - action: validate
