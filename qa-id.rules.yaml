@@ -29,11 +29,11 @@
   # custom error messages for unique checks do not work.
 
 - name: id-starts-bc
-  status: "Checking if all profile ids start with 'bc-'"
+  status: "Checking if all bc profile ids start with 'bc-'"
   files: 
-    - profiles/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: StructureDefinition.exists()
   predicate: id.startsWith('bc-')
   error-message: "Resource id does not start with 'bc-'" 

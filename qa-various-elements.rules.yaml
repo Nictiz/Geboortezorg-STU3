@@ -49,11 +49,11 @@
   error-message: "Resource does not contain a description" 
 
 - name: copyright-mandatory
-  status: "Checking if all conformance resources contain a copyright"
+  status: "Checking if all bc conformance resources contain a copyright"
   files: 
-    - profiles/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: StructureDefinition.exists()
   predicate: copyright.exists()
   error-message: "Resource does not contain a copyright" 
