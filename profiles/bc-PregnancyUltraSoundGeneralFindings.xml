@@ -131,6 +131,10 @@
         <comment value="ConclusieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:conclusion.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:suspicionAbnormalities">
       <path value="Observation.component" />
       <sliceName value="suspicionAbnormalities" />
@@ -174,6 +178,10 @@
         <comment value="VerdenkingAfwijkingobvWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:suspicionAbnormalities.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:advice">
       <path value="Observation.component" />
       <sliceName value="advice" />
@@ -215,6 +223,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.257--20200406134358" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:advice.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
