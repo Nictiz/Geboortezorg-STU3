@@ -65,8 +65,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -117,6 +117,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:personalGrooming.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:toiletUse">
       <path value="Observation.component" />
       <sliceName value="toiletUse" />
@@ -163,6 +167,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:toiletUse.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:abilityToEat">
       <path value="Observation.component" />
       <sliceName value="abilityToEat" />
@@ -204,6 +212,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.351--20211214145747" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:abilityToEat.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:abilityToTransfer">
       <path value="Observation.component" />
@@ -251,6 +263,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:abilityToTransfer.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:mobility">
       <path value="Observation.component" />
       <sliceName value="mobility" />
@@ -296,6 +312,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.353--20211214152957" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:mobility.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:abilityToDressOneSelf">
       <path value="Observation.component" />
@@ -343,6 +363,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:abilityToDressOneSelf.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:abilityToWalkStairs">
       <path value="Observation.component" />
       <sliceName value="abilityToWalkStairs" />
@@ -389,6 +413,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:abilityToWalkStairs.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:abilityToWashOneSelf">
       <path value="Observation.component" />
       <sliceName value="abilityToWashOneSelf" />
@@ -434,6 +462,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.357--20220117103812" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:abilityToWashOneSelf.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
