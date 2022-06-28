@@ -13,11 +13,11 @@
   error-message: "Resource does not contain a name" 
 
 - name: name-conformance
-  status: "Checking if all profile naming is conform to profiling guidelines"
+  status: "Checking if all bc profile naming is conform to profiling guidelines"
   files: 
-    - profiles/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: StructureDefinition.exists()
   predicate: name.startsWith('bc-')
   error-message: "Resource name does not conform to profiling guidelines" 
@@ -29,10 +29,8 @@
     - profiles/conceptmaps/*.xml
     - profiles/datatypes/*.xml
     - profiles/extensions/*.xml
-    - profiles/NamingSystems/*.xml
-    - profiles/SearchParameters/*.xml
     - profiles/ValueSets/*.xml
-  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or ConceptMap).exists()
   predicate: title.exists()
   error-message: "Resource does not contain a title" 
 
@@ -61,21 +59,21 @@
   error-message: "Resource does not contain a copyright" 
 
 - name: contact-filled
-  status: "Checking if all profiles have 'Nictiz' as contact"
+  status: "Checking if all bc profiles have 'Nictiz' as contact"
   files: 
-    - profiles/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: StructureDefinition.exists()
   predicate: contact.name.exists() and ('Nictiz' in contact.name) and contact.telecom.exists()
   error-message: "Contact not filled (correctly)" 
 
 - name: publisher-filled
-  status: "Checking if all profiles have 'Nictiz' as publisher"
+  status: "Checking if all bc profiles have 'Nictiz' as publisher"
   files: 
-    - profiles/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: StructureDefinition.exists()
   predicate: publisher = 'Nictiz'
   error-message: "Incorrect publisher info, should be 'Nictiz'"  

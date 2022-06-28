@@ -14,24 +14,23 @@
   # custom error messages for unique checks do not work.
 
 - name: url-starts-with-correct-base
-  status: "Checking if all resources have a canonical URL that start with the correct base"
+  status: "Checking if all bc resources have a canonical URL that start with the correct base"
   files: 
-    - examples/*.xml
-    - profiles/*.xml
-    - profiles/conceptmaps/*.xml
-    - profiles/datatypes/*.xml
-    - profiles/extensions/*.xml
-    - profiles/NamingSystems/*.xml
-    - profiles/SearchParameters/*.xml
-  filter: (StructureDefinitionor CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+    - profiles/bc-*.xml
+    - profiles/conceptmaps/bc-*.xml
+    - profiles/datatypes/bc-*.xml
+    - profiles/extensions/bc-*.xml
+    - profiles/NamingSystems/bc-*.xml
+    - profiles/SearchParameters/bc-*.xml
+  filter: (StructureDefinition or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
   predicate: url.exists() and url.startsWith('http://nictiz.nl/fhir/')
   error-message: "Resource canonical URL doesn't start with 'http://nictiz.nl/fhir/'"  
 
 - name: url-profiles
-  status: "Checking if all StructureDefinition canonical URLs conform to the profiling guidelines"
+  status: "Checking if all bc StructureDefinition canonical URLs conform to the profiling guidelines"
   files: 
-    - profiles/*.xml
-    - profiles/extensions/*.xml
+    - profiles/bc-*.xml
+    - profiles/extensions/bc-*.xml
   filter: 
     - Profile
     - Extension
