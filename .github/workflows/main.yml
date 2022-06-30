@@ -44,7 +44,7 @@ jobs:
           PATH_TO_CONFORMANCE_RESOURCES: profiles profiles/extensions profiles/datatypes profiles/conceptmaps
           # PATH_TO_EXAMPLES: examples
           PATH_TO_QUALITY_CONTROL_RULES: qa-validation
-          # DOTNET_VALIDATION_ENABLED: false
+          DOTNET_VALIDATION_ENABLED: false
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_EXAMPLES_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
