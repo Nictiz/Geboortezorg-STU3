@@ -19,7 +19,7 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
-    <identity value="gebz-peri-v3.2" />
+    <identity value="gebz-peri-v3.2-ext" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
     <name value="Geboortezorg 3.2" />
   </mapping>
@@ -32,7 +32,7 @@
     <element id="Observation">
       <path value="Observation" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9936" />
         <comment value="Uitscheiding" />
       </mapping>
@@ -40,12 +40,12 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9938" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9948" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
@@ -53,14 +53,34 @@
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9946" />
         <comment value="Toelichting" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9956" />
         <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <binding>
+        <strength value="extensible" />
+        <description value="MeetMethode_GZ" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9941" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9951" />
+        <comment value="ObservatieMethode" />
       </mapping>
     </element>
     <element id="Observation.component">
@@ -72,13 +92,23 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9937" />
+        <comment value="Feces (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9947" />
+        <comment value="Urine (Observatie)" />
+      </mapping>
     </element>
     <element id="Observation.component:feces">
       <path value="Observation.component" />
       <sliceName value="feces" />
       <max value="1" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9940" />
         <comment value="FecesWaarde" />
       </mapping>
@@ -144,7 +174,7 @@
       <sliceName value="fecalDiapers" />
       <max value="1" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9957" />
         <comment value="PoepluiersWaarde" />
       </mapping>
@@ -184,7 +214,7 @@
       <sliceName value="urine" />
       <max value="1" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9950" />
         <comment value="UrineWaarde" />
       </mapping>
@@ -229,7 +259,7 @@
       <sliceName value="urineDiapers" />
       <max value="1" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9958" />
         <comment value="PlasluiersWaarde" />
       </mapping>
