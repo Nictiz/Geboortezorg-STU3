@@ -1,14 +1,14 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="self-reliance-example"/>
+    <id value="barthelindex"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-SelfReliance"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BarthelIndex"/>
     </meta>
     <status value="final"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="xxx"/>
-            <display value="Code still missing from AD"/>
+            <code value="273302005"/>
+            <display value="Barthel-index (beoordelingsschaal)"/>
         </coding>
     </code>
     <subject>
@@ -16,10 +16,41 @@
         <display value="Example" />
     </subject>
     <context>
-        <reference value="EpisodeOfCare/kraamzorg"/>
+        <reference value="Encounter/kraamzorg"/>
     </context>
-    <effectiveDateTime value="2011-09-02"/>
     <comment value="moeder is nog wat onzeker en vermoeid na een zware bevalling"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="Code still missing from AD"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="BarthelDarm"/>
+                <code value="FECAL2"/>
+                <display value="Continent"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="Code still missing from AD"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="BarthelBlaas"/>
+                <code value="URIN1"/>
+                <display value="Ongelukje"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
     <component>
         <code>
             <coding>
@@ -30,9 +61,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="704437004"/>
-                <display value="in staat tot zelfstandige uiterlijke verzorging (bevinding)"/>
+                <system value="BarthelUiterlijkeVerzorging"/>
+                <code value="GROOM1"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -46,9 +77,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="284907009"/>
-                <display value="in staat om toilet te gebruiken (bevinding)"/>
+                <system value="BarthelToiletgebruik"/>
+                <code value="TOIL2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -62,9 +93,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="289000006"/>
-                <display value="in staat om zelf te eten (bevinding)"/>
+                <system value="BarthelEten"/>
+                <code value="FEED2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -78,9 +109,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="715127003"/>
-                <display value="minimale hulp nodig bij transfer van stoel naar bed (bevinding)"/>
+                <system value="BarthelTransfer"/>
+                <code value="TRANS2"/>
+                <display value="Weinig hulp"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -94,9 +125,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160697000"/>
-                <display value="mobiliteit redelijk (bevinding)"/>
+                <system value="BarthelMobiliteit"/>
+                <code value="MOBIL2"/>
+                <display value="Loopt met hulp"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -110,9 +141,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="284985004+284973007"/>
-                <display value="in staat om zich uit te kleden (bevinding)+ in staat om zich aan te kleden (bevinding"/>
+                <system value="BarthelAanUitkleden"/>
+                <code value="DRESS2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -126,9 +157,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="301589003"/>
-                <display value="niet in staat trap te lopen (bevinding)"/>
+                <system value="BarthelTrappenLopen"/>
+                <code value="CLIMB0"/>
+                <display value="Afhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -142,10 +173,24 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="284792004"/>
-                <display value="in staat om zelf te douchen (bevinding)"/>
+                <system value="BarthelBadenDouchen"/>
+                <code value="BATH1"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="xxx"/>
+                <code value="xxx"/>
+                <display value="Code still missing from AD"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="15" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="1" /> 
+        </valueQuantity>
     </component>
 </Observation>

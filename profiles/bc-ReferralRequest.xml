@@ -125,41 +125,6 @@
       <path value="ReferralRequest.intent" />
       <fixedCode value="order" />
     </element>
-    <element id="ReferralRequest.type.extension">
-      <path value="ReferralRequest.type.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="ReferralRequest.type.extension:referralType">
-      <path value="ReferralRequest.type.extension" />
-      <sliceName value="referralType" />
-      <short value="Referral type" />
-      <definition value="Referral type as defined in 3.2" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-referraltype" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="TypeVerwijzing_32" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.348--20211101122336" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10297" />
-        <comment value="Type van de verwijzing" />
-      </mapping>
-    </element>
     <element id="ReferralRequest.type.coding">
       <path value="ReferralRequest.type.coding" />
       <slicing>
@@ -177,8 +142,8 @@
       <definition value="Referral type as defined in 2.3 and 3.2. The receiving party decides if a referral results in a consult or handover." />
       <binding>
         <strength value="extensible" />
-        <description value="Type verwijzing" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.221--20161201112008" />
+        <description value="bc-ReferralRequest-type" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ReferralRequest-type" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />

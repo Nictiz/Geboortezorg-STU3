@@ -19,7 +19,7 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
-    <identity value="gebz-peri-v3.2" />
+    <identity value="gebz-peri-v3.2-ext" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
     <name value="Geboortezorg 3.2" />
   </mapping>
@@ -32,12 +32,12 @@
     <element id="Observation">
       <path value="Observation" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9738" />
         <comment value="Opleiding moeder" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9739" />
         <comment value="Opleiding vader" />
       </mapping>
@@ -71,15 +71,24 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="443722004" />
-          <display value="Educational level of parent of subject (observable entity)" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="105421008" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="105421008" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="opleidingsniveau (waarneembare entiteit)" />
     </element>
     <element id="Observation.context">
       <path value="Observation.context" />
@@ -104,7 +113,7 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.10.1--20200901000000" />
       </binding>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9741" />
         <comment value="Schooltype" />
       </mapping>
@@ -112,7 +121,7 @@
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
-        <identity value="gebz-peri-v3.2" />
+        <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9742" />
         <comment value="Toelichting" />
       </mapping>

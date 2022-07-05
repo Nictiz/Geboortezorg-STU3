@@ -78,7 +78,7 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1621" />
+        <map value="peri32-dataelement-10710" />
         <comment value="Partusassistentie" />
       </mapping>
     </element>
@@ -97,6 +97,10 @@
       <path value="Encounter.class.extension" />
       <sliceName value="ContactTypeCodelist" />
       <min value="0" />
+    </element>
+    <element id="Encounter.class.extension:ContactTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="Encounter.class.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10711" />
@@ -133,11 +137,21 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10735" />
+        <comment value="ContactSoort" />
+      </mapping>
     </element>
     <element id="Encounter.type:childbirthAssistance">
       <path value="Encounter.type" />
       <sliceName value="childbirthAssistance" />
       <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10735" />
+        <comment value="ContactSoort" />
+      </mapping>
     </element>
     <element id="Encounter.type:childbirthAssistance.coding">
       <path value="Encounter.type.coding" />
@@ -157,7 +171,7 @@
     </element>
     <element id="Encounter.type:childbirthAssistance.coding.display">
       <path value="Encounter.type.coding.display" />
-      <defaultValueString value="Labor and birth support (regime/therapy)" />
+      <defaultValueString value="ondersteuning durante partu (regime/therapie)" />
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
@@ -204,6 +218,11 @@
         <map value="peri23-dataelement-20650" />
         <comment value="Partusstadium assistente gearriveerd" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri23-dataelement-10738" />
+        <comment value="PartusStadiumWaarde" />
+      </mapping>
     </element>
     <element id="Encounter.participant.extension:timeWhenCalled">
       <path value="Encounter.participant.extension" />
@@ -216,7 +235,7 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4206" />
+        <map value="peri32-dataelement-10726" />
         <comment value="OproepDatumTijd" />
       </mapping>
     </element>
