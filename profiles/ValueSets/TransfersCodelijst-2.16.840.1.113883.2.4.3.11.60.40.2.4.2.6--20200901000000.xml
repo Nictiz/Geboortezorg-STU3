@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.9--20200901000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.6--20200901000000"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
@@ -9,15 +9,15 @@
          <start value="2020-09-01T00:00:00+02:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.9--20200901000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.6--20200901000000"/>
    <identifier>
       <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.9"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.2.6"/>
    </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="TrappenLopenCodelijst"/>
-   <title value="TrappenLopenCodelijst"/>
+   <name value="TransfersCodelijst"/>
+   <title value="TransfersCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -32,20 +32,20 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="TrappenLopenCodelijst"/>
+   <description value="TransfersCodelijst"/>
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.9"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.6"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
                <valueDecimal value="0"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Niet in staat"/>
+               <valueString value="Niet in staat (niet zelfstandig)"/>
             </extension>
-            <code value="CLIMB0"/>
-            <display value="Afhankelijk"/>
+            <code value="TRANS0"/>
+            <display value="Niet zelfstandig"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -53,7 +53,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Afhankelijk"/>
+               <value value="Niet zelfstandig"/>
             </designation>
          </concept>
          <concept>
@@ -61,10 +61,10 @@
                <valueDecimal value="1"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Heeft hulp nodig (woorden, lichamelijk of hulpmiddel)"/>
+               <valueString value="Veel hulp (1-2 mensen lichamelijk)"/>
             </extension>
-            <code value="CLIMB1"/>
-            <display value="Hulp"/>
+            <code value="TRANS1"/>
+            <display value="Veel hulp"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -72,7 +72,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Hulp"/>
+               <value value="Veel hulp"/>
             </designation>
          </concept>
          <concept>
@@ -80,9 +80,28 @@
                <valueDecimal value="2"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onafhankelijk naar boven en naar beneden"/>
+               <valueString value="Weinig hulp (met hulp van woorden of lichamelijk)"/>
             </extension>
-            <code value="CLIMB2"/>
+            <code value="TRANS2"/>
+            <display value="Weinig hulp"/>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Weinig hulp"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+               <valueDecimal value="3"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Onafhankelijk"/>
+            </extension>
+            <code value="TRANS3"/>
             <display value="Onafhankelijk"/>
             <designation>
                <language value="nl-NL"/>
@@ -96,51 +115,4 @@
          </concept>
       </include>
    </compose>
-   <expansion>
-      <identifier value="urn:uuid:0fde93ec-4c82-49cb-832a-00c1b3ce138f"/>
-      <timestamp value="2021-06-18T15:20:56.384+02:00"/>
-      <total value="3"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.9"/>
-         <code value="CLIMB0"/>
-         <display value="Afhankelijk"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Afhankelijk"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.9"/>
-         <code value="CLIMB1"/>
-         <display value="Hulp"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Hulp"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.9"/>
-         <code value="CLIMB2"/>
-         <display value="Onafhankelijk"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Onafhankelijk"/>
-         </designation>
-      </contains>
-   </expansion>
 </ValueSet>

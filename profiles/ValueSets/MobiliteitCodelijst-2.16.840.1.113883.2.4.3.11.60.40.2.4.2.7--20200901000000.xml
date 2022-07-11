@@ -12,8 +12,8 @@
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.7--20200901000000"/>
    <identifier>
       <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.7"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.2.7"/>
    </identifier>
    <version value="2020-09-01T00:00:00"/>
    <name value="MobiliteitCodelijst"/>
@@ -115,65 +115,4 @@
          </concept>
       </include>
    </compose>
-   <expansion>
-      <identifier value="urn:uuid:81a92355-b8e2-49e9-87b6-49a9df3dea59"/>
-      <timestamp value="2021-06-18T15:20:49.645+02:00"/>
-      <total value="4"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
-         <code value="MOBIL0"/>
-         <display value="Afhankelijk"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Afhankelijk"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
-         <code value="MOBIL1"/>
-         <display value="Onafhankelijk met rolstoel"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Onafhankelijk met rolstoel"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
-         <code value="MOBIL2"/>
-         <display value="Loopt met hulp"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Loopt met hulp"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
-         <code value="MOBIL3"/>
-         <display value="Onafhankelijk"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Onafhankelijk"/>
-         </designation>
-      </contains>
-   </expansion>
 </ValueSet>

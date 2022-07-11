@@ -12,8 +12,8 @@
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.3--20200901000000"/>
    <identifier>
       <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.3"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.2.3"/>
    </identifier>
    <version value="2020-09-01T00:00:00"/>
    <name value="UiterlijkeVerzorgingCodelijst"/>
@@ -77,37 +77,4 @@
          </concept>
       </include>
    </compose>
-   <expansion>
-      <identifier value="urn:uuid:008f1bde-f4c8-45f8-abc0-e8ee3a893e74"/>
-      <timestamp value="2021-06-18T15:20:56.947+02:00"/>
-      <total value="2"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.3"/>
-         <code value="GROOM0"/>
-         <display value="Hulp"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Hulp"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.3"/>
-         <code value="GROOM1"/>
-         <display value="Onafhankelijk"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Onafhankelijk"/>
-         </designation>
-      </contains>
-   </expansion>
 </ValueSet>

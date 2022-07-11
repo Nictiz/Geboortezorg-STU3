@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.2--20200901000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1--20200901000000"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
@@ -9,15 +9,15 @@
          <start value="2020-09-01T00:00:00+02:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.2--20200901000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1--20200901000000"/>
    <identifier>
       <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.2"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1"/>
    </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="BlaasCodelijst"/>
-   <title value="BlaasCodelijst"/>
+   <name value="DarmCodelijst"/>
+   <title value="DarmCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -32,19 +32,19 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="BlaasCodelijst"/>
+   <description value="DarmCodelijst"/>
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
                <valueDecimal value="0"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Incontinent of katheter"/>
+               <valueString value="Incontinent"/>
             </extension>
-            <code value="URIN0"/>
+            <code value="FECAL0"/>
             <display value="Incontinent"/>
             <designation>
                <language value="nl-NL"/>
@@ -61,9 +61,9 @@
                <valueDecimal value="1"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Af en toe een ongelukje (max. 1 keer per 24 uur)"/>
+               <valueString value="Af en toe een ongelukje"/>
             </extension>
-            <code value="URIN1"/>
+            <code value="FECAL1"/>
             <display value="Ongelukje"/>
             <designation>
                <language value="nl-NL"/>
@@ -80,9 +80,9 @@
                <valueDecimal value="2"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Continent (gedurende meer dan 7 dagen)"/>
+               <valueString value="Continent"/>
             </extension>
-            <code value="URIN2"/>
+            <code value="FECAL2"/>
             <display value="Continent"/>
             <designation>
                <language value="nl-NL"/>
@@ -96,51 +96,4 @@
          </concept>
       </include>
    </compose>
-   <expansion>
-      <identifier value="urn:uuid:0c0a1457-5ac2-4bf0-b973-456583129a6e"/>
-      <timestamp value="2021-06-18T15:20:45.307+02:00"/>
-      <total value="3"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
-         <code value="URIN0"/>
-         <display value="Incontinent"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Incontinent"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
-         <code value="URIN1"/>
-         <display value="Ongelukje"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Ongelukje"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
-         <code value="URIN2"/>
-         <display value="Continent"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Continent"/>
-         </designation>
-      </contains>
-   </expansion>
 </ValueSet>

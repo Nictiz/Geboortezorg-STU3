@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1--20200901000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.4--20200901000000"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
@@ -9,15 +9,15 @@
          <start value="2020-09-01T00:00:00+02:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1--20200901000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.4--20200901000000"/>
    <identifier>
       <use value="official"/>
-      <system value="http://art-decor.org/ns/oids/vs"/>
-      <value value="2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.2.4"/>
    </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="DarmCodelijst"/>
-   <title value="DarmCodelijst"/>
+   <name value="ToiletgebruikCodelijst"/>
+   <title value="ToiletgebruikCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -32,20 +32,20 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="DarmCodelijst"/>
+   <description value="ToiletgebruikCodelijst"/>
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.4"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
                <valueDecimal value="0"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Incontinent"/>
+               <valueString value="Afhankelijk"/>
             </extension>
-            <code value="FECAL0"/>
-            <display value="Incontinent"/>
+            <code value="TOIL0"/>
+            <display value="Afhankelijk"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -53,7 +53,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Incontinent"/>
+               <value value="Afhankelijk"/>
             </designation>
          </concept>
          <concept>
@@ -61,10 +61,10 @@
                <valueDecimal value="1"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Af en toe een ongelukje"/>
+               <valueString value="Heeft enige hulp nodig maar kan sommige dingen zelf"/>
             </extension>
-            <code value="FECAL1"/>
-            <display value="Ongelukje"/>
+            <code value="TOIL1"/>
+            <display value="Hulp"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -72,7 +72,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Ongelukje"/>
+               <value value="Hulp"/>
             </designation>
          </concept>
          <concept>
@@ -80,10 +80,10 @@
                <valueDecimal value="2"/>
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Continent"/>
+               <valueString value="Onafhankelijk (op en af, uit- en aankleden, afvegen)"/>
             </extension>
-            <code value="FECAL2"/>
-            <display value="Continent"/>
+            <code value="TOIL2"/>
+            <display value="Onafhankelijk"/>
             <designation>
                <language value="nl-NL"/>
                <use>
@@ -91,56 +91,9 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Continent"/>
+               <value value="Onafhankelijk"/>
             </designation>
          </concept>
       </include>
    </compose>
-   <expansion>
-      <identifier value="urn:uuid:ab244ac5-85c5-424f-b2ed-96bba960a239"/>
-      <timestamp value="2021-06-18T15:20:48.469+02:00"/>
-      <total value="3"/>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
-         <code value="FECAL0"/>
-         <display value="Incontinent"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Incontinent"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
-         <code value="FECAL1"/>
-         <display value="Ongelukje"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Ongelukje"/>
-         </designation>
-      </contains>
-      <contains>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
-         <code value="FECAL2"/>
-         <display value="Continent"/>
-         <designation>
-            <language value="nl-NL"/>
-            <use>
-               <system value="http://snomed.info/sct"/>
-               <code value="900000000000013009"/>
-               <display value="Synonym"/>
-            </use>
-            <value value="Continent"/>
-         </designation>
-      </contains>
-   </expansion>
 </ValueSet>
