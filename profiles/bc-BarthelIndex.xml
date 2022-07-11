@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing self-reliance of the woman after birth (based on the Barthel Index instrument) as defined by BabyConnect. The subject is the woman Patient." />
+  <description value="An Observation profile describing self-reliance of the woman after birth as defined by BabyConnect. The subject is the woman Patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -272,9 +272,9 @@
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:abilityToEat">
+    <element id="Observation.component:eating">
       <path value="Observation.component" />
-      <sliceName value="abilityToEat" />
+      <sliceName value="eating" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -282,29 +282,29 @@
         <comment value="Eten" />
       </mapping>
     </element>
-    <element id="Observation.component:abilityToEat.code.coding">
+    <element id="Observation.component:eating.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="288883002" />
       </patternCoding>
     </element>
-    <element id="Observation.component:abilityToEat.code.coding.system">
+    <element id="Observation.component:eating.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:abilityToEat.code.coding.code">
+    <element id="Observation.component:eating.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="288883002" />
     </element>
-    <element id="Observation.component:abilityToEat.value[x]:valueCodeableConcept">
+    <element id="Observation.component:eating.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.component:abilityToEat.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:eating.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
@@ -314,13 +314,13 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:abilityToEat.referenceRange">
+    <element id="Observation.component:eating.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:abilityToTransfer">
+    <element id="Observation.component:transfers">
       <path value="Observation.component" />
-      <sliceName value="abilityToTransfer" />
+      <sliceName value="transfers" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -328,33 +328,33 @@
         <comment value="Transfers" />
       </mapping>
     </element>
-    <element id="Observation.component:abilityToTransfer.code.coding">
+    <element id="Observation.component:transfers.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="364666007" />
       </patternCoding>
     </element>
-    <element id="Observation.component:abilityToTransfer.code.coding.system">
+    <element id="Observation.component:transfers.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:abilityToTransfer.code.coding.code">
+    <element id="Observation.component:transfers.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="364666007" />
     </element>
-    <element id="Observation.component:abilityToTransfer.code.coding.display">
+    <element id="Observation.component:transfers.code.coding.display">
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="vermogen tot transfer (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component:abilityToTransfer.value[x]:valueCodeableConcept">
+    <element id="Observation.component:transfers.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.component:abilityToTransfer.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:transfers.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
@@ -364,7 +364,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:abilityToTransfer.referenceRange">
+    <element id="Observation.component:transfers.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
@@ -418,9 +418,9 @@
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:abilityToDressOneSelf">
+    <element id="Observation.component:dressingAndUndressing">
       <path value="Observation.component" />
-      <sliceName value="abilityToDressOneSelf" />
+      <sliceName value="dressingAndUndressing" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -428,33 +428,33 @@
         <comment value="AanUitkleden" />
       </mapping>
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.code.coding">
+    <element id="Observation.component:dressingAndUndressing.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="365222007" />
       </patternCoding>
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.code.coding.system">
+    <element id="Observation.component:dressingAndUndressing.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.code.coding.code">
+    <element id="Observation.component:dressingAndUndressing.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="365222007" />
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.code.coding.display">
+    <element id="Observation.component:dressingAndUndressing.code.coding.display">
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="bevinding betreffende vermogen om activiteit uit te voeren om zich te kleden (bevinding)" />
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.value[x]:valueCodeableConcept">
+    <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
@@ -464,13 +464,13 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:abilityToDressOneSelf.referenceRange">
+    <element id="Observation.component:dressingAndUndressing.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:abilityToWalkStairs">
+    <element id="Observation.component:walkingStairs">
       <path value="Observation.component" />
-      <sliceName value="abilityToWalkStairs" />
+      <sliceName value="walkingStairs" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -478,33 +478,33 @@
         <comment value="TrappenLopen" />
       </mapping>
     </element>
-    <element id="Observation.component:abilityToWalkStairs.code.coding">
+    <element id="Observation.component:walkingStairs.code.coding">
       <path value="Observation.component.code.coding" />
       <fixedCoding>
         <system value="http://snomed.info/sct" />
         <code value="365115005" />
       </fixedCoding>
     </element>
-    <element id="Observation.component:abilityToWalkStairs.code.coding.system">
+    <element id="Observation.component:walkingStairs.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:abilityToWalkStairs.code.coding.code">
+    <element id="Observation.component:walkingStairs.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="365115005" />
     </element>
-    <element id="Observation.component:abilityToWalkStairs.code.coding.display">
+    <element id="Observation.component:walkingStairs.code.coding.display">
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="bevinding betreffende vermogen om trap te nemen (bevinding)" />
     </element>
-    <element id="Observation.component:abilityToWalkStairs.value[x]:valueCodeableConcept">
+    <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.component:abilityToWalkStairs.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
@@ -514,13 +514,13 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:abilityToWalkStairs.referenceRange">
+    <element id="Observation.component:walkingStairs.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:abilityToWashOneSelf">
+    <element id="Observation.component:bathingAndShowering">
       <path value="Observation.component" />
-      <sliceName value="abilityToWashOneSelf" />
+      <sliceName value="bathingAndShowering" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -528,33 +528,33 @@
         <comment value="BadenDouchen" />
       </mapping>
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.code.coding">
+    <element id="Observation.component:bathingAndShowering.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="365182004" />
       </patternCoding>
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.code.coding.system">
+    <element id="Observation.component:bathingAndShowering.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.code.coding.code">
+    <element id="Observation.component:bathingAndShowering.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="365182004" />
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.code.coding.display">
+    <element id="Observation.component:bathingAndShowering.code.coding.display">
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="bevinding betreffende vermogen om te douchen (bevinding)" />
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.value[x]:valueCodeableConcept">
+    <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
@@ -564,13 +564,13 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:abilityToWashOneSelf.referenceRange">
+    <element id="Observation.component:bathingAndShowering.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
-    <element id="Observation.component:TotalScore">
+    <element id="Observation.component:totalScore">
       <path value="Observation.component" />
-      <sliceName value="TotalScore" />
+      <sliceName value="totalScore" />
       <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -578,17 +578,18 @@
         <comment value="TotaalScore" />
       </mapping>
     </element>
-    <element id="Observation.component:TotalScore.code.coding.system">
+    <element id="Observation.component:totalScore.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:TotalScore.value[x]">
+    <element id="Observation.component:totalScore.value[x]:valueQuantity">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
       </type>
     </element>
-    <element id="Observation.component:TotalScore.referenceRange">
+    <element id="Observation.component:totalScore.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
