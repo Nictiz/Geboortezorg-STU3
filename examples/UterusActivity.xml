@@ -32,8 +32,14 @@
         </extension>
     </effectivePeriod>
     <performer>
-        <reference value="Practitioner/zorgverlenerX" />
-        <display value="Zorgverlener X" />
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/ZorgverlenerD" />
+                <display value="Zorgverlener D" />
+            </valueReference>
+        </extension>
+        <reference value="Practitioner/ZorgverlenerD" />
+        <display value="Zorgverlener D" />
     </performer>
     <method>
         <coding>
