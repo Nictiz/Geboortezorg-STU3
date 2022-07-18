@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-BreastFindings" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BreastFindings" />
+  <version value="1.0.0" />
+  <name value="bc-BreastFindings" />
+  <title value="bc-BreastFindings" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing findings related to the breasts as defined by BabyConnect. The subject is the woman Patient." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2858" />
+        <comment value="Bevindingen borsten (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="273302005" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2843" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2862" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.extension">
+      <path value="Observation.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="laterality" />
+      <min value="0" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">
+      <path value="Observation.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2861" />
+        <comment value="Lateraliteit" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2863" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:nipples">
+      <path value="Observation.component" />
+      <sliceName value="nipples" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2857" />
+        <comment value="TepelsWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:nipples.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364376001" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:nipples.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:nipples.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364376001" />
+    </element>
+    <element id="Observation.component:nipples.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="observatie betreffende tepel (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:nipples.value[x]:valueString">
+      <path value="Observation.component.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.component:nipples.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+    <element id="Observation.component:skin">
+      <path value="Observation.component" />
+      <sliceName value="skin" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10736" />
+        <comment value="HuidWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:skin.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364528001" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:skin.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:skin.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364528001" />
+    </element>
+    <element id="Observation.component:skin.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="observatie betreffende huid (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:skin.value[x]:valueString">
+      <path value="Observation.component.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.component:skin.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+    <element id="Observation.component:other">
+      <path value="Observation.component" />
+      <sliceName value="other" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10737" />
+        <comment value="OverigeAfwijkingWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:other.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="290054003" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:other.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:other.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="290054003" />
+    </element>
+    <element id="Observation.component:other.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="bevinding betreffende aspect van mamma (bevinding)" />
+    </element>
+    <element id="Observation.component:other.value[x]:valueString">
+      <path value="Observation.component.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.component:other.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+  </differential>
+</StructureDefinition>
