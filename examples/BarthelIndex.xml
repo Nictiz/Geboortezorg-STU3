@@ -1,14 +1,14 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="self-reliance-example"/>
+    <id value="barthelindex"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-SelfReliance"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BarthelIndex"/>
     </meta>
     <status value="final"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="xxx"/>
-            <display value="Code still missing from AD"/>
+            <code value="273302005"/>
+            <display value="Barthel-index (beoordelingsschaal)"/>
         </coding>
     </code>
     <subject>
@@ -24,15 +24,47 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="Code is still missing from AD"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
+                <code value="FECAL2"/>
+                <display value="Continent"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="Code is still missing from AD"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
+                <code value="URIN1"/>
+                <display value="Ongelukje"/>
+            </coding>      
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
                 <code value="704435007"/>
                 <display value="Personal grooming activities, function (observable entity)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="704437004"/>
-                <display value="in staat tot zelfstandige uiterlijke verzorging (bevinding)"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.3"/>
+                <code value="GROOM1"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -46,41 +78,41 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="284907009"/>
-                <display value="in staat om toilet te gebruiken (bevinding)"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.4"/>
+                <code value="TOIL2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.4"/>
                 <code value="288883002"/>
                 <display value="vermogen om te eten (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="289000006"/>
-                <display value="in staat om zelf te eten (bevinding)"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.5"/>
+                <code value="FEED2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.6"/>
                 <code value="364666007"/>
                 <display value="vermogen tot transfer (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="715127003"/>
-                <display value="minimale hulp nodig bij transfer van stoel naar bed (bevinding)"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.6"/>
+                <code value="TRANS2"/>
+                <display value="Weinig hulp"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -94,9 +126,9 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160697000"/>
-                <display value="mobiliteit redelijk (bevinding)"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
+                <code value="MOBIL2"/>
+                <display value="Loopt met hulp"/>
             </coding>      
         </valueCodeableConcept>
     </component>
@@ -110,16 +142,16 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="284985004+284973007"/>
-                <display value="in staat om zich uit te kleden (bevinding)+ in staat om zich aan te kleden (bevinding"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.8"/>
+                <code value="DRESS2"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.8"/>
                 <code value="365115005"/>
                 <display value="bevinding betreffende vermogen om trap te nemen (bevinding)"/>
             </coding>
@@ -127,15 +159,15 @@
         <valueCodeableConcept>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="301589003"/>
-                <display value="niet in staat trap te lopen (bevinding)"/>
+                <code value="CLIMB0"/>
+                <display value="Afhankelijk"/>
             </coding>      
         </valueCodeableConcept>
     </component>
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.10"/>
                 <code value="365182004"/>
                 <display value="bevinding betreffende vermogen om te douchen (bevinding)"/>
             </coding>
@@ -143,9 +175,26 @@
         <valueCodeableConcept>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="284792004"/>
-                <display value="in staat om zelf te douchen (bevinding)"/>
+                <code value="BATH1"/>
+                <display value="Onafhankelijk"/>
             </coding>      
         </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="xxx"/>
+                <display value="Code is still missing from AD"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <coding>
+                <value value="15" />
+                <unit value="1" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="1" />
+            </coding>      
+        </valueQuantity>
     </component>
 </Observation>
