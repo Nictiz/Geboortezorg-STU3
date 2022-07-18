@@ -132,10 +132,36 @@
         <comment value="PlacentalokalisatieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:placentaLocalization.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:sectionScar">
       <path value="Observation.component" />
       <sliceName value="sectionScar" />
       <max value="1" />
+    </element>
+    <element id="Observation.component:sectionScar.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.component:sectionScar.extension:valueBoolean">
+      <path value="Observation.component.extension" />
+      <sliceName value="valueBoolean" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Observation.component:sectionScar.code.coding">
       <path value="Observation.component.code.coding" />
@@ -156,22 +182,13 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="vastzittende placenta aan oud litteken in uterus (aandoening)" />
     </element>
-    <element id="Observation.component:sectionScar.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="v2 Yes/no Indicator" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/v2-0136" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7867" />
-        <comment value="SectioLittekenWaarde" />
-      </mapping>
+    <element id="Observation.component:sectionScar.value[x]">
+      <path value="Observation.component.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component:sectionScar.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:ostium">
       <path value="Observation.component" />
@@ -210,6 +227,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.272--20190925122834" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:ostium.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
