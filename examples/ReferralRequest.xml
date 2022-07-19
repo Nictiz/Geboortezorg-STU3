@@ -45,15 +45,18 @@
     </type> 
     <subject> 
         <reference value="Patient/example"/> 
+        <display value="Zwangere"/> 
     </subject> 
     <context> 
         <reference value="EpisodeOfCare/example"/> 
+        <display value="Zwangerschapsdossier"/> 
     </context> 
     <authoredOn value="2019-01-18"/> 
     <!-- verwijzing van (peri23-dataelement-82550) -->
     <requester> 
         <agent> 
             <reference value="Practitioner/requestingagentexample"/> 
+            <display value="Aanvragende zorgverlener"/> 
         </agent> 
         <!-- specialisme (peri23-dataelement-82554) -->
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requesterSpecialty">
@@ -77,6 +80,7 @@
     <!-- zorginstelling (peri23-dataelement-82578) -->
     <recipient> 
         <reference value="Organization/recipientexample"/>
+        <display value="Ontvangende organisatie"/> 
     </recipient> 
     <!-- overig (peri23-dataelement-82442) -->
     <reasonCode> 
