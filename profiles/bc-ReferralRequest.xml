@@ -135,15 +135,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="ReferralRequest.type.coding:referralType23">
+    <element id="ReferralRequest.type.coding:referralType">
       <path value="ReferralRequest.type.coding" />
-      <sliceName value="referralType23" />
+      <sliceName value="referralType" />
       <short value="Referral type" />
-      <definition value="Referral type as defined in 2.3. The receiving party decides if a referral results in a consult or handover." />
+      <definition value="Referral type as defined in 2.3 and 3.2. The receiving party decides if a referral results in a consult or handover." />
       <binding>
         <strength value="extensible" />
-        <description value="Type verwijzing" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.221--20161201112008" />
+        <description value="bc-ReferralRequest-type" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ReferralRequest-type" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -154,24 +154,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9683" />
         <comment value="Type verwijzing" />
-      </mapping>
-    </element>
-    <element id="ReferralRequest.type.coding:referralType32">
-      <path value="ReferralRequest.type.coding" />
-      <sliceName value="referralType32" />
-      <short value="Referral type" />
-      <definition value="Referral type as defined in 3.2. The receiving party decides if a referral results in a consult or handover." />
-      <binding>
-        <strength value="extensible" />
-        <description value="TypeVerwijzing_32" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.348--20211101122336" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10297" />
-        <comment value="Type van de verwijzing" />
       </mapping>
     </element>
     <element id="ReferralRequest.subject">

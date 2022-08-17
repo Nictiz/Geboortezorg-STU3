@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence or presence of the patient. Use .participant to indicate whether the patient was participating in the meeting or not." />
+  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence of the patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -77,6 +77,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3399" />
+        <comment value="ZorgEpisode" />
+      </mapping>
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant" />

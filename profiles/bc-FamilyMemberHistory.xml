@@ -74,6 +74,13 @@
     </element>
     <element id="FamilyMemberHistory.deceased[x]">
       <path value="FamilyMemberHistory.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <comment value="FHIR allows only one instance of this element, so only one data type can be used. The boolean value of this element is implicitly true if one of the other data types is used. For example, when age is known this is sent with the Age data type and the boolean value should be left blank." />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -85,6 +92,20 @@
         <map value="peri32-dataelement-1118" />
         <comment value="LeeftijdBijOverlijden" />
       </mapping>
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]:deceasedBoolean">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]:deceasedAge">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <sliceName value="deceasedAge" />
+      <type>
+        <code value="Age" />
+      </type>
     </element>
     <element id="FamilyMemberHistory.note">
       <path value="FamilyMemberHistory.note" />

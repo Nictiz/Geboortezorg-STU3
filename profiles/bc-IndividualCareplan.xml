@@ -149,7 +149,14 @@
       <path value="CarePlan.goal" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCareplan-Goal" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan-Goal" />
+      </type>
+    </element>
+    <element id="CarePlan.activity.detail.goal">
+      <path value="CarePlan.activity.detail.goal" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Goal" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />

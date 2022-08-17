@@ -173,6 +173,10 @@
         <code value="Quantity" />
       </type>
     </element>
+    <element id="Observation.component:uterusActivityFrequency.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:uterusActivityDuration">
       <path value="Observation.component" />
       <sliceName value="uterusActivityDuration" />
@@ -217,6 +221,10 @@
       <path value="Observation.component.valueQuantity.code" />
       <defaultValueCode value="sec" />
     </element>
+    <element id="Observation.component:uterusActivityDuration.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:uterusActivityIntensity">
       <path value="Observation.component" />
       <sliceName value="uterusActivityIntensity" />
@@ -259,6 +267,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.291--20200129144103" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:uterusActivityIntensity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:monteVideoUnits">
       <path value="Observation.component" />
@@ -304,6 +316,10 @@
       <path value="Observation.component.valueQuantity.code" />
       <defaultValueCode value="MVU" />
     </element>
+    <element id="Observation.component:monteVideoUnits.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:uterusActivityRegularity">
       <path value="Observation.component" />
       <sliceName value="uterusActivityRegularity" />
@@ -345,6 +361,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.292--20200129145703" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:uterusActivityRegularity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:conclusionUterusActivity">
       <path value="Observation.component" />
@@ -388,6 +408,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.294--20200129150958" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:conclusionUterusActivity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

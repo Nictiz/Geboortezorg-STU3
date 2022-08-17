@@ -43,11 +43,22 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3952" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -116,6 +127,10 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.301--20200901151615" />
       </binding>
     </element>
+    <element id="Observation.component:perineum.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:sfincter">
       <path value="Observation.component" />
       <sliceName value="sfincter" />
@@ -159,6 +174,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:sfincter.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:femaleGenital">
       <path value="Observation.component" />
       <sliceName value="femaleGenital" />
@@ -201,6 +220,10 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.354--20220110114406" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.component:femaleGenital.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

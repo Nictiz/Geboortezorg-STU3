@@ -6,7 +6,6 @@
   <name value="bc-FetalHeartRate" />
   <title value="bc-FetalHeartRate" />
   <status value="draft" />
-  <fhirVersion value="3.0.2" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -18,6 +17,7 @@
   </contact>
   <description value="An Observation profile describing fetal heart rate as defined by BabyConnect. The base definition is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
@@ -57,11 +57,22 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1778" />
         <comment value="HartfrequentieDatumTijd" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
     </element>
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.valueQuantity" />
@@ -170,6 +181,10 @@
         <description value="Regelmaat hartslag" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304" />
       </binding>
+    </element>
+    <element id="Observation.component:heartRateRegularity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
