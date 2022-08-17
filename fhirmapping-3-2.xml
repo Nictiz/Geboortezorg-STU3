@@ -542,7 +542,7 @@
 	<record>
 		<ID>peri32-dataelement-757</ID>
 		<naam>EindDatumTijd</naam>
-		<mapping>Encounter.period.start</mapping>
+		<mapping>Encounter.period.end</mapping>
 		<profile>bc-Encounter</profile>
 		<in>true</in>
 		<zib>NL-CM-15.1.4</zib>
@@ -1802,7 +1802,7 @@
 	<record>
 		<ID>peri32-dataelement-7859</ID>
 		<naam>JuridischeStatus</naam>
-		<mapping>Condition</mapping>
+		<mapping>Condition.code</mapping>
 		<profile>bc-LegalSituation-LegalStatus</profile>
 		<in/>
 		<zib/>
@@ -1812,7 +1812,7 @@
 	<record>
 		<ID>peri32-dataelement-7860</ID>
 		<naam>Vertegenwoordiging</naam>
-		<mapping>Condition</mapping>
+		<mapping>Condition.code</mapping>
 		<profile>bc-LegalSituation-Representation</profile>
 		<in/>
 		<zib/>
@@ -2812,7 +2812,7 @@
 	<record>
 		<ID>peri32-dataelement-2627</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>ClinicalImpression.assessor</mapping>
+		<mapping>ClinicalImpression.assessor.extension:practitionerRole</mapping>
 		<profile>bc-ClinicalImpression</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-978</zib>
@@ -2852,7 +2852,7 @@
 	<record>
 		<ID>peri32-dataelement-4302</ID>
 		<naam>Beleid</naam>
-		<mapping>ClinicalImpression.extension:management</mapping>
+		<mapping>ClinicalImpression.extension:management.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-ClinicalImpression</profile>
 		<in/>
 		<zib/>
@@ -3882,7 +3882,7 @@
 	<record>
 		<ID>peri32-dataelement-10487</ID>
 		<naam>ContactSoort</naam>
-		<mapping>ReferralRequest.extension:contactType</mapping>
+		<mapping>ReferralRequest.extension:contactType.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-ReferralRequest</profile>
 		<in/>
 		<zib/>
@@ -4732,7 +4732,7 @@
 	<record>
 		<ID>peri32-dataelement-10415</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>Consent.consentingParty</mapping>
+		<mapping>Consent.consentingParty.extension:practitionerRole</mapping>
 		<profile>bc-TreatmentDirective</profile>
 		<in/>
 		<zib/>
@@ -5722,7 +5722,7 @@
 	<record>
 		<ID>peri32-dataelement-1119</ID>
 		<naam>Aandoening</naam>
-		<mapping>FamilyMemberHistory.condition</mapping>
+		<mapping>FamilyMemberHistory.condition.code.extension:conditionReference</mapping>
 		<profile>bc-FamilyMemberHistory</profile>
 		<in>false</in>
 		<zib/>
@@ -6502,7 +6502,7 @@
 	<record>
 		<ID>peri32-dataelement-2911</ID>
 		<naam>Taalvaardigheid</naam>
-		<mapping>Patient.communication.extension:languageProficiency</mapping>
+		<mapping>Patient.communication.extension:languageProficiency.extension:level.valueCoding:valueCoding</mapping>
 		<profile>bc-Woman</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-2904</zib>
@@ -6592,7 +6592,7 @@
 	<record>
 		<ID>peri32-dataelement-10556</ID>
 		<naam>Probleem infectieziekte(n) Gezin</naam>
-		<mapping>FamilyMemberHistory.condition</mapping>
+		<mapping>FamilyMemberHistory.condition.code.extension:conditionReference</mapping>
 		<profile>bc-FamilyMemberHistory</profile>
 		<in/>
 		<zib/>
@@ -8422,7 +8422,7 @@
 	<record>
 		<ID>peri32-dataelement-1779</ID>
 		<naam>HartslagMeetMethode</naam>
-		<mapping>Observation.method</mapping>
+		<mapping>Observation.method.coding:heartActionBasedOn</mapping>
 		<profile>bc-FetalHeartRate</profile>
 		<in>false</in>
 		<zib/>
@@ -8442,7 +8442,7 @@
 	<record>
 		<ID>peri32-dataelement-1782</ID>
 		<naam>InterpretatieFrequentie</naam>
-		<mapping>Observation.interpretation</mapping>
+		<mapping>Observation.interpretation.coding:interpretationFrequency</mapping>
 		<profile>bc-FetalHeartRate</profile>
 		<in>false</in>
 		<zib/>
@@ -8572,7 +8572,7 @@
 	<record>
 		<ID>peri32-dataelement-7894</ID>
 		<naam>Vermoeden iuvd op basis van</naam>
-		<mapping>Condition.evidence.code</mapping>
+		<mapping>Condition.evidence.code:evidenceIUVD</mapping>
 		<profile>bc-DisorderOfPregnancy</profile>
 		<in/>
 		<zib/>
@@ -8822,7 +8822,7 @@
 	<record>
 		<ID>peri32-dataelement-7888</ID>
 		<naam>Eiceldonatie</naam>
-		<mapping>RelatedPerson.extension:donorRelation</mapping>
+		<mapping>RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept</mapping>
 		<profile>bc-Donor</profile>
 		<in/>
 		<zib/>
@@ -9022,7 +9022,7 @@
 	<record>
 		<ID>peri32-dataelement-7917</ID>
 		<naam>Vermoeden iuvd op basis van</naam>
-		<mapping>Condition.evidence.code</mapping>
+		<mapping>Condition.evidence.code:evidenceIUVD</mapping>
 		<profile>bc-DisorderOfLaborAndDelivery</profile>
 		<in/>
 		<zib/>
@@ -14642,7 +14642,7 @@
 	<record>
 		<ID>peri32-dataelement-9705</ID>
 		<naam>Na ontslag</naam>
-		<mapping>EpisodeOfCare.type</mapping>
+		<mapping>EpisodeOfCare.type:followUpAfterDischarge</mapping>
 		<profile>bc-ChildRecord</profile>
 		<in/>
 		<zib/>
@@ -14812,7 +14812,7 @@
 	<record>
 		<ID>peri32-dataelement-9735</ID>
 		<naam>Na 2 jaar</naam>
-		<mapping>EpisodeOfCare.type</mapping>
+		<mapping>EpisodeOfCare.type:followUpAfter2years</mapping>
 		<profile>bc-ChildRecord</profile>
 		<in/>
 		<zib/>
@@ -23542,7 +23542,7 @@
 	<record>
 		<ID>peri32-dataelement-7942</ID>
 		<naam>Voedingsadvies</naam>
-		<mapping>Observation.component</mapping>
+		<mapping>Observation.component:FeedingAdvice</mapping>
 		<profile>bc-FeedingPatternInfant</profile>
 		<in/>
 		<zib/>
@@ -23562,7 +23562,7 @@
 	<record>
 		<ID>peri32-dataelement-7944</ID>
 		<naam>Voeding</naam>
-		<mapping>Observation.component</mapping>
+		<mapping>Observation.component:FeedingType</mapping>
 		<profile>bc-FeedingPatternInfant</profile>
 		<in/>
 		<zib/>
