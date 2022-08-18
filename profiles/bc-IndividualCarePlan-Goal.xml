@@ -65,21 +65,9 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-goal-careplan" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-reference" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8814" />
-        <comment value="AfsluitDatum" />
-      </mapping>
-    </element>
-    <element id="Goal.extension:carePlan.valueReference:valueReference">
-      <path value="Goal.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan" />
-      </type>
+      <isModifier value="false" />
     </element>
     <element id="Goal.description">
       <path value="Goal.description" />
