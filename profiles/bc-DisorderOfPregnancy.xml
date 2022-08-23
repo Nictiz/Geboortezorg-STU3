@@ -251,6 +251,52 @@
         <comment value="ProbleemNaam" />
       </mapping>
     </element>
+    <element id="Condition.bodySite.extension">
+      <path value="Condition.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Condition.bodySite.extension:Laterality">
+      <path value="Condition.bodySite.extension" />
+      <sliceName value="Laterality" />
+      <min value="0" />
+    </element>
+    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
+      <path value="Condition.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2698" />
+        <comment value="ProbleemLateraliteit" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.extension:bodySiteReference">
+      <path value="Condition.bodySite.extension" />
+      <sliceName value="bodySiteReference" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
+      </type>
+    </element>
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
+      <path value="Condition.bodySite.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
+    </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
       <type>
@@ -282,6 +328,24 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-4" />
         <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Condition.onsetDateTime:onsetDateTime">
+      <path value="Condition.onsetDateTime" />
+      <sliceName value="onsetDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2701" />
+        <comment value="ProbleemBeginDatum" />
+      </mapping>
+    </element>
+    <element id="Condition.abatementDateTime:abatementDateTime">
+      <path value="Condition.abatementDateTime" />
+      <sliceName value="abatementDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2702" />
+        <comment value="ProbleemEindDatum" />
       </mapping>
     </element>
     <element id="Condition.evidence.code">

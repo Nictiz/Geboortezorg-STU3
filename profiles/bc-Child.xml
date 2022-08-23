@@ -365,6 +365,96 @@
         <comment value="Datum/tijd vaststelling perinatale sterfte" />
       </mapping>
     </element>
+    <element id="Patient.address.line.extension">
+      <path value="Patient.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.address.line.extension:streetName">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="streetName" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1380" />
+        <comment value="Straat" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:houseNumber">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="houseNumber" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1381" />
+        <comment value="Huisnummer" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:buildingNumbersuffix">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1382" />
+        <comment value="Huisnummerletter" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1383" />
+        <comment value="Huisnummertoevoeging" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:unitID">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="unitID" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1389" />
+        <comment value="AdditioneleInformatie" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:additionalLocator">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="additionalLocator" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1384" />
+        <comment value="AanduidingBijNummer" />
+      </mapping>
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1386" />
+        <comment value="Woonplaats" />
+      </mapping>
+    </element>
+    <element id="Patient.address.district">
+      <path value="Patient.address.district" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1387" />
+        <comment value="Gemeente" />
+      </mapping>
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1385" />
+        <comment value="Postcode" />
+      </mapping>
+    </element>
     <element id="Patient.multipleBirth[x]">
       <path value="Patient.multipleBirth[x]" />
       <mapping>

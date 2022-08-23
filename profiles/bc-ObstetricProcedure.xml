@@ -545,6 +545,20 @@
       </slicing>
       <min value="0" />
     </element>
+    <element id="Procedure.bodySite.extension:ProcedureLaterality">
+      <path value="Procedure.bodySite.extension" />
+      <sliceName value="ProcedureLaterality" />
+      <min value="0" />
+    </element>
+    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept">
+      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1194" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+    </element>
     <element id="Procedure.bodySite.extension:lateralityEpisiotomy">
       <path value="Procedure.bodySite.extension" />
       <sliceName value="lateralityEpisiotomy" />

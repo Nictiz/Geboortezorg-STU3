@@ -197,6 +197,20 @@
         <comment value="Ruggeprik gewenst, niet gekregen?" />
       </mapping>
     </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
     <element id="Observation.method.coding">
       <path value="Observation.method.coding" />
       <slicing>

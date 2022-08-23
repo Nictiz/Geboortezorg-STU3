@@ -89,8 +89,18 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="ClinicalImpression.effective[x]:effectiveDateTime">
-      <path value="ClinicalImpression.effectiveDateTime" />
+      <path value="ClinicalImpression.effective[x]" />
       <sliceName value="effectiveDateTime" />
       <type>
         <code value="dateTime" />

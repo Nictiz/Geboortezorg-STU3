@@ -73,6 +73,16 @@
       </slicing>
       <min value="0" />
     </element>
+    <element id="EpisodeOfCare.extension:title">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="title" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3404" />
+        <comment value="ZorgEpisodeNaam" />
+      </mapping>
+    </element>
     <element id="EpisodeOfCare.extension:comment">
       <path value="EpisodeOfCare.extension" />
       <sliceName value="comment" />

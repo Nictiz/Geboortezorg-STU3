@@ -2702,7 +2702,7 @@
    <record>
       <ID>peri32-dataelement-2624</ID>
       <naam>ConclusieDatumTijd</naam>
-      <mapping>ClinicalImpression.effectiveDateTime</mapping>
+      <mapping>ClinicalImpression.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ClinicalImpression</profile>
       <in>false</in>
       <zib/>
@@ -2742,7 +2742,7 @@
    <record>
       <ID>peri32-dataelement-2630</ID>
       <naam>Conclusie</naam>
-      <mapping>ClinicalImpression.finding.itemCodeableConcept</mapping>
+      <mapping>ClinicalImpression.finding:pregnancyRiskCategory.item[x]:itemCodeableConcept</mapping>
       <profile>bc-ClinicalImpression</profile>
       <in>false</in>
       <zib/>
@@ -3382,7 +3382,7 @@
    <record>
       <ID>peri32-dataelement-3404</ID>
       <naam>ZorgEpisodeNaam</naam>
-      <mapping>EpisodeOfCare.extension:title.valueString:valueString</mapping>
+      <mapping>EpisodeOfCare.extension:title</mapping>
       <profile>bc-MaternalRecord</profile>
       <in/>
       <zib/>
@@ -3422,7 +3422,7 @@
    <record>
       <ID>peri32-dataelement-3405</ID>
       <naam>Toelichting</naam>
-      <mapping>EpisodeOfCare.extension:comment.valueString:valueString</mapping>
+      <mapping>EpisodeOfCare.extension:comment</mapping>
       <profile>bc-MaternalRecord</profile>
       <in>false</in>
       <zib/>
@@ -3712,7 +3712,7 @@
    <record>
       <ID>peri32-dataelement-8813</ID>
       <naam>StreefDatum</naam>
-      <mapping>Goal.target.dueDate</mapping>
+      <mapping>Goal.target.due[x]:dueDate</mapping>
       <profile>bc-IndividualCarePlan-Goal</profile>
       <in/>
       <zib/>
@@ -4372,7 +4372,7 @@
    <record>
       <ID>peri32-dataelement-914</ID>
       <naam>Toelichting</naam>
-      <mapping>Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text</mapping>
+      <mapping>Patient.extension:ethnicity.value[x]:valueCodeableConcept.text</mapping>
       <profile>bc-Woman</profile>
       <in>false</in>
       <zib/>
@@ -4492,7 +4492,7 @@
    <record>
       <ID>peri32-dataelement-10402</ID>
       <naam>BehandelBesluit</naam>
-      <mapping>Consent.extension:treatmentPermitted</mapping>
+      <mapping>Consent.modifierExtension:treatmentPermitted</mapping>
       <profile>bc-TreatmentDirective</profile>
       <in/>
       <zib/>
@@ -4692,8 +4692,8 @@
    <record>
       <ID>peri32-dataelement-1677</ID>
       <naam>Zorgaanbieder</naam>
-      <mapping>Patient.extension:prefferedPharmacy</mapping>
-      <profile>bc-Woman</profile>
+      <mapping>Organization</mapping>
+      <profile>nl-core-organization</profile>
       <in>true</in>
       <zib>peri32-dataelement-956</zib>
       <example/>
@@ -4782,7 +4782,7 @@
    <record>
       <ID>peri32-dataelement-2698</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -4812,7 +4812,7 @@
    <record>
       <ID>peri32-dataelement-2701</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -4822,7 +4822,7 @@
    <record>
       <ID>peri32-dataelement-2702</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -4912,7 +4912,7 @@
    <record>
       <ID>peri32-dataelement-918</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -5032,7 +5032,7 @@
    <record>
       <ID>peri32-dataelement-1084</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>rocedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.11</zib>
@@ -5492,7 +5492,7 @@
    <record>
       <ID>peri32-dataelement-3335</ID>
       <naam>DatumEinde</naam>
-      <mapping>Condition.onset[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
       <profile>bc-LegalSituation-LegalStatus</profile>
       <in>false</in>
       <zib>NL-CM-7.17.4</zib>
@@ -5632,7 +5632,7 @@
    <record>
       <ID>peri32-dataelement-8865</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in/>
       <zib/>
@@ -6312,7 +6312,7 @@
    <record>
       <ID>peri32-dataelement-2917</ID>
       <naam>InstabieleGezinssituatieWaarde</naam>
-      <mapping>Observation.component.valueString</mapping>
+      <mapping>Observation.component:unstableFamilySituation.value[x]:valueString</mapping>
       <profile>bc-FamilySituationAssessment</profile>
       <in>false</in>
       <zib/>
@@ -6322,7 +6322,7 @@
    <record>
       <ID>peri32-dataelement-2919</ID>
       <naam>ZorgelijkeGezinssituatieWaarde</naam>
-      <mapping>Observation.component.valueString</mapping>
+      <mapping>Observation.component:alarmingFamilySituation.value[x]:valueString</mapping>
       <profile>bc-FamilySituationAssessment</profile>
       <in>false</in>
       <zib/>
@@ -6332,7 +6332,7 @@
    <record>
       <ID>peri32-dataelement-2921</ID>
       <naam>IntoxicatiesWaarde</naam>
-      <mapping>Observation.component.valueString</mapping>
+      <mapping>Observation.component:intoxication.value[x]:valueString</mapping>
       <profile>bc-FamilySituationAssessment</profile>
       <in>false</in>
       <zib/>
@@ -6382,7 +6382,7 @@
    <record>
       <ID>peri32-dataelement-10558</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in/>
       <zib/>
@@ -8192,7 +8192,7 @@
    <record>
       <ID>peri32-dataelement-1182</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in/>
       <zib>NL-CM-5.1.12</zib>
@@ -8242,7 +8242,7 @@
    <record>
       <ID>peri32-dataelement-1185</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in/>
       <zib>NL-CM-5.1.6</zib>
@@ -8252,7 +8252,7 @@
    <record>
       <ID>peri32-dataelement-1186</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in/>
       <zib>NL-CM-5.1.9</zib>
@@ -8482,7 +8482,7 @@
    <record>
       <ID>peri32-dataelement-7888</ID>
       <naam>Eiceldonatie</naam>
-      <mapping>RelatedPerson.extension:donorRelation</mapping>
+      <mapping>RelatedPerson.extension:role</mapping>
       <profile>bc-Donor</profile>
       <in/>
       <zib/>
@@ -8692,7 +8692,7 @@
    <record>
       <ID>peri32-dataelement-1569</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -8702,7 +8702,7 @@
    <record>
       <ID>peri32-dataelement-1570</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -9562,7 +9562,7 @@
    <record>
       <ID>peri32-dataelement-1593</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -9592,7 +9592,7 @@
    <record>
       <ID>peri32-dataelement-1596</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -9602,7 +9602,7 @@
    <record>
       <ID>peri32-dataelement-1597</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -10822,7 +10822,7 @@
    <record>
       <ID>peri32-dataelement-1422</ID>
       <naam>Kleding</naam>
-      <mapping>Observation.component:clothing.valueCodeableConcept</mapping>
+      <mapping>Observation.component:clothing.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
       <in>false</in>
       <zib>NL-CM-12.1.5</zib>
@@ -11302,7 +11302,7 @@
    <record>
       <ID>peri32-dataelement-3061</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -11462,7 +11462,7 @@
    <record>
       <ID>peri32-dataelement-2956</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -11622,7 +11622,7 @@
    <record>
       <ID>peri32-dataelement-2997</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -11782,7 +11782,7 @@
    <record>
       <ID>peri32-dataelement-2987</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -11942,7 +11942,7 @@
    <record>
       <ID>peri32-dataelement-3008</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12102,7 +12102,7 @@
    <record>
       <ID>peri32-dataelement-3019</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12272,7 +12272,7 @@
    <record>
       <ID>peri32-dataelement-3030</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12432,7 +12432,7 @@
    <record>
       <ID>peri32-dataelement-3041</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12542,7 +12542,7 @@
    <record>
       <ID>peri32-dataelement-3091</ID>
       <naam>Verrichting (Ondersteuning opvang)</naam>
-      <mapping>Condition</mapping>
+      <mapping>Procedure</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib/>
@@ -12552,7 +12552,7 @@
    <record>
       <ID>peri32-dataelement-3092</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Condition.effectivePeriod.start</mapping>
+      <mapping>Procedure.effectivePeriod.start</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib>NL-CM-14.1.2</zib>
@@ -12562,7 +12562,7 @@
    <record>
       <ID>peri32-dataelement-3093</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Condition.effectivePeriod.end</mapping>
+      <mapping>Procedure.effectivePeriod.end</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib>NL-CM-14.1.3</zib>
@@ -12572,7 +12572,7 @@
    <record>
       <ID>peri32-dataelement-3094</ID>
       <naam>VerrichtingAnatomischeLocatie</naam>
-      <mapping>Condition.bodySite</mapping>
+      <mapping>Procedure.bodySite</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib>NL-CM-14.1.8</zib>
@@ -12582,7 +12582,7 @@
    <record>
       <ID>peri32-dataelement-3095</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib>NL-CM-14.1.11</zib>
@@ -12592,7 +12592,7 @@
    <record>
       <ID>peri32-dataelement-3096</ID>
       <naam>Indicatie</naam>
-      <mapping>Condition.reasonReference</mapping>
+      <mapping>Procedure.reasonReference</mapping>
       <profile>zib-Procedure</profile>
       <in>false</in>
       <zib>NL-CM-14.1.9</zib>
@@ -12612,7 +12612,7 @@
    <record>
       <ID>peri32-dataelement-3098</ID>
       <naam>VerrichtingType</naam>
-      <mapping>Condition.code</mapping>
+      <mapping>Procedure.code</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib/>
@@ -12622,7 +12622,7 @@
    <record>
       <ID>peri32-dataelement-3099</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Condition.extension:procedureMethod</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.12</zib>
@@ -12632,7 +12632,7 @@
    <record>
       <ID>peri32-dataelement-3100</ID>
       <naam>MedischHulpmiddel</naam>
-      <mapping>Condition.focalDevice</mapping>
+      <mapping>Procedure.focalDevice</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.7</zib>
@@ -12652,7 +12652,7 @@
    <record>
       <ID>peri32-dataelement-3101</ID>
       <naam>MedischHulpmiddel</naam>
-      <mapping>Condition.focalDevice</mapping>
+      <mapping>Procedure.focalDevice</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-2017-208</zib>
@@ -12662,7 +12662,7 @@
    <record>
       <ID>peri32-dataelement-3102</ID>
       <naam>Locatie</naam>
-      <mapping>Condition.performer.actor</mapping>
+      <mapping>Procedure.performer.actor</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.5</zib>
@@ -12692,7 +12692,7 @@
    <record>
       <ID>peri32-dataelement-3104</ID>
       <naam>Uitvoerder</naam>
-      <mapping>Condition.performer.actor</mapping>
+      <mapping>Procedure.performer.actor</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.6</zib>
@@ -12782,7 +12782,7 @@
    <record>
       <ID>peri32-dataelement-1505</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12822,7 +12822,7 @@
    <record>
       <ID>peri32-dataelement-1508</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -12832,7 +12832,7 @@
    <record>
       <ID>peri32-dataelement-1509</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -12952,7 +12952,7 @@
    <record>
       <ID>peri32-dataelement-1495</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -12982,7 +12982,7 @@
    <record>
       <ID>peri32-dataelement-1498</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -12992,7 +12992,7 @@
    <record>
       <ID>peri32-dataelement-1499</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -13062,7 +13062,7 @@
    <record>
       <ID>peri32-dataelement-1516</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -13092,7 +13092,7 @@
    <record>
       <ID>peri32-dataelement-1519</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -13102,7 +13102,7 @@
    <record>
       <ID>peri32-dataelement-1520</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -13582,7 +13582,7 @@
    <record>
       <ID>peri32-dataelement-8697</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
       <in/>
       <zib/>
@@ -13682,7 +13682,7 @@
    <record>
       <ID>peri32-dataelement-8725</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
       <in/>
       <zib/>
@@ -13782,7 +13782,7 @@
    <record>
       <ID>peri32-dataelement-8735</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
       <in/>
       <zib/>
@@ -14582,7 +14582,7 @@
    <record>
       <ID>peri32-dataelement-2420</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Procedure</profile>
       <in>true</in>
       <zib>NL-CM-14.1.11</zib>
@@ -14822,7 +14822,7 @@
    <record>
       <ID>peri32-dataelement-1768</ID>
       <naam>TijdsInterval</naam>
-      <mapping>Observation.effectivePeriod</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod</mapping>
       <profile>bc-FetalMonitoring</profile>
       <in>false</in>
       <zib>peri32-dataelement-1333</zib>
@@ -15792,7 +15792,7 @@
    <record>
       <ID>peri32-dataelement-7867</ID>
       <naam>SectioLittekenWaarde</naam>
-      <mapping>Observation.component:sectionScar.value[x]:valueCodeableConcept</mapping>
+      <mapping>Observation.component:sectionScar.extension:valueBoolean</mapping>
       <profile>bc-PlacentaLocalization</profile>
       <in/>
       <zib/>
@@ -15862,7 +15862,7 @@
    <record>
       <ID>peri32-dataelement-2462</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -15892,7 +15892,7 @@
    <record>
       <ID>peri32-dataelement-2465</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in>false</in>
       <zib>NL-CM-5.1.6</zib>
@@ -15902,7 +15902,7 @@
    <record>
       <ID>peri32-dataelement-2466</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
       <in>false</in>
       <zib>NL-CM-5.1.9</zib>
@@ -16022,7 +16022,7 @@
    <record>
       <ID>peri32-dataelement-7846</ID>
       <naam>NavelstrengWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:umbilicalCord.value[x]:valueCodeableConcept</mapping>
       <profile>bc-UmbilicalCord</profile>
       <in/>
       <zib/>
@@ -16032,7 +16032,7 @@
    <record>
       <ID>peri32-dataelement-7793</ID>
       <naam>NavelstrengVatenWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:umbilicalCordVessels.value[x]:valueCodeableConcept</mapping>
       <profile>bc-UmbilicalCord</profile>
       <in/>
       <zib/>
@@ -16142,7 +16142,7 @@
    <record>
       <ID>peri32-dataelement-3922</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16172,7 +16172,7 @@
    <record>
       <ID>peri32-dataelement-3925</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16182,7 +16182,7 @@
    <record>
       <ID>peri32-dataelement-3926</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16242,7 +16242,7 @@
    <record>
       <ID>peri32-dataelement-3932</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16272,7 +16272,7 @@
    <record>
       <ID>peri32-dataelement-3935</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16282,7 +16282,7 @@
    <record>
       <ID>peri32-dataelement-3936</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16342,7 +16342,7 @@
    <record>
       <ID>peri32-dataelement-3942</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16372,7 +16372,7 @@
    <record>
       <ID>peri32-dataelement-3945</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -16382,7 +16382,7 @@
    <record>
       <ID>peri32-dataelement-3946</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -19252,7 +19252,7 @@
    <record>
       <ID>peri32-dataelement-2307</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>true</in>
       <zib>NL-CM-5.1.12</zib>
@@ -19282,7 +19282,7 @@
    <record>
       <ID>peri32-dataelement-2310</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>true</in>
       <zib>NL-CM-5.1.6</zib>
@@ -19292,7 +19292,7 @@
    <record>
       <ID>peri32-dataelement-2311</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>true</in>
       <zib>NL-CM-5.1.9</zib>
@@ -19672,7 +19672,7 @@
    <record>
       <ID>peri32-dataelement-9723</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -19702,7 +19702,7 @@
    <record>
       <ID>peri32-dataelement-9726</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -19712,7 +19712,7 @@
    <record>
       <ID>peri32-dataelement-9727</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -19962,7 +19962,7 @@
    <record>
       <ID>peri32-dataelement-9773</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -19992,7 +19992,7 @@
    <record>
       <ID>peri32-dataelement-9776</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -20002,7 +20002,7 @@
    <record>
       <ID>peri32-dataelement-9777</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
       <in/>
       <zib/>
@@ -21042,7 +21042,7 @@
    <record>
       <ID>peri32-dataelement-2861</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
       <in>false</in>
       <zib>peri32-dataelement-2839</zib>
@@ -21112,7 +21112,7 @@
    <record>
       <ID>peri32-dataelement-2846</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>false</in>
       <zib>NL-CM-5.1.12</zib>
@@ -21142,7 +21142,7 @@
    <record>
       <ID>peri32-dataelement-2849</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>false</in>
       <zib>NL-CM-5.1.6</zib>
@@ -21152,7 +21152,7 @@
    <record>
       <ID>peri32-dataelement-2850</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
       <in>false</in>
       <zib>NL-CM-5.1.9</zib>
@@ -21232,7 +21232,7 @@
    <record>
       <ID>peri32-dataelement-2868</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
       <in>false</in>
       <zib>peri32-dataelement-2839</zib>
@@ -21992,7 +21992,7 @@
    <record>
       <ID>peri32-dataelement-4359</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept:valueCodeableConcept.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.value[x]:valueCodeableConcept</mapping>
       <profile>zib-Problem</profile>
       <in/>
       <zib/>
@@ -23392,7 +23392,7 @@
    <record>
       <ID>peri32-dataelement-10506</ID>
       <naam>Bijvoeding?</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:SupplementaryFeeding.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23402,7 +23402,7 @@
    <record>
       <ID>peri32-dataelement-7938</ID>
       <naam>VoedingspatroonZuigelingDatumTijd</naam>
-      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
+      <mapping>Observation.effectiveDateTime:effectiveDateTime</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23412,7 +23412,7 @@
    <record>
       <ID>peri32-dataelement-7939</ID>
       <naam>VoedingToevoeging</naam>
-      <mapping>Observation.component.valueString</mapping>
+      <mapping>Observation.component:FeedingSupplement.valueString:valueString</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23422,7 +23422,7 @@
    <record>
       <ID>peri32-dataelement-7940</ID>
       <naam>VoedingFrequentie</naam>
-      <mapping>Observation.component.valueQuantity</mapping>
+      <mapping>Observation.component:FeedingFrequency.valueQuantity:valueQuantity</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23442,7 +23442,7 @@
    <record>
       <ID>peri32-dataelement-7942</ID>
       <naam>Voedingsadvies</naam>
-      <mapping>Observation.component</mapping>
+      <mapping>Observation.component:FeedingAdvice.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23452,7 +23452,7 @@
    <record>
       <ID>peri32-dataelement-7943</ID>
       <naam>Voedingsadvies</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:FeedingAdvice.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23462,7 +23462,7 @@
    <record>
       <ID>peri32-dataelement-7944</ID>
       <naam>Voeding</naam>
-      <mapping>Observation.component</mapping>
+      <mapping>Observation.component:FeedingType</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
@@ -23472,7 +23472,7 @@
    <record>
       <ID>peri32-dataelement-7945</ID>
       <naam>VoedingSoort</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-FeedingPatternInfant</profile>
       <in/>
       <zib/>
