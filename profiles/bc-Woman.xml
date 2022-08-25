@@ -185,13 +185,28 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10418" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9685" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2302" />
         <comment value="Moeder" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2746" />
+        <map value="peri32-dataelement-9824" />
         <comment value="Vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2746" />
+        <comment value="Controles moeder" />
       </mapping>
     </element>
     <element id="Patient.extension">
@@ -205,19 +220,32 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="Patient.extension:preferredPharmacy">
+    <element id="Patient.extension:nationality">
       <path value="Patient.extension" />
-      <sliceName value="preferredPharmacy" />
+      <sliceName value="nationality" />
       <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1676" />
-        <comment value="Apotheek" />
+        <map value="peri32-dataelement-690" />
+        <comment value="NationaliteitRC" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-691" />
+        <comment value="Nationaliteit" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:legalStatus">
+      <path value="Patient.extension" />
+      <sliceName value="legalStatus" />
+      <comment value="The concept LegalStatus of the HCIM FreedomRestrictingMeasures plays an importand role in the context of mental healthcare (GGZ). This concept will become an independent HCIM with the next release of HCIM (2018 release).  &#xD;&#xA;&#xD;&#xA;The LegalStatus concept and associated valueset will be split in two: legalstatus and guardianship. These concept are currently captured in one valueset. It is possible to have a legalstatus AND a representative. Therefore, we allow this extension to have a cardinality of 0..2." />
+      <min value="0" />
     </element>
     <element id="Patient.extension:ethnicity">
       <path value="Patient.extension" />
       <sliceName value="ethnicity" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
       <min value="0" />
       <type>
         <code value="Extension" />
@@ -235,13 +263,49 @@
         <map value="peri23-dataelement-10400" />
         <comment value="Ethniciteit" />
       </mapping>
-    </element>
-    <element id="Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text">
-      <path value="Patient.extension.valueCodeableConcept.text" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-914" />
-        <comment value="Toelichting" />
+        <map value="peri32-dataelement-912" />
+        <comment value="Etniciteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-913" />
+        <comment value="EtniciteitType" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:ethnicity.url">
+      <path value="Patient.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
+    </element>
+    <element id="Patient.extension:ethnicity.value[x]:valueCodeableConcept">
+      <path value="Patient.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Patient.extension:genderIdentity">
+      <path value="Patient.extension" />
+      <sliceName value="genderIdentity" />
+      <short value="The patient's gender identity" />
+      <definition value="The gender the patient identifies with. The Patient's gender identity is used as guidance                 (e.g. for staff) about how to interact with the patient." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-genderIdentity" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10776" />
+        <comment value="Geslacht (identiteit)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10802" />
+        <comment value="Geslacht (identiteit)" />
       </mapping>
     </element>
     <element id="Patient.identifier">
@@ -250,6 +314,11 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-10031" />
         <comment value="Lokale persoonsidentificatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3677" />
+        <comment value="Peridoscode" />
       </mapping>
     </element>
     <element id="Patient.identifier:BSN">
@@ -331,6 +400,7 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
+      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse and http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType as well). The HCIM code itself should also be included using the AddressType extension.&#xD;&#xA;&#xD;&#xA;         | HCIM                              | .ext:AddressType | .ext:official | .use | .type    |&#xD;&#xA;&#xD;&#xA;         |-----------------------------------|------------------|---------------|------|----------|&#xD;&#xA;&#xD;&#xA;         | Postal Address/Postadres          | PST              |               |      | postal   |&#xD;&#xA;&#xD;&#xA;         | Primary Home/Officieel adres      | HP               | true          | home |          |&#xD;&#xA;&#xD;&#xA;         | Visit Address/Woon-/verblijfadres | PHYS             |               | home | physical |&#xD;&#xA;&#xD;&#xA;         | Temporary Address/Tijdelijk adres | TMP              |               | temp |          |&#xD;&#xA;&#xD;&#xA;         | Work Place/Werkadres              | WP               |               | work |          |&#xD;&#xA;&#xD;&#xA;         | Vacation Home/Vakantie adres      | HV               |               | temp |          |&#xD;&#xA;&#xD;&#xA; If Address.type is &quot;both&quot; then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension." />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-10300" />
@@ -418,6 +488,22 @@
         <comment value="Land" />
       </mapping>
     </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2690" />
+        <comment value="BurgerlijkeStaatRC" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom">
+      <path value="Patient.contact.telecom" />
+      <definition value="Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.&#xD;&#xA;&#xD;&#xA;         | HCIM                                               | .ext:TelecomType | .system | .use   |&#xD;&#xA;         |----------------------------------------------------|------------------|---------|--------|&#xD;&#xA;         | Primary Home Land Line                             | LL               | phone   | home   |&#xD;&#xA;         | Temporary Land Line                                | LL               | phone   | temp   |&#xD;&#xA;         | Primary Work Land Line                             | LL               | phone   | work   |&#xD;&#xA;         |                                                    |                  |         |        |&#xD;&#xA;         | Primary Home Fax                                   | FAX              | fax     | home   |&#xD;&#xA;         | Temporary Fax                                      | FAX              | fax     | temp   |&#xD;&#xA;         | Primary Work Fax                                   | FAX              | fax     | work   |&#xD;&#xA;         |                                                    |                  |         |        |&#xD;&#xA;         | Primary Home Mobile Phone                          | MC               | phone   | home   |&#xD;&#xA;         | Temporary Mobile Phone                             | MC               | phone   | temp   |&#xD;&#xA;         | Primary Work Mobile Phone                          | MC               | phone   | work   |&#xD;&#xA;         |                                                    |                  |         |        |&#xD;&#xA;         | Primary Home Pager                                 | PG               | pager   | home   |&#xD;&#xA;         | Temporary Pager                                    | PG               | pager   | temp   |&#xD;&#xA;         | Primary Work Pager                                 | PG               | pager   | work   |&#xD;&#xA;         |                                                    |                  |         |        |&#xD;&#xA;         | Private email address                              |                  | email   | home   |&#xD;&#xA;         | Work email address                                 |                  | email   | work   |&#xD;&#xA;         |                                                    |                  |         |        |&#xD;&#xA;         | Mobile phone number undetermined private/business  |                  | phone   | mobile |" />
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse and http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType as well). The HCIM code itself should also be included using the AddressType extension.&#xD;&#xA;&#xD;&#xA;         | HCIM                              | .ext:AddressType | .ext:official | .use | .type    |&#xD;&#xA;&#xD;&#xA;         |-----------------------------------|------------------|---------------|------|----------|&#xD;&#xA;&#xD;&#xA;         | Postal Address/Postadres          | PST              |               |      | postal   |&#xD;&#xA;&#xD;&#xA;         | Primary Home/Officieel adres      | HP               | true          | home |          |&#xD;&#xA;&#xD;&#xA;         | Visit Address/Woon-/verblijfadres | PHYS             |               | home | physical |&#xD;&#xA;&#xD;&#xA;         | Temporary Address/Tijdelijk adres | TMP              |               | temp |          |&#xD;&#xA;&#xD;&#xA;         | Work Place/Werkadres              | WP               |               | work |          |&#xD;&#xA;&#xD;&#xA;         | Vacation Home/Vakantie adres      | HV               |               | temp |          |&#xD;&#xA;&#xD;&#xA; If Address.type is &quot;both&quot; then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension." />
+    </element>
     <element id="Patient.communication.extension">
       <path value="Patient.communication.extension" />
       <slicing>
@@ -433,6 +519,16 @@
       <path value="Patient.communication.extension" />
       <sliceName value="languageProficiency" />
       <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2910" />
+        <comment value="Taalvaardigheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2911" />
+        <comment value="Taalvaardigheid" />
+      </mapping>
     </element>
     <element id="Patient.communication.extension:languageProficiency.extension">
       <path value="Patient.communication.extension.extension" />
@@ -479,10 +575,18 @@
         <map value="peri23-dataelement-10401" />
         <comment value="Taalvaardigheid vrouw Nederlandse taal" />
       </mapping>
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2911" />
-        <comment value="Taalvaardigheid" />
+        <map value="peri32-dataelement-1674" />
+        <comment value="Huisarts" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1675" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="Patient.link">
