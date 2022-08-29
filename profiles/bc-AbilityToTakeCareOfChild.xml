@@ -33,7 +33,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9982" />
-        <comment value="ZorgKind (Observatie)" />
+        <comment value="ZorgVoorKind (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.code.coding">
@@ -55,8 +55,9 @@
       <path value="Observation.code.coding.display" />
       <defaultValueString value="bevinding betreffende ouderschap (bevinding)" />
     </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9983" />
@@ -67,7 +68,7 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9986" />
+        <map value="peri32-dataelement-9991" />
         <comment value="Toelichting" />
       </mapping>
     </element>
@@ -147,13 +148,9 @@
       </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9986" />
+        <map value="peri32-dataelement-9985" />
         <comment value="OnzekerheidWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:uncertainty.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:ability">
       <path value="Observation.component" />
@@ -197,10 +194,6 @@
         <map value="peri32-dataelement-9992" />
         <comment value="VaardigheidWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:ability.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

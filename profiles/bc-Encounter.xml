@@ -78,8 +78,18 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2165" />
-        <comment value="Contact Zorgepisode" />
+        <map value="peri32-dataelement-750" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10742" />
+        <comment value="KraamzorgIntake" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10743" />
+        <comment value="Contact" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -88,8 +98,51 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10520" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2160" />
         <comment value="Counseling prenatale screening en prenatale diagnostiek" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10692" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10693" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10729" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10730" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4306" />
+        <comment value="Nacontrole" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4324" />
+        <comment value="Contact" />
+      </mapping>
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-751" />
+        <comment value="ContactType" />
       </mapping>
     </element>
     <element id="Encounter.type">
@@ -101,6 +154,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3690" />
+        <comment value="ContactSoort" />
+      </mapping>
     </element>
     <element id="Encounter.type:birthcareEncounterType">
       <path value="Encounter.type" />
@@ -137,6 +195,14 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-752" />
+        <comment value="ContactMet" />
+      </mapping>
+    </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
       <mapping>
@@ -146,7 +212,17 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1814" />
+        <map value="peri32-dataelement-756" />
+        <comment value="BeginDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-757" />
+        <comment value="EindDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3410" />
         <comment value="BeginDatumTijd" />
       </mapping>
     </element>
@@ -169,11 +245,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-reasonreference" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8748" />
-        <comment value="Verrichting" />
-      </mapping>
     </element>
     <element id="Encounter.reason.extension:reasonReference.value[x]:valueReference">
       <path value="Encounter.reason.extension.value[x]" />
@@ -208,6 +279,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-758" />
+        <comment value="RedenContact" />
+      </mapping>
     </element>
     <element id="Encounter.diagnosis:pregnancy">
       <path value="Encounter.diagnosis" />
@@ -231,12 +307,33 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-764" />
+        <comment value="Herkomst" />
+      </mapping>
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-765" />
+        <comment value="Bestemming" />
+      </mapping>
+    </element>
     <element id="Encounter.serviceProvider">
       <path value="Encounter.serviceProvider" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82114" />
         <comment value="Ziekenhuis baring" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-754" />
+        <comment value="Locatie" />
       </mapping>
     </element>
   </differential>

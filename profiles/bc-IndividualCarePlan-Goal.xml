@@ -29,14 +29,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Goal" />
   <derivation value="constraint" />
   <differential>
-    <element id="Goal">
-      <path value="Goal" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8810" />
-        <comment value="Behandeldoel" />
-      </mapping>
-    </element>
     <element id="Goal.extension">
       <path value="Goal.extension" />
       <slicing>
@@ -57,6 +49,11 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-goal-enddate" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8814" />
+        <comment value="AfsluitDatum" />
+      </mapping>
     </element>
     <element id="Goal.extension:carePlan">
       <path value="Goal.extension" />
@@ -67,14 +64,12 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-reference" />
       </type>
-    </element>
-    <element id="Goal.extension:carePlan.valueReference:valueReference">
-      <path value="Goal.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan" />
-      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8816" />
+        <comment value="ZorgAfspraak" />
+      </mapping>
     </element>
     <element id="Goal.description">
       <path value="Goal.description" />
@@ -98,9 +93,11 @@
     </element>
     <element id="Goal.statusDate">
       <path value="Goal.statusDate" />
+      <comment value="To see the date for past statuses, query history. For example, for the determination date, look at status = proposed." />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8812" />
+        <comment value="VaststellingsDatum" />
       </mapping>
     </element>
   </differential>

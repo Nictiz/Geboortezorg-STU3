@@ -29,14 +29,6 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-careplan" />
   <derivation value="constraint" />
   <differential>
-    <element id="CarePlan">
-      <path value="CarePlan" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8794" />
-        <comment value="IndividueelZorgplan" />
-      </mapping>
-    </element>
     <element id="CarePlan.extension">
       <path value="CarePlan.extension" />
       <slicing>
@@ -57,11 +49,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-casemanager" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8801" />
-        <comment value="Casemanager" />
-      </mapping>
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
@@ -111,27 +98,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8874" />
-        <comment value="Relatie met ZorgEpisode" />
-      </mapping>
-    </element>
-    <element id="CarePlan.period.start">
-      <path value="CarePlan.period.start" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8799" />
-        <comment value="BeginDatum" />
-      </mapping>
-    </element>
-    <element id="CarePlan.period.end">
-      <path value="CarePlan.period.end" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8800" />
-        <comment value="EindDatum" />
-      </mapping>
     </element>
     <element id="CarePlan.careTeam">
       <path value="CarePlan.careTeam" />
@@ -139,23 +105,20 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareTeam" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8803" />
-        <comment value="Betrokkenen" />
-      </mapping>
     </element>
     <element id="CarePlan.goal">
       <path value="CarePlan.goal" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCareplan-Goal" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan-Goal" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8810" />
-        <comment value="Behandeldoel" />
-      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.goal">
+      <path value="CarePlan.activity.detail.goal" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Goal" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

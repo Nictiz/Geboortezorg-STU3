@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-FetalHeartRate" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
+  <id value="bc-VitaminKAdministration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-VitaminKAdministration" />
   <version value="1.0.0" />
-  <name value="bc-FetalHeartRate" />
-  <title value="bc-FetalHeartRate" />
+  <name value="bc-VitaminKAdministration" />
+  <title value="bc-VitaminKAdministration" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing fetal heart rate as defined by BabyConnect. The base definition is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <description value="An Observation profile describing the administration of vitamin K to a newborn as defined by BabyConnect. The base definition is a child-related Observation. Child-related Observations pertain to the child Patient, which is the subject of the Observation. Child observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -36,15 +36,15 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1776" />
-        <comment value="Foetale hartslag (Hartfrequentie)" />
+        <map value="peri32-dataelement-10750" />
+        <comment value="Vitamine K (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.code.coding.system">
@@ -60,25 +60,17 @@
       <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1778" />
-        <comment value="HartfrequentieDatumTijd" />
+        <map value="peri32-dataelement-10762" />
+        <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueQuantity">
+    <element id="Observation.value[x]:valueBoolean">
       <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
+      <sliceName value="valueBoolean" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1777" />
-        <comment value="HartfrequentieWaarde" />
-      </mapping>
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1782" />
-        <comment value="InterpretatieFrequentie" />
+        <map value="peri32-dataelement-10764" />
+        <comment value="VitamineKWaarde" />
       </mapping>
     </element>
     <element id="Observation.interpretation.coding">
@@ -104,7 +96,7 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1780" />
+        <map value="peri32-dataelement-10772" />
         <comment value="Toelichting" />
       </mapping>
     </element>
@@ -112,8 +104,8 @@
       <path value="Observation.method" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1779" />
-        <comment value="HartslagMeetMethode" />
+        <map value="peri32-dataelement-10767" />
+        <comment value="ObservatieMethode" />
       </mapping>
     </element>
     <element id="Observation.method.coding">
@@ -145,34 +137,40 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:heartRateRegularity">
+    <element id="Observation.component:administrationDate">
       <path value="Observation.component" />
-      <sliceName value="heartRateRegularity" />
+      <sliceName value="administrationDate" />
       <max value="1" />
     </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.system">
+    <element id="Observation.component:administrationDate.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="439771001" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:administrationDate.code.coding.system">
       <path value="Observation.component.code.coding.system" />
-      <patternUri value="http://snomed.info/sct" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.code">
+    <element id="Observation.component:administrationDate.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <patternCode value="249044008" />
+      <fixedCode value="439771001" />
     </element>
-    <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:administrationDate.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="datum van gebeurtenis (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:administrationDate.value[x]:valueDateTime">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueDateTime" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="dateTime" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Regelmaat hartslag" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304" />
-      </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1781" />
-        <comment value="HartslagRegelmatigheid" />
+        <map value="peri32-dataelement-10765" />
+        <comment value="DatumVitamineKWaarde" />
       </mapping>
     </element>
   </differential>
