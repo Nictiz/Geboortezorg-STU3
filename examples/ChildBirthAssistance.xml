@@ -32,7 +32,10 @@
             </coding>         
         </type>
         <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeA"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeA"/>
+                <display value="Verloskundige A"/>
+            </extension>
         </individual>
     </participant>
     <participant>
@@ -43,7 +46,10 @@
             </coding>         
         </type>
         <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeB"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeB"/>
+                <display value="Verloskundige B"/>
+            </extension>
         </individual>
     </participant>
     <participant>
@@ -67,15 +73,20 @@
             <end value="2017-06-22T18:34:00+01:00"/>
         </period>
         <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
+                <display value="Kraamverzorgster X"/>
+            </extension>
         </individual>
     </participant>
     <diagnosis>
         <condition>
             <reference value="Condition/wouden-zwanger3"/>
+            <display value="Zwangerschap 3 van der Wouden"/>
         </condition>
     </diagnosis>
     <serviceProvider>
         <reference value="Organization/ziekenhuis"/>
+        <display value="Ziekenhuis X"/>
     </serviceProvider>
 </Encounter> 
