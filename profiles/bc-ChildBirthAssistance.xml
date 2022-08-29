@@ -79,7 +79,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10710" />
-        <comment value="Partusassistentie" />
+        <comment value="Partusassistentie (Contact)" />
       </mapping>
     </element>
     <element id="Encounter.class.extension">
@@ -97,10 +97,6 @@
       <path value="Encounter.class.extension" />
       <sliceName value="ContactTypeCodelist" />
       <min value="0" />
-    </element>
-    <element id="Encounter.class.extension:ContactTypeCodelist.valueCodeableConcept:valueCodeableConcept">
-      <path value="Encounter.class.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10711" />
@@ -147,11 +143,6 @@
       <path value="Encounter.type" />
       <sliceName value="childbirthAssistance" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10735" />
-        <comment value="ContactSoort" />
-      </mapping>
     </element>
     <element id="Encounter.type:childbirthAssistance.coding">
       <path value="Encounter.type.coding" />
@@ -220,7 +211,7 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri23-dataelement-10738" />
+        <map value="peri32-dataelement-10738" />
         <comment value="PartusStadiumWaarde" />
       </mapping>
     </element>
@@ -271,7 +262,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10716" />
-        <comment value="AankomstDatumtijd" />
+        <comment value="AankomstDatumTijd" />
       </mapping>
     </element>
     <element id="Encounter.participant.period.end">
@@ -280,6 +271,29 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10717" />
         <comment value="EindDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1624" />
+        <comment value="Aanpakker kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1625" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1626" />
+        <comment value="Supervisor" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1627" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="Encounter.participant.individual.extension">

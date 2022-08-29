@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-BarthelIndex" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BarthelIndex" />
@@ -32,9 +33,19 @@
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10533" />
-        <comment value="ZelfredzaamheidKraamvrouw (Observatie)" />
+        <map value="peri32-dataelement-2812" />
+        <comment value="BarthelIndex" />
       </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-MaternalObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-code" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -55,29 +66,370 @@
       <path value="Observation.code.coding.display" />
       <defaultValueString value="Barthel-index (beoordelingsschaal)" />
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10534" />
-        <comment value="ObservatieDatumTijd" />
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
       </mapping>
     </element>
-    <element id="Observation.comment">
-      <path value="Observation.comment" />
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+      </type>
       <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10542" />
-        <comment value="Toelichting" />
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectivePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82493" />
+        <comment value="Bloedverlies" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82494" />
+        <comment value="Partiele mola" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82495" />
+        <comment value="Cervixinsufficientie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82497" />
+        <comment value="HyperemesisGravidarum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82499" />
+        <comment value="Zwangerschapscholestase" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82500" />
+        <comment value="Diabetes gravidarum met insuline" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82502" />
+        <comment value="Dreigende partus immaturus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82503" />
+        <comment value="Dreigende partus prematurus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82504" />
+        <comment value="Abruptio placentae" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82505" />
+        <comment value="Fluxus postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82465" />
+        <comment value="Diabetes Mellitus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82481" />
+        <comment value="Bloedtransfusie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82482" />
+        <comment value="Transfusiereactie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82488" />
+        <comment value="Psychiatrie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82490" />
+        <comment value="Overige aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82456" />
+        <comment value="Auto-immuun aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82458" />
+        <comment value="Cardiovasculaire aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82460" />
+        <comment value="Urogenitale aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82462" />
+        <comment value="Oncologische aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82464" />
+        <comment value="Schildklier aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82467" />
+        <comment value="Neurologische aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82467" />
+        <comment value="Infectieziekte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82471" />
+        <comment value="Maag Darm Lever aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82479" />
+        <comment value="Orthopedische afwijking" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82471" />
+        <comment value="Anemie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82475" />
+        <comment value="Longaandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82477" />
+        <comment value="Gynaecologische aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82486" />
+        <comment value="Type stollingsprobleem" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82484" />
+        <comment value="Type operatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82496" />
+        <comment value="Infectie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82498" />
+        <comment value="Hypertensieve aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20612" />
+        <comment value="Portio" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20613" />
+        <comment value="Ontsluiting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20614" />
+        <comment value="Vliezen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20615" />
+        <comment value="Indaling Hodge" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80616" />
+        <comment value="Aard van het voorliggend deel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80618" />
+        <comment value="Stand" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20305" />
+        <comment value="Conclusie risicostatus na intake" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].extension">
+      <path value="Observation.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.value[x].extension:valueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valueReference" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueBoolean">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueString">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.bodySite.extension">
+      <path value="Observation.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="laterality" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
+      </type>
+    </element>
+    <element id="Observation.bodySite.extension:laterality.url">
+      <path value="Observation.bodySite.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept">
+      <path value="Observation.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="LateraliteitCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10537" />
-        <comment value="ObservatieMethode" />
-      </mapping>
+      <binding>
+        <strength value="extensible" />
+        <description value="MeetMethode_GZ" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
@@ -89,15 +441,14 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:bowel">
       <path value="Observation.component" />
       <sliceName value="bowel" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2813" />
-        <comment value="Darm" />
-      </mapping>
     </element>
     <element id="Observation.component:bowel.code.coding">
       <path value="Observation.component.code.coding" />
@@ -115,6 +466,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2813" />
+        <comment value="Darm" />
+      </mapping>
     </element>
     <element id="Observation.component:bowel.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -134,11 +490,6 @@
       <path value="Observation.component" />
       <sliceName value="bladder" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2814" />
-        <comment value="Blaas" />
-      </mapping>
     </element>
     <element id="Observation.component:bladder.code.coding">
       <path value="Observation.component.code.coding" />
@@ -156,6 +507,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2814" />
+        <comment value="Blaas" />
+      </mapping>
     </element>
     <element id="Observation.component:bladder.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -175,11 +531,6 @@
       <path value="Observation.component" />
       <sliceName value="personalGrooming" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2815" />
-        <comment value="UiterlijkeVerzorging" />
-      </mapping>
     </element>
     <element id="Observation.component:personalGrooming.code.coding">
       <path value="Observation.component.code.coding" />
@@ -206,6 +557,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2815" />
+        <comment value="UiterlijkeVerzorging" />
+      </mapping>
     </element>
     <element id="Observation.component:personalGrooming.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -225,11 +581,6 @@
       <path value="Observation.component" />
       <sliceName value="toiletUse" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2816" />
-        <comment value="Toiletgebruik" />
-      </mapping>
     </element>
     <element id="Observation.component:toiletUse.code.coding">
       <path value="Observation.component.code.coding" />
@@ -256,6 +607,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2816" />
+        <comment value="Toiletgebruik" />
+      </mapping>
     </element>
     <element id="Observation.component:toiletUse.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -275,11 +631,6 @@
       <path value="Observation.component" />
       <sliceName value="eating" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2817" />
-        <comment value="Eten" />
-      </mapping>
     </element>
     <element id="Observation.component:eating.code.coding">
       <path value="Observation.component.code.coding" />
@@ -302,6 +653,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2817" />
+        <comment value="Eten" />
+      </mapping>
     </element>
     <element id="Observation.component:eating.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -321,11 +677,6 @@
       <path value="Observation.component" />
       <sliceName value="transfers" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2818" />
-        <comment value="Transfers" />
-      </mapping>
     </element>
     <element id="Observation.component:transfers.code.coding">
       <path value="Observation.component.code.coding" />
@@ -352,6 +703,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2818" />
+        <comment value="Transfers" />
+      </mapping>
     </element>
     <element id="Observation.component:transfers.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -371,11 +727,6 @@
       <path value="Observation.component" />
       <sliceName value="mobility" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2819" />
-        <comment value="Mobiliteit" />
-      </mapping>
     </element>
     <element id="Observation.component:mobility.code.coding">
       <path value="Observation.component.code.coding" />
@@ -402,6 +753,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2819" />
+        <comment value="Mobiliteit" />
+      </mapping>
     </element>
     <element id="Observation.component:mobility.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -421,11 +777,6 @@
       <path value="Observation.component" />
       <sliceName value="dressingAndUndressing" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2820" />
-        <comment value="AanUitkleden" />
-      </mapping>
     </element>
     <element id="Observation.component:dressingAndUndressing.code.coding">
       <path value="Observation.component.code.coding" />
@@ -452,6 +803,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2820" />
+        <comment value="AanUitkleden" />
+      </mapping>
     </element>
     <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -471,11 +827,6 @@
       <path value="Observation.component" />
       <sliceName value="walkingStairs" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2821" />
-        <comment value="TrappenLopen" />
-      </mapping>
     </element>
     <element id="Observation.component:walkingStairs.code.coding">
       <path value="Observation.component.code.coding" />
@@ -502,6 +853,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2821" />
+        <comment value="TrappenLopen" />
+      </mapping>
     </element>
     <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -521,11 +877,6 @@
       <path value="Observation.component" />
       <sliceName value="bathingAndShowering" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2822" />
-        <comment value="BadenDouchen" />
-      </mapping>
     </element>
     <element id="Observation.component:bathingAndShowering.code.coding">
       <path value="Observation.component.code.coding" />
@@ -552,6 +903,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2822" />
+        <comment value="BadenDouchen" />
+      </mapping>
     </element>
     <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -571,11 +927,6 @@
       <path value="Observation.component" />
       <sliceName value="totalScore" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2823" />
-        <comment value="TotaalScore" />
-      </mapping>
     </element>
     <element id="Observation.component:totalScore.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -587,6 +938,11 @@
       <type>
         <code value="Quantity" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2823" />
+        <comment value="TotaalScore" />
+      </mapping>
     </element>
     <element id="Observation.component:totalScore.referenceRange">
       <path value="Observation.component.referenceRange" />

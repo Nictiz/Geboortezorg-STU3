@@ -54,6 +54,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodySite" />
   <derivation value="constraint" />
   <differential>
+    <element id="BodySite">
+      <path value="BodySite" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10803" />
+        <comment value="Foetus" />
+      </mapping>
+    </element>
     <element id="BodySite.extension">
       <path value="BodySite.extension" />
       <slicing>

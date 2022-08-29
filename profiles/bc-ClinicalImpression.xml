@@ -36,6 +36,21 @@
         <map value="peri32-dataelement-2623" />
         <comment value="Conclusie professioneel onderzoek" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3881" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3647" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3882" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.extension">
       <path value="ClinicalImpression.extension" />
@@ -56,6 +71,11 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4302" />
+        <comment value="Beleid" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.extension:management.valueCodeableConcept:valueCodeableConcept">
       <path value="ClinicalImpression.extension.valueCodeableConcept" />
@@ -65,11 +85,6 @@
         <description value="BeleidProfessioneelOnderzoek 3.2" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.317--20210322154057" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4302" />
-        <comment value="Beleid" />
-      </mapping>
     </element>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
@@ -117,6 +132,11 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2627" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.assessor.extension">
       <path value="ClinicalImpression.assessor.extension" />
@@ -137,11 +157,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2627" />
-        <comment value="Zorgverlener" />
-      </mapping>
     </element>
     <element id="ClinicalImpression.investigation.code.coding.system">
       <path value="ClinicalImpression.investigation.code.coding.system" />

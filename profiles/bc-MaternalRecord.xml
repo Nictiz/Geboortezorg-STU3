@@ -58,8 +58,13 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1338" />
-        <comment value="Zorgepisode" />
+        <map value="peri32-dataelement-25" />
+        <comment value="Zwangerschapsgegevens" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9823" />
+        <comment value="Kraamweek" />
       </mapping>
     </element>
     <element id="EpisodeOfCare.extension">
@@ -109,13 +114,43 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-episodeofcare-partof" />
       </type>
     </element>
-    <element id="EpisodeOfCare.extension:partOf.valueReference:valueReference">
+    <element id="EpisodeOfCare.extension:partOf.url">
+      <path value="EpisodeOfCare.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-episodeofcare-partof" />
+    </element>
+    <element id="EpisodeOfCare.extension:partOf.value[x]:valueReference">
       <path value="EpisodeOfCare.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
+    </element>
+    <element id="EpisodeOfCare.identifier">
+      <path value="EpisodeOfCare.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3338" />
+        <comment value="Identificatie zorgepisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8873" />
+        <comment value="Identificatie zorgepisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4042" />
+        <comment value="Dossiernummer" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.status">
+      <path value="EpisodeOfCare.status" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2164" />
+        <comment value="StatusZorgepisode" />
+      </mapping>
     </element>
     <element id="EpisodeOfCare.type.coding">
       <path value="EpisodeOfCare.type.coding" />
@@ -187,13 +222,8 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2132" />
+        <map value="peri32-dataelement-3402" />
         <comment value="FocusZorgEpisode" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2686" />
-        <comment value="Probleem" />
       </mapping>
     </element>
     <element id="EpisodeOfCare.patient">
@@ -220,11 +250,6 @@
         <map value="peri32-dataelement-3400" />
         <comment value="BeginDatum" />
       </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2130" />
-        <comment value="BeginDatum" />
-      </mapping>
     </element>
     <element id="EpisodeOfCare.period.end">
       <path value="EpisodeOfCare.period.end" />
@@ -238,10 +263,26 @@
         <map value="peri32-dataelement-3401" />
         <comment value="EindDatum" />
       </mapping>
+    </element>
+    <element id="EpisodeOfCare.careManager">
+      <path value="EpisodeOfCare.careManager" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2131" />
-        <comment value="EindDatum" />
+        <map value="peri32-dataelement-8822" />
+        <comment value="ZorgEpisodeVerantwoordelijke" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1699" />
+        <comment value="CoÃ¶rdinerend zorgverlener" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.team">
+      <path value="EpisodeOfCare.team" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1679" />
+        <comment value="Specialist" />
       </mapping>
     </element>
   </differential>

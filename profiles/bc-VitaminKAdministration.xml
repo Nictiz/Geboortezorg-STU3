@@ -47,16 +47,6 @@
         <comment value="Vitamine K (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-ChildObservation-code" />
-        <valueSetReference>
-          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ChildObservation-code" />
-        </valueSetReference>
-      </binding>
-    </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
       <patternUri value="http://snomed.info/sct" />
@@ -65,141 +55,22 @@
       <path value="Observation.code.coding.code" />
       <patternCode value="249043002" />
     </element>
-    <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
-      </type>
-    </element>
-    <element id="Observation.context">
-      <path value="Observation.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
-        <comment value="Zorgverlening" />
-      </mapping>
-    </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
-      <type>
-        <code value="dateTime" />
-      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10762" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-ChildObservation-value" />
-        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ChildObservation-value" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-10604" />
-        <comment value="Geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40060" />
-        <comment value="Geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-70011" />
-        <comment value="Voeding kind (datum)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-70030" />
-        <comment value="Substantie voeding kind" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-    </element>
-    <element id="Observation.value[x]:valueString">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueString" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Observation.value[x]:valueBoolean">
       <path value="Observation.value[x]" />
       <sliceName value="valueBoolean" />
-      <type>
-        <code value="boolean" />
-      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10764" />
         <comment value="VitamineKWaarde" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:valueDateTime">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueDateTime" />
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-10605" />
-        <comment value="Percentiel van het geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri-dataelement-80670" />
-        <comment value="Percentiel van het geboortegewicht" />
       </mapping>
     </element>
     <element id="Observation.interpretation.coding">
@@ -228,46 +99,6 @@
         <map value="peri32-dataelement-10772" />
         <comment value="Toelichting" />
       </mapping>
-    </element>
-    <element id="Observation.bodySite.extension">
-      <path value="Observation.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Observation.bodySite.extension:laterality">
-      <path value="Observation.bodySite.extension" />
-      <sliceName value="laterality" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
-      </type>
-    </element>
-    <element id="Observation.bodySite.extension:laterality.url">
-      <path value="Observation.bodySite.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
-    </element>
-    <element id="Observation.bodySite.extension:laterality.value[x]:valueCodeableConcept">
-      <path value="Observation.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="LateraliteitCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
@@ -306,32 +137,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
-    <element id="Observation.component:clothing">
-      <path value="Observation.component" />
-      <sliceName value="clothing" />
-    </element>
-    <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="KledingCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20200901000000" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Observation.component:clothing.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:administrationDate">
       <path value="Observation.component" />
       <sliceName value="administrationDate" />
@@ -367,10 +172,6 @@
         <map value="peri32-dataelement-10765" />
         <comment value="DatumVitamineKWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:administrationDate.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

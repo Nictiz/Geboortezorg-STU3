@@ -82,16 +82,6 @@
         <rules value="open" />
       </slicing>
       <comment value="FHIR allows only one instance of this element, so only one data type can be used. The boolean value of this element is implicitly true if one of the other data types is used. For example, when age is known this is sent with the Age data type and the boolean value should be left blank." />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1117" />
-        <comment value="OverlijdensIndicator" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1118" />
-        <comment value="LeeftijdBijOverlijden" />
-      </mapping>
     </element>
     <element id="FamilyMemberHistory.deceased[x]:deceasedBoolean">
       <path value="FamilyMemberHistory.deceased[x]" />
@@ -99,6 +89,11 @@
       <type>
         <code value="boolean" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1117" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
     </element>
     <element id="FamilyMemberHistory.deceased[x]:deceasedAge">
       <path value="FamilyMemberHistory.deceased[x]" />
@@ -106,6 +101,11 @@
       <type>
         <code value="Age" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1118" />
+        <comment value="LeeftijdBijOverlijden" />
+      </mapping>
     </element>
     <element id="FamilyMemberHistory.note">
       <path value="FamilyMemberHistory.note" />
@@ -136,15 +136,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-contributedToDeath" />
       </type>
       <isModifier value="false" />
-    </element>
-    <element id="FamilyMemberHistory.condition.extension:contributedToDeath.valueBoolean:valueBoolean">
-      <path value="FamilyMemberHistory.condition.extension.valueBoolean" />
-      <sliceName value="valueBoolean" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1122" />
-        <comment value="isDoodsoorzaak" />
-      </mapping>
     </element>
     <element id="FamilyMemberHistory.condition.code">
       <path value="FamilyMemberHistory.condition.code" />
@@ -181,6 +172,11 @@
         <map value="peri32-dataelement-1119" />
         <comment value="Aandoening" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10556" />
+        <comment value="Probleem infectieziekte(n) Gezin" />
+      </mapping>
     </element>
     <element id="FamilyMemberHistory.condition.code.extension:conditionReference.valueReference:valueReference">
       <path value="FamilyMemberHistory.condition.code.extension.valueReference" />
@@ -193,6 +189,11 @@
     <element id="FamilyMemberHistory.condition.outcome">
       <path value="FamilyMemberHistory.condition.outcome" />
       <comment value="Use the code deceased|  If the condition is the cause of death" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1122" />
+        <comment value="IsDoodsoorzaak" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

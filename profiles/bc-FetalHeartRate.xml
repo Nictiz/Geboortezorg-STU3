@@ -73,6 +73,14 @@
         <comment value="HartfrequentieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1782" />
+        <comment value="InterpretatieFrequentie" />
+      </mapping>
+    </element>
     <element id="Observation.interpretation.coding">
       <path value="Observation.interpretation.coding" />
       <slicing>
@@ -91,11 +99,6 @@
         <description value="Frequentie hartslag" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.235--20170203161446" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1782" />
-        <comment value="InterpretatieFrequentie" />
-      </mapping>
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -103,6 +106,14 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1780" />
         <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1779" />
+        <comment value="HartslagMeetMethode" />
       </mapping>
     </element>
     <element id="Observation.method.coding">
@@ -123,11 +134,6 @@
         <description value="Hartactie op basis van" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1779" />
-        <comment value="HartslagMeetMethode" />
-      </mapping>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
@@ -143,11 +149,6 @@
       <path value="Observation.component" />
       <sliceName value="heartRateRegularity" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1781" />
-        <comment value="HartslagRegelmatigheid" />
-      </mapping>
     </element>
     <element id="Observation.component:heartRateRegularity.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -168,10 +169,11 @@
         <description value="Regelmaat hartslag" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304" />
       </binding>
-    </element>
-    <element id="Observation.component:heartRateRegularity.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1781" />
+        <comment value="HartslagRegelmatigheid" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

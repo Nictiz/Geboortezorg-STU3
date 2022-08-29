@@ -55,16 +55,6 @@
       <path value="Observation.code.coding.display" />
       <defaultValueString value="meting aan vruchtwater (verrichting)" />
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
@@ -165,10 +155,6 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:amnioticFluidQuantity.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:amnioticFluidCompartment">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidCompartment" />
@@ -213,10 +199,6 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
       </binding>
     </element>
-    <element id="Observation.component:amnioticFluidCompartment.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:amnioticFluidSDP">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidSDP" />
@@ -253,10 +235,6 @@
         <comment value="VruchtwaterSDPWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:amnioticFluidSDP.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:amnioticFluidAFI">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidAFI" />
@@ -292,10 +270,6 @@
         <map value="peri32-dataelement-10569" />
         <comment value="VruchtwaterAFIWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:amnioticFluidAFI.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
