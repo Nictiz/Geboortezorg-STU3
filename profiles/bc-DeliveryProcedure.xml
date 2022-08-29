@@ -98,6 +98,11 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4385" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-37" />
         <comment value="Bevalling" />
       </mapping>
@@ -200,6 +205,14 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1587" />
+        <comment value="Ziekenhuis baring" />
+      </mapping>
     </element>
     <element id="Procedure.reasonReference">
       <path value="Procedure.reasonReference" />

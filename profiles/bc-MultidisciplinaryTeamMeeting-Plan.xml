@@ -55,6 +55,17 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1--20200901000000" />
       </binding>
     </element>
+    <element id="CarePlan.extension:intentTreatment.valueCodeableConcept:valueCodeableConcept">
+      <path value="CarePlan.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="IntentieBehandelingCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1--20200901000000" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="CarePlan.status">
       <path value="CarePlan.status" />
       <comment value="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.&#xD;&#xA;&#xD;&#xA;For zib MultidisciplinaryTeamMeeting, this will normally be _active_, but the context may specify a more suitable status." />

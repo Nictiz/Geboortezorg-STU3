@@ -34,15 +34,16 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3951" />
-        <comment value="Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganonen (Observatie)" />
+        <comment value="Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3952" />
@@ -61,7 +62,7 @@
       <path value="Observation.method" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4209" />
+        <map value="peri32-dataelement-3956" />
         <comment value="ObservatieMethode" />
       </mapping>
     </element>
@@ -79,11 +80,6 @@
       <path value="Observation.component" />
       <sliceName value="perineum" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3953" />
-        <comment value="PerineumWaarde" />
-      </mapping>
     </element>
     <element id="Observation.component:perineum.code.coding">
       <path value="Observation.component.code.coding" />
@@ -115,16 +111,16 @@
         <description value="ConditiePerineum32" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.301--20200901151615" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3953" />
+        <comment value="PerineumWaarde" />
+      </mapping>
     </element>
     <element id="Observation.component:sfincter">
       <path value="Observation.component" />
       <sliceName value="sfincter" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3954" />
-        <comment value="Sfincterwaarde" />
-      </mapping>
     </element>
     <element id="Observation.component:sfincter.code.coding">
       <path value="Observation.component.code.coding" />
@@ -158,16 +154,16 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.315--20210222102852" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3954" />
+        <comment value="SfincterWaarde" />
+      </mapping>
     </element>
     <element id="Observation.component:femaleGenital">
       <path value="Observation.component" />
       <sliceName value="femaleGenital" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10553" />
-        <comment value="VrouwelijkGeslachtsorgaanWaarde" />
-      </mapping>
     </element>
     <element id="Observation.component:femaleGenital.code.coding">
       <path value="Observation.component.code.coding" />
@@ -201,6 +197,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.354--20220110114406" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10553" />
+        <comment value="VrouwelijkGeslachtsorgaanWaarde" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence or presence of the patient. Use .participant to indicate whether the patient was participating in the meeting or not." />
+  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence of the patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -32,11 +32,6 @@
     <element id="Encounter">
       <path value="Encounter" />
       <definition value="An interaction between healthcare provider(s), and/or patient(s) for the purpose of providing healthcare service(s) or assessing the health status of patient(s). (Note: this definition is a pre-adopt of https://jira.hl7.org/browse/FHIR-20479. Referencing the Patient as `.subject` does not indicate its presence at the Encounter. Use `.participant.individual.extension:patient` for this.)" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3359" />
-        <comment value="Patientbespreking" />
-      </mapping>
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
@@ -44,14 +39,6 @@
         <system value="http://snomed.info/sct" />
         <code value="384682003" />
       </patternCoding>
-    </element>
-    <element id="Encounter.type.text">
-      <path value="Encounter.type.text" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3360" />
-        <comment value="PatientbesprekingLabel" />
-      </mapping>
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
@@ -65,11 +52,6 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1989" />
-        <comment value="Patient" />
-      </mapping>
     </element>
     <element id="Encounter.episodeOfCare">
       <path value="Encounter.episodeOfCare" />
@@ -77,14 +59,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
-    </element>
-    <element id="Encounter.participant">
-      <path value="Encounter.participant" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3362" />
-        <comment value="Deelnemer" />
-      </mapping>
     </element>
     <element id="Encounter.participant.type">
       <path value="Encounter.participant.type" />
@@ -106,11 +80,6 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.2--20200901000000" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3363" />
-        <comment value="RolDeelnemer" />
-      </mapping>
     </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual" />
@@ -122,11 +91,6 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1990" />
-        <comment value="Contactpersoon" />
-      </mapping>
     </element>
     <element id="Encounter.participant.individual.extension">
       <path value="Encounter.participant.individual.extension" />
@@ -147,11 +111,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1345" />
-        <comment value="Zorgverlener" />
-      </mapping>
     </element>
     <element id="Encounter.participant.individual.extension:practitionerRole.valueReference:valueReference">
       <path value="Encounter.participant.individual.extension.valueReference" />
@@ -187,19 +146,6 @@
       <path value="Encounter.period.start" />
       <short value="Patient consultation date time" />
       <definition value="The date (and time) the patient consultation is scheduled or took place." />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3361" />
-        <comment value="PatientbesprekingDatumTijd" />
-      </mapping>
-    </element>
-    <element id="Encounter.diagnosis">
-      <path value="Encounter.diagnosis" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3374" />
-        <comment value="Aandoening" />
-      </mapping>
     </element>
     <element id="Encounter.diagnosis.condition">
       <path value="Encounter.diagnosis.condition" />
@@ -217,16 +163,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8843" />
-        <comment value="Probleem" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3341" />
-        <comment value="Zwangerschap" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

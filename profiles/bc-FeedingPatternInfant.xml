@@ -32,12 +32,12 @@
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7937" />
+        <map value="peri32-dataelement-8757" />
         <comment value="VoedingspatroonZuigeling" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8757" />
+        <map value="peri32-dataelement-7937" />
         <comment value="VoedingspatroonZuigeling" />
       </mapping>
     </element>
@@ -67,6 +67,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:FeedingSupplement">
       <path value="Observation.component" />
@@ -204,11 +208,6 @@
       <path value="Observation.component" />
       <sliceName value="FeedingAdvice" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7942" />
-        <comment value="Voedingsadvies" />
-      </mapping>
     </element>
     <element id="Observation.component:FeedingAdvice.code.coding">
       <path value="Observation.component.code.coding" />
@@ -235,6 +234,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7942" />
+        <comment value="Voedingsadvies" />
+      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7943" />
