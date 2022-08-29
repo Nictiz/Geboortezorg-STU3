@@ -26,7 +26,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     
     <xsl:output method="xml" indent="yes"/>
-    <xsl:variable name="inputDir" select="'../profiles'"/>
+    <xsl:variable name="inputDir" select="'../profiles/generatedProfiles'"/>
     <xsl:variable name="mappingFile" select="document('../fhirmapping-3-2.xml')"/>
     
     <xd:doc>
@@ -63,7 +63,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:variable name="elementName" select="$mappingFileRecord[ID=$elementID]/naam"/>
                 <xsl:variable name="mappingComment" select="$profileMapping[f:map/@value=$elementID]/f:comment/@value"/>
                 <xsl:variable name="elementMappingPath" select="$mappingFileRecord[ID=$elementID]/mapping"/>
-                <xsl:variable name="profileMappingPath" select="$profileElement[f:mapping/f:map/@value=$elementID]/f:path/@value"/>
+                <xsl:variable name="profileMappingPath" select="$profileElement[f:mapping/f:map/@value=$elementID]/@id"/>
                 <record>
                     <profileName value="{$profileID}"/>
                     <elementID value="{$elementID}"/>
@@ -71,7 +71,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                     <mappingComment value="{$mappingComment}"/>
                     <elementMapping value="{$elementMappingPath}"/>
                     <profileMapping value="{$profileMappingPath}"/>
-                    <match value="{($elementName=$mappingComment and $elementMappingPath=$profileMappingPath)}"/>
+                    <matchPath value="{$elementMappingPath=$profileMappingPath}"/>
+                    <matchDescription value="{$elementName=$mappingComment}"/>
                     <countAbove1 value="{count($profileMappingPath)>1}"/>
                 </record>
             </xsl:for-each>
