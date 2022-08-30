@@ -1,7 +1,7 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="infantexcretion-example"/>
+    <id value="excretionurine-example"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-InfantExcretion"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionUrine"/>
     </meta>
     <status value="final"/>
     <code>
@@ -20,37 +20,6 @@
         <display value="Zwangerschapsdossier Example"/>
     </context>
     <effectiveDateTime value="2011-08-03"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="364689004"/>
-                <display value="observatie betreffende feces (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="249621006"/>
-                <display value="borstvoedingsfeces (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160281000146105"/>
-                <display value="aantal poepluiers (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="1"/>
-            <unit value="1"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>            
-        </valueQuantity>          
-    </component>
     <component>
         <code>
             <coding>
