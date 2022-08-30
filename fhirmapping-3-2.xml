@@ -3451,7 +3451,7 @@
 	<record>
 		<ID>peri32-dataelement-10401</ID>
 		<naam>BehandelAanwijzing</naam>
-		<mapping>Consent</mapping>
+		<mapping>Consent.except.type</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3463,7 +3463,7 @@
 	<record>
 		<ID>peri32-dataelement-10403</ID>
 		<naam>Behandeling</naam>
-		<mapping>Consent.extension:treatment</mapping>
+		<mapping>Consent.except.code</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3475,25 +3475,25 @@
 	<record>
 		<ID>peri32-dataelement-10405</ID>
 		<naam>MeestRecenteBespreekdatum</naam>
-		<mapping>Consent.extension:verification.extension:VerificationDate</mapping>
+		<mapping>Consent.modifierExtension:specificationOther.value[x]:valueString</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10406</ID>
 		<naam>DatumBeeindigd</naam>
-		<mapping>Consent.period.end</mapping>
+		<mapping>Consent.except.period.end</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10407</ID>
 		<naam>RedenBeeindigd</naam>
-		<mapping>Consent.extension:endReason</mapping>
+		<mapping>Consent.except.extension:reasonForEnding</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10408</ID>
 		<naam>Wilsverklaring</naam>
-		<mapping>Consent.extension:additionalSources</mapping>
+		<mapping>Consent.source[x]:sourceReference</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3505,13 +3505,13 @@
 	<record>
 		<ID>peri32-dataelement-10410</ID>
 		<naam>AfspraakPartij</naam>
-		<mapping>Consent.consentingParty</mapping>
+		<mapping>Consent.except.actor:agreementParty</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10411</ID>
 		<naam>Patient</naam>
-		<mapping>Consent.consentingParty</mapping>
+		<mapping>Consent.except.actor:agreementParty.reference"</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3523,7 +3523,7 @@
 	<record>
 		<ID>peri32-dataelement-10413</ID>
 		<naam>Vertegenwoordiger</naam>
-		<mapping>Consent.consentingParty</mapping>
+		<mapping>Consent.except.actor:agreementParty.reference</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3535,7 +3535,7 @@
 	<record>
 		<ID>peri32-dataelement-10415</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>Consent.consentingParty</mapping>
+		<mapping>Consent.except.actor:agreementParty.reference.extension:practitionerRole</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3547,7 +3547,7 @@
 	<record>
 		<ID>peri32-dataelement-10417</ID>
 		<naam>Toelichting</naam>
-		<mapping>Consent.extension:comment</mapping>
+		<mapping>Consent.extension:comment.valueString:valueString</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
