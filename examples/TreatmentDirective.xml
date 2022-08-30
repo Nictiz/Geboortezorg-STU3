@@ -2,46 +2,13 @@
     <id value="zib-treatmentdirective-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TreatmentDirective" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective" />
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification">
-        <extension url="Verified">
-            <valueBoolean value="true" />
-        </extension>
-        <extension url="VerifiedWith">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct" />
-                    <code value="116154003" />
-                    <display value="Patient" />
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="VerificationDate">
-            <valueDateTime value="2018-04-09" />
-        </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
+        <valueString value="Eerst overleg met echtgenoot"/>
     </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment">
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="40617009" />
-                <display value="Artificial respiration (procedure)" />
-            </coding>
-        </valueCodeableConcept>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+        <valueString value="Patient wil graag dat echtgenoot het laatste woord heeft"/>
     </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-endreason">
-        <valueString value = "Beperking ingetrokken door patient"/>
-    </extension>
-    <modifierExtension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted">
-        <valueCodeableConcept>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4" />
-                <code value="JA_MAAR" />
-                <display value="Ja, maar met beperkingen" />
-            </coding>
-        </valueCodeableConcept>
-    </modifierExtension>
     <status value="inactive" />
     <category>
         <coding>
@@ -54,17 +21,42 @@
         <reference value="Patient/example" />
         <display value="Example" />
     </patient>
-    <period>
-        <start value="2018-04-09" />
-        <end value="2019-08-11" />
-    </period>
+    <dateTime value="2019-08-11"/>
+    <sourceReference>
+        <reference value="Consent/livingwill"/>
+        <display value="Wilsverklaring" />
+    </sourceReference>
     <policy>
         <uri value="http://wetten.overheid.nl/" />
     </policy>
     <except>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions">
-            <valueString value="Eerst overleg met echtgenote" />
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
+            <valueString value="Eerst overleg met echtgenote"/>
+        </extension>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-reasonforending">
+            <valueString value="Gescheiden"/>
         </extension>
         <type value="deny" />
+        <period>
+            <end value="2019-08-11"/>
+        </period>
+        <actor>
+            <role>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/RoleCode"/>
+                    <code value="CONSENTER"/>
+                    <display value="consenter"/>
+                </coding>
+            </role>
+            <reference>
+                <reference value="Patient/example"/>
+                <display value="Example" />
+            </reference>
+        </actor>
+        <code>
+            <system value="http://snomed.info/sct"/>
+            <code value="305351004"/>
+            <display value="opname op intensive care"/>
+        </code>
     </except>
 </Consent>
