@@ -2388,37 +2388,37 @@
 		<ID>peri32-dataelement-3359</ID>
 		<naam>Patientbespreking</naam>
 		<mapping>Encounter</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3360</ID>
 		<naam>PatientbesprekingLabel</naam>
-		<mapping>Encounter.type</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>Encounter.type.text</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3361</ID>
 		<naam>PatientbesprekingDatumTijd</naam>
 		<mapping>Encounter.period.start</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3362</ID>
 		<naam>Deelnemer</naam>
 		<mapping>Encounter.participant.individual</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3363</ID>
 		<naam>RolDeelnemer</naam>
-		<mapping>Encounter.participant.type</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>Encounter.participant.type:role</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1345</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>Encounter.participant.individual</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-978</zib>
 	</record>
@@ -2426,29 +2426,29 @@
 		<ID>peri32-dataelement-1990</ID>
 		<naam>Contactpersoon</naam>
 		<mapping>Encounter.participant.individual</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-947</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1989</ID>
 		<naam>Patient</naam>
-		<mapping>Encounter.subject</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>Encounter.participant.individual.extension:patient</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-675</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3370</ID>
 		<naam>Beleid</naam>
-		<mapping>Encounter.extension:management</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>CarePlan</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting-Plan</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3371</ID>
 		<naam>VoorgesteldeBehandeling</naam>
-		<mapping>Encounter.extension:management.extension:treatment</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>CarePlan.activity.reference</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting-Plan</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2685</ID>
@@ -2461,14 +2461,14 @@
 	<record>
 		<ID>peri32-dataelement-3373</ID>
 		<naam>IntentieBehandeling</naam>
-		<mapping>Encounter.extension:management.extension:treatmentIntention</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<mapping>CarePlan.extension:intentTreatment.valueCodeableConcept:valueCodeableConcept</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting-Plan</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3374</ID>
 		<naam>Aandoening</naam>
 		<mapping>Encounter.diagnosis</mapping>
-		<profile>bc-TeamCareConference</profile>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8843</ID>
