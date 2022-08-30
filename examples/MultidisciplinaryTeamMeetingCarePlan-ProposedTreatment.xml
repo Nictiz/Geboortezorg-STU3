@@ -1,0 +1,19 @@
+<ProcedureRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedurerequest.xsd">
+    <id value="MultidisciplinaryTeamMeetingPlan-ProposedTreatment" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
+    </meta>
+    <status value="active" />
+    <intent value="plan" />
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="240977001" />
+            <display value="Biopsy of skin (procedure)" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example" />
+        <display value="Example" />
+    </subject>
+</ProcedureRequest>
