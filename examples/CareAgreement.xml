@@ -26,6 +26,16 @@
         <end value="2016-06-16"/>
     </period>
     <author>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator">
+            <valueReference>
+                <reference value="PractitionerRole/ZorgverlenerA" />
+                <display value="Zorgverlener A" />
+            </valueReference>
+        </extension>
+        <reference value="Practitioner/ZorgverlenerA" />
+        <display value="Zorgverlener A" />
+    </author>
+    <author>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
                 <reference value="PractitionerRole/ZorgverlenerA" />
@@ -43,16 +53,18 @@
         <reference value="RelatedPerson/partner" />
         <display value="Partner" />
     </author>
-    <careTeam>
-        <reference value="CareTeam/zorgteam" />
-        <display value="Zorgteam" />
-    </careTeam>
     <addresses>
         <reference value="Condition/complicatieZwangerschap" />
         <display value="Complicatie zwangerschap" />
     </addresses>
     <activity>
         <detail>
+            <performer>
+                <reference value="Patient/example" />
+                <display value="Example" />
+            <reference value="Practitioner/ZorgverlenerA" />
+            <display value="Zorgverlener A" />
+            </performer>
             <code>
                 <text value="elke week zelf bloeddruk thuis meten"/>                
             </code>
