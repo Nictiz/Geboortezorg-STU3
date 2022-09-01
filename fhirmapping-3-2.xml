@@ -2033,133 +2033,133 @@
 		<ID>peri32-dataelement-3841</ID>
 		<naam>ZorgAfspraak</naam>
 		<mapping>CarePlan</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3842</ID>
 		<naam>BeginDatum</naam>
 		<mapping>CarePlan.period.start</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3843</ID>
 		<naam>EindDatum</naam>
 		<mapping>CarePlan.period.end</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3844</ID>
 		<naam>AfspraakPartijen</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3845</ID>
 		<naam>Patiënt</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3865</ID>
 		<naam>Patient</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3847</ID>
 		<naam>Contactpersoon</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3866</ID>
 		<naam>Contactpersoon</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3849</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3867</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>CarePlan.author</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3851</ID>
 		<naam>Uitvoerder</naam>
-		<mapping>CarePlan.careTeam</mapping>
-		<profile>bc-CarePlan</profile>
+		<mapping>CarePlan.activity.detail.performer</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3852</ID>
 		<naam>Patient</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>CarePlan.activity.detail.performer:patient</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3868</ID>
 		<naam>Patient</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>Patient</mapping>
+		<profile>nl-core-patient</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3854</ID>
 		<naam>Contactpersoon</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>CarePlan.activity.detail.performer:contactPerson</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3869</ID>
 		<naam>Contactpersoon</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>RelatedPerson</mapping>
+		<profile>nl-core-relatedperson</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3856</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>CarePlan.activity.detail.performer.extension:practitionerRole</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3870</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>PractitionerRole</mapping>
+		<profile>nl-core-practitionerrole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3858</ID>
 		<naam>Coordinator</naam>
-		<mapping>CareTeam.participant.role</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>CarePlan.author.extension:coordinator</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3864</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>CareTeam.participant.member</mapping>
-		<profile>bc-CarePlan-InvolvedParties</profile>
+		<mapping>PractitionerRole</mapping>
+		<profile>nl-core-practitionerrole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3860</ID>
 		<naam>Activiteit</naam>
 		<mapping>CarePlan.activity.detail.code.text</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3861</ID>
 		<naam>Toelichting</naam>
 		<mapping>CarePlan.activity.detail.description</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3862</ID>
 		<naam>Probleem zorgafspraak</naam>
 		<mapping>CarePlan.addresses</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8833</ID>
@@ -5509,7 +5509,7 @@
 		<ID>peri32-dataelement-3871</ID>
 		<naam>ZorgAfspraak</naam>
 		<mapping>CarePlan</mapping>
-		<profile>bc-CarePlan</profile>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2151</ID>
