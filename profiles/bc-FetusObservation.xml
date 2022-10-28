@@ -146,6 +146,11 @@
         <map value="peri32-dataelement-7847" />
         <comment value="Sonomarkers (Observatie)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1419" />
+        <comment value="Oorzaak overlijden (Observatie)" />
+      </mapping>
     </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
@@ -442,6 +447,33 @@
         <comment value="Placentalokalisatie" />
       </mapping>
     </element>
+    <element id="Observation.value[x].extension">
+      <path value="Observation.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.value[x].extension:valueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valueReference" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1430" />
+        <comment value="Oorzaak overlijden (Probleem)" />
+      </mapping>
+    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
@@ -621,6 +653,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7856" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1428" />
         <comment value="Toelichting" />
       </mapping>
     </element>
