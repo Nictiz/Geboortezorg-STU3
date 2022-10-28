@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence of the patient." />
+  <description value="An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence or presence of the patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -93,6 +93,8 @@
     </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual" />
+      <short value="Persons involved in the encounter" />
+      <definition value="Persons involved in the encounter. This profile pre-adopts the notion that the subject of the Encounter does not have to be present at the encounter (https://jira.hl7.org/browse/FHIR-20479). Use the extension to reference the subject in `Encounter.participant.individual` if the subject is present." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
@@ -149,7 +151,7 @@
       <path value="Encounter.participant.individual.extension" />
       <sliceName value="patient" />
       <short value="Patient" />
-      <definition value="The patient as participant of the patient consultation." />
+      <definition value="The patient as participant of the patient consultation. This extension adds zib-Patient as a target profile to `Encounter.participant.individual`. This profile pre-adopts the notion that the subject of the Encounter does not have to be present at the encounter (https://jira.hl7.org/browse/FHIR-20479). This creates the need to reference the subject in `Encounter.participant.individual` if the subject is present, where the current FHIR R5 build has already added this option to the renamed `participant.actor`." />
       <min value="0" />
       <max value="1" />
       <type>
