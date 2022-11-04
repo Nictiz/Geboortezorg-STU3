@@ -111,8 +111,8 @@
       <path value="EpisodeOfCare.type.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
