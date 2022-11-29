@@ -121,6 +121,21 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
       </type>
     </element>
+    <element id="Observation.related:uterusActivity">
+      <path value="Observation.related" />
+      <sliceName value="uterusActivity" />
+    </element>
+    <element id="Observation.related:uterusActivity.type">
+      <path value="Observation.related.type" />
+      <fixedCode value="interfered-by" />
+    </element>
+    <element id="Observation.related:uterusActivity.target">
+      <path value="Observation.related.target" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-UterusActivity" />
+      </type>
+    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
