@@ -1,0 +1,656 @@
+<dataset id="2.16.840.1.113883.2.4.3.11.60.42.1.1" effectiveDate="2018-01-01T00:00:00" statusCode="final" versionLabel="2017" prefix="bgz2017-" shortName="basisgegevensset_zorg_2017_bg_z" iddisplay="bgz2017-dataset-1" url="http://decor.nictiz.nl/decor/services/" ident="bgz2017-"><!--
+ This is a view of the dataset "Basisgegevensset Zorg 2017 (BgZ)" containing DECOR specifications for a transaction or dataset in a single, hierarchical view. 
+ All inheritances are resolved, for transactions the dataset is filtered for those concepts occurring in the transaction.
+ Valuesets are contained within the concept for easy reference. 
+ Xpaths are calculated on a best effort basis. The should be considered a starting point for application logic, not an endpoint. -->
+    <name language="nl-NL">Basisgegevensset Zorg 2017 (BgZ)</name>
+    <desc language="nl-NL"></desc>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.1" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-1" shortName="demografie_en_identificatie">
+        <implementation shortName="demografie_en_identificatie"></implementation>
+        <name language="nl-NL">Demografie en identificatie</name>
+        <desc language="nl-NL">BgZ sectie Demografie en identificatie</desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.19" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-19" shortName="patient">
+            <implementation shortName="patient"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.0.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-0.1.1"></contains>
+            <name language="nl-NL">Patient</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt. </desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.20" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-20" shortName="burgerlijke_staat_rc">
+            <implementation shortName="burgerlijke_staat_rc"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.9.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.9" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.0" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.9.1"></contains>
+            <name language="nl-NL">BurgerlijkeStaatRC</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen BurgerlijkeStaat. Dit concept bevat alle gegevenselementen van de bouwsteen BurgerlijkeStaat.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.2" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-2" shortName="financiele_informatie">
+        <implementation shortName="financiele_informatie"></implementation>
+        <name language="nl-NL">Financiële informatie</name>
+        <desc language="nl-NL">BgZ sectie Financiële informatie</desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.21" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-21" shortName="betaler">
+            <implementation shortName="betaler"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.1.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-1.1.1"></contains>
+            <name language="nl-NL">Betaler</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.3" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-3" shortName="behandelrestricties">
+        <implementation shortName="behandelrestricties"></implementation>
+        <name language="nl-NL">Behandelrestricties</name>
+        <desc language="nl-NL">BgZ sectie Behandelrestricties</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.3" conceptFlexibility="2018-01-01T00:00:00" code="42348-3" codeSystem="2.16.840.1.113883.6.1" displayName="Advance directives" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.22" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-22" shortName="behandel_aanwijzing">
+            <implementation shortName="behandel_aanwijzing"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.2.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.2.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-2.1.1"></contains>
+            <name language="nl-NL">BehandelAanwijzing</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen BehandelAanwijzing. Dit concept bevat alle gegevenselementen van de bouwsteen BehandelAanwijzing.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.23" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-23" shortName="wilsverklaring">
+            <implementation shortName="wilsverklaring"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.15" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.15.1"></contains>
+            <name language="nl-NL">Wilsverklaring</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Wilsverklaring. Dit concept bevat alle gegevenselementen van de bouwsteen Wilsverklaring.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.4" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-4" shortName="contactpersonen">
+        <implementation shortName="contactpersonen"></implementation>
+        <name language="nl-NL">Contactpersonen</name>
+        <desc language="nl-NL">BgZ sectie Contactpersonen</desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.24" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-24" shortName="contactpersoon">
+            <implementation shortName="contactpersoon"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.3.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.3.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-3.1.1"></contains>
+            <name language="nl-NL">Contactpersoon</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Contactpersoon. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Contactpersoon.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.5" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-5" shortName="functionele_status">
+        <implementation shortName="functionele_status"></implementation>
+        <name language="nl-NL">Functionele status</name>
+        <desc language="nl-NL">BgZ sectie Functionele status</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.5" conceptFlexibility="2018-01-01T00:00:00" code="47420-5" codeSystem="2.16.840.1.113883.6.1" displayName="Functional status assessment note" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.25" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-25" shortName="functionele_of_mentale_status">
+            <implementation shortName="functionele_of_mentale_status"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.4.26.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.4.26" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-4.26.1"></contains>
+            <name language="nl-NL">FunctioneleOfMentaleStatus</name>
+            <desc language="nl-NL">Rootconcept van FunctioneleOfMentaleStatus. Dit concept bevat alle gegevenselementen van de bouwsteen FunctioneleOfMentaleStatus.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.6" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-6" shortName="klachten_en_diagnoses">
+        <implementation shortName="klachten_en_diagnoses"></implementation>
+        <name language="nl-NL">Klachten en diagnoses</name>
+        <desc language="nl-NL">BgZ sectie Klachten en diagnoses</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.6" conceptFlexibility="2018-01-01T00:00:00" code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem list - Reported" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.26" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-26" shortName="probleem">
+            <implementation shortName="probleem"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.5.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="4.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-5.1.1"></contains>
+            <name language="nl-NL">Probleem</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Probleem.<br />Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). </desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.7" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-7" shortName="sociale_anamnese">
+        <implementation shortName="sociale_anamnese"></implementation>
+        <name language="nl-NL">Sociale anamnese</name>
+        <desc language="nl-NL">BgZ sectie Sociale anamnese</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.7" conceptFlexibility="2018-01-01T00:00:00" code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social history Narrative" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.27" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-27" shortName="woonsituatie">
+            <implementation shortName="woonsituatie"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.8.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.8" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.8.1"></contains>
+            <name language="nl-NL">Woonsituatie</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Woonsituatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Woonsituatie.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.28" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-28" shortName="drugs_gebruik">
+            <implementation shortName="drugs_gebruik"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.4.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.4.1"></contains>
+            <name language="nl-NL">DrugsGebruik</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen DrugsGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen DrugsGebruik.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.29" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-29" shortName="alcohol_gebruik">
+            <implementation shortName="alcohol_gebruik"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.3.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.3" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.3.1"></contains>
+            <name language="nl-NL">AlcoholGebruik</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen AlcoholGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen AlcoholGebruik.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.30" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-30" shortName="tabak_gebruik">
+            <implementation shortName="tabak_gebruik"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.2.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.2.1"></contains>
+            <name language="nl-NL">TabakGebruik</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen TabakGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen TabakGebruik.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.31" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-31" shortName="voedingsadvies">
+            <implementation shortName="voedingsadvies"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.7.11.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.7.11" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-7.11.1"></contains>
+            <name language="nl-NL">Voedingsadvies</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Voedingsadvies. Dit concept bevat alle gegevenselementen van de bouwsteen Voedingsadvies.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.8" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-8" shortName="waarschuwingen">
+        <implementation shortName="waarschuwingen"></implementation>
+        <name language="nl-NL">Waarschuwingen</name>
+        <desc language="nl-NL">BgZ sectie Waarschuwingen</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.8" conceptFlexibility="2018-01-01T00:00:00" code="75310-3" codeSystem="2.16.840.1.113883.6.1" displayName="Health concerns Document" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.32" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-32" shortName="alert">
+            <implementation shortName="alert"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.8.3" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-8.3.1"></contains>
+            <name language="nl-NL">Alert</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Alert. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Alert.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.9" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-9" shortName="allergieen">
+        <implementation shortName="allergieen"></implementation>
+        <name language="nl-NL">Allergieën</name>
+        <desc language="nl-NL">BgZ sectie Allergieën</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.9" conceptFlexibility="2018-01-01T00:00:00" code="48765-2" codeSystem="2.16.840.1.113883.6.1" displayName="Allergies and adverse reactions Document" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.33" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-33" shortName="allergie_intolerantie">
+            <implementation shortName="allergie_intolerantie"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.8.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-8.2.1"></contains>
+            <name language="nl-NL">AllergieIntolerantie</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.10" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-10" shortName="medicatie">
+        <implementation shortName="medicatie"></implementation>
+        <name language="nl-NL">Medicatie</name>
+        <desc language="nl-NL">BgZ sectie Medicatie</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.10" conceptFlexibility="2018-01-01T00:00:00" code="10160-0" codeSystem="2.16.840.1.113883.6.1" displayName="History of Medication use Narrative" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.34" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-34" shortName="medicatieafspraak">
+            <implementation shortName="medicatieafspraak"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.9580" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.9.6" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-9.6.9580"></contains>
+            <name language="nl-NL">Medicatieafspraak</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Medicatieafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieafspraak. </desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.35" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-35" shortName="toedieningsafspraak">
+            <implementation shortName="toedieningsafspraak"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.20132" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.9.8" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-9.8.20132"></contains>
+            <name language="nl-NL">Toedieningsafspraak</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Toedieningsafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Toedieningsafspraak. </desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.36" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-36" shortName="medicatie_gebruik">
+            <implementation shortName="medicatie_gebruik"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.9.11.21338" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.9.11" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-9.11.21338"></contains>
+            <name language="nl-NL">MedicatieGebruik</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen MedicatieGebruik. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.11" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-11" shortName="medische_hulpmiddelen">
+        <implementation shortName="medische_hulpmiddelen"></implementation>
+        <name language="nl-NL">Medische hulpmiddelen</name>
+        <desc language="nl-NL">BgZ sectie Medische hulpmiddelen</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.11" conceptFlexibility="2018-01-01T00:00:00" code="46264-8" codeSystem="2.16.840.1.113883.6.1" displayName="History of medical device use" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.37" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-37" shortName="medisch_hulpmiddel">
+            <implementation shortName="medisch_hulpmiddel"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.10.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-10.1.1"></contains>
+            <name language="nl-NL">MedischHulpmiddel</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.12" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-12" shortName="inentingen">
+        <implementation shortName="inentingen"></implementation>
+        <name language="nl-NL">Inentingen</name>
+        <desc language="nl-NL">BgZ sectie Inentingen</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.12" conceptFlexibility="2018-01-01T00:00:00" code="11369-6" codeSystem="2.16.840.1.113883.6.1" displayName="History of Immunization Narrative" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.38" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-38" shortName="vaccinatie">
+            <implementation shortName="vaccinatie"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.11.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-11.1.1"></contains>
+            <name language="nl-NL">Vaccinatie</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Vaccinatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vaccinatie.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.13" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-13" shortName="vitale_functies">
+        <implementation shortName="vitale_functies"></implementation>
+        <name language="nl-NL">Vitale functies</name>
+        <desc language="nl-NL">BgZ sectie Vitale functies</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.13" conceptFlexibility="2018-01-01T00:00:00" code="8716-3" codeSystem="2.16.840.1.113883.6.1" displayName="Vital signs" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.39" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-39" shortName="bloeddruk">
+            <implementation shortName="bloeddruk"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.12.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-12.4.1"></contains>
+            <name language="nl-NL">Bloeddruk</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Bloeddruk. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Bloeddruk.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.40" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-40" shortName="lichaamsgewicht">
+            <implementation shortName="lichaamsgewicht"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.12.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.12.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-12.1.1"></contains>
+            <name language="nl-NL">Lichaamsgewicht</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Lichaamsgewicht. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamsgewicht.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.41" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-41" shortName="lichaamslengte">
+            <implementation shortName="lichaamslengte"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.12.2.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.12.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-12.2.1"></contains>
+            <name language="nl-NL">Lichaamslengte</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Lichaamslengte. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamslengte.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.14" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-14" shortName="uitslagen">
+        <implementation shortName="uitslagen"></implementation>
+        <name language="nl-NL">Uitslagen</name>
+        <desc language="nl-NL">BgZ sectie Uitslagen</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.14" conceptFlexibility="2018-01-01T00:00:00" code="30954-2" codeSystem="2.16.840.1.113883.6.1" displayName="Relevant diagnostic tests/laboratory data Narrative" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.42" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-42" shortName="laboratorium_uitslag">
+            <implementation shortName="laboratorium_uitslag"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.13.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="4.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-13.1.1"></contains>
+            <name language="nl-NL">LaboratoriumUitslag</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen LaboratoriumUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen LaboratoriumUitslag.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.15" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-15" shortName="verrichtingen">
+        <implementation shortName="verrichtingen"></implementation>
+        <name language="nl-NL">Verrichtingen</name>
+        <desc language="nl-NL">BgZ sectie Verrichtingen</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.15" conceptFlexibility="2018-01-01T00:00:00" code="47519-4" codeSystem="2.16.840.1.113883.6.1" displayName="History of Procedures Document" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.43" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-43" shortName="verrichting">
+            <implementation shortName="verrichting"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.14.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="4.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-14.1.1"></contains>
+            <name language="nl-NL">Verrichting</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Verrichting. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Verrichting.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.16" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-16" shortName="contacten">
+        <implementation shortName="contacten"></implementation>
+        <name language="nl-NL">Contacten</name>
+        <desc language="nl-NL">BgZ sectie Contacten</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.16" conceptFlexibility="2018-01-01T00:00:00" code="46240-8" codeSystem="2.16.840.1.113883.6.1" displayName="History of Hospitalizations+Outpatient visits Narrative" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.44" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-44" shortName="contact">
+            <implementation shortName="contact"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.15.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-15.1.1"></contains>
+            <name language="nl-NL">Contact</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Contact. Dit concept bevat alle gegevenselementen van de bouwsteen Contact.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.17" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-17" shortName="zorgplan">
+        <implementation shortName="zorgplan"></implementation>
+        <name language="nl-NL">Zorgplan</name>
+        <desc language="nl-NL">BgZ sectie Zorgplan</desc>
+        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.42.2.17" conceptFlexibility="2018-01-01T00:00:00" code="18776-5" codeSystem="2.16.840.1.113883.6.1" displayName="Plan of care note" effectiveDate="2018-03-15T00:00:00" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.45" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-45" shortName="geplande_zorg_activiteit">
+            <implementation shortName="geplande_zorg_activiteit"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.16.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.16.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-16.1.1"></contains>
+            <name language="nl-NL">GeplandeZorgActiviteit</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen OverdrachtGeplandeZorgActiviteit. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtGeplandeZorgActiviteit.</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.18" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-18" shortName="zorgverleners">
+        <implementation shortName="zorgverleners"></implementation>
+        <name language="nl-NL">Zorgverleners</name>
+        <desc language="nl-NL">BgZ sectie Zorgverleners</desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.42.2.46" statusCode="final" versionLabel="2017" effectiveDate="2018-01-01T00:00:00" type="group" iddisplay="bgz2017-dataelement-46" shortName="zorgverlener">
+            <implementation shortName="zorgverlener"></implementation>
+            <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.1.1"></contains>
+            <name language="nl-NL">Zorgverlener</name>
+            <desc language="nl-NL">Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. <br />Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn</desc>
+            <usage>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                    <name language="nl-NL">Aanmaken of bijwerken</name>
+                </transaction>
+                <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                    <name language="nl-NL">Beschikbaarstellen BgZ</name>
+                </transaction>
+            </usage>
+        </concept>
+        <usage>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+                <name language="nl-NL">Aanmaken of bijwerken</name>
+            </transaction>
+            <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+                <name language="nl-NL">Beschikbaarstellen BgZ</name>
+            </transaction>
+        </usage>
+    </concept>
+    <usage>
+        <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.34" effectiveDate="2017-01-01T00:00:00" statusCode="final" type="stationary" model="ClinicalDocument" label="BasicHealthDataSet-createUpdate-2017" versionLabel="2017">
+            <name language="nl-NL">Aanmaken of bijwerken</name>
+        </transaction>
+        <transaction id="2.16.840.1.113883.2.4.3.11.60.42.4.37" effectiveDate="2018-08-30T09:30:49" statusCode="final" type="back" model="ClinicalDocument" label="BasicHealthDataSet-response-2017" versionLabel="2017">
+            <name language="nl-NL">Beschikbaarstellen BgZ</name>
+        </transaction>
+    </usage>
+</dataset>
