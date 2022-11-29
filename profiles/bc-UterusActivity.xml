@@ -105,33 +105,6 @@
         <comment value="UterusActiviteitMethode" />
       </mapping>
     </element>
-    <element id="Observation.related">
-      <path value="Observation.related" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="target" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.related:fetalMonitoring">
-      <path value="Observation.related" />
-      <sliceName value="fetalMonitoring" />
-      <max value="1" />
-    </element>
-    <element id="Observation.related:fetalMonitoring.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3899" />
-        <comment value="EffectOpFoetaleHartslag" />
-      </mapping>
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
