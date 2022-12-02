@@ -42,6 +42,29 @@
         <comment value="ZorgAfspraak" />
       </mapping>
     </element>
+    <element id="CarePlan.extension">
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CarePlan.extension:careManager">
+      <path value="CarePlan.extension" />
+      <sliceName value="careManager" />
+      <definition value="The practitioner responsible for coordinating the agreed action(s) in this care agreement." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-casemanager" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
       <slicing>
@@ -172,6 +195,30 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
       <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3849" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3867" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:practitionerRole.valueReference:valueReference">
+      <path value="CarePlan.author.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3858" />
+        <comment value="Coordinator" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3864" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
     <element id="CarePlan.addresses">
       <path value="CarePlan.addresses" />
