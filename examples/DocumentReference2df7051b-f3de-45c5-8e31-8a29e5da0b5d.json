@@ -1,0 +1,41 @@
+{
+	"resourceType": "DocumentReference",
+	"id": "2df7051b-f3de-45c5-8e31-8a29e5da0b5d",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2022-11-28T16:33:23.098+00:00",
+		"profile": [
+			"http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"
+		]
+	},
+	"status": "current",
+	"type": {
+		"coding": [
+			{
+				"code": "101",
+				"display": "rptZwangerschapsKaart"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/e4533c3e-c343-46f3-ac97-37d7b76e4a06",
+		"display": "C - bc-Woman"
+	},
+	"indexed": "2022-11-28T17:33:14+00:00",
+	"description": "C_I_A_Description",
+	"content": [
+		{
+			"attachment": {
+				"contentType": "application/pdf",
+				"language": "nl-NL",
+				"url": "https://zwconnecttest-verloskundigepraktijk3.fhir.azurehealthcareapis.com/Binary/4eb0a98e-3ac7-4c25-ade7-150bc5a7ea9b",
+				"title": "C_I_A_Title"
+			}
+		}
+	],
+	"context": {
+		"encounter": {
+			"reference": "EpisodeOfCare/1bf3f0a6-d8ed-4a88-b034-5071168cb652"
+		}
+	}
+}
