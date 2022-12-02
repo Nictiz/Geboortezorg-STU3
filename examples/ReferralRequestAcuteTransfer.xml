@@ -30,6 +30,23 @@
         <reference value="EpisodeOfCare/example"/> 
     </context> 
     <authoredOn value="2018-05-01"/> 
+    <!-- verwijzing van (peri23-dataelement-82550) -->
+    <requester> 
+        <agent> 
+            <reference value="Practitioner/requestingagentexample"/> 
+            <display value="Aanvragende zorgverlener"/> 
+        </agent> 
+        <!-- specialisme (peri23-dataelement-82554) -->
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requesterSpecialty">
+            <valueCodeableConcept>
+                <coding> 
+                    <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
+                    <code value="01"/> 
+                    <display value="Verloskundige"/> 
+                </coding> 
+            </valueCodeableConcept>
+        </extension>
+    </requester> 
     <!-- categorie reden overdracht (peri23-dataelement-20372) -->
     <reasonCode> 
         <coding>

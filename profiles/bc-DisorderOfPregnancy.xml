@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Condition profile describing disorders related to a pregnancy as defined by BabyConnect. For example, Conditions such as cholestasis and hypertension do not (only) pertain to the Patient but to a particular pregnancy.&#xD;&#xA;- Pregnancy-related Observations use partOf extension to point to Condition they're about.&#xD;&#xA;- In some cases the partOf Condition may not be available. The BGZ for instance does not relate Conditions to particular pregnancies.&#xD;&#xA;- Pregnancy-related Conditions refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DisorderOfPregnancy]]" />
+  <description value="A Condition profile describing disorders related to a pregnancy as defined by BabyConnect. For example, Conditions such as cholestasis and hypertension do not (only) pertain to the Patient but to a particular pregnancy.&#xD;&#xA;* Pregnancy-related Observations use partOf extension to point to Condition they're about.&#xD;&#xA;* In some cases the partOf Condition may not be available. The BGZ for instance does not relate Conditions to particular pregnancies.&#xD;&#xA;* Pregnancy-related Conditions refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DisorderOfPregnancy]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -64,12 +64,22 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-771" />
-        <comment value="Probleem_Zwangerschap" />
+        <map value="peri32-dataelement-3830" />
+        <comment value="Probleem (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9140" />
+        <comment value="Probleem (Zwangerschap)" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2731" />
+        <comment value="Probleem (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4384" />
         <comment value="Probleem (Zwangerschap)" />
       </mapping>
       <mapping>
@@ -80,7 +90,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2458" />
-        <comment value="Afwijking placenta/vliezen/navelstreng" />
+        <comment value="Afwijking placenta" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -126,6 +136,32 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1187" />
+        <comment value="ProbleemStatus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2467" />
+        <comment value="ProbleemStatus" />
+      </mapping>
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1188" />
+        <comment value="VerificatieStatus" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2468" />
+        <comment value="VerificatieStatus" />
+      </mapping>
+    </element>
     <element id="Condition.category">
       <path value="Condition.category" />
       <slicing>
@@ -144,11 +180,6 @@
       </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1963" />
-        <comment value="ProbleemType" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1183" />
         <comment value="ProbleemType" />
       </mapping>
@@ -162,21 +193,6 @@
       <path value="Condition.category" />
       <sliceName value="disorderOfPregnancy" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1963" />
-        <comment value="ProbleemType" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1183" />
-        <comment value="ProbleemType" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2463" />
-        <comment value="ProbleemType" />
-      </mapping>
     </element>
     <element id="Condition.category:disorderOfPregnancy.coding">
       <path value="Condition.category.coding" />
@@ -237,11 +253,6 @@
       </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1964" />
-        <comment value="ProbleemNaam" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1184" />
         <comment value="ProbleemNaam" />
       </mapping>
@@ -250,6 +261,70 @@
         <map value="peri32-dataelement-2464" />
         <comment value="ProbleemNaam" />
       </mapping>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1181" />
+        <comment value="ProbleemAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2461" />
+        <comment value="ProbleemAnatomischeLocatie" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.extension">
+      <path value="Condition.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Condition.bodySite.extension:Laterality">
+      <path value="Condition.bodySite.extension" />
+      <sliceName value="Laterality" />
+      <min value="0" />
+    </element>
+    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
+      <path value="Condition.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1182" />
+        <comment value="ProbleemLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2462" />
+        <comment value="ProbleemLateraliteit" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.extension:bodySiteReference">
+      <path value="Condition.bodySite.extension" />
+      <sliceName value="bodySiteReference" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
+      </type>
+    </element>
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
+      <path value="Condition.bodySite.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+      </type>
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
@@ -261,11 +336,6 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-2" />
         <comment value="Vrouw" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1960" />
-        <comment value="Probleem (Zwangerschap)" />
       </mapping>
     </element>
     <element id="Condition.context">
@@ -284,6 +354,34 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
+    <element id="Condition.onsetDateTime:onsetDateTime">
+      <path value="Condition.onsetDateTime" />
+      <sliceName value="onsetDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1185" />
+        <comment value="ProbleemBeginDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2465" />
+        <comment value="ProbleemBeginDatum" />
+      </mapping>
+    </element>
+    <element id="Condition.abatementDateTime:abatementDateTime">
+      <path value="Condition.abatementDateTime" />
+      <sliceName value="abatementDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1186" />
+        <comment value="ProbleemEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2466" />
+        <comment value="ProbleemEindDatum" />
+      </mapping>
+    </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code" />
       <slicing>
@@ -293,6 +391,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7894" />
+        <comment value="Vermoeden iuvd op basis van" />
+      </mapping>
     </element>
     <element id="Condition.evidence.code:evidenceIUVD">
       <path value="Condition.evidence.code" />
@@ -304,6 +407,19 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.223--20161202162349" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1189" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2469" />
+        <comment value="Toelichting" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

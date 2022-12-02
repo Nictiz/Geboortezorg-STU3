@@ -24,12 +24,12 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="xxx"/>
-                <display value="Code still missing from AD"/>
+                <display value="Code is still missing from AD"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelDarm"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.1"/>
                 <code value="FECAL2"/>
                 <display value="Continent"/>
             </coding>      
@@ -40,12 +40,12 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="xxx"/>
-                <display value="Code still missing from AD"/>
+                <display value="Code is still missing from AD"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelBlaas"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.2"/>
                 <code value="URIN1"/>
                 <display value="Ongelukje"/>
             </coding>      
@@ -61,7 +61,7 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelUiterlijkeVerzorging"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.3"/>
                 <code value="GROOM1"/>
                 <display value="Onafhankelijk"/>
             </coding>      
@@ -77,7 +77,7 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelToiletgebruik"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.4"/>
                 <code value="TOIL2"/>
                 <display value="Onafhankelijk"/>
             </coding>      
@@ -86,14 +86,14 @@
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.4"/>
                 <code value="288883002"/>
                 <display value="vermogen om te eten (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelEten"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.5"/>
                 <code value="FEED2"/>
                 <display value="Onafhankelijk"/>
             </coding>      
@@ -102,14 +102,14 @@
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.6"/>
                 <code value="364666007"/>
                 <display value="vermogen tot transfer (waarneembare entiteit)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelTransfer"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.6"/>
                 <code value="TRANS2"/>
                 <display value="Weinig hulp"/>
             </coding>      
@@ -125,7 +125,7 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelMobiliteit"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.7"/>
                 <code value="MOBIL2"/>
                 <display value="Loopt met hulp"/>
             </coding>      
@@ -141,7 +141,7 @@
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelAanUitkleden"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.8"/>
                 <code value="DRESS2"/>
                 <display value="Onafhankelijk"/>
             </coding>      
@@ -150,14 +150,14 @@
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.8"/>
                 <code value="365115005"/>
                 <display value="bevinding betreffende vermogen om trap te nemen (bevinding)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelTrappenLopen"/>
+                <system value="http://snomed.info/sct"/>
                 <code value="CLIMB0"/>
                 <display value="Afhankelijk"/>
             </coding>      
@@ -166,14 +166,14 @@
     <component>
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.1.10"/>
                 <code value="365182004"/>
                 <display value="bevinding betreffende vermogen om te douchen (bevinding)"/>
             </coding>
         </code>
         <valueCodeableConcept>
             <coding>
-                <system value="BarthelBadenDouchen"/>
+                <system value="http://snomed.info/sct"/>
                 <code value="BATH1"/>
                 <display value="Onafhankelijk"/>
             </coding>      
@@ -182,15 +182,18 @@
     <component>
         <code>
             <coding>
-                <system value="xxx"/>
+                <system value="http://snomed.info/sct"/>
                 <code value="xxx"/>
-                <display value="Code still missing from AD"/>
+                <display value="Code is still missing from AD"/>
             </coding>
         </code>
         <valueQuantity>
-            <value value="15" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="1" /> 
+            <coding>
+                <value value="15" />
+                <unit value="1" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="1" />
+            </coding>      
         </valueQuantity>
     </component>
 </Observation>

@@ -55,8 +55,9 @@
       <path value="Observation.code.coding.display" />
       <defaultValueString value="meting aan vruchtwater (verrichting)" />
     </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2411" />
@@ -201,10 +202,6 @@
         <description value="BeoordelingBevindingen" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
       </binding>
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:amnioticFluidSDP">
       <path value="Observation.component" />

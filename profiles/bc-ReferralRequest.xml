@@ -104,6 +104,11 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10487" />
+        <comment value="ContactSoort" />
+      </mapping>
     </element>
     <element id="ReferralRequest.extension:contactType.valueCodeableConcept:valueCodeableConcept">
       <path value="ReferralRequest.extension.valueCodeableConcept" />
@@ -115,11 +120,6 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.284--20200610131200" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10487" />
-        <comment value="ContactSoort" />
-      </mapping>
     </element>
     <element id="ReferralRequest.intent">
       <path value="ReferralRequest.intent" />
@@ -153,6 +153,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9683" />
+        <comment value="Type verwijzing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10297" />
         <comment value="Type verwijzing" />
       </mapping>
     </element>
@@ -447,7 +452,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PostPartumDisorder" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderPostPartum" />
       </type>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -484,46 +489,6 @@
         <map value="peri32-dataelement-8884" />
         <comment value="Reden van verwijzing" />
       </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9140" />
-        <comment value="Probleem (Zwangerschap)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9141" />
-        <comment value="Probleem (Psychiatrie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9142" />
-        <comment value="Probleem (Maternaal)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9144" />
-        <comment value="Conditie perineum en sfincter postpartum" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9661" />
-        <comment value="Probleem (Postpartum complicatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9882" />
-        <comment value="Probleem (Kindspecifieke maternale problemen)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9139" />
-        <comment value="Probleem (Algemene anamnese)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8885" />
-        <comment value="Probleem acute overdracht" />
-      </mapping>
     </element>
     <element id="ReferralRequest.reasonReference.extension">
       <path value="ReferralRequest.reasonReference.extension" />
@@ -552,26 +517,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-procedure" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9883" />
-        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9881" />
-        <comment value="Verrichting (Maternaal)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9880" />
-        <comment value="Verrichting (Zwangerschap)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9143" />
-        <comment value="Verrichting (Algemene anamnese)" />
-      </mapping>
     </element>
     <element id="ReferralRequest.supportingInfo">
       <path value="ReferralRequest.supportingInfo" />

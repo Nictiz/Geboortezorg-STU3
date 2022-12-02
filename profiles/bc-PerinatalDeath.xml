@@ -57,11 +57,16 @@
       <defaultValueString value="foetale sterfte (gebeurtenis)" />
     </element>
     <element id="Observation.value[x]:valueBoolean">
-      <path value="Observation.valueBoolean" />
+      <path value="Observation.value[x]" />
       <sliceName value="valueBoolean" />
       <type>
         <code value="boolean" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10551" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -85,11 +90,6 @@
       <path value="Observation.component" />
       <sliceName value="deceasedDateTime" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10552" />
-        <comment value="DatumOverlijden" />
-      </mapping>
     </element>
     <element id="Observation.component:deceasedDateTime.code.coding">
       <path value="Observation.component.code.coding" />
@@ -116,20 +116,16 @@
       <type>
         <code value="dateTime" />
       </type>
-    </element>
-    <element id="Observation.component:deceasedDateTime.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10552" />
+        <comment value="DatumOverlijden" />
+      </mapping>
     </element>
     <element id="Observation.component:perinatalPhase">
       <path value="Observation.component" />
       <sliceName value="perinatalPhase" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1762" />
-        <comment value="FasePerinataleSterfteWaarde" />
-      </mapping>
     </element>
     <element id="Observation.component:perinatalPhase.code.coding">
       <path value="Observation.component.code.coding" />
@@ -147,6 +143,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1762" />
+        <comment value="FasePerinataleSterfteWaarde" />
+      </mapping>
     </element>
     <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -155,10 +156,6 @@
         <description value="FasePerinataleSterfte22" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20201117115600" />
       </binding>
-    </element>
-    <element id="Observation.component:perinatalPhase.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

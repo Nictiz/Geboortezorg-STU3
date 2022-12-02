@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BarthelIndex" />
   <version value="1.0.0" />
   <name value="bc-BarthelIndex" />
-  <title value="bc-SelfReliance" />
+  <title value="bc-BarthelIndex" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -33,8 +33,8 @@
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10533" />
-        <comment value="ZelfredzaamheidKraamvrouw (Observatie)" />
+        <map value="peri32-dataelement-2812" />
+        <comment value="BarthelIndex" />
       </mapping>
     </element>
     <element id="Observation.code.coding">
@@ -56,30 +56,6 @@
       <path value="Observation.code.coding.display" />
       <defaultValueString value="Barthel-index (beoordelingsschaal)" />
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10534" />
-        <comment value="ObservatieDatumTijd" />
-      </mapping>
-    </element>
-    <element id="Observation.comment">
-      <path value="Observation.comment" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10542" />
-        <comment value="Toelichting" />
-      </mapping>
-    </element>
-    <element id="Observation.method">
-      <path value="Observation.method" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10537" />
-        <comment value="ObservatieMethode" />
-      </mapping>
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
@@ -94,11 +70,6 @@
       <path value="Observation.component" />
       <sliceName value="bowel" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2813" />
-        <comment value="Darm" />
-      </mapping>
     </element>
     <element id="Observation.component:bowel.code.coding">
       <path value="Observation.component.code.coding" />
@@ -116,6 +87,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2813" />
+        <comment value="Darm" />
+      </mapping>
     </element>
     <element id="Observation.component:bowel.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -127,19 +103,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:bowel.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:bladder">
       <path value="Observation.component" />
       <sliceName value="bladder" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2814" />
-        <comment value="Blaas" />
-      </mapping>
     </element>
     <element id="Observation.component:bladder.code.coding">
       <path value="Observation.component.code.coding" />
@@ -157,6 +124,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2814" />
+        <comment value="Blaas" />
+      </mapping>
     </element>
     <element id="Observation.component:bladder.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -168,19 +140,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:bladder.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:personalGrooming">
       <path value="Observation.component" />
       <sliceName value="personalGrooming" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2815" />
-        <comment value="UiterlijkeVerzorging" />
-      </mapping>
     </element>
     <element id="Observation.component:personalGrooming.code.coding">
       <path value="Observation.component.code.coding" />
@@ -207,6 +170,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2815" />
+        <comment value="UiterlijkeVerzorging" />
+      </mapping>
     </element>
     <element id="Observation.component:personalGrooming.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -218,19 +186,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:personalGrooming.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:toiletUse">
       <path value="Observation.component" />
       <sliceName value="toiletUse" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2816" />
-        <comment value="Toiletgebruik" />
-      </mapping>
     </element>
     <element id="Observation.component:toiletUse.code.coding">
       <path value="Observation.component.code.coding" />
@@ -257,6 +216,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2816" />
+        <comment value="Toiletgebruik" />
+      </mapping>
     </element>
     <element id="Observation.component:toiletUse.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -268,19 +232,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:toiletUse.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:eating">
       <path value="Observation.component" />
       <sliceName value="eating" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2817" />
-        <comment value="Eten" />
-      </mapping>
     </element>
     <element id="Observation.component:eating.code.coding">
       <path value="Observation.component.code.coding" />
@@ -303,6 +258,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2817" />
+        <comment value="Eten" />
+      </mapping>
     </element>
     <element id="Observation.component:eating.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -314,19 +274,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:eating.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:transfers">
       <path value="Observation.component" />
       <sliceName value="transfers" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2818" />
-        <comment value="Transfers" />
-      </mapping>
     </element>
     <element id="Observation.component:transfers.code.coding">
       <path value="Observation.component.code.coding" />
@@ -353,6 +304,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2818" />
+        <comment value="Transfers" />
+      </mapping>
     </element>
     <element id="Observation.component:transfers.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -364,19 +320,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:transfers.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:mobility">
       <path value="Observation.component" />
       <sliceName value="mobility" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2819" />
-        <comment value="Mobiliteit" />
-      </mapping>
     </element>
     <element id="Observation.component:mobility.code.coding">
       <path value="Observation.component.code.coding" />
@@ -403,6 +350,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2819" />
+        <comment value="Mobiliteit" />
+      </mapping>
     </element>
     <element id="Observation.component:mobility.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -414,19 +366,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:mobility.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:dressingAndUndressing">
       <path value="Observation.component" />
       <sliceName value="dressingAndUndressing" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2820" />
-        <comment value="AanUitkleden" />
-      </mapping>
     </element>
     <element id="Observation.component:dressingAndUndressing.code.coding">
       <path value="Observation.component.code.coding" />
@@ -453,6 +396,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2820" />
+        <comment value="AanUitkleden" />
+      </mapping>
     </element>
     <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -464,19 +412,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:dressingAndUndressing.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:walkingStairs">
       <path value="Observation.component" />
       <sliceName value="walkingStairs" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2821" />
-        <comment value="TrappenLopen" />
-      </mapping>
     </element>
     <element id="Observation.component:walkingStairs.code.coding">
       <path value="Observation.component.code.coding" />
@@ -503,6 +442,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2821" />
+        <comment value="TrappenLopen" />
+      </mapping>
     </element>
     <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -514,19 +458,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:walkingStairs.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:bathingAndShowering">
       <path value="Observation.component" />
       <sliceName value="bathingAndShowering" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2822" />
-        <comment value="BadenDouchen" />
-      </mapping>
     </element>
     <element id="Observation.component:bathingAndShowering.code.coding">
       <path value="Observation.component.code.coding" />
@@ -553,6 +488,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2822" />
+        <comment value="BadenDouchen" />
+      </mapping>
     </element>
     <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.valueCodeableConcept.coding" />
@@ -564,19 +504,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:bathingAndShowering.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:totalScore">
       <path value="Observation.component" />
       <sliceName value="totalScore" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2823" />
-        <comment value="TotaalScore" />
-      </mapping>
     </element>
     <element id="Observation.component:totalScore.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -588,10 +519,11 @@
       <type>
         <code value="Quantity" />
       </type>
-    </element>
-    <element id="Observation.component:totalScore.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2823" />
+        <comment value="TotaalScore" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

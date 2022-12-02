@@ -36,11 +36,6 @@
         <map value="peri32-dataelement-1766" />
         <comment value="Uterusactiviteit" />
       </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3894" />
-        <comment value="Tijdsinterval" />
-      </mapping>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -62,7 +57,7 @@
       <defaultValueString value="contractietoestand van uterus (waarneembare entiteit)" />
     </element>
     <element id="Observation.effective[x]:effectivePeriod">
-      <path value="Observation.effectivePeriod" />
+      <path value="Observation.effective[x]" />
       <sliceName value="effectivePeriod" />
       <type>
         <code value="Period" />
@@ -72,6 +67,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3897" />
         <comment value="Periode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3894" />
+        <comment value="TijdsInterval" />
       </mapping>
     </element>
     <element id="Observation.performer">
@@ -105,28 +105,6 @@
         <comment value="UterusActiviteitMethode" />
       </mapping>
     </element>
-    <element id="Observation.related">
-      <path value="Observation.related" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="target" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.related:fetalMonitoring">
-      <path value="Observation.related" />
-      <sliceName value="fetalMonitoring" />
-      <max value="1" />
-    </element>
-    <element id="Observation.related:fetalMonitoring.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
-      </type>
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
@@ -141,11 +119,6 @@
       <path value="Observation.component" />
       <sliceName value="uterusActivityFrequency" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3900" />
-        <comment value="UterusActiviteitFrequentie" />
-      </mapping>
     </element>
     <element id="Observation.component:uterusActivityFrequency.code.coding">
       <path value="Observation.component.code.coding" />
@@ -172,16 +145,16 @@
       <type>
         <code value="Quantity" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3900" />
+        <comment value="UterusActiviteitFrequentie" />
+      </mapping>
     </element>
     <element id="Observation.component:uterusActivityDuration">
       <path value="Observation.component" />
       <sliceName value="uterusActivityDuration" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3901" />
-        <comment value="UterusActiviteitDuur" />
-      </mapping>
     </element>
     <element id="Observation.component:uterusActivityDuration.code.coding">
       <path value="Observation.component.code.coding" />
@@ -208,6 +181,11 @@
       <type>
         <code value="Quantity" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3901" />
+        <comment value="UterusActiviteitDuur" />
+      </mapping>
     </element>
     <element id="Observation.component:uterusActivityDuration.value[x]:valueQuantity.unit">
       <path value="Observation.component.valueQuantity.unit" />
@@ -221,11 +199,6 @@
       <path value="Observation.component" />
       <sliceName value="uterusActivityIntensity" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3902" />
-        <comment value="UterusActiviteitIntensiteit" />
-      </mapping>
     </element>
     <element id="Observation.component:uterusActivityIntensity.code.coding">
       <path value="Observation.component.code.coding" />
@@ -259,16 +232,16 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.291--20200129144103" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3902" />
+        <comment value="UterusActiviteitIntensiteit" />
+      </mapping>
     </element>
     <element id="Observation.component:monteVideoUnits">
       <path value="Observation.component" />
       <sliceName value="monteVideoUnits" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3903" />
-        <comment value="MonteVideoUnits" />
-      </mapping>
     </element>
     <element id="Observation.component:monteVideoUnits.code.coding">
       <path value="Observation.component.code.coding" />
@@ -295,6 +268,11 @@
       <type>
         <code value="Quantity" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3903" />
+        <comment value="MonteVideoUnits" />
+      </mapping>
     </element>
     <element id="Observation.component:monteVideoUnits.value[x]:valueQuantity.unit">
       <path value="Observation.component.valueQuantity.unit" />
@@ -307,11 +285,6 @@
     <element id="Observation.component:uterusActivityRegularity">
       <path value="Observation.component" />
       <sliceName value="uterusActivityRegularity" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3904" />
-        <comment value="UterusActiviteitRegelmatigheid" />
-      </mapping>
     </element>
     <element id="Observation.component:uterusActivityRegularity.code.coding">
       <path value="Observation.component.code.coding" />
@@ -345,16 +318,16 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.292--20200129145703" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3904" />
+        <comment value="UterusActiviteitRegelmatigheid" />
+      </mapping>
     </element>
     <element id="Observation.component:conclusionUterusActivity">
       <path value="Observation.component" />
       <sliceName value="conclusionUterusActivity" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3906" />
-        <comment value="ConclusieUterusActiviteit" />
-      </mapping>
     </element>
     <element id="Observation.component:conclusionUterusActivity.code.coding">
       <path value="Observation.component.code.coding" />
@@ -388,6 +361,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.294--20200129150958" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3906" />
+        <comment value="ConclusieUterusActiviteit" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
