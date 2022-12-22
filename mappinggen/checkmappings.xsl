@@ -26,7 +26,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     
     <xsl:output method="xml" indent="yes"/>
-    <xsl:variable name="inputDir" select="'../profiles/generatedProfiles'"/>
+    <xsl:variable name="inputDir" select="'../profiles'"/>
     <xsl:variable name="mappingFile" select="document('../fhirmapping-3-2.xml')"/>
     
     <xd:doc>

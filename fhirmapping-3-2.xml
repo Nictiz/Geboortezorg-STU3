@@ -2055,7 +2055,7 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-3845</ID>
-		<naam>Patiënt</naam>
+		<naam>Patient</naam>
 		<mapping>CarePlan.author</mapping>
 		<profile>bc-CareAgreement</profile>
 	</record>
@@ -3370,7 +3370,7 @@
 	<record>
 		<ID>peri32-dataelement-914</ID>
 		<naam>Toelichting</naam>
-		<mapping>Patient.extension:ethnicity.value[x]:valueCodeableConcept.text</mapping>
+		<mapping>Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text</mapping>
 		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
@@ -3511,7 +3511,7 @@
 	<record>
 		<ID>peri32-dataelement-10411</ID>
 		<naam>Patient</naam>
-		<mapping>Consent.except.actor:agreementParty.reference"</mapping>
+		<mapping>Consent.except.actor:agreementParty.reference</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3575,7 +3575,7 @@
 	<record>
 		<ID>peri32-dataelement-1676</ID>
 		<naam>Apotheek</naam>
-		<mapping>Patient.extension:prefferedPharmacy</mapping>
+		<mapping>Patient.extension:preferredPharmacy</mapping>
 		<profile>bc-Woman</profile>
 		<in>true</in>
 	</record>
@@ -5068,7 +5068,7 @@
 	<record>
 		<ID>peri32-dataelement-2224</ID>
 		<naam>Definitieve à terme Methode</naam>
-		<mapping>Observation.method</mapping>
+		<mapping>Observation.method.coding:aTermMethod</mapping>
 		<profile>bc-PregnancyObservation</profile>
 		<in>false</in>
 		<example>https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11</example>
@@ -11883,7 +11883,7 @@
 	<record>
 		<ID>peri32-dataelement-7846</ID>
 		<naam>NavelstrengWaarde</naam>
-		<mapping>Observation.component:umbilicalCord.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-UmbilicalCord</profile>
 	</record>
 	<record>
@@ -13101,8 +13101,8 @@
 	<record>
 		<ID>peri32-dataelement-3899</ID>
 		<naam>EffectOpFoetaleHartslag</naam>
-		<mapping>Observation.related:fetalMonitoring.target</mapping>
-		<profile>bc-UterusActivity</profile>
+		<mapping>Observation</mapping>
+		<profile>bc-FetalMonitoring</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3896</ID>
@@ -16217,14 +16217,14 @@
 	<record>
 		<ID>peri32-dataelement-7942</ID>
 		<naam>Voedingsadvies</naam>
-		<mapping>Observation.component:FeedingAdvice.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.basedOn</mapping>
 		<profile>bc-FeedingPatternInfant</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7943</ID>
 		<naam>Voedingsadvies</naam>
-		<mapping>Observation.component:FeedingAdvice.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-FeedingPatternInfant</profile>
+		<mapping>NutritionOrder</mapping>
+		<profile>zib-NutritionAdvice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7944</ID>
