@@ -61,7 +61,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-casemanager" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
       </type>
       <isModifier value="false" />
     </element>
@@ -100,6 +100,22 @@
       <path value="CarePlan.category.coding.display" />
       <defaultValueString value="instemmen met zorgplan (verrichting)" />
     </element>
+    <element id="CarePlan.period.start">
+      <path value="CarePlan.period.start" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3842" />
+        <comment value="BeginDatum" />
+      </mapping>
+    </element>
+    <element id="CarePlan.period.end">
+      <path value="CarePlan.period.end" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3843" />
+        <comment value="EindDatum" />
+      </mapping>
+    </element>
     <element id="CarePlan.author">
       <path value="CarePlan.author" />
       <type>
@@ -130,7 +146,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3845" />
-        <comment value="PatiÃ«nt" />
+        <comment value="Patient" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -230,6 +246,14 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3862" />
         <comment value="Probleem zorgafspraak" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.code.text">
+      <path value="CarePlan.activity.detail.code.text" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3860" />
+        <comment value="Activiteit" />
       </mapping>
     </element>
     <element id="CarePlan.activity.detail.performer">

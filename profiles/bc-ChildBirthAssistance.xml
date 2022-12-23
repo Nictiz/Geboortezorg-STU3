@@ -82,8 +82,21 @@
         <comment value="Partusassistentie (Contact)" />
       </mapping>
     </element>
-    <element id="Encounter.class">
-      <path value="Encounter.class" />
+    <element id="Encounter.class.extension">
+      <path value="Encounter.class.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Encounter.class.extension:ContactTypeCodelist">
+      <path value="Encounter.class.extension" />
+      <sliceName value="ContactTypeCodelist" />
+      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10711" />
