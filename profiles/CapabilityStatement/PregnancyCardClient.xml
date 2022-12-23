@@ -164,10 +164,6 @@
         </resource>
         <resource>
             <type value="Encounter" />
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
-                <display value="bc-Encounter" />
-            </profile>
             <interaction>
                 <code value="search-type" />
             </interaction>
@@ -181,11 +177,9 @@
             <type value="EpisodeOfCare" />
             <interaction>
                 <code value="search-type" />
-                <documentation value="The :iterate modifier SHALL BE supported in the include and revinclude parameters" />
             </interaction>
             <searchInclude value="EpisodeOfCare:organization" />
             <searchInclude value="EpisodeOfCare:care-manager" />
-            <searchInclude value="PractitionerRole:practitioner" />
             <searchParam>
                 <name value="status" />
                 <type value="token" />
@@ -208,13 +202,19 @@
         </resource>
         <resource>
             <type value="Patient" />
-            <profile>
-                <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-                <display value="nl-core-patient" />
-            </profile>
             <interaction>
                 <code value="search-type" />
             </interaction>
+        </resource>
+        <resource>
+            <type value="PractitionerRole" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="practitioner" />
+                <type value="reference" />
+            </searchParam>
         </resource>
         <resource>
             <type value="Procedure" />
