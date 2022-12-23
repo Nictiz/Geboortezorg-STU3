@@ -100,8 +100,8 @@
       <path value="Observation.related" />
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="target" />
+          <type value="profile" />
+          <path value="target.reference.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>

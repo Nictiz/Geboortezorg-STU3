@@ -59,17 +59,15 @@
     </addresses>
     <activity>
         <detail>
-            <performer>
-                <reference value="Patient/example" />
-                <display value="Example" />
-            <reference value="Practitioner/ZorgverlenerA" />
-            <display value="Zorgverlener A" />
-            </performer>
             <code>
                 <text value="elke week zelf bloeddruk thuis meten"/>                
             </code>
             <status value="in-progress"/>
-            <description value="Elke week op dezelfde tijd na 5 minuten rust de bloeddruk meten en noteren."/>
+            <performer>
+                <reference value="Patient/example" />
+                <display value="Example" />
+            </performer>
+            <description value="Elke week op dezelfde tijd na 5 minuten rust de bloeddruk meten en noteren"/>
         </detail>
     </activity>
 </CarePlan>

@@ -24,35 +24,6 @@
         <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/> 
         <display value="zwangerschap Wouden 3"/>
     </episodeOfCare> 
-    <!-- oude 2.3 modellering -->
-<!--    <participant>
-        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="aanpakker"/> 
-            </coding>         
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeA"/>
-                <display value="Verloskundige A"/>
-            </extension>
-        </individual>
-    </participant>
-    <participant>
-        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="supervisor"/>
-            </coding>         
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeB"/>
-                <display value="Verloskundige B"/>
-            </extension>
-        </individual>
-    </participant>-->
     <participant>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival">
             <valueCodeableConcept>
@@ -63,21 +34,16 @@
                 </coding>    
             </valueCodeableConcept>
         </extension>
-        <!-- oude 2.3 modellering -->
-<!--        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="assistent"/>
-            </coding>         
-        </type>-->
         <period>
             <start value="2017-06-22T15:15:00+01:00"/>
             <end value="2017-06-22T18:34:00+01:00"/>
         </period>
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
-                <display value="Kraamverzorgster X"/>
+                <valueReference>
+                    <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
+                    <display value="Kraamverzorgster X"/>
+                </valueReference>
             </extension>
         </individual>
     </participant>
