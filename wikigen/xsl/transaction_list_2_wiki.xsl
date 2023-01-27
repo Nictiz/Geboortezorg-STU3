@@ -47,8 +47,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||Concept
 |style="width:40px;"| Card 
 || Profile
-|| Mapping
-|| Search URL</xsl:text>
+|| Mapping </xsl:text>
             <!-- De rest van de rijen -->
             <xsl:apply-templates select="mapping" mode="wiki"/>
             
@@ -132,11 +131,5 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:text>
 ||</xsl:text>
             <xsl:value-of select="@mapping"/>
-        <xsl:text>
-||</xsl:text>
-        <xsl:if test="search">
-            <xsl:for-each select="search"><xsl:text>
-* </xsl:text><xsl:value-of select="."/></xsl:for-each>
-        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

@@ -5699,7 +5699,7 @@
 		<ID>peri32-dataelement-1078</ID>
 		<naam>Lichaamsgewicht</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-1073</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187</example>
@@ -5709,7 +5709,7 @@
 		<ID>peri32-dataelement-1072</ID>
 		<naam>Bloeddruk</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<profile>zib-BloodPressure</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-1060</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-184</example>
@@ -10369,19 +10369,19 @@
 		<ID>peri32-dataelement-8758</ID>
 		<naam>Lichaamsgewicht</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8759</ID>
 		<naam>Schedelomvang</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-HeadCircumference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10660</ID>
 		<naam>Lichaamstemperatuur</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyTemperature</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8757</ID>
@@ -10861,7 +10861,7 @@
 		<ID>peri32-dataelement-9812</ID>
 		<naam>Schedelomvang</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-HeadCircumference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1123</ID>
@@ -13101,7 +13101,7 @@
 	<record>
 		<ID>peri32-dataelement-3899</ID>
 		<naam>EffectOpFoetaleHartslag</naam>
-		<mapping>Observation</mapping>
+		<mapping>Observation.related:uterusActivity.target</mapping>
 		<profile>bc-FetalMonitoring</profile>
 	</record>
 	<record>
@@ -15268,7 +15268,7 @@
 	<record>
 		<ID>peri32-dataelement-9940</ID>
 		<naam>FecesWaarde</naam>
-		<mapping>Observation.component:feces.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-ExcretionFeces</profile>
 	</record>
 	<record>

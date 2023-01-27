@@ -178,7 +178,7 @@
       <path value="Condition.category.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -191,8 +191,19 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="362972006" />
-        <display value="Disorder of labor / delivery (disorder)" />
       </patternCoding>
+    </element>
+    <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery.system">
+      <path value="Condition.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery.code">
+      <path value="Condition.category.coding.code" />
+      <fixedCode value="362972006" />
+    </element>
+    <element id="Condition.category:disorderOfLaborAndDelivery.coding:disorderOfLaborAndDelivery.display">
+      <path value="Condition.category.coding.display" />
+      <defaultValueString value="Disorder of labor / delivery (disorder)" />
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
@@ -212,7 +223,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -357,7 +368,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.code" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
