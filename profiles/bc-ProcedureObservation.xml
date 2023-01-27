@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing procedure-related Observations as defined by BabyConnect. Procedure-related Observations are Observations about a procedure, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation. For example, embryo transfer date and oocyte retrieval date are observations related to an IVF/ICSI procedure.&#xD;&#xA;- Procedure-related Observations use focus extension to point to a birth&#xD;&#xA;- Procedure-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Procedure-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ProcedureObservation]]" />
+  <description value="An Observation profile describing procedure-related Observations as defined by BabyConnect. Procedure-related Observations are Observations about a procedure, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation. For example, embryo transfer date and oocyte retrieval date are observations related to an IVF/ICSI procedure.&#xD;&#xA;* Procedure-related Observations use focus extension to point to a birth&#xD;&#xA;* Procedure-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Procedure-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ProcedureObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -58,11 +58,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1080" />
-        <comment value="Verrichting (Algemene anamnese)" />
-      </mapping>
     </element>
     <element id="Observation.extension:procedure.valueReference:valueReference">
       <path value="Observation.extension.valueReference" />
@@ -81,11 +76,6 @@
           <reference value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-code" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4144" />
-        <comment value="Type partus (Observatie)" />
-      </mapping>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -121,26 +111,40 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <binding>
-        <strength value="extensible" />
-        <description value="bc-BirthObservation-value" />
-        <valueSetReference>
-          <reference value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-value" />
-        </valueSetReference>
-      </binding>
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:valueBoolean">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri23-dataelement-7891" />
+        <map value="peri32-dataelement-7892" />
+        <comment value="Cryo embryo" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7891" />
         <comment value="Eicelextractiedatum" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri23-dataelement-7892" />
-        <comment value="Cryo embryo" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri23-dataelement-7893" />
+        <map value="peri32-dataelement-7893" />
         <comment value="Embryotransferdatum" />
       </mapping>
     </element>
@@ -148,7 +152,7 @@
       <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -162,6 +166,10 @@
         <description value="MeetMethode_GZ" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
       </binding>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

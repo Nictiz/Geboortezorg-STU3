@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Procedure profile describing the delivery (including uncomplicated natural births for consistency), as defined by BabyConnect. A pregnancy can lead to one delivery Procedure, even in multiple birth. The mother Patient is the subject of the delivery Procedure.&#xD;&#xA;- Delivery refers to the EpisodeOfCare with Procedure.context.reference&#xD;&#xA;- Delivery refers to the Pregnancy with Procedure.reasonReference.reference&#xD;&#xA;&#xD;&#xA;A delivery Procedure is related to one or more birth Procedures. The child Patient is the subject of the birth Procedure. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure." />
+  <description value="A Procedure profile describing the delivery (including uncomplicated natural births for consistency), as defined by BabyConnect. A pregnancy can lead to one delivery Procedure, even in multiple birth. The mother Patient is the subject of the delivery Procedure.&#xD;&#xA;* Delivery refers to the EpisodeOfCare with Procedure.context.reference&#xD;&#xA;* Delivery refers to the Pregnancy with Procedure.reasonReference.reference&#xD;&#xA;&#xD;&#xA;A delivery Procedure is related to one or more birth Procedures. The child Patient is the subject of the birth Procedure. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -98,6 +98,11 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4385" />
+        <comment value="Eerdere bevalling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-37" />
         <comment value="Bevalling" />
       </mapping>
@@ -120,7 +125,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -151,7 +156,7 @@
       <path value="Procedure.code.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -200,6 +205,14 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
       </type>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1587" />
+        <comment value="Ziekenhuis baring" />
+      </mapping>
     </element>
     <element id="Procedure.reasonReference">
       <path value="Procedure.reasonReference" />

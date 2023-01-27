@@ -36,6 +36,34 @@
         <map value="peri32-dataelement-3841" />
         <comment value="ZorgAfspraak" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3871" />
+        <comment value="ZorgAfspraak" />
+      </mapping>
+    </element>
+    <element id="CarePlan.extension">
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CarePlan.extension:careManager">
+      <path value="CarePlan.extension" />
+      <sliceName value="careManager" />
+      <definition value="The practitioner responsible for coordinating the agreed action(s) in this care agreement." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
@@ -135,6 +163,16 @@
         <map value="peri32-dataelement-3866" />
         <comment value="Contactpersoon" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3849" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3867" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
     <element id="CarePlan.author.extension">
       <path value="CarePlan.author.extension" />
@@ -147,6 +185,22 @@
       </slicing>
       <min value="0" />
     </element>
+    <element id="CarePlan.author.extension:coordinator">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="coordinator" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3858" />
+        <comment value="Coordinator" />
+      </mapping>
+    </element>
     <element id="CarePlan.author.extension:practitionerRole">
       <path value="CarePlan.author.extension" />
       <sliceName value="practitionerRole" />
@@ -157,17 +211,29 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
       <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3849" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3867" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
-    <element id="CarePlan.careTeam">
-      <path value="CarePlan.careTeam" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-CarePlan-InvolvedParties" />
-      </type>
+    <element id="CarePlan.author.extension:practitionerRole.valueReference:valueReference">
+      <path value="CarePlan.author.extension.valueReference" />
+      <sliceName value="valueReference" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3858" />
         <comment value="Coordinator" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3864" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="CarePlan.addresses">
@@ -195,7 +261,7 @@
       <slicing>
         <discriminator>
           <type value="profile" />
-          <path value="resolve()" />
+          <path value="reference.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -226,18 +292,9 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
       <isModifier value="false" />
-    </element>
-    <element id="CarePlan.activity.detail.performer.extension:practitionerRole.valueReference:valueReference">
-      <path value="CarePlan.activity.detail.performer.extension.valueReference" />
-      <sliceName value="valueReference" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3856" />
-        <comment value="Zorgverlener" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3870" />
         <comment value="Zorgverlener" />
       </mapping>
     </element>
@@ -254,16 +311,10 @@
         <map value="peri32-dataelement-3852" />
         <comment value="Patient" />
       </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3868" />
-        <comment value="Patient" />
-      </mapping>
     </element>
     <element id="CarePlan.activity.detail.performer:contactPerson">
       <path value="CarePlan.activity.detail.performer" />
       <sliceName value="contactPerson" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
@@ -271,11 +322,6 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3854" />
-        <comment value="Contactpersoon" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3869" />
         <comment value="Contactpersoon" />
       </mapping>
     </element>

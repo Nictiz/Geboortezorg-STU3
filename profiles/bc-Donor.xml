@@ -28,14 +28,6 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
   <derivation value="constraint" />
   <differential>
-    <element id="RelatedPerson">
-      <path value="RelatedPerson" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7888" />
-        <comment value="Eiceldonatie" />
-      </mapping>
-    </element>
     <element id="RelatedPerson.extension">
       <path value="RelatedPerson.extension" />
       <slicing>
@@ -51,10 +43,6 @@
       <path value="RelatedPerson.extension" />
       <sliceName value="role" />
       <min value="0" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept">
-      <path value="RelatedPerson.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7888" />
@@ -92,32 +80,6 @@
         <map value="peri32-dataelement-7890" />
         <comment value="Leeftijd eiceldonor" />
       </mapping>
-    </element>
-    <element id="RelatedPerson.address.country.extension">
-      <path value="RelatedPerson.address.country.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="RelatedPerson.address.country.extension:countryCode">
-      <path value="RelatedPerson.address.country.extension" />
-      <sliceName value="countryCode" />
-      <min value="0" />
-    </element>
-    <element id="RelatedPerson.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="RelatedPerson.address.country.extension.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
   </differential>
 </StructureDefinition>

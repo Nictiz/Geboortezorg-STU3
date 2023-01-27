@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-treatmentdirective-specificationother" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother" />
+  <name value="bc-treatmentdirective-specificationother" />
+  <title value="bc-treatmentdirective-specificationother" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The SpecificationOther concept of zib TreatmentDirective2." />
+  <purpose value="This extension represents the SpecificationOther concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TreatmentDirective2-v1.0(2020EN)](https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN))." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+    <uri value="https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN)" />
+    <name value="zib TreatmentDirective2-v1.0(2020EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Consent" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+      <isModifier value="true" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.value[x]" />
+      <sliceName value="valueString" />
+      <short value="SpecificationOther" />
+      <definition value="Specification of the treatment decision when the decision is 'Other'." />
+      <alias value="SpecificatieAnders" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+        <map value="NL-CM:2.2.4" />
+        <comment value="SpecificationOther" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

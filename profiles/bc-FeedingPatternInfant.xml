@@ -32,13 +32,21 @@
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7937" />
+        <map value="peri32-dataelement-8757" />
         <comment value="VoedingspatroonZuigeling" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8757" />
+        <map value="peri32-dataelement-7937" />
         <comment value="VoedingspatroonZuigeling" />
+      </mapping>
+    </element>
+    <element id="Observation.basedOn">
+      <path value="Observation.basedOn" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7942" />
+        <comment value="Voedingsadvies" />
       </mapping>
     </element>
     <element id="Observation.effectiveDateTime:effectiveDateTime">
@@ -62,11 +70,15 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:FeedingSupplement">
       <path value="Observation.component" />
@@ -104,6 +116,15 @@
     <element id="Observation.component:FeedingFrequency.valueQuantity:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
+      <example>
+        <label value="Example of frequency" />
+        <valueQuantity>
+          <value value="8" />
+          <unit value="per day" />
+          <system value="http://unitsofmeasure.org" />
+          <code value="1/d" />
+        </valueQuantity>
+      </example>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7940" />
@@ -199,51 +220,6 @@
         <map value="peri32-dataelement-7945" />
         <comment value="VoedingSoort" />
       </mapping>
-    </element>
-    <element id="Observation.component:FeedingAdvice">
-      <path value="Observation.component" />
-      <sliceName value="FeedingAdvice" />
-      <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7942" />
-        <comment value="Voedingsadvies" />
-      </mapping>
-    </element>
-    <element id="Observation.component:FeedingAdvice.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="11816003" />
-      </patternCoding>
-    </element>
-    <element id="Observation.component:FeedingAdvice.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:FeedingAdvice.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="11816003" />
-    </element>
-    <element id="Observation.component:FeedingAdvice.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="voorlichten over dieet (verrichting)" />
-    </element>
-    <element id="Observation.component:FeedingAdvice.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7943" />
-        <comment value="Voedingsadvies" />
-      </mapping>
-    </element>
-    <element id="Observation.component:FeedingAdvice.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:SupplementaryFeeding">
       <path value="Observation.component" />
