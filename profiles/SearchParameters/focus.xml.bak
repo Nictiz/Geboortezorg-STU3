@@ -1,0 +1,24 @@
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="focus" />
+    <url value="http://nictiz.nl/fhir/SearchParameter/focus" />
+    <version value="1.0.0" />
+    <name value="focus" />
+    <status value="active" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="email" />
+            <value value="geboortezorg@nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <code value="focus" />
+    <base value="Observation" />
+    <type value="reference" />
+    <description value="Focus of this Observation" />
+    <expression value="Observation.extension('http://nictiz.nl/fhir/StructureDefinition/Observation-focus-stu3').value"/>
+    <target value="Condition"/>
+	<target value="Observation"/>
+	<target value="Procedure"/>
+</SearchParameter>

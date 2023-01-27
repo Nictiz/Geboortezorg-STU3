@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-AmnioticFluid" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid" />
+  <name value="bc-AmnioticFluid" />
+  <title value="bc-AmnioticFluid" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing the amniotic fluid as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2410" />
+        <comment value="Vruchtwater (Meting)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160321000146103" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="160321000146103" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="meting aan vruchtwater (verrichting)" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2411" />
+        <comment value="MeetDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2415" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2414" />
+        <comment value="MeetMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="278292003" />
+      </patternCoding>
+    </element>
+    <element id="Observation.method.coding.system">
+      <path value="Observation.method.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.method.coding.code">
+      <path value="Observation.method.coding.code" />
+      <fixedCode value="278292003" />
+    </element>
+    <element id="Observation.method.coding.display">
+      <path value="Observation.method.coding.display" />
+      <defaultValueString value="echografische beeldvorming (kwalificatiewaarde)" />
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity">
+      <path value="Observation.component" />
+      <sliceName value="amnioticFluidQuantity" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364354005" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364354005" />
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="hoeveelheid vruchtwater (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2413" />
+        <comment value="HoeveelheidVruchtwaterWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Vruchtwater" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.191--20140121165337" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment">
+      <path value="Observation.component" />
+      <sliceName value="amnioticFluidCompartment" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="249129009" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="249129009" />
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="conditie van vruchtwater (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2479" />
+        <comment value="VruchtwatercompartimentWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="BeoordelingBevindingen" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
+      </binding>
+    </element>
+    <element id="Observation.component:amnioticFluidSDP">
+      <path value="Observation.component" />
+      <sliceName value="amnioticFluidSDP" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160301000146106" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="160301000146106" />
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="resultaat van 'single deepest pocket'-meting (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10568" />
+        <comment value="VruchtwaterSDPWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidSDP.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+    <element id="Observation.component:amnioticFluidAFI">
+      <path value="Observation.component" />
+      <sliceName value="amnioticFluidAFI" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160311000146108" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="160311000146108" />
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="resultaat van 'amniotic fluid index'-meting (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10569" />
+        <comment value="VruchtwaterAFIWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+  </differential>
+</StructureDefinition>

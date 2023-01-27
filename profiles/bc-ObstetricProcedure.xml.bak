@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-ObstetricProcedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+  <version value="1.2.1" />
+  <name value="bc-ObstetricProcedure" />
+  <title value="bc-ObstetricProcedure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Procedure profile describing obstetric procedures, as defined by BabyConnect. Obstetric procedures are procedures related to pregnancy, birth and delivery, such as vacuum delivery. &#xD;&#xA;* For obstetric procedures related to the pregnancy, use Procedure.reasonReference&#xD;&#xA;* For obstetric procedures related to birth and delivery, use the (optional) partOf extension to point to the Delivery (maternal data) or the Birth (child-specific data)&#xD;&#xA;* The context is the Maternal Record or an Encounter" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-procedurefortransfer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)" />
+    <name value="HCIM ProcedureForTransfer-v1.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-procedurefortransfer-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v3.0(2016EN)" />
+    <name value="HCIM ProcedureForTransfer-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-procedure-v4.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Procedure-v4.1(2017EN)" />
+    <name value="HCIM ProcedureForTransfer-v4.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-textresultfortransfer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/TextResultForTransfer-v1.2.2(2015EN)" />
+    <name value="HCIM TextResultForTransfer-v1.2.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-textresultfortransfer-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/TextResultForTransfer-v3.0(2016EN)" />
+    <name value="HCIM TextResultForTransfer-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-textresult-v4.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/TextResult-v4.1(2017EN)" />
+    <name value="HCIM textresult-v3.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82297" />
+        <comment value="Diagnose/interventie postpartum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3834" />
+        <comment value="Verrichting (Algemene anamnese)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3835" />
+        <comment value="Verrichting (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1970" />
+        <comment value="Verrichting (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3836" />
+        <comment value="Verrichting (Onderzoek)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3837" />
+        <comment value="Verrichting (Postpartum complicatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1982" />
+        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8791" />
+        <comment value="Verrichting (Ondersteuning opvang)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8792" />
+        <comment value="Chirurgische ingrepen (Verrichting)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8793" />
+        <comment value="Verrichting (Problematiek kind)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9143" />
+        <comment value="Verrichting (Algemene anamnese)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9880" />
+        <comment value="Verrichting (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9881" />
+        <comment value="Verrichting (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9883" />
+        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9884" />
+        <comment value="Verrichting (Postpartum complicatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4387" />
+        <comment value="Verrichting (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7866" />
+        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1190" />
+        <comment value="Verrichting (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1547" />
+        <comment value="Verrichting (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1603" />
+        <comment value="Verrichting (Kindspecifieke maternale verrichtingen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8699" />
+        <comment value="Chirurgische ingrepen (Verrichting)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7900" />
+        <comment value="Verrichting (Problematiek kind)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8760" />
+        <comment value="Ondersteuning bij ontslag naar huis (Verrichting)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9707" />
+        <comment value="Verrichting (Problematiek kind)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7875" />
+        <comment value="Verrichting (Onderzoek)" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension">
+      <path value="Procedure.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Procedure.extension:procedureMethod">
+      <path value="Procedure.extension" />
+      <sliceName value="procedureMethod" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1198" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1555" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1611" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8707" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7908" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8768" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2424" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:decisionMoment">
+      <path value="Procedure.extension" />
+      <sliceName value="decisionMoment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-decisionMoment" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7919" />
+        <comment value="Beslismoment sectio caesarea" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept">
+      <path value="Procedure.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="BesluitSC" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.38--20141106153416" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40225" />
+        <comment value="Beslismoment sectio caesarea" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:partusPhase">
+      <path value="Procedure.extension" />
+      <sliceName value="partusPhase" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-partusphase" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10280" />
+        <comment value="Moment amniotomie" />
+      </mapping>
+    </element>
+    <element id="Procedure.partOf">
+      <path value="Procedure.partOf" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.partOf:deliveryOrBirthProcedure">
+      <path value="Procedure.partOf" />
+      <sliceName value="deliveryOrBirthProcedure" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+      </type>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure">
+      <path value="Procedure.category.coding" />
+      <sliceName value="obstetricProcedure" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="386637004" />
+      </patternCoding>
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.system">
+      <path value="Procedure.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.code">
+      <path value="Procedure.category.coding.code" />
+      <fixedCode value="386637004" />
+    </element>
+    <element id="Procedure.category.coding:obstetricProcedure.display">
+      <path value="Procedure.category.coding.display" />
+      <defaultValueString value="Obstetric procedure (procedure)" />
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82373" />
+        <comment value="Interventie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1197" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1554" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1610" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8706" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7907" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8767" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2423" />
+        <comment value="VerrichtingType" />
+      </mapping>
+    </element>
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
+      <path value="Procedure.code.coding" />
+      <sliceName value="VerrichtingTypeCodelijst" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20560" />
+        <comment value="Interventie begin baring" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40190" />
+        <comment value="Vaginale kunstverlossing" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82230" />
+        <comment value="Intra-uterine behandeling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-30050" />
+        <comment value="Episiotomie?" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40240" />
+        <comment value="Overige interventies" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20616" />
+        <comment value="Bijstimulatie toegediend?" />
+      </mapping>
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+    </element>
+    <element id="Procedure.context">
+      <path value="Procedure.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-4" />
+        <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod">
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedPeriod" />
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.start">
+      <path value="Procedure.performed[x].start" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82298" />
+        <comment value="Datum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1191" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1548" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1604" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8700" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7901" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8761" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.end">
+      <path value="Procedure.performed[x].end" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1192" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1549" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1605" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8701" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7902" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8762" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer">
+      <path value="Procedure.performer" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1201" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1312" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1203" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1310" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1558" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1560" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1614" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1616" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8710" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8712" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7911" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7913" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8771" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8773" />
+        <comment value="Uitvoerder" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2427" />
+        <comment value="Locatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2429" />
+        <comment value="Uitvoerder" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonCode.coding">
+      <path value="Procedure.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode">
+      <path value="Procedure.reasonCode.coding" />
+      <sliceName value="bc-ObstetricProcedureReasonCode" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-ObstetricProcedure-reasonCode" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ObstetricProcedure-reasonCode" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20570" />
+        <comment value="Indicatie interventie begin baring" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82546" />
+        <comment value="Indicatie primaire sectio" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82547" />
+        <comment value="Indicatie secundaire sectio" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80794" />
+        <comment value="Indicatie episiotomie" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1195" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1207" />
+        <comment value="Probleem (Zwangerschap)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1552" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1583" />
+        <comment value="Probleem (Maternaal)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1608" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1620" />
+        <comment value="Probleem (Kindspecifieke maternale problemen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8704" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8716" />
+        <comment value="Probleem (Congenitale aandoeningen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7905" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8686" />
+        <comment value="Probleem (ProblematiekKind)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8687" />
+        <comment value="Probleem (Geboortetrauma)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8688" />
+        <comment value="Probleem (Congenitale aandoeningen)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8765" />
+        <comment value="Indicatie" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonReference:pregnancy">
+      <path value="Procedure.reasonReference" />
+      <sliceName value="pregnancy" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+      </type>
+    </element>
+    <element id="Procedure.bodySite">
+      <path value="Procedure.bodySite" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1193" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1550" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1606" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8702" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7903" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8763" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension">
+      <path value="Procedure.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Procedure.bodySite.extension:ProcedureLaterality">
+      <path value="Procedure.bodySite.extension" />
+      <sliceName value="ProcedureLaterality" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8764" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept">
+      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1194" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1551" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1607" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8703" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7904" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension:lateralityEpisiotomy">
+      <path value="Procedure.bodySite.extension" />
+      <sliceName value="lateralityEpisiotomy" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
+      </type>
+    </element>
+    <element id="Procedure.bodySite.extension:lateralityEpisiotomy.valueCodeableConcept:valueCodeableConcept">
+      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="Locatie episiotomie" />
+      <binding>
+        <strength value="extensible" />
+        <description value="EpisiotomieType" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.161--20130110132616" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-30055" />
+        <comment value="Locatie episiotomie" />
+      </mapping>
+    </element>
+    <element id="Procedure.outcome.extension">
+      <path value="Procedure.outcome.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Procedure.outcome.extension:success">
+      <path value="Procedure.outcome.extension" />
+      <sliceName value="success" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-success" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40200" />
+        <comment value="Succes vaginale kunstverlossing" />
+      </mapping>
+    </element>
+    <element id="Procedure.report">
+      <path value="Procedure.report" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TextResult" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7870" />
+        <comment value="Verrichting" />
+      </mapping>
+    </element>
+    <element id="Procedure.focalDevice">
+      <path value="Procedure.focalDevice" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1556" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1612" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8708" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7909" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2425" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Procedure.focalDevice.manipulated">
+      <path value="Procedure.focalDevice.manipulated" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1199" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Procedure.usedReference">
+      <path value="Procedure.usedReference" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8769" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
