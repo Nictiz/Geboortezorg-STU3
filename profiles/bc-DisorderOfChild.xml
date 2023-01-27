@@ -459,7 +459,6 @@
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
-      <comment value="A ConceptMap (https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/ConceptMap/UncertaintyCode-to-ConditionVerificationStatus) is available." />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40100" />
@@ -687,7 +686,7 @@
       <path value="Condition.category.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -701,8 +700,19 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="414025005" />
-        <display value="Disorder of fetus or newborn (disorder)" />
       </patternCoding>
+    </element>
+    <element id="Condition.category:disorderOfChild.coding:disorderOfChild.system">
+      <path value="Condition.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Condition.category:disorderOfChild.coding:disorderOfChild.code">
+      <path value="Condition.category.coding.code" />
+      <fixedCode value="414025005" />
+    </element>
+    <element id="Condition.category:disorderOfChild.coding:disorderOfChild.display">
+      <path value="Condition.category.coding.display" />
+      <defaultValueString value="Disorder of fetus or newborn (disorder)" />
     </element>
     <element id="Condition.severity">
       <path value="Condition.severity" />
@@ -832,9 +842,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:DisorderOfChildCode">
+    <element id="Condition.code.coding:disorderOfChildCode">
       <path value="Condition.code.coding" />
-      <sliceName value="DisorderOfChildCode" />
+      <sliceName value="disorderOfChildCode" />
       <max value="1" />
       <binding>
         <strength value="extensible" />

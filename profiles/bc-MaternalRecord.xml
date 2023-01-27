@@ -152,7 +152,7 @@
       <path value="EpisodeOfCare.type.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -167,7 +167,6 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="364320009" />
-        <display value="Pregnancy observable (observable entity)" />
       </patternCoding>
     </element>
     <element id="EpisodeOfCare.type.coding:maternalRecord.system">

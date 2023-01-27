@@ -337,30 +337,29 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.category.coding:obstetricprocedure">
+    <element id="Procedure.category.coding:obstetricProcedure">
       <path value="Procedure.category.coding" />
-      <sliceName value="obstetricprocedure" />
+      <sliceName value="obstetricProcedure" />
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="386637004" />
-        <display value="Obstetric procedure (procedure)" />
       </patternCoding>
     </element>
-    <element id="Procedure.category.coding:obstetricprocedure.system">
+    <element id="Procedure.category.coding:obstetricProcedure.system">
       <path value="Procedure.category.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Procedure.category.coding:obstetricprocedure.code">
+    <element id="Procedure.category.coding:obstetricProcedure.code">
       <path value="Procedure.category.coding.code" />
       <fixedCode value="386637004" />
     </element>
-    <element id="Procedure.category.coding:obstetricprocedure.display">
+    <element id="Procedure.category.coding:obstetricProcedure.display">
       <path value="Procedure.category.coding.display" />
       <defaultValueString value="Obstetric procedure (procedure)" />
     </element>
@@ -635,14 +634,14 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.reasonCode.coding:bc-ObstetricProcedure-reasonCode">
+    <element id="Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode">
       <path value="Procedure.reasonCode.coding" />
-      <sliceName value="bc-ObstetricProcedure-reasonCode" />
+      <sliceName value="bc-ObstetricProcedureReasonCode" />
       <binding>
         <strength value="extensible" />
         <description value="bc-ObstetricProcedure-reasonCode" />
@@ -752,7 +751,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
       </type>
     </element>
     <element id="Procedure.bodySite">
