@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-PractitionerRole" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PractitionerRole" />
+  <version value="1.2.1" />
+  <name value="bc-PractitionerRole" />
+  <title value="bc-PractitionerRole" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A PractitionerRole profile describing the role of a practitioner as defined by BabyConnect." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)" />
+    <name value="HCIM Patient-v2.0.1(2015EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)" />
+    <name value="HCIM Patient-v3.0(2016EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)" />
+    <name value="HCIM ContactInformation-v1.0(2017EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="RolZorgverlener22" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.186--20140102000000" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty.coding:SpecialtyUZI">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="SpecialtyUZI" />
+      <binding>
+        <strength value="required" />
+        <description value="SpecialismeUZICodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.6--20200901000000" />
+          <display value="SpecialismeUZICodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty.coding:SpecialtyAGB">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="SpecialtyAGB" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20200901000000" />
+          <display value="SpecialismeAGBCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty.coding:SpecialtyPerinatology">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="SpecialtyPerinatology" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ZorgverlenerType (3.2)" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.308--20201006103803" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

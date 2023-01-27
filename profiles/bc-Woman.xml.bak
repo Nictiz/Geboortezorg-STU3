@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-Woman" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+  <version value="1.2.1" />
+  <name value="bc-Woman" />
+  <title value="bc-Woman" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Patient profile describing the woman who is or was pregnant as defined by BabyConnect.&#xD;&#xA;The pregnant woman, a FHIR patient, is the core of each pregnancy." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-patient-v2.0.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)" />
+    <name value="HCIM Patient-v2.0.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-maritalstatus-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/MaritalStatus-v1.2.1(2015EN)" />
+    <name value="HCIM MaritalStatus-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactperson-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v1.2(2015EN)" />
+    <name value="HCIM ContactPerson-v1.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthcareprovider-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthcareProvider-v1.2(2015EN)" />
+    <name value="HCIM HealthcareProvider-v1.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-nationality-v2.0-2015EN" />
+    <uri value="https://zibs.nl/wiki/Nationality-v2.0(2015EN)" />
+    <name value="HCIM Nationality-v2.0(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-payer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)" />
+    <name value="HCIM Payer-v1.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-patient-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)" />
+    <name value="HCIM Patient-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-maritalstatus-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.0(2016EN)" />
+    <name value="HCIM MaritalStatus-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactperson-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v3.0(2016EN)" />
+    <name value="HCIM ContactPerson-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthcareprovider-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.0(2016EN)" />
+    <name value="HCIM HealthcareProvider-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-nationality-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2016EN)" />
+    <name value="HCIM Nationality-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-payer-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Payer-v3.0(2016EN)" />
+    <name value="HCIM Payer-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-patient-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
+    <name value="HCIM Patient-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-maritalstatus-v3.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.0(2017EN)" />
+    <name value="HCIM MaritalStatus-v3.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactperson-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v3.1(2017EN)" />
+    <name value="HCIM ContactPerson-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthcareprovider-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.1(2017EN)" />
+    <name value="HCIM HealthcareProvider-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.1(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-nationality-v3.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2017EN)" />
+    <name value="HCIM Nationality-v3.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-payer-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Payer-v3.1(2017EN)" />
+    <name value="HCIM Payer-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)" />
+    <name value="HCIM ContactInformation-v1.0(2017EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-languageproficiency-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/LanguageProficiency-v3.1(2017EN)" />
+    <name value="HCIM LanguageProficiency-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-freedomrestrictingmeasures-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/FreedomRestrictingMeasures-v3.1(2017EN)" />
+    <name value="HCIM FreedomRestrictingMeasures-v3.1(2017EN)" />
+    <comment value="Concerns only LegalStatus concept. This will become an independent information model as of release 2018 of the HCIMs." />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-2" />
+        <comment value="Vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-674" />
+        <comment value="Vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1713" />
+        <comment value="Demografische gegevens" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1434" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10418" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9685" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2302" />
+        <comment value="Moeder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9824" />
+        <comment value="Vrouw" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2746" />
+        <comment value="Controles moeder" />
+      </mapping>
+    </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:preferredPharmacy">
+      <path value="Patient.extension" />
+      <sliceName value="preferredPharmacy" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1676" />
+        <comment value="Apotheek" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality">
+      <path value="Patient.extension" />
+      <sliceName value="nationality" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-690" />
+        <comment value="NationaliteitRC" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-691" />
+        <comment value="Nationaliteit" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:ethnicity">
+      <path value="Patient.extension" />
+      <sliceName value="ethnicity" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="EthnicGroup" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10400" />
+        <comment value="Ethniciteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-912" />
+        <comment value="Etniciteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-913" />
+        <comment value="EtniciteitType" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text">
+      <path value="Patient.extension.valueCodeableConcept.text" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-914" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:genderIdentity">
+      <path value="Patient.extension" />
+      <sliceName value="genderIdentity" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-genderIdentity" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10776" />
+        <comment value="Geslacht (identiteit)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10802" />
+        <comment value="Geslacht (identiteit)" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10031" />
+        <comment value="Lokale persoonsidentificatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3677" />
+        <comment value="Peridoscode" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:BSN">
+      <path value="Patient.identifier" />
+      <sliceName value="BSN" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10030" />
+        <comment value="Burgerservicenummer" />
+      </mapping>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10035" />
+        <comment value="Naamgegevens" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10043" />
+        <comment value="Achternaam" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.name.family.extension:humannameOwnPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82363" />
+        <comment value="Voorvoegsel (als soort naam is BR)" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension:humannamePartnerPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82363" />
+        <comment value="Voorvoegsel (als soort naam = SP)" />
+      </mapping>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10042" />
+        <comment value="Voornamen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82359" />
+        <comment value="Initialen" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10040" />
+        <comment value="Geboortedatum" />
+      </mapping>
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10300" />
+        <comment value="Adres" />
+      </mapping>
+    </element>
+    <element id="Patient.address.type">
+      <path value="Patient.address.type" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10308" />
+        <comment value="Adrestype" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension">
+      <path value="Patient.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.address.line.extension:streetName">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="streetName" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10301" />
+        <comment value="Straatnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:houseNumber">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="houseNumber" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10302" />
+        <comment value="Huisnummer" />
+      </mapping>
+    </element>
+    <element id="Patient.address.line.extension:buildingNumbersuffix">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10303" />
+        <comment value="Huisletter/huisnummertoevoeging" />
+      </mapping>
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10305" />
+        <comment value="Plaatsnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.district">
+      <path value="Patient.address.district" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10306" />
+        <comment value="Gemeentenaam" />
+      </mapping>
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10304" />
+        <comment value="Postcode" />
+      </mapping>
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10307" />
+        <comment value="Land" />
+      </mapping>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2690" />
+        <comment value="BurgerlijkeStaatRC" />
+      </mapping>
+    </element>
+    <element id="Patient.communication.extension">
+      <path value="Patient.communication.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.communication.extension:languageProficiency">
+      <path value="Patient.communication.extension" />
+      <sliceName value="languageProficiency" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2910" />
+        <comment value="Taalvaardigheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2911" />
+        <comment value="Taalvaardigheid" />
+      </mapping>
+    </element>
+    <element id="Patient.communication.extension:languageProficiency.extension">
+      <path value="Patient.communication.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Patient.communication.extension:languageProficiency.extension:type">
+      <path value="Patient.communication.extension.extension" />
+      <sliceName value="type" />
+      <min value="1" />
+    </element>
+    <element id="Patient.communication.extension:languageProficiency.extension:type.valueCoding:valueCoding">
+      <path value="Patient.communication.extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="v3-LanguageAbilityMode" />
+      </binding>
+    </element>
+    <element id="Patient.communication.extension:languageProficiency.extension:level">
+      <path value="Patient.communication.extension.extension" />
+      <sliceName value="level" />
+      <min value="1" />
+    </element>
+    <element id="Patient.communication.extension:languageProficiency.extension:level.valueCoding:valueCoding">
+      <path value="Patient.communication.extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="TaalvaardigheidBegrijpenCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.3--20171231000000" />
+          <display value="TaalvaardigheidBegrijpenCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10401" />
+        <comment value="Taalvaardigheid vrouw Nederlandse taal" />
+      </mapping>
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1674" />
+        <comment value="Huisarts" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1675" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="other.reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.link:motherOf">
+      <path value="Patient.link" />
+      <sliceName value="motherOf" />
+    </element>
+    <element id="Patient.link:motherOf.other">
+      <path value="Patient.link.other" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MotherOf" />
+      </type>
+    </element>
+    <element id="Patient.link:motherOf.type">
+      <path value="Patient.link.type" />
+      <fixedCode value="seealso" />
+    </element>
+  </differential>
+</StructureDefinition>

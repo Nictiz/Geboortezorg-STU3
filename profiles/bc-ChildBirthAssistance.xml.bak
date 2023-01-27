@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-ChildBirthAssistance" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
+  <version value="1.2.1" />
+  <name value="bc-ChildBirthAssistance" />
+  <title value="bc-ChildBirthAssistance" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Encounter profile describing (childbirth) assistance to a woman in labor as defined by BabyConnect.&#xD;&#xA;* The woman Patient is the subject of the Encounter&#xD;&#xA;* The place of birth is described in Encounter.class using a ConceptMap to map values to available FHIR codes&#xD;&#xA;* The Encounter.diagnosis element refers to the Pregnancy (Condition)&#xD;&#xA;* The Encounter.participant element containts a list of care providers that were present during delivery. Family members could also be included in this list.&#xD;&#xA;* Additional details can be defined at participant level, such as participant type and time of arrival. The latter uses an extension at participant level with a coded list of time of arrival.&#xD;&#xA;* Childbirth Assistance refers to the EpisodeOfCare with Encounter.EpisodeOfCare.reference" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-encounter-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/Encounter-v1.2(2015EN)" />
+    <name value="HCIM Encounter-v1.2(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-encounter-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Encounter-v3.0(2016EN)" />
+    <name value="HCIM Encounter-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-encounter-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Encounter-v3.1(2017EN)" />
+    <name value="HCIM Encounter-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-80839" />
+        <comment value="Partusassistentie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10710" />
+        <comment value="Partusassistentie (Contact)" />
+      </mapping>
+    </element>
+    <element id="Encounter.class.extension">
+      <path value="Encounter.class.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Encounter.class.extension:ContactTypeCodelist">
+      <path value="Encounter.class.extension" />
+      <sliceName value="ContactTypeCodelist" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10711" />
+        <comment value="ContactType" />
+      </mapping>
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10735" />
+        <comment value="ContactSoort" />
+      </mapping>
+    </element>
+    <element id="Encounter.type:childbirthAssistance">
+      <path value="Encounter.type" />
+      <sliceName value="childbirthAssistance" />
+      <max value="1" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10735" />
+        <comment value="ContactSoort" />
+      </mapping>
+    </element>
+    <element id="Encounter.type:childbirthAssistance.coding">
+      <path value="Encounter.type.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="816968003" />
+        <display value="Labor and birth support (regime/therapy)" />
+      </patternCoding>
+    </element>
+    <element id="Encounter.type:childbirthAssistance.coding.system">
+      <path value="Encounter.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Encounter.type:childbirthAssistance.coding.code">
+      <path value="Encounter.type.coding.code" />
+      <fixedCode value="816968003" />
+    </element>
+    <element id="Encounter.type:childbirthAssistance.coding.display">
+      <path value="Encounter.type.coding.display" />
+      <defaultValueString value="ondersteuning durante partu (regime/therapie)" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="Encounter.episodeOfCare">
+      <path value="Encounter.episodeOfCare" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+      </type>
+    </element>
+    <element id="Encounter.participant.extension">
+      <path value="Encounter.participant.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Encounter.participant.extension:periodOfArrival">
+      <path value="Encounter.participant.extension" />
+      <sliceName value="periodOfArrival" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20650" />
+        <comment value="Partusstadium assistente gearriveerd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10738" />
+        <comment value="PartusStadiumWaarde" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.extension:timeWhenCalled">
+      <path value="Encounter.participant.extension" />
+      <sliceName value="timeWhenCalled" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-childbirthassistance-timecalled" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10726" />
+        <comment value="OproepDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.type.coding">
+      <path value="Encounter.participant.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.participant.type.coding:childBirthAssistance-type">
+      <path value="Encounter.participant.type.coding" />
+      <sliceName value="childBirthAssistance-type" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-ChildBirthAssistance-type" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40149" />
+        <comment value="Aanpakker kind" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.period.start">
+      <path value="Encounter.participant.period.start" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10716" />
+        <comment value="AankomstDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.period.end">
+      <path value="Encounter.participant.period.end" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10717" />
+        <comment value="EindDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1624" />
+        <comment value="Aanpakker kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1625" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1626" />
+        <comment value="Supervisor" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1627" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.individual.extension">
+      <path value="Encounter.participant.individual.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Encounter.participant.individual.extension:practitionerRole">
+      <path value="Encounter.participant.individual.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-82132" />
+        <comment value="Rol partusassistent" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40150" />
+        <comment value="Rol aanpakker kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40170" />
+        <comment value="Rol supervisor" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10712" />
+        <comment value="ContactMet" />
+      </mapping>
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="condition.reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.diagnosis:pregnancy">
+      <path value="Encounter.diagnosis" />
+      <sliceName value="pregnancy" />
+    </element>
+    <element id="Encounter.diagnosis:pregnancy.condition">
+      <path value="Encounter.diagnosis.condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+      </type>
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10714" />
+        <comment value="Locatie" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

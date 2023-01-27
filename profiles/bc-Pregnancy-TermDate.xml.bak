@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-Pregnancy-TermDate" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy-TermDate" />
+  <version value="1.2.1" />
+  <name value="bc-Pregnancy-TermDate" />
+  <title value="bc-Pregnancy-TermDate" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing term date as defined by BabyConnect. &#xD;&#xA;The term date is related to a pregnancy, which is the focus of the Observation (extension). It is also about the mother, which still is the subject of the Observation." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-pregnancy-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/Pregnancy-v3.1(2017EN)" />
+    <name value="HCIM Pregnancy-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v2.3" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg Perinatologie 2.3" />
+  </mapping>
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.extension:isCurrent">
+      <path value="Observation.extension" />
+      <sliceName value="isCurrent" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-isCurrent" />
+      </type>
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-20055" />
+        <comment value="Actuele a terme datum?" />
+      </mapping>
+    </element>
+    <element id="Observation.extension:isCertain">
+      <path value="Observation.extension" />
+      <sliceName value="isCertain" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-isCertain" />
+      </type>
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-80669" />
+        <comment value="Zeker?" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mapping>
+        <identity value="gebz" />
+        <map value="peri23-dataelement-20040" />
+        <comment value="Datum bepaling a terme datum" />
+      </mapping>
+    </element>
+    <element id="Observation.valueDateTime:valueDateTime">
+      <path value="Observation.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20030" />
+        <comment value="A terme datum" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.method.coding:method">
+      <path value="Observation.method.coding" />
+      <sliceName value="method" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="a terme datum obv (23)" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.254--20200406100640" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20050" />
+        <comment value="A terme datum o.b.v." />
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
+  </differential>
+</StructureDefinition>
