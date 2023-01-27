@@ -1,0 +1,232 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="pregnancycard-clientcapabilities" />
+    <url value="http://nictiz.nl/fhir/CapabilityStatement/pregnancycard-clientcapabilities" />
+    <version value="0.9" />
+    <name value="PregnancyCardClient" />
+    <status value="draft" />
+    <date value="2022-12-09" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="email" />
+            <value value="info@nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="This CapabilityStatement describes the minimal requirements for a client to retrieve the Pregnancy Card based on the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB), release 2017." />
+    <copyright value="CC0" />
+    <kind value="requirements" />
+    <fhirVersion value="3.0.2" />
+    <acceptUnknown value="both" />
+    <format value="xml" />
+    <format value="json" />
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <display value="nl-core-organization" />
+    </profile>
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <display value="nl-core-patient" />
+    </profile>
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <display value="nl-core-practitioner" />
+    </profile>
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
+        <display value="nl-core-practitionerrole" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse" />
+        <display value="zib-AlcoholUse" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse" />
+        <display value="zib-DrugUse" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
+        <display value="zib-LaboratoryTestResult-Observation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+        <display value="zib-Pregnancy" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-DateLastMenstruation" />
+        <display value="zib-Pregnancy-DateLastMenstruation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Gravidity" />
+        <display value="zib-Pregnancy-Gravidity" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Parity" />
+        <display value="zib-Pregnancy-Parity" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration" />
+        <display value="zib-Pregnancy-PregnancyDuration" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+        <display value="zib-Problem" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+        <display value="zib-Procedure" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
+        <display value="zib-ProcedureRequest" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse" />
+        <display value="zib-TobaccoUse" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation" />
+        <display value="bc-DeliveryObservation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+        <display value="bc-DeliveryProcedure" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfChild" />
+        <display value="bc-DisorderOfChild" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery" />
+        <display value="bc-DisorderOfLaborAndDelivery" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderPostPartum" />
+        <display value="bc-DisorderPostPartum" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
+        <display value="bc-DisorderOfPregnancy" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+        <display value="bc-Encounter" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
+        <display value="bc-FetalHeartRate" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
+        <display value="bc-Fetus" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+        <display value="bc-FetusObservation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation" />
+        <display value="bc-MaternalObservation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+        <display value="bc-MaternalRecord" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+        <display value="bc-ObstetricProcedure" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-PractitionerRole" />
+        <display value="bc-PractitionerRole" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
+        <display value="bc-PregnancyObservation" />
+    </profile>
+    <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+        <display value="bc-Woman" />
+    </profile>
+    <rest>
+        <mode value="client" />
+        <resource>
+            <type value="Condition" />
+            <documentation value="Only instances where .code=http://snomed.info/sct|362973001,36472007 or .category=http://snomed.info/sct|173300003,362972006,414025005,362973001 SHALL BE supported" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="context" />
+                <type value="reference" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Encounter" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchInclude value="Encounter:participant" />
+            <searchParam>
+                <name value="episodeofcare" />
+                <type value="reference" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="EpisodeOfCare" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchInclude value="EpisodeOfCare:organization" />
+            <searchInclude value="EpisodeOfCare:care-manager" />
+            <searchParam>
+                <name value="status" />
+                <type value="token" />
+            </searchParam>
+            <searchParam>
+                <name value="type" />
+                <type value="token" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Observation" />
+            <documentation value="Only instances where .code=http://loinc.org|11977-6,11996-6,29463-7,85354-9,883-9,1305-2,1159-3,58452-4,29893-5,11597-2,93846-4,787-2,14685-2,72160-5,2276-4,2276-4,24348-5,47983-0 or http://snomed.info/sct|161714006,147781000146105,65147003,246435002,143881000146107,713651007,792807003,364618000,228273003,228366006,365980008,249043002,439771001,249120008,364336006,169812000,312457003 SHALL BE supported" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="context" />
+                <type value="reference" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Patient" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+        </resource>
+        <resource>
+            <type value="PractitionerRole" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="practitioner" />
+                <type value="reference" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Procedure" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchInclude value="Procedure:performer" />
+            <searchInclude value="Procedure:based-on" />
+            <searchParam>
+                <name value="context" />
+                <type value="reference" />
+            </searchParam>
+        </resource>
+    </rest>
+</CapabilityStatement>

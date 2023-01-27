@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-PregnancyUltraSoundGeneralFindings" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings" />
+  <name value="bc-PregnancyUltraSoundGeneralFindings" />
+  <title value="bc-PregnancyUltraSoundGeneralFindings" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing general ultrasound findings for the fetus as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8918" />
+        <comment value="Echografiche bevindingen algemeen (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8919" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8927" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8929" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method:SEO">
+      <path value="Observation.method" />
+      <sliceName value="SEO" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Methode_1e_trimester_SEO" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.258--20200406134703" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:conclusion">
+      <path value="Observation.component" />
+      <sliceName value="conclusion" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:conclusion.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="370379002" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:conclusion.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:conclusion.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="370379002" />
+    </element>
+    <element id="Observation.component:conclusion.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="bevinding betreffende prenatale echografie (bevinding)" />
+    </element>
+    <element id="Observation.component:conclusion.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Conclusie SEO" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.32--20140904000000" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8921" />
+        <comment value="ConclusieWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:suspicionAbnormalities">
+      <path value="Observation.component" />
+      <sliceName value="suspicionAbnormalities" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:suspicionAbnormalities.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="609415007" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:suspicionAbnormalities.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:suspicionAbnormalities.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="609415007" />
+    </element>
+    <element id="Observation.component:suspicionAbnormalities.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="verdenking op foetale afwijking (situatie)" />
+    </element>
+    <element id="Observation.component:suspicionAbnormalities.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Verdenking_obv" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.256--20200406125154" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8931" />
+        <comment value="VerdenkingAfwijkingobvWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:advice">
+      <path value="Observation.component" />
+      <sliceName value="advice" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:advice.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="171024009" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:advice.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:advice.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="171024009" />
+    </element>
+    <element id="Observation.component:advice.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="advies over behandeling gegeven (situatie)" />
+    </element>
+    <element id="Observation.component:advice.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Advies_1e_trimester_SEO" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.257--20200406134358" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8930" />
+        <comment value="AdviesWaarde" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
