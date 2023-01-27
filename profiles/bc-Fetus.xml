@@ -87,7 +87,7 @@
       <path value="BodySite.code.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -99,7 +99,6 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="83418008" />
-        <display value="Entire fetus (body structure)" />
       </patternCoding>
     </element>
     <element id="BodySite.code.coding:fetus.system">
@@ -109,6 +108,10 @@
     <element id="BodySite.code.coding:fetus.code">
       <path value="BodySite.code.coding.code" />
       <fixedCode value="83418008" />
+    </element>
+    <element id="BodySite.code.coding:fetus.display">
+      <path value="BodySite.code.coding.display" />
+      <defaultValueString value="Entire fetus (body structure)" />
     </element>
     <element id="BodySite.patient">
       <path value="BodySite.patient" />

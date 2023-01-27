@@ -181,16 +181,6 @@
         <comment value="Actieve Ontsluiting (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
@@ -309,7 +299,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20590" />
@@ -576,7 +565,7 @@
       <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
