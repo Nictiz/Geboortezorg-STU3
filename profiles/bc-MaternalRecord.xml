@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. It includes references to an Organization and responsible Practitioner.&#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)&#xD;&#xA;2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the overarching maternal record (EpisodeOfCare):&#xD;&#xA;- Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. (Note: different providers may each have their own Condition resource.)&#xD;&#xA;- EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;- Condition points to the Patient with Condition.subject.reference&#xD;&#xA; - Condition.status must be 'active' for ongoing pregnancies and 'inactive' for past ones." />
+  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. It includes references to an Organization and responsible Practitioner.&#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)&#xD;&#xA;2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the overarching maternal record (EpisodeOfCare):&#xD;&#xA;* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. (Note: different providers may each have their own Condition resource.)&#xD;&#xA;* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;* Condition points to the Patient with Condition.subject.reference&#xD;&#xA; - Condition.status must be 'active' for ongoing pregnancies and 'inactive' for past ones." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -58,8 +58,13 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1338" />
-        <comment value="Zorgepisode" />
+        <map value="peri32-dataelement-25" />
+        <comment value="Zwangerschapsgegevens" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9823" />
+        <comment value="Kraamweek" />
       </mapping>
     </element>
     <element id="EpisodeOfCare.extension">
@@ -72,6 +77,16 @@
         <rules value="open" />
       </slicing>
       <min value="0" />
+    </element>
+    <element id="EpisodeOfCare.extension:title">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="title" />
+      <min value="0" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3404" />
+        <comment value="ZorgEpisodeNaam" />
+      </mapping>
     </element>
     <element id="EpisodeOfCare.extension:comment">
       <path value="EpisodeOfCare.extension" />
@@ -107,12 +122,38 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
+    <element id="EpisodeOfCare.identifier">
+      <path value="EpisodeOfCare.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3338" />
+        <comment value="Identificatie zorgepisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8873" />
+        <comment value="Identificatie zorgepisode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4042" />
+        <comment value="Dossiernummer" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.status">
+      <path value="EpisodeOfCare.status" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2164" />
+        <comment value="StatusZorgepisode" />
+      </mapping>
+    </element>
     <element id="EpisodeOfCare.type.coding">
       <path value="EpisodeOfCare.type.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -148,7 +189,7 @@
       <definition value="Use this code to specify a perinatal period in which care responsibility was assumed. In case a perinatal period is given, the record will be part of an overarching maternal care record as specified in the partOf element." />
       <max value="1" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="PeriodeZorgverlening" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.94--20161201093828" />
@@ -177,13 +218,8 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2132" />
+        <map value="peri32-dataelement-3402" />
         <comment value="FocusZorgEpisode" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2686" />
-        <comment value="Probleem" />
       </mapping>
     </element>
     <element id="EpisodeOfCare.patient">
@@ -210,11 +246,6 @@
         <map value="peri32-dataelement-3400" />
         <comment value="BeginDatum" />
       </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2130" />
-        <comment value="BeginDatum" />
-      </mapping>
     </element>
     <element id="EpisodeOfCare.period.end">
       <path value="EpisodeOfCare.period.end" />
@@ -228,10 +259,26 @@
         <map value="peri32-dataelement-3401" />
         <comment value="EindDatum" />
       </mapping>
+    </element>
+    <element id="EpisodeOfCare.careManager">
+      <path value="EpisodeOfCare.careManager" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2131" />
-        <comment value="EindDatum" />
+        <map value="peri32-dataelement-8822" />
+        <comment value="ZorgEpisodeVerantwoordelijke" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1699" />
+        <comment value="Coordinerend zorgverlener" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.team">
+      <path value="EpisodeOfCare.team" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1679" />
+        <comment value="Specialist" />
       </mapping>
     </element>
   </differential>

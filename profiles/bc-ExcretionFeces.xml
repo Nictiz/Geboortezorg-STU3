@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-ExcretionFeces" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionFeces" />
+  <version value="1.0.0" />
+  <name value="bc-ExcretionFeces" />
+  <title value="bc-ExcretionFeces" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing a newborn's fecal excretion as defined by BabyConnect." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2-ext" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9936" />
+        <comment value="Uitscheiding" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9937" />
+        <comment value="Feces (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="249612005" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="249612005" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="bevinding betreffende evaluatie van feces (bevinding)" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9938" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9946" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <binding>
+        <strength value="extensible" />
+        <description value="MeetMethode_GZ" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9941" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9942" />
+        <comment value="ObservatieSpecimen" />
+      </mapping>
+    </element>
+    <element id="Observation.component.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364689004" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364689004" />
+    </element>
+    <element id="Observation.component.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="observatie betreffende feces (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="OntlastingZuigeling" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.265--20200409144953" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9940" />
+        <comment value="FecesWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364689004" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.system">
+      <path value="Observation.component.valueCodeableConcept.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.code">
+      <path value="Observation.component.valueCodeableConcept.coding.code" />
+      <fixedCode value="364689004" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.display">
+      <path value="Observation.component.valueCodeableConcept.coding.display" />
+      <defaultValueString value="observatie betreffende feces (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:clothing">
+      <path value="Observation.component" />
+      <sliceName value="clothing" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component:fecalDiapers">
+      <path value="Observation.component" />
+      <sliceName value="fecalDiapers" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:fecalDiapers.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160281000146105" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:fecalDiapers.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:fecalDiapers.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="160281000146105" />
+    </element>
+    <element id="Observation.component:fecalDiapers.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <defaultValueString value="aantal poepluiers (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.component:fecalDiapers.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2-ext" />
+        <map value="peri32-dataelement-9957" />
+        <comment value="PoepluiersWaarde" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

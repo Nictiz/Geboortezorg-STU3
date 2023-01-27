@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A CareTeam profile describing the involvement of (other) care providers in the care of a patient and her child, such as a pediatrician.&#xD;&#xA;- These care providers are included as participants in the CareTeam using the CareTeam.participant.member element. Participants may either be Practitioners or Organizations.&#xD;&#xA;- Their role and period of involvement are described at the participant level (that is CareTeam.participant.role and CareTeam.participant.period).&#xD;&#xA;- The reason of involvement is described in CareTeam.reasonCode" />
+  <description value="A CareTeam profile describing the involvement of (other) care providers in the care of a patient and her child, such as a pediatrician.&#xD;&#xA;* These care providers are included as participants in the CareTeam using the CareTeam.participant.member element. Participants may either be Practitioners or Organizations.&#xD;&#xA;* Their role and period of involvement are described at the participant level (that is CareTeam.participant.role and CareTeam.participant.period).&#xD;&#xA;* The reason of involvement is described in CareTeam.reasonCode" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -54,12 +54,48 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-careteam" />
   <derivation value="constraint" />
   <differential>
+    <element id="CareTeam">
+      <path value="CareTeam" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3388" />
+        <comment value="ZorgTeam" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10554" />
+        <comment value="Betrokkenheid kinderarts" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10795" />
+        <comment value="Betrokkenheid andere zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4341" />
+        <comment value="Betrokkenheid andere zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CareTeam.name">
+      <path value="CareTeam.name" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3389" />
+        <comment value="ZorgTeamNaam" />
+      </mapping>
+    </element>
     <element id="CareTeam.subject">
       <path value="CareTeam.subject" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1320" />
+        <comment value="Patient" />
+      </mapping>
     </element>
     <element id="CareTeam.context">
       <path value="CareTeam.context" />
@@ -104,6 +140,26 @@
         <map value="peri23-dataelement-82335" />
         <comment value="Zorginstelling LVR-ID" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3392" />
+        <comment value="ZorgTeamLid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2128" />
+        <comment value="Contactpersoon" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1331" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1681" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
     <element id="CareTeam.participant.member.extension">
       <path value="CareTeam.participant.member.extension" />
@@ -130,15 +186,13 @@
         <map value="peri23-dataelement-82119" />
         <comment value="Kinderarts betrokken?" />
       </mapping>
+    </element>
+    <element id="CareTeam.participant.period">
+      <path value="CareTeam.participant.period" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1681" />
-        <comment value="Zorgverlener" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2694" />
-        <comment value="Zorgverlener" />
+        <map value="peri32-dataelement-1337" />
+        <comment value="TijdsInterval" />
       </mapping>
     </element>
     <element id="CareTeam.participant.period.start">
@@ -167,6 +221,19 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82123" />
         <comment value="Reden betrokkenheid van de kinderarts: pediatrische verwijsindicaties." />
+      </mapping>
+    </element>
+    <element id="CareTeam.reasonReference">
+      <path value="CareTeam.reasonReference" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3390" />
+        <comment value="Probleem zorgteam" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2691" />
+        <comment value="Reden betrokkenheid" />
       </mapping>
     </element>
   </differential>

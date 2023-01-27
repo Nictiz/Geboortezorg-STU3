@@ -1,5 +1,5 @@
 <Encounter xmlns="http://hl7.org/fhir">
-    <id value="kraambed"/> 
+    <id value="contact-kraamweek"/> 
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
     </meta>
@@ -28,11 +28,13 @@
         <display value="example" />
     </subject> 
     <episodeOfCare> 
-        <reference value="EpisodeOfCare/kraamzorg"/> 
-        <display value="Kraamzorg dossier" />
+        <reference value="EpisodeOfCare/zwangerschapsdossier"/> 
+        <display value="Zwangerschapsdossier" />
     </episodeOfCare> 
     <participant>
         <individual>
+            <reference value="Practitioner/kraamverzorgsterA"/>
+            <display value="Kraamverzorgster A"/>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
                     <reference value="PractitionerRole/kraamverzorgsterA"/>
