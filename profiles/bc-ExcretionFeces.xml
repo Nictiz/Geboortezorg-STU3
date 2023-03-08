@@ -101,26 +101,30 @@
         <comment value="ObservatieSpecimen" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364689004" />
-      </patternCoding>
+    <element id="Observation.component:clothing">
+      <path value="Observation.component" />
+      <sliceName value="clothing" />
+      <max value="0" />
     </element>
-    <element id="Observation.component.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
+    <element id="Observation.component:feces">
+      <path value="Observation.component" />
+      <sliceName value="feces" />
+      <max value="1" />
     </element>
-    <element id="Observation.component.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="364689004" />
+    <element id="Observation.component:feces.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="364689004" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component.code.coding.display">
+    <element id="Observation.component:feces.code.coding.display">
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="observatie betreffende feces (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component.value[x]:valueCodeableConcept">
+    <element id="Observation.component:feces.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
@@ -139,29 +143,9 @@
         <comment value="FecesWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364689004" />
-      </patternCoding>
-    </element>
-    <element id="Observation.component.value[x]:valueCodeableConcept.coding.system">
-      <path value="Observation.component.valueCodeableConcept.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component.value[x]:valueCodeableConcept.coding.code">
-      <path value="Observation.component.valueCodeableConcept.coding.code" />
-      <fixedCode value="364689004" />
-    </element>
-    <element id="Observation.component.value[x]:valueCodeableConcept.coding.display">
-      <path value="Observation.component.valueCodeableConcept.coding.display" />
-      <defaultValueString value="observatie betreffende feces (waarneembare entiteit)" />
-    </element>
-    <element id="Observation.component:clothing">
-      <path value="Observation.component" />
-      <sliceName value="clothing" />
-      <max value="0" />
+    <element id="Observation.component:feces.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:fecalDiapers">
       <path value="Observation.component" />
@@ -198,6 +182,10 @@
         <map value="peri32-dataelement-9957" />
         <comment value="PoepluiersWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:fecalDiapers.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
