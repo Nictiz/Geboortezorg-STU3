@@ -319,17 +319,22 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.partOf:deliveryOrBirthProcedure">
+    <element id="Procedure.partOf:deliveryProcedure">
       <path value="Procedure.partOf" />
-      <sliceName value="deliveryOrBirthProcedure" />
+      <sliceName value="deliveryProcedure" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+      </type>
+    </element>
+    <element id="Procedure.partOf:birthProcedure">
+      <path value="Procedure.partOf" />
+      <sliceName value="birthProcedure" />
       <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
       </type>
     </element>
     <element id="Procedure.category.coding">
