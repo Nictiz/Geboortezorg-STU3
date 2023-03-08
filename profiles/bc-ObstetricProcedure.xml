@@ -842,32 +842,6 @@
         <comment value="VerrichtingLateraliteit" />
       </mapping>
     </element>
-    <element id="Procedure.bodySite.extension:lateralityEpisiotomy">
-      <path value="Procedure.bodySite.extension" />
-      <sliceName value="lateralityEpisiotomy" />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
-      </type>
-    </element>
-    <element id="Procedure.bodySite.extension:lateralityEpisiotomy.valueCodeableConcept:valueCodeableConcept">
-      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="Locatie episiotomie" />
-      <binding>
-        <strength value="extensible" />
-        <description value="EpisiotomieType" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.161--20130110132616" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-30055" />
-        <comment value="Locatie episiotomie" />
-      </mapping>
-    </element>
     <element id="Procedure.outcome.extension">
       <path value="Procedure.outcome.extension" />
       <slicing>
