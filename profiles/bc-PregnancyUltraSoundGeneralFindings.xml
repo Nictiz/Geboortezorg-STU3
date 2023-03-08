@@ -55,6 +55,15 @@
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
+      <comment value="Use the general SNOMED code 278292003|echografische beeldvorming (kwalificatiewaarde) for ultrasound scans in general. To specify the type of US use the SEO valueset. Note that it is allowed to have multiple Codings specifying the same concept with different granularity (so best-practice would be to add both the general SNOMED code as well as the specific type of US if known)." />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8929" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -62,15 +71,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8929" />
-        <comment value="ObservatieMethode" />
-      </mapping>
     </element>
-    <element id="Observation.method:SEO">
-      <path value="Observation.method" />
+    <element id="Observation.method.coding:SEO">
+      <path value="Observation.method.coding" />
       <sliceName value="SEO" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <description value="Methode_1e_trimester_SEO" />
@@ -78,6 +83,18 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.258--20200406134703" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.method.coding:US">
+      <path value="Observation.method.coding" />
+      <sliceName value="US" />
+      <max value="1" />
+      <defaultValueCoding>
+        <display value="echografische beeldvorming (kwalificatiewaarde)" />
+      </defaultValueCoding>
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="278292003" />
+      </patternCoding>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
