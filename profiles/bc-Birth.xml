@@ -120,27 +120,23 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Procedure.code.coding:birthProcedure">
-      <path value="Procedure.code.coding" />
-      <sliceName value="birthProcedure" />
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
       <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="3950001" />
-      </patternCoding>
     </element>
-    <element id="Procedure.code.coding:birthProcedure.system">
-      <path value="Procedure.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding" />
+      <min value="1" />
     </element>
-    <element id="Procedure.code.coding:birthProcedure.code">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
+      <path value="Procedure.code.coding" />
+      <sliceName value="VerrichtingTypeCodelijst" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.code">
       <path value="Procedure.code.coding.code" />
+      <min value="1" />
       <fixedCode value="3950001" />
-    </element>
-    <element id="Procedure.code.coding:birthProcedure.display">
-      <path value="Procedure.code.coding.display" />
-      <defaultValueString value="Birth (finding)" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
