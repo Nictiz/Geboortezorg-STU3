@@ -1109,19 +1109,24 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="$this" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:clothing">
       <path value="Observation.component" />
       <sliceName value="clothing" />
+    </element>
+    <element id="Observation.component:clothing.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8352-7" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -1141,10 +1146,6 @@
         <map value="peri32-dataelement-1422" />
         <comment value="Kleding" />
       </mapping>
-    </element>
-    <element id="Observation.component:clothing.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
