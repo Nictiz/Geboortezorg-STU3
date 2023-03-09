@@ -140,49 +140,20 @@
         <display value="Obstetric procedure (procedure)" />
       </patternCoding>
     </element>
-    <element id="Procedure.category.coding:obstetricProcedure.system">
-      <path value="Procedure.category.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.category.coding:obstetricProcedure.code">
-      <path value="Procedure.category.coding.code" />
-      <fixedCode value="386637004" />
-    </element>
-    <element id="Procedure.category.coding:obstetricProcedure.display">
-      <path value="Procedure.category.coding.display" />
-      <defaultValueString value="Obstetric procedure (procedure)" />
-    </element>
     <element id="Procedure.code.coding">
       <path value="Procedure.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <min value="1" />
     </element>
-    <element id="Procedure.code.coding:deliveryProcedure">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
-      <sliceName value="deliveryProcedure" />
+      <sliceName value="VerrichtingTypeCodelijst" />
       <min value="1" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="236973005" />
-      </patternCoding>
     </element>
-    <element id="Procedure.code.coding:deliveryProcedure.system">
-      <path value="Procedure.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.code.coding:deliveryProcedure.code">
+    <element id="Procedure.code.coding:VerrichtingTypeCodelijst.code">
       <path value="Procedure.code.coding.code" />
+      <min value="1" />
       <fixedCode value="236973005" />
-    </element>
-    <element id="Procedure.code.coding:deliveryProcedure.display">
-      <path value="Procedure.code.coding.display" />
-      <defaultValueString value="Delivery procedure (procedure)" />
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />

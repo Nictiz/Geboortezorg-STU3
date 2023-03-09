@@ -37,10 +37,6 @@
         <comment value="Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
@@ -70,8 +66,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -87,18 +83,6 @@
         <system value="http://snomed.info/sct" />
         <code value="364297003" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:perineum.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:perineum.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="364297003" />
-    </element>
-    <element id="Observation.component:perineum.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="observatie betreffende perineum van vrouw (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:perineum.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -128,18 +112,6 @@
         <system value="http://snomed.info/sct" />
         <code value="366252005" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:sfincter.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:sfincter.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="366252005" />
-    </element>
-    <element id="Observation.component:sfincter.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende integriteit van anussfincter (bevinding)" />
     </element>
     <element id="Observation.component:sfincter.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -171,18 +143,6 @@
         <system value="http://snomed.info/sct" />
         <code value="248842004" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:femaleGenital.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:femaleGenital.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="248842004" />
-    </element>
-    <element id="Observation.component:femaleGenital.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende vrouwelijk geslachtsorgaan (bevinding)" />
     </element>
     <element id="Observation.component:femaleGenital.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />

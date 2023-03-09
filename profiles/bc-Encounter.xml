@@ -150,7 +150,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -290,8 +290,8 @@
       <path value="Encounter.diagnosis" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="condition.reference" />
+          <type value="profile" />
+          <path value="condition.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
