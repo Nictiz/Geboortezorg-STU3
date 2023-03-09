@@ -44,24 +44,12 @@
         <code value="273302005" />
       </patternCoding>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="273302005" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <defaultValueString value="Barthel-index (beoordelingsschaal)" />
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="$this" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -74,12 +62,9 @@
     <element id="Observation.component:bowel.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002004" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:bowel.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Observation.component:bowel.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -111,12 +96,9 @@
     <element id="Observation.component:bladder.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002003" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:bladder.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Observation.component:bladder.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -148,21 +130,9 @@
     <element id="Observation.component:personalGrooming.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="704435007" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002005" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:personalGrooming.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:personalGrooming.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="704435007" />
-    </element>
-    <element id="Observation.component:personalGrooming.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="Personal grooming activities, function (observable entity)" />
     </element>
     <element id="Observation.component:personalGrooming.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -194,21 +164,9 @@
     <element id="Observation.component:toiletUse.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="284906000" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002006" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:toiletUse.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:toiletUse.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="284906000" />
-    </element>
-    <element id="Observation.component:toiletUse.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="vermogen toilet te gebruiken (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:toiletUse.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -240,17 +198,9 @@
     <element id="Observation.component:eating.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="288883002" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002007" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:eating.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:eating.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="288883002" />
     </element>
     <element id="Observation.component:eating.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -282,21 +232,9 @@
     <element id="Observation.component:transfers.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364666007" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002008" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:transfers.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:transfers.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="364666007" />
-    </element>
-    <element id="Observation.component:transfers.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="vermogen tot transfer (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:transfers.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -328,21 +266,9 @@
     <element id="Observation.component:mobility.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="301438001" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002009" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:mobility.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:mobility.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="301438001" />
-    </element>
-    <element id="Observation.component:mobility.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="vermogen om zich te mobiliseren (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:mobility.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -374,21 +300,9 @@
     <element id="Observation.component:dressingAndUndressing.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="365222007" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002010" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:dressingAndUndressing.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:dressingAndUndressing.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="365222007" />
-    </element>
-    <element id="Observation.component:dressingAndUndressing.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende vermogen om activiteit uit te voeren om zich te kleden (bevinding)" />
     </element>
     <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -419,22 +333,10 @@
     </element>
     <element id="Observation.component:walkingStairs.code.coding">
       <path value="Observation.component.code.coding" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="365115005" />
-      </fixedCoding>
-    </element>
-    <element id="Observation.component:walkingStairs.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:walkingStairs.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="365115005" />
-    </element>
-    <element id="Observation.component:walkingStairs.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende vermogen om trap te nemen (bevinding)" />
+      <patternCoding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002011" />
+      </patternCoding>
     </element>
     <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -466,21 +368,9 @@
     <element id="Observation.component:bathingAndShowering.code.coding">
       <path value="Observation.component.code.coding" />
       <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="365182004" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
+        <code value="4002012" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:bathingAndShowering.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:bathingAndShowering.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="365182004" />
-    </element>
-    <element id="Observation.component:bathingAndShowering.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende vermogen om te douchen (bevinding)" />
     </element>
     <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -509,9 +399,12 @@
       <sliceName value="totalScore" />
       <max value="1" />
     </element>
-    <element id="Observation.component:totalScore.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
+    <element id="Observation.component:totalScore.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="273302005" />
+      </patternCoding>
     </element>
     <element id="Observation.component:totalScore.value[x]:valueQuantity">
       <path value="Observation.component.value[x]" />

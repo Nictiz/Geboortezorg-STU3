@@ -66,31 +66,9 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:FeedingSupplement">
       <path value="Observation.component" />
       <sliceName value="FeedingSupplement" />
-    </element>
-    <element id="Observation.component:FeedingSupplement.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:FeedingSupplement.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="373453009" />
     </element>
     <element id="Observation.component:FeedingSupplement.valueString:valueString">
       <path value="Observation.component.valueString" />
@@ -104,14 +82,6 @@
     <element id="Observation.component:FeedingFrequency">
       <path value="Observation.component" />
       <sliceName value="FeedingFrequency" />
-    </element>
-    <element id="Observation.component:FeedingFrequency.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:FeedingFrequency.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="364653007" />
     </element>
     <element id="Observation.component:FeedingFrequency.valueQuantity:valueQuantity">
       <path value="Observation.component.valueQuantity" />
@@ -193,18 +163,6 @@
         <comment value="VoedingDuur" />
       </mapping>
     </element>
-    <element id="Observation.component:FeedingType.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:FeedingType.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="109021000146107" />
-    </element>
-    <element id="Observation.component:FeedingType.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="Infant food type" />
-    </element>
     <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
@@ -226,24 +184,14 @@
       <sliceName value="SupplementaryFeeding" />
       <max value="1" />
     </element>
-    <element id="Observation.component:SupplementaryFeeding.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="158451000146107" />
-      </patternCoding>
-    </element>
-    <element id="Observation.component:SupplementaryFeeding.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:SupplementaryFeeding.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="158451000146107" />
-    </element>
-    <element id="Observation.component:SupplementaryFeeding.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="type bijvoeding voor zuigeling (waarneembare entiteit)" />
+    <element id="Observation.component:SupplementaryFeeding.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="158451000146107" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:SupplementaryFeeding.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -256,10 +204,6 @@
         <map value="peri32-dataelement-10506" />
         <comment value="Bijvoeding?" />
       </mapping>
-    </element>
-    <element id="Observation.component:SupplementaryFeeding.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

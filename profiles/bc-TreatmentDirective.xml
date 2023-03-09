@@ -266,13 +266,6 @@
       <definition value="The joint decision taken with regard to the desirability of performing the indicated treatment. If the agreement is 'Other', 'Specification Other' shall contain the instructions for whether or not to carry out the treatment. Implementers SHALL support the SpecificationOther extension on `.provision.type` for this." />
       <alias value="BehandelBesluit" />
       <condition value="zib-TreatmentDirective2-2" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap 'TreatmentDecisionCodelist-to-ConsentProvisionType' to translate zib terminology to profile terminology in ValueSet 'ConsentProvisionType'" />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.1" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="zib-treatmentdirective2-v1.0-2020EN" />
         <map value="NL-CM:2.2.2" />

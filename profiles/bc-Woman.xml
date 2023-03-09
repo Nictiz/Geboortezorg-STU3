@@ -253,13 +253,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="EthnicGroup" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-10400" />
@@ -275,6 +268,17 @@
         <map value="peri32-dataelement-913" />
         <comment value="EtniciteitType" />
       </mapping>
+    </element>
+    <element id="Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept">
+      <path value="Patient.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="EthnicGroup" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.3--20140519143530" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text">
       <path value="Patient.extension.valueCodeableConcept.text" />
