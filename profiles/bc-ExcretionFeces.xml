@@ -136,12 +136,14 @@
       <sliceName value="fecalDiapers" />
       <max value="1" />
     </element>
-    <element id="Observation.component:fecalDiapers.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160281000146105" />
-      </patternCoding>
+    <element id="Observation.component:fecalDiapers.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160281000146105" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:fecalDiapers.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
