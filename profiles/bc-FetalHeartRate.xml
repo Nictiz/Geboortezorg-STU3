@@ -54,14 +54,6 @@
         <code value="249043002" />
       </patternCoding>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="249043002" />
-    </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
@@ -146,8 +138,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -163,14 +155,6 @@
         <system value="http://snomed.info/sct" />
         <code value="249044008" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="249044008" />
     </element>
     <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />

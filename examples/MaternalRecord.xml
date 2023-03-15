@@ -1,41 +1,26 @@
-
-<!-- voorgaande_zwangerschap_samenvatting_23 transactionRef="2.16.840.1.113883.2.4.3.11.60.90.77.4.2469" -->
 <EpisodeOfCare xmlns="http://hl7.org/fhir">
     <id value="dossier-example"/>
     <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
     </meta>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+        <value value="72365"/>
+    </identifier>
     <status value="finished"/>
     <type>
-        <!-- Vaste terminologie -->
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="364320009"/>
             <display value="Pregnancy observable (observable entity)"/>
         </coding>
     </type>
-    <!-- Eindverantwoordelijk perinatale periode -->
-    <type>
-        <coding>
-            <system value="PeriodeZorgverlening"/>
-            <code value="4"/>
-            <display value="Uitdrijving"/>
-        </coding>
-    </type>
-    <type>
-        <coding>
-            <system value="PeriodeZorgverlening"/>
-            <code value="5"/>
-            <display value="Nageboortetijdperk"/>
-        </coding>
-    </type>
-    <!-- Verwijzing naar de bijbehorende zwangerschap als Condition. -->
     <diagnosis>
         <condition>
-            <reference value="Condition/wouden-zwanger1"/>
+            <reference value="Condition/examplezwanger1"/>
         </condition>
     </diagnosis>
-    <!-- Referentie patiënt -->
     <patient>
         <reference value="Patient/example"/>
         <display value="Example Patient"/>

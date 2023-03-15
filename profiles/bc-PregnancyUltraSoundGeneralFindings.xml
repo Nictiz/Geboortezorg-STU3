@@ -55,6 +55,15 @@
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
+      <comment value="Use the general SNOMED code 278292003|echografische beeldvorming (kwalificatiewaarde) for ultrasound scans in general. To specify the type of US use the SEO valueset. Note that it is allowed to have multiple Codings specifying the same concept with different granularity (so best-practice would be to add both the general SNOMED code as well as the specific type of US if known)." />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8929" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -62,15 +71,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8929" />
-        <comment value="ObservatieMethode" />
-      </mapping>
     </element>
-    <element id="Observation.method:SEO">
-      <path value="Observation.method" />
+    <element id="Observation.method.coding:SEO">
+      <path value="Observation.method.coding" />
       <sliceName value="SEO" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <description value="Methode_1e_trimester_SEO" />
@@ -78,6 +83,15 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.258--20200406134703" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Observation.method.coding:US">
+      <path value="Observation.method.coding" />
+      <sliceName value="US" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="278292003" />
+      </patternCoding>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
@@ -100,18 +114,6 @@
         <system value="http://snomed.info/sct" />
         <code value="370379002" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:conclusion.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:conclusion.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="370379002" />
-    </element>
-    <element id="Observation.component:conclusion.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="bevinding betreffende prenatale echografie (bevinding)" />
     </element>
     <element id="Observation.component:conclusion.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -144,18 +146,6 @@
         <code value="609415007" />
       </patternCoding>
     </element>
-    <element id="Observation.component:suspicionAbnormalities.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:suspicionAbnormalities.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="609415007" />
-    </element>
-    <element id="Observation.component:suspicionAbnormalities.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="verdenking op foetale afwijking (situatie)" />
-    </element>
     <element id="Observation.component:suspicionAbnormalities.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
@@ -186,18 +176,6 @@
         <system value="http://snomed.info/sct" />
         <code value="171024009" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:advice.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:advice.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="171024009" />
-    </element>
-    <element id="Observation.component:advice.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="advies over behandeling gegeven (situatie)" />
     </element>
     <element id="Observation.component:advice.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />

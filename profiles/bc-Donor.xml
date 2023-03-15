@@ -49,23 +49,21 @@
         <comment value="Eiceldonatie" />
       </mapping>
     </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.system">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.system" />
-      <defaultValueUri value="http://snomed.info/sct" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.code">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.code" />
-      <defaultValueCode value="430882007" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.display">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.display" />
-      <defaultValueString value="Human oocyte donor (person)" />
+    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept">
+      <path value="RelatedPerson.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="430882007" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-woman" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
     </element>
     <element id="RelatedPerson.birthDate">

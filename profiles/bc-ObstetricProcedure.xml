@@ -313,23 +313,28 @@
       <path value="Procedure.partOf" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="reference" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Procedure.partOf:deliveryOrBirthProcedure">
+    <element id="Procedure.partOf:deliveryProcedure">
       <path value="Procedure.partOf" />
-      <sliceName value="deliveryOrBirthProcedure" />
+      <sliceName value="deliveryProcedure" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+      </type>
+    </element>
+    <element id="Procedure.partOf:birthProcedure">
+      <path value="Procedure.partOf" />
+      <sliceName value="birthProcedure" />
       <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
       </type>
     </element>
     <element id="Procedure.category.coding">
@@ -350,18 +355,6 @@
         <system value="http://snomed.info/sct" />
         <code value="386637004" />
       </patternCoding>
-    </element>
-    <element id="Procedure.category.coding:obstetricProcedure.system">
-      <path value="Procedure.category.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.category.coding:obstetricProcedure.code">
-      <path value="Procedure.category.coding.code" />
-      <fixedCode value="386637004" />
-    </element>
-    <element id="Procedure.category.coding:obstetricProcedure.display">
-      <path value="Procedure.category.coding.display" />
-      <defaultValueString value="Obstetric procedure (procedure)" />
     </element>
     <element id="Procedure.code">
       <path value="Procedure.code" />
@@ -674,8 +667,8 @@
       <path value="Procedure.reasonReference" />
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -835,32 +828,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7904" />
         <comment value="VerrichtingLateraliteit" />
-      </mapping>
-    </element>
-    <element id="Procedure.bodySite.extension:lateralityEpisiotomy">
-      <path value="Procedure.bodySite.extension" />
-      <sliceName value="lateralityEpisiotomy" />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
-      </type>
-    </element>
-    <element id="Procedure.bodySite.extension:lateralityEpisiotomy.valueCodeableConcept:valueCodeableConcept">
-      <path value="Procedure.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="Locatie episiotomie" />
-      <binding>
-        <strength value="extensible" />
-        <description value="EpisiotomieType" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.161--20130110132616" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-30055" />
-        <comment value="Locatie episiotomie" />
       </mapping>
     </element>
     <element id="Procedure.outcome.extension">
