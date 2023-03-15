@@ -142,12 +142,14 @@
       <sliceName value="administrationDate" />
       <max value="1" />
     </element>
-    <element id="Observation.component:administrationDate.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="439771001" />
-      </patternCoding>
+    <element id="Observation.component:administrationDate.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="439771001" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:administrationDate.value[x]:valueDateTime">
       <path value="Observation.component.value[x]" />
