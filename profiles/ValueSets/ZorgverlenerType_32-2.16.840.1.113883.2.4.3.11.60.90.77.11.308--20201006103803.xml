@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2020-10-06T10:38:03+02:00"/>
+         <start value="2020-10-06T10:38:03+01:00"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.308--20201006103803"/>
@@ -37,20 +37,6 @@
          </concept>
       </include>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
-         <concept>
-            <code value="0801"/>
-            <display value="Verloskundigen, met bevoegdheid echoscopie"/>
-         </concept>
-         <concept>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG)."/>
-            </extension>
-            <code value="86.000"/>
-            <display value="VIG-er"/>
-         </concept>
-      </include>
-      <include>
          <system value="http://fhir.nl/fhir/NamingSystem/uzi-rolcode"/>
          <concept>
             <code value="01.000"/>
@@ -69,8 +55,19 @@
             <display value="gynaecoloog"/>
          </concept>
          <concept>
+            <code value="0801"/>
+            <display value="Verloskundigen, met bevoegdheid echoscopie"/>
+         </concept>
+         <concept>
             <code value="30.000"/>
             <display value="verpleegkundige"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Een kraamverzorgende met een MBO opleiding tot Verzorgende Individuele Gezondheidszorg (VIG)."/>
+            </extension>
+            <code value="86.000"/>
+            <display value="VIG-er"/>
          </concept>
       </include>
       <include>
@@ -132,7 +129,7 @@
             <display value="gespecialiseerd verpleegkundige (beroep)"/>
          </concept>
          <concept>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                <valueString value="Een kraamverzorgende die geen MBO opleiding heeft (geen verzorgende individuele gezondheidszorg, VIG), maar een andere opleiding."/>
             </extension>
             <code value="151531000146108"/>
