@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-Fetus" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-Fetus" />
   <title value="bc-Fetus" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -54,6 +54,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodySite" />
   <derivation value="constraint" />
   <differential>
+    <element id="BodySite">
+      <path value="BodySite" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10803" />
+        <comment value="Foetus" />
+      </mapping>
+    </element>
     <element id="BodySite.extension">
       <path value="BodySite.extension" />
       <slicing>
@@ -79,7 +87,7 @@
       <path value="BodySite.code.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -91,16 +99,7 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="83418008" />
-        <display value="Entire fetus (body structure)" />
       </patternCoding>
-    </element>
-    <element id="BodySite.code.coding:fetus.system">
-      <path value="BodySite.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="BodySite.code.coding:fetus.code">
-      <path value="BodySite.code.coding.code" />
-      <fixedCode value="83418008" />
     </element>
     <element id="BodySite.patient">
       <path value="BodySite.patient" />

@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild" />
   <name value="bc-AbilityToTakeCareOfChild" />
   <title value="bc-AbilityToTakeCareOfChild" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -33,7 +33,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9982" />
-        <comment value="ZorgKind (Observatie)" />
+        <comment value="ZorgVoorKind (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.code.coding">
@@ -43,20 +43,9 @@
         <code value="129879003" />
       </patternCoding>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="129879003" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <defaultValueString value="bevinding betreffende ouderschap (bevinding)" />
-    </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9983" />
@@ -67,7 +56,7 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9986" />
+        <map value="peri32-dataelement-9991" />
         <comment value="Toelichting" />
       </mapping>
     </element>
@@ -86,24 +75,12 @@
         <code value="129265001" />
       </patternCoding>
     </element>
-    <element id="Observation.method.coding.system">
-      <path value="Observation.method.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.method.coding.code">
-      <path value="Observation.method.coding.code" />
-      <fixedCode value="129265001" />
-    </element>
-    <element id="Observation.method.coding.display">
-      <path value="Observation.method.coding.display" />
-      <defaultValueString value="evaluatie (kwalificatiewaarde)" />
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="$this" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -120,18 +97,6 @@
         <code value="160351000146107" />
       </patternCoding>
     </element>
-    <element id="Observation.component:uncertainty.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:uncertainty.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="160351000146107" />
-    </element>
-    <element id="Observation.component:uncertainty.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="mate van onzekerheid over zorgen voor kind (waarnembare entiteit)" />
-    </element>
     <element id="Observation.component:uncertainty.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
@@ -147,13 +112,9 @@
       </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9986" />
+        <map value="peri32-dataelement-9985" />
         <comment value="OnzekerheidWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:uncertainty.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:ability">
       <path value="Observation.component" />
@@ -166,18 +127,6 @@
         <system value="http://snomed.info/sct" />
         <code value="160341000146109" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:ability.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:ability.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="160341000146109" />
-    </element>
-    <element id="Observation.component:ability.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="vermogen tot zorgen voor kind (waarnembare entiteit)" />
     </element>
     <element id="Observation.component:ability.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -197,10 +146,6 @@
         <map value="peri32-dataelement-9992" />
         <comment value="VaardigheidWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:ability.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

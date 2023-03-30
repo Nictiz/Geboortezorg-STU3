@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-IndividualCareplan" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCareplan" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-IndividualCareplan" />
   <title value="bc-IndividualCareplan" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -48,14 +48,14 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="CarePlan.extension:caseManager">
+    <element id="CarePlan.extension:coordinator">
       <path value="CarePlan.extension" />
-      <sliceName value="caseManager" />
+      <sliceName value="coordinator" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-casemanager" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -83,16 +83,7 @@
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="736377005" />
-        <display value="Maternity care plan" />
       </patternCoding>
-    </element>
-    <element id="CarePlan.category:individualCarePlanCategory.coding.system">
-      <path value="CarePlan.category.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="CarePlan.category:individualCarePlanCategory.coding.code">
-      <path value="CarePlan.category.coding.code" />
-      <fixedCode value="736377005" />
     </element>
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
@@ -145,17 +136,24 @@
         <comment value="Betrokkenen" />
       </mapping>
     </element>
-    <element id="CarePlan.activity.detail.goal">
-      <path value="CarePlan.activity.detail.goal" />
+    <element id="CarePlan.goal">
+      <path value="CarePlan.goal" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Goal" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan-Goal" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8810" />
         <comment value="Behandeldoel" />
       </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.goal">
+      <path value="CarePlan.activity.detail.goal" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Goal" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

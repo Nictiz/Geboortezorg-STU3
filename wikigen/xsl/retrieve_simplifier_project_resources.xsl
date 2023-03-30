@@ -42,9 +42,10 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <maps>
                 <map>
                     <name value="{$projectUrl}"/>
-                    <xsl:for-each select="f:Bundle/f:entry/f:resource/f:StructureDefinition">
-                        <xsl:apply-templates select="." mode="makeTables"/>
-                    </xsl:for-each>
+                        <xsl:apply-templates select="f:Bundle/f:entry/f:resource/f:StructureDefinition" mode="makeTables">
+                            <xsl:sort select="f:type/@value"/>
+                            <xsl:sort select="f:name/@value"/>
+                        </xsl:apply-templates>
                 </map>
             </maps>
         </xsl:for-each>
@@ -55,6 +56,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     <xsl:template match="f:StructureDefinition" mode="makeTables">
         <xsl:variable name="id" select="f:id/@value"/>  
+        <xsl:variable name="pattern" select="substring-before(substring-after(f:description/@value,'[['),']]')"/>
+        <xsl:variable name="patternPage" select="substring-after($pattern,'| https://informatiestandaarden.nictiz.nl/wiki/')"/>
+        <xsl:variable name="patternName" select="substring-before($pattern,' |')"/>
         <xsl:element name="profile" namespace="">
             <xsl:attribute name="id" select="$id"/>
             <xsl:attribute name="url" select="f:url/@value"/>
@@ -62,7 +66,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:attribute name="description" select="f:description/@value"/>
             <xsl:attribute name="kind" select="f:kind/@value"/>
             <xsl:attribute name="type" select="f:type/@value"/>
-            <xsl:attribute name="pattern" select="concat('[[',substring-before(substring-after(f:description/@value,'[['),']]'),']]')"/>
+            <xsl:attribute name="pattern" select="if ($pattern) then concat('[[',$patternPage,'|',$patternName,']]') else $pattern"/>
         </xsl:element>
     </xsl:template>
     

@@ -2,11 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-FetalHeartRate" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-FetalHeartRate" />
   <title value="bc-FetalHeartRate" />
-  <status value="draft" />
-  <fhirVersion value="3.0.2" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -18,6 +17,7 @@
   </contact>
   <description value="An Observation profile describing fetal heart rate as defined by BabyConnect. The base definition is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
@@ -47,16 +47,16 @@
         <comment value="Foetale hartslag (Hartfrequentie)" />
       </mapping>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <patternUri value="http://snomed.info/sct" />
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="249043002" />
+      </patternCoding>
     </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <patternCode value="249043002" />
-    </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1778" />
@@ -64,22 +64,27 @@
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.valueQuantity" />
+      <path value="Observation.value[x]" />
       <sliceName value="valueQuantity" />
-      <type>
-        <code value="Quantity" />
-      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1777" />
         <comment value="HartfrequentieWaarde" />
       </mapping>
     </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1782" />
+        <comment value="InterpretatieFrequentie" />
+      </mapping>
+    </element>
     <element id="Observation.interpretation.coding">
       <path value="Observation.interpretation.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -93,11 +98,6 @@
         <description value="Frequentie hartslag" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.235--20170203161446" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1782" />
-        <comment value="InterpretatieFrequentie" />
-      </mapping>
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -107,11 +107,19 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1779" />
+        <comment value="HartslagMeetMethode" />
+      </mapping>
+    </element>
     <element id="Observation.method.coding">
       <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -125,18 +133,13 @@
         <description value="Hartactie op basis van" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1779" />
-        <comment value="HartslagMeetMethode" />
-      </mapping>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -145,19 +148,13 @@
       <path value="Observation.component" />
       <sliceName value="heartRateRegularity" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1781" />
-        <comment value="HartslagRegelmatigheid" />
-      </mapping>
     </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <patternUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:heartRateRegularity.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <patternCode value="249044008" />
+    <element id="Observation.component:heartRateRegularity.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="249044008" />
+      </patternCoding>
     </element>
     <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -170,6 +167,11 @@
         <description value="Regelmaat hartslag" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.234--20170203161304" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1781" />
+        <comment value="HartslagRegelmatigheid" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

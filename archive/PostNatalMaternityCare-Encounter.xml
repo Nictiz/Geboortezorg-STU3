@@ -1,0 +1,60 @@
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="contact-kraamweek"/> 
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter"/>
+    </meta>
+    <status value="finished"/> 
+    <class> 
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/ActCode"/> 
+                    <code value="HH"/> 
+                    <display value="Home"/>                 
+                </coding>
+                <text value="Thuis"/>
+            </valueCodeableConcept>
+        </extension>
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="133906008" />
+            <display value="postnatale zorg (regime/therapy)" />
+        </coding>        
+    </type>
+    <subject> 
+        <reference value="Patient/example"/> 
+        <display value="example" />
+    </subject> 
+    <episodeOfCare> 
+        <reference value="EpisodeOfCare/zwangerschapsdossier"/> 
+        <display value="Zwangerschapsdossier" />
+    </episodeOfCare> 
+    <participant>
+        <individual>
+            <reference value="Practitioner/kraamverzorgsterA"/>
+            <display value="Kraamverzorgster A"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <valueReference>
+                    <reference value="PractitionerRole/kraamverzorgsterA"/>
+                    <display value="Kraamverzorgster A"/>
+                </valueReference> 
+            </extension>
+        </individual>
+    </participant>
+    <period>
+        <start value="2016-07-30T08:30:00+01:00" />
+        <end value="2016-07-30T17:00:00+01:00" />
+    </period>
+    <diagnosis>
+        <condition>
+            <reference value="Condition/zwangerschap"/>
+            <display value="Zwangerschap 1"/>
+        </condition>
+    </diagnosis>
+    <serviceProvider>
+        <reference value="Organization/kraamzorgorganisatieA"/> 
+        <display value="Kraamzorgorganisatie A" />
+    </serviceProvider>
+</Encounter> 

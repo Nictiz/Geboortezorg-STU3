@@ -1,0 +1,200 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.11.324--20210518101158"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2021-05-18T10:11:58+01:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.324--20210518101158"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.11.324"/>
+    </identifier>
+    <version value="2021-05-18T10:11:58"/>
+    <name value="ProbleemNaam_ProblKindObstetrie"/>
+    <title value="ProbleemNaam_Probleem Kind (Obstetrie)"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="ProbleemNaam_Probleem Kind (Obstetrie)"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="363225006"/>
+                <display value="neonatale aandoening van ademhalingsstelsel (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="IRDS (Ongeclassificeerd)"/>
+                </extension>
+                <code value="46775006"/>
+                <display value="'respiratory distress'-syndroom bij pasgeborene (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="278927005"/>
+                <display value="meconium-aspiratie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="276533002"/>
+                <display value="neonataal aspiratiesyndroom (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="BPD"/>
+                </extension>
+                <code value="67569000"/>
+                <display value="bronchopulmonale dysplasie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="363696006"/>
+                <display value="neonatale cardiovasculaire aandoening (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="128271002"/>
+                <display value="neonatale infectieziekte (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="82353009"/>
+                <display value="congenitale infectieziekte (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="CMV"/>
+                </extension>
+                <code value="59527008"/>
+                <display value="congenitale cytomegalovirusinfectie (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lues"/>
+                </extension>
+                <code value="35742006"/>
+                <display value="congenitale syfilis (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Toxoplasmose"/>
+                </extension>
+                <code value="73893000"/>
+                <display value="congenitale toxoplasmose (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Rubella"/>
+                </extension>
+                <code value="1857005"/>
+                <display value="congenitaal rubellasyndroom (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="206376005"/>
+                <display value="neonatale sepsis (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="63171007"/>
+                <display value="acute infectieziekte (aandoening)"/>
+            </concept>
+            <concept>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Neurologische infectie (bijv. meningitis, encefalitis)"/>
+                </extension>
+                <code value="39367000"/>
+                <display value="inflammatoire aandoening van centraal zenuwstelsel (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="840539006"/>
+                <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="840539006"/>
+                <display value="aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="119292006"/>
+                <display value="gastro-intestinale aandoening (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="21401000146106"/>
+                <display value="hematologische aandoening (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="414028007"/>
+                <display value="aandoening van hemopoëtisch systeem bij neonaat (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="13404009"/>
+                <display value="tweelingtransfusiesyndroom (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="736652002+736653007"/>
+                <display value="neonatale stoornis van metabolisme (aandoening)+neonatale aandoening van endocrien systeem (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="281610001"/>
+                <display value="neonatale hyperbilirubinemie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="52767006"/>
+                <display value="neonatale hypoglykemie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="276557002"/>
+                <display value="neonatale hyperglykemie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="44513007"/>
+                <display value="congenitale malformatie van nier (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="118940003"/>
+                <display value="aandoening van zenuwstelsel (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="87476004"/>
+                <display value="neonatale epileptische aanvallen (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="206576006"/>
+                <display value="cerebrale ischemie bij pasgeborene (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="276647007"/>
+                <display value="perinatale intracraniële bloeding (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="205294008"/>
+                <display value="neonatale hypotonie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="56731001"/>
+                <display value="verhoogde spiertonus (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="130976008"/>
+                <display value="verhoogde strekreflex (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="267574006"/>
+                <display value="aandoeningen van zenuwstelsel en zintuigen (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="415297005"/>
+                <display value="prematurenretinopathie (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="95827002"/>
+                <display value="congenitale gehoorstoornis (aandoening)"/>
+            </concept>
+            <concept>
+                <code value="771299009"/>
+                <display value="prematuriteit van zuigeling (aandoening)"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

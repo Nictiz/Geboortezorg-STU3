@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ChildRecord" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildRecord" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-ChildRecord" />
   <title value="bc-ChildRecord" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -46,16 +46,21 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="EpisodeOfCare.type:followUpAfterDischarge">
-      <path value="EpisodeOfCare.type" />
-      <sliceName value="followUpAfterDischarge" />
-      <max value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9705" />
         <comment value="Na ontslag" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9735" />
+        <comment value="Na 2 jaar" />
+      </mapping>
+    </element>
+    <element id="EpisodeOfCare.type:followUpAfterDischarge">
+      <path value="EpisodeOfCare.type" />
+      <sliceName value="followUpAfterDischarge" />
+      <max value="1" />
     </element>
     <element id="EpisodeOfCare.type:followUpAfterDischarge.coding">
       <path value="EpisodeOfCare.type.coding" />
@@ -64,27 +69,10 @@
         <code value="406151001" />
       </patternCoding>
     </element>
-    <element id="EpisodeOfCare.type:followUpAfterDischarge.coding.system">
-      <path value="EpisodeOfCare.type.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="EpisodeOfCare.type:followUpAfterDischarge.coding.code">
-      <path value="EpisodeOfCare.type.coding.code" />
-      <fixedCode value="406151001" />
-    </element>
-    <element id="EpisodeOfCare.type:followUpAfterDischarge.coding.display">
-      <path value="EpisodeOfCare.type.coding.display" />
-      <defaultValueString value="follow-up na ontslag (bevinding)" />
-    </element>
     <element id="EpisodeOfCare.type:followUpAfter2years">
       <path value="EpisodeOfCare.type" />
       <sliceName value="followUpAfter2years" />
       <max value="1" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9735" />
-        <comment value="Na 2 jaar" />
-      </mapping>
     </element>
     <element id="EpisodeOfCare.type:followUpAfter2years.coding">
       <path value="EpisodeOfCare.type.coding" />
@@ -93,14 +81,6 @@
         <code value="199581000000104" />
         <display value="Follow-up 2 years (finding)" />
       </patternCoding>
-    </element>
-    <element id="EpisodeOfCare.type:followUpAfter2years.coding.system">
-      <path value="EpisodeOfCare.type.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="EpisodeOfCare.type:followUpAfter2years.coding.code">
-      <path value="EpisodeOfCare.type.coding.code" />
-      <fixedCode value="199581000000104" />
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />

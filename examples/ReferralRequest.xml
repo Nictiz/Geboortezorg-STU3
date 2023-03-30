@@ -3,16 +3,6 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
     </meta>
-    <!-- Perinatale periode (peri23-dataelement-20367) -->
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-periodOfTransfer">
-        <valueCodeableConcept>
-            <coding> 
-                <system value="PerinatalePeriodeOverdrachtConsult"/> 
-                <code value="2"/> 
-                <display value="Voor 28e week"/> 
-            </coding>   
-        </valueCodeableConcept>
-    </extension>
     <!-- Contactsoort (peri32-dataelement-10487) -->
     <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype">
         <valueCodeableConcept>
@@ -25,66 +15,42 @@
     </extension>
     <status value="active"/> 
     <intent value="order"/> 
-    <!-- Type verwijzing (peri23-dataelement-82581) -->
+    <!-- Type verwijzing (peri32-dataelement-10297) -->
     <type> 
-        <!-- Type verwijzing (peri32-dataelement-9683) -->
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-referraltype">
-            <valueCodeableConcept>
-                <coding> 
-                    <system value="http://snomed.info/sct"/> 
-                    <code value="308292007"/> 
-                    <display value="overdracht van zorg (verrichting)"/> 
-                </coding>   
-            </valueCodeableConcept>
-        </extension>
         <coding> 
             <system value="http://snomed.info/sct"/> 
             <code value="308292007"/> 
-            <display value="Transfer of care (procedure)"/> 
-        </coding> 
+            <display value="overdracht van zorg (verrichting)"/> 
+        </coding>   
     </type> 
     <subject> 
         <reference value="Patient/example"/> 
+        <display value="Zwangere"/> 
     </subject> 
     <context> 
         <reference value="EpisodeOfCare/example"/> 
+        <display value="Zwangerschapsdossier"/> 
     </context> 
     <authoredOn value="2019-01-18"/> 
-    <!-- verwijzing van (peri23-dataelement-82550) -->
+    <!-- verwijzing van (peri32-dataelement-8879) -->
     <requester> 
         <agent> 
             <reference value="Practitioner/requestingagentexample"/> 
+            <display value="Aanvragende zorgverlener"/> 
         </agent> 
-        <!-- specialisme (peri23-dataelement-82554) -->
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-requesterSpecialty">
-            <valueCodeableConcept>
-                <coding> 
-                    <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
-                    <code value="01"/> 
-                    <display value="Verloskundige"/> 
-                </coding> 
-            </valueCodeableConcept>
-        </extension>
     </requester> 
-    <!-- verwijzing naar zorginstelling (specialisme) (peri23-dataelement-82580) -->
-    <specialty> 
-        <coding> 
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.15.1"/> 
-            <code value="02"/> 
-            <display value="Gynaecoloog 2e lijn"/> 
-        </coding> 
-    </specialty> 
-    <!-- zorginstelling (peri23-dataelement-82578) -->
+    <!-- verwijzing naar (peri32-dataelement-8881) -->
     <recipient> 
         <reference value="Organization/recipientexample"/>
+        <display value="Ontvangende organisatie"/> 
     </recipient> 
-    <!-- overig (peri23-dataelement-82442) -->
-    <reasonCode> 
-        <coding>
-            <system value="VILLijst"/>
-            <code value="9999"/>
-            <display value="Overige verwijsreden"/>
-        </coding>
-        <text value="Op verzoek van mevrouw"/> 
-    </reasonCode> 
+    <!-- reden van verwijzing (peri32-dataelement-8884) -->
+    <reasonReference> 
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-reasonReference">
+            <valueReference>
+                <reference value="Procedure/verrichting"/> 
+                <display value="Verrichting"/>  
+            </valueReference>
+        </extension>
+    </reasonReference> 
 </ReferralRequest> 

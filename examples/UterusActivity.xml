@@ -20,8 +20,6 @@
         <display value="Zwangerschapsdossier example zwangerschap 1" />
     </context>
     <effectivePeriod>
-        <start value="2016-02-21T21:45:00+01:00" />
-        <end value="2016-02-21T23:45:00+01:00" />
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-timeinterval-duration">
             <valueQuantity>
                 <value value="2" />
@@ -30,10 +28,17 @@
                 <code value="h" />
             </valueQuantity>
         </extension>
+        <start value="2016-02-21T21:45:00+01:00" />
     </effectivePeriod>
     <performer>
-        <reference value="Practitioner/zorgverlenerX" />
-        <display value="Zorgverlener X" />
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/ZorgverlenerD" />
+                <display value="Zorgverlener D" />
+            </valueReference>
+        </extension>
+        <reference value="Practitioner/ZorgverlenerD" />
+        <display value="Zorgverlener D" />
     </performer>
     <method>
         <coding>
@@ -42,13 +47,6 @@
             <display value="monitoren van weeën met externe transducer (regime/therapie)" />
         </coding>
     </method>
-    <related>
-        <type value="has-member" />
-        <target>
-            <reference value="Observation/fetalMonitoring" />
-            <display value="Foetale monitoring" />
-        </target>
-    </related>
     <component>
         <code>
             <coding>

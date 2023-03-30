@@ -2,19 +2,14 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="parent-education-level"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ParentEducationLevel"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-        <valueReference>
-            <reference value="RelatedPerson/mother" />
-        </valueReference>
-    </extension>
     <status value="final"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="105421008"/>
-            <display value="opleidingsniveau (waarneembare entiteit)"/>
+            <code value="160261000146102"/>
+            <display value="opleiding van vader (waarneembare entiteit)"/>
         </coding>
     </code>
     <subject>
@@ -22,8 +17,8 @@
         <display value="Example" />
     </subject>
     <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier Example"/>
+        <reference value="EpisodeOfCare/kinddossier"/>
+        <display value="Kinddossier Example"/>
     </context>
     <valueCodeableConcept>
         <coding>

@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-PregnancyObservation" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-PregnancyObservation" />
   <title value="bc-PregnancyObservation" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing pregnancy-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as gravidity and parity do not (only) pertain to the Patient but also to a particular pregnancy.&#xD;&#xA;- Pregnancy-related Observations use the focus extension to point to the Condition they are about. Without this, all gravidities would only be Observations about a Patient.&#xD;&#xA;- Pregnancy-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-PregnancyObservation]]" />
+  <description value="An Observation profile describing pregnancy-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as gravidity and parity do not (only) pertain to the Patient but also to a particular pregnancy.&#xD;&#xA;* Pregnancy-related Observations use the focus extension to point to the Condition they are about. Without this, all gravidities would only be Observations about a Patient.&#xD;&#xA;* Pregnancy-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-PregnancyObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -39,6 +39,69 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3346" />
+        <comment value="ATermeDatumItems" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2220" />
+        <comment value="Definitieve a terme datum (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1837" />
+        <comment value="Aantal foetussen (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1711" />
+        <comment value="Meerling zwangerschap (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1845" />
+        <comment value="Aantal foetussen (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1734" />
+        <comment value="Aantal levende kinderen (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1817" />
+        <comment value="Fetal loss (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2134" />
+        <comment value="Leven voelen (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1078" />
+        <comment value="Lichaamsgewicht" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1072" />
+        <comment value="Bloeddruk" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2143" />
+        <comment value="Actuele aantal levende foetus (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4157" />
+        <comment value="TOP nav prenataal onderzoek? (Observatie)" />
+      </mapping>
+    </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
       <slicing>
@@ -115,8 +178,77 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3349" />
+        <comment value="DatumBepaling" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2221" />
+        <comment value="Definitieve a terme DatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1838" />
+        <comment value="AantalFoetussenDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1825" />
+        <comment value="MeerlingZwangerschapDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1735" />
+        <comment value="AantalLevendeKinderenDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1818" />
+        <comment value="FetalLossDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2135" />
+        <comment value="LevenVoelenDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2144" />
+        <comment value="ActueleAantalLevendeFoetusDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4158" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-20540" />
@@ -178,11 +310,190 @@
         <comment value="Afwijkende groei foetus" />
       </mapping>
     </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-PregnancyObservation-value" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-PregnancyObservation-value" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2231" />
+        <comment value="TyperingGemellizwangerschapWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2137" />
+        <comment value="LevenVoelenWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1840" />
+        <comment value="AantalFoetussenWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1740" />
+        <comment value="AantalLevendeKinderenWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1820" />
+        <comment value="FetalLossWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2146" />
+        <comment value="ActueelAantalLevendeFoetusWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueBoolean">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1847" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4160" />
+        <comment value="TOPnavPrenataalOnderzoekWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3347" />
+        <comment value="ATermeDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1729" />
+        <comment value="Datum einde zwangerschap" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2223" />
+        <comment value="Definitieve a terme Waarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1848" />
+        <comment value="DatumOverlijden" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2225" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1843" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1826" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1738" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1824" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2141" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2150" />
+        <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4168" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3348" />
+        <comment value="BepalingsMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1841" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1833" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1736" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1821" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2138" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2147" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4161" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
     <element id="Observation.method.coding">
       <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -205,6 +516,15 @@
         <description value="BepalingsMethodeCodelijst" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.14.1--20200901000000" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2224" />
+        <comment value="Definitieve a terme Methode" />
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

@@ -8,21 +8,12 @@
         <system value="http://hl7.org/fhir/v3/ActCode"/>
         <code value="SS"/>
         <display value="short stay"/>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification" >
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct"/> 
-                    <code value="22232009"/> 
-                    <display value="Hospital (environment)"/>                     
-                </coding>
-            </valueCodeableConcept>            
-        </extension> 
     </class> 
     <type>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="816968003"/>
-            <display value="Labor and birth support"/>
+            <display value="ondersteuning durante partu (regime/therapie)"/>
         </coding>
     </type>
     <subject>
@@ -34,57 +25,36 @@
         <display value="zwangerschap Wouden 3"/>
     </episodeOfCare> 
     <participant>
-        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="aanpakker"/> 
-            </coding>         
-        </type>
-        <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeA"/>
-        </individual>
-    </participant>
-    <participant>
-        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="supervisor"/>
-            </coding>         
-        </type>
-        <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/verloskundigeB"/>
-        </individual>
-    </participant>
-    <participant>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival">
             <valueCodeableConcept>
                 <coding> 
                     <system value="http://snomed.info/sct"/> 
                     <code value="42857002"/> 
-                    <display value="Second stage of labor (finding)"/> 
+                    <display value="tweede fase van partus (bevinding)"/> 
                 </coding>    
             </valueCodeableConcept>
         </extension>
-        <type>
-            <coding> 
-                <system value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type"/>
-                <code value="assistent"/>
-            </coding>         
-        </type>
         <period>
             <start value="2017-06-22T15:15:00+01:00"/>
             <end value="2017-06-22T18:34:00+01:00"/>
         </period>
         <individual>
-            <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <valueReference>
+                    <reference value="http://nictiz.nl/fhir/PractitionerRole/kraamverzorgster"/>
+                    <display value="Kraamverzorgster X"/>
+                </valueReference>
+            </extension>
         </individual>
     </participant>
     <diagnosis>
         <condition>
             <reference value="Condition/wouden-zwanger3"/>
+            <display value="Zwangerschap 3 van der Wouden"/>
         </condition>
     </diagnosis>
     <serviceProvider>
         <reference value="Organization/ziekenhuis"/>
+        <display value="Ziekenhuis X"/>
     </serviceProvider>
 </Encounter> 

@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-Pregnancy-TermDate" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy-TermDate" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-Pregnancy-TermDate" />
   <title value="bc-Pregnancy-TermDate" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -101,7 +101,7 @@
       <path value="Observation.method.coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -123,6 +123,10 @@
         <map value="peri23-dataelement-20050" />
         <comment value="A terme datum o.b.v." />
       </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

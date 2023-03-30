@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-Donor" />
   <name value="bc-Donor" />
   <title value="bc-Donor" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -28,14 +28,6 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
   <derivation value="constraint" />
   <differential>
-    <element id="RelatedPerson">
-      <path value="RelatedPerson" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-7888" />
-        <comment value="Eiceldonatie" />
-      </mapping>
-    </element>
     <element id="RelatedPerson.extension">
       <path value="RelatedPerson.extension" />
       <slicing>
@@ -51,33 +43,27 @@
       <path value="RelatedPerson.extension" />
       <sliceName value="role" />
       <min value="0" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept">
-      <path value="RelatedPerson.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7888" />
         <comment value="Eiceldonatie" />
       </mapping>
     </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.system">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.system" />
-      <defaultValueUri value="http://snomed.info/sct" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.code">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.code" />
-      <defaultValueCode value="430882007" />
-    </element>
-    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept.coding.display">
-      <path value="RelatedPerson.extension.valueCodeableConcept.coding.display" />
-      <defaultValueString value="Human oocyte donor (person)" />
+    <element id="RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept">
+      <path value="RelatedPerson.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="430882007" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-woman" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
     </element>
     <element id="RelatedPerson.birthDate">
@@ -92,32 +78,6 @@
         <map value="peri32-dataelement-7890" />
         <comment value="Leeftijd eiceldonor" />
       </mapping>
-    </element>
-    <element id="RelatedPerson.address.country.extension">
-      <path value="RelatedPerson.address.country.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="RelatedPerson.address.country.extension:countryCode">
-      <path value="RelatedPerson.address.country.extension" />
-      <sliceName value="countryCode" />
-      <min value="0" />
-    </element>
-    <element id="RelatedPerson.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
-      <path value="RelatedPerson.address.country.extension.valueCodeableConcept.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
   </differential>
 </StructureDefinition>

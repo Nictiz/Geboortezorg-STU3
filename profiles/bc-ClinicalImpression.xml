@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ClinicalImpression" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-ClinicalImpression" />
   <title value="bc-ClinicalImpression" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -36,6 +36,21 @@
         <map value="peri32-dataelement-2623" />
         <comment value="Conclusie professioneel onderzoek" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3881" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3647" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3882" />
+        <comment value="Conclusie professioneel onderzoek" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.extension">
       <path value="ClinicalImpression.extension" />
@@ -56,6 +71,11 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4302" />
+        <comment value="Beleid" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.extension:management.valueCodeableConcept:valueCodeableConcept">
       <path value="ClinicalImpression.extension.valueCodeableConcept" />
@@ -65,11 +85,6 @@
         <description value="BeleidProfessioneelOnderzoek 3.2" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.317--20210322154057" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4302" />
-        <comment value="Beleid" />
-      </mapping>
     </element>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
@@ -89,8 +104,18 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="ClinicalImpression.effective[x]:effectiveDateTime">
-      <path value="ClinicalImpression.effectiveDateTime" />
+      <path value="ClinicalImpression.effective[x]" />
       <sliceName value="effectiveDateTime" />
       <type>
         <code value="dateTime" />
@@ -107,6 +132,11 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2627" />
+        <comment value="Zorgverlener" />
+      </mapping>
     </element>
     <element id="ClinicalImpression.assessor.extension">
       <path value="ClinicalImpression.assessor.extension" />
@@ -127,11 +157,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2627" />
-        <comment value="Zorgverlener" />
-      </mapping>
     </element>
     <element id="ClinicalImpression.investigation.code.coding.system">
       <path value="ClinicalImpression.investigation.code.coding.system" />
@@ -140,10 +165,6 @@
     <element id="ClinicalImpression.investigation.code.coding.code">
       <path value="ClinicalImpression.investigation.code.coding.code" />
       <defaultValueCode value="271992004" />
-    </element>
-    <element id="ClinicalImpression.investigation.code.coding.display">
-      <path value="ClinicalImpression.investigation.code.coding.display" />
-      <defaultValueString value="Obstetrisch onderzoek (verrichting)" />
     </element>
     <element id="ClinicalImpression.investigation.item.extension">
       <path value="ClinicalImpression.investigation.item.extension" />

@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid" />
   <name value="bc-AmnioticFluid" />
   <title value="bc-AmnioticFluid" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -43,20 +43,9 @@
         <code value="160321000146103" />
       </patternCoding>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="160321000146103" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <defaultValueString value="meting aan vruchtwater (verrichting)" />
-    </element>
-    <element id="Observation.effective[x]">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2411" />
@@ -86,24 +75,12 @@
         <code value="278292003" />
       </patternCoding>
     </element>
-    <element id="Observation.method.coding.system">
-      <path value="Observation.method.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.method.coding.code">
-      <path value="Observation.method.coding.code" />
-      <fixedCode value="278292003" />
-    </element>
-    <element id="Observation.method.coding.display">
-      <path value="Observation.method.coding.display" />
-      <defaultValueString value="echografische beeldvorming (kwalificatiewaarde)" />
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -119,18 +96,6 @@
         <system value="http://snomed.info/sct" />
         <code value="364354005" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:amnioticFluidQuantity.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:amnioticFluidQuantity.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="364354005" />
-    </element>
-    <element id="Observation.component:amnioticFluidQuantity.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="hoeveelheid vruchtwater (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -154,6 +119,10 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Observation.component:amnioticFluidQuantity.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:amnioticFluidCompartment">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidCompartment" />
@@ -165,18 +134,6 @@
         <system value="http://snomed.info/sct" />
         <code value="249129009" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="249129009" />
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="conditie van vruchtwater (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -190,6 +147,14 @@
         <comment value="VruchtwatercompartimentWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="BeoordelingBevindingen" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
+      </binding>
+    </element>
     <element id="Observation.component:amnioticFluidSDP">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidSDP" />
@@ -201,18 +166,6 @@
         <system value="http://snomed.info/sct" />
         <code value="160301000146106" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:amnioticFluidSDP.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:amnioticFluidSDP.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="160301000146106" />
-    </element>
-    <element id="Observation.component:amnioticFluidSDP.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="resultaat van 'single deepest pocket'-meting (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:amnioticFluidSDP.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
@@ -226,6 +179,10 @@
         <comment value="VruchtwaterSDPWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:amnioticFluidSDP.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:amnioticFluidAFI">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidAFI" />
@@ -238,18 +195,6 @@
         <code value="160311000146108" />
       </patternCoding>
     </element>
-    <element id="Observation.component:amnioticFluidAFI.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:amnioticFluidAFI.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="160311000146108" />
-    </element>
-    <element id="Observation.component:amnioticFluidAFI.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="resultaat van 'amniotic fluid index'-meting (waarneembare entiteit)" />
-    </element>
     <element id="Observation.component:amnioticFluidAFI.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
@@ -261,6 +206,10 @@
         <map value="peri32-dataelement-10569" />
         <comment value="VruchtwaterAFIWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidAFI.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

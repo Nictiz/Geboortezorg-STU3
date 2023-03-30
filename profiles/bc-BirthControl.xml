@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-BirthControl" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthControl" />
-  <version value="1.0.0" />
+  <version value="1.2.2" />
   <name value="bc-BirthControl" />
   <title value="bc-BirthControl" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -44,18 +44,6 @@
         <code value="150811000119101" />
       </patternCoding>
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="150811000119101" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <defaultValueString value="voorlichting over contraceptieve zorg gegeven (situatie)" />
-    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
@@ -90,6 +78,20 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4330" />
@@ -125,16 +127,33 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4333" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.method.coding.system">
+      <path value="Observation.method.coding.system" />
+      <defaultValueUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.method.coding.code">
+      <path value="Observation.method.coding.code" />
+      <defaultValueCode value="129265001" />
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
     <element id="Observation.component:birthcontrolMethod">
       <path value="Observation.component" />
@@ -147,18 +166,6 @@
         <system value="http://snomed.info/sct" />
         <code value="160601000146104" />
       </patternCoding>
-    </element>
-    <element id="Observation.component:birthcontrolMethod.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.component:birthcontrolMethod.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="160601000146104" />
-    </element>
-    <element id="Observation.component:birthcontrolMethod.code.coding.display">
-      <path value="Observation.component.code.coding.display" />
-      <defaultValueString value="anticonceptiemethode (waarneembare entiteit)" />
     </element>
     <element id="Observation.component:birthcontrolMethod.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -173,6 +180,11 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.250--20181119171538" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-4332" />
+        <comment value="GebruikAnticonceptieWaarde" />
+      </mapping>
     </element>
     <element id="Observation.component:birthcontrolMethod.referenceRange">
       <path value="Observation.component.referenceRange" />
