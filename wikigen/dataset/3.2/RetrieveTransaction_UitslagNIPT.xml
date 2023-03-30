@@ -1,0 +1,803 @@
+<dataset id="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" effectiveDate="2020-04-22T00:00:00" statusCode="draft" lastModifiedDate="2022-09-22T10:46:54" prefix="peri20-" transactionId="2.16.840.1.113883.2.4.3.11.60.90.77.4.2598" transactionEffectiveDate="2022-05-30T14:20:04" transactionStatusCode="draft" transactionType="stationary" transactionIddisplay="peri-transaction-2598" shortName="uitslag_nipt_32" iddisplay="peri32-dataset-" url="http://decor.nictiz.nl/decor/services/" ident="peri20-"><!--
+ This is a view of the transaction "Uitslag NIPT (3.2)" containing DECOR specifications for a transaction or dataset in a single, hierarchical view. 
+ All inheritances are resolved, for transactions the dataset is filtered for those concepts occurring in the transaction.
+ Valuesets are contained within the concept for easy reference. 
+ Xpaths are calculated on a best effort basis. The should be considered a starting point for application logic, not an endpoint. -->
+    <name language="nl-NL">Uitslag NIPT (3.2)</name>
+    <desc language="nl-NL"></desc>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1313" effectiveDate="2020-08-03T11:11:11" statusCode="draft" lastModifiedDate="2022-05-03T13:49:28" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1313" shortName="administratief">
+        <implementation shortName="administratief"></implementation>
+        <name language="nl-NL">Administratief</name>
+        <desc language="nl-NL">
+                    <div>In dit deel zijn zibs opgenomen die nodig zijn in relatie met een Zorgepisode, voor administratieve doeleinden en voor procesondersteuning.</div>
+                </desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-05-03T13:38:54" effectiveDate="2020-06-10T16:02:45" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-675" shortName="patient">
+            <implementation shortName="patient"></implementation>
+            <name language="nl-NL">Patient</name>
+            <desc language="nl-NL">
+                        <div>Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt.</div>
+                        <div> </div>
+                        <div>De patiënt is een persoon die medische zorg ontvangt.</div>
+                        <div> </div>
+                        <div>De bouwsteen wordt gebruikt voor het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.</div>
+                    </desc>
+            <source language="nl-NL">
+                        <div>
+                            <div>De naam en adresgegevens zijn gebaseerd op de gegevensset van de Gemeentelijk Basis Administratie (GBA) en op de Nederlandse implementatiehandleiding HL7v3 Basiscomponenten.</div>
+                            <div>De gegevens die bij de wettelijk verplichte verificatie van een BSN door de SBV-Z worden opgeleverd zijn eveneens conform de GBA specificatie.</div>
+                            <div>Daarnaast is bij het vaststellen van de set gekeken naar de in de AWBZ zorg gebruikte AZR (AWBZ-brede zorgregistratie) gegevensset.</div>
+                        </div>
+                    </source>
+            <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.0.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-0.1.1">
+                <name language="nl-NL">Patient</name>
+                <name language="en-US">Patient</name>
+            </relationship>
+            <operationalization language="nl-NL">
+                        <div>IT-leverancier: het systeem kan de zib Patient gebruiken voor zowel de Vrouw, het Kind als de Foetus. Bij de elementen wordt aangegeven in welke context wat, waarom en hoe het element relevant is of niet.</div>
+                        <div> </div>
+                    </operationalization>
+            <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675" conceptFlexibility="2020-06-10T16:02:45" code="116154003" codeSystem="2.16.840.1.113883.6.96" displayName="patiënt (persoon)" effectiveDate="2021-01-20T15:01:56" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+            <community name="ada">
+                <data type="adaId" label="adaId" datatype="enum">true</data>
+            </community>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.682" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-05-03T13:38:54" effectiveDate="2020-06-10T16:03:16" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-682" shortName="identificatienummer">
+                <implementation shortName="identificatienummer"></implementation>
+                <context language="nl-NL">
+                    <div>Moet Burgerservicenummer zijn.</div>
+                </context>
+                <name language="nl-NL">Identificatienummer</name>
+                <desc language="nl-NL">Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers.</desc>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10031" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10031">
+                    <name language="nl-NL">Lokale persoonsidentificatie</name>
+                </relationship>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40028" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-40028">
+                    <name language="nl-NL">Foetus volgletter (zoals ante partum gehanteerd)</name>
+                </relationship>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.60010" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-60010">
+                    <name language="nl-NL">Foetus volgletter</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40015" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-40015">
+                    <name language="nl-NL">Identificatie kind PRN formaat</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40011" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-40011">
+                    <name language="nl-NL">Lokale identificatie kind</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40010" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-40010">
+                    <name language="nl-NL">BSN kind</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10030" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10030">
+                    <name language="nl-NL">Burgerservicenummer</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.7" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.0.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-0.1.7">
+                    <name language="nl-NL">Identificatienummer</name>
+                    <name language="en-US">PatientIdentificationNumber</name>
+                </relationship>
+                <operationalization language="nl-NL">
+                    <div>Het identificatienummer van de vrouw kan gebruikt worden voor:</div>
+                    <ul>
+                        <li>Burgerservicenummer (OID: 2.16.840.1.113883.2.4.6.3)</li>
+                        <li>Lokale persoonsidentificatie</li>
+                    </ul>
+                    <div>Het identificatienummer van de foetus/het kind kan gebruikt worden voor:</div>
+                    <div>
+<ul>
+                            <li>Foetusidentificatie</li>
+                            <li>Burgerservicenummer (OID: 2.16.840.1.113883.2.4.6.3)</li>
+                            <li>Lokale persoonsidentificatie indien er een foetusdossier is aangemaakt</li>
+                            <li>Identificatie kind PRN formaat; pseudo identificatie kind. Formaat: BSN moeder -geb.datum - volgnummer. Deze wordt gebruikt als het BSN van het kind nog niet bekend is. Het systeem zal hier zelf een identificatie van de baby genereren op basis van het formaat.</li>
+                        </ul>
+<div>Kraamzorg: Noteer hier het BSN nummer van de cliënt (moeder). In het geval van een kind waarbij nog geen BSN bekend is zal het systeem zelf een nummer aanmaken.</div>
+</div>
+                </operationalization>
+                <valueDomain type="identifier">
+                    <example type="neutral">111222333</example>
+                </valueDomain>
+                <identifierAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.682" conceptFlexibility="2020-06-10T16:03:16" ref="2.16.840.1.113883.2.4.6.3" effectiveDate="2020-08-10T12:03:42" refdisplay="Burgerservicenummer (BSN)"></identifierAssociation>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.683" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-05-03T13:38:54" effectiveDate="2020-06-10T16:03:16" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="M" isMandatory="true" iddisplay="peri32-dataelement-683" shortName="geboortedatum">
+                <implementation shortName="geboortedatum"></implementation>
+                <name language="nl-NL" lastTranslated="2022-03-28T10:04:17">Geboortedatum</name>
+                <desc language="nl-NL" lastTranslated="2022-03-28T10:04:17">Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.</desc>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.509" flexibility="2019-04-26T15:41:46" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2019-04-26T15:41:46" refdisplay="peri31-dataelement-509">
+                    <name language="nl-NL">Geboortedatum</name>
+                    <name language="en-US">DateOfBirth</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.496" flexibility="2019-04-26T15:40:40" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2019-04-26T15:40:40" refdisplay="peri31-dataelement-496">
+                    <name language="nl-NL">Geboortedatum</name>
+                    <name language="en-US">DateOfBirth</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.10.90256" flexibility="2018-07-17T11:29:03" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.10" datasetEffectiveDate="2018-06-11T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2018-07-17T11:29:03" refdisplay="peri30-dataelement-90256">
+                    <name language="nl-NL">Geboortedatum</name>
+                    <name language="en-US">DateOfBirth</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.10.90032" flexibility="2018-06-11T14:16:27" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.10" datasetEffectiveDate="2018-06-11T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2018-06-11T14:16:27" refdisplay="peri30-dataelement-90032">
+                    <name language="nl-NL">Geboortedatum</name>
+                    <name language="en-US">DateOfBirth</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-40050">
+                    <name language="nl-NL">Geboortedatum</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.10" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.0.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-0.1.10">
+                    <name language="nl-NL">Geboortedatum</name>
+                    <name language="en-US">DateOfBirth</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10040" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10040">
+                    <name language="nl-NL">Geboortedatum</name>
+                </relationship>
+                <operationalization language="nl-NL" lastTranslated="2022-03-28T10:04:50">
+                            <p>IT-leverancier: het systeem kan het vastleggen van de geboortedatum als 01-01-xxxx faciliceren indien de exacte geboortedatum van de vrouw niet bekend is.  </p>
+                            <p>Zorgverlener: </p>
+                            <ul>
+                                <li>
+                                    <strong>(Zwangere) Vrouw: </strong>Vul hier de geboortedatum van de vrouw in. Indien de dag en/of maand van de geboortedatum niet bekend zijn, vult u dit in als 01-01-xxxx. Wanneer het geboortejaar ook onbekend is, is schatten van het geboortejaar toegestaan.</li>
+                                <li>
+                                    <strong>Kind: </strong>Noteer hier de geboortedatum en tijd van het kind.</li>
+                                <li>
+                                    <strong>Foetus: </strong>Bij foetus kan er geen geboortedatum ingevuld te worden.</li>
+                            </ul>
+                        </operationalization>
+                <valueDomain type="datetime">
+                    <example type="neutral">22-03-1999</example>
+                </valueDomain>
+                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.683" conceptFlexibility="2020-06-10T16:03:16" code="21112-8" codeSystem="2.16.840.1.113883.6.1" displayName="Birth date" effectiveDate="2021-02-10T09:49:50" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+            </concept>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.956" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-04-26T13:55:25" effectiveDate="2020-06-11T14:31:55" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-956" shortName="zorgaanbieder">
+            <implementation shortName="zorgaanbieder"></implementation>
+            <name language="nl-NL">Zorgaanbieder</name>
+            <desc language="nl-NL">
+                        <div>Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder.</div>
+                        <div> </div>
+                        <div>Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: verloskundepraktijk, ziekenhuis, huisartsenpraktijk.</div>
+                        <div> </div>
+                        <div>De bouwsteen wordt gebruikt voor het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden.</div>
+                    </desc>
+            <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80642" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-80642">
+                <name language="nl-NL">Kraamzorginstelling</name>
+            </relationship>
+            <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.84194" flexibility="2020-09-16T11:08:03" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-09-16T11:08:03" refdisplay="peri23-dataelement-84194">
+                <name language="nl-NL">Naar welk ziekenhuis wil de vrouw worden verwezen?</name>
+            </relationship>
+            <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10020" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10020">
+                <name language="nl-NL">Zorginstelling</name>
+            </relationship>
+            <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.2.1">
+                <name language="nl-NL">Zorgaanbieder</name>
+                <name language="en-US">HealthcareProvider</name>
+            </relationship>
+            <operationalization language="nl-NL">
+                        <div>Voorbeelden zijn: verloskundepraktijk, ziekenhuis, kraamzorg organisatie, huisartsenpraktijk. <p>Zorgverleners willen dat een zorgaanbieder makkelijk te vinden is en geselecteerd kan worden, waarna het systeem de gegevens van de zorgaanbieder automatisch vastlegt. Vaak zijn het ZorgaanbiederIdentieficatienummer en de OrganisatieNaam voldoende. Een zorgverlener kan ook zelf een OrganisatieNaam invullen waarna het systeem automatisch de rest van de gegevens vastlegt, waaronder het ZorgaabiederIdentificatienummer en de naam van de zorgaanbieder.</p>
+                        </div>
+                        <div> </div>
+                        <div>IT leverancier: als het gaat om de zorgaanbieder waar de zorgverlener werkzaam is dan kan het IT systeem de gegevens voor zorgaanbieder automatisch invullen op basis van de login. Dit moet door de zorgverlener kunnen worden gewijzigd indien nodig.</div>
+                        <div> </div>
+                        <div>Zorgverlener: als het gaat om een andere zorgaanbieder dan waar uzelf werkzaam bent, wijzig dan de automatisch ingevulde gegevens. Dit kan bijvoorbeeld zijn wanneer uw patient bij een andere zorgaanbieder is geweest. Dan zijn niet de gegevens van uw eigen zorgaanbieder relevant. </div>
+                        <div> </div>
+                    </operationalization>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.958" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-04-26T13:55:25" effectiveDate="2020-06-11T14:32:18" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-958" shortName="organisatie_naam">
+                <implementation shortName="organisatie_naam"></implementation>
+                <name language="nl-NL">OrganisatieNaam</name>
+                <desc language="nl-NL">Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort.</desc>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10026" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10026">
+                    <name language="nl-NL">Naam zorginstelling</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.3" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.2.3">
+                    <name language="nl-NL">OrganisatieNaam</name>
+                    <name language="en-US">OrganizationName</name>
+                </relationship>
+                <operationalization language="nl-NL">
+                            <div>IT leverancier: het systeem kan de OrganisatieNaam automatisch invullen op basis van het ZorgaanbiedersIdentificatienummer.</div>
+                            <div> </div>
+                            <div>Zorgverlener: als het niet gaat om de zorgaanbieder waar u zelf wekzaam bent, vul dan hier de naam van deze zorgaanbieder in. </div>
+                        </operationalization>
+                <valueDomain type="string">
+                    <example type="neutral">Erasmus Universitair Medisch Centrum</example>
+                </valueDomain>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.959" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-04-26T13:55:25" effectiveDate="2020-06-11T14:32:18" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-959" shortName="organisatie_locatie">
+                <implementation shortName="organisatie_locatie"></implementation>
+                <inherit ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.8" effectiveDate="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.2.8"></inherit>
+                <name language="nl-NL">OrganisatieLocatie</name>
+                <desc language="nl-NL">Naam van de locatie, indien een zorgorganisatie meer dan één locatie heeft.</desc>
+                <comment language="nl-NL">
+                            <div>IT leverancier: het systeem kan de locatie automatisch invullen op basis van de inloggegevens van de zorgverlener. Echter, als het gaat om een andere organisatie, dan moet dit gegeven kunnen worden gewijzigd.</div>
+                            <div> </div>
+                            <div>Zorgverlener: u hoeft hier niets in te vullen als het gaat om uw eigen organisatie. De locatienaam van uw organisatie, als deze uit meerdere dependences bestaat, wordt automatisch door uw systeem ingevoerd. Als het niet om uw eigen zorgaanbider gaat dan kunt u dit wijzigen in de juiste locatie.</div>
+                        </comment>
+                <valueDomain type="string">
+                    <example>Sophia</example>
+                </valueDomain>
+            </concept>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.978" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-06-11T14:40:19" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-978" shortName="zorgverlener">
+            <implementation shortName="zorgverlener"></implementation>
+            <name language="nl-NL">Zorgverlener</name>
+            <desc language="nl-NL">
+                        <div>Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener.</div>
+                        <div> </div>
+                        <div>Een zorgverlener is een persoon die bevoegd is tot handelingen op het gebied van de geboortezorg.</div>
+                        <div> </div>
+                        <div>Het doel van deze bouwsteen is het documenteren van de identiteit van zorgverlenende personen. Voor zorgverleners dient de informatie voldoende te zijn voor referentie en auditing: de naam is, indien deze bekend is, verplicht. Indien een identificatienummer als UZI of AGB nummer wordt meegegeven, moeten naam en nummer overeenkomen.</div>
+                        <div>
+                            <br />Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn</div>
+                    </desc>
+            <rationale language="nl-NL">
+                        <div>Het invullen van de gegevens van de zorgverlener, inclusief de verwijzing naar de zorgaanbieder, is van belang om bij hergebruik van gegevens het onderscheidt te kunnen maken tussen zorgverleners in de 1e, 2e en/of 3e lijn. </div>
+                    </rationale>
+            <comment language="nl-NL">
+                        <div>SNOMED CT terminologiekoppeling/DefinitieCode 'Gezondheidszorgpersoneel'  <span title="Codesystem: SNOMED CT; Healthcare professional (occupation)">
+                                <a class="external text" href="https://terminologie.nictiz.nl/art-decor/snomed-ct?conceptId=223366009" rel="nofollow">223366009</a> toegevoegd uit zib 2020 publicatie. </span>
+                        </div>
+                    </comment>
+            <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.800" flexibility="2019-10-18T15:14:39" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="pending" iEffectiveDate="2019-10-18T15:14:39" refdisplay="peri31-dataelement-800">
+                <name language="nl-NL">Zorgverlener</name>
+                <name language="en-US">HealthProfessional</name>
+            </relationship>
+            <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.10.90012" flexibility="2018-06-11T14:10:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.10" datasetEffectiveDate="2018-06-11T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="final" iEffectiveDate="2018-06-11T14:10:29" refdisplay="peri30-dataelement-90012">
+                <name language="nl-NL">Zorgverlener</name>
+                <name language="en-US">HealthProfessional</name>
+            </relationship>
+            <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.1.1">
+                <name language="nl-NL">Zorgverlener</name>
+                <name language="en-US">HealthProfessional</name>
+            </relationship>
+            <operationalization language="nl-NL">
+                        <div>IT-leverancier: het systeem kan de gegevens van de zorgverlener automatisch invullen op basis van de inloggegevens. Als het gaat om een andere zorgverlener dan moeten de gegevens kunnen worden gewijzigd. </div>
+                    </operationalization>
+            <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.978" conceptFlexibility="2020-06-11T14:40:19" code="223366009" codeSystem="2.16.840.1.113883.6.96" displayName="gezondheidszorgpersoneel (beroep)" effectiveDate="2021-01-13T09:44:36" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3248" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-12-16T11:19:05" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3248" shortName="naamgegevens">
+                <implementation shortName="naamgegevens"></implementation>
+                <name language="nl-NL">Naamgegevens</name>
+                <desc language="nl-NL">
+                            <div>Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens. </div>
+                            <div> </div>
+                            <div>De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling. De naamgegevens van een persoon bevatten voornamen, roepnaam, achternaam en eventueel de achternaam van de partner. Naamgegevens worden gebruikt om een persoon te identificeren en aan te spreken. </div>
+                        </desc>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.1113" flexibility="2020-01-02T14:12:59" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2020-01-02T14:12:59" refdisplay="peri31-dataelement-1113">
+                    <name language="nl-NL">Casemanager naam</name>
+                </relationship>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80664" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-80664">
+                    <name language="nl-NL">Casemanager naam</name>
+                </relationship>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10006" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10006">
+                    <name language="nl-NL">Naam zorgverlener</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.20.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-20.4.1">
+                    <name language="nl-NL">Naamgegevens</name>
+                    <name language="en-US">NameInformation</name>
+                </relationship>
+                <operationalization language="nl-NL">
+                            <div>IT leverancier: het systeem kan de naamgegevens van de zorgverlener automatisch invullen op basis van de inloggegevens. Als het gaat om een andere zorgverlener, dan kan de zorgverlener de naamgegevens wijzigen.</div>
+                            <div> </div>
+                            <div>Zorgverlener: als het gaat om uw naamgegevens dan hoeft u niets in te vullen, dit doet het systeem voor u. Als het gaat om een andere zorgverlener kunt u de naamgegevens wijzigen.</div>
+                        </operationalization>
+                <community name="ada">
+                    <data type="adaId" label="adaId" datatype="enum">false</data>
+                </community>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3250" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-12-16T11:19:33" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3250" shortName="initialen">
+                    <implementation shortName="initialen"></implementation>
+                    <inherit ref="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.5" effectiveDate="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.20.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-20.4.5"></inherit>
+                    <name language="nl-NL">Initialen</name>
+                    <desc language="nl-NL">Initialen van de persoon.</desc>
+                    <comment language="nl-NL">
+                                <div>
+                                    <div>IT leverancier: het systeem kan de initialen van de zorgverlener automatisch invullen op basis van de inloggegevens. Als het gaat om een andere zorgverlener dan kan de zorgverlener deze gegevens wijzigen.</div>
+                                    <div> </div>
+                                    <div>Zorgverlener: het systeem vult uw initialen automatisch in. Als het gaat om een andere zorgverlener dan kunt u hier de initialen van die zorgverlener invullen of uw eigen gegevens verwijderen.</div>
+                                </div>
+                            </comment>
+                    <valueDomain type="string">
+                        <example>J.P.M.</example>
+                    </valueDomain>
+                </concept>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3253" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-12-16T11:19:33" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3253" shortName="geslachtsnaam">
+                    <implementation shortName="geslachtsnaam"></implementation>
+                    <inherit ref="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.2" effectiveDate="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.20.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-20.4.2"></inherit>
+                    <name language="nl-NL">Geslachtsnaam</name>
+                    <desc language="nl-NL">Container van het concept Geslachtsnaam. Deze container bevat alle gegevenselementen van het concept Geslachtsnaam</desc>
+                    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3254" statusCode="pending" versionLabel="3.2.1" effectiveDate="2020-12-16T11:19:33" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3254" shortName="voorvoegsels">
+                        <implementation shortName="voorvoegsels"></implementation>
+                        <inherit ref="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.11" effectiveDate="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.20.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-20.4.11"></inherit>
+                        <name language="nl-NL">Voorvoegsels</name>
+                        <desc language="nl-NL">Bij de eigen achternaam behorende voorvoegsels.</desc>
+                        <comment language="nl-NL">
+                                    <div>IT leverancier: het systeem kan de voorvoegsels automatisch invullen op basis van de inloggegevens. Als het gaat om een andere zorgverlener, dan kunnen de voorvoegsels worden gewijzigd.</div>
+                                    <div> </div>
+                                    <div>Zorgverlener: u hoeft hier niets in te vullen, het systeem doet dit voor u. Als het gaat om een andere zorgverlener dan kunt u uw eigen voorvoegsels wijzigen in de voorvoegsel van de andere zorgverlener. Let op bij <u>niet</u> Nederlandse namen: el – ait – al – ben – da – de la – del – di – do – dos du- es – la – le en  st  zijn  allemaal voorvoegsels.</div>
+                                </comment>
+                        <valueDomain type="string">
+                            <example>van</example>
+                        </valueDomain>
+                    </concept>
+                    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3255" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-12-16T11:19:33" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3255" shortName="achternaam">
+                        <implementation shortName="achternaam"></implementation>
+                        <inherit ref="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.10" effectiveDate="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.20.4" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="1.0.1" iType="item" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-20.4.10"></inherit>
+                        <name language="nl-NL">Achternaam</name>
+                        <desc language="nl-NL">
+                            <font color="#1c1c1c">Officiële</font> achternaam van de persoon.</desc>
+                        <comment language="nl-NL">
+                                    <div>IT leverancier: het systeem kan de officiële achternaam van de zorgverlener automatisch invullen op basis van de inloggegevens. Als het gaat om een andere zorgverlener dan kan de achternaam worden gewijzigd.</div>
+                                    <div> </div>
+                                    <div>Zorgverlener: u hoeft hier niets in te vullen. Als het gaat om een andere zorgverlener dan kunt u hier de officiële achternaam van die zorgverlener invullen waarbij u uw eigen achternaam verwijdert. </div>
+                                </comment>
+                        <valueDomain type="string">
+                            <example>Putten</example>
+                        </valueDomain>
+                    </concept>
+                </concept>
+            </concept>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1678" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-03-08T10:43:28" effectiveDate="2020-08-27T15:09:02" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1678" shortName="zorgaanbieder">
+                <implementation shortName="zorgaanbieder"></implementation>
+                <contains ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.956" flexibility="2020-06-11T14:31:55" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="pending" iEffectiveDate="2020-06-11T14:31:55" iVersionLabel="3.2.1" refdisplay="peri32-dataelement-956"></contains>
+                <name language="nl-NL">Zorgaanbieder</name>
+                <desc language="nl-NL">
+                        <div>Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder.</div>
+                        <div> </div>
+                        <div>Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: verloskundepraktijk, ziekenhuis, huisartsenpraktijk.</div>
+                        <div> </div>
+                        <div>De bouwsteen wordt gebruikt voor het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden.</div>
+                    </desc>
+                <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.80642" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-80642">
+                    <name language="nl-NL">Kraamzorginstelling</name>
+                </relationship>
+                <relationship type="REPL" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.84194" flexibility="2020-09-16T11:08:03" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-09-16T11:08:03" refdisplay="peri23-dataelement-84194">
+                    <name language="nl-NL">Naar welk ziekenhuis wil de vrouw worden verwezen?</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.10020" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-10020">
+                    <name language="nl-NL">Zorginstelling</name>
+                </relationship>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.2" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.2.1">
+                    <name language="nl-NL">Zorgaanbieder</name>
+                    <name language="en-US">HealthcareProvider</name>
+                </relationship>
+                <operationalization language="nl-NL">
+                        <div>Voorbeelden zijn: verloskundepraktijk, ziekenhuis, kraamzorg organisatie, huisartsenpraktijk. <p>Zorgverleners willen dat een zorgaanbieder makkelijk te vinden is en geselecteerd kan worden, waarna het systeem de gegevens van de zorgaanbieder automatisch vastlegt. Vaak zijn het ZorgaanbiederIdentieficatienummer en de OrganisatieNaam voldoende. Een zorgverlener kan ook zelf een OrganisatieNaam invullen waarna het systeem automatisch de rest van de gegevens vastlegt, waaronder het ZorgaabiederIdentificatienummer en de naam van de zorgaanbieder.</p>
+                        </div>
+                        <div> </div>
+                        <div>IT leverancier: als het gaat om de zorgaanbieder waar de zorgverlener werkzaam is dan kan het IT systeem de gegevens voor zorgaanbieder automatisch invullen op basis van de login. Dit moet door de zorgverlener kunnen worden gewijzigd indien nodig.</div>
+                        <div> </div>
+                        <div>Zorgverlener: als het gaat om een andere zorgaanbieder dan waar uzelf werkzaam bent, wijzig dan de automatisch ingevulde gegevens. Dit kan bijvoorbeeld zijn wanneer uw patient bij een andere zorgaanbieder is geweest. Dan zijn niet de gegevens van uw eigen zorgaanbieder relevant. </div>
+                        <div> </div>
+                    </operationalization>
+            </concept>
+        </concept>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.674" effectiveDate="2020-06-10T16:01:56" statusCode="draft" lastModifiedDate="2022-05-30T18:29:28" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-674" shortName="vrouw">
+        <implementation shortName="vrouw"></implementation>
+        <name language="nl-NL">Vrouw</name>
+        <desc language="nl-NL">
+                    <div>Gegevens van de vrouw die obstetrische- of kraamzorg afneemt of heeft afgenomen.</div>
+                </desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1713" statusCode="draft" effectiveDate="2020-09-01T09:30:23" lastModifiedDate="2022-05-03T14:57:56" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1713" shortName="demografische_gegevens">
+            <implementation shortName="demografische_gegevens"></implementation>
+            <name language="nl-NL">Demografische gegevens</name>
+            <desc language="nl-NL">
+                        <div>Demografische gegevens van de (zwangere) vrouw.</div>
+                    </desc>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1434" statusCode="pending" versionLabel="3.2.1" effectiveDate="2020-08-04T14:29:30" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1434" shortName="patient">
+                <implementation shortName="patient"></implementation>
+                <contains ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675" flexibility="2020-06-10T16:02:45" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="pending" iEffectiveDate="2020-06-10T16:02:45" iVersionLabel="3.2.1" refdisplay="peri32-dataelement-675"></contains>
+                <name language="nl-NL">Patient</name>
+                <desc language="nl-NL">
+                        <div>Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt.</div>
+                        <div> </div>
+                        <div>De patiënt is een persoon die medische zorg ontvangt.</div>
+                        <div> </div>
+                        <div>De bouwsteen wordt gebruikt voor het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.</div>
+                    </desc>
+                <source language="nl-NL">
+                        <div>
+                            <div>De naam en adresgegevens zijn gebaseerd op de gegevensset van de Gemeentelijk Basis Administratie (GBA) en op de Nederlandse implementatiehandleiding HL7v3 Basiscomponenten.</div>
+                            <div>De gegevens die bij de wettelijk verplichte verificatie van een BSN door de SBV-Z worden opgeleverd zijn eveneens conform de GBA specificatie.</div>
+                            <div>Daarnaast is bij het vaststellen van de set gekeken naar de in de AWBZ zorg gebruikte AZR (AWBZ-brede zorgregistratie) gegevensset.</div>
+                        </div>
+                    </source>
+                <relationship type="EQUIV" ref="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.0.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.1" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-0.1.1">
+                    <name language="nl-NL">Patient</name>
+                    <name language="en-US">Patient</name>
+                </relationship>
+                <operationalization language="nl-NL">
+                        <div>IT-leverancier: het systeem kan de zib Patient gebruiken voor zowel de Vrouw, het Kind als de Foetus. Bij de elementen wordt aangegeven in welke context wat, waarom en hoe het element relevant is of niet.</div>
+                        <div> </div>
+                    </operationalization>
+                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675" conceptFlexibility="2020-06-10T16:02:45" code="116154003" codeSystem="2.16.840.1.113883.6.96" displayName="patiënt (persoon)" effectiveDate="2021-01-20T15:01:56" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+            </concept>
+        </concept>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.25" effectiveDate="2020-04-28T09:23:11" statusCode="draft" lastModifiedDate="2022-09-22T10:46:54" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-25" shortName="zwangerschapsgegevens">
+        <implementation shortName="zwangerschapsgegevens"></implementation>
+        <name language="nl-NL">Zwangerschapsgegevens</name>
+        <desc language="nl-NL">
+                    <div>De al dan niet afgesloten zwangerschap waarop de gegevens betrekking hebben.</div>
+                </desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2220" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-05-03T16:44:21" effectiveDate="2020-10-06T12:28:31" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-2220" shortName="definitieve_a_terme_datum_observatie">
+            <implementation shortName="definitieve_a_terme_datum_observatie"></implementation>
+            <name language="nl-NL" lastTranslated="2022-03-31T16:51:05">Definitieve à terme datum (Observatie)</name>
+            <desc language="nl-NL" lastTranslated="2022-03-31T16:51:05">
+                        <div>Rootconcept van de bouwsteen Observatie (Definitieve à terme datum). Dit rootconcept bevat alle gegevenselementen van de bouwsteen Observatie (Definitieve à terme datum).</div>
+                    </desc>
+            <source language="nl-NL" lastTranslated="2022-03-31T16:51:05">
+                        <div>
+                            <a href="https://www.nvog.nl/wp-content/uploads/2019/02/Datering-van-de-zwangerschap.pdf">Protocol Datering van de zwangerschap.</a>
+                        </div>
+                    </source>
+            <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82160" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-82160">
+                <name language="nl-NL">Definitieve à terme datum</name>
+            </relationship>
+            <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.1125" flexibility="2020-01-02T14:12:59" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2020-01-02T14:12:59" refdisplay="peri31-dataelement-1125">
+                <name language="nl-NL">Definitieve à terme datum</name>
+            </relationship>
+            <community name="ada">
+                <data type="adaId" label="adaId" datatype="enum">false</data>
+            </community>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2223" statusCode="pending" versionLabel="3.2.1" lastModifiedDate="2022-05-03T16:44:21" effectiveDate="2020-10-06T12:37:12" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-2223" shortName="definitieve_a_terme_waarde">
+                <implementation shortName="definitieve_a_terme_waarde"></implementation>
+                <name language="nl-NL" lastTranslated="2022-03-31T16:52:24">Definitieve à terme Waarde</name>
+                <desc language="nl-NL" lastTranslated="2022-03-31T16:52:24">
+                    <div>De uitslag van de observatie. Vul de <span style="color: #000000; font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">à terme datum in. </span>
+                            </div>
+                        </desc>
+                <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.82160" flexibility="2016-09-08T00:00:00" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="final" iEffectiveDate="2016-09-08T00:00:00" refdisplay="peri23-dataelement-82160">
+                    <name language="nl-NL">Definitieve à terme datum</name>
+                </relationship>
+                <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.1125" flexibility="2020-01-02T14:12:59" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.11" datasetEffectiveDate="2019-04-25T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2020-01-02T14:12:59" refdisplay="peri31-dataelement-1125">
+                    <name language="nl-NL">Definitieve à terme datum</name>
+                </relationship>
+                <operationalization language="nl-NL" lastTranslated="2022-03-31T16:52:24">
+                    <div>De ‘Definitieve à terme datum’ is de ‘Zekere à terme datum’ bepaald volgens het landelijke protocol "Datering Zwangerschap". Indien er geen ‘Zekere à terme datum’ meer bepaald kan worden op basis van dit protocol is de ‘Definitieve à terme datum’ de à terme datum die voor de rest van de zorgverlening gehanteerd zal worden.<br clear="none" />Noot: oorzaken van het niet meer kunnen bepalen van 'Zekere à terme datum' volgens het protocol kunnen bijvoorbeeld zijn: miskraam of te lange zwangerschapsduur.</div>
+                    <div> </div>
+                    <div>Zorgverlener: Noteer hier de datum waarop de cliënt uitgerekend was.</div>
+                </operationalization>
+                <valueDomain type="datetime">
+                    <property timeStampPrecision="YMD"></property>
+                </valueDomain>
+                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2223" conceptFlexibility="2020-10-06T12:37:12" code="147781000146105" codeSystem="2.16.840.1.113883.6.96" displayName="definitieve uitgerekende datum van partus (waarneembare entiteit)" effectiveDate="2021-08-10T11:15:42" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+            </concept>
+        </concept>
+    </concept>
+    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1123" effectiveDate="2020-06-11T16:22:39" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1123" shortName="medisch_onderzoek">
+        <implementation shortName="medisch_onderzoek"></implementation>
+        <name language="nl-NL">Medisch onderzoek</name>
+        <desc language="nl-NL">Medisch onderzoek</desc>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3677" statusCode="pending" effectiveDate="2021-02-02T13:22:23" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-3677" shortName="peridoscode">
+            <implementation shortName="peridoscode"></implementation>
+            <name language="nl-NL">Peridoscode</name>
+            <desc language="nl-NL">
+                        <div>Unieke identificatie van de vrouw in het systeem Peridos van het RIVM. Deze identificatie wordt alleen gebruikt als het gaat om onderzoeken voor het RIVM en is nodig, omdat niet alle vrouwen een BSN hebben.</div>
+                    </desc>
+            <operationalization language="nl-NL">
+                        <div>Zorgverlener: u hoeft hier niets in te vullen. De peridoscode wordt door de applicatie Peridos (RIVM) gegenereerd met dezelfde methode zoals al plaats vindt voor de NIPT.</div>
+                    </operationalization>
+            <valueDomain type="identifier"></valueDomain>
+        </concept>
+        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1124" effectiveDate="2020-06-11T16:23:57" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1124" shortName="maternale_onderzoeksgegevens">
+            <implementation shortName="maternale_onderzoeksgegevens"></implementation>
+            <name language="nl-NL">Maternale onderzoeksgegevens</name>
+            <desc language="nl-NL">
+                        <div>Maternale onderzoeksgegevens</div>
+                    </desc>
+            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1125" effectiveDate="2020-06-11T16:24:31" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-1125" shortName="urine_bloed_en_aanvullende_onderzoeken">
+                <implementation shortName="urine_bloed_en_aanvullende_onderzoeken"></implementation>
+                <name language="nl-NL">Urine-, bloed- en aanvullende onderzoeken</name>
+                <desc language="nl-NL">
+                            <div>Urine-, bloed- en aanvullende onderzoeken<br clear="none" />
+                                <br clear="none" />Het gaat hier zowel om onderzoeken van bloed, urine en/of een ander monster door het laboratorium, als om onderzoeken die door de zorgverlener of patiënt 'zelf' worden gedaan.<br clear="none" />Voorbeelden van deze 'zelf'-bepalingen zijn: glucose, Hb en proteïne op basis van strips.</div>
+                        </desc>
+                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10896" effectiveDate="2022-04-11T14:09:00" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10896" shortName="nipt">
+                    <implementation shortName="nipt"></implementation>
+                    <name language="nl-NL">NIPT</name>
+                    <desc language="nl-NL">
+                            <div>Niet-invasieve prenatale test</div>
+                        </desc>
+                    <relationship type="ADAPT" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.83407" flexibility="2020-04-14T15:39:16" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="pending" iEffectiveDate="2020-04-14T15:39:16" refdisplay="peri23-dataelement-83407">
+                        <name language="nl-NL">NIPT</name>
+                    </relationship>
+                    <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10896" conceptFlexibility="2022-04-11T14:09:00" code="7751000146103" codeSystem="2.16.840.1.113883.6.96" displayName="niet-invasieve prenatale test (verrichting)" effectiveDate="2022-04-11T14:38:39" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+                    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950" effectiveDate="2022-09-19T14:26:43" statusCode="draft" lastModifiedDate="2022-09-19T14:29:48" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10950" shortName="uitgevoerde_test_nipt">
+                        <implementation shortName="uitgevoerde_test_nipt"></implementation>
+                        <name language="nl-NL">Uitgevoerde test NIPT</name>
+                        <desc language="nl-NL">
+                            <div>Welke testen zijn daadwerkelijk uitgevoerd?</div>
+                        </desc>
+                        <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.83414" flexibility="2020-04-14T15:54:31" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.6" datasetEffectiveDate="2016-09-08T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="pending" iEffectiveDate="2020-04-14T15:54:31" refdisplay="peri23-dataelement-83414">
+                            <name language="nl-NL">Keuze ouders NIPT</name>
+                        </relationship>
+                        <valueDomain type="code">
+                            <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.3">
+                                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.1" level="0" type="L">
+                                    <name language="nl-NL">Trisomie 21, Trisomie 18, Trisomie 13</name>
+                                    <desc language="nl-NL">
+                                        <div>T21 = Trisomie 21, een extra chromosoom 21 ook wel syndroom van Down</div>
+                                            <div>T18 = Trisomie 18, een extra chromosoom 18 ook wel het Edwardssyndroom</div>
+                                            <div>T13 = Trisomie 13, een extra chromosoom 13 ook wel het Patausyndroom</div>
+                                        </desc>
+                                </concept>
+                                <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.2" level="0" type="L">
+                                    <name language="nl-NL">Trisomie 21, Trisomie 18, Trisomie 13 &amp; nevenbevindingen</name>
+                                </concept>
+                            </conceptList>
+                        </valueDomain>
+                        <valueSet id="2.16.840.1.113883.2.4.3.11.60.90.77.11.266" name="KeuzeTest" displayName="KeuzeTest" effectiveDate="2020-04-14T15:59:52" statusCode="draft" strength="required">
+                            <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.3" valueSet="2.16.840.1.113883.2.4.3.11.60.90.77.11.266" flexibility="dynamic" strength="required" effectiveDate="2022-09-19T14:29:10"></terminologyAssociation>
+                            <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED Clinical Terms" canonicalUri="http://snomed.info/sct" canonicalUriDSTU2="http://snomed.info/sct" canonicalUriSTU3="http://snomed.info/sct" canonicalUriR4="http://snomed.info/sct" hl7v2table0396="SCT"></sourceCodeSystem>
+                            <sourceCodeSystem id="2.16.840.1.113883.2.4.3.22.1.2.201" identifierName="KeuzeTest" canonicalUri="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.201" canonicalUriDSTU2="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.201" canonicalUriSTU3="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.201" canonicalUriR4="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.201"></sourceCodeSystem>
+                            <publishingAuthority name="Nictiz" inherited="project">
+                                <addrLine>Nationaal ICT Instituut in de Zorg</addrLine>
+                                <addrLine>Oude Middenweg 55</addrLine>
+                                <addrLine>2491 AC Den Haag</addrLine>
+                                <addrLine>T 070 317 3450</addrLine>
+                                <addrLine>F 070 320 7437</addrLine>
+                            </publishingAuthority>
+                            <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+                            <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.3">
+                                <concept localId="1" code="41040004+254266000+254268004" codeSystem="2.16.840.1.113883.6.96" displayName="T21, T18, T13" level="0" type="L">
+                                    <name language="nl-NL">Trisomie 21, Trisomie 18, Trisomie 13</name>
+                                </concept>
+                                <concept localId="2" code="2" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.201" displayName="T21, T18, T13 en nevenbevindingen" level="0" type="L">
+                                    <name language="nl-NL">Trisomie 21, Trisomie 18, Trisomie 13 &amp; nevenbevindingen</name>
+                                </concept>
+                            </conceptList>
+                        </valueSet>
+                        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.3" valueSet="2.16.840.1.113883.2.4.3.11.60.90.77.11.266" flexibility="dynamic" strength="required" effectiveDate="2022-09-19T14:29:10"></terminologyAssociation>
+                        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.2" code="2" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.201" displayName="T21, T18, T13 en nevenbevindingen" effectiveDate="2022-09-19T14:29:10" codeSystemName="KeuzeTest"></terminologyAssociation>
+                        <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10950.1" code="41040004+254266000+254268004" codeSystem="2.16.840.1.113883.6.96" displayName="T21, T18, T13" effectiveDate="2022-09-19T14:29:10" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+                    </concept>
+                    <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10914" effectiveDate="2022-08-10T16:17:12" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10914" shortName="laboratorium_uitslag">
+                        <implementation shortName="laboratorium_uitslag"></implementation>
+                        <name language="nl-NL">LaboratoriumUitslag</name>
+                        <desc language="nl-NL">
+                            <div>Rootconcept van de bouwsteen LaboratoriumUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen LaboratoriumUitslag.</div>
+                            <div>
+                                <p>Een laboratoriumuitslag beschrijft het resultaat van een laboratoriumbepaling. Het gaat hierbij om monster-geörienteerde bepalingen zoals deze verricht worden in laboratoria als Klinische chemie, Serologie, Microbiologie etc.<br /> Behalve de uitkomsten van testen met een enkelvoudig resultaat kan dit concept ook de uitkomsten van meer complexe testen met meervoudige resultaten of 'panel' bevatten.</p>
+                                <p>Laboratoriumonderzoek wordt gedaan ten behoeve van de diagnose en preventie van ziekte en het vervolgen van de effecten van behandeling.</p>
+                            </div>
+                        </desc>
+                        <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2648" flexibility="2020-11-09T12:55:06" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:06" refdisplay="peri32-dataelement-2648">
+                            <name language="nl-NL">LaboratoriumUitslag</name>
+                            <name language="en-US">LaboratoryTestResult</name>
+                        </relationship>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10915" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="group" minimumMultiplicity="1" maximumMultiplicity="*" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10915" shortName="laboratorium_test">
+                            <implementation shortName="laboratorium_test"></implementation>
+                            <context language="nl-NL">
+                                <div>Gebruik dit zowel voor Uitslagcode lab (= Oorspronkelijk resultaat NIPT) als voor Resultaat NIPT.</div>
+                            </context>
+                            <name language="nl-NL">LaboratoriumTest</name>
+                            <desc language="nl-NL">Container van het concept LaboratoriumTest. Deze container bevat alle gegevenselementen van het concept LaboratoriumTest.</desc>
+                            <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2345" flexibility="2020-10-12T14:29:18" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-10-12T14:29:18" refdisplay="peri32-dataelement-2345">
+                                <name language="nl-NL">LaboratoriumTest</name>
+                                <name language="en-US">LaboratoryTest</name>
+                            </relationship>
+                            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10918" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-08-10T16:19:01" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10918" shortName="test_datum_tijd">
+                                <implementation shortName="test_datum_tijd"></implementation>
+                                <context language="nl-NL">
+                                    <div>Datum uitslag NIPT laboratorium.</div>
+                                </context>
+                                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2348" effectiveDate="2020-10-12T14:30:54" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2020-10-12T14:30:54" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.13" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2348"></inherit>
+                                <name language="nl-NL">TestDatumTijd</name>
+                                <desc language="nl-NL">De datum en eventueel tijdstip waarop de test uitgevoerd is.</desc>
+                                <valueDomain type="datetime">
+                                    <example>10-07-2012 20:15</example>
+                                </valueDomain>
+                            </concept>
+                            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10919" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-09-19T15:30:53" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10919" shortName="test_uitslag">
+                                <implementation shortName="test_uitslag"></implementation>
+                                <name language="nl-NL">TestUitslag</name>
+                                <desc language="nl-NL">De uitslag van de test. Afhankelijk van de soort test bestaat de uitslag uit een waarde met eenheid of uit een gecodeerde waarde (ordinaal of nominaal).</desc>
+                                <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2349" flexibility="2020-10-12T14:30:54" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2020-10-12T14:30:54" refdisplay="peri32-dataelement-2349">
+                                    <name language="nl-NL">TestUitslag</name>
+                                    <name language="en-US">TestResult</name>
+                                </relationship>
+                                <valueDomain type="code">
+                                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10919.20220810161810.0"></conceptList>
+                                </valueDomain>
+                                <valueSet id="2.16.840.1.113883.2.4.3.11.60.90.77.11.267" name="NIPTUitslag" displayName="NIPTUitslag" effectiveDate="2020-04-14T16:34:33" statusCode="draft" lastModifiedDate="2022-09-19T15:20:00" strength="required">
+                                    <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10919.20220810161810.0" valueSet="2.16.840.1.113883.2.4.3.11.60.90.77.11.267" flexibility="dynamic" strength="required" effectiveDate="2022-09-19T15:32:47"></terminologyAssociation>
+                                    <sourceCodeSystem id="2.16.840.1.113883.2.4.3.22.1.2.202" identifierName="NIPTUitslag" canonicalUri="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.202" canonicalUriDSTU2="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.202" canonicalUriSTU3="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.202" canonicalUriR4="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.202"></sourceCodeSystem>
+                                    <publishingAuthority name="Nictiz" inherited="project">
+                                        <addrLine>Nationaal ICT Instituut in de Zorg</addrLine>
+                                        <addrLine>Oude Middenweg 55</addrLine>
+                                        <addrLine>2491 AC Den Haag</addrLine>
+                                        <addrLine>T 070 317 3450</addrLine>
+                                        <addrLine>F 070 320 7437</addrLine>
+                                    </publishingAuthority>
+                                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10919.20220810161810.0">
+                                        <concept localId="1" code="00" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Uitslagcodes die door de NIPT-laboratoria worden gegenereerd" level="0" type="A">
+                                            <name language="nl-NL">Uitslagcodes die door de NIPT-laboratoria worden gegenereerd</name>
+                                        </concept>
+                                        <concept localId="2" code="1" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen aanwijzing voor Trisomie 21, 18 of 13" level="1" type="L">
+                                            <name language="nl-NL">Geen aanwijzing voor Trisomie 21, 18 of 13</name>
+                                        </concept>
+                                        <concept localId="3" code="2" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor trisomie 21 (downsyndroom)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor trisomie 21 (downsyndroom)</name>
+                                        </concept>
+                                        <concept localId="4" code="3" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor trisomie 18 (edwardssyndroom)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor trisomie 18 (edwardssyndroom)</name>
+                                        </concept>
+                                        <concept localId="5" code="4" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor trisomie 13 (patausyndroom)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor trisomie 13 (patausyndroom)</name>
+                                        </concept>
+                                        <concept localId="6" code="7" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor een nevenbevinding (autosomale trisomie)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor een nevenbevinding (autosomale trisomie)</name>
+                                        </concept>
+                                        <concept localId="7" code="8" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor een nevenbevinding (foetale structurele chromosoomafwijking)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor een nevenbevinding (foetale structurele chromosoomafwijking)</name>
+                                        </concept>
+                                        <concept localId="8" code="9" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor een nevenbevinding (maternale structurele chromosoomafwijking)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor een nevenbevinding (maternale structurele chromosoomafwijking)</name>
+                                        </concept>
+                                        <concept localId="9" code="10" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor een nevenbevinding (maternale mozaïek trisomie)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor een nevenbevinding (maternale mozaïek trisomie)</name>
+                                        </concept>
+                                        <concept localId="10" code="11" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Aanwijzing voor een nevenbevinding (verworven maternale chromosoomafwijking)" level="1" type="L">
+                                            <name language="nl-NL">Aanwijzing voor een nevenbevinding (verworven maternale chromosoomafwijking)</name>
+                                        </concept>
+                                        <concept localId="11" code="12" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (kwaliteitscriteria niet behaald)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (kwaliteitscriteria niet behaald)</name>
+                                        </concept>
+                                        <concept localId="12" code="13" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (apparatuur storing)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (apparatuur storing)</name>
+                                        </concept>
+                                        <concept localId="13" code="14" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (menselijke fout)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (menselijke fout)</name>
+                                        </concept>
+                                        <concept localId="14" code="15" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (te lage foetale fractie)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (te lage foetale fractie)</name>
+                                        </concept>
+                                        <concept localId="15" code="16" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (hemolytisch)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (hemolytisch)</name>
+                                        </concept>
+                                        <concept localId="16" code="18" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (te weinig)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (te weinig)</name>
+                                        </concept>
+                                        <concept localId="17" code="19" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (overige nog onvoorziene redenen voor afkeuren monster bij ingangscontrole)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (overige nog onvoorziene redenen voor afkeuren monster bij ingangscontrole)</name>
+                                        </concept>
+                                        <concept localId="18" code="20" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (resultaat niet conclusief)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (resultaat niet conclusief)</name>
+                                        </concept>
+                                        <concept localId="19" code="23" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Overige uitslag. Conclusieve uitslag die handmatige toelichting door labspecialist op de testuitslag vereist" level="1" type="L">
+                                            <name language="nl-NL">Overige uitslag. Conclusieve uitslag die handmatige toelichting door labspecialist op de testuitslag vereist</name>
+                                        </concept>
+                                        <concept localId="20" code="01" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Uitslagcodes die door Peridos worden gegenereerd (dus deze codes kunnen niet gebruikt worden bij ‘ uitslagcode lab’)" level="0" type="A">
+                                            <name language="nl-NL">Uitslagcodes die door Peridos worden gegenereerd (dus deze codes kunnen niet gebruikt worden bij ‘ uitslagcode lab’)</name>
+                                        </concept>
+                                        <concept localId="21" code="17" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (transportprobleem)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (transportprobleem)</name>
+                                        </concept>
+                                        <concept localId="22" code="29" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (monsters te laat ontvangen)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (monsters te laat ontvangen)</name>
+                                        </concept>
+                                        <concept localId="23" code="33" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Niet verricht (oude bloedafnameset)" level="1" type="L">
+                                            <name language="nl-NL">Niet verricht (oude bloedafnameset)</name>
+                                        </concept>
+                                        <concept localId="24" code="02" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Combinatiecodes na hertest (door Peridos gegenereerd, dus kunnen niet gebruikt worden bij ‘ uitslagcode lab’)" level="0" type="A">
+                                            <name language="nl-NL">Combinatiecodes na hertest (door Peridos gegenereerd, dus kunnen niet gebruikt worden bij ‘ uitslagcode lab’)</name>
+                                        </concept>
+                                        <concept localId="25" code="22" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (hertest niet conclusief)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (hertest niet conclusief)</name>
+                                        </concept>
+                                        <concept localId="26" code="24" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (2x kwaliteitscriteria niet gehaald)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (2x kwaliteitscriteria niet gehaald)</name>
+                                        </concept>
+                                        <concept localId="27" code="25" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (hertest geen uitslag)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (hertest geen uitslag)</name>
+                                        </concept>
+                                        <concept localId="28" code="27" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (hertest te lage foetale fractie)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (hertest te lage foetale fractie)</name>
+                                        </concept>
+                                        <concept localId="29" code="28" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Hertest niet verricht " level="1" type="L">
+                                            <name language="nl-NL">Hertest niet verricht </name>
+                                        </concept>
+                                        <concept localId="30" code="30" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (2x te lage foetale fractie)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (2x te lage foetale fractie)</name>
+                                        </concept>
+                                        <concept localId="31" code="36" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (3x kwaliteitscriteria niet behaald)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (3x kwaliteitscriteria niet behaald)</name>
+                                        </concept>
+                                        <concept localId="32" code="40" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="Geen uitslag (2x niet conclusief)" level="1" type="L">
+                                            <name language="nl-NL">Geen uitslag (2x niet conclusief)</name>
+                                        </concept>
+                                        <concept localId="33" code="51" codeSystem="2.16.840.1.113883.2.4.3.22.1.2.202" displayName="3x geen uitslag" level="1" type="L">
+                                            <name language="nl-NL">3x geen uitslag</name>
+                                        </concept>
+                                    </conceptList>
+                                </valueSet>
+                                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10919.20220810161810.0" valueSet="2.16.840.1.113883.2.4.3.11.60.90.77.11.267" flexibility="dynamic" strength="required" effectiveDate="2022-09-19T15:32:47"></terminologyAssociation>
+                            </concept>
+                            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10920" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-08-10T16:19:01" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10920" shortName="test_uitslag_status">
+                                <implementation shortName="test_uitslag_status"></implementation>
+                                <context language="nl-NL">
+                                    <div>Gebruik status Preliminary voor 'Uitslagcode lab'. Gebruik status Final voor 'Resultaat NIPT'.</div>
+                                </context>
+                                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2350" effectiveDate="2020-10-12T14:30:54" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2020-10-12T14:30:54" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2350"></inherit>
+                                <name language="nl-NL">TestUitslagStatus</name>
+                                <desc language="nl-NL">De status van de uitslag van de (deel)test. Indien het onderzoek uit meerdere testen bestaat, geeft het de status van het onderzoek de overall status weer.</desc>
+                                <valueDomain type="code">
+                                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31.20171231000000.0"></conceptList>
+                                </valueDomain>
+                                <valueSet id="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.15" name="TestUitslagStatusCodelijst" displayName="TestUitslagStatusCodelijst" effectiveDate="2017-12-31T00:00:00" statusCode="final">
+                                    <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31.20171231000000.0" valueSet="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.15" flexibility="2017-12-31T00:00:00" effectiveDate="2018-08-16T14:57:14"></terminologyAssociation>
+                                    <sourceCodeSystem id="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" identifierName="ResultaatStatus" canonicalUri="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1" canonicalUriDSTU2="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1" canonicalUriSTU3="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1" canonicalUriR4="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1"></sourceCodeSystem>
+                                    <publishingAuthority name="Nictiz" inherited="project">
+                                        <addrLine>Nationaal ICT Instituut in de Zorg</addrLine>
+                                        <addrLine>Oude Middenweg 55</addrLine>
+                                        <addrLine>2491 AC Den Haag</addrLine>
+                                        <addrLine>T 070 317 3450</addrLine>
+                                        <addrLine>F 070 320 7437</addrLine>
+                                    </publishingAuthority>
+                                    <conceptList id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31.20171231000000.0">
+                                        <concept localId="1" code="pending" codeSystem="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" displayName="Pending" level="0" type="L">
+                                            <name language="nl-NL">Uitslag volgt</name>
+                                            <designation language="nl-NL" type="preferred" displayName="Uitslag volgt"></designation>
+                                        </concept>
+                                        <concept localId="2" code="preliminary" codeSystem="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" displayName="Preliminary" level="0" type="L">
+                                            <name language="nl-NL">Voorlopig</name>
+                                            <designation language="nl-NL" type="preferred" displayName="Voorlopig"></designation>
+                                        </concept>
+                                        <concept localId="3" code="final" codeSystem="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" displayName="Final" level="0" type="L">
+                                            <name language="nl-NL">Definitief</name>
+                                            <designation language="nl-NL" type="preferred" displayName="Definitief"></designation>
+                                        </concept>
+                                        <concept localId="4" code="appended" codeSystem="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" displayName="Appended" level="0" type="L">
+                                            <name language="nl-NL">Aanvullend</name>
+                                            <designation language="nl-NL" type="preferred" displayName="Aanvullend"></designation>
+                                        </concept>
+                                        <concept localId="5" code="corrected" codeSystem="2.16.840.1.113883.2.4.3.11.60.40.4.16.1" displayName="Corrected" level="0" type="L">
+                                            <name language="nl-NL">Gecorrigeerd</name>
+                                            <designation language="nl-NL" type="preferred" displayName="Gecorrigeerd"></designation>
+                                        </concept>
+                                    </conceptList>
+                                </valueSet>
+                                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31.20171231000000.0" valueSet="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.15" flexibility="2017-12-31T00:00:00" effectiveDate="2018-08-16T14:57:14"></terminologyAssociation>
+                            </concept>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10926" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-09-14T18:38:08" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10926" shortName="monster">
+                            <implementation shortName="monster"></implementation>
+                            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2660" effectiveDate="2020-11-09T12:55:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:29" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.2" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2660"></inherit>
+                            <name language="nl-NL">Monster</name>
+                            <desc language="nl-NL">Container van het concept Monster. Deze container bevat alle gegevenselementen van het concept Monster.</desc>
+                            <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.2" conceptFlexibility="2017-12-31T00:00:00" code="123038009" codeSystem="2.16.840.1.113883.6.96" displayName="monster (monster)" effectiveDate="2018-08-16T14:58:31" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+                            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10935" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-08-10T16:19:01" type="item" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10935" shortName="aanname_datum_tijd">
+                                <implementation shortName="aanname_datum_tijd"></implementation>
+                                <context language="nl-NL">
+                                    <div>Datum en tijd aankomst bloed lab.</div>
+                                </context>
+                                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2669" effectiveDate="2020-11-09T12:55:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:29" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.25" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2669"></inherit>
+                                <name language="nl-NL">AannameDatumTijd</name>
+                                <desc language="nl-NL">Datum en tijdstip waarop het materiaal bij het laboratorium of prikpunt is afgegeven. Het gaat hierbij om materiaal dat door de patiënt zelf verzameld is.</desc>
+                                <valueDomain type="datetime"></valueDomain>
+                            </concept>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10944" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-08-10T16:19:01" type="item" minimumMultiplicity="0" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10944" shortName="toelichting">
+                            <implementation shortName="toelichting"></implementation>
+                            <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2678" effectiveDate="2020-11-09T12:55:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="item" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:29" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.5" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2678"></inherit>
+                            <name language="nl-NL">Toelichting</name>
+                            <desc language="nl-NL">Opmerkingen, zoals bv. tekstuele interpretatie of advies bij de uitslag.</desc>
+                            <valueDomain type="string"></valueDomain>
+                            <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.5" conceptFlexibility="2017-12-31T00:00:00" code="48767-8" codeSystem="2.16.840.1.113883.6.1" displayName="Annotation comment" effectiveDate="2018-08-16T14:58:31" codeSystemName="Logical Observation Identifier Names and Codes"></terminologyAssociation>
+                        </concept>
+                        <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10948" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-09-19T14:35:00" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10948" shortName="autorisator_onderzoek">
+                            <implementation shortName="autorisator_onderzoek"></implementation>
+                            <name language="nl-NL">Autorisator onderzoek</name>
+                            <desc language="nl-NL">
+                                <div><span style="color: #1a1a1a;">De zorgverlener door wie de LaboratoriumUitslag is geautoriseerd.</span></div>
+                            </desc>
+                            <relationship type="SPEC" ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2682" flexibility="2020-11-09T12:55:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:29" refdisplay="peri32-dataelement-2682">
+                                <name language="nl-NL">Aanvrager</name>
+                                <name language="en-US">Requester</name>
+                            </relationship>
+                            <concept id="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10949" effectiveDate="2022-08-10T16:18:10" statusCode="draft" lastModifiedDate="2022-08-10T16:19:01" type="group" minimumMultiplicity="1" maximumMultiplicity="1" conformance="R" isMandatory="false" iddisplay="peri32-dataelement-10949" shortName="zorgverlener">
+                                <implementation shortName="zorgverlener"></implementation>
+                                <inherit ref="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2683" effectiveDate="2020-11-09T12:55:29" prefix="peri20-" datasetId="2.16.840.1.113883.2.4.3.11.60.90.77.1.12" datasetEffectiveDate="2020-04-22T00:00:00" datasetStatusCode="draft" iType="group" iStatusCode="draft" iEffectiveDate="2020-11-09T12:55:29" originalId="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1" originalEffectiveDate="2017-12-31T00:00:00" originalStatusCode="final" originalPrefix="zib2017bbr-" refdisplay="peri32-dataelement-2683"></inherit>
+                                <contains ref="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1" flexibility="2017-12-31T00:00:00" prefix="zib2017bbr-" datasetId="2.16.840.1.113883.2.4.3.11.60.40.3.17.1" datasetEffectiveDate="2017-12-31T00:00:00" datasetStatusCode="final" datasetVersionLabel="3.2" iType="group" iStatusCode="final" iEffectiveDate="2017-12-31T00:00:00" refdisplay="NL-CM-17.1.1"></contains>
+                                <name language="nl-NL">Zorgverlener</name>
+                                <desc language="nl-NL">Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. <br />Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn</desc>
+                                <terminologyAssociation conceptId="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1" conceptFlexibility="2017-12-31T00:00:00" code="223366009" codeSystem="2.16.840.1.113883.6.96" displayName="gezondheidszorgpersoneel (beroep)" effectiveDate="2021-02-10T10:48:39" codeSystemName="SNOMED Clinical Terms"></terminologyAssociation>
+                            </concept>
+                        </concept>
+                    </concept>
+                </concept>
+            </concept>
+        </concept>
+    </concept>
+</dataset>

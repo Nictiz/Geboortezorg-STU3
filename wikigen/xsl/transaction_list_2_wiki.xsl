@@ -39,6 +39,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 {{IssueBox|Generated code, do not change by hand}}
 =</xsl:text><xsl:value-of select="@shortName"/><xsl:text>=
 &lt;section begin=transaction /&gt;
+Based on ART-DECOR transaction version: </xsl:text>
+<xsl:value-of select="concat('[https://decor.nictiz.nl/ad/#/peri20-/scenarios/scenarios/',@id,'/',@transactionEffectiveDate,' ',@transactionEffectiveDate,']')"/>
+<xsl:text>
 {| class="wikitable" 
 | style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 3.2 to FHIR
 |-style="background-color: #1F497D;; color: white; text-align:left;"
@@ -109,7 +112,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:when test="@pattern and starts-with(@pattern, 'bc-')">
                 <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                 <xsl:value-of select="@pattern"/>
-                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.0.0|title=</xsl:text>
+                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>}}</xsl:text>
             </xsl:when>
