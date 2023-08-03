@@ -1,75 +1,75 @@
 <Organization xmlns="http://hl7.org/fhir">
-   <id value="ziekenhuis"/>
-   <meta>
-      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-   </meta>
-   <identifier>
-      <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
-      <value value="12341234" />
-   </identifier>
-   <identifier>
-      <system value="http://fhir.nl/fhir/NamingSystem/ura" />
-      <value value="12341234" />
-   </identifier>
-   <identifier>
-      <system value="http://fhir.nl/fhir/NamingSystem/oid" />
-      <value value="12341234" />
-   </identifier>
-   <identifier>
-      <system value="http://fhir.nl/fhir/NamingSystem/lvr-instellingid" />
-      <value value="37" />
-   </identifier>
-   <type>
-      <coding>
-         <system value="http://nictiz.nl/fhir/NamingSystem/organization-type"/>
-         <code value="V6"/>
-         <display value="Algemeen ziekenhuis"/>
-      </coding>
-   </type>
-   <name value="Ziekenhuis"/>
-   <telecom>
-      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-         <valueCodeableConcept>
-            <coding>
-               <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
-               <code value="LL" />
-               <display value="Vast telefoonnummer" />
-            </coding>
-         </valueCodeableConcept>
-      </extension>
-      <system value="phone" />
-      <value value="020-5561356" />
-      <use value="work" />
-   </telecom>
-   <telecom>
-      <system value="email" />
-      <value value="info@ziekenhuis.nl" />
-      <use value="work" />
-   </telecom>
-   <address>
-      <line value="Hoofdweg 1a">
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-            <valueString value="Hoofdweg" />
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-            <valueString value="1" />
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
-            <valueString value="a" />
-         </extension>
-      </line>
-      <city value="Amsterdam" />
-      <postalCode value="1000AA" />
-      <country value="NLD">
-         <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
-            <valueCodeableConcept>
-               <coding>
-                  <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
-                  <code value="6030" />
-                  <display value="Nederland" />
-               </coding>
-            </valueCodeableConcept>
-         </extension>
-      </country>
-   </address>
+	<id value="ziekenhuis" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+	</meta>
+	<identifier>
+		<system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+		<value value="12341234" />
+	</identifier>
+	<identifier>
+		<system value="http://fhir.nl/fhir/NamingSystem/ura" />
+		<value value="12341234" />
+	</identifier>
+	<identifier>
+		<system value="http://fhir.nl/fhir/NamingSystem/oid" />
+		<value value="12341234" />
+	</identifier>
+	<identifier>
+		<system value="http://fhir.nl/fhir/NamingSystem/lvr-instellingid" />
+		<value value="37" />
+	</identifier>
+	<type>
+		<coding>
+			<system value="http://nictiz.nl/fhir/NamingSystem/organization-type" />
+			<code value="V6" />
+			<display value="Algemeen ziekenhuis" />
+		</coding>
+	</type>
+	<name value="Ziekenhuis" />
+	<telecom>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+					<code value="LL" />
+					<display value="Vast telefoonnummer" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<system value="phone" />
+		<value value="020-5561356" />
+		<use value="work" />
+	</telecom>
+	<telecom>
+		<system value="email" />
+		<value value="info@ziekenhuis.nl" />
+		<use value="work" />
+	</telecom>
+	<address>
+		<line value="Hoofdweg 1a">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Hoofdweg" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="1" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+				<valueString value="a" />
+			</extension>
+		</line>
+		<city value="Amsterdam" />
+		<postalCode value="1000AA" />
+		<country value="NLD">
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+				<valueCodeableConcept>
+					<coding>
+						<system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
+						<code value="6030" />
+						<display value="Nederland" />
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+		</country>
+	</address>
 </Organization>

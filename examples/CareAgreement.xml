@@ -1,69 +1,69 @@
 <CarePlan xmlns="http://hl7.org/fhir">
-    <id value="careagreement" />
-    <meta>
-        <lastUpdated value="2022-01-21T11:13:27.8278049+00:00" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement" />
-    </meta>
-    <status value="active" />
-    <intent value="plan" />
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="288834001" />
-            <display value="instemmen met zorgplan (verrichting)" />
-        </coding>
-    </category>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschap1" />
-        <display value="Zwangerschap 1" />
-    </context>
-    <period>
-        <start value="2016-02-20"/>
-        <end value="2016-06-16"/>
-    </period>
-    <author>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator">
-            <valueReference>
-                <reference value="PractitionerRole/ZorgverlenerA" />
-                <display value="Zorgverlener A" />
-            </valueReference>
-        </extension>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-            <valueReference>
-                <reference value="PractitionerRole/ZorgverlenerA" />
-                <display value="Zorgverlener A" />
-            </valueReference>
-        </extension>
-        <reference value="Practitioner/ZorgverlenerA" />
-        <display value="Zorgverlener A" />
-    </author>
-    <author>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </author>
-    <author>
-        <reference value="RelatedPerson/partner" />
-        <display value="Partner" />
-    </author>
-    <addresses>
-        <reference value="Condition/complicatieZwangerschap" />
-        <display value="Complicatie zwangerschap" />
-    </addresses>
-    <activity>
-        <detail>
-            <code>
-                <text value="elke week zelf bloeddruk thuis meten"/>                
-            </code>
-            <status value="in-progress"/>
-            <performer>
-                <reference value="Patient/example" />
-                <display value="Example" />
-            </performer>
-            <description value="Elke week op dezelfde tijd na 5 minuten rust de bloeddruk meten en noteren"/>
-        </detail>
-    </activity>
+	<id value="careagreement" />
+	<meta>
+		<lastUpdated value="2022-01-21T11:13:27.8278049+00:00" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement" />
+	</meta>
+	<status value="active" />
+	<intent value="plan" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="288834001" />
+			<display value="instemmen met zorgplan (verrichting)" />
+		</coding>
+	</category>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschap1" />
+		<display value="Zwangerschap 1" />
+	</context>
+	<period>
+		<start value="2016-02-20" />
+		<end value="2016-06-16" />
+	</period>
+	<author>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator">
+			<valueReference>
+				<reference value="PractitionerRole/ZorgverlenerA" />
+				<display value="Zorgverlener A" />
+			</valueReference>
+		</extension>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+			<valueReference>
+				<reference value="PractitionerRole/ZorgverlenerA" />
+				<display value="Zorgverlener A" />
+			</valueReference>
+		</extension>
+		<reference value="Practitioner/ZorgverlenerA" />
+		<display value="Zorgverlener A" />
+	</author>
+	<author>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</author>
+	<author>
+		<reference value="RelatedPerson/partner" />
+		<display value="Partner" />
+	</author>
+	<addresses>
+		<reference value="Condition/complicatieZwangerschap" />
+		<display value="Complicatie zwangerschap" />
+	</addresses>
+	<activity>
+		<detail>
+			<code>
+				<text value="elke week zelf bloeddruk thuis meten" />
+			</code>
+			<status value="in-progress" />
+			<performer>
+				<reference value="Patient/example" />
+				<display value="Example" />
+			</performer>
+			<description value="Elke week op dezelfde tijd na 5 minuten rust de bloeddruk meten en noteren" />
+		</detail>
+	</activity>
 </CarePlan>

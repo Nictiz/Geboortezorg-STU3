@@ -1,48 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--auto generated example-->
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="example-fetalloss"/>
-   <meta>
-      <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
-   </meta>
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-      <valueReference>
-         <reference value="Condition/Zwangerschap"/>
-      </valueReference>
-   </extension>
-   <status value="final"/>
-   <code>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="713651007"/>
-         <display value="voorgeschiedenis met zwangerschap met abortus als resultaat (situatie)"/>
-      </coding>
-   </code>
-   <subject>
-      <reference value="Patient/EXAMPLE"/>
-      <display value="example"/>
-   </subject>
-   <context>
-      <reference value="EpisodeOfCare/Zwangerschapsdossier"/>
-      <display value="Zwangerschapsdossier"/>
-   </context>
-   <effectiveDateTime value="2020-04-15"/>
-   <performer>
-        <reference value="Practitioner/example"/>
-        <display value="Vera de Los"/>
-    </performer>
-   <valueQuantity>
-      <value value="1"/>
-      <system value="http://unitsofmeasure.org"/>
-      <code value="1"/>
-   </valueQuantity>
-   <comment value="ongewenste zwangerschap"/>
-   <method>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="418799008"/>
-         <display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)"/>
-      </coding>
-   </method>
+	<id value="example-fetalloss" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+		<valueReference>
+			<reference value="Condition/Zwangerschap" />
+		</valueReference>
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="713651007" />
+			<display value="voorgeschiedenis met zwangerschap met abortus als resultaat (situatie)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/EXAMPLE" />
+		<display value="example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/Zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier" />
+	</context>
+	<effectiveDateTime value="2020-04-15" />
+	<performer>
+		<reference value="Practitioner/example" />
+		<display value="Vera de Los" />
+	</performer>
+	<valueQuantity>
+		<value value="1" />
+		<system value="http://unitsofmeasure.org" />
+		<code value="1" />
+	</valueQuantity>
+	<comment value="ongewenste zwangerschap" />
+	<method>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="418799008" />
+			<display value="symptoom gerapporteerd door patiënt of andere bron van voorgeschiedenis (bevinding)" />
+		</coding>
+	</method>
 </Observation>

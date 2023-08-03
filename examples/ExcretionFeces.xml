@@ -1,54 +1,54 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="excretionfeces-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionFeces"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="249612005"/>
-            <display value="bevinding betreffende evaluatie van feces (bevinding)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example Child Patient" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier Example"/>
-    </context>
-    <effectiveDateTime value="2011-08-03"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="364689004"/>
-                <display value="observatie betreffende feces (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="249621006"/>
-                <display value="borstvoedingsfeces (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160281000146105"/>
-                <display value="aantal poepluiers (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="1"/>
-            <unit value="1"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>            
-        </valueQuantity>          
-    </component>
+	<id value="excretionfeces-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionFeces" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="249612005" />
+			<display value="bevinding betreffende evaluatie van feces (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example Child Patient" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier Example" />
+	</context>
+	<effectiveDateTime value="2011-08-03" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="364689004" />
+				<display value="observatie betreffende feces (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="249621006" />
+				<display value="borstvoedingsfeces (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="160281000146105" />
+				<display value="aantal poepluiers (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="1" />
+			<unit value="1" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="1" />
+		</valueQuantity>
+	</component>
 </Observation>

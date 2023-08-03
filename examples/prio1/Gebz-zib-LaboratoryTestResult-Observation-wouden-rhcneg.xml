@@ -1,38 +1,37 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="wouden-rhcneg"/>
-    <meta>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
-    </meta>
-    <status value="final"/>
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="49581000146104" />
-            <display value="Laboratory test finding (finding)" />
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value="http://loinc.org"/>
-            <code value="1159-3"/>
-            <display value="little c Ag [Presence] on Red Blood Cells"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger4"/>
-    </context>
-    <effectiveDateTime value="2019-11-13"/>
-    <valueCodeableConcept>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="733120009"/>         
-            <display value="Rh c Negatief"/>
-        </coding>
-    </valueCodeableConcept>
+	<id value="wouden-rhcneg" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
+	</meta>
+	<status value="final" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="49581000146104" />
+			<display value="Laboratory test finding (finding)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="1159-3" />
+			<display value="little c Ag [Presence] on Red Blood Cells" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger4" />
+	</context>
+	<effectiveDateTime value="2019-11-13" />
+	<valueCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="733120009" />
+			<display value="fenotype c-positief (bevinding)" />
+		</coding>
+	</valueCodeableConcept>
 </Observation>
- 

@@ -1,46 +1,46 @@
-<Procedure xmlns='http://hl7.org/fhir'>
-    <id value='bevalling'/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure"/>
-    </meta>
-    <identifier>
-        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
-        <value value="26437"/>
-    </identifier>
-    <status value='completed'/>
-    <category>
-        <coding>
-            <system value='http://snomed.info/sct'/>
-            <code value="386637004"/>
-            <display value='Obstetric procedure (procedure)'/>
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value='http://snomed.info/sct'/>
-            <code value='236973005'/>
-            <display value='Delivery procedure (procedure)'/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier"/>
-    </context>
-    <performedPeriod>
-        <start value = "2016-02-20"/>
-    </performedPeriod>
-    <performer>
-        <actor>
-            <reference value="Organization/ziekenhuis"/>
-            <display value="Ziekenhuis Amsterdam"/>
-        </actor>
-    </performer>
-    <reasonReference>
-        <reference value="Condition/zwangerschap"/>
-        <display value="Zwangerschap"/>
-    </reasonReference>
+<Procedure xmlns="http://hl7.org/fhir">
+	<id value="bevalling" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
+	</meta>
+	<identifier>
+		<system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6" />
+		<value value="26437" />
+	</identifier>
+	<status value="completed" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="386637004" />
+			<display value="obstetrische verrichting (verrichting)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="236973005" />
+			<display value="verlossing (verrichting)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier" />
+	</context>
+	<performedPeriod>
+		<start value="2016-02-20" />
+	</performedPeriod>
+	<performer>
+		<actor>
+			<reference value="Organization/ziekenhuis" />
+			<display value="Ziekenhuis Amsterdam" />
+		</actor>
+	</performer>
+	<reasonReference>
+		<reference value="Condition/zwangerschap" />
+		<display value="Zwangerschap" />
+	</reasonReference>
 </Procedure>
