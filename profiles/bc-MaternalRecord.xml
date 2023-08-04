@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. It includes references to an Organization and responsible Practitioner.&#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)&#xD;&#xA;2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the overarching maternal record (EpisodeOfCare):&#xD;&#xA;* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. (Note: different providers may each have their own Condition resource.)&#xD;&#xA;* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;* Condition points to the Patient with Condition.subject.reference&#xD;&#xA; - Condition.status must be 'active' for ongoing pregnancies and 'inactive' for past ones." />
+  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. The maternal record has a fixed type (.type = 364320009). Additional types may be provided to indicate a specific period of care. The maternal record includes references to a managing Organization and responsible Practitioner. &#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The maternal record groups all data related to one pregnancy for the managing Organization &#xD;&#xA;2. The groupIdentifier (.extension:partOf.identifier) is a unique identifier of the pregnancy which can be used to group all data related to one pregnancy across Organizations&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the maternal record (EpisodeOfCare):&#xD;&#xA;* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. &#xD;&#xA;* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;* Condition and EpisodeOfCare both point to the Patient with .subject.reference&#xD;&#xA;* Condition.clinicalStatus and EpisodeOfCare.status must be 'active' for ongoing pregnancies &#xD;&#xA;* Condition.clinicalStatus must be 'inactive' and EpisodeOfCare.status must be 'finished' for past pregnancies" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -122,17 +122,25 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
     </element>
+    <element id="EpisodeOfCare.extension:partOf.valueReference:valueReference.identifier">
+      <path value="EpisodeOfCare.extension.valueReference.identifier" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1698" />
+        <comment value="Identificatie van de zwangerschap" />
+      </mapping>
+    </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3338" />
-        <comment value="Identificatie zorgepisode" />
+        <comment value="Identificatienummer" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8873" />
-        <comment value="Identificatie zorgepisode" />
+        <comment value="Identificatienummer" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
