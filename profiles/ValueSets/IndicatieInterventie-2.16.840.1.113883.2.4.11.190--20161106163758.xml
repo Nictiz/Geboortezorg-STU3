@@ -1,0 +1,90 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.190--20161106163758"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-11-06T16:37:58+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.190--20161106163758"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.190"/>
+   </identifier>
+   <version value="2016-11-06T16:37:58"/>
+   <name value="IndicatieInterventie"/>
+   <title value="Indicatie interventie"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Indicatie interventie"/>
+   <immutable value="false"/>
+   <compose>
+      <inactive value="true"/>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+         <concept>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.7"/>
+         <concept>
+            <code value="1"/>
+            <display value="Conditie moeder - acuut levensbedreigend"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="Conditie moeder - niet levensbedreigend"/>
+         </concept>
+         <concept>
+            <code value="8"/>
+            <display value="Conditie moeder - Onbekend"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="Foetale nood"/>
+         </concept>
+         <concept>
+            <code value="4"/>
+            <display value="Conditie kind - niet levensbedreigend"/>
+         </concept>
+         <concept>
+            <code value="23"/>
+            <display value="Inleiding vanwege congenitale afwijking"/>
+         </concept>
+         <concept>
+            <code value="9"/>
+            <display value="Conditie kind - onbekend"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="5"/>
+            <display value="baring op korte termijn geïndiceerd door zorgverlener"/>
+         </concept>
+         <concept>
+            <code value="6"/>
+            <display value="Interventie in het kader van wetenschappelijk onderzoek"/>
+         </concept>
+         <concept>
+            <code value="7"/>
+            <display value="Wens patiënt"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

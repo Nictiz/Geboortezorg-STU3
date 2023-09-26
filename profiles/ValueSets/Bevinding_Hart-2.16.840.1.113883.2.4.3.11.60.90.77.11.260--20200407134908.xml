@@ -1,102 +1,103 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-04-07T13:49:08+01:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
-    <identifier>
-        <use value="official"/>
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.260"/>
-    </identifier>
-    <version value="2020-04-07T13:49:08"/>
-    <name value="Bevinding_Hart"/>
-    <title value="Bevinding_Hart"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="Nictiz"/>
-    <description value="Bevinding_Hart"/>
-    <immutable value="false"/>
-    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Overig"/>
-            </concept>
-        </include>
-        <include>
-            <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="128599005"/>
-                <display value="structurele aandoening van hart (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="30288003"/>
-                <display value="ventrikelseptumdefect (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="70142008"/>
-                <display value="atriumseptumdefect (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="253414002"/>
-                <display value="atrioventriculairseptumdefect (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="86299006"/>
-                <display value="tetralogie van Fallot (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="204296002"/>
-                <display value="discordante ventriculoarteriële verbinding (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="62067003"/>
-                <display value="hypoplastisch-linkerhartsyndroom (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="7305005"/>
-                <display value="aortacoarctatie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="4374004"/>
-                <display value="congenitale misvorming van tricuspidalisklep (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="94702005"/>
-                <display value="multipele congenitale hartdefecten (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="13213009"/>
-                <display value="congenitale misvorming van hart (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="462171004"/>
-                <display value="foetale cardiomegalie (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="78250005"/>
-                <display value="ectopia cordis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="430166008"/>
-                <display value="congenitale afwijking van perifeer bloedvat (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="276512006"/>
-                <display value="foetale hartritmestoornis (aandoening)"/>
-            </concept>
-            <concept>
-                <code value="462164009"/>
-                <display value="foetale pericardiale effusie (aandoening)"/>
-            </concept>
-        </include>
-    </compose>
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-04-07T13:49:08+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.260"/>
+   </identifier>
+   <version value="2020-04-07T13:49:08"/>
+   <name value="Bevinding_Hart"/>
+   <title value="Bevinding_Hart"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Bevinding_Hart"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="128599005"/>
+            <display value="structurele aandoening van hart (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="30288003"/>
+            <display value="ventrikelseptumdefect (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="70142008"/>
+            <display value="atriumseptumdefect (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="253414002"/>
+            <display value="atrioventriculairseptumdefect (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="86299006"/>
+            <display value="tetralogie van Fallot (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="204296002"/>
+            <display value="discordante ventriculoarteriële verbinding (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="62067003"/>
+            <display value="hypoplastisch-linkerhartsyndroom (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="7305005"/>
+            <display value="aortacoarctatie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="4374004"/>
+            <display value="congenitale misvorming van tricuspidalisklep (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="94702005"/>
+            <display value="multipele congenitale hartdefecten (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="13213009"/>
+            <display value="congenitale misvorming van hart (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="462171004"/>
+            <display value="foetale cardiomegalie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="78250005"/>
+            <display value="ectopia cordis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="430166008"/>
+            <display value="congenitale afwijking van perifeer bloedvat (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="276512006"/>
+            <display value="foetale hartritmestoornis (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="462164009"/>
+            <display value="foetale pericardiale effusie (aandoening)"/>
+         </concept>
+      </include>
+   </compose>
 </ValueSet>

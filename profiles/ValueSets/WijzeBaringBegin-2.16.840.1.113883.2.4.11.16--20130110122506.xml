@@ -1,0 +1,54 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.16--20130110122506"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-01-10T12:25:06+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.16--20130110122506"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.16"/>
+   </identifier>
+   <version value="2013-01-10T12:25:06"/>
+   <name value="WijzeBaringBegin"/>
+   <title value="WijzeBaringBegin"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="WijzeBaringBegin"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.46"/>
+         <concept>
+            <code value="1"/>
+            <display value="spontane weeën"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="spontane vliesscheur"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="interventie om baring op gang te brengen"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
