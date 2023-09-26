@@ -3400,21 +3400,21 @@
 		<ID>peri32-dataelement-2581</ID>
 		<naam>Opleiding</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2582</ID>
 		<naam>Schooltype</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-Maternalbservation</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2583</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-7.10.3</zib>
 	</record>
@@ -5336,7 +5336,7 @@
 	<record>
 		<ID>peri32-dataelement-10273</ID>
 		<naam>TrisomieAnamneseWaarde</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.value[x]:valueBoolean</mapping>
 		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
@@ -6944,31 +6944,31 @@
 		<ID>peri32-dataelement-4120</ID>
 		<naam>Aard Vruchtwater (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4121</ID>
 		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4123</ID>
 		<naam>Aard Vruchtwater Waarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4124</ID>
 		<naam>ObservatieMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4131</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-39</ID>

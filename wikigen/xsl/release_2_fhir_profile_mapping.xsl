@@ -92,9 +92,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 </xsl:choose>
             </xsl:attribute>
             <xsl:if test="valueSet">
-                <xsl:attribute name="valueSet" select="valueSet/@displayName/string()"/>
-                <xsl:attribute name="valueSetId" select="valueSet/@id/string()"/>
-                <xsl:attribute name="valueSetEffectiveDate" select="valueSet/@effectiveDate/string()"/>
+                <xsl:for-each select="valueSet">
+                    <xsl:variable name="pos" select="position()"/>
+                    <xsl:attribute name="{concat('valueSet',$pos)}" select="@displayName/string()"/>
+                    <xsl:attribute name="{concat('valueSetId',$pos)}" select="@id/string()"/>
+                    <xsl:attribute name="{concat('valueSetEffectiveDate',$pos)}" select="@effectiveDate/string()"/>
+                </xsl:for-each>
             </xsl:if>
             <!--<xsl:if test="$fhirpattern">-->
                 <xsl:attribute name="pattern" select="$fhirmapping/profile"/>
