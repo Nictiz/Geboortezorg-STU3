@@ -452,7 +452,7 @@
 	<record>
 		<ID>peri32-dataelement-757</ID>
 		<naam>EindDatumTijd</naam>
-		<mapping>Encounter.period.start</mapping>
+		<mapping>Encounter.period.end</mapping>
 		<profile>bc-Encounter</profile>
 		<in>true</in>
 		<zib>NL-CM-15.1.4</zib>
@@ -7189,7 +7189,7 @@
 	<record>
 		<ID>peri32-dataelement-10711</ID>
 		<naam>ContactType</naam>
-		<mapping>Encounter.class.extension:ContactTypeCodelist</mapping>
+		<mapping>Encounter.class</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
@@ -15267,7 +15267,7 @@
 	<record>
 		<ID>peri32-dataelement-9940</ID>
 		<naam>FecesWaarde</naam>
-		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component:feces.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-ExcretionFeces</profile>
 	</record>
 	<record>
