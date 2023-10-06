@@ -48,9 +48,13 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 || '''Profile'''
 || '''Pattern'''
 || '''FHIR resource'''
+|| '''HCIM EN'''
+|| '''Canonical URL'''
 || '''Description'''</xsl:text>
             <!-- De rest van de rijen -->
-            <xsl:apply-templates select="profile" mode="wiki"/>
+            <xsl:apply-templates select="profile" mode="wiki">
+                <xsl:sort select="@id"/>             
+            </xsl:apply-templates>
             <!-- Tabel afsluiten -->
             <xsl:text>
 |}
@@ -84,6 +88,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||</xsl:text>
         <xsl:value-of select="@type"/>
         <xsl:text>
+||</xsl:text>
+        <xsl:text>
+||</xsl:text>
+        <xsl:text>http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
+        <xsl:value-of select="@name"/>
+        <xsl:text>            
 ||</xsl:text>
         <xsl:choose>
             <xsl:when test="contains(@description,'Pattern: [[')">
