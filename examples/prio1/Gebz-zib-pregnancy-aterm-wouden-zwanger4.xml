@@ -1,29 +1,28 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="aterm-wouden-zwanger4"/>
-    <meta>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate"/>
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-        <valueReference>
-            <reference value="Condition/wouden-zwanger4" />
-        </valueReference>
-    </extension>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://loinc.org"/>
-            <code value="11778-8"/>
-            <display value="Deliv date Clin est"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger4"/>
-    </context>
-    <valueDateTime value="2020-01-19"/>
+	<id value="aterm-wouden-zwanger4" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+		<valueReference>
+			<reference value="Condition/wouden-zwanger4" />
+		</valueReference>
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="11778-8" />
+			<display value="Deliv date Clin est" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger4" />
+	</context>
+	<valueDateTime value="2020-01-19" />
 </Observation>
- 

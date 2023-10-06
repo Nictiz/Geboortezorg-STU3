@@ -1,56 +1,51 @@
 <ReferralRequest xmlns="http://hl7.org/fhir">
-    <id value="verwijsdetails"/> 
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest"/>
-    </meta>
-    <!-- Contactsoort (peri32-dataelement-10487) -->
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype">
-        <valueCodeableConcept>
-            <coding> 
-                <system value="http://snomed.info/sct"/> 
-                <code value="18114009"/> 
-                <display value="prenataal onderzoek en zorg voor moeder (procedure)"/> 
-            </coding>   
-        </valueCodeableConcept>
-    </extension>
-    <status value="active"/> 
-    <intent value="order"/> 
-    <!-- Type verwijzing (peri32-dataelement-10297) -->
-    <type> 
-        <coding> 
-            <system value="http://snomed.info/sct"/> 
-            <code value="308292007"/> 
-            <display value="overdracht van zorg (verrichting)"/> 
-        </coding>   
-    </type> 
-    <subject> 
-        <reference value="Patient/example"/> 
-        <display value="Zwangere"/> 
-    </subject> 
-    <context> 
-        <reference value="EpisodeOfCare/example"/> 
-        <display value="Zwangerschapsdossier"/> 
-    </context> 
-    <authoredOn value="2019-01-18"/> 
-    <!-- verwijzing van (peri32-dataelement-8879) -->
-    <requester> 
-        <agent> 
-            <reference value="Practitioner/requestingagentexample"/> 
-            <display value="Aanvragende zorgverlener"/> 
-        </agent> 
-    </requester> 
-    <!-- verwijzing naar (peri32-dataelement-8881) -->
-    <recipient> 
-        <reference value="Organization/recipientexample"/>
-        <display value="Ontvangende organisatie"/> 
-    </recipient> 
-    <!-- reden van verwijzing (peri32-dataelement-8884) -->
-    <reasonReference> 
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-reasonReference">
-            <valueReference>
-                <reference value="Procedure/verrichting"/> 
-                <display value="Verrichting"/>  
-            </valueReference>
-        </extension>
-    </reasonReference> 
-</ReferralRequest> 
+	<id value="verwijsdetails" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-contacttype">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="18114009" />
+				<display value="prenataal onderzoek en zorg voor moeder (verrichting)" />
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<status value="active" />
+	<intent value="order" />
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="308292007" />
+			<display value="overdracht van zorg (verrichting)" />
+		</coding>
+	</type>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Zwangere" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/example" />
+		<display value="Zwangerschapsdossier" />
+	</context>
+	<authoredOn value="2019-01-18" />
+	<requester>
+		<agent>
+			<reference value="Practitioner/requestingagentexample" />
+			<display value="Aanvragende zorgverlener" />
+		</agent>
+	</requester>
+	<recipient>
+		<reference value="Organization/recipientexample" />
+		<display value="Ontvangende organisatie" />
+	</recipient>
+	<reasonReference>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-reasonReference">
+			<valueReference>
+				<reference value="Procedure/verrichting" />
+				<display value="Verrichting" />
+			</valueReference>
+		</extension>
+	</reasonReference>
+</ReferralRequest>

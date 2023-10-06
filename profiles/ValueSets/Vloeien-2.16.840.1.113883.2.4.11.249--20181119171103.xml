@@ -1,0 +1,48 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.249--20181119171103"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2018-11-19T17:11:03+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.249--20181119171103"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.249"/>
+   </identifier>
+   <version value="2018-11-19T17:11:03"/>
+   <name value="Vloeien"/>
+   <title value="Vloeien"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Vloeien"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="289579003"/>
+            <display value="stop van lochia (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289577001"/>
+            <display value="afname van lochia (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="31791000146107"/>
+            <display value="onregelmatige lochia (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289580000"/>
+            <display value="grote hoeveelheid van lochia (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

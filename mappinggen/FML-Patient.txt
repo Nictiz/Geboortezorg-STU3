@@ -1,0 +1,31 @@
+/// version = 0.1
+/// title = "FHIR Mapper : PWD32toFHIR"
+/// status = draft
+/// contact = "Nictiz"
+
+/*
+  The following FHIR Mapping Language file demonstrates the transformation of a PWD3.2 based FHIR STU3 QuestionnaireResponse
+  to individual FHIR STU3 resources
+*/
+
+map "http://nictiz.nl/fhir/StructureMap/PWD32toFHIR" = PWD32toFHIR
+
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" as source
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
+
+group MapDatasetGeboortezorg32(source src: QuestionnaireResponse, target bundle: Bundle)
+{
+  src -> bundle.id = uuid();
+  src -> bundle.type = 'collection';
+  src -> bundle.entry as entry, entry.resource = create('Patient') as patient then
+    TransformPatient(src, patient), TransformPatientPostHandler(src, patient, bundle);
+}
+
+group TransformPatient(source src : DatasetGeboortezorg32, target patient: Patient)
+{
+  src -> patient.id = uuid();
+  src -> patient.identifier =
+    id('http://nictiz.nl/fhir/CodeSystem/test', 1) as identifier, identifier.use = 'official';
+  src.item as patientName -> patient.name as humanName, humanName.text = patientName;
+
+}

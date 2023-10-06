@@ -127,16 +127,6 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
     </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Observation.component:administrationDate">
       <path value="Observation.component" />
       <sliceName value="administrationDate" />
@@ -162,6 +152,10 @@
         <map value="peri32-dataelement-10765" />
         <comment value="DatumVitamineKWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.component:administrationDate.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

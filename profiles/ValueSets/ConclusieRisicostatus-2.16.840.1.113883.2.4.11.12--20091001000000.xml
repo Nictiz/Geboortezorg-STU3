@@ -1,0 +1,51 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.12--20091001000000"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2009-10-01T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.12--20091001000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.12"/>
+   </identifier>
+   <version value="2009-10-01T00:00:00"/>
+   <name value="ConclusieRisicostatus"/>
+   <title value="ConclusieRisicostatus"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="ConclusieRisicostatus"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.26"/>
+         <concept>
+            <code value="1"/>
+            <display value="1e lijn (VIL A)"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="overlegsituatie (VIL B)"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="2e lijn (VIL C)"/>
+         </concept>
+         <concept>
+            <code value="4"/>
+            <display value="1e lijn met plaatsindicatie (VIL D)"/>
+         </concept>
+         <concept>
+            <code value="5"/>
+            <display value="3e lijns zorg"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

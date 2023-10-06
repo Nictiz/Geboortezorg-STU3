@@ -1,37 +1,37 @@
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="example-pregnancy-disorder" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/condition-partOf">
-        <valueReference>
-            <reference value="Condition/Zwangerschap" />
-        </valueReference>
-    </extension>
-    <clinicalStatus value="active" />
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="282291009" />
-            <display value="Diagnosis" />
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="199616008" />
-            <display value="Large-for-dates fetus (disorder)" />
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/EXAMPLE" />
-        <display value="example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/Zwangerschapsdossier" />
-    </context>
-    <note>
-        <text value="ouders zelf ook groot bij geboorte"/>
-    </note>
+	<id value="example-pregnancy-disorder" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/condition-partOf">
+		<valueReference>
+			<reference value="Condition/Zwangerschap" />
+		</valueReference>
+	</extension>
+	<clinicalStatus value="active" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="282291009" />
+			<display value="interpretatie van diagnose (waarneembare entiteit)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="199616008" />
+			<display value="large for gestational age (aandoening)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/EXAMPLE" />
+		<display value="example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/Zwangerschapsdossier" />
+	</context>
+	<note>
+		<text value="ouders zelf ook groot bij geboorte" />
+	</note>
 </Condition>

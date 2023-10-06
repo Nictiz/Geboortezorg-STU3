@@ -66,6 +66,28 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
     </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7890" />
+        <comment value="Leeftijd eiceldonor" />
+      </mapping>
+    </element>
     <element id="Observation.component.referenceRange">
       <path value="Observation.component.referenceRange" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />

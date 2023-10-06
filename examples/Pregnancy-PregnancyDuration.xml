@@ -1,39 +1,39 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="PregnancyDuration-example" />
-    <meta>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration" />
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-        <valueReference>
-            <reference value="Condition/wouden-zwanger1" />
-            <display value="Wouden zwangerschap 1"/>
-        </valueReference>
-    </extension>
-    <status value="final" />
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="57036006" />
-            <display value="Fetal gestational age" />
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
-        <display value="zwangerschap Wouden 1"/>
-    </context>
-    <effectiveDateTime value="2021-05-06"/>
-    <performer>
-        <reference value="Practitioner/example" />
-        <display value="Vera de Los" />
-    </performer>
-    <valueQuantity>
-        <value value="12" />
-        <system value="urn:oid:2.16.840.1.113883.6.8"/>
-        <code value="wk"/>
-    </valueQuantity>
+	<id value="PregnancyDuration-example" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+		<valueReference>
+			<reference value="Condition/wouden-zwanger1" />
+			<display value="Wouden zwangerschap 1" />
+		</valueReference>
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="57036006" />
+			<display value="Fetal gestational age" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+		<display value="zwangerschap Wouden 1" />
+	</context>
+	<effectiveDateTime value="2021-05-06" />
+	<performer>
+		<reference value="Practitioner/example" />
+		<display value="Vera de Los" />
+	</performer>
+	<valueQuantity>
+		<value value="12" />
+		<system value="urn:oid:2.16.840.1.113883.6.8" />
+		<code value="wk" />
+	</valueQuantity>
 </Observation>

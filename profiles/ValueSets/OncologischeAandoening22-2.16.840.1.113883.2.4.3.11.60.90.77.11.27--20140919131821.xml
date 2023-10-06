@@ -1,0 +1,59 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.27--20140919131821"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-09-19T13:18:21+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.27--20140919131821"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.27"/>
+   </identifier>
+   <version value="2014-09-19T13:18:21"/>
+   <name value="OncologischeAandoening22"/>
+   <title value="Oncologische aandoening (2.2)"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Oncologische aandoening (2.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="other"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="93796005"/>
+            <display value="primair maligne neoplasma van borstklier van vrouw (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="285432005"/>
+            <display value="carcinoom van cervix uteri (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="93143009"/>
+            <display value="leukemie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="93880001"/>
+            <display value="primair maligne neoplasma van long (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="372244006"/>
+            <display value="maligne melanoom (aandoening)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

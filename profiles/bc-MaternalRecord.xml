@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. It includes references to an Organization and responsible Practitioner.&#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)&#xD;&#xA;2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the overarching maternal record (EpisodeOfCare):&#xD;&#xA;* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. (Note: different providers may each have their own Condition resource.)&#xD;&#xA;* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;* Condition points to the Patient with Condition.subject.reference&#xD;&#xA; - Condition.status must be 'active' for ongoing pregnancies and 'inactive' for past ones." />
+  <description value="An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. &#xD;&#xA;Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. The maternal record has a fixed type (.type = 364320009). Additional types may be provided to indicate a specific period of care. The maternal record includes references to a managing Organization and responsible Practitioner. &#xD;&#xA;&#xD;&#xA;The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:&#xD;&#xA;1. The maternal record groups all data related to one pregnancy for the managing Organization &#xD;&#xA;2. The groupIdentifier (.extension:groupIdentifier) is a unique identifier of the pregnancy which can be used to group all data related to one pregnancy across Organizations&#xD;&#xA;&#xD;&#xA;Relations between the pregnancy (Condition) and the maternal record (EpisodeOfCare):&#xD;&#xA;* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. &#xD;&#xA;* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.&#xD;&#xA;* Condition and EpisodeOfCare both point to the Patient with .subject.reference&#xD;&#xA;* Condition.clinicalStatus and EpisodeOfCare.status must be 'active' for ongoing pregnancies &#xD;&#xA;* Condition.clinicalStatus must be 'inactive' and EpisodeOfCare.status must be 'finished' for past pregnancies" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -102,25 +102,26 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
-    <element id="EpisodeOfCare.extension:partOf">
+    <element id="EpisodeOfCare.extension:groupIdentifier">
       <path value="EpisodeOfCare.extension" />
-      <sliceName value="partOf" />
-      <short value="Overarching maternal record" />
-      <definition value="The overarching maternal record the perinatal period is part of" />
+      <sliceName value="groupIdentifier" />
+      <short value="groupIdentifier" />
+      <definition value="A groupIdentifier for the pregnancy across care providers. &#xD;&#xA;&#xD;&#xA;The formula that should be used to calculate the groupIdentifier is: [the age of the woman in days on the day of conception] div 14. &#xD;&#xA;For example, if the date of conception is 3-10-2011, the woman (born 9-4-1985) is aged 9673 days. The groupIdentifier of the pregnancy  will be 691. If the date of conception is unknown the last date of menstruation (date of menstruation minus 14 days) or the term date (term date minus 267 days) can be used to calculate the date of conception. &#xD;&#xA;&#xD;&#xA;Please note that this identification should be used in combination with a unique identification for the pregnant woman to relate all data of this pregnancy across health care providers. Please be aware that although this formula allows for some uncertainty in the date of conception, there is a small chance that the identifier deviates accross organizations when there is a difference in the estimated date of conception." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-episodeofcare-partof" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-episodeofcare-groupIdentifier" />
       </type>
     </element>
-    <element id="EpisodeOfCare.extension:partOf.valueReference:valueReference">
-      <path value="EpisodeOfCare.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
-      </type>
+    <element id="EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier">
+      <path value="EpisodeOfCare.extension.valueIdentifier" />
+      <sliceName value="valueIdentifier" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1698" />
+        <comment value="Identificatie van de zwangerschap" />
+      </mapping>
     </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
@@ -163,6 +164,7 @@
       <sliceName value="maternalRecord" />
       <short value="Maternal record code" />
       <definition value="Use this code to indicate the overarching maternal record of an organization. For a specific period of perinatal care use the perinatal period code instead." />
+      <min value="1" />
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />

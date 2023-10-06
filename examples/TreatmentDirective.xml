@@ -1,62 +1,62 @@
 <Consent xmlns="http://hl7.org/fhir">
-    <id value="zib-treatmentdirective-01" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TreatmentDirective" />
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
-        <valueString value="Eerst overleg met echtgenoot"/>
-    </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
-        <valueString value="Patient wil graag dat echtgenoot het laatste woord heeft"/>
-    </extension>
-    <status value="inactive" />
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="129125009" />
-            <display value="Verrichting met expliciete context" />
-        </coding>
-    </category>
-    <patient>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </patient>
-    <dateTime value="2019-08-11"/>
-    <sourceReference>
-        <reference value="Consent/livingwill"/>
-        <display value="Wilsverklaring" />
-    </sourceReference>
-    <policy>
-        <uri value="http://wetten.overheid.nl/" />
-    </policy>
-    <except>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
-            <valueString value="Eerst overleg met echtgenote"/>
-        </extension>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-reasonforending">
-            <valueString value="Gescheiden"/>
-        </extension>
-        <type value="deny" />
-        <period>
-            <end value="2019-08-11"/>
-        </period>
-        <actor>
-            <role>
-                <coding>
-                    <system value="http://hl7.org/fhir/v3/RoleCode"/>
-                    <code value="CONSENTER"/>
-                    <display value="consenter"/>
-                </coding>
-            </role>
-            <reference>
-                <reference value="Patient/example"/>
-                <display value="Example" />
-            </reference>
-        </actor>
-        <code>
-            <system value="http://snomed.info/sct"/>
-            <code value="305351004"/>
-            <display value="opname op intensive care"/>
-        </code>
-    </except>
+	<id value="zib-treatmentdirective-01" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TreatmentDirective" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
+		<valueString value="Eerst overleg met echtgenoot" />
+	</extension>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+		<valueString value="Patient wil graag dat echtgenoot het laatste woord heeft" />
+	</extension>
+	<status value="inactive" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="129125009" />
+			<display value="verrichting met expliciete context (situatie)" />
+		</coding>
+	</category>
+	<patient>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</patient>
+	<dateTime value="2019-08-11" />
+	<sourceReference>
+		<reference value="Consent/livingwill" />
+		<display value="Wilsverklaring" />
+	</sourceReference>
+	<policy>
+		<uri value="http://wetten.overheid.nl/" />
+	</policy>
+	<except>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother">
+			<valueString value="Eerst overleg met echtgenote" />
+		</extension>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-reasonforending">
+			<valueString value="Gescheiden" />
+		</extension>
+		<type value="deny" />
+		<period>
+			<end value="2019-08-11" />
+		</period>
+		<actor>
+			<role>
+				<coding>
+					<system value="http://hl7.org/fhir/v3/RoleCode" />
+					<code value="CONSENTER" />
+					<display value="consenter" />
+				</coding>
+			</role>
+			<reference>
+				<reference value="Patient/example" />
+				<display value="Example" />
+			</reference>
+		</actor>
+		<code>
+			<system value="http://snomed.info/sct" />
+			<code value="305351004" />
+			<display value="opname op intensive care" />
+		</code>
+	</except>
 </Consent>

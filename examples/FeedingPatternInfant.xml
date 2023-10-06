@@ -1,118 +1,118 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="feedingpatterninfant-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FeedingPatternInfant"/>
-    </meta>
-    <basedOn>
-        <reference value="NutritionOrder/voedingsadvies"/>
-        <display value="Voedingsadvies"/>
-    </basedOn>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="289145007"/>
-            <display value="Bevinding betreffende voedingspatroon van zuigeling"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example Child Patient" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier Example"/>
-    </context>
-    <effectiveDateTime value="2011-08-03"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="373453009"/>
-                <display value="Nutritional supplement"/>
-            </coding>
-        </code>
-        <valueString value = "johannesbroodpitmeel (substantie)"/>           
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="364653007"/>
-                <display value="Frequency of infant feeding"/>
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="8"/>
-            <unit value="d"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="d"/>            
-        </valueQuantity>          
-    </component>
-    <component>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant-FeedingMethod">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="169741004"/>
-                    <display value="zuigeling krijgt voeding via borst"/>                    
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingduration">
-            <valueQuantity>
-                <value value="30"/>
-                <unit value="min"/>
-                <system value="http://unitsofmeasure.org"/>
-                <code value="min"/>            
-            </valueQuantity>  
-        </extension>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="109021000146107"/>
-                <display value="Infant food type"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="226789007"/>
-                <display value="Moedermelk (substantie)"/>
-            </coding>
-        </valueCodeableConcept>         
-    </component> 
-    <component>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant-FeedingMethod">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="268472006"/>
-                    <display value="zuigeling krijgt voeding via fles"/>                    
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingquantity">
-            <valueQuantity>
-                <value value="50"/>
-                <unit value="ml"/>
-                <system value="http://unitsofmeasure.org"/>
-                <code value="ml"/>            
-            </valueQuantity>  
-        </extension>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="109021000146107"/>
-                <display value="Infant food type"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="386127005"/>
-                <display value="kunstvoeding (substantie)"/>
-            </coding>
-        </valueCodeableConcept>         
-    </component> 
+	<id value="feedingpatterninfant-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FeedingPatternInfant" />
+	</meta>
+	<basedOn>
+		<reference value="NutritionOrder/voedingsadvies" />
+		<display value="Voedingsadvies" />
+	</basedOn>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="289145007" />
+			<display value="bevinding betreffende voedingspatroon van zuigeling (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example Child Patient" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier Example" />
+	</context>
+	<effectiveDateTime value="2011-08-03" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="373453009" />
+				<display value="voedingssupplement (substantie)" />
+			</coding>
+		</code>
+		<valueString value="johannesbroodpitmeel (substantie)" />
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="364653007" />
+				<display value="frequentie van voeding van zuigeling (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="8" />
+			<unit value="d" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="d" />
+		</valueQuantity>
+	</component>
+	<component>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant-FeedingMethod">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct" />
+					<code value="169741004" />
+					<display value="zuigeling krijgt voeding via borst (bevinding)" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingduration">
+			<valueQuantity>
+				<value value="30" />
+				<unit value="min" />
+				<system value="http://unitsofmeasure.org" />
+				<code value="min" />
+			</valueQuantity>
+		</extension>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="109021000146107" />
+				<display value="Infant food type" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="226789007" />
+				<display value="moedermelk (substantie)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant-FeedingMethod">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct" />
+					<code value="268472006" />
+					<display value="zuigeling krijgt voeding via fles (bevinding)" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-feedingpatterninfant-feedingquantity">
+			<valueQuantity>
+				<value value="50" />
+				<unit value="ml" />
+				<system value="http://unitsofmeasure.org" />
+				<code value="ml" />
+			</valueQuantity>
+		</extension>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="109021000146107" />
+				<display value="Infant food type" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="386127005" />
+				<display value="kunstvoeding (substantie)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>

@@ -1,56 +1,56 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="ability-care-child-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="129879003"/>
-            <display value="bevinding betreffende ouderschap (bevinding)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/kraamzorg"/>
-    </context>
-    <effectiveDateTime value="2011-09-02"/>
-    <valueBoolean value="true"/>
-    <comment value="moeder is nog wat onzeker en vermoeid na een zware bevalling"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160351000146107"/>
-                <display value="mate van onzekerheid over zorgen voor kind (waarnembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="159911000146108"/>
-                <display value="voelt zich soms onzeker om voor kind te zorgen (bevinding)"/>
-            </coding>      
-        </valueCodeableConcept>
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160341000146109"/>
-                <display value="vermogen tot zorgen voor kind (waarnembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="126321000146108"/>
-                <display value="meestal in staat om voor kind te zorgen (bevinding)"/>
-            </coding>      
-        </valueCodeableConcept>
-    </component>
+	<id value="ability-care-child-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="129879003" />
+			<display value="bevinding betreffende ouderschap (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/kraamzorg" />
+	</context>
+	<effectiveDateTime value="2011-09-02" />
+	<valueBoolean value="true" />
+	<comment value="moeder is nog wat onzeker en vermoeid na een zware bevalling" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="160351000146107" />
+				<display value="mate van onzekerheid over zorg voor kind (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="159911000146108" />
+				<display value="voelt zich soms onzeker om voor kind te zorgen (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="160341000146109" />
+				<display value="vermogen tot zorg voor kind (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="126321000146108" />
+				<display value="meestal in staat om voor kind te zorgen (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>
