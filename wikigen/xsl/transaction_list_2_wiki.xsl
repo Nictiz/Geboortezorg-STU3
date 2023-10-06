@@ -112,7 +112,7 @@ Based on ART-DECOR transaction version: </xsl:text>
             <xsl:when test="@pattern and starts-with(@pattern, 'bc-')">
                 <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                 <xsl:value-of select="@pattern"/>
-                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=</xsl:text>
+                <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>}}</xsl:text>
             </xsl:when>
