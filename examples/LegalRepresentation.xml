@@ -1,27 +1,27 @@
 <Condition xmlns="http://hl7.org/fhir">
-   <id value="example-legalrepresentation"/>
-   <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-LegalSituation-Representation"/>
-   </meta>
-   <clinicalStatus value="active"/>
-   <category>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="151701000146105"/>
-         <display value="Type of guardian"/>
-      </coding>
-   </category>
-   <code>
-      <coding>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.3"/>
-         <code value="8"/>
-         <display value="Mentorschap"/>
-      </coding>
-   </code>
-   <subject>
-      <reference value="Patient/EXAMPLE"/>
-      <display value="example"/>
-   </subject>
-   <onsetDateTime value="2011-02-05"/>
-   <abatementDateTime value="2011-10-09"/>
+	<id value="example-legalrepresentation" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-LegalSituation-Representation" />
+	</meta>
+	<clinicalStatus value="active" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="151701000146105" />
+			<display value="type voogd (waarneembare entiteit)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.3" />
+			<code value="8" />
+			<display value="Mentorschap" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/EXAMPLE" />
+		<display value="example" />
+	</subject>
+	<onsetDateTime value="2011-02-05" />
+	<abatementDateTime value="2011-10-09" />
 </Condition>

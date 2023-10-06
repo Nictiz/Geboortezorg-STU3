@@ -1,0 +1,58 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.180--20140102000000"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-02T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.180--20140102000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.180"/>
+   </identifier>
+   <version value="2014-01-02T00:00:00"/>
+   <name value="RisicoBaring22"/>
+   <title value="RisicoBaring22"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="RisicoBaring22"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="UNK"/>
+            <display value="Onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.25"/>
+         <concept>
+            <code value="1"/>
+            <display value="1e lijn (VIL A)"/>
+         </concept>
+         <concept>
+            <code value="3"/>
+            <display value="2e lijn (VIL C)"/>
+         </concept>
+         <concept>
+            <code value="4"/>
+            <display value="1e lijn met plaatsindicatie (VIL D)"/>
+         </concept>
+         <concept>
+            <code value="5"/>
+            <display value="3e lijn"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

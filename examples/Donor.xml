@@ -1,22 +1,21 @@
 <RelatedPerson xmlns="http://hl7.org/fhir">
-    <id value="example-donor" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Donor" />
-    </meta>
-    <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role">
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="430882007"/>
-                <display value="Human oocyte donor (person)"/>
-            </coding>
-        </valueCodeableConcept>
-    </extension>
-    <active value="true" />
-    <patient>
-        <reference value="Patient/Example" />
-        <display value="Example" />
-    </patient>
-    <birthDate value="1993-04-29"/>
+	<id value="example-donor" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Donor" />
+	</meta>
+	<extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="430882007" />
+				<display value="eiceldonor (persoon)" />
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<active value="true" />
+	<patient>
+		<reference value="Patient/Example" />
+		<display value="Example" />
+	</patient>
+	<birthDate value="1993-04-29" />
 </RelatedPerson>
-

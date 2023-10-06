@@ -1,0 +1,74 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.220--20180228115805"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2018-02-28T11:58:05+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.220--20180228115805"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.220"/>
+   </identifier>
+   <version value="2.3.5"/>
+   <name value="SCPrimIndicatie"/>
+   <title value="SC Indicatie - primaire sectio"/>
+   <status value="retired"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="SC Indicatie - primaire sectio"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org. &lt;div data-source=&#34;inherited&#34; style=&#34;border-top: 1px solid black&#34;&gt;This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.&lt;/div&gt;"/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.55"/>
+         <concept>
+            <code value="E"/>
+            <display value="overig, medische reden"/>
+         </concept>
+         <concept>
+            <code value="F"/>
+            <display value="overig, niet-medische reden"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="312850006:246090004=10217006"/>
+            <display value="History of third degree perineal laceration (situation)"/>
+         </concept>
+         <concept>
+            <code value="312850006:24609004=399031001"/>
+            <display value="History of fourth degree perineal laceration (situation)"/>
+         </concept>
+         <concept>
+            <code value="15028002"/>
+            <display value="liggingsafwijking van foetus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="444433005:246090004=130955003"/>
+            <display value="Suspected fetal distress (situation)"/>
+         </concept>
+         <concept>
+            <code value="418138009"/>
+            <display value="bevinding betreffende toestand van patiënt (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="408854000"/>
+            <display value="Maternal request for treatment (finding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

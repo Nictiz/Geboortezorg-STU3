@@ -1,0 +1,69 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.290--20200622000000"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-06-22T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.290--20200622000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.290"/>
+   </identifier>
+   <version value="2020-06-22T00:00:00"/>
+   <name value="Controle_perineum"/>
+   <title value="Controle perineum"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Controle perineum"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Other"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="289854007"/>
+            <display value="perineum intact (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem = blauwe plek"/>
+            </extension>
+            <code value="302227002"/>
+            <display value="ecchymose (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289863009"/>
+            <display value="oedemateus perineum (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="225565007"/>
+            <display value="perineale pijn (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Synoniem =  aambeien."/>
+            </extension>
+            <code value="70153002"/>
+            <display value="hemorroïden (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="385494008"/>
+            <display value="hematoom (aandoening)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

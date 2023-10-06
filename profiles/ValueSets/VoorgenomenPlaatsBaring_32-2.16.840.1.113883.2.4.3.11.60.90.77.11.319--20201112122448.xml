@@ -1,0 +1,66 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.319--20201112122448"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-11-12T12:24:48+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.319--20201112122448"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.319"/>
+   </identifier>
+   <version value="2020-11-12T12:24:48"/>
+   <name value="VoorgenomenPlaatsBaring_32"/>
+   <title value="VoorgenomenPlaatsBaring (3.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="VoorgenomenPlaatsBaring (3.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.8.7"/>
+         <concept>
+            <code value="05"/>
+            <display value="nog niet bepaald"/>
+         </concept>
+         <concept>
+            <code value="00"/>
+            <display value="geen voorkeur"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="264362003"/>
+            <display value="thuis (omgeving)"/>
+         </concept>
+         <concept>
+            <code value="91154008"/>
+            <display value="zelfstandig geboortecentrum (omgeving)"/>
+         </concept>
+         <concept>
+            <code value="285201006"/>
+            <display value="ziekenhuisomgeving (omgeving)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

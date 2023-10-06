@@ -1,61 +1,61 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="umbilical-cord-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-        <valueReference>
-            <reference value="BodySite/FetusA"/>
-        </valueReference>
-    </extension>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="289299005"/>
-            <display value="bevinding betreffende navelstreng (bevinding)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier"/>
-    </context>
-    <effectiveDateTime value="2011-09-02"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="xxx"/>
-                <display value="Code still missing from AD"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.4.13.55"/>
-                <code value="1"/>
-                <display value="Geen bijzonderheden"/>
-            </coding>      
-        </valueCodeableConcept>
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="249191003"/>
-                <display value="aantal bloedvaten in navelstreng (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="29691000146104"/>
-                <display value="drie bloedvaten in navelstreng (bevinding)"/>
-            </coding>      
-        </valueCodeableConcept>
-    </component>
+	<id value="umbilical-cord-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+		<valueReference>
+			<reference value="BodySite/FetusA" />
+		</valueReference>
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="289299005" />
+			<display value="bevinding betreffende navelstreng (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier" />
+	</context>
+	<effectiveDateTime value="2011-09-02" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="xxx" />
+				<display value="Code still missing from AD" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.4.13.55" />
+				<code value="1" />
+				<display value="Geen bijzonderheden" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="249191003" />
+				<display value="aantal bloedvaten in navelstreng (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="29691000146104" />
+				<display value="drie bloedvaten in navelstreng (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>

@@ -1,0 +1,123 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.322--20210506140617"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2021-05-06T14:06:17+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.322--20210506140617"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.322"/>
+   </identifier>
+   <version value="2021-05-06T14:06:17"/>
+   <name value="OrgaansysteemFoetus"/>
+   <title value="OrgaansysteemFoetus"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="OrgaansysteemFoetus"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Hart en perifeer vaatstelsel"/>
+            </extension>
+            <code value="113257007"/>
+            <display value="structuur van tractus circulatorius (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Hersenen, hersenstructuren, intracranieel"/>
+            </extension>
+            <code value="12738006+128319008"/>
+            <display value="structuur van encephalon (lichaamsstructuur)+intracraniële structuur (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Wervelkolom, ruggenmerg"/>
+            </extension>
+            <code value="421060004+2748008"/>
+            <display value="structuur van wervelkolom (lichaamsstructuur)+structuur van medulla spinalis (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Aangezicht"/>
+            </extension>
+            <code value="89545001"/>
+            <display value="structuur van aangezicht (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Nek/ Huid"/>
+            </extension>
+            <code value="304036007+39937001"/>
+            <display value="structuur van regio cervicalis dorsum (lichaamsstructuur)+structuur van huid (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Thorax/ Luchtwegen"/>
+            </extension>
+            <code value="51185008+20139000"/>
+            <display value="structuur van thorax (lichaamsstructuur)+structuur van systema respiratorium (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Diafragma"/>
+            </extension>
+            <code value="5798000"/>
+            <display value="structuur van diafragma (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Buikwand"/>
+            </extension>
+            <code value="83908009"/>
+            <display value="structuur van buikwand (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Maag-darm"/>
+            </extension>
+            <code value="70657000"/>
+            <display value="structuur van gastro-intestinale ruimte (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Nieren-blaas"/>
+            </extension>
+            <code value="122489005"/>
+            <display value="structuur van systema urinarium (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Skelet"/>
+            </extension>
+            <code value="113192009"/>
+            <display value="structuur van systema skeletale (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Extremiteiten"/>
+            </extension>
+            <code value="2592007"/>
+            <display value="alle extremiteiten (lichaamsstructuur)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Placenta"/>
+            </extension>
+            <code value="78067005"/>
+            <display value="structuur van placenta (lichaamsstructuur)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

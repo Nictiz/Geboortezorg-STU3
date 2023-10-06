@@ -143,7 +143,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-Encounter"
-               mapping="Encounter.period.start"
+               mapping="Encounter.period.end"
                example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.758"
                level="3"
@@ -556,7 +556,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-procedure"
+               pattern="zib-Procedure"
                mapping="Procedure"
                example="https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1986"
@@ -568,7 +568,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-procedure"
+               pattern="zib-Procedure"
                mapping="Procedure.subject"
                example="https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3834"
@@ -1669,9 +1669,9 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-practitionerrole"
-               mapping="PractitionerRole"
-               example="https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3"/>
+               pattern="bc-CareTeam"
+               mapping="CareTeam.participant.role"
+               example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1314"
                level="1"
                type="group"
@@ -2037,7 +2037,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-PregnancyObservation"
-               mapping="Observation.method"
+               mapping="Observation.method.coding:aTermMethod"
                example="https://simplifier.net/geboortezorg-stu3/example-definitieve-a-terme-datum-2.16.840.1.113883.2.4.3.11"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2225"
                level="3"
@@ -2481,8 +2481,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-PregnancyObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-187">
          <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://loinc.org |29463-7}</search>
@@ -2495,8 +2495,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-PregnancyObservation"
+               bc-pattern="false"
+               pattern="zib-BloodPressure"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-184">
          <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://loinc.org |85354-9}</search>
@@ -2936,7 +2936,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4050"
@@ -2948,7 +2948,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4051"
@@ -2960,7 +2960,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.method"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4054"
@@ -2972,7 +2972,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.start"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4055"
@@ -2984,7 +2984,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.end"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4056"
@@ -2996,7 +2996,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.comment"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4057"
@@ -3008,7 +3008,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4058"
@@ -3020,7 +3020,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10522"
@@ -3032,7 +3032,7 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4060"
@@ -3044,7 +3044,7 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4062"
@@ -3056,7 +3056,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4066"
@@ -3068,7 +3068,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.start"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4067"
@@ -3080,7 +3080,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.end"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4069"
@@ -3092,7 +3092,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4070"
@@ -3104,7 +3104,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4072"
@@ -3116,7 +3116,7 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4074"
@@ -3128,7 +3128,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4078"
@@ -3140,7 +3140,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.start"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4079"
@@ -3152,7 +3152,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.effective[x]:effectivePeriod.end"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4081"
@@ -3164,7 +3164,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4082"
@@ -3176,7 +3176,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-FetusObservation"
+               pattern="bc-MaternalObservation"
                mapping="Observation.bodySite"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1776"
@@ -4077,7 +4077,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-DeliveryObservation"
-               mapping="Observation.code"
+               mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1">
          <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |439771001}</search>
       </mapping>

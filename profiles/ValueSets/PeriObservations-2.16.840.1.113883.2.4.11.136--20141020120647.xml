@@ -1,0 +1,445 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.136--20141020120647"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-10-20T12:06:47+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.136--20141020120647"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.136"/>
+   </identifier>
+   <version value="2014-10-20T12:06:47"/>
+   <name value="PeriObservations"/>
+   <title value="PeriObservations"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="PeriObservations"/>
+   <immutable value="false"/>
+   <compose>
+      <inactive value="true"/>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
+         <concept>
+            <code value="AantalLevendeKinderen"/>
+            <display value="Aantal levende kinderen"/>
+         </concept>
+         <concept>
+            <code value="ActualEDD"/>
+            <display value="Actuele à terme datum"/>
+         </concept>
+         <concept>
+            <code value="AfterBirthMethod"/>
+            <display value="Geboorte placenta"/>
+         </concept>
+         <concept>
+            <code value="Amnionic"/>
+            <display value="Amnioniciteit"/>
+         </concept>
+         <concept>
+            <code value="APrioriRisk21"/>
+            <display value="A priori kans op trisomie 21 (Down)"/>
+         </concept>
+         <concept>
+            <code value="APrioriRisk18"/>
+            <display value="A priori kans op trisomie 18 (Edwards)"/>
+         </concept>
+         <concept>
+            <code value="APrioriRisk13"/>
+            <display value="A priori kans op trisomie 13 (Patau)"/>
+         </concept>
+         <concept>
+            <code value="BeginDeliv"/>
+            <display value="Wijze waarop de baring begon"/>
+         </concept>
+         <concept>
+            <code value="Bevalplan"/>
+            <display value="Bevalplan"/>
+         </concept>
+         <concept>
+            <code value="BirthOrderNumber"/>
+            <display value="Rangnummer kind"/>
+         </concept>
+         <concept>
+            <code value="BroachDown"/>
+            <display value="Prenatale screening aangekaart"/>
+         </concept>
+         <concept>
+            <code value="Chorionic"/>
+            <display value="Chorioniciteit"/>
+         </concept>
+         <concept>
+            <code value="ChromMalf"/>
+            <display value="Specificatie chromosomale afwijking"/>
+         </concept>
+         <concept>
+            <code value="CombiTestDesired"/>
+            <display value="Combinatietest gewenst"/>
+         </concept>
+         <concept>
+            <code value="CongMalf"/>
+            <display value="Specificatie congenitale afwijking"/>
+         </concept>
+         <concept>
+            <code value="CorrFBhCG"/>
+            <display value="Corrected vrij β-hCG"/>
+         </concept>
+         <concept>
+            <code value="CorrPAPPA"/>
+            <display value="Corrected PAPP-A"/>
+         </concept>
+         <concept>
+            <code value="CounsConcerns"/>
+            <display value="Counseling prenatale betreft"/>
+         </concept>
+         <concept>
+            <code value="CounselDesired"/>
+            <display value="Counseling prenatale gewenst"/>
+         </concept>
+         <concept>
+            <code value="CutOffTrisomy21"/>
+            <display value="Gehanteerd afkappunt trisomie 21"/>
+         </concept>
+         <concept>
+            <code value="CutOffTrisomy18"/>
+            <display value="Gehanteerd afkappunt trisomie 18"/>
+         </concept>
+         <concept>
+            <code value="CutOffTrisomy13"/>
+            <display value="Gehanteerd afkappunt trisomie 13"/>
+         </concept>
+         <concept>
+            <code value="Drugsgebruik"/>
+            <display value="Drugsgebruik"/>
+         </concept>
+         <concept>
+            <code value="Echoparameters"/>
+            <display value="Echoparameters - samengesteld groeidiagram"/>
+         </concept>
+         <concept>
+            <code value="EDD"/>
+            <display value="A terme datum"/>
+         </concept>
+         <concept>
+            <code value="EDDDef"/>
+            <display value="Definitieve a terme datum"/>
+         </concept>
+         <concept>
+            <code value="EDDBasedOn"/>
+            <display value="A terme datum o.b.v."/>
+         </concept>
+         <concept>
+            <code value="EicelExtrDat"/>
+            <display value="Eicel extractie datum"/>
+         </concept>
+         <concept>
+            <code value="FalsePosPreg"/>
+            <display value="Vals positieve zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="FasePerinataleSterfte"/>
+            <display value="Fase perinatale sterfte"/>
+         </concept>
+         <concept>
+            <code value="GebDatEiDon"/>
+            <display value="Geboortedatum eiceldonatrice"/>
+         </concept>
+         <concept>
+            <code value="GlobFind"/>
+            <display value="Algehele beoordeling"/>
+         </concept>
+         <concept>
+            <code value="Gravidity"/>
+            <display value="Graviditeit"/>
+         </concept>
+         <concept>
+            <code value="GroeiAfwijkend"/>
+            <display value="Afwijkende groei"/>
+         </concept>
+         <concept>
+            <code value="GroeiAfwijkendPos"/>
+            <display value="Positieve dyscongruentie"/>
+         </concept>
+         <concept>
+            <code value="GroeiAfwijkendNeg"/>
+            <display value="Negatieve dyscongruentie"/>
+         </concept>
+         <concept>
+            <code value="GUOFind"/>
+            <display value="Afwijkende bevindingen (type GUO)"/>
+         </concept>
+         <concept>
+            <code value="IndicPD"/>
+            <display value="Indicatie voor Prenatale Diagnostiek"/>
+         </concept>
+         <concept>
+            <code value="IndicIPD"/>
+            <display value="Indicatie voor Invasieve Prenatale Diagnostiek"/>
+         </concept>
+         <concept>
+            <code value="IndicGUO"/>
+            <display value="Indicatie Geavanceerd ultrasound onderzoek (GUO)"/>
+         </concept>
+         <concept>
+            <code value="IndicNIPT"/>
+            <display value="Indicatie NIPT"/>
+         </concept>
+         <concept>
+            <code value="InstantGUODesired"/>
+            <display value="Direct GUO gewenst"/>
+         </concept>
+         <concept>
+            <code value="IPD"/>
+            <display value="Invasieve prenatale diagnostiek"/>
+         </concept>
+         <concept>
+            <code value="IPDDesired"/>
+            <display value="Direct IPD gewenst"/>
+         </concept>
+         <concept>
+            <code value="IUVD1contr"/>
+            <display value="IUVD bij eerste controle"/>
+         </concept>
+         <concept>
+            <code value="KinderartsBetrokken"/>
+            <display value="Betrokkenheid kinderarts"/>
+         </concept>
+         <concept>
+            <code value="KraamzorgAlg"/>
+            <display value="KraamZorg"/>
+         </concept>
+         <concept>
+            <code value="KraamZorg"/>
+            <display value="Kraamzorg aangevraagd"/>
+         </concept>
+         <concept>
+            <code value="KuVerlng"/>
+            <display value="Vaginale kunstverlossing (observatie)"/>
+         </concept>
+         <concept>
+            <code value="KuVerlSucces"/>
+            <display value="Succes vaginale kunstverlossing"/>
+         </concept>
+         <concept>
+            <code value="LftdEiDon"/>
+            <display value="Leeftijd Eiceldonatrice"/>
+         </concept>
+         <concept>
+            <code value="LVR1AdmNr"/>
+            <display value="LVR1 administratienummer"/>
+         </concept>
+         <concept>
+            <code value="Medic3stage"/>
+            <display value="Medicatie nageboortetijdperk"/>
+         </concept>
+         <concept>
+            <code value="MolaPartieelIntacteZw"/>
+            <display value="Partiële mola met intacte zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="NBorn16"/>
+            <display value="Aantal geboren kinderen"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="NEGSE"/>
+            <display value="Negatieve seksuele ervaringen"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="NFetus"/>
+            <display value="Hoeveelling"/>
+         </concept>
+         <concept>
+            <code value="NFetusCur"/>
+            <display value="Actuele aantal foetus"/>
+         </concept>
+         <concept>
+            <code value="NFetusMax"/>
+            <display value="Hoeveelling"/>
+         </concept>
+         <concept>
+            <code value="OBSTANAM"/>
+            <display value="Bijzonderheden obstetrische anamnese"/>
+         </concept>
+         <concept>
+            <code value="OnderBehandeling"/>
+            <display value="Onder behandeling (geweest)?"/>
+         </concept>
+         <concept>
+            <code value="OperatieInAnamnese"/>
+            <display value="Operatie in anamnese?"/>
+         </concept>
+         <concept>
+            <code value="Outcome"/>
+            <display value="Type uitkomst"/>
+         </concept>
+         <concept>
+            <code value="OverigeAandoeningenAnamnese"/>
+            <display value="Overige aandoeningen / afwijkingen uit algemene anamnese vrouw"/>
+         </concept>
+         <concept>
+            <code value="Parturit"/>
+            <display value="Pariteit vóór deze zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="PartusImmaturusDreig"/>
+            <display value="Partus immaturus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="PartusPrematurusDreig"/>
+            <display value="Partus prematurus - dreigend"/>
+         </concept>
+         <concept>
+            <code value="PartusNr"/>
+            <display value="Partusnummer"/>
+         </concept>
+         <concept>
+            <code value="PediatrischeVerwijsindicatie"/>
+            <display value="Pediatrische verwijsindicatie"/>
+         </concept>
+         <concept>
+            <code value="PijnbestrOverig"/>
+            <display value="Pijnbestrijding overig middel"/>
+         </concept>
+         <concept>
+            <code value="PijnbestrPeriode"/>
+            <display value="Pijnbestrijding periode"/>
+         </concept>
+         <concept>
+            <code value="ProblematiekKind"/>
+            <display value="Problematiek kind"/>
+         </concept>
+         <concept>
+            <code value="PSIE"/>
+            <display value="Prenatale Screening Infectieziekten en Erytrocytenimmunisatie"/>
+         </concept>
+         <concept>
+            <code value="ReferralSit"/>
+            <display value="Is er sprake van overname"/>
+         </concept>
+         <concept>
+            <code value="RefConsReas"/>
+            <display value="Reden van consult"/>
+         </concept>
+         <concept>
+            <code value="RefInReas"/>
+            <display value="Reden van overname (lijst LVR)"/>
+         </concept>
+         <concept>
+            <code value="RefOutReas"/>
+            <display value="Reden van overname (lijst LVR)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="RefReas"/>
+            <display value="Reden van overname (lijst LVR)"/>
+         </concept>
+         <concept>
+            <code value="RiskStat"/>
+            <display value="Conclusie risicostatus na intake"/>
+         </concept>
+         <concept>
+            <code value="RiskTrisomy21"/>
+            <display value="Combinatietest kans op trisomie 21"/>
+         </concept>
+         <concept>
+            <code value="RiskTrisomy18"/>
+            <display value="Combinatietest kans op trisomie 18"/>
+         </concept>
+         <concept>
+            <code value="RiskTrisomy13"/>
+            <display value="Combinatietest kans op trisomie 13"/>
+         </concept>
+         <concept>
+            <code value="Rookgedrag"/>
+            <display value="Rookgedrag"/>
+         </concept>
+         <concept>
+            <code value="Rpp"/>
+            <display value="Eindverantwoordelijk in zwangerschapsfase"/>
+         </concept>
+         <concept>
+            <code value="RuggeprikGewNGekr"/>
+            <display value="Ruggeprik gewenst niet gekregen"/>
+         </concept>
+         <concept>
+            <code value="SectioBeslisMoment"/>
+            <display value="Beslismoment secundaire sectio caesaria"/>
+         </concept>
+         <concept>
+            <code value="SEOType"/>
+            <display value="SEO-type"/>
+         </concept>
+         <concept>
+            <code value="SEODesired"/>
+            <display value="SEO gewenst"/>
+         </concept>
+         <concept>
+            <code value="SonoMarker"/>
+            <display value="SonoMarker"/>
+         </concept>
+         <concept>
+            <code value="TstmngHerlGegevens"/>
+            <display value="Toestemming voor herleidbare gegevens in onderzoeksdatabank"/>
+         </concept>
+         <concept>
+            <code value="TrisomyAnam"/>
+            <display value="Trisomie in de anamnese"/>
+         </concept>
+         <concept>
+            <code value="TypeDeliv"/>
+            <display value="Type bevalling"/>
+         </concept>
+         <concept>
+            <code value="VERLIND"/>
+            <display value="Ziekten en bijzonderheden vrouw in de algemene anamnese"/>
+         </concept>
+         <concept>
+            <code value="Voornemen"/>
+            <display value="Voornemen"/>
+         </concept>
+         <concept>
+            <code value="EindeZw"/>
+            <display value="Wijze einde zwangerschap"/>
+         </concept>
+         <concept>
+            <code value="ZorgverlBetr"/>
+            <display value="Pediatrische betrokkenheid"/>
+         </concept>
+         <concept>
+            <code value="10"/>
+            <display value="Reden Verwijzing"/>
+         </concept>
+         <concept>
+            <code value="61"/>
+            <display value="Indicatie episiotomie"/>
+         </concept>
+         <concept>
+            <code value="62"/>
+            <display value="NIPT - uitslag"/>
+         </concept>
+         <concept>
+            <code value="63"/>
+            <display value="Foliumzuur gebruik"/>
+         </concept>
+         <concept>
+            <code value="64"/>
+            <display value="Indicatie prenatale diagnostiek obv screening"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

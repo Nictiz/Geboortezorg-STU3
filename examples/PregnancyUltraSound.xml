@@ -1,53 +1,48 @@
 <DiagnosticReport xmlns="http://hl7.org/fhir">
-    <id value="zwangerschapsecho-wouden-zwanger1" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
-        <valueString value="Geslacht niet doorgeven"/>
-    </extension>
-    <status value="final" />
-<!--    <category>
-        <system value="http://hl7.org/fhir/v2/0074"/>
-        <code value="OUS"/>
-        <display value="OB Ultrasound"/>
-    </category>-->
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="446208007"/>
-            <display value="echografie in tweede trimester (verrichting)"/>    
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
-    </context>
-    <effectiveDateTime value="2015-10-02T10:15:00+01:00" />
-    <performer>
-        <actor>
-            <reference value="Practitioner/zorgverlener-bakker"/>
-        </actor>
-    </performer>
-    <result>
-        <reference value="Observation/ligging-foetus" />
-    </result>
-    <result>
-        <reference value="Observation/placentalokalisatie" />
-    </result>
-    <result>
-        <reference value="Observation/biparietale-diameter" />
-    </result>
-    <result>
-        <reference value="Observation/hoofdomtrek" />
-    </result>
-    <result>
-        <reference value="Observation/buikomtrek" />
-    </result>
-    <result>
-        <reference value="Observation/femurlengte" />
-    </result>
-    <conclusion value="Geen bijzonderheden." />
+	<id value="zwangerschapsecho-wouden-zwanger1" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+		<valueString value="Geslacht niet doorgeven" />
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="446208007" />
+			<display value="echografie in tweede trimester (verrichting)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+	</context>
+	<effectiveDateTime value="2015-10-02T10:15:00+01:00" />
+	<performer>
+		<actor>
+			<reference value="Practitioner/zorgverlener-bakker" />
+		</actor>
+	</performer>
+	<result>
+		<reference value="Observation/ligging-foetus" />
+	</result>
+	<result>
+		<reference value="Observation/placentalokalisatie" />
+	</result>
+	<result>
+		<reference value="Observation/biparietale-diameter" />
+	</result>
+	<result>
+		<reference value="Observation/hoofdomtrek" />
+	</result>
+	<result>
+		<reference value="Observation/buikomtrek" />
+	</result>
+	<result>
+		<reference value="Observation/femurlengte" />
+	</result>
+	<conclusion value="Geen bijzonderheden." />
 </DiagnosticReport>

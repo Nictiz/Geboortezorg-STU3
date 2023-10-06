@@ -1,31 +1,31 @@
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="wouden-zwangerschapscholestase-zwanger3"/> 
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/condition-partOf">
-        <valueReference>
-            <reference value="Condition/wouden-zwanger3" />
-            <display value="Wouden zwangerschap3"/>
-        </valueReference>
-    </extension>
-    <clinicalStatus value="active"/> 
-    <code> 
-        <coding> 
-            <system value="http://snomed.info/sct"/> 
-            <code value="235888006"/> 
-            <display value="Cholestasis of pregnancy (disorder)"/> 
-        </coding> 
-    </code> 
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject> 
-    <context> 
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger3"/>
-        <display value="zwangerschap Wouden 3"/>
-    </context> 
-    <note>
-        <text value="tijdig geconstateerd"/>
-    </note>
-</Condition> 
+	<id value="wouden-zwangerschapscholestase-zwanger3" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy" />
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/condition-partOf">
+		<valueReference>
+			<reference value="Condition/wouden-zwanger3" />
+			<display value="Wouden zwangerschap3" />
+		</valueReference>
+	</extension>
+	<clinicalStatus value="active" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="235888006" />
+			<display value="zwangerschapscholestase (aandoening)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger3" />
+		<display value="zwangerschap Wouden 3" />
+	</context>
+	<note>
+		<text value="tijdig geconstateerd" />
+	</note>
+</Condition>

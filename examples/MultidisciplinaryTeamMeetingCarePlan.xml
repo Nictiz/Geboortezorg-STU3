@@ -1,38 +1,38 @@
 <CarePlan xmlns="http://hl7.org/fhir">
-    <id value="multidisciplinaryTeamMeetingPlan" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting-Plan" />
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-multidisciplinaryteammeeting-intenttreatment">
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="370858005" />
-                <display value="volgen van klinisch zorgpad" />
-            </coding>
-        </valueCodeableConcept>
-    </extension>
-    <status value="active" />
-    <intent value="plan" />
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="423134005" />
-            <display value="Gedeelte betreffende behandelplan in status" />
-        </coding>
-    </category>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="Encounter/multidisciplinaryTeamMeeting" />
-        <display value="MDO overleg geboortezorg" />
-    </context>
-    <activity>
-        <reference>
-            <reference value="ProcedureRequest/MultidisciplinaryTeamMeetingPlan-ProposedTreatment" />
-            <display value="ProcedureRequest example" />
-        </reference>
-    </activity>
+	<id value="multidisciplinaryTeamMeetingPlan" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting-Plan" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-multidisciplinaryteammeeting-intenttreatment">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="370858005" />
+				<display value="volgen van klinisch zorgpad" />
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<status value="active" />
+	<intent value="plan" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="423134005" />
+			<display value="gedeelte betreffende behandelplan in status (gegevensobject)" />
+		</coding>
+	</category>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="Encounter/multidisciplinaryTeamMeeting" />
+		<display value="MDO overleg geboortezorg" />
+	</context>
+	<activity>
+		<reference>
+			<reference value="ProcedureRequest/MultidisciplinaryTeamMeetingPlan-ProposedTreatment" />
+			<display value="ProcedureRequest example" />
+		</reference>
+	</activity>
 </CarePlan>

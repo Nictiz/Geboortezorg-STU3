@@ -1,45 +1,36 @@
-<!-- bevalling conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.6.6" -->
-<Procedure xmlns='http://hl7.org/fhir'>
-    <id value='assisteddelivery-example'/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure"/>
-    </meta>
-    <partOf>
-        <reference value="Procedure/geboorte1-wouden" />
-    </partOf>
-    <status value='completed'/>
-    <!-- slechts 1 category toegestaan in procedure -->
-<!--    <category>
-        <coding>
-            <system value='http://snomed.info/sct'/>
-            <code value="386637004"/>
-            <display value='Obstetric procedure (procedure)'/>
-        </coding>
-    </category>-->
-    <category>
-        <coding>
-            <system value='http://snomed.info/sct'/>
-            <code value='3311000146109'/>
-            <display value='Vaginale kunstverlossing'/>
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value='http://snomed.info/sct'/>
-            <code value='61586001'/>
-            <display value='Delivery by vacuum extraction (procedure)'/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/example" />
-    </context>
-    <outcome>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-success">
-            <valueBoolean value="true"/>
-        </extension>
-    </outcome>
+<Procedure xmlns="http://hl7.org/fhir">
+	<id value="assisteddelivery-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+	</meta>
+	<partOf>
+		<reference value="Procedure/geboorte1-wouden" />
+	</partOf>
+	<status value="completed" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="3311000146109" />
+			<display value="vaginale kunstverlossing (verrichting)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="61586001" />
+			<display value="Delivery by vacuum extraction (procedure)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/example" />
+	</context>
+	<outcome>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-procedure-success">
+			<valueBoolean value="true" />
+		</extension>
+	</outcome>
 </Procedure>

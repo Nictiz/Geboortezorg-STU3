@@ -1,115 +1,115 @@
 <Encounter xmlns="http://hl7.org/fhir">
-    <id value="multidisciplinaryTeamMeeting" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting" />
-    </meta>
-    <status value="finished" />
-    <class>
-        <system value="http://snomed.info/sct" />
-        <code value="384682003" />
-        <display value="Multidisciplinair overleg" />   
-    </class>
-    <type>
-        <text value="MDO geboortezorg" />
-    </type>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <episodeOfCare>
-        <reference value="EpisodeOfCare/zwangerschapsdossier" />
-        <display value="Zwangerschapsdossier zwangerschap 1" />
-    </episodeOfCare>
-    <participant>
-        <type>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
-                <code value="VOORZ" />
-                <display value="voorzitter" />
-            </coding>
-        </type>
-        <type>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
-                <code value="EXPR" />
-                <display value="expert" />
-            </coding>
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <valueReference>
-                    <reference value="PractitionerRole/ZorgverlenerA" />
-                    <display value="Zorgverlener A" />
-                </valueReference>
-            </extension>
-            <reference value="Practitioner/ZorgverlenerA" />
-            <display value="Zorgverlener A" />
-        </individual>
-    </participant>
-    <participant>
-        <type>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
-                <code value="EXPR" />
-                <display value="expert" />
-            </coding>
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <valueReference>
-                    <reference value="PractitionerRole/ZorgverlenerB" />
-                    <display value="Zorgverlener B" />
-                </valueReference>
-            </extension>
-            <reference value="Practitioner/ZorgverlenerB" />
-            <display value="Zorgverlener B" />
-        </individual>
-    </participant>
-    <participant>
-        <type>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
-                <code value="EXPR" />
-                <display value="expert" />
-            </coding>
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <valueReference>
-                    <reference value="PractitionerRole/ZorgverlenerC" />
-                    <display value="Zorgverlener C" />
-                </valueReference>
-            </extension>
-            <reference value="Practitioner/ZorgverlenerC" />
-            <display value="Zorgverlener C" />
-        </individual>
-    </participant>
-    <participant>
-        <type>
-            <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
-                <code value="EXPR" />
-                <display value="expert" />
-            </coding>
-        </type>
-        <individual>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-                <valueReference>
-                    <reference value="PractitionerRole/ZorgverlenerD" />
-                    <display value="Zorgverlener D" />
-                </valueReference>
-            </extension>
-            <reference value="Practitioner/ZorgverlenerD" />
-            <display value="Zorgverlener D" />          
-        </individual>
-    </participant>
-    <period>
-        <start value = "2016-02-21T16:00:00+01:00" />
-    </period>
-    <diagnosis>
-        <condition>
-            <reference value="Condition/herpesLabialis" />
-            <display value="Aandoening herpes labialis" />
-        </condition>
-    </diagnosis>
+	<id value="multidisciplinaryTeamMeeting" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting" />
+	</meta>
+	<status value="finished" />
+	<class>
+		<system value="http://snomed.info/sct" />
+		<code value="384682003" />
+		<display value="Multidisciplinair overleg" />
+	</class>
+	<type>
+		<text value="MDO geboortezorg" />
+	</type>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<episodeOfCare>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier zwangerschap 1" />
+	</episodeOfCare>
+	<participant>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
+				<code value="VOORZ" />
+				<display value="voorzitter" />
+			</coding>
+		</type>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
+				<code value="EXPR" />
+				<display value="expert" />
+			</coding>
+		</type>
+		<individual>
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+				<valueReference>
+					<reference value="PractitionerRole/ZorgverlenerA" />
+					<display value="Zorgverlener A" />
+				</valueReference>
+			</extension>
+			<reference value="Practitioner/ZorgverlenerA" />
+			<display value="Zorgverlener A" />
+		</individual>
+	</participant>
+	<participant>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
+				<code value="EXPR" />
+				<display value="expert" />
+			</coding>
+		</type>
+		<individual>
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+				<valueReference>
+					<reference value="PractitionerRole/ZorgverlenerB" />
+					<display value="Zorgverlener B" />
+				</valueReference>
+			</extension>
+			<reference value="Practitioner/ZorgverlenerB" />
+			<display value="Zorgverlener B" />
+		</individual>
+	</participant>
+	<participant>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
+				<code value="EXPR" />
+				<display value="expert" />
+			</coding>
+		</type>
+		<individual>
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+				<valueReference>
+					<reference value="PractitionerRole/ZorgverlenerC" />
+					<display value="Zorgverlener C" />
+				</valueReference>
+			</extension>
+			<reference value="Practitioner/ZorgverlenerC" />
+			<display value="Zorgverlener C" />
+		</individual>
+	</participant>
+	<participant>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.26.1" />
+				<code value="EXPR" />
+				<display value="expert" />
+			</coding>
+		</type>
+		<individual>
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+				<valueReference>
+					<reference value="PractitionerRole/ZorgverlenerD" />
+					<display value="Zorgverlener D" />
+				</valueReference>
+			</extension>
+			<reference value="Practitioner/ZorgverlenerD" />
+			<display value="Zorgverlener D" />
+		</individual>
+	</participant>
+	<period>
+		<start value="2016-02-21T16:00:00+01:00" />
+	</period>
+	<diagnosis>
+		<condition>
+			<reference value="Condition/herpesLabialis" />
+			<display value="Aandoening herpes labialis" />
+		</condition>
+	</diagnosis>
 </Encounter>
