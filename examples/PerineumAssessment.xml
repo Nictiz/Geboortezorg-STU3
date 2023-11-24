@@ -1,71 +1,71 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="perinealassessment-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PerinealAssessment"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="xxx"/>
-            <display value="Code still missing from AD"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier Example"/>
-    </context>
-    <effectiveDateTime value="2011-08-03"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="364297003"/>
-                <display value="observatie betreffende perineum van vrouw (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="289854007"/>
-                <display value="perineum intact (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="366252005"/>
-                <display value="bevinding betreffende integriteit van anussfincter (bevinding)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="249641001"/>
-                <display value="intacte anussfincter (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>         
-    </component> 
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="248842004"/>
-                <display value="bevinding betreffende vrouwelijk geslachtsorgaan (bevinding)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="289609008"/>
-                <display value="normale vagina (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component> 
+	<id value="perinealassessment-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PerinealAssessment" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="xxx" />
+			<display value="Code still missing from AD" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier Example" />
+	</context>
+	<effectiveDateTime value="2011-08-03" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="364297003" />
+				<display value="observatie betreffende perineum van vrouw (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="289854007" />
+				<display value="perineum intact (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="366252005" />
+				<display value="bevinding betreffende integriteit van anussfincter (bevinding)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="249641001" />
+				<display value="intacte anussfincter (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="248842004" />
+				<display value="bevinding betreffende vrouwelijk geslachtsorgaan (bevinding)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="289609008" />
+				<display value="normale vagina (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>

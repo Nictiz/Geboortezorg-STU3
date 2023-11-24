@@ -1,67 +1,67 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="placentalocalization-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="7381000146107"/>
-            <display value="bevinding betreffende positie van placenta (bevinding)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/zwangerschapsdossier"/>
-        <display value="Zwangerschapsdossier Example"/>
-    </context>
-    <effectiveDateTime value="2011-08-03"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160331000146101"/>
-                <display value="positie van placenta (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="7371000146105"/>
-                <display value="ventrale positie van placenta (bevinding)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component>
-    <component>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3">
-            <valueBoolean value="false"/>
-        </extension>    
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="237297004"/>
-                <display value="vastzittende placenta aan oud litteken in uterus (aandoening)"/>
-            </coding>
-        </code>  
-    </component> 
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="7381000146107"/>
-                <display value="bevinding betreffende positie van placenta (bevinding)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="15663008"/>
-                <display value="placenta praevia totalis (aandoening)"/>
-            </coding>
-        </valueCodeableConcept>            
-    </component> 
+	<id value="placentalocalization-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="7381000146107" />
+			<display value="bevinding betreffende positie van placenta (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/zwangerschapsdossier" />
+		<display value="Zwangerschapsdossier Example" />
+	</context>
+	<effectiveDateTime value="2011-08-03" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="160331000146101" />
+				<display value="positie van placenta (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="7371000146105" />
+				<display value="ventrale positie van placenta (bevinding)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
+	<component>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3">
+			<valueBoolean value="false" />
+		</extension>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="237297004" />
+				<display value="vastzittende placenta aan oud litteken in uterus (aandoening)" />
+			</coding>
+		</code>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="7381000146107" />
+				<display value="bevinding betreffende positie van placenta (bevinding)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="15663008" />
+				<display value="placenta praevia totalis (aandoening)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>

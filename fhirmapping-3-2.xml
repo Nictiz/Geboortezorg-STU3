@@ -452,7 +452,7 @@
 	<record>
 		<ID>peri32-dataelement-757</ID>
 		<naam>EindDatumTijd</naam>
-		<mapping>Encounter.period.start</mapping>
+		<mapping>Encounter.period.end</mapping>
 		<profile>bc-Encounter</profile>
 		<in>true</in>
 		<zib>NL-CM-15.1.4</zib>
@@ -680,7 +680,7 @@
 		<ID>peri32-dataelement-769</ID>
 		<naam>Verrichting</naam>
 		<mapping>Procedure</mapping>
-		<profile>nl-core-procedure</profile>
+		<profile>zib-Procedure</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy</example>
 	</record>
@@ -688,7 +688,7 @@
 		<ID>peri32-dataelement-1986</ID>
 		<naam>Vrouw/ moeder</naam>
 		<mapping>Procedure.subject</mapping>
-		<profile>nl-core-procedure</profile>
+		<profile>zib-Procedure</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/obstetricprocedure-episiotomy</example>
 	</record>
@@ -2017,10 +2017,9 @@
 	<record>
 		<ID>peri32-dataelement-989</ID>
 		<naam>ZorgverlenersRol</naam>
-		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<mapping>CareTeam.participant.role</mapping>
+		<profile>bc-CareTeam</profile>
 		<in>true</in>
-		<example>https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3</example>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1314</ID>
@@ -2454,7 +2453,7 @@
 		<ID>peri32-dataelement-2685</ID>
 		<naam>Verrichting</naam>
 		<mapping>Procedure</mapping>
-		<profile>nl-core-procedure</profile>
+		<profile>zib-Procedure</profile>
 		<in>false</in>
 		<zib>peri32-dataelement-1529</zib>
 	</record>
@@ -3401,21 +3400,21 @@
 		<ID>peri32-dataelement-2581</ID>
 		<naam>Opleiding</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2582</ID>
 		<naam>Schooltype</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-Maternalbservation</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2583</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-7.10.3</zib>
 	</record>
@@ -4561,7 +4560,7 @@
 		<ID>peri32-dataelement-4394</ID>
 		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct |169812000</searchurl>
 	</record>
@@ -5344,7 +5343,7 @@
 	<record>
 		<ID>peri32-dataelement-10273</ID>
 		<naam>TrisomieAnamneseWaarde</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.value[x]:valueBoolean</mapping>
 		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
@@ -6003,151 +6002,151 @@
 		<ID>peri32-dataelement-4048</ID>
 		<naam>Fundusstand (Meting)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4050</ID>
 		<naam>FundusstandWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4051</ID>
 		<naam>MeetMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4054</ID>
 		<naam>MeetDatumBeginTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.start</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4055</ID>
 		<naam>MeetDatumEindTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.end</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4056</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4057</ID>
 		<naam>AnatomischeLocatieMeting</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4058</ID>
 		<naam>Locatie</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10522</ID>
 		<naam>Bevindingen Foetus</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4060</ID>
 		<naam>LiggingFoetus (Meting)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4062</ID>
 		<naam>LiggingFoetusWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4063</ID>
 		<naam>MeetMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4066</ID>
 		<naam>MeetDatumBeginTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.start</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4067</ID>
 		<naam>MeetDatumEindTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.end</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4068</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4069</ID>
 		<naam>AnatomischeLocatieMeting</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4070</ID>
 		<naam>Locatie</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4072</ID>
 		<naam>IndalingFoetus(Meting)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4074</ID>
 		<naam>IndalingFoetusWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4075</ID>
 		<naam>MeetMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4078</ID>
 		<naam>MeetDatumBeginTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.start</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4079</ID>
 		<naam>MeetDatumEindTijd</naam>
 		<mapping>Observation.effective[x]:effectivePeriod.end</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4080</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4081</ID>
 		<naam>AnatomischeLocatieMeting</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4082</ID>
 		<naam>Locatie</naam>
 		<mapping>Observation.bodySite</mapping>
-		<profile>bc-FetusObservation</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1776</ID>
@@ -6491,8 +6490,8 @@
 	<record>
 		<ID>peri32-dataelement-7890</ID>
 		<naam>Leeftijd eiceldonor</naam>
-		<mapping>RelatedPerson.birthDate</mapping>
-		<profile>bc-Donor</profile>
+		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<profile>bc-DonorObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1846</ID>
@@ -6833,7 +6832,7 @@
 	<record>
 		<ID>peri32-dataelement-4084</ID>
 		<naam>Actieve Ontsluiting (Observatie)</naam>
-		<mapping>Observation.code</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-DeliveryObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1</example>
@@ -6952,31 +6951,31 @@
 		<ID>peri32-dataelement-4120</ID>
 		<naam>Aard Vruchtwater (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4121</ID>
 		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4123</ID>
 		<naam>Aard Vruchtwater Waarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4124</ID>
 		<naam>ObservatieMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4131</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-39</ID>
@@ -7133,7 +7132,7 @@
 		<ID>peri32-dataelement-4193</ID>
 		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 		<searchurl>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |169812000}</searchurl>
@@ -7142,7 +7141,7 @@
 		<ID>peri32-dataelement-4194</ID>
 		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 	</record>
@@ -7150,7 +7149,7 @@
 		<ID>peri32-dataelement-4196</ID>
 		<naam>WerkelijkePlaatsBaringWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 	</record>
@@ -7158,7 +7157,7 @@
 		<ID>peri32-dataelement-4197</ID>
 		<naam>ObservatieMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 	</record>
@@ -7166,7 +7165,7 @@
 		<ID>peri32-dataelement-4204</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-DeliveryObservation</profile>
+		<profile>bc-BirthObservation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 	</record>
@@ -7197,7 +7196,7 @@
 	<record>
 		<ID>peri32-dataelement-10711</ID>
 		<naam>ContactType</naam>
-		<mapping>Encounter.class.extension:ContactTypeCodelist</mapping>
+		<mapping>Encounter.class</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
@@ -15275,7 +15274,7 @@
 	<record>
 		<ID>peri32-dataelement-9940</ID>
 		<naam>FecesWaarde</naam>
-		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component:feces.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-ExcretionFeces</profile>
 	</record>
 	<record>

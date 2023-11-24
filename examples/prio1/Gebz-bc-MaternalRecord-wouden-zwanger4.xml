@@ -1,33 +1,30 @@
 <EpisodeOfCare xmlns="http://hl7.org/fhir">
-    <id value="wouden-dossier-zwanger4"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
-    </meta>
-    <status value="active"/>
-    <type>
-        <!-- Vaste terminologie -->
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="364320009"/>
-            <display value="Pregnancy observable (observable entity)"/>
-        </coding>
-    </type>
-    <!-- Verwijzing naar de bijbehorende zwangerschap als Condition. -->
-    <diagnosis>
-        <condition>
-            <reference value="Condition/wouden-zwanger4"/>
-        </condition>
-    </diagnosis>
-    <!-- Referentie patiënt -->
-    <patient>
-        <reference value="Patient/XXX-VDWOUDEN"/>
-    </patient>
-    <managingOrganization>
-        <reference value="Organization/verloskundigenpraktijk-A" />
-        <display value="Verloskundigenpraktijk A" />
-    </managingOrganization>
-    <careManager>
-        <reference value="Practitioner/zorgverlener-delos" />
-        <display value="Vera de Los" />
-    </careManager>
+	<id value="wouden-dossier-zwanger4" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
+	</meta>
+	<status value="active" />
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="364320009" />
+			<display value="observatie betreffende zwangerschap (waarneembare entiteit)" />
+		</coding>
+	</type>
+	<diagnosis>
+		<condition>
+			<reference value="Condition/wouden-zwanger4" />
+		</condition>
+	</diagnosis>
+	<patient>
+		<reference value="Patient/XXX-VDWOUDEN" />
+	</patient>
+	<managingOrganization>
+		<reference value="Organization/verloskundigenpraktijk-A" />
+		<display value="Verloskundigenpraktijk A" />
+	</managingOrganization>
+	<careManager>
+		<reference value="Practitioner/zorgverlener-delos" />
+		<display value="Vera de Los" />
+	</careManager>
 </EpisodeOfCare>

@@ -1,0 +1,48 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.320--20201112155937"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-11-12T15:59:37+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.320--20201112155937"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.320"/>
+   </identifier>
+   <version value="2020-11-12T15:59:37"/>
+   <name value="Indaling_32"/>
+   <title value="Indaling (3.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Indaling (3.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="871478009"/>
+            <display value="presenterend deel van foetus niet ingedaald (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="240171000146107"/>
+            <display value="presenterend deel van foetus gedeeltelijk ingedaald (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="240181000146109"/>
+            <display value="presenterend deel van foetus vast ingedaald (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="55821000146102"/>
+            <display value="indalen van foetus niet te beoordelen (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

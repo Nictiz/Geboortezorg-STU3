@@ -1,24 +1,21 @@
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="wouden-zwanger4"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
-    </meta>
-    <!-- Active voor huidige zwangerschap -->
-    <clinicalStatus value="active"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="118185001" />
-            <display value="Finding related to pregnancy (finding)"/>
-        </coding>
-    </code>
-    <!-- Referentie naar vrouw -->
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject>
-    <!-- Context Episode of Care -->
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger4"/>
-    </context>
+	<id value="wouden-zwanger4" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+	</meta>
+	<clinicalStatus value="active" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="118185001" />
+			<display value="bevinding betreffende zwangerschap (bevinding)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger4" />
+	</context>
 </Condition>

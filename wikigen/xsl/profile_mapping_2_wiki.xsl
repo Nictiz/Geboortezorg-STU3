@@ -121,7 +121,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||</xsl:text>
         <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
         <xsl:value-of select="@pattern"/>
-        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=</xsl:text>
+        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>}}</xsl:text>
         <xsl:text>
@@ -146,14 +146,32 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <!--</xsl:if>-->
         <xsl:text>
 ||</xsl:text>
-        <xsl:if test="@valueSet">
+        <xsl:if test="@valueSet1">
             <xsl:text>{{Simplifier|http://decor.nictiz.nl/fhir/ValueSet/</xsl:text>
-            <xsl:value-of select="@valueSetId"/>
+            <xsl:value-of select="@valueSetId1"/>
             <xsl:text>--</xsl:text>
-            <xsl:value-of select="translate(@valueSetEffectiveDate, 'T:-', '')"/>
-            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.1.0|title=</xsl:text>
-                <xsl:value-of select="@valueSet"/>
+            <xsl:value-of select="translate(@valueSetEffectiveDate1, 'T:-', '')"/>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+                <xsl:value-of select="@valueSet1"/>
                 <xsl:text>}}</xsl:text>
+        </xsl:if>
+        <xsl:if test="@valueSet2">
+            <xsl:text>{{Simplifier|http://decor.nictiz.nl/fhir/ValueSet/</xsl:text>
+            <xsl:value-of select="@valueSetId2"/>
+            <xsl:text>--</xsl:text>
+            <xsl:value-of select="translate(@valueSetEffectiveDate2, 'T:-', '')"/>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+            <xsl:value-of select="@valueSet2"/>
+            <xsl:text>}}</xsl:text>
+        </xsl:if>
+        <xsl:if test="@valueSet3">
+            <xsl:text>{{Simplifier|http://decor.nictiz.nl/fhir/ValueSet/</xsl:text>
+            <xsl:value-of select="@valueSetId3"/>
+            <xsl:text>--</xsl:text>
+            <xsl:value-of select="translate(@valueSetEffectiveDate3, 'T:-', '')"/>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+            <xsl:value-of select="@valueSet3"/>
+            <xsl:text>}}</xsl:text>
         </xsl:if>
 <!--    deze is nu altijd leeg en alleen van toepassing bij Observation, voor nu weglaten-->
 <!--        <xsl:text>

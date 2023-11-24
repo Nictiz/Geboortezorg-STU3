@@ -1,40 +1,40 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="birth-control-example"/>
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthControl"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="150811000119101"/>
-            <display value="voorlichting over contraceptieve zorg gegeven (situatie)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/kraamzorg"/>
-    </context>
-    <effectiveDateTime value="2011-09-02"/>
-    <valueBoolean value="true"/>
-    <comment value="vrouw gewezen op risico's nieuwe zwangerschap"/>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="160601000146104"/>
-                <display value="anticonceptiemethode (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="169450001"/>
-                <display value="geen anticonceptie (situatie)"/>
-            </coding>      
-        </valueCodeableConcept>
-    </component>
+	<id value="birth-control-example" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-BirthControl" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="150811000119101" />
+			<display value="voorlichting over contraceptieve zorg gegeven (situatie)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/kraamzorg" />
+	</context>
+	<effectiveDateTime value="2011-09-02" />
+	<valueBoolean value="true" />
+	<comment value="vrouw gewezen op risico's nieuwe zwangerschap" />
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="160601000146104" />
+				<display value="anticonceptiemethode (waarneembare entiteit)" />
+			</coding>
+		</code>
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<code value="169450001" />
+				<display value="geen anticonceptie (situatie)" />
+			</coding>
+		</valueCodeableConcept>
+	</component>
 </Observation>

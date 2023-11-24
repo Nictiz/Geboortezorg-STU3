@@ -1,37 +1,35 @@
-
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="birthweight-example-child"/>
-    <meta>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation"/>
-    </meta>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://loinc.org"/>
-            <code value="8339-4"/>
-            <display value="Birth weight Measured"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/example-child" />
-        <display value="Example Child" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/example"/>
-    </context>
-    <valueQuantity>
-        <value value="2845"/>
-        <unit value="g"/>
-        <system value="http://unitsofmeasure.org"/>
-        <code value="g"/>
-    </valueQuantity>
-    <interpretation>
-        <coding>
-            <system value="PercentielGeboortegewicht"/>
-            <code value="2"/>
-            <display value="p2,3 tot p10"/>
-        </coding>
-    </interpretation>
+	<id value="birthweight-example-child" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation" />
+	</meta>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="8339-4" />
+			<display value="Birth weight Measured" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example-child" />
+		<display value="Example Child" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/example" />
+	</context>
+	<valueQuantity>
+		<value value="2845" />
+		<unit value="g" />
+		<system value="http://unitsofmeasure.org" />
+		<code value="g" />
+	</valueQuantity>
+	<interpretation>
+		<coding>
+			<system value="PercentielGeboortegewicht" />
+			<code value="2" />
+			<display value="p2,3 tot p10" />
+		</coding>
+	</interpretation>
 </Observation>
- 

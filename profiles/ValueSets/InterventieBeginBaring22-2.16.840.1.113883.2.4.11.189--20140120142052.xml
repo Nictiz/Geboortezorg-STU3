@@ -1,0 +1,71 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.189--20140120142052"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-01-20T14:20:52+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.189--20140120142052"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.189"/>
+   </identifier>
+   <version value="2014-01-20T14:20:52"/>
+   <name value="InterventieBeginBaring22"/>
+   <title value="Interventie begin baring (2.2)"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Interventie begin baring (2.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="236960006"/>
+            <display value="strippen van vliezen (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="408818004"/>
+            <display value="inleiden van partus door kunstmatig breken van vliezen (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="425861005"/>
+            <display value="cervicale rijping met ballon (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="236966000"/>
+            <display value="cervicale rijping met prostaglandine E2 (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="177135005"/>
+            <display value="inleiden van partus met oxytocine (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="177136006"/>
+            <display value="inleiden van partus met prostaglandinen (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="177141003"/>
+            <display value="electieve sectio caesarea (verrichting)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

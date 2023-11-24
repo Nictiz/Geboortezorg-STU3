@@ -1,0 +1,88 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.285--20200616133418"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-06-16T13:34:18+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.285--20200616133418"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.285"/>
+   </identifier>
+   <version value="2020-06-16T13:34:18"/>
+   <name value="Ademhaling"/>
+   <title value="Ademhaling"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Ademhaling"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="anders"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Normale ademhaling."/>
+            </extension>
+            <code value="22803001"/>
+            <display value="normale ademhalingsfunctie (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="In rust meer dan 60 ademhalingen per minuut = versnelde ademhaling"/>
+            </extension>
+            <code value="271823003"/>
+            <display value="tachypneu (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Mond open, kin omlaag en neusvleugels bewegen."/>
+            </extension>
+            <code value="248568003"/>
+            <display value="opengesperde neusgaten (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Intrekkingen tussen ribben of op grenslijn van borst en buik"/>
+            </extension>
+            <code value="271620003"/>
+            <display value="gebruik van hulpademhalingsspieren (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Kreunend, voortdurend steunend geluid, niet doorademen."/>
+            </extension>
+            <code value="248575002"/>
+            <display value="kreunende ademhaling (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Snuiven, neusverstopping, verkoudheid."/>
+            </extension>
+            <code value="68235000"/>
+            <display value="neuscongestie (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Pruttelen, keelgeruis, bellen blazen van speeksel."/>
+            </extension>
+            <code value="159041000146105"/>
+            <display value="bellen blazen bij neonaat (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

@@ -1,0 +1,88 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.159--20210621112616"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2021-06-21T11:26:16+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20210621112616"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.159"/>
+   </identifier>
+   <version value="2021-06-21T11:26:16"/>
+   <name value="HodgePlanes"/>
+   <title value="Hodge Planes"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Hodge Planes"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <inactive value="true"/>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="289377000"/>
+            <display value="-5 niveau van voorliggend deel ten opzichte van spinae ischiadicae"/>
+         </concept>
+         <concept>
+            <code value="62098001"/>
+            <display value="hoofd van foetus niet ingedaald (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="289379002"/>
+            <display value="-3 niveau van voorliggend deel ten opzichte van spinae ischiadicae"/>
+         </concept>
+         <concept>
+            <code value="157171000146107"/>
+            <display value="hoofd van foetus ingedaald tot vlak van Hodge 1 (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="289381000"/>
+            <display value="-1 niveau van voorliggend deel ten opzichte van spinae ischiadicae"/>
+         </concept>
+         <concept>
+            <code value="157181000146109"/>
+            <display value="hoofd van foetus ingedaald tot vlak van Hodge 2 (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="289382007"/>
+            <display value="0 niveau van voorliggend deel ten opzichte van spinae ischiadicae"/>
+         </concept>
+         <concept>
+            <code value="157461000146106"/>
+            <display value="hoofd van foetus ingedaald tot vlak van Hodge 3 (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="289385009"/>
+            <display value="3 niveau van voorliggend deel ten opzichte van spinae ischiadicae"/>
+         </concept>
+         <concept>
+            <code value="157191000146106"/>
+            <display value="hoofd van foetus ingedaald tot vlak van Hodge 4 (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

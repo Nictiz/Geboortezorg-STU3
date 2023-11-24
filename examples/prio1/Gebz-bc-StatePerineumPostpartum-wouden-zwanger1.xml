@@ -1,36 +1,34 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="statusperineumpostpartum-wouden-zwanger1"/>
-    <meta>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation"/>
-    </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
-        <valueReference>
-            <reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
-        </valueReference>
-    </extension>
-    <status value="final"/>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="364297003"/>
-            <display value="Female perineum observable (observable entity)"/>
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/XXX-VDWOUDEN" />
-        <display value="Patient van der Wouden" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/wouden-dossier-zwanger1"/>
-    </context>
-    <valueCodeableConcept>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="609344008"/>
-            <display value="Episiotomy wound"/>
-        </coding>
-    </valueCodeableConcept>
+	<id value="statusperineumpostpartum-wouden-zwanger1" />
+	<meta>
+		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation" />
+	</meta>
+	<extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+		<valueReference>
+			<reference value="Procedure/bevallingprocedure-wouden-zwanger1" />
+		</valueReference>
+	</extension>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="364297003" />
+			<display value="observatie betreffende perineum van vrouw (waarneembare entiteit)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/XXX-VDWOUDEN" />
+		<display value="Patient van der Wouden" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
+	</context>
+	<valueCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="609344008" />
+			<display value="episiotomiewond (afwijkende morfologie)" />
+		</coding>
+	</valueCodeableConcept>
 </Observation>
-
-

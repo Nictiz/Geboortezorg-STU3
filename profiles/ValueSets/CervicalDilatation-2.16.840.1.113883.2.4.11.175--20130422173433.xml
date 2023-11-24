@@ -1,0 +1,83 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.175--20130422173433"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2013-04-22T17:34:33+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20130422173433"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.175"/>
+   </identifier>
+   <version value="2013-04-22T17:34:33"/>
+   <name value="CervicalDilatation"/>
+   <title value="Cervical dilatation"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="Cervical dilatation"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="NI"/>
+            <display value="Geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="289764007"/>
+            <display value="Cervix undilated"/>
+         </concept>
+         <concept>
+            <code value="320003"/>
+            <display value="Cervical dilatation, 1cm"/>
+         </concept>
+         <concept>
+            <code value="58699001"/>
+            <display value="Cervical dilatation, 2cm"/>
+         </concept>
+         <concept>
+            <code value="23652008"/>
+            <display value="Cervical dilatation, 3cm"/>
+         </concept>
+         <concept>
+            <code value="43808007"/>
+            <display value="Cervical dilatation, 4cm"/>
+         </concept>
+         <concept>
+            <code value="23128002"/>
+            <display value="Cervical dilatation, 5cm"/>
+         </concept>
+         <concept>
+            <code value="66895001"/>
+            <display value="Cervical dilatation, 6cm"/>
+         </concept>
+         <concept>
+            <code value="74522004"/>
+            <display value="Cervical dilatation, 7cm"/>
+         </concept>
+         <concept>
+            <code value="39333005"/>
+            <display value="Cervical dilatation, 8cm"/>
+         </concept>
+         <concept>
+            <code value="62774004"/>
+            <display value="Cervical dilatation, 9cm"/>
+         </concept>
+         <concept>
+            <code value="62472004"/>
+            <display value="Cervix fully dilated"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

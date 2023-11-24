@@ -1,34 +1,34 @@
 <Procedure xmlns="http://hl7.org/fhir">
-    <id value="echoscopie" />
-    <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
-    </meta>
-    <status value="completed" />
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="386637004" />
-            <display value="Obstetric procedure (procedure)" />
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="268445003" />
-            <display value="obstetrische echografie (verrichting)" />
-        </coding>
-    </code>
-    <subject>
-        <reference value="Patient/EXAMPLE" />
-        <display value="Example" />
-    </subject>
-    <context>
-        <reference value="EpisodeOfCare/example" />
-        <display value="Zwangerschapsdossier" />
-    </context>
-    <performedDateTime value="2016-02-19"/>
-    <report>
-        <reference value="DiagnosticReport/Echoscopieverslag"/>
-        <display value="Echoscopieverslag"/>
-    </report>
+	<id value="echoscopie" />
+	<meta>
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure" />
+	</meta>
+	<status value="completed" />
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="386637004" />
+			<display value="obstetrische verrichting (verrichting)" />
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<code value="268445003" />
+			<display value="obstetrische echografie (verrichting)" />
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/EXAMPLE" />
+		<display value="Example" />
+	</subject>
+	<context>
+		<reference value="EpisodeOfCare/example" />
+		<display value="Zwangerschapsdossier" />
+	</context>
+	<performedDateTime value="2016-02-19" />
+	<report>
+		<reference value="DiagnosticReport/Echoscopieverslag" />
+		<display value="Echoscopieverslag" />
+	</report>
 </Procedure>

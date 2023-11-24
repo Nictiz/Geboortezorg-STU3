@@ -1,0 +1,433 @@
+=Addendum FHIR mapping=
+{{IssueBox|Generated code, do not change by hand}}
+
+==
+<section begin= />
+{| class="wikitable" 
+|-
+|| '''Profile'''
+|| '''Pattern'''
+|| '''FHIR resource'''
+|| '''Description'''
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Fetus}}
+||
+||BodySite
+||A BodySite profile as defined by BabyConnect. 
+This BodySite profile refers to the unborn fetus in case no fetal record (yet) exists. In case a fetal record is created the unborn fetus will be registered as a (child) Patient.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-CareAgreement}}
+||
+||CarePlan
+||A CarePlan profile describing the care arrangement between a pregnant woman and her caregiver(s) as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCareplan|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-IndividualCareplan}}
+||
+||CarePlan
+||A CarePlan profile describing the individual care plan of a pregnant woman as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting-Plan|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-MultidisciplinaryTeamMeeting-Plan}}
+||
+||CarePlan
+||A CarePlan profile related to the multidisciplinary team meeting as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-CareTeam|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-CareTeam}}
+||
+||CareTeam
+||A CareTeam profile describing the involvement of (other) care providers in the care of a patient and her child, such as a pediatrician.
+* These care providers are included as participants in the CareTeam using the CareTeam.participant.member element. Participants may either be Practitioners or Organizations.
+* Their role and period of involvement are described at the participant level (that is CareTeam.participant.role and CareTeam.participant.period).
+* The reason of involvement is described in CareTeam.reasonCode
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ClinicalImpression|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ClinicalImpression}}
+||
+||ClinicalImpression
+||A ClinicalImpression profile describing the caregiver's professional assessment around the woman's pregnancy as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-TransactionComposition|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-TransactionComposition}}
+||
+||Composition
+||A Composition profile describing the Composition resource that should be present in the Transaction Bundle as defined by BabyConnect. The Composition resource should include entries for each resource that is included in the transaction.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfChild|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DisorderOfChild}}
+||[[Gebz:V1.2_FHIR_IG_bc-DisorderOfChild|Child disorder]]
+||Condition
+||A Condition profile describing child disorders as defined by BabyConnect. 
+Child disorders, such as chromosomal and congenital abnormalities or other problems are disorders of the child. The subject is either the child Patient (in case the child is born or a fetal patient record is in place) or the woman Patient (in case the child is unborn and there is no fetal patient record in place). In the second case, use the bodySite reference extension to refer to the fetus.
+* Child disorders can refer to the EpisodeOfCare with Condition.context.reference
+* A ConceptMap is available to map verification status to accepted FHIR codes
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DisorderOfLaborAndDelivery}}
+||
+||Condition
+||A Condition profile describing disorders and complications related to labor and delivery as defined by BabyConnect. These disorders are part of the delivery, which is defined in the part of extension.
+* Delivery-related Disorders use partOf extension to point to Condition they're about.
+* Delivery-related Conditions refer to the EpisodeOfCare with Observation.context.reference
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfPregnancy|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DisorderOfPregnancy}}
+||[[Gebz:V1.2_FHIR_IG_bc-DisorderOfPregnancy|Pregnancy-related disorder]]
+||Condition
+||A Condition profile describing disorders related to a pregnancy as defined by BabyConnect. For example, Conditions such as cholestasis and hypertension do not (only) pertain to the Patient but to a particular pregnancy.
+* Pregnancy-related Observations use partOf extension to point to Condition they're about.
+* In some cases the partOf Condition may not be available. The BGZ for instance does not relate Conditions to particular pregnancies.
+* Pregnancy-related Conditions refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DisorderPostPartum|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DisorderPostPartum}}
+||
+||Condition
+||A Condition profile describing post partum disorders or complications as defined by BabyConnect. Post partum disorders, such as post partum depression, occur after delivery and are related to the Delivery Procedure. 
+* A partOf extension is used to point to the Delivery.
+* The context is the Maternal Record or an Encounter.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-LegalSituation-LegalStatus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-LegalSituation-LegalStatus}}
+||
+||Condition
+||A Condition profile describing legal status as defined by BabyConnect. The legal status indicates the basis on which the patient is staying in a healthcare organization. This can be either voluntary or involuntary, however the legal status is always determined by a judge.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-LegalSituation-Representation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-LegalSituation-Representation}}
+||
+||Condition
+||A Condition profile describing legal representation as defined by BabyConnect. Representation is important in situations where a person is legally not competent to give permission and/or factually (partly) incapable of doing so. A representative supports and takes decisions in the interest of the representee when they cannot do so themselves (temporarily or permanently).
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-TreatmentDirective|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-TreatmentDirective}}
+||
+||Consent
+||A Consent profile as defined by BabyConnect. This profile is based on the zib 2020 and is a preadopt of the R4 zib 2020 package.
+A treatment directive contains a joint decision between a health professional (for example a general practitioner) and a patient or his representative(s) about the desirability of performing a certain treatment, such as resuscitation, before this treatment becomes (acute) necessary.
+When the need arises and the treatment cannot be discussed with the patient or representative (s), that decision is an important indication for the treating health professional (for example an ER doctor).
+The term treatment limit is a synonym of the term treatment directive.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DigitalVaginalExamination|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DigitalVaginalExamination}}
+||
+||DiagnosticReport
+||A DiagnosticReport profile describing a digital vaginal examination as defined by BabyConnect. 
+The digital vaginal examination DiagnosticReport groups Observations related to the digital vaginal examination. The woman Patient is the subject of the report.
+* This report refers to the EpisodeOfCare with DiagnosticReport.context.reference
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PregnancyUltraSound}}
+||
+||DiagnosticReport
+||A DiagnosticReport profile describing a pregnancy ultrasound as defined by BabyConnect. The ultrasound DiagnosticReport groups Observations related to the pregnancy ultrasound. The woman Patient is the subject of the report.
+* This report refers to the EpisodeOfCare with DiagnosticReport.context.reference
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ChildBirthAssistance}}
+||
+||Encounter
+||An Encounter profile describing (childbirth) assistance to a woman in labor as defined by BabyConnect.
+* The woman Patient is the subject of the Encounter
+* The place of birth is described in Encounter.class using a ConceptMap to map values to available FHIR codes
+* The Encounter.diagnosis element refers to the Pregnancy (Condition)
+* The Encounter.participant element containts a list of care providers that were present during delivery. Family members could also be included in this list.
+* Additional details can be defined at participant level, such as participant type and time of arrival. The latter uses an extension at participant level with a coded list of time of arrival.
+* Childbirth Assistance refers to the EpisodeOfCare with Encounter.EpisodeOfCare.reference
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Encounter|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Encounter}}
+||
+||Encounter
+||An Encounter profile describing birthcare related encounters as defined by BabyConnect. The woman Patient is the subject of the Encounter.
+* Encounter.type specifies the type of encounter, e.g. prenatal visit, postnatal follow up or counseling.
+* Encounter.episodeOfCare points to the maternal record that is the context of the Encounter
+* Encounter.diagnosis points to the pregnancy (and optional other Conditions)
+* Encounter.serviceProvider points to the responsible Organization for the Encounter
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-MultidisciplinaryTeamMeeting}}
+||
+||Encounter
+||An Encounter profile describing a team care conference as defined by BabyConnect. In a team care conference caregivers discuss patient cases in absence or presence of the patient.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ChildRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ChildRecord}}
+||
+||EpisodeOfCare
+||An EpisodeOfCare profile describing the child care record as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-MaternalRecord}}
+||
+||EpisodeOfCare
+||An EpisodeOfCare profile describing a maternal record (or pregnancy file) as defined by BabyConnect. 
+Each pregnancy is a Condition. It is also represented as an EpisodeOfCare (maternal record) for each involved Organization. The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care. It includes references to an Organization and responsible Practitioner.
+
+The maternal record defines care responsibility for a specific period of time and groups all data related to this period of care:
+1. The (overarching) maternal record groups all data related to one pregnancy (.type = 364320009)
+2. A sub record groups all data related to a specific perinatal period within the pregnancy (.type contains a code for the perinatal period and .partOf contains a reference to the overarching maternal record)
+
+Relations between the pregnancy (Condition) and the overarching maternal record (EpisodeOfCare):
+* Condition points to the EpisodeOfCare through a EpisodeOfCare.context.reference element. (Note: different providers may each have their own Condition resource.)
+* EpisodeOfCare points to the Condition through a EpisodeOfCare.diagnosis.condition element.
+* Condition points to the Patient with Condition.subject.reference
+ - Condition.status must be 'active' for ongoing pregnancies and 'inactive' for past ones.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FamilyMemberHistory|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FamilyMemberHistory}}
+||
+||FamilyMemberHistory
+||A FamilyMemberHistory profile as defined by BabyConnect describing the relevant family history of a pregnant woman.
+* FamilyMemberHistory.patient points to the woman Patient
+* FamilyMemberHistory.relationship describes the relation (e.g. father or sister) of the family member to the woman Patient
+* FamilyMemberHistory.condition points to the (significant) condition(s) of the family member. The optional contributedToDeath extension can be used to indicate if a specific condition caused death
+* FamilyMemberHistory.deceased[x] indicates whether the family member has deceased. This can either be a boolean (true/false) or more specific information can be provided like age. If an age is present, it implies that the family member is deceased and in this case the boolean value should be left out.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan-Goal|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-IndividualCarePlan-Goal}}
+||
+||Goal
+||A Goal profile describing the goal(s) of an individual care plan of a pregnant woman as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AbilityToTakeCareOfChild|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-AbilityToTakeCareOfChild}}
+||
+||Observation
+||An Observation profile describing the woman's ability to take care of her child as defined by BabyConnect. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-AmnioticFluid}}
+||
+||Observation
+||An Observation profile describing the amniotic fluid as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-BarthelIndex|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-BarthelIndex}}
+||
+||Observation
+||An Observation profile describing self-reliance of the woman after birth as defined by BabyConnect. The subject is the woman Patient.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-BirthControl|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-BirthControl}}
+||
+||Observation
+||An Observation profile describing birth control as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-BirthObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-BirthObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-BirthObservation|Birth-related Observation]]
+||Observation
+||An Observation profile describing birth-related Observations as defined by BabyConnect. Birth-related Observations, such as parturition type, pertain to a birth, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation.
+* Birth-related Observations use focus extension to point to a birth
+* Birth-related Observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-BreastFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-BreastFindings}}
+||
+||Observation
+||An Observation profile describing findings related to the breasts as defined by BabyConnect. The subject is the woman Patient.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ChildObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-ChildObservation|Child-related Observation]]
+||Observation
+||An Observation profile describing child-related Observations (not captured in other existing profiles), as defined by BabyConnect. Child-related Observations, such as Apgar score and birthweight, pertain to the child Patient, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead.
+- Child observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DeliveryObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-DeliveryObservation|Pregnancy-related disorder]]
+||Observation
+||An Observation profile describing delivery-related Observations, as defined by BabyConnect. 
+Observations such as onset of labor or blood loss pertain to a delivery Procedure.
+* Delivery-related Observations use focus extension to point to the delivery Procedure they're about.
+* Delivery-related Observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DonorObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DonorObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-DonorObservation|Donor-related Observation]]
+||Observation
+||An Observation profile describing donor-related Observations, as defined by BabyConnect. 
+These are observations about the donor, such as their age.
+* Donor-related Observations use the focus extension to point to the RelatedPerson (donor) they are about
+* Donor-related Observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionFeces|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ExcretionFeces}}
+||
+||Observation
+||An Observation profile describing a newborn's fecal excretion as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionUrine|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ExcretionUrine}}
+||
+||Observation
+||An Observation profile describing a newborn's urine excretion as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FamilySituationAssessment|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FamilySituationAssessment}}
+||
+||Observation
+||An Observation profile as defined by BabyConnect describing the assessment of the family situation of a pregnant woman. Indications for additional care may be based on this assessment.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FeedingPatternInfant|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FeedingPatternInfant}}
+||
+||Observation
+||An Observation profile describing the infant's feeding pattern as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FetalHeartRate}}
+||
+||Observation
+||An Observation profile describing fetal heart rate as defined by BabyConnect. The base definition is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FetalMonitoring}}
+||
+||Observation
+||An Observation profile derived from the fetus Observation profile describing fetal monitoring as defined by BabyConnect. Fetal monitoring is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-FetusObservation}}
+||
+||Observation
+||An Observation profile describing fetus-related Observations in a pregnancy, such as movement and heart action, as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-MaternalObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-MaternalObservation|Patient-related Observation]]
+||Observation
+||An Observation profile describing patient-related Observations, which are not captured in other existing profiles, as defined by BabyConnect. 
+Patient-related Observations are findings related to the (pregnant) woman, before, during or after pregnancy childbirth. The pregnant woman is the subject, the context is the pregnancy file (EpisodeOfCare). Examples are risk status or maternal ultrasound observations. 
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PerinatalDeath|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PerinatalDeath}}
+||
+||Observation
+||An Observation profile describing perinatal and (early) neonatal death as defined by BabyConnect. The subject may be either an unborn, stillborn or living born child. In case of an unborn or stillborn child, a patient or fetus record may not be present. In this case the subject is the woman Patient. Use the focus extension to refer to the fetus BodySite. In all other cases the subject is the child Patient and the focus extension can be left blank.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PerinealAssessment|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PerinealAssessment}}
+||
+||Observation
+||An Observation profile describing the perineal assessment as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PlacentaLocalization}}
+||
+||Observation
+||An Observation profile describing the localization of the placenta as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy-PregnancyDuration|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Pregnancy-PregnancyDuration}}
+||
+||Observation
+||An Observation profile describing pregnancy duration as defined by BabyConnect.
+Pregnancy duration does not (only) pertain to the Patient but also to a particular pregnancy.
+* Use the focus extension to point to the Condition it is about. Without this, pregnancy durations would only be Observations about a Patient
+* Use Observation.context.reference to point to the EpisodeOfCare
+* Use the supportingInfo extension to point to other problems and procedures that are relevant in the context of the pregnancy duration
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Pregnancy-TermDate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Pregnancy-TermDate}}
+||
+||Observation
+||An Observation profile describing term date as defined by BabyConnect. 
+The term date is related to a pregnancy, which is the focus of the Observation (extension). It is also about the mother, which still is the subject of the Observation.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PregnancyObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-PregnancyObservation|Pregnancy-related Observation]]
+||Observation
+||An Observation profile describing pregnancy-related Observations, as defined by BabyConnect. 
+Observations such as gravidity and parity do not (only) pertain to the Patient but also to a particular pregnancy.
+* Pregnancy-related Observations use the focus extension to point to the Condition they are about. Without this, all gravidities would only be Observations about a Patient.
+* Pregnancy-related Observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PregnancyUltraSoundGeneralFindings}}
+||
+||Observation
+||An Observation profile describing general ultrasound findings for the fetus as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ProcedureObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ProcedureObservation}}
+||[[Gebz:V1.2_FHIR_IG_bc-ProcedureObservation|Procedure-related Observation]]
+||Observation
+||An Observation profile describing procedure-related Observations as defined by BabyConnect. Procedure-related Observations are Observations about a procedure, which is the focus of the Observation (extension). They are also about the mother, which still is the subject of the Observation. For example, embryo transfer date and oocyte retrieval date are observations related to an IVF/ICSI procedure.
+* Procedure-related Observations use focus extension to point to a birth
+* Procedure-related Observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-UmbilicalCord}}
+||
+||Observation
+||An Observation profile describing the umbilical cord a as defined by BabyConnect. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:
+1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension can be left blank.
+2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UterusActivity|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-UterusActivity}}
+||
+||Observation
+||An Observation profile derived from the maternal Observation profile describing uterus activity as defined by BabyConnect. Uterus activity is a patient-related Observation. Patient-related Observations are about the (pregnant) woman, which is the subject of the Observation.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-VitaminKAdministration|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-VitaminKAdministration}}
+||[[Gebz:V1.2_FHIR_IG_bc-ChildObservation|Child-related Observation]]
+||Observation
+||An Observation profile describing the administration of vitamin K to a newborn as defined by BabyConnect. The base definition is a child-related Observation. Child-related Observations pertain to the child Patient, which is the subject of the Observation. Child observations refer to the EpisodeOfCare with Observation.context.reference
+
+
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Child}}
+||
+||Patient
+||A Patient profile for the child Patient as defined by BabyConnect.
+Child is a separate Patient.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Woman}}
+||
+||Patient
+||A Patient profile describing the woman who is or was pregnant as defined by BabyConnect.
+The pregnant woman, a FHIR patient, is the core of each pregnancy.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PractitionerRole|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-PractitionerRole}}
+||
+||PractitionerRole
+||A PractitionerRole profile describing the role of a practitioner as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Birth|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Birth}}
+||
+||Procedure
+||A Procedure profile describing the birth of a child as defined by BabyConnect. 
+This groups findings and procedures related to a particular child in a delivery - important in multiple births. A pregnancy can lead to one delivery Procedure and one or multiple birth Procedures. In multiple birth, multiple birth instances point to the same delivery Procedure. A birth also provides the relation between a child and its mother: The mother Patient is the subject of the delivery Procedure and the child Patient is the subject of the birth Procedure.
+
+A Birth has:
+* A partOf extension, pointing to the Delivery
+* The subject is the Child
+* The context is the Maternal Record EpisodeOfCare
+* The pregnancy is captured in the reasonReference
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-DeliveryProcedure}}
+||
+||Procedure
+||A Procedure profile describing the delivery (including uncomplicated natural births for consistency), as defined by BabyConnect. A pregnancy can lead to one delivery Procedure, even in multiple birth. The mother Patient is the subject of the delivery Procedure.
+* Delivery refers to the EpisodeOfCare with Procedure.context.reference
+* Delivery refers to the Pregnancy with Procedure.reasonReference.reference
+
+A delivery Procedure is related to one or more birth Procedures. The child Patient is the subject of the birth Procedure. In case of multiple birth, multiple birth Procedures will point to the same delivery Procedure.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ObstetricProcedure|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ObstetricProcedure}}
+||
+||Procedure
+||A Procedure profile describing obstetric procedures, as defined by BabyConnect. Obstetric procedures are procedures related to pregnancy, birth and delivery, such as vacuum delivery. 
+* For obstetric procedures related to the pregnancy, use Procedure.reasonReference
+* For obstetric procedures related to birth and delivery, use the (optional) partOf extension to point to the Delivery (maternal data) or the Birth (child-specific data)
+* The context is the Maternal Record or an Encounter
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-ReferralRequest}}
+||
+||ReferralRequest
+||A ReferralRequest profile describing referral details as defined by BabyConnect.
+Referral details (such as type of referral, reason code, referrer and target of the referral) are described in ReferralRequest. The pregnant woman is the subject, the context is the pregnancy file (EpisodeOfCare).
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Donor|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-Donor}}
+||
+||RelatedPerson
+||A RelatedPerson profile describing donor characteristics as defined by BabyConnect.
+|-
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MotherOf|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.2.0|title=bc-MotherOf}}
+||
+||RelatedPerson
+||A RelatedPerson profile describing the relation between mother and child as defined by BabyConnect. 
+The RelatedPerson is the mother, which is a related person of the child Patient.
+* The RelatedPerson.patient refers to the child Patient
+* The RelatedPerson.link refers to the mother Patient, RelatedPerson.link.type is set to seealso
+|}
+
+<section end= />
