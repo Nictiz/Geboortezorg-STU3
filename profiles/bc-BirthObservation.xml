@@ -67,21 +67,9 @@
         <comment value="Type Partus (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.extension:birth">
       <path value="Observation.extension" />
       <sliceName value="birth" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
@@ -197,13 +185,6 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -268,13 +249,6 @@
     <element id="Observation.value[x]:valueDateTime">
       <path value="Observation.value[x]" />
       <sliceName value="valueDateTime" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <type>
         <code value="dateTime" />
       </type>
@@ -348,10 +322,6 @@
         <description value="MeetMethode_GZ" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
       </binding>
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
