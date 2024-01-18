@@ -3,22 +3,35 @@
 	<meta>
 		<profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation" />
 		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildObservation" />
+		<profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight" />
 	</meta>
 	<status value="final" />
+	<category>
+		<coding>
+			<system value="http://hl7.org/fhir/observation-category" />
+			<code value="vital-signs" /><display value="Vital Signs" />
+		</coding>
+	</category>
 	<code>
 		<coding>
 			<system value="http://loinc.org" />
 			<code value="8339-4" />
 			<display value="Birth weight Measured" />
 		</coding>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="29463-7" />
+			<display value="Body weight" />
+		</coding>
 	</code>
 	<subject>
-		<reference value="Patient/XXX-KIND2VDWOUDEN" />
+		<reference value="Patient/XXX-KIND1VDWOUDEN" />
 		<display value="Kind 1 van der Wouden" />
 	</subject>
 	<context>
 		<reference value="EpisodeOfCare/wouden-dossier-zwanger1" />
 	</context>
+	<effectiveDateTime value="2017-06-20" />
 	<valueQuantity>
 		<value value="2845" />
 		<system value="http://unitsofmeasure.org" />
