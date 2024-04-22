@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ChildBirthAssistance" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
-  <version value="1.3.1" />
+  <version value="1.3.2" />
   <name value="bc-ChildBirthAssistance" />
   <title value="bc-ChildBirthAssistance" />
   <status value="active" />
@@ -258,7 +258,7 @@
       <slicing>
         <discriminator>
           <type value="type" />
-          <path value="condition.reference" />
+          <path value="condition.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
