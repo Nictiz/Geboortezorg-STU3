@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="observation-component-valueBooleanSTU3" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
-  <version value="1.3.2" />
-  <name value="observation-component-valueBooleanSTU3" />
-  <title value="Backported Observation.component.valueBoolean extension for FHIR STU3" />
+  <id value="workflow-supportingInfoSTU3" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/workflow-supportingInfoSTU3" />
+  <version value="1.2.2" />
+  <name value="workflow-supportingInfoSTU3" />
+  <title value="Backported workflow-supportingInfo extension for FHIR STU3" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -15,28 +15,30 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Additional boolean data type to include in the value[x] element in component.  &#xD;&#xA;&#xD;&#xA;This extension is mocked from the offical HL7 core in R4 FHIR build specification at 18-07-2022." />
+  <description value="Other resources *from the patient record* that may be relevant to the event. The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension **should not** be used if more specific inline elements or extensions are available. For example, use `Observation.hasMember` instead of supportingInformation for representing the members of an Observation panel.&#xD;&#xA;&#xD;&#xA;This extension is mocked from the offical HL7 core in R4 FHIR build specification at 31-05-2022." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Observation.component" />
+  <context value="Observation" />
+  <context value="DiagnosticReport" />
+  <context value="CommunicationRequest" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/workflow-supportingInfoSTU3" />
     </element>
-    <element id="Extension.value[x]:valueBoolean">
-      <path value="Extension.valueBoolean" />
-      <sliceName value="valueBoolean" />
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
       <short value="supportingInfo" />
       <definition value="Other resources *from the patient record* that may be relevant to the event. The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension **should not** be used if more specific inline elements or extensions are available. For example, use `Observation.hasMember` instead of supportingInformation for representing the members of an Observation panel." />
       <type>
-        <code value="boolean" />
+        <code value="Reference" />
       </type>
     </element>
   </differential>
