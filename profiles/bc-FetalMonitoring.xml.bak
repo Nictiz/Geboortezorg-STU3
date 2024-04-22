@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FetalMonitoring" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring" />
+  <version value="1.2.2" />
+  <name value="bc-FetalMonitoring" />
+  <title value="bc-FetalMonitoring" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile derived from the fetus Observation profile describing fetal monitoring as defined by BabyConnect. Fetal monitoring is a fetus-related Observation. Fetus-related Observations are Observations about a fetus, which is the focus of the Observation (extension). Fetus identification is necessary in these Observations, especially in multiple pregnancy. There are two ways of using this profile depending on the presence of a patient / fetus record for the unborn child:&#xD;&#xA;1. A patient / fetus record is present. The subject of the Observation is the (unborn) child Patient. The focus extension must be left blank.&#xD;&#xA;2. A patient / fetus record is not present. The subject of the Observation is the woman Patient. The focus extension refers to the fetus BodySite." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3896" />
+        <comment value="Foetale monitoring (CTG)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="281568006" />
+      </patternCoding>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectivePeriod" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1768" />
+        <comment value="TijdsInterval" />
+      </mapping>
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3907" />
+        <comment value="Beoordelaar" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <binding>
+        <strength value="extensible" />
+        <description value="FoetaleMonitoringMethode" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.298--20200129160647" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3915" />
+        <comment value="FoetaleMonitoringMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.related">
+      <path value="Observation.related" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="target.reference.resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.related:fetalHeartRate">
+      <path value="Observation.related" />
+      <sliceName value="fetalHeartRate" />
+    </element>
+    <element id="Observation.related:fetalHeartRate.type">
+      <path value="Observation.related.type" />
+      <fixedCode value="has-member" />
+    </element>
+    <element id="Observation.related:fetalHeartRate.target">
+      <path value="Observation.related.target" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate" />
+      </type>
+    </element>
+    <element id="Observation.related:uterusActivity">
+      <path value="Observation.related" />
+      <sliceName value="uterusActivity" />
+    </element>
+    <element id="Observation.related:uterusActivity.type">
+      <path value="Observation.related.type" />
+      <fixedCode value="interfered-by" />
+    </element>
+    <element id="Observation.related:uterusActivity.target">
+      <path value="Observation.related.target" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-UterusActivity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3899" />
+        <comment value="EffectOpFoetaleHartslag" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:monitoringMoment">
+      <path value="Observation.component" />
+      <sliceName value="monitoringMoment" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:monitoringMoment.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160201000146101" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:monitoringMoment.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="FoetaleMonitoringMoment" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.299--20200129162827" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3916" />
+        <comment value="FoetaleMonitoringMoment" />
+      </mapping>
+    </element>
+    <element id="Observation.component:basalHeartRate">
+      <path value="Observation.component" />
+      <sliceName value="basalHeartRate" />
+    </element>
+    <element id="Observation.component:basalHeartRate.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="251670001" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3909" />
+        <comment value="BasisHartFrequentie" />
+      </mapping>
+    </element>
+    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.unit">
+      <path value="Observation.component.valueQuantity.unit" />
+      <defaultValueString value="min" />
+    </element>
+    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code" />
+      <defaultValueCode value="min" />
+    </element>
+    <element id="Observation.component:fetalAccelerations">
+      <path value="Observation.component" />
+      <sliceName value="fetalAccelerations" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:fetalAccelerations.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="251676007" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:fetalAccelerations.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="v2 Yes/no Indicator" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/v2-0136" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3910" />
+        <comment value="FoetaleAcceleraties" />
+      </mapping>
+    </element>
+    <element id="Observation.component:fetalDecelerations">
+      <path value="Observation.component" />
+      <sliceName value="fetalDecelerations" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:fetalDecelerations.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="251673004" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:fetalDecelerations.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="DeceleratiesCodelijst" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.295--20200129154254" />
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3911" />
+        <comment value="FoetaleDeceleraties" />
+      </mapping>
+    </element>
+    <element id="Observation.component:heartFrequencyVariability">
+      <path value="Observation.component" />
+      <sliceName value="heartFrequencyVariability" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:heartFrequencyVariability.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="366337000" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:heartFrequencyVariability.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="FoetaleHartslagVariabiliteit" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.296--20200129155035" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3912" />
+        <comment value="FoetaleHartFrequentieVariabiliteit" />
+      </mapping>
+    </element>
+    <element id="Observation.component:conclusionFIGO">
+      <path value="Observation.component" />
+      <sliceName value="conclusionFIGO" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:conclusionFIGO.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160211000146104" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:conclusionFIGO.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="FIGO_ScoreCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.297--20200129155847" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3913" />
+        <comment value="ConclusieFIGO" />
+      </mapping>
+    </element>
+    <element id="Observation.component:conclusionFisher">
+      <path value="Observation.component" />
+      <sliceName value="conclusionFisher" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:conclusionFisher.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160221000146109" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3914" />
+        <comment value="ConclusieFisher" />
+      </mapping>
+    </element>
+    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.system">
+      <path value="Observation.component.valueQuantity.system" />
+      <fixedUri value="http://unitsofmeasure.org" />
+    </element>
+    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code" />
+      <fixedCode value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

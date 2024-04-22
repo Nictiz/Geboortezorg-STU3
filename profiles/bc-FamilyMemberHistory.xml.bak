@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FamilyMemberHistory" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FamilyMemberHistory" />
+  <version value="1.2.2" />
+  <name value="bc-FamilyMemberHistory" />
+  <title value="bc-FamilyMemberHistory" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A FamilyMemberHistory profile as defined by BabyConnect describing the relevant family history of a pregnant woman.&#xD;&#xA;* FamilyMemberHistory.patient points to the woman Patient&#xD;&#xA;* FamilyMemberHistory.relationship describes the relation (e.g. father or sister) of the family member to the woman Patient&#xD;&#xA;* FamilyMemberHistory.condition points to the (significant) condition(s) of the family member. The optional contributedToDeath extension can be used to indicate if a specific condition caused death&#xD;&#xA;* FamilyMemberHistory.deceased[x] indicates whether the family member has deceased. This can either be a boolean (true/false) or more specific information can be provided like age. If an age is present, it implies that the family member is deceased and in this case the boolean value should be left out." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="FamilyMemberHistory" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="FamilyMemberHistory">
+      <path value="FamilyMemberHistory" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1112" />
+        <comment value="Familieanamnese" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.patient">
+      <path value="FamilyMemberHistory.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="FamilyMemberHistory.date">
+      <path value="FamilyMemberHistory.date" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1113" />
+        <comment value="Datum" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.relationship">
+      <path value="FamilyMemberHistory.relationship" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type_BiologischeRelatie" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.275--20200513143542" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1114" />
+        <comment value="Familielid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1115" />
+        <comment value="BiologischeRelatie" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <comment value="FHIR allows only one instance of this element, so only one data type can be used. The boolean value of this element is implicitly true if one of the other data types is used. For example, when age is known this is sent with the Age data type and the boolean value should be left blank." />
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]:deceasedBoolean">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1117" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]:deceasedAge">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <sliceName value="deceasedAge" />
+      <type>
+        <code value="Age" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1118" />
+        <comment value="LeeftijdBijOverlijden" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.note">
+      <path value="FamilyMemberHistory.note" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1116" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.condition.extension">
+      <path value="FamilyMemberHistory.condition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="FamilyMemberHistory.condition.extension:contributedToDeath">
+      <path value="FamilyMemberHistory.condition.extension" />
+      <sliceName value="contributedToDeath" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-contributedToDeath" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="FamilyMemberHistory.condition.code">
+      <path value="FamilyMemberHistory.condition.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProbleemNaam_InfectiesGezin" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.358--20220117155944" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="FamilyMemberHistory.condition.code.extension">
+      <path value="FamilyMemberHistory.condition.code.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="FamilyMemberHistory.condition.code.extension:conditionReference">
+      <path value="FamilyMemberHistory.condition.code.extension" />
+      <sliceName value="conditionReference" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-condition" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1119" />
+        <comment value="Aandoening" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10556" />
+        <comment value="Probleem infectieziekte(n) Gezin" />
+      </mapping>
+    </element>
+    <element id="FamilyMemberHistory.condition.code.extension:conditionReference.valueReference:valueReference">
+      <path value="FamilyMemberHistory.condition.code.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+      </type>
+    </element>
+    <element id="FamilyMemberHistory.condition.outcome">
+      <path value="FamilyMemberHistory.condition.outcome" />
+      <comment value="Use the code deceased|  If the condition is the cause of death" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1122" />
+        <comment value="IsDoodsoorzaak" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-PerinatalDeath" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PerinatalDeath" />
+  <version value="1.2.2" />
+  <name value="bc-PerinatalDeath" />
+  <title value="bc-PerinatalDeath" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Observation profile describing perinatal and (early) neonatal death as defined by BabyConnect. The subject may be either an unborn, stillborn or living born child. In case of an unborn or stillborn child, a patient or fetus record may not be present. In this case the subject is the woman Patient. Use the focus extension to refer to the fetus BodySite. In all other cases the subject is the child Patient and the focus extension can be left blank." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1756" />
+        <comment value="Perinatale sterfte (Observatie)" />
+      </mapping>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="276507005" />
+      </patternCoding>
+    </element>
+    <element id="Observation.value[x]:valueBoolean">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10551" />
+        <comment value="OverlijdensIndicator" />
+      </mapping>
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1764" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:deceasedDateTime">
+      <path value="Observation.component" />
+      <sliceName value="deceasedDateTime" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:deceasedDateTime.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="399753006" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime">
+      <path value="Observation.component.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10552" />
+        <comment value="DatumOverlijden" />
+      </mapping>
+    </element>
+    <element id="Observation.component:perinatalPhase">
+      <path value="Observation.component" />
+      <sliceName value="perinatalPhase" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:perinatalPhase.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1762" />
+        <comment value="FasePerinataleSterfteWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="FasePerinataleSterfte22" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.10--20201117115600" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
