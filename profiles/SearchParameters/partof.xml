@@ -19,7 +19,7 @@
     <base value="Procedure" />
     <type value="reference" />
     <description value="Resource this structure is part of" />
-    <expression value="(Condition|Observation|Procedure).extension('http://hl7.org/fhir/StructureDefinition/event-partOf').value"/>
+    <expression value="(Condition|Observation|Procedure).extension('http://hl7.org/fhir/StructureDefinition/condition-partOf').value"/>
     <target value="Condition"/>
 	<target value="Observation"/>
 	<target value="Procedure"/>
