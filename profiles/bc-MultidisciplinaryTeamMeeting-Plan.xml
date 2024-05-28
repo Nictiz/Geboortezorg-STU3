@@ -57,11 +57,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-multidisciplinaryteammeeting-intenttreatment" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="IntentieBehandelingCodelijst" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.2.1--20200901000000" />
-      </binding>
     </element>
     <element id="CarePlan.extension:intentTreatment.valueCodeableConcept:valueCodeableConcept">
       <path value="CarePlan.extension.valueCodeableConcept" />
@@ -96,6 +91,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="CarePlan.category:multidisciplinaryTeamMeetingCode">
       <path value="CarePlan.category" />

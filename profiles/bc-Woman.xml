@@ -532,19 +532,6 @@
       </slicing>
       <min value="2" />
     </element>
-    <element id="Patient.communication.extension:languageProficiency.extension:type">
-      <path value="Patient.communication.extension.extension" />
-      <sliceName value="type" />
-      <min value="1" />
-    </element>
-    <element id="Patient.communication.extension:languageProficiency.extension:type.valueCoding:valueCoding">
-      <path value="Patient.communication.extension.extension.valueCoding" />
-      <sliceName value="valueCoding" />
-      <binding>
-        <strength value="extensible" />
-        <description value="v3-LanguageAbilityMode" />
-      </binding>
-    </element>
     <element id="Patient.communication.extension:languageProficiency.extension:level">
       <path value="Patient.communication.extension.extension" />
       <sliceName value="level" />

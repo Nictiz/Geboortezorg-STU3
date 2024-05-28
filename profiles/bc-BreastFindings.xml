@@ -53,15 +53,6 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueString">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueString" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2857" />
-        <comment value="TepelsWaarde" />
-      </mapping>
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -129,12 +120,16 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="observatie betreffende tepel (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component:nipples.value[x]:valueString">
-      <path value="Observation.component.valueString" />
-      <sliceName value="valueString" />
+    <element id="Observation.component:nipples.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="string" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2857" />
+        <comment value="TepelsWaarde" />
+      </mapping>
     </element>
     <element id="Observation.component:skin">
       <path value="Observation.component" />
@@ -148,9 +143,8 @@
         <code value="364528001" />
       </patternCoding>
     </element>
-    <element id="Observation.component:skin.value[x]:valueString">
-      <path value="Observation.component.valueString" />
-      <sliceName value="valueString" />
+    <element id="Observation.component:skin.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="string" />
       </type>
@@ -172,9 +166,8 @@
         <code value="290054003" />
       </patternCoding>
     </element>
-    <element id="Observation.component:other.value[x]:valueString">
-      <path value="Observation.component.valueString" />
-      <sliceName value="valueString" />
+    <element id="Observation.component:other.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="string" />
       </type>
