@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-RelatedPerson" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-RelatedPerson" />
+  <version value="1.3.3" />
+  <name value="bc-RelatedPerson" />
+  <title value="bc-RelatedPerson" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A RelatedPerson profile as defined by BabyConnect to describe a related person (e.g. partner) of the woman Patient:&#xD;&#xA;* RelatedPerson.extension:role defines the role of the contact in relation to the woman Patient, for partner use the code 1 Eerste relatie/contactpersoon&#xD;&#xA;* RelatedPerson.extension:ethnicity defines the ethnicity of the related person&#xD;&#xA;* RelatedPerson.patient points to the woman Patient&#xD;&#xA;* RelatedPerson.relationship describes the relation to the woman Patient, for partner use the code DOMPART Partner" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson.extension:ethnicity">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="ethnicity" />
+      <short value="Ethnicity" />
+      <definition value="Defines the ethnicity of the related person" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-915" />
+        <comment value="Etniciteit" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
