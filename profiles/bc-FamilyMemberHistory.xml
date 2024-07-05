@@ -115,21 +115,9 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.extension">
-      <path value="FamilyMemberHistory.condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="FamilyMemberHistory.condition.extension:contributedToDeath">
       <path value="FamilyMemberHistory.condition.extension" />
       <sliceName value="contributedToDeath" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -146,27 +134,6 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.358--20220117155944" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="FamilyMemberHistory.condition.code.extension">
-      <path value="FamilyMemberHistory.condition.code.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="FamilyMemberHistory.condition.code.extension:conditionReference">
-      <path value="FamilyMemberHistory.condition.code.extension" />
-      <sliceName value="conditionReference" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familymemberhistory-condition" />
-      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1119" />
@@ -177,14 +144,6 @@
         <map value="peri32-dataelement-10556" />
         <comment value="Probleem infectieziekte(n) Gezin" />
       </mapping>
-    </element>
-    <element id="FamilyMemberHistory.condition.code.extension:conditionReference.valueReference:valueReference">
-      <path value="FamilyMemberHistory.condition.code.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
-      </type>
     </element>
     <element id="FamilyMemberHistory.condition.outcome">
       <path value="FamilyMemberHistory.condition.outcome" />
