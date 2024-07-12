@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2014-08-14T14:30:51+02:00"/>
+         <start value="2014-08-14T14:30:51Z"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.18--20140814143051"/>
@@ -21,6 +21,13 @@
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
    <description value="Type operatie"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
@@ -65,6 +72,14 @@
          <concept>
             <code value="64887002"/>
             <display value="operatie van ovarium (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="46681009"/>
+            <display value="cerclage van cervix uteri tijdens zwangerschap met abdominale benadering (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="90442009"/>
+            <display value="cerclage van cervix uteri tijdens zwangerschap met vaginale benadering (verrichting)"/>
          </concept>
          <concept>
             <code value="112697007"/>
@@ -125,6 +140,10 @@
          <concept>
             <code value="16545005"/>
             <display value="operatie van zenuwstelsel (verrichting)"/>
+         </concept>
+         <concept>
+            <code value="430715008"/>
+            <display value="bariatrische chirurgie (verrichting)"/>
          </concept>
       </include>
    </compose>

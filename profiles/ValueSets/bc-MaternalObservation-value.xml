@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-MaternalObservation-value"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
    </meta>
    <url value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-value"/>
    <version value="1.0.0"/>
@@ -16,58 +16,87 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <!-- 3.2 -->
-         <!-- Foliumzuur gebruik -->
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.227--20170201134622"/>
-         <!-- VoorgenomenPlaatsBaring -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.319--20201112122448"/>
-         <!-- Echelon_3.2 -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.321--20210412154013"/>
-         <!-- Voorgenomen voeding -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.228--20170201140644"/>
-         <!-- Lochia -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.287--20200619144804"/>
-         <!-- WondWeefselWCSCodelijst -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1--20171231000000"/>
-         <!-- WondVochtigheidCodelijst -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.3--20171231000000"/>
-         <!-- WondRandCodelijst -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.5--20171231000000"/>
-         <!-- Bevindingen borsten 3.2 -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.323--20201124142938"/>
-         <!-- Controle benen 3.2 -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.324--20201124152403"/>
-         <!-- Controle perineum -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.290--20200622000000"/>
-         <!-- KeuzeTest NIPT -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.266--20200414155952"/>
-         <!-- Cervix Effacement -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20201210134951"/>
-         <!-- Positie portio -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048"/>
-         <!-- Cervical dilatation -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20201210140135"/>
-         <!-- Vliezen -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20201210140520"/>
-         <!-- Hodge planes -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20210621112616"/>
-         <!-- Stand -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620"/>
-         <!-- Ligging -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.188--20140102"/>
-         <!-- Indaling -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.226--20161216162923"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.246--20191028105919"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.188--20140102000000"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.320--20201112155937"/>
-         <!-- Presentation of fetus -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.266--20200414155952"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.158--20201210134951"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.213--20160425122048"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.175--20201210140135"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.173--20201210140520"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.159--20210621112616"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.172--20201210141721"/>
-         <!-- Vloeien -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.174--20151019205620"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.287--20200619144804"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.3--20171231000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.5--20171231000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.324--20201124152403"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.1--20171231000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.3--20171231000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.2.5--20171231000000"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.249--20181119171103"/>
-         <!-- FecesContinentie -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.15.1--20171231000000"/>
-         <!-- UrineContinentie -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.14.1--20171231000000"/>
-         <!-- Conditie perineum -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.15.1--20171231000000"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.368--20220210155748"/>
-         <!-- Wond -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.248--20181119170402"/>
       </include>
    </compose>

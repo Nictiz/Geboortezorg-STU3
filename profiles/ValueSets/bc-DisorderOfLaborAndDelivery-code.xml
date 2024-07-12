@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-DisorderOfLaborAndDelivery-code"/>
    <meta>
@@ -15,49 +16,9 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://snomed.info/sct"/>
-         <concept>
-            <code value="312974005"/>
-            <display value="Preterm premature rupture of membranes (disorder)"/>
-         </concept>
-         <concept>
-            <code value="44223004"/>
-            <display value="Premature rupture of membranes (disorder)"/>
-         </concept>
-         <concept>
-            <code value="386661006"/>
-            <display value="Fever (finding)"/>
-         </concept>
-         <concept>
-            <code value="237320005"/>
-            <display value="Failure to progress in first stage of labor (finding)"/>
-         </concept>
-         <concept>
-            <code value="249166003"/>
-            <display value="Failure to progress in second stage of labor (finding)"/>
-         </concept>
-         <concept>
-            <code value="609415007:246090004=12867002"/>
-            <display value="Suspected fetal distress affecting management of mother (situation)"/>
-         </concept>
-         <concept>
-            <code value="109894007"/>
-            <display value="Retained placenta (disorder)"/>
-         </concept>
-         <concept>
-            <code value="47821001"/>
-            <display value="Postpartum hemorrhage (disorder)"/>
-         </concept>
-         <concept>
-            <code value="439401001"/>
-            <display value="Diagnosis (observable entity)"/>
-         </concept>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.289--20200127101358"/>
       </include>
       <include>
-         <!-- 3.2 -->
-         <!-- ProbleemNaam_Maternaal -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.289--20200127101358"/>
-         <!-- ProbleemNaam_Kindspecifiek -->
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.304--20200213111855"/>
       </include>
    </compose>

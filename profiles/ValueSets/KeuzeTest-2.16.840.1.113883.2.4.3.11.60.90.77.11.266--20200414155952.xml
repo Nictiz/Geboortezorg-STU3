@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2020-04-14T15:59:52+02:00"/>
+         <start value="2020-04-14T15:59:52Z"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.266--20200414155952"/>
@@ -21,22 +21,26 @@
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
    <description value="KeuzeTest"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.3.22.1.2.201"/>
-         <concept>
-            <code value="2"/>
-            <display value="T21, T18, T13 en nevenbevindingen"/>
-         </concept>
-      </include>
-      <include>
          <system value="http://snomed.info/sct"/>
          <concept>
-            <code value="41040004+254266000+254268004"/>
-            <display value="T21, T18, T13"/>
+            <code value="390331000146105"/>
+            <display value="niet-invasieve prenatale test voor alleen trisomie 13, 18 en 21 (verrichting"/>
+         </concept>
+         <concept>
+            <code value="7751000146103"/>
+            <display value="niet-invasieve prenatale test (verrichting)"/>
          </concept>
       </include>
    </compose>

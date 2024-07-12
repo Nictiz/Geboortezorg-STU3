@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-FetusObservation-value"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
    </meta>
    <url value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-value"/>
    <version value="1.0.0"/>
@@ -16,23 +16,16 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <!-- 3.2 -->
-         <!-- Beweging -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.264--20200409090337"/>
-         <!-- Vruchtwater -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.191--20140121165337"/>
-         <!-- Beoordeling Bevindingen -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000"/>
-         <!-- Placentalokalisatie (2.2) -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.209--20141128125356"/>
-         <!-- Ostium -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.272--20190925122834"/>
-         <!-- Ligging bij geboorte -->
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.177--20131224000000"/>
-         <!-- Orgaansysteem foetus -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.322--20210506140617"/>
-         <!-- Sonomarkers -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.323--20210506154515"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.264--20200409090337"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.22--20140904000000"/>
       </include>
    </compose>
 </ValueSet>
