@@ -1,0 +1,846 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.229--20181012134434"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2018-10-12T13:44:34Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.229--20181012134434"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.229"/>
+   </identifier>
+   <version value="2018-10-12T13:44:34"/>
+   <name value="Ondersteuning_Ontslag_Huis"/>
+   <title value="Ondersteuning_Ontslag_Huis"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
+   <description value="Ondersteuning_Ontslag_Huis"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="53617003"/>
+            <display value="bewaken van ademhaling (regime/therapie)"/>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="monitoren van ademhaling"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="bewaken van ademhaling"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Maagsonde (PEG)"/>
+            </extension>
+            <code value="225373002"/>
+            <display value="toedienen van voeding via percutane endoscopische gastrostoma (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Percutaneous endoscopic gastrostomy feeding (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Percutaneous endoscopic gastrostomy feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Percutaneous endoscopic gastrostomy feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="PEG - Percutaneous endoscopic gastrostomy feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="PEG - Percutaneous endoscopic gastrostomy feeding"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Maagsonde (via neus)"/>
+            </extension>
+            <code value="229914003"/>
+            <display value="toedienen van voeding via nasogastrische sonde (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Nasogastric feeding (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Nasogastric feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Nasogastric feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gastric gavage"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="NG feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="NGT feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Nasogastric tube feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="NGT feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gastric gavage"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Nasogastric tube feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="NG feeding"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="toedienen van voeding via nasogastrische sonde (regime/therapie)"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="toedienen van sondevoeding via neus-maagsonde"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="toedienen van voeding via nasogastrische sonde"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Parenterale voeding"/>
+            </extension>
+            <code value="225372007"/>
+            <display value="totale parenterale voeding (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Total parenteral nutrition (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Total parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Total parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Suralimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="TPN procedure"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Total parenteral nutrition administration"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="TPN - Total parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Central hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="TPN procedure"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Superalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Central hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="TPN - Total parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Suralimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Superalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Total parenteral nutrition administration"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral hyperalimentation"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="totale parenterale voeding (regime/therapie)"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="totale parenterale voeding"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="TPV"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Maagsonde (PEG)"/>
+            </extension>
+            <code value="229917005"/>
+            <display value="toedienen van voeding via gastrostoma (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gastrostomy feeding (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gastrostomy feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Gastrostomy feeding"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="gastrostomie voeding (regime/therapie)"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="gastrostomie voeding"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Apnea monitor"/>
+            </extension>
+            <code value="14603002"/>
+            <display value="surveillance met apneumonitor (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Apnea monitor surveillance (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Apnoea monitor surveillance"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Apnea monitor surveillance"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="surveillance met apneumonitor (regime/therapie)"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="surveillance met apneumonitor"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="monitoren met apneumonitor"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Hart monitor"/>
+            </extension>
+            <code value="63818009"/>
+            <display value="monitoren met cardiotachometer (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Cardiotachometer monitoring (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Cardiotachometer monitoring"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Cardiotachometer monitoring"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="monitoren met cardiotachometer (regime/therapie)"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="monitoren met cardiotachometer"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="controle met polsfrequentiemeter"/>
+            </designation>
+            <designation>
+               <language value="nl"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="controle met cardiotachometer"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Parenterale voeding"/>
+            </extension>
+            <code value="25156005"/>
+            <display value="intraveneuze voeding van patiënt (regime/therapie)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Intravenous feeding of patient (regime/therapy)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Intravenous feeding of patient"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Intravenous feeding of patient"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="IV - Intravenous feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="PN - Parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Intravenous feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="IV - Intravenous feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="PN - Parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Intravenous feeding"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral alimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral nutrition"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral alimentation"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Parenteral feeding"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Zuurstof"/>
+            </extension>
+            <code value="57485005"/>
+            <display value="zuurstoftherapie (verrichting)"/>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Oxygen therapy (procedure)"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Oxygen therapy"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Oxygen therapy"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Oxygen therapy care"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Oxygen therapy care"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="O2 therapy"/>
+            </designation>
+            <designation>
+               <language value="en"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="O2 therapy"/>
+            </designation>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

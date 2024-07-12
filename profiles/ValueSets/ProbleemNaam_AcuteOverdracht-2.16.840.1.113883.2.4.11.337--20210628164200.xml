@@ -1,0 +1,78 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.337--20210628164200"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2021-06-28T16:42:00Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.337--20210628164200"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.337"/>
+   </identifier>
+   <version value="2021-06-28T16:42:00"/>
+   <name value="ProbleemNaam_AcuteOverdracht"/>
+   <title value="ProbleemNaam_AcuteOverdracht"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
+   <description value="ProbleemNaam_AcuteOverdracht"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="overig"/>
+         </concept>
+         <concept>
+            <code value="UNK"/>
+            <display value="onbekend"/>
+         </concept>
+         <concept>
+            <code value="NI"/>
+            <display value="geen informatie"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="38341003"/>
+            <display value="hypertensieve aandoening (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="106004004"/>
+            <display value="bloeding als complicatie bij zwangerschap (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="45757002"/>
+            <display value="probleem bij eerste fase van partus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="276601004"/>
+            <display value="foetus loopt risico (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="6383007"/>
+            <display value="partus praematurus imminens (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="21522001"/>
+            <display value="abdominale pijn (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

@@ -1,0 +1,75 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.226--20161216162923"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2016-12-16T16:29:23Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.226--20161216162923"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.226"/>
+   </identifier>
+   <version value="2016-12-16T16:29:23"/>
+   <name value="Fundusstand22"/>
+   <title value="Fundusstand (2.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
+   <description value="Fundusstand (2.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="21881000146104"/>
+            <display value="fundushoogte van uterus niet palpabel (situatie)"/>
+         </concept>
+         <concept>
+            <code value="289626002"/>
+            <display value="fundus uteri ter hoogte van symphysis pubis (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="21851000146109"/>
+            <display value="fundus van uterus boven symphysis pubis (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="21861000146107"/>
+            <display value="fundus van uterus onder navel (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289627006"/>
+            <display value="fundus uteri ter hoogte van navel (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289629009"/>
+            <display value="fundus uteri boven navel (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289630004"/>
+            <display value="fundus uteri tussen navel en processus xiphoideus (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="21871000146101"/>
+            <display value="fundus uteri onder xifoïd (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="289631000"/>
+            <display value="fundus uteri ter hoogte van processus xiphoideus (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2014-01-02T00:00:00+02:00"/>
+         <start value="2014-01-02T00:00:00Z"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.186--20140102000000"/>
@@ -18,12 +18,26 @@
    <version value="2014-01-02T00:00:00"/>
    <name value="RolZorgverlener22"/>
    <title value="RolZorgverlener22"/>
-   <status value="active"/>
+   <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
    <description value="RolZorgverlener22"/>
    <immutable value="false"/>
    <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.6.9"/>
+         <concept>
+            <code value="449161006+310188001"/>
+            <display value="physician assistant (beroep)+klinisch verloskundige (beroep)"/>
+         </concept>
+      </include>
       <include>
          <system value="http://hl7.org/fhir/v3/NullFlavor"/>
          <concept>
