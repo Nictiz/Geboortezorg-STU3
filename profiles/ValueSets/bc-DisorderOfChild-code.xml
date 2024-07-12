@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-DisorderOfChild-code"/>
    <meta>
@@ -15,74 +16,82 @@
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://snomed.info/sct"/>
-         <concept>
-            <code value="276654001 443341004"/>
-            <display value="Congenital malformation (disorder) Congenital anomaly (disorder)"/>
-         </concept>
-         <concept>
-            <code value="74345006"/>
-            <display value="Congenital disorder due to abnormality of chromosome number OR structure (disorder)"/>
-         </concept>
-         <concept>
-            <code value="443341004 276654001"/>
-            <display value="Congenital anomaly (disorder) Congenital malformation (disorder)"/>
-         </concept>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.369--20220214141440"/>
       </include>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.4.13"/>
-         <concept>
-            <code value="ProblematiekKind"/>
-            <display value="Problematiek kind"/>
-         </concept>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.341--20210225105013"/>
       </include>
       <include>
-         <!-- 3.2 -->
-         <!-- ProbleemNaam_ProblKindKraam -->
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.325--20210518104806"/>
-         <!-- ProbleemNaam_ProblKindPediatrie -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.324--20210518101158"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.295--20200810122858"/>
-         <!-- ProbleemNaam_ProblKindObstetrie -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.324--20210518101158"/>    
-         <!-- ProbleemNaam_GeboortetraumaKraam -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.327--20210518144535"/>
-         <!-- ProbleemNaam_GeboortetraumaPediatrie -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.326--20210518125239"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.296--20200811105755"/>
-         <!-- ProbleemNaam_GeboortetraumaKindObstetrie -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.326--20210518125239"/>   
-         <!-- ProbleemNaam_CongenitaleAfwijking_Kraam -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.299--20200824154514"/>
-         <!-- ProbleemNaam_CongenitaleAfwijking_Pediatrie -->
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.328--20210520161536"/>
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.298--20200824133956"/>
-         <!-- ProbleemNaam_CongenitaleAfwijking_Obstetrie -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.328--20210520161536"/>   
-         <!-- Bevinding_Hart -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
-         <!-- VerdenkingAfwijking_Hersenen -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.253--20200401105232"/>
-         <!-- VerdenkingAfwijking_Wervelkolom_Ruggemerg -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.283--20200527093520"/>
-         <!-- Verdenking_Afwijking_Aangezicht -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.359--20220131105223"/>
-         <!-- Verdenking_Afwijking_NekHuid -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.360--20220131110025"/>
-         <!-- Verdenking_Afwijking_ThoraxLuchtwegen -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.361--20220131110815"/>
-         <!-- Verdenking_Afwijking_Diafragma -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.362--20220131111328"/>
-         <!-- Verdenking_Afwijking_Buikwand -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.363--20220131112406"/>
-         <!-- Verdenking_Afwijking_MaagDarm -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.364--20220131113252"/>
-         <!-- Verdenking_Afwijking_NierenBlaasUrogenitalis -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.365--20220131114808"/>
-         <!-- Verdenking_Afwijking_SkeletSpierweefsel -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.366--20220131115327"/>
-         <!-- Verdenking_Afwijking_Extremiteiten -->
-         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.367--20220131120004"/>
-         <!-- ProbleemNaam_Zintuigen -->
+      </include>
+      <include>
          <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.231--20220120134819"/>
-         
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20171231000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.337--20210628164200"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.260--20200407134908"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.253--20200401105232"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.283--20200527093520"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.359--20220131105223"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.360--20220131110025"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.361--20220131110815"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.362--20220131111328"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.363--20220131112406"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.364--20220131113252"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.365--20220131114808"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.366--20220131115327"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.367--20220131120004"/>
       </include>
    </compose>
 </ValueSet>

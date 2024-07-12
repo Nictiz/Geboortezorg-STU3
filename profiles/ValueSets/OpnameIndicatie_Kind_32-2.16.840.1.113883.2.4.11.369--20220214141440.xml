@@ -1,0 +1,98 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.11.369--20220214141440"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2022-02-14T14:14:40Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.369--20220214141440"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.11.369"/>
+   </identifier>
+   <version value="3.2.0"/>
+   <name value="OpnameIndicatie_Kind_32"/>
+   <title value="Opname Indicatie Kind (3.2)"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
+   <description value="Opname Indicatie Kind (3.2)"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+         <concept>
+            <code value="OTH"/>
+            <display value="Overig"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="47340003"/>
+            <display value="bevinding betreffende geboortegewicht (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="206572008"/>
+            <display value="neonatale ontwenningsverschijnselen door gebruik van verslavende middelen door moeder (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="46775006"/>
+            <display value="'respiratory distress'-syndroom bij pasgeborene (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="387712008"/>
+            <display value="neonatale icterus (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="52767006"/>
+            <display value="neonatale hypoglykemie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="40733004"/>
+            <display value="aandoening door infectie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="281578009"/>
+            <display value="perinatale asfyxie (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="87476004"/>
+            <display value="neonatale epileptische aanvallen (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="72552008"/>
+            <display value="neonataal voedingsprobleem (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="66091009"/>
+            <display value="congenitale ziekte (aandoening)"/>
+         </concept>
+         <concept>
+            <code value="284465006"/>
+            <display value="bevinding betreffende psychosociaal functioneren (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="29541000146109"/>
+            <display value="in follow-up na verwijzing naar neonatale intensivecareafdeling (bevinding)"/>
+         </concept>
+         <concept>
+            <code value="276707008"/>
+            <display value="zuigeling in slechte conditie bij geboorte (bevinding)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

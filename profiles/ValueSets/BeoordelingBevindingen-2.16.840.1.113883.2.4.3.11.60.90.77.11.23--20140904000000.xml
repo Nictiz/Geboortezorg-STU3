@@ -6,7 +6,7 @@
    </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2014-09-04T00:00:00+02:00"/>
+         <start value="2014-09-04T00:00:00Z"/>
       </valuePeriod>
    </extension>
    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000"/>
@@ -21,6 +21,13 @@
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
    <description value="Beoordeling Bevindingen"/>
    <immutable value="false"/>
    <compose>
@@ -36,7 +43,7 @@
             <display value="Verdenking afwijking"/>
          </concept>
          <concept>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/valueset-deprecated">
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
                <valueBoolean value="true"/>
             </extension>
             <code value="3"/>

@@ -1,0 +1,54 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.22--20140904000000"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2014-09-04T00:00:00Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.22--20140904000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.22"/>
+   </identifier>
+   <version value="2014-09-04T00:00:00"/>
+   <name value="BeoordelingSonomarkers"/>
+   <title value="Beoordeling Sonomarkers"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="070-3173450"/>
+      </telecom>
+   </contact>
+   <description value="Beoordeling Sonomarkers"/>
+   <immutable value="false"/>
+   <compose>
+      <inactive value="true"/>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.13.54"/>
+         <concept>
+            <code value="1"/>
+            <display value="Geen sonomarker geconstateerd"/>
+         </concept>
+         <concept>
+            <code value="2"/>
+            <display value="Sonomarker geconstateerd"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <code value="3"/>
+            <display value="Niet beoordeeld/beoordeelbaar"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
