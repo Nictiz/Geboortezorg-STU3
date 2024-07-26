@@ -99,15 +99,17 @@
       <sliceName value="umbilicalCordVessels" />
       <max value="1" />
     </element>
-    <element id="Observation.component:umbilicalCordVessels.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="249191003" />
-      </patternCoding>
+    <element id="Observation.component:umbilicalCordVessels.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="249191003" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:umbilicalCordVessels.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />

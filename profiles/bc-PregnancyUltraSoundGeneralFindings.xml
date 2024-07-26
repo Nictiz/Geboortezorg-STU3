@@ -105,8 +105,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -116,12 +116,14 @@
       <sliceName value="conclusion" />
       <max value="1" />
     </element>
-    <element id="Observation.component:conclusion.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="370379002" />
-      </patternCoding>
+    <element id="Observation.component:conclusion.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="370379002" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:conclusion.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -147,12 +149,14 @@
       <sliceName value="suspicionAbnormalities" />
       <max value="1" />
     </element>
-    <element id="Observation.component:suspicionAbnormalities.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="609415007" />
-      </patternCoding>
+    <element id="Observation.component:suspicionAbnormalities.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="609415007" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:suspicionAbnormalities.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
@@ -178,12 +182,14 @@
       <sliceName value="advice" />
       <max value="1" />
     </element>
-    <element id="Observation.component:advice.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="171024009" />
-      </patternCoding>
+    <element id="Observation.component:advice.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="171024009" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:advice.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
