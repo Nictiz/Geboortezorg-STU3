@@ -72,21 +72,9 @@
         <comment value="Biometrie" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.extension">
-      <path value="DiagnosticReport.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="DiagnosticReport.extension:comments">
       <path value="DiagnosticReport.extension" />
       <sliceName value="comments" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
@@ -101,12 +89,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="DiagnosticReport.code.coding:ultraSoundType">
       <path value="DiagnosticReport.code.coding" />
       <sliceName value="ultraSoundType" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="OnderzoekType" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.255--20200406115120" />

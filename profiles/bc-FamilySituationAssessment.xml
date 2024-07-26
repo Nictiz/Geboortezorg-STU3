@@ -84,12 +84,14 @@
       <sliceName value="unstableFamilySituation" />
       <max value="1" />
     </element>
-    <element id="Observation.component:unstableFamilySituation.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160231000146106" />
-      </patternCoding>
+    <element id="Observation.component:unstableFamilySituation.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160231000146106" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:unstableFamilySituation.value[x]:valueString">
       <path value="Observation.component.valueString" />
@@ -107,12 +109,14 @@
       <path value="Observation.component" />
       <sliceName value="alarmingFamilySituation" />
     </element>
-    <element id="Observation.component:alarmingFamilySituation.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160241000146103" />
-      </patternCoding>
+    <element id="Observation.component:alarmingFamilySituation.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160241000146103" />  
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:alarmingFamilySituation.value[x]:valueString">
       <path value="Observation.component.valueString" />
@@ -130,12 +134,14 @@
       <path value="Observation.component" />
       <sliceName value="intoxication" />
     </element>
-    <element id="Observation.component:intoxication.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160251000146100" />
-      </patternCoding>
+    <element id="Observation.component:intoxication.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160251000146100" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:intoxication.value[x]:valueString">
       <path value="Observation.component.valueString" />
