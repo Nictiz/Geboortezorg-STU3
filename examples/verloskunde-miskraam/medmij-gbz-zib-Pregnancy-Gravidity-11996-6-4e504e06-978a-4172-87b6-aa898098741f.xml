@@ -1,0 +1,63 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="4e504e06-978a-4172-87b6-aa898098741f"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Gravidity"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Vrouw: Tellegen Clara. Id: 4e504e06-978a-4172-87b6-aa898098741f (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Context</th>
+            <td>Zorgepisode: 10202301-1808</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="Zwangerschappen [aantal] d.m.v. rapportage (11996-6 - LOINC)">Zwangerschappen [aantal] d.m.v. rapportage</span>
+            </td>
+            <td>1 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+    <valueReference>
+      <reference value="Condition/2d20840d-1d39-4867-8778-4d128feb7359"/>
+      <display value="Zwangerschap: Tellegen Clara"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+    <value value="4e504e06-978a-4172-87b6-aa898098741f"/>
+  </identifier>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11996-6"/>
+      <display value="Zwangerschappen [aantal] d.m.v. rapportage"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/CLARAXXX-Tellegen"/>
+    <display value="Vrouw: Tellegen Clara"/>
+  </subject>
+  <context>
+    <reference value="EpisodeOfCare/b0d60e10-d4fe-46b8-b2b1-afb0f2f71f2d"/>
+    <display value="Zorgepisode: 10202301-1808"/>
+  </context>
+  <valueQuantity>
+    <value value="1"/>
+    <unit value="1"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="1"/>
+  </valueQuantity>
+</Observation>

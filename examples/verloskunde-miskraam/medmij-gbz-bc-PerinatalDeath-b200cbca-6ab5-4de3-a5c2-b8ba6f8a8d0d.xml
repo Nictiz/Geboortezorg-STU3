@@ -1,0 +1,98 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="b200cbca-6ab5-4de3-a5c2-b8ba6f8a8d0d"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PerinatalDeath"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Vrouw: Tellegen Clara. Id: b200cbca-6ab5-4de3-a5c2-b8ba6f8a8d0d (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Context</th>
+            <td>Zorgepisode: 10202301-1808</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="foetale sterfte (gebeurtenis) (276507005 - SNOMED CT)">foetale sterfte (gebeurtenis)</span>
+            </td>
+            <td>ja</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="datum van overlijden (waarneembare entiteit) (399753006 - SNOMED CT)">datum van overlijden (waarneembare entiteit)</span>
+            </td>
+            <td>${DATE, T, D, -413}</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="levensperiode (attribuut) (246454002 - SNOMED CT)">levensperiode (attribuut)</span>
+            </td>
+            <td>
+              <span title="antepartum foetale dood (gebeurtenis) (237361005 - SNOMED CT)">antepartum foetale dood (gebeurtenis)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+    <valueReference>
+      <reference value="BodySite/80f5e194-33e9-4412-8d08-d3d5b65d4a75"/>
+      <display value="Foetus 1: Tellegen Clara"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+    <value value="b200cbca-6ab5-4de3-a5c2-b8ba6f8a8d0d"/>
+  </identifier>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="276507005"/>
+      <display value="foetale sterfte (gebeurtenis)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/CLARAXXX-Tellegen"/>
+    <display value="Vrouw: Tellegen Clara"/>
+  </subject>
+  <context>
+    <reference value="Encounter/5d9b14b3-db00-4421-bb36-73b05d82c737"/>
+    <display value="Zorgepisode: 10202301-1808"/>
+  </context>
+  <valueBoolean value="true"/>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="399753006"/>
+        <display value="datum van overlijden (waarneembare entiteit)"/>
+      </coding>
+    </code>
+    <valueDateTime value="${DATE, T, D, -413}"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="246454002"/>
+        <display value="levensperiode (attribuut)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="237361005"/>
+        <display value="antepartum foetale dood (gebeurtenis)"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>
