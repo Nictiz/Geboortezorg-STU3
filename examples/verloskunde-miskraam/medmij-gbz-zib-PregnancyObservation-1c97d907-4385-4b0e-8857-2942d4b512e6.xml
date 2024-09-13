@@ -1,0 +1,58 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="1c97d907-4385-4b0e-8857-2942d4b512e6"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-observation"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Vrouw: Tellegen Clara. Id: 1c97d907-4385-4b0e-8857-2942d4b512e6 (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Context</th>
+            <td>Zorgepisode: 10202301-1808</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="datum van einde van zwangerschap (waarneembare entiteit) (118951000146109 - SNOMED CT)">datum van einde van zwangerschap (waarneembare entiteit)</span>
+            </td>
+            <td>${DATE, T, D, -413}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3">
+    <valueReference>
+      <reference value="Condition/2d20840d-1d39-4867-8778-4d128feb7359"/>
+      <display value="Zwangerschap: Tellegen Clara"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+    <value value="1c97d907-4385-4b0e-8857-2942d4b512e6"/>
+  </identifier>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="118951000146109"/>
+      <display value="datum van einde van zwangerschap (waarneembare entiteit)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/CLARAXXX-Tellegen"/>
+    <display value="Vrouw: Tellegen Clara"/>
+  </subject>
+  <context>
+    <reference value="EpisodeOfCare/b0d60e10-d4fe-46b8-b2b1-afb0f2f71f2d"/>
+    <display value="Zorgepisode: 10202301-1808"/>
+  </context>
+  <valueDateTime value="${DATE, T, D, -413}"/>
+</Observation>

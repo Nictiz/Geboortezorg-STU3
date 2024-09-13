@@ -1,0 +1,42 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="2d20840d-1d39-4867-8778-4d128feb7359"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Vrouw: Tellegen Clara. Id: d16554ea-b231-4de9-bf7d-07c299d1f4af (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: inactief</caption>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="bevinding betreffende zwangerschap (bevinding) (118185001 - SNOMED CT)">bevinding betreffende zwangerschap (bevinding)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+    <value value="d16554ea-b231-4de9-bf7d-07c299d1f4af"/>
+  </identifier>
+  <clinicalStatus value="inactive"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="118185001"/>
+      <display value="bevinding betreffende zwangerschap (bevinding)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/CLARAXXX-Tellegen"/>
+    <display value="Vrouw: Tellegen Clara"/>
+  </subject>
+  <context>
+    <reference value="EpisodeOfCare/b0d60e10-d4fe-46b8-b2b1-afb0f2f71f2d"/>
+    <display value="Zorgepisode: 10202301-1808"/>
+  </context>
+</Condition>

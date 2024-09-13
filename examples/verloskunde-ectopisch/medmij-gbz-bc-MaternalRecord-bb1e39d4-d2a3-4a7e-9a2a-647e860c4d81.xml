@@ -1,0 +1,75 @@
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+  <id value="bb1e39d4-d2a3-4a7e-9a2a-647e860c4d81"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgepisode. Patiënt: Vrouw: Peeters Eva. Id: ca7cf58a-200b-417c-acb5-8ac636f693d5 (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: voltooid</caption>
+        <tbody>
+          <tr>
+            <th>Type</th>
+            <td>
+              <span title="observatie betreffende zwangerschap (waarneembare entiteit) (364320009 - SNOMED CT)">observatie betreffende zwangerschap (waarneembare entiteit)</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Periode</th>
+            <td>1 januari 2024 - 1 september 2024</td>
+          </tr>
+          <tr>
+            <th>Zorgmanager</th>
+            <td>Zorgverlener - CaseManager: Loes Korte<div>Zorgverlenerrol: <a href="http://nictiz.nl/fhir/PractitionerRole/9a1594d5-d8e8-426b-bf17-a019adcc4bb2">Zorgverlenerrol: Loes Korte (Verloskundigenpraktijk Dalen)</a>
+              </div>, Organisatie: Verloskundigenpraktijk Dalen (lvr=1808)</td>
+          </tr>
+          <tr>
+            <th>Diagnose</th>
+            <td>Zwangerschap: Peeters Eva</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+    <value value="ca7cf58a-200b-417c-acb5-8ac636f693d5"/>
+  </identifier>
+  <status value="finished"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="364320009"/>
+      <display value="observatie betreffende zwangerschap (waarneembare entiteit)"/>
+    </coding>
+  </type>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/4e45abae-1d4d-47a7-a87e-9610be9931fe"/>
+      <display value="Zwangerschap: Peeters Eva"/>
+    </condition>
+  </diagnosis>
+  <patient>
+    <reference value="Patient/EVAXXX-Peeters"/>
+    <display value="Vrouw: Peeters Eva"/>
+  </patient>
+  <managingOrganization>
+    <reference value="Organization/b8a2ed37-cab2-4cd5-ab03-09a65ea565ab"/>
+    <display value="Organisatie: Verloskundigenpraktijk Dalen (lvr=1808)"/>
+  </managingOrganization>
+  <period>
+    <start value="2024-01-01"/>
+    <end value="2024-09-01"/>
+  </period>
+  <careManager>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+      <valueReference>
+        <reference value="http://nictiz.nl/fhir/PractitionerRole/9a1594d5-d8e8-426b-bf17-a019adcc4bb2"/>
+        <display value="Zorgverlenerrol: Loes Korte (Verloskundigenpraktijk Dalen)"/>
+      </valueReference>
+    </extension>
+    <reference value="Practitioner/dcbea9b8-4b25-4499-91e3-af45e07f0255"/>
+    <display value="Zorgverlener - CaseManager: Loes Korte"/>
+  </careManager>
+</EpisodeOfCare>
