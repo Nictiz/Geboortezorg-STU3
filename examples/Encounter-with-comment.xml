@@ -1,0 +1,53 @@
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="08b43a89-cb47-4340-bcfb-c60a66091d66" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-Encounter" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+        <valueString
+            value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla, sem eget pellentesque auctor, erat risus mollis mauris, ut commodo lectus nisi eget nunc. Praesent consequat, odio nec accumsan posuere, tortor arcu malesuada erat, sit amet tempus tortor massa nec dolor. Fusce tempus eget enim vel semper. Morbi egestas nulla sit amet tortor consequat tincidunt. Aliquam tempor lectus eget risus ornare rutrum. Sed convallis elementum turpis id viverra. Pellentesque pulvinar in ligula ac dignissim. Donec nisi nulla, finibus vitae sagittis id, tristique ut sem. In non ullamcorper massa. Integer eu orci rhoncus, consequat lorem vitae, molestie leo. Nulla erat risus, tincidunt eget augue id, suscipit finibus risus.&lt;br&gt; Proin eleifend quis felis at vehicula. Donec sed risus vitae eros eleifend mattis. Ut dapibus mi at diam imperdiet feugiat. Nulla sit amet elit magna. Nunc sollicitudin tempor urna eu feugiat. Ut in ante id ligula aliquam pretium quis quis nisi. Nulla non placerat lectus. Aenean vulputate eros arcu, et ultricies justo elementum a." />
+    </extension>
+    <status value="finished" />
+    <class>
+        <system value="http://hl7.org/fhir/v3/ActCode" />
+        <code value="FLD" />
+        <display value="Op lokatie" />
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="11429006" />
+            <display value="consult (verrichting)" />
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/cf854066-a08b-4bbc-89a3-3d21d0421616" />
+        <display value="Hanna XXX_Kooij-van XXX_Faraday" />
+    </subject>
+    <episodeOfCare>
+        <reference value="EpisodeOfCare/d7999790-7e16-4ce2-9e94-ffffd31cb065" />
+        <display value="Derde zorgepisode Hanna XXX_Kooij-van XXX_Faraday" />
+    </episodeOfCare>
+    <participant>
+        <individual>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <valueReference>
+                    <reference value="PractitionerRole/08b02d6b-7b0f-4d0b-a02a-781a0f825f9e" />
+                    <display value="Verloskundige Gemma XXX_Groeneboom-XXX_Gras" />
+                </valueReference>
+            </extension>
+            <reference value="Practitioner/99b59116-675f-4d40-bfec-aaa2a0821d51" />
+            <display value="Gemma XXX_Groeneboom-XXX_Gras" />
+        </individual>
+    </participant>
+    <period>
+        <start value="2023-07-22" />
+    </period>
+    <diagnosis>
+        <condition>
+            <reference value="Condition/8315e081-a26d-4ef2-8aef-08451597fc43" />
+            <display value="Derde zwangerschap Hanna XXX_Kooij-van XXX_Faraday" />
+        </condition>
+    </diagnosis>
+</Encounter>
