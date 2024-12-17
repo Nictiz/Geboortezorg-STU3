@@ -14,8 +14,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 -->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
     <xd:doc scope="stylesheet">
-        <xd:desc>Produces a wiki table from FHIR mapping/<xd:ref name="dataset-name" type="parameter"/> to FHIR for upload to e.g. somewhere on the <xd:a href="https://informatiestandaarden.nictiz.nl/wiki/Categorie:Mappings">Nictiz Information Standards wiki</xd:a>
-            <xd:p><xd:b>Expected input</xd:b> Mapping generated with release_2__fhirmapping</xd:p>
+        <xd:desc>Produces a wiki table from a map for upload to e.g. somewhere on the Nictiz Information Standards wiki
+            <xd:p><xd:b>Expected input</xd:b> Map generated with retrieve_simplifier_project_resources</xd:p>
             <xd:p><xd:b>History:</xd:b>
                 <xd:ul>
                     <xd:li>2022-06-20 version 0.1 LM</xd:li>
@@ -27,7 +27,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:output method="text" encoding="UTF-8"/>
     <xsl:include href="add-type.xsl"/>
     
-    <xsl:param name="version" select="'1.2'"/>
+    <xsl:param name="version" select="'1.3.2'"/>
     
     <xd:doc>
         <xd:desc>Start table for  the root concepts of the dataset</xd:desc>
@@ -47,6 +47,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 |-
 || '''Profile'''
 || '''Pattern'''
+|| '''Base profile'''
 || '''FHIR resource'''
 || '''HCIM EN'''
 || '''Canonical URL'''
@@ -78,12 +79,21 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:value-of select="@name"/>
         <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=</xsl:text>
         <xsl:value-of select="$version"/>
-        <xsl:text>.0|title=</xsl:text>
+        <xsl:text>|title=</xsl:text>
                 <xsl:value-of select="@name"/>
                 <xsl:text>}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="replace(@pattern,'Gebz:FHIR_IG',concat('Gebz:V',$version,'_FHIR_IG'))"/>
+        <xsl:value-of select="replace(@pattern,'Gebz:FHIR_IG',concat('Gebz:V',substring($version,0,4),'_FHIR_IG'))"/>
+        <xsl:text>
+||</xsl:text>
+        <xsl:text>{{Simplifier|</xsl:text>
+        <xsl:value-of select="@base"/>
+        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=</xsl:text>
+        <xsl:value-of select="$version"/>
+        <xsl:text>|title=</xsl:text>
+        <xsl:value-of select="substring-after(@base,'StructureDefinition/')"/>
+        <xsl:text>}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
         <xsl:value-of select="@type"/>
