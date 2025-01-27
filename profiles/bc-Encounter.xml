@@ -137,6 +137,15 @@
         <comment value="Contact" />
       </mapping>
     </element>
+    <element id="Encounter.extension:comment">
+      <path value="Encounter.extension" />
+      <sliceName value="comment" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/Comment" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
       <mapping>
@@ -229,21 +238,9 @@
         <comment value="EindDatumTijd" />
       </mapping>
     </element>
-    <element id="Encounter.reason.extension">
-      <path value="Encounter.reason.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Encounter.reason.extension:reasonReference">
       <path value="Encounter.reason.extension" />
       <sliceName value="reasonReference" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-reasonreference" />
