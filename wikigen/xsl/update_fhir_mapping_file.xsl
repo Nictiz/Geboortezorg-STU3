@@ -28,6 +28,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     
     <xsl:variable name="fhirmapping" select="document('../../fhirmapping-3-2.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
+    <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
 
     <xd:doc>
         <xd:desc>Make base table</xd:desc>
@@ -37,9 +38,15 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <xsl:copy-of select="@*"/>
             <xsl:for-each select="$dataset//concept[@type=('group','item') and @statusCode!='cancelled']">
-                 <xsl:apply-templates select="." mode="createRecords"/>
+                <xsl:apply-templates select="." mode="createRecords"/> 
             </xsl:for-each>
         </dataset>
+        <xsl:for-each select="$fhirmapping/dataset/record">
+            <xsl:variable name="dataset-match" select="key('dataset-lookup', ID, $dataset)"/> 
+            <xsl:if test="not($dataset-match)">
+                <xsl:message>The concept for <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> is no longer present in the dataset and is removed from the mapping file</xsl:message>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:template>
 
     <xd:doc>
@@ -48,6 +55,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:template match="concept" mode="createRecords">
         <xsl:variable name="id" select="@iddisplay/string()"/>
         <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>  
+        <xsl:if test="not($fhirmapping)">
+            <xsl:message>A new concept for <xsl:value-of select="name"/> is found with id <xsl:value-of select="$id"/> and is added to the mapping file</xsl:message>
+        </xsl:if>
         <record>
             <ID><xsl:value-of select="@iddisplay/string()"/></ID>
             <naam><xsl:value-of select="name"/></naam>
