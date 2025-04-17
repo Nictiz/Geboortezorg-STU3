@@ -41,7 +41,7 @@
       <path value="Observation.code.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
-        <code value="273302005" />
+        <code value="116339002" />
       </patternCoding>
     </element>
     <element id="Observation.effective[x]:effectiveDateTime">
@@ -61,21 +61,9 @@
         <comment value="Toelichting" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.extension">
-      <path value="Observation.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.bodySite.extension:laterality">
       <path value="Observation.bodySite.extension" />
       <sliceName value="laterality" />
-      <min value="0" />
     </element>
     <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.bodySite.extension.valueCodeableConcept" />
@@ -120,8 +108,9 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="observatie betreffende tepel (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component:nipples.value[x]">
+    <element id="Observation.component:nipples.value[x]:valueString">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
@@ -143,8 +132,9 @@
         <code value="364528001" />
       </patternCoding>
     </element>
-    <element id="Observation.component:skin.value[x]">
+    <element id="Observation.component:skin.value[x]:valueString">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
@@ -166,8 +156,9 @@
         <code value="290054003" />
       </patternCoding>
     </element>
-    <element id="Observation.component:other.value[x]">
+    <element id="Observation.component:other.value[x]:valueString">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
