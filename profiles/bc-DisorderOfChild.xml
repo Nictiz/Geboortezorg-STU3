@@ -253,21 +253,9 @@
         <comment value="Probleem (Extremiteiten)" />
       </mapping>
     </element>
-    <element id="Condition.extension">
-      <path value="Condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.extension:onsetInstitution">
       <path value="Condition.extension" />
       <sliceName value="onsetInstitution" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -287,7 +275,6 @@
     <element id="Condition.extension:causativeAgent">
       <path value="Condition.extension" />
       <sliceName value="causativeAgent" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-dueTo" />
@@ -320,7 +307,6 @@
     <element id="Condition.extension:lineSepsis">
       <path value="Condition.extension" />
       <sliceName value="lineSepsis" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -335,7 +321,6 @@
     <element id="Condition.extension:onsetPeriod">
       <path value="Condition.extension" />
       <sliceName value="onsetPeriod" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -835,7 +820,7 @@
       <sliceName value="disorderOfChildCode" />
       <max value="1" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="bc-DisorderOfChild-code" />
         <valueSetReference>
           <reference value="http://nictiz.nl/fhir/ValueSet/bc-DisorderOfChild-code" />
@@ -955,21 +940,9 @@
         <comment value="ProbleemAnatomischeLocatie" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.extension">
-      <path value="Condition.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.bodySite.extension:Laterality">
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
-      <min value="0" />
     </element>
     <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
@@ -1073,7 +1046,6 @@
     <element id="Condition.bodySite.extension:bodySiteReference">
       <path value="Condition.bodySite.extension" />
       <sliceName value="bodySiteReference" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
