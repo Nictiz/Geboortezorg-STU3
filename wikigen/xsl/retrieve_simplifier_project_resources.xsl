@@ -14,8 +14,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 -->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:f="http://hl7.org/fhir" exclude-result-prefixes="#all" version="2.0">
     <xd:doc scope="stylesheet">
-        <xd:desc>Produces a mapping table from PWD /<xd:ref name="dataset-name" type="parameter"/> to FHIR for upload to e.g. somewhere on the <xd:a href="https://informatiestandaarden.nictiz.nl/wiki/Categorie:Mappings">Nictiz Information Standards wiki</xd:a>
-            <xd:p><xd:b>Expected input</xd:b> DECOR release file containing ADA community info that holds relevant mapping information. Use tool "adarelease_2_adacommunity.xsl" (should be where you found this tool) to set set up the initial community for upload on ART-DECOR</xd:p>
+        <xd:desc>Produces an overview of FHIR profiles used in the GZ package for upload to the Nictiz Information Standards wiki
+            <xd:p><xd:b>Expected input</xd:b> No input</xd:p>
             <xd:p><xd:b>History:</xd:b>
             <xd:ul>
                 <xd:li>2022-06-20 version 0.1 LM</xd:li>
@@ -30,7 +30,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xd:doc>
         <xd:desc>Required: Simplifier project url</xd:desc>
     </xd:doc>
-    <xsl:param name="projectUrl" select="'https://stu3.simplifier.net/geboortezorg-stu3'"/>
+    <xsl:param name="projectUrl" select="'https://fhir.simplifier.net/Geboortezorg-STU3'"/>
   
     <xd:doc>
         <xd:desc>Make base table</xd:desc>
@@ -66,6 +66,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:attribute name="description" select="f:description/@value"/>
             <xsl:attribute name="kind" select="f:kind/@value"/>
             <xsl:attribute name="type" select="f:type/@value"/>
+            <xsl:attribute name="base" select="f:baseDefinition/@value"/>
             <xsl:attribute name="pattern" select="if ($pattern) then concat('[[',$patternPage,'|',$patternName,']]') else $pattern"/>
         </xsl:element>
     </xsl:template>

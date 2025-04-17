@@ -109,21 +109,9 @@
         <code value="236973005" />
       </patternCoding>
     </element>
-    <element id="Encounter.participant.extension">
-      <path value="Encounter.participant.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Encounter.participant.extension:periodOfArrival">
       <path value="Encounter.participant.extension" />
       <sliceName value="periodOfArrival" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -149,7 +137,6 @@
     <element id="Encounter.participant.extension:timeWhenCalled">
       <path value="Encounter.participant.extension" />
       <sliceName value="timeWhenCalled" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -161,12 +148,18 @@
         <comment value="OproepDatumTijd" />
       </mapping>
     </element>
+    <element id="Encounter.participant.type.coding:healthProfessionalRole">
+      <path value="Encounter.participant.type.coding" />
+      <sliceName value="healthProfessionalRole" />
+      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;To make sure slicing functions correctly ChildBirthAssistance-type is set to 'required'. However alternate coding are still allowed." />
+    </element>
     <element id="Encounter.participant.type.coding:childBirthAssistance-type">
       <path value="Encounter.participant.type.coding" />
       <sliceName value="childBirthAssistance-type" />
+      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;To make sure slicing functions correctly ChildBirthAssistance-type is set to 'required'. However alternate coding are still allowed." />
       <max value="1" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="bc-ChildBirthAssistance-type" />
         <valueSetReference>
           <reference value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
@@ -217,21 +210,9 @@
         <comment value="Zorgverlener" />
       </mapping>
     </element>
-    <element id="Encounter.participant.individual.extension">
-      <path value="Encounter.participant.individual.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Encounter.participant.individual.extension:practitionerRole">
       <path value="Encounter.participant.individual.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82132" />
@@ -252,16 +233,6 @@
         <map value="peri32-dataelement-10712" />
         <comment value="ContactMet" />
       </mapping>
-    </element>
-    <element id="Encounter.diagnosis">
-      <path value="Encounter.diagnosis" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="condition.resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Encounter.serviceProvider">
       <path value="Encounter.serviceProvider" />
