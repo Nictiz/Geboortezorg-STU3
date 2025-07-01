@@ -26,26 +26,32 @@
 		<end value="2016-06-16" />
 	</period>
 	<author>
-		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator">
+			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
 			<valueReference>
 				<reference value="PractitionerRole/ZorgverlenerA" />
 				<display value="Zorgverlener A" />
 			</valueReference>
 		</extension>
-		<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
-			<valueReference>
-				<reference value="PractitionerRole/ZorgverlenerA" />
-				<display value="Zorgverlener A" />
-			</valueReference>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator">
+			<valueBoolean value="true"/>
+		</extension>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor">
+			<valueBoolean value="true"/>
 		</extension>
 		<reference value="Practitioner/ZorgverlenerA" />
 		<display value="Zorgverlener A" />
 	</author>
 	<author>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor">
+			<valueBoolean value="true"/>
+		</extension>
 		<reference value="Patient/example" />
 		<display value="Example" />
 	</author>
 	<author>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor">
+			<valueBoolean value="true"/>
+		</extension>
 		<reference value="RelatedPerson/partner" />
 		<display value="Partner" />
 	</author>
