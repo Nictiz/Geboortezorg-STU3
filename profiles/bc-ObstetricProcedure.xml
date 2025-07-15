@@ -447,16 +447,6 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Procedure.performed[x]">
-      <path value="Procedure.performed[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Procedure.performed[x]:performedPeriod">
       <path value="Procedure.performed[x]" />
       <sliceName value="performedPeriod" />
@@ -531,6 +521,17 @@
         <map value="peri32-dataelement-8762" />
         <comment value="VerrichtingEindDatum" />
       </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedDateTime">
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedDateTime" />
+      <comment value="This slice serves the purpose to temporarily circumvent a validator error and make it possible to use a performedDateTime element." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Procedure.performed[x]:performedDateTime.value">
+      <path value="Procedure.performed[x].value" />
     </element>
     <element id="Procedure.performer">
       <path value="Procedure.performer" />
