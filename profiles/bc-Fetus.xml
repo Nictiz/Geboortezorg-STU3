@@ -62,21 +62,9 @@
         <comment value="Foetus" />
       </mapping>
     </element>
-    <element id="BodySite.extension">
-      <path value="BodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="BodySite.extension:child">
       <path value="BodySite.extension" />
       <sliceName value="child" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

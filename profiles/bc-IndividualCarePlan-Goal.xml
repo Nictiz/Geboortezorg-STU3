@@ -29,21 +29,9 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective" />
   <derivation value="constraint" />
   <differential>
-    <element id="Goal.extension">
-      <path value="Goal.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Goal.extension:endDate">
       <path value="Goal.extension" />
       <sliceName value="endDate" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -58,7 +46,6 @@
     <element id="Goal.extension:carePlan">
       <path value="Goal.extension" />
       <sliceName value="carePlan" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -90,6 +77,12 @@
         <map value="peri32-dataelement-8813" />
         <comment value="StreefDatum" />
       </mapping>
+    </element>
+    <element id="Goal.target.due[x]:dueDate.value">
+      <path value="Goal.target.dueDate.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Goal.statusDate">
       <path value="Goal.statusDate" />

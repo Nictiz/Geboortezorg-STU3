@@ -98,6 +98,12 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Observation.value[x]:valueBoolean">
       <path value="Observation.valueBoolean" />
       <sliceName value="valueBoolean" />
@@ -151,10 +157,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:birthcontrolMethod">
       <path value="Observation.component" />
       <sliceName value="birthcontrolMethod" />
@@ -185,10 +187,6 @@
         <map value="peri32-dataelement-4332" />
         <comment value="GebruikAnticonceptieWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:birthcontrolMethod.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

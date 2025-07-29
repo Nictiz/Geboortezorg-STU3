@@ -98,21 +98,9 @@
         <comment value="Probleem" />
       </mapping>
     </element>
-    <element id="Condition.extension">
-      <path value="Condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.extension:delivery">
       <path value="Condition.extension" />
       <sliceName value="delivery" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -150,6 +138,12 @@
         <comment value="ProbleemStatus" />
       </mapping>
     </element>
+    <element id="Condition.clinicalStatus.value">
+      <path value="Condition.clinicalStatus.value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
       <mapping>
@@ -167,6 +161,12 @@
         <map value="peri32-dataelement-2852" />
         <comment value="VerificatieStatus" />
       </mapping>
+    </element>
+    <element id="Condition.verificationStatus.value">
+      <path value="Condition.verificationStatus.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
@@ -247,21 +247,9 @@
         <comment value="ProbleemAnatomischeLocatie" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.extension">
-      <path value="Condition.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.bodySite.extension:Laterality">
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
-      <min value="0" />
     </element>
     <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
@@ -280,7 +268,6 @@
     <element id="Condition.bodySite.extension:bodySiteReference">
       <path value="Condition.bodySite.extension" />
       <sliceName value="bodySiteReference" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
@@ -340,6 +327,12 @@
         <comment value="ProbleemBeginDatum" />
       </mapping>
     </element>
+    <element id="Condition.onsetDateTime:onsetDateTime.value">
+      <path value="Condition.onsetDateTime.value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Condition.abatementDateTime:abatementDateTime">
       <path value="Condition.abatementDateTime" />
       <sliceName value="abatementDateTime" />
@@ -353,6 +346,12 @@
         <map value="peri32-dataelement-2850" />
         <comment value="ProbleemEindDatum" />
       </mapping>
+    </element>
+    <element id="Condition.abatementDateTime:abatementDateTime.value">
+      <path value="Condition.abatementDateTime.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Condition.assertedDate">
       <path value="Condition.assertedDate" />

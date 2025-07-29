@@ -169,21 +169,9 @@
         <comment value="Zorgverlener" />
       </mapping>
     </element>
-    <element id="CareTeam.participant.member.extension">
-      <path value="CareTeam.participant.member.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="CareTeam.participant.member.extension:practitionerRole">
       <path value="CareTeam.participant.member.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82120" />

@@ -37,21 +37,9 @@
         <comment value="Perinatale sterfte (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.extension:fetus">
       <path value="Observation.extension" />
       <sliceName value="fetus" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -159,6 +147,12 @@
         <map value="peri32-dataelement-10552" />
         <comment value="DatumOverlijden" />
       </mapping>
+    </element>
+    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime.value">
+      <path value="Observation.component.valueDateTime.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Observation.component:perinatalPhase">
       <path value="Observation.component" />

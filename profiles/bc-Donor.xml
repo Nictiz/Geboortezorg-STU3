@@ -28,21 +28,9 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
   <derivation value="constraint" />
   <differential>
-    <element id="RelatedPerson.extension">
-      <path value="RelatedPerson.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="RelatedPerson.extension:role">
       <path value="RelatedPerson.extension" />
       <sliceName value="role" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7888" />
@@ -64,6 +52,26 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+    </element>
+    <element id="RelatedPerson.name.extension:humannameAssemblyOrder">
+      <path value="RelatedPerson.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="RelatedPerson.name.extension:humannameAssemblyOrder.valueCode:valueCode.value">
+      <path value="RelatedPerson.name.extension.valueCode.value" />
+      <type>
+        <code />
+      </type>
+    </element>
+    <element id="RelatedPerson.name.given.extension:iso21090EnQualifier">
+      <path value="RelatedPerson.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+    </element>
+    <element id="RelatedPerson.name.given.extension:iso21090EnQualifier.valueCode:valueCode.value">
+      <path value="RelatedPerson.name.given.extension.valueCode.value" />
+      <type>
+        <code />
       </type>
     </element>
     <element id="RelatedPerson.birthDate">

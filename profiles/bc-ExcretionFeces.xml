@@ -58,6 +58,18 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type />
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+    </element>
+    <element id="Observation.value[x]:valueDateTime.value">
+      <path value="Observation.value[x].value" />
+      <type />
+    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -127,10 +139,6 @@
         <comment value="FecesWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:feces.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:fecalDiapers">
       <path value="Observation.component" />
       <sliceName value="fecalDiapers" />
@@ -156,10 +164,6 @@
         <map value="peri32-dataelement-9957" />
         <comment value="PoepluiersWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:fecalDiapers.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

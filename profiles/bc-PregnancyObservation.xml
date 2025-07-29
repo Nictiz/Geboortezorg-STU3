@@ -102,21 +102,9 @@
         <comment value="TOP nav prenataal onderzoek? (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.extension:pregnancy">
       <path value="Observation.extension" />
       <sliceName value="pregnancy" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
@@ -239,6 +227,12 @@
         <map value="peri32-dataelement-4158" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -403,6 +397,12 @@
         <comment value="DatumOverlijden" />
       </mapping>
     </element>
+    <element id="Observation.value[x]:valueDateTime.value">
+      <path value="Observation.value[x].value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -521,10 +521,6 @@
         <map value="peri32-dataelement-2224" />
         <comment value="Definitieve a terme Methode" />
       </mapping>
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

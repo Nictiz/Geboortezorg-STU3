@@ -37,25 +37,13 @@
         <comment value="IndividueelZorgplan" />
       </mapping>
     </element>
-    <element id="CarePlan.extension">
-      <path value="CarePlan.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="CarePlan.extension:coordinator">
       <path value="CarePlan.extension" />
       <sliceName value="coordinator" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />

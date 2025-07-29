@@ -62,21 +62,9 @@
         <comment value="Verwijsgegevens" />
       </mapping>
     </element>
-    <element id="ReferralRequest.extension">
-      <path value="ReferralRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ReferralRequest.extension:perinatalPeriod">
       <path value="ReferralRequest.extension" />
       <sliceName value="perinatalPeriod" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -88,10 +76,6 @@
       <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
-        <description value="PerinataleOverdrachtPeriodeConsult" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.169--20140711114925" />
-        </valueSetReference>
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -102,7 +86,6 @@
     <element id="ReferralRequest.extension:contactType">
       <path value="ReferralRequest.extension" />
       <sliceName value="contactType" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -223,21 +206,9 @@
         <comment value="Verwijzing van/ afkomstig van" />
       </mapping>
     </element>
-    <element id="ReferralRequest.requester.extension">
-      <path value="ReferralRequest.requester.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ReferralRequest.requester.extension:specialty">
       <path value="ReferralRequest.requester.extension" />
       <sliceName value="specialty" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -494,21 +465,9 @@
         <comment value="Reden van verwijzing" />
       </mapping>
     </element>
-    <element id="ReferralRequest.reasonReference.extension">
-      <path value="ReferralRequest.reasonReference.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ReferralRequest.reasonReference.extension:procedureReference">
       <path value="ReferralRequest.reasonReference.extension" />
       <sliceName value="procedureReference" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-referralrequest-reasonReference" />

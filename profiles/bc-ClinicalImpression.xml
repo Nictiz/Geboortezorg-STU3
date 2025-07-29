@@ -52,21 +52,9 @@
         <comment value="Conclusie professioneel onderzoek" />
       </mapping>
     </element>
-    <element id="ClinicalImpression.extension">
-      <path value="ClinicalImpression.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ClinicalImpression.extension:management">
       <path value="ClinicalImpression.extension" />
       <sliceName value="management" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
@@ -126,6 +114,12 @@
         <comment value="ConclusieDatumTijd" />
       </mapping>
     </element>
+    <element id="ClinicalImpression.effective[x]:effectiveDateTime.value">
+      <path value="ClinicalImpression.effective[x].value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="ClinicalImpression.assessor">
       <path value="ClinicalImpression.assessor" />
       <type>
@@ -138,21 +132,9 @@
         <comment value="Zorgverlener" />
       </mapping>
     </element>
-    <element id="ClinicalImpression.assessor.extension">
-      <path value="ClinicalImpression.assessor.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ClinicalImpression.assessor.extension:practitionerRole">
       <path value="ClinicalImpression.assessor.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
@@ -166,21 +148,9 @@
       <path value="ClinicalImpression.investigation.code.coding.code" />
       <defaultValueCode value="271992004" />
     </element>
-    <element id="ClinicalImpression.investigation.item.extension">
-      <path value="ClinicalImpression.investigation.item.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ClinicalImpression.investigation.item.extension:procedure">
       <path value="ClinicalImpression.investigation.item.extension" />
       <sliceName value="procedure" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
