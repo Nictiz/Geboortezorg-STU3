@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-MultidisciplinaryTeamMeeting-Plan" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting-Plan" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-MultidisciplinaryTeamMeeting-Plan" />
   <title value="bc-MultidisciplinaryTeamMeeting-Plan" />
   <status value="active" />
@@ -37,21 +37,9 @@
         <comment value="Beleid" />
       </mapping>
     </element>
-    <element id="CarePlan.extension">
-      <path value="CarePlan.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="CarePlan.extension:intentTreatment">
       <path value="CarePlan.extension" />
       <sliceName value="intentTreatment" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

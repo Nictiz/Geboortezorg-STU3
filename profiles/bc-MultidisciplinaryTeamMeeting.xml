@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-MultidisciplinaryTeamMeeting" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-MultidisciplinaryTeamMeeting" />
   <title value="bc-MultidisciplinaryTeamMeeting" />
   <status value="active" />
@@ -127,21 +127,9 @@
         <comment value="Contactpersoon" />
       </mapping>
     </element>
-    <element id="Encounter.participant.individual.extension">
-      <path value="Encounter.participant.individual.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Encounter.participant.individual.extension:practitionerRole">
       <path value="Encounter.participant.individual.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
@@ -165,7 +153,6 @@
       <sliceName value="patient" />
       <short value="Patient" />
       <definition value="The patient as participant of the patient consultation. This extension adds zib-Patient as a target profile to `Encounter.participant.individual`. This profile pre-adopts the notion that the subject of the Encounter does not have to be present at the encounter (https://jira.hl7.org/browse/FHIR-20479). This creates the need to reference the subject in `Encounter.participant.individual` if the subject is present, where the current FHIR R5 build has already added this option to the renamed `participant.actor`." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-PregnancyObservation" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyObservation" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-PregnancyObservation" />
   <title value="bc-PregnancyObservation" />
   <status value="active" />
@@ -102,21 +102,9 @@
         <comment value="TOP nav prenataal onderzoek? (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.extension:pregnancy">
       <path value="Observation.extension" />
       <sliceName value="pregnancy" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
@@ -521,10 +509,6 @@
         <map value="peri32-dataelement-2224" />
         <comment value="Definitieve a terme Methode" />
       </mapping>
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

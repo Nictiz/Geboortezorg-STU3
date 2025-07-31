@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-careplan-author-role" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
-  <name value="bc-careplan-isCoordinator" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor" />
+  <name value="bc-careplan-isContributor" />
   <title value="bc-careplan-coordinator" />
   <status value="active" />
   <publisher value="Nictiz" />
@@ -14,7 +13,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Extension to add information about the coordinator role of an author to a CarePlan." />
+  <description value="An Extension to add information about the contributor role of an author to a CarePlan." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <kind value="complex-type" />
@@ -27,15 +26,15 @@
   <differential>
     <element id="Extension.extension">
       <path value="Extension.extension" />
-      <max value="1" />
+      <max value="0" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor" />
     </element>
-    <element id="Extension.value[x]:valueBoolean">
+    <element id="Extension.value[x]:valueReference">
       <path value="Extension.value[x]" />
-      <sliceName value="valueBoolean" />
+      <sliceName value="valueReference" />
       <type>
         <code value="boolean" />
       </type>

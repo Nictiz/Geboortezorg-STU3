@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-DisorderOfLaborAndDelivery" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-DisorderOfLaborAndDelivery" />
   <title value="bc-DisorderOfLaborAndDelivery" />
   <status value="active" />
@@ -83,21 +83,9 @@
         <comment value="Probleem (Kindspecifieke maternale problemen)" />
       </mapping>
     </element>
-    <element id="Condition.extension">
-      <path value="Condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.extension:delivery">
       <path value="Condition.extension" />
       <sliceName value="delivery" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -241,21 +229,9 @@
         <comment value="ProbleemAnatomischeLocatie" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.extension">
-      <path value="Condition.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Condition.bodySite.extension:Laterality">
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
-      <min value="0" />
     </element>
     <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
@@ -269,7 +245,6 @@
     <element id="Condition.bodySite.extension:bodySiteReference">
       <path value="Condition.bodySite.extension" />
       <sliceName value="bodySiteReference" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />

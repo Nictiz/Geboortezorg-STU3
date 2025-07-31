@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-TreatmentDirective" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-TreatmentDirective" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-TreatmentDirective" />
   <title value="bc-TreatmentDirective" />
   <status value="active" />
@@ -58,21 +58,9 @@
         <comment value="BehandelAanwijzing" />
       </mapping>
     </element>
-    <element id="Consent.extension">
-      <path value="Consent.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Consent.extension:comment">
       <path value="Consent.extension" />
       <sliceName value="comment" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -97,46 +85,33 @@
     <element id="Consent.extension:additionalAdvanceDirective">
       <path value="Consent.extension" />
       <sliceName value="additionalAdvanceDirective" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-advancedirective" />
       </type>
       <condition value="zib-TreatmentDirective2-1" />
     </element>
-    <element id="Consent.extension:additionalAdvanceDirective.value[x]">
+    <element id="Consent.extension:additionalAdvanceDirective.value[x]:valueReference">
       <path value="Consent.extension.value[x]" />
+      <sliceName value="valueReference" />
       <type>
-        <code value="Reference"/>
+        <code value="Reference" />
       </type>
       <condition value="zib-TreatmentDirective2-1" />
-    </element>
-    <element id="Consent.modifierExtension">
-      <path value="Consent.modifierExtension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
     </element>
     <element id="Consent.modifierExtension:specificationOther">
       <path value="Consent.modifierExtension" />
       <sliceName value="specificationOther" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother" />
       </type>
       <condition value="zib-TreatmentDirective2-2" />
+      <mustSupport value="true" />
     </element>
-    <element id="Consent.modifierExtension:specificationOther.value[x]">
+    <element id="Consent.modifierExtension:specificationOther.value[x]:valueString">
       <path value="Consent.modifierExtension.value[x]" />
-      <type>
-        <code value="string" />
-      </type>
+      <sliceName value="valueString" />
       <condition value="zib-TreatmentDirective2-2" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -181,6 +156,74 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10405" />
         <comment value="MeestRecenteBespreekdatum" />
+      </mapping>
+    </element>
+    <element id="Consent.consentingParty">
+      <path value="Consent.consentingParty" />
+      <short value="AgreementParty" />
+      <definition value="Container of the Agreement concept. This container contains all data elements of the Agreement concept.&#xD;&#xA;* Patient as the person with whom the agreement was made.&#xD;&#xA;* Person who represents the patient in health care matters and with whom the agreement has been made (too).&#xD;&#xA;* HealthProfessional who has made de agreement regarding the treatement directive." />
+      <alias value="AfspraakPartij" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <mapping>
+        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+        <map value="NL-CM:2.2.9" />
+        <comment value="AgreementParty" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10410" />
+        <comment value="AfspraakPartij" />
+      </mapping>
+      <mapping>
+        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+        <map value="NL-CM:2.2.10" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+        <map value="NL-CM:2.2.11" />
+        <comment value="Representative" />
+      </mapping>
+      <mapping>
+        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
+        <map value="NL-CM:2.2.12" />
+        <comment value="HealthProfessional" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10411" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10413" />
+        <comment value="Vertegenwoordiger" />
+      </mapping>
+    </element>
+    <element id="Consent.consentingParty.extension:practitionerRole">
+      <path value="Consent.consentingParty.extension" />
+      <sliceName value="practitionerRole" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10415" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="Consent.source[x]">
@@ -236,21 +279,9 @@
       <path value="Consent.policy.uri" />
       <comment value="Either `.policy` or `.policyRule` should exist following core constraint ppc-1. If no explicit value is recorded, a fallback is to populate `.policy.uri` with &lt;https://wetten.overheid.nl/&gt; if the treatment directive is recorded following Dutch law and regulations." />
     </element>
-    <element id="Consent.except.extension">
-      <path value="Consent.except.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Consent.except.extension:reasonForEnding">
       <path value="Consent.except.extension" />
       <sliceName value="reasonForEnding" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-reasonforending" />
@@ -265,7 +296,7 @@
     <element id="Consent.except.type">
       <path value="Consent.except.type" />
       <short value="TreatmentDecision" />
-      <definition value="The joint decision taken with regard to the desirability of performing the indicated treatment. If the agreement is 'Other', 'Specification Other' shall contain the instructions for whether or not to carry out the treatment. Implementers SHALL support the SpecificationOther extension on `.provision.type` for this." />
+      <definition value="The joint decision taken with regard to the desirability of performing the indicated treatment. If the agreement is 'Other', the nullFlavor extension SHALL be populated with value 'unknown' and 'Specification Other' SHALL contain the instructions for whether or not to carry out the treatment. Implementers SHALL support the dataAbsentReason and SpecificationOther extensions for this." />
       <alias value="BehandelBesluit" />
       <condition value="zib-TreatmentDirective2-2" />
       <mapping>
@@ -278,6 +309,17 @@
         <map value="peri32-dataelement-10402" />
         <comment value="BehandelBesluit" />
       </mapping>
+    </element>
+    <element id="Consent.except.type.extension:dataAbsentReason">
+      <path value="Consent.except.type.extension" />
+      <sliceName value="dataAbsentReason" />
+      <definition value="If the agreement is 'Other', the dataAbsent extension SHALL be populated with value 'unknown' and 'Specification Other' SHALL contain the instructions for whether or not to carry out the treatment. Implementers SHALL support the dataAbsentReason and SpecificationOther extensions for this." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="Consent.except.period.end">
       <path value="Consent.except.period.end" />
@@ -293,114 +335,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10406" />
         <comment value="DatumBeeindigd" />
-      </mapping>
-    </element>
-    <element id="Consent.except.actor">
-      <path value="Consent.except.actor" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="role" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Consent.except.actor:agreementParty">
-      <path value="Consent.except.actor" />
-      <sliceName value="agreementParty" />
-      <short value="AgreementParty" />
-      <definition value="Container of the Agreement concept.This container contains all data elements of the Agreement concept." />
-      <alias value="AfspraakPartij" />
-      <mapping>
-        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
-        <map value="NL-CM:2.2.9" />
-        <comment value="AgreementParty" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10410" />
-        <comment value="AfspraakPartij" />
-      </mapping>
-    </element>
-    <element id="Consent.except.actor:agreementParty.role">
-      <path value="Consent.except.actor.role" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
-          <code value="CONSENTER" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Consent.except.actor:agreementParty.reference">
-      <path value="Consent.except.actor.reference" />
-      <short value="Patient / Representative / HealthProfessional" />
-      <definition value="* Patient as the person with whom the agreement was made.&#xD;&#xA;* Person who represents the patient in health care matters and with whom the agreement has been made (too).&#xD;&#xA;* HealthProfessional who has made de agreement regarding the treatement directive." />
-      <alias value="Patient" />
-      <alias value="Vertegenwoordiger" />
-      <alias value="Zorgverlener" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-      </type>
-      <mapping>
-        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
-        <map value="NL-CM:2.2.10" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
-        <map value="NL-CM:2.2.11" />
-        <comment value="Representative" />
-      </mapping>
-      <mapping>
-        <identity value="zib-treatmentdirective2-v1.0-2020EN" />
-        <map value="NL-CM:2.2.12" />
-        <comment value="HealthProfessional" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10411" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10413" />
-        <comment value="Vertegenwoordiger" />
-      </mapping>
-    </element>
-    <element id="Consent.except.actor:agreementParty.reference.extension">
-      <path value="Consent.except.actor.reference.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Consent.except.actor:agreementParty.reference.extension:practitionerRole">
-      <path value="Consent.except.actor.reference.extension" />
-      <sliceName value="practitionerRole" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10415" />
-        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="Consent.except.code">

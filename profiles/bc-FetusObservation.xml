@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-FetusObservation" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-FetusObservation" />
   <title value="bc-FetusObservation" />
   <status value="active" />
@@ -152,21 +152,9 @@
         <comment value="Oorzaak overlijden (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.extension:fetus">
       <path value="Observation.extension" />
       <sliceName value="fetus" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -447,21 +435,9 @@
         <comment value="Placentalokalisatie" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension">
-      <path value="Observation.value[x].extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Observation.value[x].extension:valueReference">
       <path value="Observation.value[x].extension" />
       <sliceName value="valueReference" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -783,10 +759,6 @@
         <map value="peri32-dataelement-7851" />
         <comment value="ObservatieMethode" />
       </mapping>
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>

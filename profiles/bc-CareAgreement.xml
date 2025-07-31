@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-CareAgreement" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-CareAgreement" />
   <title value="bc-CareAgreement" />
   <status value="active" />
@@ -41,29 +41,6 @@
         <map value="peri32-dataelement-3871" />
         <comment value="ZorgAfspraak" />
       </mapping>
-    </element>
-    <element id="CarePlan.extension">
-      <path value="CarePlan.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="CarePlan.extension:careManager">
-      <path value="CarePlan.extension" />
-      <sliceName value="careManager" />
-      <definition value="The practitioner responsible for coordinating the agreed action(s) in this care agreement." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
-      </type>
-      <isModifier value="false" />
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
@@ -107,6 +84,7 @@
     </element>
     <element id="CarePlan.author">
       <path value="CarePlan.author" />
+      <definition value="Identifies the individual(s) or ogranization who is responsible for the content of the care plan. This can be either the contributor and/or the coordinator of the care plan. Use the isCoordinator and isContributor extensions to indicate the role of the author." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
@@ -127,11 +105,6 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-careteam" />
       </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3844" />
-        <comment value="AfspraakPartijen" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3845" />
@@ -163,37 +136,9 @@
         <comment value="Zorgverlener" />
       </mapping>
     </element>
-    <element id="CarePlan.author.extension">
-      <path value="CarePlan.author.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="CarePlan.author.extension:coordinator">
-      <path value="CarePlan.author.extension" />
-      <sliceName value="coordinator" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-coordinator" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3858" />
-        <comment value="Coordinator" />
-      </mapping>
-    </element>
     <element id="CarePlan.author.extension:practitionerRole">
       <path value="CarePlan.author.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -216,13 +161,40 @@
       <sliceName value="valueReference" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3864" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:isCoordinator">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="isCoordinator" />
+      <definition value="Indicates if the .author is responsible for coordinating the execution of the activities of the care plan. Set this element to true if the health professional referenced in .author is the coordinator of the care plan." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3858" />
         <comment value="Coordinator" />
       </mapping>
+    </element>
+    <element id="CarePlan.author.extension:isContributor">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="isContributor" />
+      <definition value="Indicates if the .author is one of the individual(s) who agreed with the care plan. Set this element to true if the contact person, health professional or patient referenced in .author is one of the agreement parties." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor" />
+      </type>
+      <isModifier value="false" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3864" />
-        <comment value="Zorgverlener" />
+        <map value="peri32-dataelement-3844" />
+        <comment value="AfspraakPartijen" />
       </mapping>
     </element>
     <element id="CarePlan.addresses">
@@ -260,21 +232,9 @@
         <comment value="Uitvoerder" />
       </mapping>
     </element>
-    <element id="CarePlan.activity.detail.performer.extension">
-      <path value="CarePlan.activity.detail.performer.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="CarePlan.activity.detail.performer.extension:practitionerRole">
       <path value="CarePlan.activity.detail.performer.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

@@ -3085,8 +3085,8 @@
 	<record>
 		<ID>peri32-dataelement-9144</ID>
 		<naam>Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)</naam>
-		<mapping>Condition</mapping>
-		<profile>bc-DisorderPostPartum</profile>
+		<mapping>Observation</mapping>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9661</ID>
@@ -3472,6 +3472,12 @@
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
+		<ID>peri32-dataelement-10404</ID>
+		<naam>SpecificatieAnders</naam>
+		<mapping>Consent.except.extension:dataAbsentReason</mapping>
+		<profile>bc-TreatmentDirective</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10405</ID>
 		<naam>MeestRecenteBespreekdatum</naam>
 		<mapping>Consent.dateTime</mapping>
@@ -3504,13 +3510,13 @@
 	<record>
 		<ID>peri32-dataelement-10410</ID>
 		<naam>AfspraakPartij</naam>
-		<mapping>Consent.except.actor:agreementParty</mapping>
+		<mapping>Consent.consentingParty</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10411</ID>
 		<naam>Patient</naam>
-		<mapping>Consent.except.actor:agreementParty.reference</mapping>
+		<mapping>Consent.consentingParty</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3522,7 +3528,7 @@
 	<record>
 		<ID>peri32-dataelement-10413</ID>
 		<naam>Vertegenwoordiger</naam>
-		<mapping>Consent.except.actor:agreementParty.reference</mapping>
+		<mapping>Consent.consentingParty</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -3534,7 +3540,7 @@
 	<record>
 		<ID>peri32-dataelement-10415</ID>
 		<naam>Zorgverlener</naam>
-		<mapping>Consent.except.actor:agreementParty.reference.extension:practitionerRole</mapping>
+		<mapping>Consent.consentingParty</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -6883,31 +6889,31 @@
 		<ID>peri32-dataelement-4108</ID>
 		<naam>Breken Vliezen (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4109</ID>
 		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4111</ID>
 		<naam>BrekenVliezenWaarde</naam>
 		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4112</ID>
 		<naam>ObservatieMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4119</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-BirthObservation</profile>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4120</ID>
@@ -7134,7 +7140,7 @@
 	<record>
 		<ID>peri32-dataelement-1587</ID>
 		<naam>Ziekenhuis baring</naam>
-		<mapping>Procedure.performer.actor</mapping>
+		<mapping>Procedure.location</mapping>
 		<profile>bc-DeliveryProcedure</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/bevalling</example>
@@ -9497,12 +9503,6 @@
 		<mapping>Condition.code</mapping>
 		<profile>bc-DisorderOfChild</profile>
 		<in>false</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-7895</ID>
-		<naam>Ernst Encefalopathie</naam>
-		<mapping>Condition.severity</mapping>
-		<profile>bc-DisorderOfChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1508</ID>
@@ -15093,7 +15093,7 @@
 		<ID>peri32-dataelement-7947</ID>
 		<naam>VoedingspatroonZuigeling</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-InfantFeedingPattern</profile>
+		<profile>bc-FeedingPatternInfant</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9960</ID>

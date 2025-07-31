@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-ExcretionFeces" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-ExcretionFeces" />
-  <version value="1.3.2" />
+  <version value="1.3.3" />
   <name value="bc-ExcretionFeces" />
   <title value="bc-ExcretionFeces" />
   <status value="active" />
@@ -57,6 +57,14 @@
         <map value="peri32-dataelement-9938" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+    </element>
+    <element id="Observation.value[x]:valueDateTime.value">
+      <path value="Observation.value[x].value" />
+      <type />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -127,10 +135,6 @@
         <comment value="FecesWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:feces.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
-    </element>
     <element id="Observation.component:fecalDiapers">
       <path value="Observation.component" />
       <sliceName value="fecalDiapers" />
@@ -156,10 +160,6 @@
         <map value="peri32-dataelement-9957" />
         <comment value="PoepluiersWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:fecalDiapers.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
