@@ -74,6 +74,13 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.317--20210322154057" />
       </binding>
     </element>
+    <element id="ClinicalImpression.code.coding">
+      <path value="ClinicalImpression.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="386053000" />
+      </patternCoding>
+    </element>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
       <type>
@@ -113,6 +120,12 @@
         <map value="peri32-dataelement-2624" />
         <comment value="ConclusieDatumTijd" />
       </mapping>
+    </element>
+    <element id="ClinicalImpression.effective[x]:effectiveDateTime.value">
+      <path value="ClinicalImpression.effective[x].value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="ClinicalImpression.assessor">
       <path value="ClinicalImpression.assessor" />
