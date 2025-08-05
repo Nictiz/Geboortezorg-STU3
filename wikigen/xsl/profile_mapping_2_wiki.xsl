@@ -121,7 +121,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||</xsl:text>
         <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
         <xsl:value-of select="@pattern"/>
-        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+        <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
                 <xsl:value-of select="@pattern"/>
                 <xsl:text>}}</xsl:text>
         <xsl:text>
@@ -151,7 +151,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:value-of select="@valueSetId1"/>
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate1, 'T:-', '')"/>
-            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
                 <xsl:value-of select="@valueSet1"/>
                 <xsl:text>}}</xsl:text>
         </xsl:if>
@@ -160,7 +160,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:value-of select="@valueSetId2"/>
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate2, 'T:-', '')"/>
-            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
             <xsl:value-of select="@valueSet2"/>
             <xsl:text>}}</xsl:text>
         </xsl:if>
@@ -169,7 +169,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:value-of select="@valueSetId3"/>
             <xsl:text>--</xsl:text>
             <xsl:value-of select="translate(@valueSetEffectiveDate3, 'T:-', '')"/>
-            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.0|title=</xsl:text>
+            <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
             <xsl:value-of select="@valueSet3"/>
             <xsl:text>}}</xsl:text>
         </xsl:if>
