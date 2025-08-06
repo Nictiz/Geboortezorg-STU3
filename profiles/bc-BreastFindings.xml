@@ -53,6 +53,16 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+    </element>
+    <element id="Observation.value[x]:valueDateTime.value">
+      <path value="Observation.value[x].value" />
+    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -97,12 +107,14 @@
       <sliceName value="nipples" />
       <max value="1" />
     </element>
-    <element id="Observation.component:nipples.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364376001" />
-      </patternCoding>
+    <element id="Observation.component:nipples.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="364376001" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:nipples.code.coding.display">
       <path value="Observation.component.code.coding.display" />
@@ -125,12 +137,14 @@
       <sliceName value="skin" />
       <max value="1" />
     </element>
-    <element id="Observation.component:skin.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364528001" />
-      </patternCoding>
+    <element id="Observation.component:skin.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="364528001" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:skin.value[x]:valueString">
       <path value="Observation.component.value[x]" />
@@ -149,12 +163,14 @@
       <sliceName value="other" />
       <max value="1" />
     </element>
-    <element id="Observation.component:other.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="290054003" />
-      </patternCoding>
+    <element id="Observation.component:other.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="290054003" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:other.value[x]:valueString">
       <path value="Observation.component.value[x]" />
