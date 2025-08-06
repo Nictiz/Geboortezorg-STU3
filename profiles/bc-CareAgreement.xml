@@ -46,8 +46,8 @@
       <path value="CarePlan.category" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="coding.code" />
+          <type value="pattern" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -156,8 +156,8 @@
         <comment value="Zorgverlener" />
       </mapping>
     </element>
-    <element id="CarePlan.author.extension:practitionerRole.valueReference:valueReference">
-      <path value="CarePlan.author.extension.valueReference" />
+    <element id="CarePlan.author.extension:practitionerRole.value[x]:valueReference">
+      <path value="CarePlan.author.extension.value[x]" />
       <sliceName value="valueReference" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -221,8 +221,8 @@
       <path value="CarePlan.activity.detail.performer" />
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="reference.resolve()" />
+          <type value="type" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -272,6 +272,19 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3854" />
         <comment value="Contactpersoon" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.performer:practitioner">
+      <path value="CarePlan.activity.detail.performer" />
+      <sliceName value="practitioner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri-dataelement32-3856" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
     <element id="CarePlan.activity.detail.description">
