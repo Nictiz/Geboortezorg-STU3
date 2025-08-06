@@ -202,12 +202,14 @@
       <sliceName value="heartRateRegularity" />
       <max value="1" />
     </element>
-    <element id="Observation.component:heartRateRegularity.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="249044008" />
-      </patternCoding>
+    <element id="Observation.component:heartRateRegularity.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="249044008" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
