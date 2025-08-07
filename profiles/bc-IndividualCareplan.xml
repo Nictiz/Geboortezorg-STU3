@@ -37,20 +37,6 @@
         <comment value="IndividueelZorgplan" />
       </mapping>
     </element>
-    <element id="CarePlan.extension:coordinator">
-      <path value="CarePlan.extension" />
-      <sliceName value="coordinator" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8801" />
-        <comment value="Casemanager" />
-      </mapping>
-    </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
       <slicing>
@@ -111,6 +97,24 @@
         <map value="peri32-dataelement-8800" />
         <comment value="EindDatum" />
       </mapping>
+    </element>
+    <element id="CarePlan.author">
+      <path value="CarePlan.author" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8801" />
+        <comment value="Casemanager" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:isCasemanager">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="isCasemanager" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCasemanager" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="CarePlan.careTeam">
       <path value="CarePlan.careTeam" />
