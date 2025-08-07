@@ -35,13 +35,16 @@
       <path value="Extension" />
       <max value="1" />
     </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-reasonforending" />
     </element>
-    <element id="Extension.value[x]:valueString">
+    <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <sliceName value="valueString" />
       <short value="ReasonForEnding" />
       <definition value="Reason why the agreement on a treatment directive no longer applies." />
       <alias value="RedenBeeindigd" />

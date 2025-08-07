@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-clinicalimpression-management" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
-  <name value="bc-clinicalimpression-management" />
-  <title value="bc-clinicalimpression-management" />
+  <id value="bc-careplan-isCasemanager" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCasemanager" />
+  <name value="bc-careplan-isCasemanager" />
+  <title value="bc-careplan-isCasemanager" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -14,26 +14,29 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Extension on ClinicalImpression describing the decided course of action i.e. clinical management based on the professional assessment." />
+  <description value="An Extension to add information about the casemanager role of an author to a CarePlan." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="ClinicalImpression" />
+  <context value="CarePlan.author" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCasemanager" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
-      <path value="Extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="boolean" />
       </type>
     </element>
   </differential>
