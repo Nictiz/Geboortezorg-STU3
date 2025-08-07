@@ -74,6 +74,37 @@
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.317--20210322154057" />
       </binding>
     </element>
+    <element id="ClinicalImpression.code.coding">
+      <path value="ClinicalImpression.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.code.coding:clinicalImpressionCoding">
+      <path value="ClinicalImpression.code.coding" />
+      <sliceName value="clinicalImpressionCoding" />
+      <max value="1" />
+    </element>
+    <element id="ClinicalImpression.code.coding:clinicalImpressionCoding.system">
+      <path value="ClinicalImpression.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="ClinicalImpression.code.coding:clinicalImpressionCoding.code">
+      <path value="ClinicalImpression.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="386053000" />
+    </element>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
       <type>
@@ -113,6 +144,9 @@
         <map value="peri32-dataelement-2624" />
         <comment value="ConclusieDatumTijd" />
       </mapping>
+    </element>
+    <element id="ClinicalImpression.effective[x]:effectiveDateTime.value">
+      <path value="ClinicalImpression.effective[x].value" />
     </element>
     <element id="ClinicalImpression.assessor">
       <path value="ClinicalImpression.assessor" />
