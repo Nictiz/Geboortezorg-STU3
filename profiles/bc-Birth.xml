@@ -123,15 +123,26 @@
       <path value="Procedure.code" />
       <min value="1" />
     </element>
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
     <element id="Procedure.code.coding:birth">
       <path value="Procedure.code.coding" />
       <sliceName value="birth" />
       <min value="1" />
-    </element>
-    <element id="Procedure.code.coding:birth.code">
-      <path value="Procedure.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="3950001" />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="3950001" />
+      </fixedCoding>
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />

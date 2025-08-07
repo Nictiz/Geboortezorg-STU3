@@ -61,6 +61,7 @@
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.value">
       <path value="Observation.effective[x].value" />
+      <type />
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
@@ -162,9 +163,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:monitoringMoment.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:monitoringMoment.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -194,9 +194,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:basalHeartRate.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="Quantity" />
       </type>
@@ -206,12 +205,12 @@
         <comment value="BasisHartFrequentie" />
       </mapping>
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.unit">
-      <path value="Observation.component.valueQuantity.unit" />
+    <element id="Observation.component:basalHeartRate.value[x].unit">
+      <path value="Observation.component.value[x].unit" />
       <defaultValueString value="min" />
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+    <element id="Observation.component:basalHeartRate.value[x].code">
+      <path value="Observation.component.value[x].code" />
       <defaultValueCode value="min" />
     </element>
     <element id="Observation.component:fetalAccelerations">
@@ -228,9 +227,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:fetalAccelerations.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:fetalAccelerations.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -259,9 +257,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:fetalDecelerations.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:fetalDecelerations.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -290,9 +287,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:heartFrequencyVariability.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:heartFrequencyVariability.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -323,9 +319,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:conclusionFIGO.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:conclusionFIGO.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -356,9 +351,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:conclusionFisher.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="Quantity" />
       </type>
@@ -368,12 +362,12 @@
         <comment value="ConclusieFisher" />
       </mapping>
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.system">
-      <path value="Observation.component.valueQuantity.system" />
+    <element id="Observation.component:conclusionFisher.value[x].system">
+      <path value="Observation.component.value[x].system" />
       <fixedUri value="http://unitsofmeasure.org" />
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+    <element id="Observation.component:conclusionFisher.value[x].code">
+      <path value="Observation.component.value[x].code" />
       <fixedCode value="1" />
     </element>
   </differential>

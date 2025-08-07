@@ -48,6 +48,7 @@
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.value">
       <path value="Observation.effective[x].value" />
+      <type />
     </element>
     <element id="Observation.value[x]:valueDateTime">
       <path value="Observation.value[x]" />
@@ -55,6 +56,7 @@
     </element>
     <element id="Observation.value[x]:valueDateTime.value">
       <path value="Observation.value[x].value" />
+      <type />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -96,9 +98,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:perineum.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:perineum.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -127,9 +128,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:sfincter.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:sfincter.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -160,9 +160,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:femaleGenital.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:femaleGenital.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

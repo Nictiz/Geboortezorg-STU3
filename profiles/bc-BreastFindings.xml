@@ -57,6 +57,7 @@
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.value">
       <path value="Observation.effective[x].value" />
+      <type />
     </element>
     <element id="Observation.value[x]:valueDateTime">
       <path value="Observation.value[x]" />
@@ -64,6 +65,7 @@
     </element>
     <element id="Observation.value[x]:valueDateTime.value">
       <path value="Observation.value[x].value" />
+      <type />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -122,9 +124,8 @@
       <path value="Observation.component.code.coding.display" />
       <defaultValueString value="observatie betreffende tepel (waarneembare entiteit)" />
     </element>
-    <element id="Observation.component:nipples.value[x]:valueString">
+    <element id="Observation.component:nipples.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
@@ -148,9 +149,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:skin.value[x]:valueString">
+    <element id="Observation.component:skin.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
@@ -174,9 +174,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:other.value[x]:valueString">
+    <element id="Observation.component:other.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>

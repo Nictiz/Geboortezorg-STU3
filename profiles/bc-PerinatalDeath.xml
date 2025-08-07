@@ -45,9 +45,10 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
+      <isModifier value="false" />
     </element>
-    <element id="Observation.extension:fetus.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
+    <element id="Observation.extension:fetus.value[x]:valueReference">
+      <path value="Observation.extension.value[x]" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
@@ -99,9 +100,11 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueBoolean">
+    <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10551" />
@@ -140,9 +143,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime">
-      <path value="Observation.component.valueDateTime" />
-      <sliceName value="valueDateTime" />
+    <element id="Observation.component:deceasedDateTime.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="dateTime" />
       </type>
@@ -169,9 +171,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept">
+    <element id="Observation.component:perinatalPhase.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -181,7 +182,7 @@
         <comment value="FasePerinataleSterfteWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:perinatalPhase.value[x].coding">
       <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
