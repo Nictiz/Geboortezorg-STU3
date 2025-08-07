@@ -218,6 +218,21 @@
       <sliceName value="fetalAccelerations" />
       <max value="1" />
     </element>
+    <element id="Observation.component:fetalAccelerations.extension:valueBoolean">
+      <path value="Observation.component.extension" />
+      <sliceName value="valueBoolean" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3910" />
+        <comment value="FoetaleAcceleraties" />
+      </mapping>
+    </element>
     <element id="Observation.component:fetalAccelerations.code">
       <path value="Observation.component.code" />
       <patternCodeableConcept>
@@ -229,19 +244,7 @@
     </element>
     <element id="Observation.component:fetalAccelerations.value[x]">
       <path value="Observation.component.value[x]" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="v2 Yes/no Indicator" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/v2-0136" />
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3910" />
-        <comment value="FoetaleAcceleraties" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="Observation.component:fetalDecelerations">
       <path value="Observation.component" />
