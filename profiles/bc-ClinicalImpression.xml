@@ -76,10 +76,34 @@
     </element>
     <element id="ClinicalImpression.code.coding">
       <path value="ClinicalImpression.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="386053000" />
-      </patternCoding>
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.code.coding:cilinicalImpressionCoding">
+      <path value="ClinicalImpression.code.coding" />
+      <sliceName value="cilinicalImpressionCoding" />
+      <max value="1" />
+    </element>
+    <element id="ClinicalImpression.code.coding:cilinicalImpressionCoding.system">
+      <path value="ClinicalImpression.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="ClinicalImpression.code.coding:cilinicalImpressionCoding.code">
+      <path value="ClinicalImpression.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="386053000" />
     </element>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
