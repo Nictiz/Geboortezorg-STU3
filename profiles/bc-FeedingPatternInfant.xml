@@ -170,6 +170,21 @@
       <sliceName value="SupplementaryFeeding" />
       <max value="1" />
     </element>
+    <element id="Observation.component:SupplementaryFeeding.extension:valueBoolean">
+      <path value="Observation.component.extension" />
+      <sliceName value="valueBoolean" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10506" />
+        <comment value="Bijvoeding?" />
+      </mapping>
+    </element>
     <element id="Observation.component:SupplementaryFeeding.code">
       <path value="Observation.component.code" />
       <patternCodeableConcept>
@@ -179,17 +194,9 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:SupplementaryFeeding.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10506" />
-        <comment value="Bijvoeding?" />
-      </mapping>
+    <element id="Observation.component:SupplementaryFeeding.value[x]">
+      <path value="Observation.component.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
