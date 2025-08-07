@@ -26,6 +26,7 @@
   <abstract value="false" />
   <contextType value="resource" />
   <context value="Patient" />
+  <context value="RelatedPerson" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -42,7 +43,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/patient-genderIdentity" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-genderIdentity" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
