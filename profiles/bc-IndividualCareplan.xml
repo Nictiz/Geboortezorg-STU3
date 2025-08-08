@@ -37,6 +37,30 @@
         <comment value="IndividueelZorgplan" />
       </mapping>
     </element>
+    <element id="CarePlan.basedOn">
+      <path value="CarePlan.basedOn" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CarePlan.basedOn:zorgafspraak">
+      <path value="CarePlan.basedOn" />
+      <sliceName value="zorgafspraak" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8816" />
+        <comment value="Zorgafspraak" />
+      </mapping>
+    </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
       <slicing>
