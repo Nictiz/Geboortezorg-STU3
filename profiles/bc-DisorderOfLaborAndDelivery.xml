@@ -92,9 +92,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-partOf" />
       </type>
     </element>
-    <element id="Condition.extension:delivery.value[x]:valueReference">
+    <element id="Condition.extension:delivery.value[x]">
       <path value="Condition.extension.value[x]" />
-      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
@@ -250,9 +249,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
-      <path value="Condition.bodySite.extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference">
+      <path value="Condition.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />

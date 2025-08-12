@@ -928,7 +928,7 @@
       <sliceName value="laterality" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
       </type>
     </element>
     <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">
@@ -1116,9 +1116,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:clothing.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

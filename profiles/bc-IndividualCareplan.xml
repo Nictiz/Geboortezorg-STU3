@@ -37,18 +37,28 @@
         <comment value="IndividueelZorgplan" />
       </mapping>
     </element>
-    <element id="CarePlan.extension:coordinator">
-      <path value="CarePlan.extension" />
-      <sliceName value="coordinator" />
+    <element id="CarePlan.basedOn">
+      <path value="CarePlan.basedOn" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CarePlan.basedOn:zorgafspraak">
+      <path value="CarePlan.basedOn" />
+      <sliceName value="zorgafspraak" />
       <max value="1" />
       <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-CareAgreement" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8801" />
-        <comment value="Casemanager" />
+        <map value="peri32-dataelement-8816" />
+        <comment value="Zorgafspraak" />
       </mapping>
     </element>
     <element id="CarePlan.category">
@@ -111,6 +121,24 @@
         <map value="peri32-dataelement-8800" />
         <comment value="EindDatum" />
       </mapping>
+    </element>
+    <element id="CarePlan.author">
+      <path value="CarePlan.author" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8801" />
+        <comment value="Casemanager" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:isCasemanager">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="isCasemanager" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCasemanager" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="CarePlan.careTeam">
       <path value="CarePlan.careTeam" />

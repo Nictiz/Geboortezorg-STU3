@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-careplan-isContributor" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor" />
   <name value="bc-careplan-isContributor" />
-  <title value="bc-careplan-coordinator" />
+  <title value="bc-careplan-isContributor" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -32,9 +33,8 @@
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isContributor" />
     </element>
-    <element id="Extension.value[x]:valueReference">
+    <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <sliceName value="valueReference" />
       <type>
         <code value="boolean" />
       </type>

@@ -37,12 +37,14 @@
         <comment value="Foetale monitoring (CTG)" />
       </mapping>
     </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="281568006" />
-      </patternCoding>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="281568006" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.effective[x]:effectivePeriod">
       <path value="Observation.effective[x]" />
@@ -52,6 +54,14 @@
         <map value="peri32-dataelement-1768" />
         <comment value="TijdsInterval" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type />
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
@@ -144,16 +154,17 @@
       <sliceName value="monitoringMoment" />
       <max value="1" />
     </element>
-    <element id="Observation.component:monitoringMoment.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160201000146101" />
-      </patternCoding>
+    <element id="Observation.component:monitoringMoment.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160201000146101" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:monitoringMoment.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:monitoringMoment.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -174,16 +185,17 @@
       <path value="Observation.component" />
       <sliceName value="basalHeartRate" />
     </element>
-    <element id="Observation.component:basalHeartRate.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="251670001" />
-      </patternCoding>
+    <element id="Observation.component:basalHeartRate.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="251670001" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:basalHeartRate.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="Quantity" />
       </type>
@@ -193,12 +205,12 @@
         <comment value="BasisHartFrequentie" />
       </mapping>
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.unit">
-      <path value="Observation.component.valueQuantity.unit" />
+    <element id="Observation.component:basalHeartRate.value[x].unit">
+      <path value="Observation.component.value[x].unit" />
       <defaultValueString value="min" />
     </element>
-    <element id="Observation.component:basalHeartRate.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+    <element id="Observation.component:basalHeartRate.value[x].code">
+      <path value="Observation.component.value[x].code" />
       <defaultValueCode value="min" />
     </element>
     <element id="Observation.component:fetalAccelerations">
@@ -206,45 +218,50 @@
       <sliceName value="fetalAccelerations" />
       <max value="1" />
     </element>
-    <element id="Observation.component:fetalAccelerations.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="251676007" />
-      </patternCoding>
-    </element>
-    <element id="Observation.component:fetalAccelerations.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:fetalAccelerations.extension:valueBoolean">
+      <path value="Observation.component.extension" />
+      <sliceName value="valueBoolean" />
+      <max value="1" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="v2 Yes/no Indicator" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/v2-0136" />
-      </binding>
+      <isModifier value="false" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3910" />
         <comment value="FoetaleAcceleraties" />
       </mapping>
     </element>
+    <element id="Observation.component:fetalAccelerations.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="251676007" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:fetalAccelerations.value[x]">
+      <path value="Observation.component.value[x]" />
+      <max value="0" />
+    </element>
     <element id="Observation.component:fetalDecelerations">
       <path value="Observation.component" />
       <sliceName value="fetalDecelerations" />
       <max value="1" />
     </element>
-    <element id="Observation.component:fetalDecelerations.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="251673004" />
-      </patternCoding>
+    <element id="Observation.component:fetalDecelerations.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="251673004" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:fetalDecelerations.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:fetalDecelerations.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -264,16 +281,17 @@
       <sliceName value="heartFrequencyVariability" />
       <max value="1" />
     </element>
-    <element id="Observation.component:heartFrequencyVariability.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="251671002" />
-      </patternCoding>
+    <element id="Observation.component:heartFrequencyVariability.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="251671002" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:heartFrequencyVariability.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:heartFrequencyVariability.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -295,16 +313,17 @@
       <sliceName value="conclusionFIGO" />
       <max value="1" />
     </element>
-    <element id="Observation.component:conclusionFIGO.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160211000146104" />
-      </patternCoding>
+    <element id="Observation.component:conclusionFIGO.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160211000146104" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:conclusionFIGO.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:conclusionFIGO.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -326,16 +345,17 @@
       <sliceName value="conclusionFisher" />
       <max value="1" />
     </element>
-    <element id="Observation.component:conclusionFisher.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="160221000146109" />
-      </patternCoding>
+    <element id="Observation.component:conclusionFisher.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160221000146109" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:conclusionFisher.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="Quantity" />
       </type>
@@ -345,12 +365,12 @@
         <comment value="ConclusieFisher" />
       </mapping>
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.system">
-      <path value="Observation.component.valueQuantity.system" />
+    <element id="Observation.component:conclusionFisher.value[x].system">
+      <path value="Observation.component.value[x].system" />
       <fixedUri value="http://unitsofmeasure.org" />
     </element>
-    <element id="Observation.component:conclusionFisher.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+    <element id="Observation.component:conclusionFisher.value[x].code">
+      <path value="Observation.component.value[x].code" />
       <fixedCode value="1" />
     </element>
   </differential>

@@ -44,6 +44,22 @@
         <code value="273302005" />
       </patternCoding>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type />
+    </element>
+    <element id="Observation.value[x]:valueDateTime">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueDateTime" />
+    </element>
+    <element id="Observation.value[x]:valueDateTime.value">
+      <path value="Observation.value[x].value" />
+      <type />
+    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
@@ -66,9 +82,8 @@
         <code value="4002004" />
       </patternCoding>
     </element>
-    <element id="Observation.component:bowel.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:bowel.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -78,8 +93,8 @@
         <comment value="Darm" />
       </mapping>
     </element>
-    <element id="Observation.component:bowel.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:bowel.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="DarmCodelijst" />
@@ -100,9 +115,8 @@
         <code value="4002003" />
       </patternCoding>
     </element>
-    <element id="Observation.component:bladder.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:bladder.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -112,8 +126,8 @@
         <comment value="Blaas" />
       </mapping>
     </element>
-    <element id="Observation.component:bladder.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:bladder.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="BlaasCodelijst" />
@@ -134,9 +148,8 @@
         <code value="4002005" />
       </patternCoding>
     </element>
-    <element id="Observation.component:personalGrooming.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:personalGrooming.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -146,8 +159,8 @@
         <comment value="UiterlijkeVerzorging" />
       </mapping>
     </element>
-    <element id="Observation.component:personalGrooming.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:personalGrooming.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="UiterlijkeVerzorgingCodelijst" />
@@ -168,9 +181,8 @@
         <code value="4002006" />
       </patternCoding>
     </element>
-    <element id="Observation.component:toiletUse.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:toiletUse.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -180,8 +192,8 @@
         <comment value="Toiletgebruik" />
       </mapping>
     </element>
-    <element id="Observation.component:toiletUse.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:toiletUse.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="ToiletgebruikCodelijst" />
@@ -202,9 +214,8 @@
         <code value="4002007" />
       </patternCoding>
     </element>
-    <element id="Observation.component:eating.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:eating.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -214,8 +225,8 @@
         <comment value="Eten" />
       </mapping>
     </element>
-    <element id="Observation.component:eating.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:eating.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="EtenCodelijst" />
@@ -236,9 +247,8 @@
         <code value="4002008" />
       </patternCoding>
     </element>
-    <element id="Observation.component:transfers.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:transfers.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -248,8 +258,8 @@
         <comment value="Transfers" />
       </mapping>
     </element>
-    <element id="Observation.component:transfers.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:transfers.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="TransfersCodelijst" />
@@ -270,9 +280,8 @@
         <code value="4002009" />
       </patternCoding>
     </element>
-    <element id="Observation.component:mobility.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:mobility.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -282,8 +291,8 @@
         <comment value="Mobiliteit" />
       </mapping>
     </element>
-    <element id="Observation.component:mobility.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:mobility.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="MobiliteitCodelijst" />
@@ -304,9 +313,8 @@
         <code value="4002010" />
       </patternCoding>
     </element>
-    <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:dressingAndUndressing.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -316,8 +324,8 @@
         <comment value="AanUitkleden" />
       </mapping>
     </element>
-    <element id="Observation.component:dressingAndUndressing.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:dressingAndUndressing.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="AanUitKledenCodelijst" />
@@ -338,9 +346,8 @@
         <code value="4002011" />
       </patternCoding>
     </element>
-    <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:walkingStairs.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -350,8 +357,8 @@
         <comment value="TrappenLopen" />
       </mapping>
     </element>
-    <element id="Observation.component:walkingStairs.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:walkingStairs.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="TrappenLopenCodelijst" />
@@ -372,9 +379,8 @@
         <code value="4002012" />
       </patternCoding>
     </element>
-    <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:bathingAndShowering.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -384,8 +390,8 @@
         <comment value="BadenDouchen" />
       </mapping>
     </element>
-    <element id="Observation.component:bathingAndShowering.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.valueCodeableConcept.coding" />
+    <element id="Observation.component:bathingAndShowering.value[x].coding">
+      <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />
         <description value="BadenDouchenCodelijst" />
@@ -406,9 +412,8 @@
         <code value="273302005" />
       </patternCoding>
     </element>
-    <element id="Observation.component:totalScore.value[x]:valueQuantity">
+    <element id="Observation.component:totalScore.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
       </type>

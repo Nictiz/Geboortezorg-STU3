@@ -55,21 +55,24 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
+      <isModifier value="false" />
     </element>
-    <element id="Observation.extension:fetus.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
+    <element id="Observation.extension:fetus.value[x]:valueReference">
+      <path value="Observation.extension.value[x]" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
       </type>
     </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="249043002" />
-      </patternCoding>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="249043002" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -107,9 +110,8 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1778" />
@@ -182,7 +184,7 @@
       <path value="Observation.method.coding" />
       <sliceName value="heartActionBasedOn" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="Hartactie op basis van" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
@@ -202,16 +204,17 @@
       <sliceName value="heartRateRegularity" />
       <max value="1" />
     </element>
-    <element id="Observation.component:heartRateRegularity.code.coding">
-      <path value="Observation.component.code.coding" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="249044008" />
-      </patternCoding>
+    <element id="Observation.component:heartRateRegularity.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="249044008" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:heartRateRegularity.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-patient-ethnicity" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
-  <name value="bc-patient-ethnicity" />
-  <title value="bc-patient-ethnicity" />
+  <id value="bc-clinicalimpression-management" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
+  <name value="bc-clinicalimpression-management" />
+  <title value="bc-clinicalimpression-management" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -14,19 +14,13 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Extension on (woman) Patient and RelatedPerson describing the ethnicity of a patient or related person" />
+  <description value="Extension on ClinicalImpression describing the decided course of action i.e. clinical management based on the professional assessment." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Patient" />
-  <context value="RelatedPerson" />
+  <context value="ClinicalImpression" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -37,7 +31,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-ethnicity" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-clinicalimpression-management" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
