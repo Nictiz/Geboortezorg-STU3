@@ -4722,7 +4722,7 @@
 		<ID>peri32-dataelement-4402</ID>
 		<naam>Geboortegewicht (Lichaamsgewicht)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185</example>
 		<searchurl>GET [base]/Observation?code=http://loinc.org |8339-4</searchurl>
 	</record>
@@ -8023,7 +8023,7 @@
 		<ID>peri32-dataelement-1418</ID>
 		<naam>Geboortegewicht (Lichaamsgewicht)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>VALIDEREN</in>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185</example>
 		<searchurl>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |8339-4}</searchurl>
@@ -8032,7 +8032,7 @@
 		<ID>peri32-dataelement-1419</ID>
 		<naam>GewichtWaarde</naam>
 		<mapping>Observation.value[x]:valueQuantity</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185</example>
 	</record>
@@ -8040,14 +8040,14 @@
 		<ID>peri32-dataelement-1423</ID>
 		<naam>PercentielGeboortegewicht</naam>
 		<mapping>Observation.interpretation</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>VALIDEREN</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1420</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>true</in>
 		<zib>NL-CM-12.1.3</zib>
 	</record>
@@ -8055,7 +8055,7 @@
 		<ID>peri32-dataelement-1421</ID>
 		<naam>GewichtDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>true</in>
 		<zib>NL-CM-12.1.4</zib>
 	</record>
@@ -8063,7 +8063,7 @@
 		<ID>peri32-dataelement-1422</ID>
 		<naam>Kleding</naam>
 		<mapping>Observation.component:clothing.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-ChildObservation</profile>
+		<profile>zib-BodyWeight</profile>
 		<in>false</in>
 		<zib>NL-CM-12.1.5</zib>
 	</record>
