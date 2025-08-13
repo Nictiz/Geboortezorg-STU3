@@ -7262,25 +7262,25 @@
 	<record>
 		<ID>peri32-dataelement-10738</ID>
 		<naam>PartusStadiumWaarde</naam>
-		<mapping>Encounter.participant.extension:periodOfArrival</mapping>
+		<mapping>Encounter.extension:periodOfArrival</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10726</ID>
 		<naam>OproepDatumTijd</naam>
-		<mapping>Encounter.participant.extension:timeWhenCalled</mapping>
+		<mapping>Encounter.extension:timeWhenCalled</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10716</ID>
 		<naam>AankomstDatumTijd</naam>
-		<mapping>Encounter.participant.period.start</mapping>
+		<mapping>Encounter.period.start</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10717</ID>
 		<naam>EindDatumTijd</naam>
-		<mapping>Encounter.participant.period.end</mapping>
+		<mapping>Encounter.period.end</mapping>
 		<profile>bc-ChildBirthAssistance</profile>
 	</record>
 	<record>
@@ -14985,22 +14985,29 @@
 		<in>false</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3120</ID>
+		<naam>Sectiowond (Wond)</naam>
+		<mapping>Condition</mapping>
+		<profile>zib-Wound</profile>
+		<in>false</in>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10661</ID>
 		<naam>Sectiowond normaal</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
 		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3122</ID>
 		<naam>WondWeefsel</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<zib/>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3123</ID>
 		<naam>WondInfectie</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.value[x]:valueBoolean</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.7</zib>
@@ -15008,7 +15015,7 @@
 	<record>
 		<ID>peri32-dataelement-3124</ID>
 		<naam>WondVochtigheid</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.6</zib>
@@ -15016,7 +15023,7 @@
 	<record>
 		<ID>peri32-dataelement-3125</ID>
 		<naam>WondRand</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.11</zib>
@@ -15024,7 +15031,7 @@
 	<record>
 		<ID>peri32-dataelement-3126</ID>
 		<naam>Wondlengte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.12</zib>
@@ -15032,7 +15039,7 @@
 	<record>
 		<ID>peri32-dataelement-3127</ID>
 		<naam>Wondbreedte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.13</zib>
@@ -15040,7 +15047,7 @@
 	<record>
 		<ID>peri32-dataelement-3128</ID>
 		<naam>Wonddiepte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.14</zib>
@@ -15055,16 +15062,16 @@
 	<record>
 		<ID>peri32-dataelement-3131</ID>
 		<naam>WondOntstaansdatum</naam>
-		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.onsetDateTime</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.2</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3132</ID>
 		<naam>DatumLaatsteVerbandwissel</naam>
-		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.3</zib>
 	</record>
@@ -15085,16 +15092,16 @@
 	<record>
 		<ID>peri32-dataelement-3149</ID>
 		<naam>WondFoto</naam>
-		<mapping>Binary</mapping>
-		<profile>IHE.MHD.Minimal.DocumentReference</profile>
+		<mapping>Observation.component.value[x]:valueAttachment</mapping>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.15</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3150</ID>
 		<naam>Toelichting</naam>
-		<mapping>Observation.comment</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.comment</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.9</zib>
 	</record>
@@ -15414,6 +15421,13 @@
 	<record>
 		<ID>peri32-dataelement-2871</ID>
 		<naam>Perineumwond (Wond)</naam>
+		<mapping>Condition</mapping>
+		<profile>zib-Wound</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2871</ID>
+		<naam>Perineumwond (Wond)</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
@@ -15421,20 +15435,20 @@
 	<record>
 		<ID>peri32-dataelement-10662</ID>
 		<naam>Perineumwond normaal</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
 		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2873</ID>
 		<naam>WondWeefsel</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2874</ID>
 		<naam>WondInfectie</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.value[x]:valueBoolean</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.7</zib>
@@ -15442,7 +15456,7 @@
 	<record>
 		<ID>peri32-dataelement-2875</ID>
 		<naam>WondVochtigheid</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.6</zib>
@@ -15450,7 +15464,7 @@
 	<record>
 		<ID>peri32-dataelement-2876</ID>
 		<naam>WondRand</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.11</zib>
@@ -15458,7 +15472,7 @@
 	<record>
 		<ID>peri32-dataelement-2877</ID>
 		<naam>Wondlengte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.12</zib>
@@ -15466,7 +15480,7 @@
 	<record>
 		<ID>peri32-dataelement-2878</ID>
 		<naam>Wondbreedte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.13</zib>
@@ -15474,7 +15488,7 @@
 	<record>
 		<ID>peri32-dataelement-2879</ID>
 		<naam>Wonddiepte</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.14</zib>
@@ -15489,16 +15503,16 @@
 	<record>
 		<ID>peri32-dataelement-2882</ID>
 		<naam>WondOntstaansdatum</naam>
-		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.onsetDateTime</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.2</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2883</ID>
 		<naam>DatumLaatsteVerbandwissel</naam>
-		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.3</zib>
 	</record>
@@ -15519,16 +15533,16 @@
 	<record>
 		<ID>peri32-dataelement-2900</ID>
 		<naam>WondFoto</naam>
-		<mapping>Binary</mapping>
-		<profile>IHE.MHD.Minimal.DocumentReference</profile>
+		<mapping>Observation.component.value[x]:valueAttachment</mapping>
+		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.15</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2901</ID>
 		<naam>Toelichting</naam>
-		<mapping>Observation.comment</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Condition.comment</mapping>
+		<profile>zib-Wound</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.9</zib>
 	</record>

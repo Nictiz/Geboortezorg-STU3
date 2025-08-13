@@ -431,6 +431,12 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Observation.effective[x]:effectivePeriod">
       <path value="Observation.effective[x]" />
       <sliceName value="effectivePeriod" />
@@ -882,36 +888,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3124" />
-        <comment value="WondVochtigheid" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3125" />
-        <comment value="WondRand" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2869" />
-        <comment value="ObservatieWaarde" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2873" />
-        <comment value="WondWeefsel" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2875" />
-        <comment value="WondVochtigheid" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2876" />
-        <comment value="WondRand" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4050" />
         <comment value="FundusstandWaarde" />
       </mapping>
@@ -939,6 +915,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7963" />
         <comment value="SectiowondWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2869" />
+        <comment value="ObservatieWaarde" />
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity">
@@ -1618,6 +1599,136 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7964" />
         <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component.extension:observationComponentValueBooleanSTU3">
+      <path value="Observation.component.extension" />
+      <sliceName value="observationComponentValueBooleanSTU3" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-component-valueBooleanSTU3" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10661" />
+        <comment value="Sectiowond normaal" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10662" />
+        <comment value="Perineumwond normaal" />
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component.value[x]:valueAttachment">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueAttachment" />
+      <type>
+        <code value="Attachment" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3149" />
+        <comment value="WondFoto" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2900" />
+        <comment value="WondFoto" />
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3122" />
+        <comment value="WondWeefsel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3123" />
+        <comment value="WondInfectie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3124" />
+        <comment value="WondVochtigheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3125" />
+        <comment value="WondRand" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2873" />
+        <comment value="WondWeefsel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2874" />
+        <comment value="WondInfectie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2875" />
+        <comment value="WondVochtigheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2876" />
+        <comment value="WondRand" />
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3126" />
+        <comment value="Wondlengte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3127" />
+        <comment value="Wondbreedte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3128" />
+        <comment value="Wonddiepte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2877" />
+        <comment value="Wondlengte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2878" />
+        <comment value="Wondbreedte" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2879" />
+        <comment value="Wonddiepte" />
       </mapping>
     </element>
   </differential>
