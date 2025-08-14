@@ -147,7 +147,7 @@
       <path value="Procedure.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
+          <type value="pattern" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -159,10 +159,10 @@
       <sliceName value="delivery" />
       <min value="1" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="236973005" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Procedure.subject">
       <path value="Procedure.subject" />
