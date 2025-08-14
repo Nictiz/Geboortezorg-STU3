@@ -151,11 +151,6 @@
     <element id="Encounter.participant.extension:timeWhenCalled.valueDateTime:valueDateTime.value">
       <path value="Encounter.participant.extension.valueDateTime.value" />
     </element>
-    <element id="Encounter.participant.type.coding:healthProfessionalRole">
-      <path value="Encounter.participant.type.coding" />
-      <sliceName value="healthProfessionalRole" />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;When the Encounter.participant.individual refers to dataset element gebz-peri-v3.2: peri32-dataelement-1624 'Aanpakker kind', code PRF Performer should be selected from ValueSet ZorgverlenerRolCodelijst in participant.type:healthProfessionalRole.coding.&#xD;&#xA;When the Encounter.participant.individual refers to dataset element gebz-peri-v3.2: peri32-dataelement-1626 'Supervisor', code RESP Responsible Party should be selected from ZorgverlenerRolCodelijst in participant.type:healthProfessionalRole.coding." />
-    </element>
     <element id="Encounter.participant.type.text">
       <path value="Encounter.participant.type.text" />
       <mapping>
