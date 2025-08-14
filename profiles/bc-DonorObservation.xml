@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing donor-related Observations, as defined by BabyConnect. &#xD;&#xA;These are observations about the donor, such as their age.&#xD;&#xA;* Donor-related Observations use the focus extension to point to the RelatedPerson (donor) they are about&#xD;&#xA;* Donor-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Donor-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DonorObservation]]" />
+  <description value="An Observation profile describing donor-related Observations, as defined by BabyConnect. &#xD;&#xA;These are observations about the donor, such as their age.&#xD;&#xA;* Donor-related Observations use the focus extension to point to the RelatedPerson (donor) they are about&#xD;&#xA;* Donor-related Observations refer to the Encounter or EpisodeOfCare with Observation.context.reference, according to the overarching principle of referring to the lowest level of granularity available.&#xD;&#xA;&#xD;&#xA;Pattern: [[Donor-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DonorObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
