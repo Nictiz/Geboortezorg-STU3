@@ -30,16 +30,13 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-percentile" />
     </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
+    <element id="Extension.value[x]:valueQuantity">
+      <path value="Extension.valueQuantity" />
+      <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
       </type>

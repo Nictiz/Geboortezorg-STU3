@@ -82,6 +82,46 @@
         <comment value="Partusassistentie (Contact)" />
       </mapping>
     </element>
+    <element id="Encounter.extension:timeWhenCalled">
+      <path value="Encounter.extension" />
+      <sliceName value="timeWhenCalled" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-childbirthassistance-timecalled" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10726" />
+        <comment value="OproepDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Encounter.extension:periodOfArrival">
+      <path value="Encounter.extension" />
+      <sliceName value="periodOfArrival" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival" />
+      </type>
+      <isModifier value="false" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
+          <display value="Partus stadium"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-20650" />
+        <comment value="Partusstadium assistente gearriveerd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10738" />
+        <comment value="PartusStadiumWaarde" />
+      </mapping>
+    </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
       <mapping>
@@ -109,86 +149,18 @@
         <code value="236973005" />
       </patternCoding>
     </element>
-    <element id="Encounter.participant.extension:periodOfArrival">
-      <path value="Encounter.participant.extension" />
-      <sliceName value="periodOfArrival" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-20650" />
-        <comment value="Partusstadium assistente gearriveerd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10738" />
-        <comment value="PartusStadiumWaarde" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.extension:timeWhenCalled">
-      <path value="Encounter.participant.extension" />
-      <sliceName value="timeWhenCalled" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-childbirthassistance-timecalled" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10726" />
-        <comment value="OproepDatumTijd" />
-      </mapping>
+    <element id="Encounter.participant.type">
+      <path value="Encounter.participant.type" />
+      <definition value="Role of participant in encounter. Might have multiple types. Supervisor is expected to be RESP (responsible), Aanpakker kind is expected to be PRF (performer). If someone is both supervisor and aanpakker kind then those are two types not two codings one type." />
     </element>
     <element id="Encounter.participant.type.coding:healthProfessionalRole">
       <path value="Encounter.participant.type.coding" />
       <sliceName value="healthProfessionalRole" />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;To make sure slicing functions correctly ChildBirthAssistance-type is set to 'required'. However alternate coding are still allowed." />
     </element>
-    <element id="Encounter.participant.type.coding:childBirthAssistance-type">
-      <path value="Encounter.participant.type.coding" />
-      <sliceName value="childBirthAssistance-type" />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;To make sure slicing functions correctly ChildBirthAssistance-type is set to 'required'. However alternate coding are still allowed." />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="bc-ChildBirthAssistance-type" />
-        <valueSetReference>
-          <reference value="http://nictiz.nl/fhir/ValueSet/bc-ChildBirthAssistance-type" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40149" />
-        <comment value="Aanpakker kind" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.period.start">
-      <path value="Encounter.participant.period.start" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10716" />
-        <comment value="AankomstDatumTijd" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.period.end">
-      <path value="Encounter.participant.period.end" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10717" />
-        <comment value="EindDatumTijd" />
-      </mapping>
-    </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual" />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.&#xD;&#xA;Note that the reference Encounter.participant.individual is also used for element peri32-dataelement-11029 Niet-zorgverlener (string). In this case, only element .display is populated." />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1624" />
@@ -232,6 +204,21 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10712" />
         <comment value="ContactMet" />
+      </mapping>
+    </element>
+    <element id="Encounter.participant.individual.display">
+      <path value="Encounter.participant.individual.display" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11029" />
+      </mapping>
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10716" />
+        <comment value="AankomstDatumTijd" />
       </mapping>
     </element>
     <element id="Encounter.serviceProvider">

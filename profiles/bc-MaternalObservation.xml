@@ -785,6 +785,26 @@
         <comment value="Conclusie risicostatus na intake" />
       </mapping>
     </element>
+    <element id="Observation.value[x].extension:valueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valueReference" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2270" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2938" />
+        <comment value="Voorkeursziekenhuis" />
+      </mapping>
+    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
@@ -1140,31 +1160,6 @@
         <comment value="DatumLaatsteVerbandwissel" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueDateTime.extension:bcObservationValuereference">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="bcObservationValuereference" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2270" />
-        <comment value="Zorgaanbieder" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2938" />
-        <comment value="Voorkeursziekenhuis" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type>
-        <code />
-      </type>
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -1407,7 +1402,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
       </type>
     </element>
     <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">

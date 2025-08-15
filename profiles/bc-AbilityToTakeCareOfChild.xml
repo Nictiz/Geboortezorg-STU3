@@ -52,18 +52,6 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type />
-    </element>
-    <element id="Observation.value[x]:valueDateTime">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueDateTime" />
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type />
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -79,6 +67,13 @@
         <map value="peri32-dataelement-9986" />
         <comment value="ObservatieMethode" />
       </mapping>
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="129265001" />
+      </patternCoding>
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
@@ -102,8 +97,9 @@
         <code value="160351000146107" />
       </patternCoding>
     </element>
-    <element id="Observation.component:uncertainty.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:uncertainty.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -132,8 +128,9 @@
         <code value="160341000146109" />
       </patternCoding>
     </element>
-    <element id="Observation.component:ability.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:ability.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>

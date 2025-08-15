@@ -172,12 +172,6 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type>
-        <code />
-      </type>
-    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <slicing>
@@ -187,6 +181,15 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Observation.value[x].extension:valuePeriodDuration">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valuePeriodDuration" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
@@ -264,21 +267,6 @@
         <comment value="ActiefMeepersenWaarde" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueDateTime.extension:valuePeriodDuration">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valuePeriodDuration" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
-      </type>
-      <isModifier value="false" />
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type>
-        <code />
-      </type>
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -339,7 +327,7 @@
       <path value="Observation.method.coding" />
       <sliceName value="measurementMethod" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="MeetMethode_GZ" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
       </binding>

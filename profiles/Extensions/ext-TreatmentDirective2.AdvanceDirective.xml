@@ -35,16 +35,13 @@
       <path value="Extension" />
       <comment value="The cardinality of the `Consent.source[x]` element does not comply with the cardinality of the AdvanceDirective concept (NL-CM:2.2.8) specified in the HCIM TreatmentDirective2. This is solved by adding an extension that can be used to provide additional sources after `Consent.source[x]` is populated." />
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-advancedirective" />
     </element>
-    <element id="Extension.value[x]">
+    <element id="Extension.value[x]:valueReference">
       <path value="Extension.value[x]" />
+      <sliceName value="valueReference" />
       <short value="AdvanceDirective" />
       <definition value="A (written) statement in which a person indicates wishes concerning future medical action, in the event that this person is at that point no longer (deemed) capable of taking decisions on the matter." />
       <alias value="Wilsverklaring" />

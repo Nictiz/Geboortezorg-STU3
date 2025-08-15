@@ -52,10 +52,6 @@
         <comment value="MeetDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type />
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -94,20 +90,27 @@
       <sliceName value="amnioticFluidQuantity" />
       <max value="1" />
     </element>
-    <element id="Observation.component:amnioticFluidQuantity.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="364354005" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:amnioticFluidQuantity.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364354005" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:amnioticFluidQuantity.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2413" />
+        <comment value="HoeveelheidVruchtwaterWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
       <binding>
         <strength value="extensible" />
         <description value="Vruchtwater" />
@@ -115,60 +118,54 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.191--20140121165337" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2413" />
-        <comment value="HoeveelheidVruchtwaterWaarde" />
-      </mapping>
     </element>
     <element id="Observation.component:amnioticFluidCompartment">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidCompartment" />
       <max value="1" />
     </element>
-    <element id="Observation.component:amnioticFluidCompartment.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="249129009" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:amnioticFluidCompartment.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="249129009" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:amnioticFluidCompartment.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="BeoordelingBevindingen" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2479" />
         <comment value="VruchtwatercompartimentWaarde" />
       </mapping>
     </element>
+    <element id="Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.valueCodeableConcept.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="BeoordelingBevindingen" />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.23--20140904000000" />
+      </binding>
+    </element>
     <element id="Observation.component:amnioticFluidSDP">
       <path value="Observation.component" />
       <sliceName value="amnioticFluidSDP" />
       <max value="1" />
     </element>
-    <element id="Observation.component:amnioticFluidSDP.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="160301000146106" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:amnioticFluidSDP.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160301000146106" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:amnioticFluidSDP.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:amnioticFluidSDP.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
       </type>
@@ -183,17 +180,16 @@
       <sliceName value="amnioticFluidAFI" />
       <max value="1" />
     </element>
-    <element id="Observation.component:amnioticFluidAFI.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="160311000146108" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:amnioticFluidAFI.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160311000146108" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:amnioticFluidAFI.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:amnioticFluidAFI.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
       </type>

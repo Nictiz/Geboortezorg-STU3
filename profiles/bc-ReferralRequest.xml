@@ -76,7 +76,6 @@
       <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
-        <description value="PerinatalePeriodeOverdrachtConsult" />
       </binding>
       <mapping>
         <identity value="gebz-peri-v2.3" />
@@ -128,9 +127,8 @@
       <sliceName value="referralType" />
       <short value="Referral type" />
       <definition value="Referral type as defined in 2.3 and 3.2. The receiving party decides if a referral results in a consult or handover." />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="bc-ReferralRequest-type" />
         <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ReferralRequest-type" />
       </binding>

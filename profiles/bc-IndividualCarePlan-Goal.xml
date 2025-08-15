@@ -43,6 +43,21 @@
         <comment value="AfsluitDatum" />
       </mapping>
     </element>
+    <element id="Goal.extension:carePlan">
+      <path value="Goal.extension" />
+      <sliceName value="carePlan" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-reference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8816" />
+        <comment value="ZorgAfspraak" />
+      </mapping>
+    </element>
     <element id="Goal.description">
       <path value="Goal.description" />
       <mapping>
@@ -62,12 +77,6 @@
         <map value="peri32-dataelement-8813" />
         <comment value="StreefDatum" />
       </mapping>
-    </element>
-    <element id="Goal.target.due[x]:dueDate.value">
-      <path value="Goal.target.dueDate.value" />
-      <type>
-        <code />
-      </type>
     </element>
     <element id="Goal.statusDate">
       <path value="Goal.statusDate" />

@@ -117,8 +117,9 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Condition.extension:delivery.value[x]">
-      <path value="Condition.extension.value[x]" />
+    <element id="Condition.extension:delivery.value[x]:valueReference">
+      <path value="Condition.extension.valueReference" />
+      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
