@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing the administration of vitamin K to a newborn as defined by BabyConnect. The base definition is a child-related Observation. Child-related Observations pertain to the child Patient, which is the subject of the Observation. Child observations refer to the Encounter or EpisodeOfCare with Observation.context.reference, according to the overarching principle of referring to the lowest level of granularity available.&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
+  <description value="An Observation profile describing the administration of vitamin K to a newborn as defined by BabyConnect. The base definition is a child-related Observation. Child-related Observations pertain to the child Patient, which is the subject of the Observation. Child observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -99,8 +99,9 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:administrationDate.value[x]">
+    <element id="Observation.component:administrationDate.value[x]:valueDateTime">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueDateTime" />
       <type>
         <code value="dateTime" />
       </type>

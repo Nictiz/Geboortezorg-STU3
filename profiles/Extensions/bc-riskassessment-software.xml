@@ -30,20 +30,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Extension.extension:name">
       <path value="Extension.extension" />
       <sliceName value="name" />
-    </element>
-    <element id="Extension.extension:name.extension">
-      <path value="Extension.extension.extension" />
-      <max value="0" />
     </element>
     <element id="Extension.extension:name.url">
       <path value="Extension.extension.url" />
       <fixedUri value="name" />
     </element>
-    <element id="Extension.extension:name.value[x]">
-      <path value="Extension.extension.value[x]" />
+    <element id="Extension.extension:name.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
@@ -52,16 +59,13 @@
       <path value="Extension.extension" />
       <sliceName value="version" />
     </element>
-    <element id="Extension.extension:version.extension">
-      <path value="Extension.extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.extension:version.url">
       <path value="Extension.extension.url" />
       <fixedUri value="version" />
     </element>
-    <element id="Extension.extension:version.value[x]">
-      <path value="Extension.extension.value[x]" />
+    <element id="Extension.extension:version.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>

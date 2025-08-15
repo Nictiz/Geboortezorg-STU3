@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing child-related Observations (not captured in other existing profiles), as defined by BabyConnect. Child-related Observations, such as Apgar score and birthweight, pertain to the child Patient, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead.&#xD;&#xA;* Child observations refer to the Encounter or EpisodeOfCare with Observation.context.reference, according to the overarching principle of referring to the lowest level of granularity available.&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
+  <description value="An Observation profile describing child-related Observations (not captured in other existing profiles), as defined by BabyConnect. Child-related Observations, such as Apgar score and birthweight, pertain to the child Patient, which is the subject of the Observation. If the child is unborn and no patient record exists for the child, bc-FetusObservation should be used instead.&#xD;&#xA;- Child observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Child-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-ChildObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -928,7 +928,7 @@
       <sliceName value="laterality" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-laterality" />
       </type>
     </element>
     <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">
@@ -1116,8 +1116,9 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:clothing.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>

@@ -46,8 +46,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-multidisciplinaryteammeeting-intenttreatment" />
       </type>
     </element>
-    <element id="CarePlan.extension:intentTreatment.value[x]:valueCodeableConcept">
-      <path value="CarePlan.extension.value[x]" />
+    <element id="CarePlan.extension:intentTreatment.valueCodeableConcept:valueCodeableConcept">
+      <path value="CarePlan.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
@@ -74,8 +74,8 @@
       <path value="CarePlan.category" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
-          <path value="coding" />
+          <type value="value" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>

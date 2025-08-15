@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing delivery-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as onset of labor or blood loss pertain to a delivery Procedure.&#xD;&#xA;* Delivery-related Observations use focus extension to point to the delivery Procedure they're about.&#xD;&#xA;* Delivery-related Observations refer to the Encounter or EpisodeOfCare with Observation.context.reference, according to the overarching principle of referring to the lowest level of granularity available.&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DeliveryObservation]]" />
+  <description value="An Observation profile describing delivery-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as onset of labor or blood loss pertain to a delivery Procedure.&#xD;&#xA;* Delivery-related Observations use focus extension to point to the delivery Procedure they're about.&#xD;&#xA;* Delivery-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DeliveryObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -343,6 +343,15 @@
         <comment value="Risicostatus voor baring" />
       </mapping>
     </element>
+    <element id="Observation.value[x].extension:valuePeriodDuration">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valuePeriodDuration" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.value[x]" />
       <sliceName value="valueQuantity" />
@@ -442,15 +451,6 @@
         <map value="peri32-dataelement-4269" />
         <comment value="TestuitslagPAWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.value[x]:valueString.extension:valuePeriodDuration">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valuePeriodDuration" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
-      </type>
-      <isModifier value="false" />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />

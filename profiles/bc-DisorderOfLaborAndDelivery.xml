@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Condition profile describing disorders and complications related to labor and delivery as defined by BabyConnect. These disorders are part of the delivery, which is defined in the part of extension.&#xD;&#xA;* Delivery-related Disorders use partOf extension to point to (birth or delivery) Procedure they're about.&#xD;&#xA;* Delivery-related Disorders refer to the Encounter or EpisodeOfCare with Condition.context.reference, according to the overarching principle of referring to the lowest level of granularity available." />
+  <description value="A Condition profile describing disorders and complications related to labor and delivery as defined by BabyConnect. These disorders are part of the delivery, which is defined in the part of extension.&#xD;&#xA;* Delivery-related Disorders use partOf extension to point to (birth or delivery) Procedure they're about.&#xD;&#xA;* Delivery-related Disorders refer to the EpisodeOfCare through Condition.context.reference" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -92,8 +92,9 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-partOf" />
       </type>
     </element>
-    <element id="Condition.extension:delivery.value[x]">
+    <element id="Condition.extension:delivery.value[x]:valueReference">
       <path value="Condition.extension.value[x]" />
+      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
@@ -249,8 +250,9 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:bodySiteReference.valueReference">
-      <path value="Condition.bodySite.extension.value[x]" />
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
+      <path value="Condition.bodySite.extension.valueReference" />
+      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />

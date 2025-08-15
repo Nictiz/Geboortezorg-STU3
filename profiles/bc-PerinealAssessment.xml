@@ -37,15 +37,6 @@
         <comment value="Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)" />
       </mapping>
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="609625009" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
@@ -54,18 +45,6 @@
         <map value="peri32-dataelement-3952" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type />
-    </element>
-    <element id="Observation.value[x]:valueDateTime">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueDateTime" />
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -98,17 +77,16 @@
       <sliceName value="perineum" />
       <max value="1" />
     </element>
-    <element id="Observation.component:perineum.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="364297003" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:perineum.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364297003" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:perineum.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:perineum.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -128,17 +106,16 @@
       <sliceName value="sfincter" />
       <max value="1" />
     </element>
-    <element id="Observation.component:sfincter.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="366252005" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:sfincter.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="366252005" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:sfincter.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:sfincter.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -160,17 +137,16 @@
       <sliceName value="femaleGenital" />
       <max value="1" />
     </element>
-    <element id="Observation.component:femaleGenital.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="248842004" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:femaleGenital.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="248842004" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:femaleGenital.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:femaleGenital.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>

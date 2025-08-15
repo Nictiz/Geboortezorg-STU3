@@ -3,15 +3,6 @@
 	<meta>
 		<profile value="http://nictiz.nl/fhir/StructureDefinition/bc-ChildBirthAssistance" />
 	</meta>
-	<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival">
-		<valueCodeableConcept>
-			<coding>
-				<system value="http://snomed.info/sct" />
-				<code value="42857002" />
-				<display value="tweede fase van partus (bevinding)" />
-			</coding>
-		</valueCodeableConcept>
-	</extension>
 	<status value="finished" />
 	<class>
 		<system value="http://hl7.org/fhir/v3/ActCode" />
@@ -34,6 +25,19 @@
 		<display value="zwangerschap Wouden 3" />
 	</episodeOfCare>
 	<participant>
+		<extension url="http://nictiz.nl/fhir/StructureDefinition/bc-encounter-arrival">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct" />
+					<code value="42857002" />
+					<display value="tweede fase van partus (bevinding)" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<period>
+			<start value="2017-06-22T15:15:00+01:00" />
+			<end value="2017-06-22T18:34:00+01:00" />
+		</period>
 		<individual>
 			<extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
 				<valueReference>
@@ -43,10 +47,6 @@
 			</extension>
 		</individual>
 	</participant>
-	<period>
-		<start value="2017-06-22T15:15:00+01:00" />
-		<end value="2017-06-22T18:34:00+01:00" />
-	</period>
 	<diagnosis>
 		<condition>
 			<reference value="Condition/wouden-zwanger3" />

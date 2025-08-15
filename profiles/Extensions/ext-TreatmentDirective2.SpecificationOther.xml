@@ -36,16 +36,13 @@
       <max value="1" />
       <isModifier value="true" />
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-treatmentdirective-specificationother" />
     </element>
-    <element id="Extension.value[x]">
+    <element id="Extension.value[x]:valueString">
       <path value="Extension.value[x]" />
+      <sliceName value="valueString" />
       <short value="SpecificationOther" />
       <definition value="Specification of the treatment decision when the decision is 'Other'." />
       <alias value="SpecificatieAnders" />

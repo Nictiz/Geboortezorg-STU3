@@ -45,24 +45,21 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
-      <isModifier value="false" />
     </element>
-    <element id="Observation.extension:fetus.value[x]:valueReference">
-      <path value="Observation.extension.value[x]" />
+    <element id="Observation.extension:fetus.valueReference:valueReference">
+      <path value="Observation.extension.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
       </type>
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="276507005" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="276507005" />
+      </patternCoding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -100,11 +97,9 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.value[x]">
+    <element id="Observation.value[x]:valueBoolean">
       <path value="Observation.value[x]" />
-      <type>
-        <code value="boolean" />
-      </type>
+      <sliceName value="valueBoolean" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10551" />
@@ -134,17 +129,16 @@
       <sliceName value="deceasedDateTime" />
       <max value="1" />
     </element>
-    <element id="Observation.component:deceasedDateTime.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="399753006" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:deceasedDateTime.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="399753006" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:deceasedDateTime.value[x]">
-      <path value="Observation.component.value[x]" />
+    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime">
+      <path value="Observation.component.valueDateTime" />
+      <sliceName value="valueDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -154,25 +148,21 @@
         <comment value="DatumOverlijden" />
       </mapping>
     </element>
-    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime.value">
-      <path value="Observation.component.valueDateTime.value" />
-    </element>
     <element id="Observation.component:perinatalPhase">
       <path value="Observation.component" />
       <sliceName value="perinatalPhase" />
       <max value="1" />
     </element>
-    <element id="Observation.component:perinatalPhase.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="246454002" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:perinatalPhase.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="246454002" />
+      </patternCoding>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x]">
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept">
       <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -182,7 +172,7 @@
         <comment value="FasePerinataleSterfteWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x].coding">
+    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
       <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />

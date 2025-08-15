@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="bc-careplan-isCoordinator" />
+  <id value="bc-careplan-author-role" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
   <name value="bc-careplan-isCoordinator" />
-  <title value="bc-careplan-isCoordinator" />
+  <title value="bc-careplan-coordinator" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -27,14 +27,15 @@
   <differential>
     <element id="Extension.extension">
       <path value="Extension.extension" />
-      <max value="0" />
+      <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
     </element>
-    <element id="Extension.value[x]">
+    <element id="Extension.value[x]:valueBoolean">
       <path value="Extension.value[x]" />
+      <sliceName value="valueBoolean" />
       <type>
         <code value="boolean" />
       </type>

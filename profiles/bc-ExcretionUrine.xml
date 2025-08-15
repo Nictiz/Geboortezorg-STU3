@@ -58,18 +58,6 @@
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type />
-    </element>
-    <element id="Observation.value[x]:valueDateTime">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueDateTime" />
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type />
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -142,14 +130,12 @@
       <sliceName value="urineDiapers" />
       <max value="1" />
     </element>
-    <element id="Observation.component:urineDiapers.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="160291000146107" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:urineDiapers.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="160291000146107" />
+      </patternCoding>
     </element>
     <element id="Observation.component:urineDiapers.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
