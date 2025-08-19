@@ -8374,7 +8374,7 @@
 	<record>
 		<ID>peri32-dataelement-1423</ID>
 		<naam>PercentielGeboortegewicht</naam>
-		<mapping>Observation.interpretation</mapping>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
 		<profile>zib-BodyWeight</profile>
 		<in>VALIDEREN</in>
 	</record>
@@ -11577,8 +11577,8 @@
 	<record>
 		<ID>peri32-dataelement-3525</ID>
 		<naam>ACPercentielWaarde</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3516</ID>
@@ -11631,8 +11631,8 @@
 	<record>
 		<ID>peri32-dataelement-3631</ID>
 		<naam>SchedelomvangPercentielWaarde</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>zib-HeadCircumference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3630</ID>
@@ -11655,8 +11655,8 @@
 	<record>
 		<ID>peri32-dataelement-3551</ID>
 		<naam>FLPercentielWaarde</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3542</ID>
@@ -11769,8 +11769,8 @@
 	<record>
 		<ID>peri32-dataelement-3588</ID>
 		<naam>CRLPercentielWaarde</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3579</ID>
@@ -11811,8 +11811,8 @@
 	<record>
 		<ID>peri32-dataelement-3601</ID>
 		<naam>TCDPercentielWaarde</naam>
-		<mapping>ntb</mapping>
-		<profile>ntb</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3592</ID>
@@ -16294,31 +16294,31 @@
 		<ID>peri32-dataelement-7950</ID>
 		<naam>Conditie perineum (Observatie)</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-PerinealAssessment</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7951</ID>
 		<naam>ObservatieDatumTijd</naam>
 		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
-		<profile>bc-PerinealAssessment</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7953</ID>
 		<naam>ConditiePerineumWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-PerinealAssessment</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7954</ID>
 		<naam>ObservatieMethode</naam>
 		<mapping>Observation.method</mapping>
-		<profile>bc-PerinealAssessment</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7959</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>bc-PerinealAssessment</profile>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7960</ID>
