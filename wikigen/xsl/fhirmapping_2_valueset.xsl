@@ -135,7 +135,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                             <ul>
                                                 <xsl:for-each select="$profileMapping">
                                                     <xsl:variable name="profileMisMatch" select="$mappingRecord/profile != ancestor-or-self::f:StructureDefinition/f:name/@value"/>
-                                                    <xsl:variable name="pathMisMatch" select="$mappingRecord/mapping != ancestor-or-self::f:element/f:path/@value"/>
+                                                    <xsl:variable name="pathMisMatch" select="$mappingRecord/mapping != ancestor-or-self::f:element/@id"/>
                                                     
                                                     <li>
                                                         <xsl:if test="$profileMisMatch or $pathMisMatch">
@@ -153,7 +153,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                                             <xsl:if test="$pathMisMatch">
                                                                 <xsl:attribute name="style" select="'color: red; font-weight: bold;'"/>
                                                             </xsl:if>
-                                                            <xsl:value-of select="ancestor-or-self::f:element/f:path/@value"/>
+                                                            <xsl:value-of select="ancestor-or-self::f:element/@id"/>
                                                         </span>
                                                     </li>
                                                 </xsl:for-each>
