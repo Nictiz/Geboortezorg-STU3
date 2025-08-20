@@ -93,11 +93,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3834" />
-        <comment value="Verrichting (Algemene anamnese)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3835" />
         <comment value="Verrichting (Zwangerschap)" />
       </mapping>
@@ -105,11 +100,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1970" />
         <comment value="Verrichting (Maternaal)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3836" />
-        <comment value="Verrichting (Onderzoek)" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -211,6 +201,16 @@
         <map value="peri32-dataelement-7875" />
         <comment value="Verrichting (Onderzoek)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1432" />
+        <comment value="Procedure" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1449" />
+        <comment value="Procedure" />
+      </mapping>
     </element>
     <element id="Procedure.extension:procedureMethod">
       <path value="Procedure.extension" />
@@ -248,6 +248,16 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2424" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1440" />
+        <comment value="VerrichtingMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1457" />
         <comment value="VerrichtingMethode" />
       </mapping>
     </element>
@@ -384,6 +394,16 @@
         <map value="peri32-dataelement-2423" />
         <comment value="VerrichtingType" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1439" />
+        <comment value="VerrichtingType" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1456" />
+        <comment value="VerrichtingType" />
+      </mapping>
     </element>
     <element id="Procedure.code.coding:VerrichtingTypeCodelijst">
       <path value="Procedure.code.coding" />
@@ -488,6 +508,16 @@
         <map value="peri32-dataelement-8761" />
         <comment value="VerrichtingStartDatum" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1433" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1450" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod.end">
       <path value="Procedure.performed[x].end" />
@@ -521,6 +551,16 @@
         <map value="peri32-dataelement-8762" />
         <comment value="VerrichtingEindDatum" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1434" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1451" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
     </element>
     <element id="Procedure.performed[x]:performedDateTime">
       <path value="Procedure.performed[x]" />
@@ -528,6 +568,12 @@
       <comment value="This slice serves the purpose to temporarily circumvent a validator error and make it possible to use a performedDateTime element." />
       <type>
         <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Procedure.performed[x]:performedDateTime.value">
+      <path value="Procedure.performed[x].value" />
+      <type>
+        <code />
       </type>
     </element>
     <element id="Procedure.performer">
@@ -607,13 +653,26 @@
       <path value="Procedure.performer.actor" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2429" />
+        <comment value="Uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1445" />
+        <comment value="Uitvoerder" />
+      </mapping>
+    </element>
+    <element id="Procedure.location">
+      <path value="Procedure.location" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2427" />
         <comment value="Locatie" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2429" />
-        <comment value="Uitvoerder" />
+        <map value="peri31-dataelement-1443" />
+        <comment value="Locatie" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode.coding">
@@ -731,6 +790,16 @@
         <map value="peri32-dataelement-8765" />
         <comment value="Indicatie" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1437" />
+        <comment value="Indicatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1454" />
+        <comment value="Indicatie" />
+      </mapping>
     </element>
     <element id="Procedure.reasonReference:pregnancy">
       <path value="Procedure.reasonReference" />
@@ -773,6 +842,16 @@
         <map value="peri32-dataelement-8763" />
         <comment value="VerrichtingAnatomischeLocatie" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1435" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1452" />
+        <comment value="VerrichtingAnatomischeLocatie" />
+      </mapping>
     </element>
     <element id="Procedure.bodySite.extension:ProcedureLaterality">
       <path value="Procedure.bodySite.extension" />
@@ -809,6 +888,16 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7904" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1436" />
+        <comment value="VerrichtingLateraliteit" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1453" />
         <comment value="VerrichtingLateraliteit" />
       </mapping>
     </element>
@@ -867,6 +956,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2425" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1441" />
         <comment value="MedischHulpmiddel" />
       </mapping>
     </element>

@@ -43,26 +43,6 @@
       <path value="Observation" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4048" />
-        <comment value="Fundusstand (Meting)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10522" />
-        <comment value="Bevindingen Foetus" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4060" />
-        <comment value="LiggingFoetus (Meting)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4072" />
-        <comment value="IndalingFoetus(Meting)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4169" />
         <comment value="Ligging kind (Observatie)" />
       </mapping>
@@ -140,11 +120,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7847" />
         <comment value="Sonomarkers (Observatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1419" />
-        <comment value="Oorzaak overlijden (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.extension:fetus">
@@ -241,21 +216,6 @@
       <path value="Observation.effective[x].start" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4054" />
-        <comment value="MeetDatumBeginTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4066" />
-        <comment value="MeetDatumBeginTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4078" />
-        <comment value="MeetDatumBeginTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3519" />
         <comment value="ACDatumBeginTijd" />
       </mapping>
@@ -299,24 +259,14 @@
         <map value="peri32-dataelement-10852" />
         <comment value="MeetDatumBeginTijd" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10953" />
+        <comment value="MeetDatumBeginTijd" />
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
       <path value="Observation.effective[x].end" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4055" />
-        <comment value="MeetDatumEindTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4067" />
-        <comment value="MeetDatumEindTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4079" />
-        <comment value="MeetDatumEindTijd" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3520" />
@@ -362,6 +312,11 @@
         <map value="peri32-dataelement-10853" />
         <comment value="MeetDatumEindTijd" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10954" />
+        <comment value="MeetDatumEindTijd" />
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
@@ -389,6 +344,12 @@
         <map value="peri32-dataelement-7848" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime.value">
+      <path value="Observation.effective[x].value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -430,21 +391,6 @@
         <comment value="Placentalokalisatie" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:valueReference">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valueReference" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1430" />
-        <comment value="Oorzaak overlijden (Probleem)" />
-      </mapping>
-    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
@@ -456,21 +402,6 @@
         <description value="bc-FetusObservation-value" />
         <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-FetusObservation-value" />
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4050" />
-        <comment value="FundusstandWaarde" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4062" />
-        <comment value="LiggingFoetusWaarde" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4074" />
-        <comment value="IndalingFoetusWaarde" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4172" />
@@ -490,6 +421,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7850" />
         <comment value="SonomarkerWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10951" />
+        <comment value="LiggingFoetusWaarde" />
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity">
@@ -546,21 +482,6 @@
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4056" />
-        <comment value="Toelichting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4068" />
-        <comment value="Toelichting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4080" />
-        <comment value="Toelichting" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4180" />
@@ -628,7 +549,7 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1428" />
+        <map value="peri32-dataelement-10955" />
         <comment value="Toelichting" />
       </mapping>
     </element>
@@ -636,32 +557,12 @@
       <path value="Observation.bodySite" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4057" />
-        <comment value="AnatomischeLocatieMeting" />
+        <map value="peri32-dataelement-10956" />
+        <comment value="AnatomischeLocatie" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4058" />
-        <comment value="Locatie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4069" />
-        <comment value="AnatomischeLocatieMeting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4070" />
-        <comment value="Locatie" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4081" />
-        <comment value="AnatomischeLocatieMeting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4082" />
+        <map value="peri32-dataelement-10957" />
         <comment value="Locatie" />
       </mapping>
     </element>
@@ -674,21 +575,6 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4051" />
-        <comment value="MeetMethode" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4063" />
-        <comment value="MeetMethode" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4075" />
-        <comment value="MeetMethode" />
-      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4173" />
@@ -753,6 +639,113 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7851" />
         <comment value="ObservatieMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10952" />
+        <comment value="ObservatieMethode" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:acPercentielWaarde">
+      <path value="Observation.component" />
+      <sliceName value="acPercentielWaarde" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:acPercentielWaarde.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="96125-0" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:acPercentielWaarde.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3525" />
+        <comment value="ACPercentielWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:flPercentielWaarde">
+      <path value="Observation.component" />
+      <sliceName value="flPercentielWaarde" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:flPercentielWaarde.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="96124-3" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:flPercentielWaarde.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3551" />
+        <comment value="FLPercentielWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:crlPercentielWaarde">
+      <path value="Observation.component" />
+      <sliceName value="crlPercentielWaarde" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:crlPercentielWaarde.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="95939-5" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:crlPercentielWaarde.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3588" />
+        <comment value="CRLPercentielWaarde" />
+      </mapping>
+    </element>
+    <element id="Observation.component:tcdPercentielWaarde">
+      <path value="Observation.component" />
+      <sliceName value="tcdPercentielWaarde" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:tcdPercentielWaarde.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="95938-7" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:tcdPercentielWaarde.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3601" />
+        <comment value="TCDPercentielWaarde" />
       </mapping>
     </element>
   </differential>

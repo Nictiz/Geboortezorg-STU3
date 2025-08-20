@@ -219,21 +219,9 @@
         <comment value="Controles kind" />
       </mapping>
     </element>
-    <element id="Patient.extension">
-      <path value="Patient.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
@@ -246,6 +234,30 @@
         <code value="Address" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address" />
       </type>
+    </element>
+    <element id="Patient.extension:fetalStatus">
+      <path value="Patient.extension" />
+      <sliceName value="fetalStatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-fetalStatus" />
+      </type>
+    </element>
+    <element id="Patient.extension:fetalStatus.url">
+      <path value="Patient.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/patient-fetalStatus" />
+    </element>
+    <element id="Patient.extension:fetalStatus.value[x]:valueCodeableConcept">
+      <path value="Patient.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9861" />
+        <comment value="GeborenIndicator" />
+      </mapping>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -287,26 +299,20 @@
         <comment value="Naamgegevens" />
       </mapping>
     </element>
-    <element id="Patient.name.extension">
-      <path value="Patient.name.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Patient.name.extension:humannameAssemblyOrder">
       <path value="Patient.name.extension" />
       <sliceName value="humannameAssemblyOrder" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10702" />
         <comment value="Naamgebruik" />
       </mapping>
+    </element>
+    <element id="Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode.value">
+      <path value="Patient.name.extension.valueCode.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Patient.name.family">
       <path value="Patient.name.family" />
@@ -316,21 +322,9 @@
         <comment value="Achternaam" />
       </mapping>
     </element>
-    <element id="Patient.name.family.extension">
-      <path value="Patient.name.family.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Patient.name.family.extension:humannameOwnPrefix">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannameOwnPrefix" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82054" />
@@ -340,7 +334,6 @@
     <element id="Patient.name.family.extension:humannameOwnName">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannameOwnName" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10705" />
@@ -350,7 +343,6 @@
     <element id="Patient.name.family.extension:humannamePartnerPrefix">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannamePartnerPrefix" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-82054" />
@@ -365,7 +357,6 @@
     <element id="Patient.name.family.extension:humannamePartnerName">
       <path value="Patient.name.family.extension" />
       <sliceName value="humannamePartnerName" />
-      <min value="0" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10703" />
@@ -395,6 +386,16 @@
         <comment value="Roepnaam" />
       </mapping>
     </element>
+    <element id="Patient.name.given.extension:iso21090EnQualifier">
+      <path value="Patient.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+    </element>
+    <element id="Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode.value">
+      <path value="Patient.name.given.extension.valueCode.value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <mapping>
@@ -408,21 +409,9 @@
         <comment value="Geslacht (administratief)" />
       </mapping>
     </element>
-    <element id="Patient.gender.extension">
-      <path value="Patient.gender.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Patient.gender.extension:birthSex">
       <path value="Patient.gender.extension" />
       <sliceName value="birthSex" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -445,6 +434,12 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Patient.gender.value">
+      <path value="Patient.gender.value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
       <mapping>
@@ -458,21 +453,9 @@
         <comment value="Geboortedatum" />
       </mapping>
     </element>
-    <element id="Patient.birthDate.extension">
-      <path value="Patient.birthDate.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Patient.birthDate.extension:birthTime">
       <path value="Patient.birthDate.extension" />
       <sliceName value="birthTime" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
@@ -485,6 +468,18 @@
     <element id="Patient.birthDate.extension:birthTime.valueDateTime:valueDateTime">
       <path value="Patient.birthDate.extension.valueDateTime" />
       <sliceName value="valueDateTime" />
+    </element>
+    <element id="Patient.birthDate.extension:birthTime.valueDateTime:valueDateTime.value">
+      <path value="Patient.birthDate.extension.valueDateTime.value" />
+      <type>
+        <code />
+      </type>
+    </element>
+    <element id="Patient.birthDate.value">
+      <path value="Patient.birthDate.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
@@ -506,6 +501,26 @@
         <map value="peri23-dataelement-40025" />
         <comment value="Rangnummer kind" />
       </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:humannameAssemblyOrder">
+      <path value="Patient.contact.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode.value">
+      <path value="Patient.contact.name.extension.valueCode.value" />
+      <type>
+        <code />
+      </type>
+    </element>
+    <element id="Patient.contact.name.given.extension:iso21090EnQualifier">
+      <path value="Patient.contact.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+    </element>
+    <element id="Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode.value">
+      <path value="Patient.contact.name.given.extension.valueCode.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />

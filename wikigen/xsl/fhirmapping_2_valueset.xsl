@@ -11,7 +11,7 @@ See the GNU Lesser General Public License for more details.
 
 The full text of the license is available at http://www.gnu.org/copyleft/lesser.html
 -->
-<xsl:stylesheet xmlns="http://hl7.org/fhir" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:f="http://hl7.org/fhir" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nf="http://www.nictiz.nl/functions" exclude-result-prefixes="#all" version="2.0">
+<xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:f="http://hl7.org/fhir" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nf="http://www.nictiz.nl/functions" exclude-result-prefixes="#all" version="2.0">
         
     <xd:doc scope="stylesheet">
         <xd:desc>Produces valuesets from FHIR mapping
@@ -47,37 +47,109 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         </mapping>
     -->
     <xsl:template match="/">
-        <xsl:result-document href="fhirmapping-report.html">
-            <html>
-                <head>
-                    <title>Mapping report</title>
-                    <style>* { font-family: Verdana, sans-serif; } tr:nth-child(even) { background-color: lightgrey; }</style>
-                </head>
-                <body>
-                    <h3>Mapping report</h3>
-                    <div>Generated: <xsl:value-of select="current-dateTime()"/></div>
-                    <div>Mappings in fhirmapping-3-2.xml: <xsl:value-of select="count($fhirmapping-file/record)"/></div>
-                    <div>Mappings in profiles/extensions: <xsl:value-of select="count($all-profiles//f:mapping[f:map/@value = 'gebz-peri-v3.2'])"/></div>
-                    <table>
-                        <tr>
-                            <th colspan="4">Source: fhirmapping-3-2.xml</th>
-                            <th>Source: ADA Release</th>
-                            <th>Source: Profiles / extensions</th>
-                        </tr>
-                        <tr>
-                            <th>Concept-ID</th>
-                            <th>Concept-Name</th>
-                            <th>FHIR Profile</th>
-                            <th>FHIR Path</th>
-                            <th>Transaction(s)</th>
-                            <th>Profiles</th>
-                        </tr>
-                        <xsl:for-each select="$fhirmapping-file/record">
-                            <xsl:variable name="mappingRecord" select="."/>
-                            <xsl:variable name="datasetConcept" select="$ada-release-file//concept[@iddisplay = $mappingRecord/ID]" as="element(concept)*"/>
-                            <xsl:variable name="profileMapping" select="$all-profiles//f:mapping[f:map/@value = $mappingRecord/ID]" as="element(f:mapping)*"/>
+        <xsl:variable name="rows" as="element(tr)*">
+            <xsl:for-each-group select="$fhirmapping-file/record" group-by="ID">
+                <xsl:variable name="mappingRecord" select="current-group()"/>
+                <xsl:variable name="datasetConcept" select="$ada-release-file//concept[@iddisplay = current-grouping-key()]" as="element(concept)*"/>
+                <xsl:variable name="profileMapping" select="$all-profiles//f:mapping[f:map/@value = current-grouping-key()]" as="element(f:mapping)*"/>
+                
+                <xsl:variable name="columns" as="element()*">
+                    <xsl:if test="$datasetConcept">
+                        <td>
+                            <xsl:value-of select="current-grouping-key()"/>
+                        </td>
+                        <td>
+                            <xsl:for-each select="distinct-values(naam)">
+                                <div>
+                                    <xsl:attribute name="title">
+                                        <xsl:value-of select="string-join($datasetConcept[1]/ancestor-or-self::concept/name[1], '/')"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="."/>
+                                </div>
+                            </xsl:for-each>
+                        </td>
+                        <td>
+                            <xsl:for-each select="mapping">
+                                <div>
+                                    <xsl:value-of select="."/>
+                                </div>
+                            </xsl:for-each>
+                        </td>
+                        <td>
+                            <xsl:for-each select="profile">
+                                <div>
+                                    <xsl:value-of select="."/>
+                                </div>
+                            </xsl:for-each>
+                        </td>
+                        <td>
+                            <xsl:choose>
+                                <xsl:when test="$datasetConcept">
+                                    <ul>
+                                        <xsl:for-each select="$datasetConcept">
+                                            <li><xsl:value-of select="concat(@minimumMultiplicity, '..', @maximumMultiplicity, ' ', @conformance)"/> Transaction <xsl:value-of select="ancestor-or-self::view/name"/></li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </xsl:when>
+                                <xsl:when test="string-length(profile) = 0">
+                                    <span style="font-style: italic;">No transactions</span>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <span style="color: red; font-weight: bold;" class="transaction-mismatch">WARNING No transactions</span>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </td>
+                        <td>
+                            <xsl:choose>
+                                <xsl:when test="$profileMapping">
+                                    <ul>
+                                        <xsl:for-each select="$profileMapping">
+                                            <xsl:variable name="profileName" select="ancestor-or-self::f:StructureDefinition/f:name/@value"/>
+                                            <xsl:variable name="elementId" select="ancestor-or-self::f:element/@id"/>
+                                            <xsl:variable name="profileMismatch" select="empty($mappingRecord[profile = $profileName])"/>
+                                            <xsl:variable name="pathMismatch" select="empty($mappingRecord[mapping = $elementId])"/>
 
-                            <!--<xsl:message>FHIR Mapping concept <xsl:value-of select="ID"/> - profile <xsl:value-of select="profile"/> - path <xsl:value-of select="mapping"/></xsl:message>
+                                            <li>
+                                                <xsl:if test="$profileMismatch or $pathMismatch">
+                                                    <span style="color: red; font-weight: bold;" class="profile-mismatch">
+                                                        <xsl:text>WARNING </xsl:text>
+                                                    </span>
+                                                </xsl:if>
+                                                <xsl:text>Mapping </xsl:text>
+                                                <span>
+                                                    <xsl:if test="$profileMismatch">
+                                                        <xsl:attribute name="style" select="'color: red; font-weight: bold;'"/>
+                                                        <xsl:attribute name="class" select="'profile-mismatch'"/>
+                                                    </xsl:if>
+                                                    <xsl:value-of select="ancestor-or-self::f:StructureDefinition/f:name/@value"/>
+                                                </span>
+                                                <xsl:text> - path </xsl:text>
+                                                <span>
+                                                    <xsl:if test="$pathMismatch">
+                                                        <xsl:attribute name="style" select="'color: red; font-weight: bold;'"/>
+                                                        <xsl:attribute name="class" select="'profile-mismatch'"/>
+                                                    </xsl:if>
+                                                    <xsl:value-of select="ancestor-or-self::f:element/@id"/>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </xsl:when>
+                                <xsl:when test="starts-with(profile, 'bc-')">
+                                    <span style="color: red; font-weight: bold;" class="profile-mismatch">WARNING No mappings</span>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <span style="font-style: italic;">No mappings</span>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </td>
+                    </xsl:if>
+                </xsl:variable>
+                
+                <xsl:variable name="transactionIssue" as="xs:boolean" select="$columns//@class = 'transaction-mismatch'"/>
+                <xsl:variable name="profileIssue" as="xs:boolean"  select="$columns//@class = 'profile-mismatch'"/>
+                
+                <!--<xsl:message>FHIR Mapping concept <xsl:value-of select="ID"/> - profile <xsl:value-of select="profile"/> - path <xsl:value-of select="mapping"/></xsl:message>
                             <xsl:choose>
                                 <xsl:when test="$datasetConcept">
                                     <xsl:for-each select="$datasetConcept">
@@ -98,77 +170,63 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                     <xsl:message> - WARN No mappings</xsl:message>
                                 </xsl:otherwise>
                             </xsl:choose>-->
-
-                            <tr>
-                                <td>
-                                    <xsl:value-of select="ID"/>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="naam"/>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="mapping"/>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="profile"/>
-                                </td>
-                                <td>
-                                    <xsl:choose>
-                                        <xsl:when test="$datasetConcept">
-                                            <ul>
-                                                <xsl:for-each select="$datasetConcept">
-                                                    <li><xsl:value-of select="concat(@minimumMultiplicity, '..', @maximumMultiplicity, ' ', @conformance)"/> Transaction <xsl:value-of select="ancestor-or-self::view/name"/></li>
-                                                </xsl:for-each>
-                                            </ul>
-                                        </xsl:when>
-                                        <xsl:when test="string-length(profile) = 0">
-                                            <span style="font-style: italic;">No transactions</span>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <span style="color: red; font-weight: bold;">WARNING No transactions</span>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </td>
-                                <td>
-                                    <xsl:choose>
-                                        <xsl:when test="$profileMapping">
-                                            <ul>
-                                                <xsl:for-each select="$profileMapping">
-                                                    <xsl:variable name="profileMisMatch" select="$mappingRecord/profile != ancestor-or-self::f:StructureDefinition/f:name/@value"/>
-                                                    <xsl:variable name="pathMisMatch" select="$mappingRecord/mapping != ancestor-or-self::f:element/@id"/>
-                                                    
-                                                    <li>
-                                                        <xsl:if test="$profileMisMatch or $pathMisMatch">
-                                                            <span style="color: red; font-weight: bold;"><xsl:text>WARNING </xsl:text></span>
-                                                        </xsl:if>
-                                                        <xsl:text>Mapping </xsl:text>
-                                                        <span>
-                                                            <xsl:if test="$profileMisMatch">
-                                                                <xsl:attribute name="style" select="'color: red; font-weight: bold;'"/>
-                                                            </xsl:if>
-                                                            <xsl:value-of select="ancestor-or-self::f:StructureDefinition/f:name/@value"/>
-                                                        </span>
-                                                        <xsl:text> - path </xsl:text>
-                                                        <span>
-                                                            <xsl:if test="$pathMisMatch">
-                                                                <xsl:attribute name="style" select="'color: red; font-weight: bold;'"/>
-                                                            </xsl:if>
-                                                            <xsl:value-of select="ancestor-or-self::f:element/@id"/>
-                                                        </span>
-                                                    </li>
-                                                </xsl:for-each>
-                                            </ul>
-                                        </xsl:when>
-                                        <xsl:when test="starts-with(profile, 'bc-')">
-                                            <span style="color: red; font-weight: bold;">WARNING No mappings</span>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <span style="font-style: italic;">No mappings</span>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </td>
-                            </tr>
-                        </xsl:for-each> 
+                
+                <tr>
+                    <xsl:if test="not($profileIssue)">
+                        <xsl:attribute name="class">row-valid</xsl:attribute>
+                    </xsl:if>
+                    <xsl:if test="$transactionIssue">
+                        <xsl:attribute name="aria-transaction-issue">true</xsl:attribute>
+                    </xsl:if>
+                    <xsl:if test="$profileIssue">
+                        <xsl:attribute name="aria-profile-issue">true</xsl:attribute>
+                    </xsl:if>
+                    
+                    <xsl:copy-of select="$columns"/>
+                </tr>
+            </xsl:for-each-group>
+        </xsl:variable>
+        
+        <xsl:result-document href="fhirmapping-report.html">
+            <html>
+                <head>
+                    <title>Mapping report</title>
+                    <style>
+                        * { font-family: Verdana, sans-serif; } 
+                        tr:nth-child(even) { background-color: lightgrey; } 
+                        .profile-mismatch, 
+                        .transaction-mismatch { color: red; font-weight: bold; }
+                    </style>
+                    <script type="text/javascript" src="https://decor.nictiz.nl/ada/resources/scripts/ada.js">&#160;</script>
+                </head>
+                <body>
+                    <h3>Mapping report</h3>
+                    <div>Generated: <xsl:value-of select="current-dateTime()"/></div>
+                    <div>Mappings in fhirmapping-3-2.xml: <xsl:value-of select="count($fhirmapping-file/record)"/></div>
+                    <div>Mappings in profiles/extensions: <xsl:value-of select="count($all-profiles//f:mapping[f:identity/@value = 'gebz-peri-v3.2'])"/></div>
+                    <div>
+                        <input id="hide-valid" type="checkbox" name="hide-valid" style="margin-left: 1em;" onchange="showHideRows()">
+                            <xsl:text>Hide valid</xsl:text>
+                        </input>
+                        - valid: <xsl:value-of select="count($rows[@class = 'row-valid'])"/>
+                        - with transaction issue: <xsl:value-of select="count($rows[@aria-transaction-issue])"/>
+                        - with profile issue: <xsl:value-of select="count($rows[@aria-profile-issue])"/>
+                    </div>
+                    <table>
+                        <tr>
+                            <th colspan="4">Source: fhirmapping-3-2.xml</th>
+                            <th>Source: ADA Release</th>
+                            <th>Source: Profiles / extensions</th>
+                        </tr>
+                        <tr>
+                            <th>Concept-ID</th>
+                            <th>Concept-Name</th>
+                            <th>FHIR Profile</th>
+                            <th>FHIR Path</th>
+                            <th>Transaction(s)</th>
+                            <th>Profiles</th>
+                        </tr>
+                        <xsl:copy-of select="$rows"/> 
                     </table>
                 </body>
             </html>

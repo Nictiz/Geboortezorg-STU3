@@ -42,21 +42,25 @@
 	<record>
 		<ID>peri32-dataelement-10872</ID>
 		<naam>SoftwareNaam</naam>
+		<mapping>DocumentReference.author</mapping>
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10873</ID>
 		<naam>Verificatie zorgverlener</naam>
+		<mapping>DocumentReference.authenticator</mapping>
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10874</ID>
 		<naam>Geverifieerd door zorgverlener?</naam>
+		<mapping>DocumentReference.authenticator</mapping>
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10875</ID>
 		<naam>VerificatieDatum</naam>
+		<mapping>DocumentReference.authenticator.extension:bc-verification-date</mapping>
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
@@ -84,11 +88,19 @@
 	<record>
 		<ID>peri32-dataelement-1292</ID>
 		<naam>BetalerNaam</naam>
-		<mapping>Patient/RelatedPerson.name</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.name</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-1.1.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-1292</ID>
+		<naam>BetalerNaam</naam>
+		<mapping>RelatedPerson.name</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-1.1.5</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1293</ID>
@@ -201,16 +213,33 @@
 	<record>
 		<ID>peri32-dataelement-3279</ID>
 		<naam>Adresgegevens</naam>
-		<mapping>Patient/RelatedPerson.address</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<searchurl>GET [base]/Coverage?_include=Coverage:payor:Patient</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3279</ID>
+		<naam>Adresgegevens</naam>
+		<mapping>RelatedPerson.address</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<searchurl>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</searchurl>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3280</ID>
 		<naam>Straat</naam>
-		<mapping>Patient/RelatedPerson.address.line:line.streetName</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line:line.streetName</mapping>
+		<profile>nl-core-patient</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.2</zib>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3280</ID>
+		<naam>Straat</naam>
+		<mapping>RelatedPerson.address.line:line.streetName</mapping>
+		<profile>nl-core-relatedperson</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
@@ -218,53 +247,102 @@
 	<record>
 		<ID>peri32-dataelement-3281</ID>
 		<naam>Huisnummer</naam>
-		<mapping>Patient/RelatedPerson.address.line:houseNumber</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line:houseNumber</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.12</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3281</ID>
+		<naam>Huisnummer</naam>
+		<mapping>RelatedPerson.address.line:houseNumber</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.12</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3282</ID>
 		<naam>Huisnummerletter</naam>
-		<mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.11</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3282</ID>
+		<naam>Huisnummerletter</naam>
+		<mapping>RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.11</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3283</ID>
 		<naam>Huisnummertoevoeging</naam>
-		<mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.10</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3283</ID>
+		<naam>Huisnummertoevoeging</naam>
+		<mapping>RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.10</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3284</ID>
 		<naam>AanduidingBijNummer</naam>
-		<mapping>Patient/RelatedPerson.address.line.extension:additionalLocator</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line.extension:additionalLocator</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.9</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3284</ID>
+		<naam>AanduidingBijNummer</naam>
+		<mapping>RelatedPerson.address.line.extension:additionalLocator</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.9</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3285</ID>
 		<naam>Postcode</naam>
-		<mapping>Patient/RelatedPerson.address.line.postalCode</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line.postalCode</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.6</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3285</ID>
+		<naam>Postcode</naam>
+		<mapping>RelatedPerson.address.line.postalCode</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.6</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3286</ID>
 		<naam>Woonplaats</naam>
-		<mapping>Patient/RelatedPerson.address.line.city</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line.city</mapping>
+		<profile>nl-core-patient</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.3</zib>
+		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3286</ID>
+		<naam>Woonplaats</naam>
+		<mapping>RelatedPerson.address.line.city</mapping>
+		<profile>nl-core-relatedperson</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
@@ -272,113 +350,212 @@
 	<record>
 		<ID>peri32-dataelement-3287</ID>
 		<naam>Gemeente</naam>
-		<mapping>Patient/RelatedPerson.address.line.district</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line.district</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.4</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3287</ID>
+		<naam>Gemeente</naam>
+		<mapping>RelatedPerson.address.line.district</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.4</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3288</ID>
 		<naam>Land</naam>
-		<mapping>Patient/RelatedPersonaddress.country</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.country</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3288</ID>
+		<naam>Land</naam>
+		<mapping>RelatedPerson.address.country</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.5</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3289</ID>
 		<naam>AdditioneleInformatie</naam>
-		<mapping>Patient/RelatedPerson.address.line.extension:unitID</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.line.extension:unitID</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.7</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3289</ID>
+		<naam>AdditioneleInformatie</naam>
+		<mapping>RelatedPerson.address.line.extension:unitID</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.7</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3290</ID>
 		<naam>AdresSoort</naam>
-		<mapping>Patient/RelatedPerson.address.type/.use (via conceptmap)</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.address.type/.use (via conceptmap)</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.8</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3290</ID>
+		<naam>AdresSoort</naam>
+		<mapping>RelatedPerson.address.type/.use (via conceptmap)</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.5.8</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3291</ID>
 		<naam>Contactgegevens</naam>
-		<mapping>Patient/RelatedPerson.telecom</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.1</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<searchurl>GET [base]/Coverage?_include=Coverage:payor:Patient</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3291</ID>
+		<naam>Contactgegevens</naam>
+		<mapping>RelatedPerson.telecom</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.1</zib>
+		<searchurl>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</searchurl>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3292</ID>
 		<naam>Telefoonnummers</naam>
-		<mapping>Patient/RelatedPerson.telecom</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<searchurl>GET [base]/Coverage?_include=Coverage:payor:Patient</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3292</ID>
+		<naam>Telefoonnummers</naam>
+		<mapping>RelatedPerson.telecom</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.2</zib>
+		<searchurl>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</searchurl>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3293</ID>
 		<naam>Telefoonnummer</naam>
-		<mapping>Patient/RelatedPerson.telecom.value</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom.value</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.4</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3293</ID>
+		<naam>Telefoonnummer</naam>
+		<mapping>RelatedPerson.telecom.value</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.4</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3294</ID>
 		<naam>TelecomType</naam>
-		<mapping>Patient/RelatedPerson.telecom:extension:TelecomType</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom:extension:TelecomType</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3294</ID>
+		<naam>TelecomType</naam>
+		<mapping>RelatedPerson.telecom:extension:TelecomType</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.5</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3295</ID>
 		<naam>NummerSoort</naam>
-		<mapping>Patient/RelatedPerson.telecom.use</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom.use</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.6</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3295</ID>
+		<naam>NummerSoort</naam>
+		<mapping>RelatedPerson.telecom.use</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.6</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3296</ID>
 		<naam>EmailAdressen</naam>
-		<mapping>Patient/RelatedPerson.telecom.value</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom.value</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 		<searchurl>GET [base]/Coverage?_include=Coverage:payor:Patient</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3296</ID>
+		<naam>EmailAdressen</naam>
+		<mapping>RelatedPerson.telecom.value</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.3</zib>
+		<searchurl>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</searchurl>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3297</ID>
 		<naam>EmailAdres</naam>
-		<mapping>Patient/RelatedPerson.telecom.value</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom.value</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.7</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3297</ID>
+		<naam>EmailAdres</naam>
+		<mapping>RelatedPerson.telecom.value</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.7</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3298</ID>
 		<naam>EmailSoort</naam>
-		<mapping>Patient/RelatedPerson.telecom.use</mapping>
-		<profile>nl-core-patient/nl-core-relatedperson</profile>
+		<mapping>Patient.telecom.use</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>NL-CM-20.6.8</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3298</ID>
+		<naam>EmailSoort</naam>
+		<mapping>RelatedPerson.telecom.use</mapping>
+		<profile>nl-core-relatedperson</profile>
+		<in>true</in>
+		<zib>NL-CM-20.6.8</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-750</ID>
@@ -1393,8 +1570,8 @@
 	<record>
 		<ID>peri32-dataelement-9861</ID>
 		<naam>GeborenIndicator</naam>
-		<mapping>Patient.extension.born</mapping>
-		<profile>bc-child</profile>
+		<mapping>Patient.extension:fetalStatus.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-Child</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-683</ID>
@@ -1470,13 +1647,25 @@
 		<ID>peri32-dataelement-7861</ID>
 		<naam>DatumAanvang</naam>
 		<mapping>Condition.onset[x]:onsetDateTime</mapping>
-		<profile>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</profile>
+		<profile>bc-LegalSituation-LegalStatus</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-7861</ID>
+		<naam>DatumAanvang</naam>
+		<mapping>Condition.onset[x]:onsetDateTime</mapping>
+		<profile>bc-LegalSituation-Representation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7862</ID>
 		<naam>DatumEinde</naam>
-		<mapping>Condistion.abatementDateTime</mapping>
-		<profile>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</profile>
+		<mapping>Condition.abatement[x]:abatementDateTime</mapping>
+		<profile>bc-LegalSituation-LegalStatus</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-7862</ID>
+		<naam>DatumEinde</naam>
+		<mapping>Condition.abatement[x]:abatementDateTime</mapping>
+		<profile>bc-LegalSituation-Representation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-956</ID>
@@ -2053,6 +2242,12 @@
 		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3844</ID>
+		<naam>AfspraakPartijen</naam>
+		<mapping>CarePlan.author.extension:isContributor</mapping>
+		<profile>bc-CareAgreement</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3845</ID>
 		<naam>Patient</naam>
 		<mapping>CarePlan.author</mapping>
@@ -2083,9 +2278,21 @@
 		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3849</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>CarePlan.author.extension:practitionerRole</mapping>
+		<profile>bc-CareAgreement</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3867</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>CarePlan.author</mapping>
+		<profile>bc-CareAgreement</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3867</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>CarePlan.author.extension:practitionerRole</mapping>
 		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
@@ -2133,7 +2340,7 @@
 	<record>
 		<ID>peri32-dataelement-3858</ID>
 		<naam>Coordinator</naam>
-		<mapping>CarePlan.author.extension:coordinator</mapping>
+		<mapping>CarePlan.author.extension:isCoordinator</mapping>
 		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
@@ -2141,6 +2348,12 @@
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
 		<profile>nl-core-practitionerrole</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3864</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>CarePlan.author.extension:practitionerRole.valueReference:valueReference</mapping>
+		<profile>bc-CareAgreement</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3860</ID>
@@ -2587,6 +2800,12 @@
 		<searchurl>GET [base]/EpisodeOfCare?type=http://snomed/info/sct |364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3399</ID>
+		<naam>ZorgEpisode</naam>
+		<mapping>Encounter.episodeOfCare</mapping>
+		<profile>bc-MultidisciplinaryTeamMeeting</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3338</ID>
 		<naam>Identificatie zorgepisode</naam>
 		<mapping>EpisodeOfCare.identifier</mapping>
@@ -2863,7 +3082,7 @@
 	<record>
 		<ID>peri32-dataelement-8801</ID>
 		<naam>Casemanager</naam>
-		<mapping>CarePlan.extension:caseManager</mapping>
+		<mapping>CarePlan.author.extension:isCoordinator</mapping>
 		<profile>bc-IndividualCareplan</profile>
 	</record>
 	<record>
@@ -2871,6 +3090,18 @@
 		<naam>Zorgverlener</naam>
 		<mapping>Practitioner</mapping>
 		<profile>nl-core-practitioner</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-8802</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>CarePlan.author</mapping>
+		<profile>bc-IndividualCareplan</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-8802</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>CarePlan.author.extension:practitionerRole</mapping>
+		<profile>bc-IndividualCareplan</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8803</ID>
@@ -2881,13 +3112,13 @@
 	<record>
 		<ID>peri32-dataelement-8804</ID>
 		<naam>ZorgTeam</naam>
-		<mapping>CareTeam</mapping>
+		<mapping>CarePlan.careTeam</mapping>
 		<profile>bc-IndividualCareplan</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8810</ID>
 		<naam>Behandeldoel</naam>
-		<mapping>CarePlan.activity.detail.goal</mapping>
+		<mapping>CarePlan.goal</mapping>
 		<profile>bc-IndividualCareplan</profile>
 	</record>
 	<record>
@@ -2917,7 +3148,7 @@
 	<record>
 		<ID>peri32-dataelement-8816</ID>
 		<naam>ZorgAfspraak</naam>
-		<mapping>CarePlan.basedOn:zorgafspraak</mapping>
+		<mapping>CarePlan.basedOn</mapping>
 		<profile>bc-IndividualCareplan</profile>
 	</record>
 	<record>
@@ -3190,7 +3421,13 @@
 		<ID>peri32-dataelement-10567</ID>
 		<naam>JuridischeSituatie</naam>
 		<mapping>Condition</mapping>
-		<profile>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</profile>
+		<profile>bc-LegalSituation-LegalStatus</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10567</ID>
+		<naam>JuridischeSituatie</naam>
+		<mapping>Condition</mapping>
+		<profile>bc-LegalSituation-Representation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-900</ID>
@@ -3554,6 +3791,12 @@
 		<ID>peri32-dataelement-10415</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>Consent.consentingParty</mapping>
+		<profile>bc-TreatmentDirective</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10415</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Consent.consentingParty.extension:practitionerRole</mapping>
 		<profile>bc-TreatmentDirective</profile>
 	</record>
 	<record>
@@ -4959,6 +5202,12 @@
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/episodeofcare-example-duplicate-3</example>
 		<searchurl>GET [base]/Condition?context=EpisodeOfCare/[recordid],Encounter/[contactid]</searchurl>
+	</record>
+	<record>
+		<ID>peri32-dataelement-1698</ID>
+		<naam>Identificatie van de zwangerschap</naam>
+		<mapping>EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier</mapping>
+		<profile>bc-MaternalRecord</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1699</ID>
@@ -7248,6 +7497,12 @@
 		<profile>nl-core-practitionerrole</profile>
 	</record>
 	<record>
+		<ID>peri32-dataelement-10801</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Encounter.participant.individual</mapping>
+		<profile>bc-ChildBirthAssistance</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10714</ID>
 		<naam>Locatie</naam>
 		<mapping>Encounter.serviceProvider</mapping>
@@ -7633,7 +7888,7 @@
 	<record>
 		<ID>peri31-dataelement-1443</ID>
 		<naam>Locatie</naam>
-		<mapping>Procedure.performer.actor</mapping>
+		<mapping>Procedure.location</mapping>
 		<profile>bc-ObstetricProcedure</profile>
 		<zib>peri32-dataelement-1540</zib>
 	</record>
@@ -7709,7 +7964,7 @@
 	<record>
 		<ID>peri31-dataelement-1453</ID>
 		<naam>VerrichtingLateraliteit</naam>
-		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
+		<mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
 		<profile>bc-ObstetricProcedure</profile>
 		<zib>peri32-dataelement-1533</zib>
 	</record>
@@ -8149,10 +8404,24 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-1378</ID>
+		<naam>Patient</naam>
+		<mapping>Observation.subject</mapping>
+		<profile>bc-PerinatalDeath</profile>
+		<in>true</in>
+		<zib>peri32-dataelement-675</zib>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10566</ID>
 		<naam>JuridischeSituatie</naam>
 		<mapping>Condition</mapping>
-		<profile>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</profile>
+		<profile>bc-LegalSituation-LegalStatus</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10566</ID>
+		<naam>JuridischeSituatie</naam>
+		<mapping>Condition</mapping>
+		<profile>bc-LegalSituation-Representation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1405</ID>
@@ -8269,7 +8538,7 @@
 	<record>
 		<ID>peri31-dataelement-1419</ID>
 		<naam>Oorzaak overlijden (Observatie)</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-ChildObservation</profile>
 		<zib/>
 	</record>
@@ -8281,10 +8550,17 @@
 		<zib/>
 	</record>
 	<record>
+		<ID>peri31-dataelement-1430</ID>
+		<naam>Problem</naam>
+		<mapping>Observation.value[x].extension:valueReference</mapping>
+		<profile>bc-ChildObservation</profile>
+		<zib/>
+	</record>
+	<record>
 		<ID>peri31-dataelement-1428</ID>
 		<naam>Toelichting</naam>
-		<mapping/>
-		<profile/>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-ChildObservation</profile>
 		<zib/>
 	</record>
 	<record>
@@ -11277,7 +11553,7 @@
 	<record>
 		<ID>peri32-dataelement-2427</ID>
 		<naam>Locatie</naam>
-		<mapping>Procedure.performer.actor</mapping>
+		<mapping>Procedure.location</mapping>
 		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 	</record>
@@ -11373,6 +11649,18 @@
 		<naam>Patient</naam>
 		<mapping>Observation.subject</mapping>
 		<profile>bc-FetusObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10283</ID>
+		<naam>Patient</naam>
+		<mapping>Observation.subject</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10283</ID>
+		<naam>Patient</naam>
+		<mapping>Observation.subject</mapping>
+		<profile>bc-UmbilicalCord</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1767</ID>
@@ -11577,7 +11865,7 @@
 	<record>
 		<ID>peri32-dataelement-3525</ID>
 		<naam>ACPercentielWaarde</naam>
-		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component:acPercentielWaarde.value[x]</mapping>
 		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
@@ -11655,7 +11943,7 @@
 	<record>
 		<ID>peri32-dataelement-3551</ID>
 		<naam>FLPercentielWaarde</naam>
-		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component:flPercentielWaarde.value[x]</mapping>
 		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
@@ -11769,7 +12057,7 @@
 	<record>
 		<ID>peri32-dataelement-3588</ID>
 		<naam>CRLPercentielWaarde</naam>
-		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component:crlPercentielWaarde.value[x]</mapping>
 		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
@@ -11811,7 +12099,7 @@
 	<record>
 		<ID>peri32-dataelement-3601</ID>
 		<naam>TCDPercentielWaarde</naam>
-		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<mapping>Observation.component:tcdPercentielWaarde.value[x]</mapping>
 		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
@@ -11920,7 +12208,7 @@
 	<record>
 		<ID>peri32-dataelement-1784</ID>
 		<naam>Foetale hartslag (Hartfrequentie)</naam>
-		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-FetalHeartRate</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-1776</zib>
@@ -11934,7 +12222,7 @@
 	<record>
 		<ID>peri32-dataelement-10951</ID>
 		<naam>LiggingFoetusWaarde</naam>
-		<mapping>Observation</mapping>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-FetusObservation</profile>
 		<zib>peri32-dataelement-4062</zib>
 	</record>
@@ -13167,8 +13455,8 @@
 	<record>
 		<ID>peri32-dataelement-10950</ID>
 		<naam>Uitgevoerde test NIPT</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-MaternalObservation</profile>
+		<mapping>Observation.code</mapping>
+		<profile>zib-LaboratoryTestResult-Observation</profile>
 		<zib/>
 	</record>
 	<record>
@@ -15014,7 +15302,7 @@
 	<record>
 		<ID>peri32-dataelement-3123</ID>
 		<naam>WondInfectie</naam>
-		<mapping>Observation.component.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.7</zib>
@@ -15241,7 +15529,7 @@
 	<record>
 		<ID>peri32-dataelement-2857</ID>
 		<naam>TepelsWaarde</naam>
-		<mapping>Observation.value[x]:valueString</mapping>
+		<mapping>Observation.component:nipples.value[x]:valueString</mapping>
 		<profile>bc-BreastFindings</profile>
 		<in>false</in>
 	</record>
@@ -15455,7 +15743,7 @@
 	<record>
 		<ID>peri32-dataelement-2874</ID>
 		<naam>WondInfectie</naam>
-		<mapping>Observation.component.value[x]:valueBoolean</mapping>
+		<mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 		<zib>NL-CM-19.2.7</zib>
@@ -15736,7 +16024,13 @@
 		<ID>peri32-dataelement-9936</ID>
 		<naam>Uitscheiding</naam>
 		<mapping>Observation</mapping>
-		<profile>bc-ExcretionFeces/bc-ExcretionUrine</profile>
+		<profile>bc-ExcretionFeces</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-9936</ID>
+		<naam>Uitscheiding</naam>
+		<mapping>Observation</mapping>
+		<profile>bc-ExcretionUrine</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9937</ID>
