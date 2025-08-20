@@ -39,11 +39,6 @@
     <name value="W5 Mapping" />
   </mapping>
   <mapping>
-    <identity value="gebz-peri-v2.3" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.40050&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
-    <name value="Geboortezorg Perinatologie 2.3" />
-  </mapping>
-  <mapping>
     <identity value="gebz-peri-v3.2" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
     <name value="Geboortezorg 3.2" />
@@ -94,9 +89,9 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-83383" />
-        <comment value="Onderzoektype" />
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2423" />
+        <comment value="VerrichtingType" />
       </mapping>
     </element>
     <element id="DiagnosticReport.subject">
@@ -106,8 +101,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
       <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-2" />
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-674" />
         <comment value="Vrouw" />
       </mapping>
     </element>
@@ -122,17 +117,17 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord" />
       </type>
       <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-4" />
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1314" />
         <comment value="Zorgverlening" />
       </mapping>
     </element>
     <element id="DiagnosticReport.effective[x]">
       <path value="DiagnosticReport.effective[x]" />
       <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-50020" />
-        <comment value="Datum onderzoek" />
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7869" />
+        <comment value="TekstUitslagDatumTijd" />
       </mapping>
     </element>
     <element id="DiagnosticReport.performer.role.coding">
