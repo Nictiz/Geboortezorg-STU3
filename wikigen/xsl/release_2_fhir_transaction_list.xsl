@@ -54,41 +54,43 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     </xd:doc>
     <xsl:template match="concept[@statusCode!='cancelled']" mode="makeTables">
         <xsl:param name="level">1</xsl:param>
-        <xsl:variable name="id" select="@id/string()"/>
-        <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>
-        <!-- For terminology, prefer Snomed or LOINC, else take the first one -->
-        <xsl:variable name="terminologies" select="./terminologyAssociation[(@conceptId=$id) or (@conceptId=$inheritId)]"/>
-        <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
-        <!-- Get FHIR system, now SCT or LOINC or urn:oid:... -->
-        <xsl:variable name="system" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then 'http://snomed.info/sct' else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then 'http://loinc.org' else if ($terminology) then concat('urn:oid:', $terminology/@codeSystem/string()) else ()"/>
-        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>     
-        <xsl:element name="mapping" namespace="">
-            <xsl:attribute name="conceptId" select="$id"/>
-            <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
-            <xsl:attribute name="type" select="if (./@type = 'group') then 'group' else ./valueDomain/@type"/>
-            <xsl:attribute name="shortId" select="tokenize(./@id, '\.')[last()]"/>
-            <xsl:attribute name="name" select="./name/string()"/>
-            <xsl:copy-of select="./@minimumMultiplicity"/>
-            <xsl:copy-of select="./@maximumMultiplicity"/>
-            <xsl:if test="$fhirmapping">
-                <xsl:variable name="pattern" select="$fhirmapping/profile"/>
-                <xsl:attribute name="resource" select="$fhirmapping/resource"/>
-                <xsl:for-each select="$pattern">
-                    <xsl:attribute name="bc-pattern" select="if ((starts-with(., 'bc-') and ends-with(., 'Observation')) or starts-with(., 'bc-Disorder')) then true() else false()"/>                
-                </xsl:for-each>
-                <xsl:attribute name="pattern" select="$pattern"/>
-                <xsl:attribute name="mapping" select="$fhirmapping/mapping"/>
-                <xsl:attribute name="example" select="$fhirmapping/example"/>
-                <xsl:variable name="searchurls" select="tokenize($fhirmapping/searchurl, 'GET')[not(position()=1)]"/>
-                <xsl:for-each select="$searchurls">
-                    <xsl:element name="search">
-                        <xsl:copy-of select="concat('GET', .)"></xsl:copy-of>
-                    </xsl:element>
-                </xsl:for-each>
-            </xsl:if>
-        </xsl:element>
         
-        <xsl:apply-templates select="./concept" mode="makeTables"/>
+        <xsl:if test=".[not(lower-case(name[@language = 'nl-NL'])='prullenbak')]">
+            <xsl:variable name="id" select="@id/string()"/>
+            <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>
+            <!-- For terminology, prefer Snomed or LOINC, else take the first one -->
+            <xsl:variable name="terminologies" select="./terminologyAssociation[(@conceptId=$id) or (@conceptId=$inheritId)]"/>
+            <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
+            <!-- Get FHIR system, now SCT or LOINC or urn:oid:... -->
+            <xsl:variable name="system" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then 'http://snomed.info/sct' else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then 'http://loinc.org' else if ($terminology) then concat('urn:oid:', $terminology/@codeSystem/string()) else ()"/>
+            <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)" as="element(record)*"/>     
+            <mapping>
+                <xsl:attribute name="conceptId" select="$id"/>
+                <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
+                <xsl:attribute name="type" select="if (./@type = 'group') then 'group' else ./valueDomain/@type"/>
+                <xsl:attribute name="shortId" select="tokenize(./@id, '\.')[last()]"/>
+                <xsl:attribute name="name" select="./name/string()"/>
+                <xsl:copy-of select="./@minimumMultiplicity"/>
+                <xsl:copy-of select="./@maximumMultiplicity"/>
+                <xsl:if test="$fhirmapping[profile[not(. = '')]]">
+                    <xsl:variable name="pattern" select="$fhirmapping/profile"/>
+                    <xsl:attribute name="resource" select="$fhirmapping/resource"/>
+                    <xsl:for-each select="$pattern">
+                        <xsl:attribute name="bc-pattern" select="if ((starts-with(., 'bc-') and ends-with(., 'Observation')) or starts-with(., 'bc-Disorder')) then true() else false()"/>                
+                    </xsl:for-each>
+                    <xsl:attribute name="pattern" select="$pattern"/>
+                    <xsl:attribute name="mapping" select="$fhirmapping/mapping"/>
+                    <xsl:attribute name="example" select="$fhirmapping/example"/>
+                    <xsl:for-each select="$fhirmapping/searchurl">
+                        <xsl:element name="search">
+                            <xsl:value-of select="."/>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:if>
+            </mapping>
+            
+            <xsl:apply-templates select="./concept" mode="makeTables"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="node()|@*"/>
