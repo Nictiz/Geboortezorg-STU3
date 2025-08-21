@@ -53,11 +53,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-4402" />
-        <comment value="Geboortegewicht (Lichaamsgewicht)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4403" />
         <comment value="Bevindingen" />
       </mapping>
@@ -65,11 +60,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4404" />
         <comment value="Algemene indruk" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1418" />
-        <comment value="Geboortegewicht (Lichaamsgewicht)" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -178,21 +168,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8758" />
-        <comment value="Lichaamsgewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8759" />
-        <comment value="Schedelomvang" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10660" />
-        <comment value="Lichaamstemperatuur" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9733" />
         <comment value="ROP Screening (Observatie)" />
       </mapping>
@@ -225,11 +200,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9791" />
         <comment value="Gezondheidstoestand (Observatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9812" />
-        <comment value="Schedelomvang" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -293,11 +263,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2581" />
-        <comment value="Opleiding" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9737" />
         <comment value="Opleiding" />
       </mapping>
@@ -305,6 +270,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9740" />
         <comment value="Opleiding" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1419" />
+        <comment value="Oorzaak overlijden (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.identifier">
@@ -387,11 +357,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8645" />
         <comment value="ObservatieDatumTijd" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1421" />
-        <comment value="GewichtDatumTijd" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -534,6 +499,21 @@
         <comment value="Substantie voeding kind" />
       </mapping>
     </element>
+    <element id="Observation.value[x].extension:valueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valueReference" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1430" />
+        <comment value="Oorzaak overlijden (Probleem)" />
+      </mapping>
+    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
@@ -642,11 +622,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2582" />
-        <comment value="Schooltype" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9738" />
         <comment value="Opleiding moeder" />
       </mapping>
@@ -717,46 +692,11 @@
         <comment value="DatumHielprikWaarde" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
-      <type>
-        <code value="Quantity" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1419" />
-        <comment value="GewichtWaarde" />
-      </mapping>
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-10605" />
-        <comment value="Percentiel van het geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri-dataelement-80670" />
-        <comment value="Percentiel van het geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1423" />
-        <comment value="PercentielGeboortegewicht" />
-      </mapping>
-    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8653" />
-        <comment value="Toelichting" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1420" />
         <comment value="Toelichting" />
       </mapping>
       <mapping>
@@ -871,12 +811,12 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2583" />
+        <map value="peri32-dataelement-9742" />
         <comment value="Toelichting" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9742" />
+        <map value="peri31-dataelement-1428" />
         <comment value="Toelichting" />
       </mapping>
     </element>
@@ -1106,34 +1046,6 @@
     <element id="Observation.component:clothing">
       <path value="Observation.component" />
       <sliceName value="clothing" />
-    </element>
-    <element id="Observation.component:clothing.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="8352-7" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="KledingCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20200901000000" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1422" />
-        <comment value="Kleding" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

@@ -47,7 +47,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <map name="{$bc-profile}">
                     <xsl:variable name="conceptIDs" select="$fhirmapping/dataset/record[profile=$bc-profile]/ID/string()"/>
                     <xsl:for-each select="$dataset//concept[@iddisplay = $conceptIDs]">
-                        <xsl:apply-templates select="." mode="makeTables"/>
+                        <xsl:apply-templates select="." mode="makeTables">
+                            <xsl:with-param name="bc-profile" select="$bc-profile"/>
+                        </xsl:apply-templates>
                     </xsl:for-each>
                 </map>
             </xsl:for-each>
@@ -58,6 +60,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xd:desc>Creates a table row for a concept</xd:desc>
     </xd:doc>
     <xsl:template match="concept" mode="makeTables">
+        <xsl:param name="bc-profile"/>
         <xsl:variable name="id" select="@id/string()"/>
         <xsl:variable name="inheritId" select="./inherit/@ref/string()"/>
         <xsl:variable name="referenceId" select="substring-after(./contains/@refdisplay, 'peri32-dataelement-')"/>
@@ -66,7 +69,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="terminology" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then $terminologies[@codeSystem='2.16.840.1.113883.6.96'] else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then $terminologies[@codeSystem='2.16.840.1.113883.6.1'] else $terminologies[1]"/>
         <!-- Get FHIR system, now SCT or LOINC or urn:oid:... -->
         <xsl:variable name="system" select="if ($terminologies[@codeSystem='2.16.840.1.113883.6.96']) then 'http://snomed.info/sct' else if ($terminologies[@codeSystem='2.16.840.1.113883.6.1']) then 'http://loinc.org' else if ($terminology) then concat('urn:oid:', $terminology/@codeSystem/string()) else ()"/>
-        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)"/>  
+        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping)[profile=$bc-profile]" as="element()?"/>  
         <xsl:element name="mapping" namespace="">
             <xsl:attribute name="conceptId" select="$id"/>
             <xsl:attribute name="referenceId" select="$referenceId"/>
@@ -74,7 +77,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <xsl:attribute name="level" select="count(ancestor::concept) + 1"/>
             <xsl:attribute name="parent" select="tokenize(ancestor::concept[1]/@id, '\.')[last()]"/>
             <xsl:attribute name="shortId" select="tokenize(./@id, '\.')[last()]"/>
-            <xsl:attribute name="name" select="./name/string()"/>
+            <xsl:attribute name="name" select="(name[@language='nl-NL'], name)[1]"/>
             <xsl:attribute name="system" select="$system"/>
             <xsl:attribute name="code" select="$terminology/@code/string()"/>
             <xsl:attribute name="display" select="$terminology/@displayName/string()"/>
