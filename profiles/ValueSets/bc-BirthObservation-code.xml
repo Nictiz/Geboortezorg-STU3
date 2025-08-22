@@ -1,54 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="bc-BirthObservation-code" />
+   <id value="bc-BirthObservation-code"/>
    <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
    </meta>
-   <url value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-code" />
-   <version value="1.3.3" />
-   <name value="bc-BirthObservation-code" />
-   <title value="bc-BirthObservation-code" />
-   <status value="draft" />
-   <experimental value="false" />
-   <publisher value="Nictiz" />
-   <description value="bc-BirthObservation-code" />
-   <immutable value="false" />
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org." />
+   <url value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-code"/>
+   <version value="1.3.3"/>
+   <name value="bc-BirthObservation-code"/>
+   <title value="bc-BirthObservation-code"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <description value="bc-BirthObservation-code"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://snomed.info/sct" />
+         <system value="http://snomed.info/sct"/>
          <concept>
-            <code value="289251005" />
-            <display
-               value="tijdstip waarop gebroken vliezen zijn geconstateerd (waarneembare entiteit)" />
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-4196 WerkelijkePlaatsBaringWaarde"/>
+            </extension>
+            <code value="366344009"/>
+            <display value="bevinding betreffende locatie van partus"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-4135 ActiefMeepersenWaarde"/>
+            </extension>
             <code value="249163006"/>
             <display value="begin van persen tijdens partus (waarneembare entiteit)"/>
          </concept>
-          <concept>
-            <code value="364336006" />
-            <display value="soort partus (waarneembare entiteit)" />
+         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10247 DuurUitdrijvingWaarde"/>
+            </extension>
+            <code value="169822006"/>
+            <display value="duur van tweede fase van partus (waarneembare entiteit)"/>
          </concept>
          <concept>
-            <code value="249163006" />
-            <display value="begin van persen tijdens partus (waarneembare entiteit)" />
-         </concept>
-         <concept>
-            <code value="366344009"/>
-            <display value="bevinding betreffende locatie van partus (bevinding)"/>
-         </concept>
-         <concept>
-            <code value="386639001"/>
-            <display value="afbreken van zwangerschap (verrichting)"/>
-         </concept>
-         <concept>
-            <code value="271692001"/>
-            <display value="presenterend deel van foetus (waarneembare entiteit)"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-4147 TypePartusWaarde"/>
+            </extension>
+            <code value="364336006"/>
+            <display value="soort partus (waarneembare entiteit)"/>
          </concept>
       </include>
       <include>
-         <system value="http://loinc.org" />
+         <system value="http://loinc.org"/>
       </include>
+      <!--peri32-dataelement-1197 VerrichtingType in profile "bc-ObstetricProcedure"
+          peri32-dataelement-1554 VerrichtingType in profile "bc-ObstetricProcedure"
+          peri32-dataelement-4147 TypePartusWaarde in profile "bc-BirthObservation"
+          peri31-dataelement-1456 VerrichtingType in profile "bc-ObstetricProcedure"
+          peri32-dataelement-1536 VerrichtingType in profile ""-->
+      <!--<concept>
+              <code value="386639001"/>
+              <display value="afbreken van zwangerschap (verrichting)"/>
+          </concept>-->
+      <!--=========================================================-->
    </compose>
 </ValueSet>

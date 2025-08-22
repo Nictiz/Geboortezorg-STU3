@@ -796,8 +796,8 @@
 	<record>
 		<ID>peri32-dataelement-10682</ID>
 		<naam>Probleem (OpnameIndicatie_LNR)</naam>
-		<mapping>nvt</mapping>
-		<profile>nvt</profile>
+		<mapping>Condition</mapping>
+		<profile>bc-DisorderOfChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10683</ID>
@@ -4819,7 +4819,7 @@
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|364336006</searchurl>
 	</record>
 	<record>
-		<ID>peri32-dataelement-4394</ID>
+		<ID>peri32-dataelement-4193</ID>
 		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-BirthObservation</profile>
@@ -4827,7 +4827,7 @@
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|169812000</searchurl>
 	</record>
 	<record>
-		<ID>peri32-dataelement-4395</ID>
+		<ID>peri32-dataelement-1587</ID>
 		<naam>Ziekenhuis baring</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-DeliveryObservation</profile>
@@ -5598,7 +5598,7 @@
 	<record>
 		<ID>peri32-dataelement-2252</ID>
 		<naam>Voorgenomen plaats baring tijdens zwangerschap (Observatie)</naam>
-		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>true</in>
 	</record>
@@ -5712,7 +5712,7 @@
 	<record>
 		<ID>peri32-dataelement-2272</ID>
 		<naam>Voorgenomen achternaam (Observatie)</naam>
-		<mapping>Observation.value[x]:valueString</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
@@ -5769,7 +5769,7 @@
 	<record>
 		<ID>peri32-dataelement-2269</ID>
 		<naam>Kraamzorg aangevraagd (Observatie)</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
+		<mapping>Observation</mapping>
 		<profile>bc-MaternalObservation</profile>
 		<in>false</in>
 	</record>
@@ -6726,23 +6726,22 @@
 	<record>
 		<ID>peri32-dataelement-1846</ID>
 		<naam>Maternale sterfte</naam>
-		<mapping>Observation</mapping>
-		<profile>bc-MaternalObservation</profile>
-		<in>VALIDEREN</in>
+		<mapping>Patient</mapping>
+		<profile>nl-core-patient</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1847</ID>
 		<naam>OverlijdensIndicator</naam>
-		<mapping>Observation.value[x]:valueBoolean</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<mapping>Patient.deceased[x]</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-686</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1848</ID>
 		<naam>DatumOverlijden</naam>
-		<mapping>Observation.value[x]:valueDateTime</mapping>
-		<profile>bc-PregnancyObservation</profile>
+		<mapping>Patient.deceased[x]</mapping>
+		<profile>nl-core-patient</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-687</zib>
 	</record>
@@ -10070,13 +10069,13 @@
 		<mapping>Practitioner</mapping>
 		<profile>nl-core-practitioner</profile>
 	</record>
-	<record>
+	<!--<record>
 		<ID>peri32-dataelement-1489</ID>
 		<naam>Problematiek kind</naam>
 		<mapping>Condition</mapping>
 		<profile>bc-DisorderOfChild</profile>
 		<in>true</in>
-	</record>
+	</record>-->
 	<record>
 		<ID>peri32-dataelement-1503</ID>
 		<naam>Probleem (ProblematiekKind)</naam>
@@ -10186,13 +10185,13 @@
 		<mapping>Condition.extension:onsetPeriod</mapping>
 		<profile>bc-DisorderOfChild</profile>
 	</record>
-	<record>
+	<!--<record>
 		<ID>peri32-dataelement-1490</ID>
 		<naam>Geboortetrauma</naam>
 		<mapping>Condition</mapping>
 		<profile>bc-DisorderOfChild</profile>
 		<in>true</in>
-	</record>
+	</record>-->
 	<record>
 		<ID>peri32-dataelement-1493</ID>
 		<naam>Probleem (Geboortetrauma)</naam>
@@ -10271,13 +10270,13 @@
 		<in>true</in>
 		<zib>NL-CM-5.1.5</zib>
 	</record>
-	<record>
+	<!--<record>
 		<ID>peri32-dataelement-1513</ID>
 		<naam>Congenitale aandoeningen</naam>
 		<mapping>Condition</mapping>
 		<profile>bc-DisorderOfChild</profile>
 		<in>true</in>
-	</record>
+	</record>-->
 	<record>
 		<ID>peri32-dataelement-1514</ID>
 		<naam>Probleem (Congenitale aandoeningen)</naam>
