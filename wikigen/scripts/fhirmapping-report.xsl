@@ -11,10 +11,10 @@ See the GNU Lesser General Public License for more details.
 
 The full text of the license is available at http://www.gnu.org/copyleft/lesser.html
 -->
-<xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:f="http://hl7.org/fhir" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nf="http://www.nictiz.nl/functions" exclude-result-prefixes="#all" version="2.0">
+<xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:f="http://hl7.org/fhir" xmlns:local="urn:fhir:stu3:functions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nf="http://www.nictiz.nl/functions" exclude-result-prefixes="#all" version="3.0">
         
     <xd:doc scope="stylesheet">
-        <xd:desc>Produces valuesets from FHIR mapping
+        <xd:desc>Produces mappping report html from FHIR mapping that tells you about thing relevant for QA
             <xd:p><xd:b>Expected input</xd:b> fhirmapping(-3-2).xml</xd:p>
             <xd:p><xd:b>History:</xd:b>
                 <xd:ul>
@@ -25,11 +25,48 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         </xd:desc>
     </xd:doc>
     
+    <xsl:import href="../../../YATC-internal/ada-2-fhir/env/fhir/2_fhir_fhir_include.xsl"/>
+    
     <xsl:output method="xml" indent="yes"/>
+    
+    <xsl:param name="outputdir" select="'.'"/>
+    
     <xsl:variable name="fhirVersion" select="'3.0'"/>
     <xsl:variable name="all-profiles" select="collection('../../profiles/?select=*.xml&amp;recurse=yes')//f:StructureDefinition" as="element(f:StructureDefinition)+"/>
     <xsl:variable name="fhirmapping-file" select="doc('../../fhirmapping-3-2.xml')/*" as="element()+"/>
     <xsl:variable name="ada-release-file" select="doc('../../../art_decor/projects/perinatologie-326/definitions/perinatologie-326-ada-release.xml')/*" as="element()"/>
+    
+    <xsl:variable name="allValueSets" select="collection('../../profiles/ValueSets?select=*.xml&amp;recurse=yes')//f:ValueSet"/>
+    <xsl:variable name="valueSets" as="element(f:ValueSet)*">
+        <xsl:for-each select="$allValueSets[starts-with(f:name/@value, 'bc-')]">
+            <xsl:choose>
+                <xsl:when test="descendant::f:valueSet">
+                    <xsl:copy>
+                        <xsl:copy-of select="* except f:compose"/>
+                        <xsl:for-each select="f:compose">
+                            <xsl:copy>
+                                <xsl:copy-of select="f:lockedDate | f:inactive"/>
+                                <xsl:for-each select="f:include">
+                                    <xsl:copy>
+                                        <xsl:copy-of select="* except f:valueSet"/>
+                                        <xsl:for-each select="f:valueSet">
+                                            <xsl:copy>
+                                                <xsl:copy-of select="@*"/>
+                                                <xsl:copy-of select="$allValueSets[f:url/@value = current()/@value]"/>
+                                            </xsl:copy>
+                                        </xsl:for-each>
+                                    </xsl:copy>
+                                </xsl:for-each>
+                            </xsl:copy>
+                        </xsl:for-each>
+                    </xsl:copy>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="."/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:variable>
     
     <!-- 
         <record>
@@ -50,9 +87,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         <xsl:variable name="rows" as="element(tr)*">
             <xsl:for-each-group select="$fhirmapping-file/record" group-by="ID">
                 <xsl:variable name="mappingRecord" select="current-group()"/>
-                <xsl:variable name="datasetConcept" select="$ada-release-file//concept[@iddisplay = current-grouping-key()]" as="element(concept)*"/>
+                <xsl:variable name="datasetConcept" select="nf:getDataConcept(current-grouping-key())" as="element(concept)*"/>
                 <xsl:variable name="profileMapping" select="$all-profiles//f:mapping[f:map/@value = current-grouping-key()]" as="element(f:mapping)*"/>
-                
+                <!-- Deactivated ... too simplistic -->
+                <xsl:variable name="terminologyAssociationConcept" select="$datasetConcept[1]/terminologyAssociationssss"/>
+                <!--<xsl:variable name="terminologyAssociationConcept" select="$datasetConcept[1]/terminologyAssociation[@conceptId = ../@id]"/>-->
+              
                 <xsl:variable name="columns" as="element()*">
                     <xsl:if test="$datasetConcept">
                         <td>
@@ -108,7 +148,16 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                             <xsl:variable name="elementId" select="ancestor-or-self::f:element/@id"/>
                                             <xsl:variable name="profileMismatch" select="empty($mappingRecord[profile = $profileName])"/>
                                             <xsl:variable name="pathMismatch" select="empty($mappingRecord[mapping = $elementId])"/>
-
+                                            <!-- Assumption ... checking code is enough, codeSystem (OID vs URI) complexity not necessary -->
+                                            <!-- <concept><code value="249163006"/><display value="begin van persen tijdens partus (waarneembare entiteit)"/></concept> -->
+                                            <xsl:variable name="terminologyMismatch" as="xs:boolean?">
+                                                <xsl:if test="$terminologyAssociationConcept and not(contains($elementId, '.'))">
+                                                    <xsl:for-each select="$valueSets[f:name/@value = concat($profileName, '-code')][empty(f:compose/f:include/f:valueSet[not(f:ValueSet)])]">
+                                                        <xsl:value-of select="empty(.//f:concept[f:code/@value = $terminologyAssociationConcept/@code])"/>
+                                                    </xsl:for-each>
+                                                </xsl:if>
+                                            </xsl:variable>
+                                            
                                             <li>
                                                 <xsl:if test="$profileMismatch or $pathMismatch">
                                                     <span style="color: red; font-weight: bold;" class="profile-mismatch">
@@ -131,6 +180,17 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                                     </xsl:if>
                                                     <xsl:value-of select="ancestor-or-self::f:element/@id"/>
                                                 </span>
+                                                <xsl:if test="$terminologyMismatch">
+                                                    <div style="color: red; font-weight: bold;" class="terminology-mismatch">
+                                                        <xsl:text>Terminology mismatch. Dataset: "</xsl:text>
+                                                        <xsl:value-of select="string-join($terminologyAssociationConcept/concat(@code, ' (', local:getUri(@codeSystem), ')'), ', ')"/>
+                                                        <xsl:text>" not present in value set </xsl:text>
+                                                        <xsl:value-of select="concat($profileName, '-code')"/>
+                                                        <xsl:for-each select="$valueSets[ends-with(f:name/@value, '-code')][descendant::f:concept[f:code/@value = $terminologyAssociationConcept/@code]]/f:name/@value">
+                                                            <div><xsl:text>Found code in ValueSet </xsl:text><xsl:value-of select="."/></div>
+                                                        </xsl:for-each>
+                                                    </div>
+                                                </xsl:if>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -148,6 +208,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 
                 <xsl:variable name="transactionIssue" as="xs:boolean" select="$columns//@class = 'transaction-mismatch'"/>
                 <xsl:variable name="profileIssue" as="xs:boolean"  select="$columns//@class = 'profile-mismatch'"/>
+                <xsl:variable name="terminologyIssue" as="xs:boolean"  select="$columns//@class = 'terminology-mismatch'"/>
                 
                 <!--<xsl:message>FHIR Mapping concept <xsl:value-of select="ID"/> - profile <xsl:value-of select="profile"/> - path <xsl:value-of select="mapping"/></xsl:message>
                             <xsl:choose>
@@ -171,26 +232,36 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                 </xsl:otherwise>
                             </xsl:choose>-->
                 
-                <tr>
-                    <xsl:if test="not($profileIssue)">
-                        <xsl:attribute name="class">row-valid</xsl:attribute>
-                    </xsl:if>
-                    <xsl:if test="$transactionIssue">
-                        <xsl:attribute name="aria-transaction-issue">true</xsl:attribute>
-                    </xsl:if>
-                    <xsl:if test="$profileIssue">
-                        <xsl:attribute name="aria-profile-issue">true</xsl:attribute>
-                    </xsl:if>
-                    
-                    <xsl:copy-of select="$columns"/>
-                </tr>
+                <xsl:if test="$columns">
+                    <tr>
+                        <xsl:if test="not($profileIssue or $terminologyIssue)">
+                            <xsl:attribute name="class">row-valid</xsl:attribute>
+                        </xsl:if>
+                        <xsl:if test="$transactionIssue">
+                            <xsl:attribute name="aria-transaction-issue">true</xsl:attribute>
+                        </xsl:if>
+                        <xsl:if test="$profileIssue">
+                            <xsl:attribute name="aria-profile-issue">true</xsl:attribute>
+                        </xsl:if>
+                        <xsl:if test="$terminologyIssue">
+                            <xsl:attribute name="aria-terminology-issue">true</xsl:attribute>
+                        </xsl:if>
+
+                        <xsl:copy-of select="$columns"/>
+                    </tr>
+                </xsl:if>
             </xsl:for-each-group>
         </xsl:variable>
         
-        <xsl:result-document href="fhirmapping-report.html">
+        <!-- Generate out in html table using fhirmapping as entry point for checking profiles against -->
+        <xsl:message>Creating <xsl:value-of select="$outputdir"/>/fhirmapping-report.html ...</xsl:message>
+        <xsl:variable name="profileIssueCount" select="count($rows[@aria-profile-issue])"/>
+        <xsl:variable name="transactionIssueCount" select="count($rows[@aria-transaction-issue])"/>
+        <xsl:result-document href="{$outputdir}/fhirmapping-report.html">
             <html>
                 <head>
                     <title>Mapping report</title>
+                    <meta charset="UTF-8">&#160;</meta>
                     <style>
                         * { font-family: Verdana, sans-serif; } 
                         tr:nth-child(even) { background-color: lightgrey; } 
@@ -202,15 +273,16 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <body>
                     <h3>Mapping report</h3>
                     <div>Generated: <xsl:value-of select="current-dateTime()"/></div>
-                    <div>Mappings in fhirmapping-3-2.xml: <xsl:value-of select="count($fhirmapping-file/record)"/></div>
+                    <div>Mappings in fhirmapping-3-2.xml: total=<xsl:value-of select="count($fhirmapping-file/record)"/>, present in transaction=<b><xsl:value-of select="count($rows)"/></b> (table only lists mappings related to PWD 3.2 transactions)</div>
                     <div>Mappings in profiles/extensions: <xsl:value-of select="count($all-profiles//f:mapping[f:identity/@value = 'gebz-peri-v3.2'])"/></div>
                     <div>
                         <input id="hide-valid" type="checkbox" name="hide-valid" style="margin-left: 1em;" onchange="showHideRows()">
                             <xsl:text>Hide valid</xsl:text>
                         </input>
-                        - valid: <xsl:value-of select="count($rows[@class = 'row-valid'])"/>
-                        - with transaction issue: <xsl:value-of select="count($rows[@aria-transaction-issue])"/>
-                        - with profile issue: <xsl:value-of select="count($rows[@aria-profile-issue])"/>
+                        - valid: <b><xsl:value-of select="count($rows[@class = 'row-valid'])"/></b>
+                        - with transaction issue: <span style="font-weight: bold; color:{if ($profileIssueCount gt 0) then 'red;' else 'green'};"><xsl:value-of select="$profileIssueCount"/></span>
+                        - with profile issue: <span style="font-weight: bold; color:{if ($transactionIssueCount gt 0) then 'red;' else 'green'};"><xsl:value-of select="$transactionIssueCount"/></span>
+                        <!--- with terminology issue: <xsl:value-of select="count($rows[@aria-terminology-issue])"/>-->
                     </div>
                     <table>
                         <tr>
@@ -234,117 +306,18 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         
     </xsl:template>
     
-    <xd:doc>
-        <xd:desc>Start ValueSet for each map</xd:desc>
-        <xd:param name="mode"/>
-    </xd:doc>
-    <xsl:template match="map" name="mapsToValueSet" as="element()*">
-        <xsl:param name="in" as="element()+"/>
-        <xsl:param name="mode" as="xs:string"/>
-        <xsl:if test="$mode = ('code')"></xsl:if>
-        <ValueSet xmlns="http://hl7.org/fhir">
-            <id value="{@name}-{$mode}"/>
-            <meta>
-                <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-            </meta>
-            <url value="http://nictiz.nl/fhir/ValueSet/{@name}-{$mode}"/>
-            <version value="1.0.0"/>
-            <name value="{@name}-{$mode}"/>
-            <title value="{@name}-{$mode}"/>
-            <status value="draft"/>
-            <experimental value="false"/>
-            <publisher value="Nictiz"/>
-            <description value="{@name}-{$mode}"/>
-            <immutable value="false"/>
-            <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-            <compose>             
-                <xsl:variable name="mappings" select="mapping[@baseelement=true()]"/>
-                <xsl:choose>
-                    <xsl:when test="$mode = 'code'">
-                        <!-- For Observations include the terminology binding on the base element -->
-                        <xsl:for-each select="distinct-values(mapping[starts-with(@fhirelement,'Observation')]/@system)">
-                            <xsl:variable name="system" select="."/>
-                            <xsl:if test="$system!=''"> 
-                                <include>
-                                    <system value="{$system}"/>
-                                    <xsl:for-each select="distinct-values($mappings[@system=$system]/@code)">
-                                        <xsl:variable name="code" select="."/>
-                                        <xsl:for-each select="$mappings[@system=$system and @code=$code][1]"> <!-- nodig voor het ontdubbelen van codes -->
-                                            <xsl:call-template name="mappingsToConcepts"/>
-                                        </xsl:for-each>
-                                    </xsl:for-each>
-                                </include>
-                            </xsl:if>
-                        </xsl:for-each>   
-                        <!-- For .code elements include each linked valueSet -->
-                        <xsl:for-each select="mapping[substring-after(@fhirelement,'.')='code']">
-                            <xsl:call-template name="mappingsToIncludeVS"/>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="$mode = 'value'">
-                        <!-- For .valueCodeableConcept elements include each linked valueSet -->
-                        <xsl:for-each select="mapping[@fhirelement='Observation.value[x]:valueCodeableConcept']">
-                            <xsl:call-template name="mappingsToIncludeVS"/>
-                        </xsl:for-each>
-                    </xsl:when>
-                </xsl:choose>
-            </compose>    
-        </ValueSet>       
-    </xsl:template>
-
-    <xd:doc>
-        <xd:desc/>
-    </xd:doc>
-    <xsl:template match="mapping" name="mappingsToIncludeVS" as="element()*">
-        <xsl:variable name="valueset-url" select="nf:getValueSetURL(@valueSetId1,@valueSetEffectiveDate1),nf:getValueSetURL(@valueSetId2,@valueSetEffectiveDate2),nf:getValueSetURL(@valueSetId3,@valueSetEffectiveDate3)"/>
-        <xsl:for-each select="$valueset-url">
-            <include>
-                <valueSet value="{.}"/>
-            </include>
-        </xsl:for-each>
-    </xsl:template>
-
-    <xd:doc>
-        <xd:desc/>
-    </xd:doc>
-    <xsl:template match="mapping" name="mappingsToConcepts" as="element()*">
-        <xsl:if test="@code != ''"> 
-            <concept>
-                <code value = "{@code}"/>
-                <display value = "{@display}"/>
-            </concept>
-        </xsl:if>
-    </xsl:template>
-    
-    <xd:doc>
-        <xd:desc>Creates xml document</xd:desc>
-    </xd:doc>
-    <xsl:template match="maps">
-        <xsl:for-each select="map[mapping/@system != '' or mapping/@valueSet1 != '']">
-            <xsl:result-document href="../../profiles/ValueSets/generated/{@name}-code.xml"> 
-                <xsl:call-template name="mapsToValueSet"/>
-            </xsl:result-document>  
-        </xsl:for-each>
-        <xsl:for-each select="map[mapping/@fhirelement = 'Observation.value[x]:valueCodeableConcept']">
-            <xsl:result-document href="../../profiles/ValueSets/generated/{@name}-value.xml"> 
-                <xsl:call-template name="mapsToValueSet">
-                    <xsl:with-param name="mode" select="'value'"/>
-                </xsl:call-template>
-            </xsl:result-document>  
-        </xsl:for-each>
-    </xsl:template> 
-    
-    <xd:doc>
-        <xd:desc/>
-        <xd:param name="valueSetId"/>
-        <xd:param name="effectiveDate"/>
-    </xd:doc>
-    <xsl:function name="nf:getValueSetURL">
-        <xsl:param name="valueSetId"/>
-        <xsl:param name="effectiveDate"/>
-        <xsl:if test="$valueSetId">
-            <xsl:value-of select="concat('http://decor.nictiz.nl/fhir/', $fhirVersion, '/public/ValueSet/',$valueSetId,'--',replace($effectiveDate,'([T])|:|-',''))"/>
-        </xsl:if>
+    <xsl:function name="nf:getDataConcept" as="element(concept)?">
+        <xsl:param name="conceptId"/>
+        
+        <xsl:variable name="theConcept" select="($ada-release-file//concept[@id = $conceptId or @iddisplay = $conceptId])[1]"/>
+        <xsl:choose>
+            <xsl:when test="$theConcept[contains]">
+                <xsl:sequence select="nf:getDataConcept($theConcept/contains/@ref)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="$theConcept"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:function>
     
 </xsl:stylesheet>

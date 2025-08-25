@@ -108,11 +108,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1846" />
-        <comment value="Maternale sterfte" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3635" />
         <comment value="Cervixlengte (Meting)" />
       </mapping>
@@ -273,8 +268,18 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-3113" />
-        <comment value="Aantal kraamverbanden" />
+        <map value="peri32-dataelement-2252" />
+        <comment value="Voorgenomen plaats baring tijdens zwangerschap (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2272" />
+        <comment value="Voorgenomen achternaam (Observatie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2269" />
+        <comment value="Kraamzorg aangevraagd (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.code">
@@ -435,12 +440,6 @@
         <map value="peri32-dataelement-9172" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.value">
-      <path value="Observation.effective[x].value" />
-      <type>
-        <code />
-      </type>
     </element>
     <element id="Observation.effective[x]:effectivePeriod">
       <path value="Observation.effective[x]" />
@@ -790,26 +789,6 @@
         <comment value="Conclusie risicostatus na intake" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:valueReference">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valueReference" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2270" />
-        <comment value="Zorgaanbieder" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2938" />
-        <comment value="Voorkeursziekenhuis" />
-      </mapping>
-    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
@@ -825,11 +804,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1745" />
         <comment value="FoliumzuurgebruikWaarde" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2252" />
-        <comment value="Voorgenomen plaats baring tijdens zwangerschap (Observatie)" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -1007,11 +981,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2269" />
-        <comment value="Kraamzorg aangevraagd (Observatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2277" />
         <comment value="KraamzorgAangevraagdWaarde" />
       </mapping>
@@ -1074,11 +1043,6 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-2272" />
-        <comment value="Voorgenomen achternaam (Observatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2275" />
         <comment value="VoorgenomenAchternaamWaarde" />
       </mapping>
@@ -1108,6 +1072,26 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10747" />
         <comment value="WenstVrouwMinderKraamzorgDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].extension:bcObservationValueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="bcObservationValueReference" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2270" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-2938" />
+        <comment value="Voorkeursziekenhuis" />
       </mapping>
     </element>
     <element id="Observation.comment">
@@ -1283,9 +1267,9 @@
         <comment value="Toelichting" />
       </mapping>
       <mapping>
-        <identity value="gebz-peri-v3.2"/>
-        <map value="peri32-dataelement-9180"/>
-        <comment value="Toelichting"/>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-9180" />
+        <comment value="Toelichting" />
       </mapping>
     </element>
     <element id="Observation.bodySite">

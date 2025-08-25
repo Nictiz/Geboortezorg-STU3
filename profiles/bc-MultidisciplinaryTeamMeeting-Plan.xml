@@ -74,8 +74,8 @@
       <path value="CarePlan.category" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="$this" />
+          <type value="pattern" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>

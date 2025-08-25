@@ -155,9 +155,6 @@
         <comment value="ConclusieDatumTijd" />
       </mapping>
     </element>
-    <element id="ClinicalImpression.effective[x]:effectiveDateTime.value">
-      <path value="ClinicalImpression.effective[x].value" />
-    </element>
     <element id="ClinicalImpression.assessor">
       <path value="ClinicalImpression.assessor" />
       <type>
@@ -238,9 +235,8 @@
       <sliceName value="pregnancyRiskCategory" />
       <max value="1" />
     </element>
-    <element id="ClinicalImpression.finding:pregnancyRiskCategory.item[x]:itemCodeableConcept">
-      <path value="ClinicalImpression.finding.itemCodeableConcept" />
-      <sliceName value="itemCodeableConcept" />
+    <element id="ClinicalImpression.finding:pregnancyRiskCategory.item[x]">
+      <path value="ClinicalImpression.finding.item[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

@@ -55,9 +55,8 @@
       <path value="Observation.code.coding.code" />
       <patternCode value="698350008" />
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10762" />
@@ -93,6 +92,16 @@
         <comment value="ObservatieMethode" />
       </mapping>
     </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Observation.component:administrationDate">
       <path value="Observation.component" />
       <sliceName value="administrationDate" />
@@ -107,9 +116,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:administrationDate.value[x]:valueDateTime">
+    <element id="Observation.component:administrationDate.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -119,5 +127,5 @@
         <comment value="DatumVitamineKWaarde" />
       </mapping>
     </element>
-  </differential>
+    </differential>
 </StructureDefinition>

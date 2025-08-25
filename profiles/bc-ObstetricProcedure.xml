@@ -570,12 +570,6 @@
         <code value="dateTime" />
       </type>
     </element>
-    <element id="Procedure.performed[x]:performedDateTime.value">
-      <path value="Procedure.performed[x].value" />
-      <type>
-        <code />
-      </type>
-    </element>
     <element id="Procedure.performer">
       <path value="Procedure.performer" />
       <mapping>
@@ -862,9 +856,8 @@
         <comment value="VerrichtingLateraliteit" />
       </mapping>
     </element>
-    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept">
+    <element id="Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept">
       <path value="Procedure.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1194" />

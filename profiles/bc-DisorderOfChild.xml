@@ -252,6 +252,11 @@
         <map value="peri32-dataelement-10650" />
         <comment value="Probleem (Extremiteiten)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10682" />
+        <comment value="Probleem (OpnameIndicatie_LNR)" />
+      </mapping>
     </element>
     <element id="Condition.extension:onsetInstitution">
       <path value="Condition.extension" />
@@ -939,9 +944,8 @@
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
     </element>
-    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
+    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10684" />
@@ -1046,9 +1050,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
-      <path value="Condition.bodySite.extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference">
+      <path value="Condition.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />

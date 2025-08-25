@@ -139,13 +139,16 @@
         <display value="Obstetric procedure (procedure)" />
       </patternCoding>
     </element>
-    <element id="Procedure.code.coding:delivery">
+    <element id="Procedure.code.coding">
       <path value="Procedure.code.coding" />
-      <sliceName value="delivery" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Procedure.code.coding:delivery.code">
+    <element id="Procedure.code.coding.system">
+      <path value="Procedure.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.code.coding.code">
       <path value="Procedure.code.coding.code" />
       <min value="1" />
       <fixedCode value="236973005" />

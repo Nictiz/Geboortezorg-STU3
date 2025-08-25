@@ -166,9 +166,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -345,11 +344,6 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1847" />
-        <comment value="OverlijdensIndicator" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4160" />
         <comment value="TOPnavPrenataalOnderzoekWaarde" />
       </mapping>
@@ -374,11 +368,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2223" />
         <comment value="Definitieve a terme Waarde" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1848" />
-        <comment value="DatumOverlijden" />
       </mapping>
     </element>
     <element id="Observation.comment">

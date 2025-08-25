@@ -255,9 +255,8 @@
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
     </element>
-    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
+    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1182" />
@@ -277,9 +276,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
-      <path value="Condition.bodySite.extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference">
+      <path value="Condition.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
@@ -331,6 +329,12 @@
         <comment value="ProbleemBeginDatum" />
       </mapping>
     </element>
+    <element id="Condition.onsetDateTime:onsetDateTime.value">
+      <path value="Condition.onsetDateTime.value" />
+      <type>
+        <code />
+      </type>
+    </element>
     <element id="Condition.abatementDateTime:abatementDateTime">
       <path value="Condition.abatementDateTime" />
       <sliceName value="abatementDateTime" />
@@ -344,6 +348,12 @@
         <map value="peri32-dataelement-2466" />
         <comment value="ProbleemEindDatum" />
       </mapping>
+    </element>
+    <element id="Condition.abatementDateTime:abatementDateTime.value">
+      <path value="Condition.abatementDateTime.value" />
+      <type>
+        <code />
+      </type>
     </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code" />

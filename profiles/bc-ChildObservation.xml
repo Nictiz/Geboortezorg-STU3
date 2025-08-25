@@ -478,41 +478,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-10604" />
-        <comment value="Geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-40060" />
-        <comment value="Geboortegewicht" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-70011" />
-        <comment value="Voeding kind (datum)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v2.3" />
-        <map value="peri23-dataelement-70030" />
-        <comment value="Substantie voeding kind" />
-      </mapping>
-    </element>
-    <element id="Observation.value[x].extension:valueReference">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valueReference" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
-      </type>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri31-dataelement-1430" />
-        <comment value="Oorzaak overlijden (Probleem)" />
-      </mapping>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
@@ -525,6 +490,11 @@
         <description value="bc-ChildObservation-value" />
         <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-ChildObservation-value" />
       </binding>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-70030" />
+        <comment value="Substantie voeding kind" />
+      </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10665" />
@@ -690,6 +660,43 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10024" />
         <comment value="DatumHielprikWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-70011" />
+        <comment value="Voeding kind (datum)" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-10604" />
+        <comment value="Geboortegewicht" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v2.3" />
+        <map value="peri23-dataelement-40060" />
+        <comment value="Geboortegewicht" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].extension:valueReference">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valueReference" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-observation-valuereference" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri31-dataelement-1430" />
+        <comment value="Oorzaak overlijden (Probleem)" />
       </mapping>
     </element>
     <element id="Observation.comment">
@@ -1032,20 +1039,6 @@
         <map value="peri32-dataelement-8732" />
         <comment value="ObservatieSpecimen" />
       </mapping>
-    </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.component:clothing">
-      <path value="Observation.component" />
-      <sliceName value="clothing" />
     </element>
   </differential>
 </StructureDefinition>
