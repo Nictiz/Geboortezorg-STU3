@@ -101,8 +101,9 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 ||</xsl:text>
         <xsl:text>
 ||</xsl:text>
-        <xsl:text>http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
+        <xsl:text>&lt;nowiki&gt;http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
         <xsl:value-of select="@name"/>
+        <xsl:text>&lt;/nowiki&gt;</xsl:text>
         <xsl:text>            
 ||</xsl:text>
         <xsl:choose>
