@@ -96,9 +96,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
       </type>
     </element>
-    <element id="Condition.onset[x]:onsetDateTime">
+    <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
-      <sliceName value="onsetDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -108,15 +107,8 @@
         <comment value="DatumAanvang" />
       </mapping>
     </element>
-    <element id="Condition.onset[x]:onsetDateTime.value">
-      <path value="Condition.onset[x].value" />
-      <type>
-        <code />
-      </type>
-    </element>
-    <element id="Condition.abatement[x]:abatementDateTime">
+    <element id="Condition.abatement[x]">
       <path value="Condition.abatement[x]" />
-      <sliceName value="abatementDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -125,12 +117,6 @@
         <map value="peri32-dataelement-7862" />
         <comment value="DatumEinde" />
       </mapping>
-    </element>
-    <element id="Condition.abatement[x]:abatementDateTime.value">
-      <path value="Condition.abatement[x].value" />
-      <type>
-        <code />
-      </type>
     </element>
   </differential>
 </StructureDefinition>

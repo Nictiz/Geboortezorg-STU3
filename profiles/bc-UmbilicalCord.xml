@@ -96,18 +96,16 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7791" />
         <comment value="NavelstrengDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueCodeableConcept">
+    <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
         <description value="BeoordelingBevindingen" />
@@ -161,9 +159,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:umbilicalCordVessels.value[x]:valueCodeableConcept">
+    <element id="Observation.component:umbilicalCordVessels.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>

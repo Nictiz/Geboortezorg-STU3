@@ -161,9 +161,8 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Observation.extension:delivery.valueReference:valueReference">
+    <element id="Observation.extension:delivery.valueReference">
       <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
@@ -338,15 +337,6 @@
         <comment value="Risicostatus voor baring" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:valuePeriodDuration">
-      <path value="Observation.value[x].extension" />
-      <sliceName value="valuePeriodDuration" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
-      </type>
-      <isModifier value="false" />
-    </element>
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.value[x]" />
       <sliceName value="valueQuantity" />
@@ -441,6 +431,15 @@
         <map value="peri32-dataelement-4269" />
         <comment value="TestuitslagPAWaarde" />
       </mapping>
+    </element>
+    <element id="Observation.value[x].extension:valuePeriodDuration">
+      <path value="Observation.value[x].extension" />
+      <sliceName value="valuePeriodDuration" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/period-duration" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
