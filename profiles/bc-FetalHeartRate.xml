@@ -76,10 +76,39 @@
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateSNOMED">
+      <path value="Observation.code.coding" />
+      <sliceName value="fetalHeartRateSNOMED" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="249043002" />
       </patternCoding>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateSNOMED.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="foetale hartfrequentie (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateLOINC">
+      <path value="Observation.code.coding" />
+      <sliceName value="fetalHeartRateLOINC" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="8867-4" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateLOINC.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="Hartslagfrequentie [aantal/tijd]" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -215,7 +244,7 @@
       <path value="Observation.method.coding" />
       <sliceName value="heartActionBasedOn" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="Hartactie op basis van" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
@@ -225,7 +254,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="open" />
       </slicing>

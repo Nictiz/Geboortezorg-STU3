@@ -74,7 +74,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -84,18 +84,15 @@
       <sliceName value="placentaLocalization" />
       <max value="1" />
     </element>
-    <element id="Observation.component:placentaLocalization.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="160331000146101" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:placentaLocalization.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="160331000146101"/>
+      </patternCoding>
     </element>
-    <element id="Observation.component:placentaLocalization.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:placentaLocalization.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -132,14 +129,12 @@
         <comment value="SectioLittekenWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:sectionScar.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="237297004" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:sectionScar.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="237297004"/>
+      </patternCoding>
     </element>
     <element id="Observation.component:sectionScar.value[x]">
       <path value="Observation.component.value[x]" />
@@ -150,18 +145,15 @@
       <sliceName value="ostium" />
       <max value="1" />
     </element>
-    <element id="Observation.component:ostium.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="7381000146107" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:ostium.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="7381000146107"/>
+      </patternCoding>
     </element>
-    <element id="Observation.component:ostium.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:ostium.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

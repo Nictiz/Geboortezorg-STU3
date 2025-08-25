@@ -103,14 +103,12 @@
       <sliceName value="urine" />
       <max value="1" />
     </element>
-    <element id="Observation.component:urine.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="267065001" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:urine.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="267065001"/>
+      </patternCoding>
     </element>
     <element id="Observation.component:urine.value[x]">
       <path value="Observation.component.value[x]" />
