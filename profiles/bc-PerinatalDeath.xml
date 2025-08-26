@@ -133,9 +133,31 @@
     </element>
     <element id="Observation.component:deceasedDateTime.code.coding">
       <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.component:deceasedDateTime.code.coding:deceasedDateTimeSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="deceasedDateTimeSNOMED" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="399753006" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:deceasedDateTime.code.coding:deceasedDateTimeLOINC">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="deceasedDateTimeLOINC" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="81954-0" />
       </patternCoding>
     </element>
     <element id="Observation.component:deceasedDateTime.value[x]">
@@ -156,6 +178,23 @@
     </element>
     <element id="Observation.component:perinatalPhase.code.coding">
       <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="246454002" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:perinatalPhase.code.coding:perinatalPhaseSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="perinatalPhaseSNOMED" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="246454002" />
