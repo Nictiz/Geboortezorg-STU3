@@ -21,16 +21,16 @@
                <valueString value="peri32-dataelement-2582 Schooltype"/>
             </extension>
             <code value="105421008"/>
-         <display value="opleidingsniveau (waarneembare entiteit)"/>
+            <display value="opleidingsniveau (waarneembare entiteit)"/>
          </concept>
          <concept>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
                <valueString value="peri32-dataelement-3407 Consanguïniteit (Observatie)"/>
             </extension>
-         <code value="842009"/>
+            <code value="842009"/>
             <display value="consanguiniteit (bevinding)"/>
          </concept>
-      <concept>
+         <concept>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
                <valueString value="peri32-dataelement-2913 SociaalNetwerk"/>
             </extension>
@@ -193,6 +193,20 @@
          </concept>
          <concept>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3111 Bloedverlies kraambed (lochia) (Waarde)"/>
+            </extension>
+            <code value="366299003"/>
+            <display value="bevinding betreffende hoeveelheid lochia (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3113 Aantal kraamverbanden (Waarde)"/>
+            </extension>
+            <code value="570931000146101"/>
+            <display value="hoeveelheid gebruikte kraamverbanden (waarneembare entiteit)"/>
+         </concept>
+         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
                <valueString value="peri32-dataelement-3115 Lochia foetide / riekend? (Waarde)"/>
             </extension>
             <code value="276375002"/>
@@ -297,29 +311,8 @@
                <valueString value="peri32-dataelement-3417 FundushoogteWaarde"/>
             </extension>
             <code value="11881-0"/>
-         <display value="Uterus Fundal height Tape measure"/>
+            <display value="Uterus Fundal height Tape measure"/>
          </concept>
       </include>
-   <!--peri32-dataelement-3123 WondInfectie in profile "bc-MaternalObservation"
-          peri32-dataelement-2874 WondInfectie in profile "bc-MaternalObservation"-->
-      <!--<concept>
-              <code value="405009004"/>
-              <display value="infectiestatus (waarneembare entiteit)"/>
-          </concept>-->
-      <!--=========================================================-->
-      <!--peri32-dataelement-3124 WondVochtigheid in profile "bc-MaternalObservation"
-          peri32-dataelement-2875 WondVochtigheid in profile "bc-MaternalObservation"-->
-      <!--<concept>
-              <code value="298007001"/>
-              <display value="vochtigheid van verwonding (waarneembare entiteit)"/>
-          </concept>-->
-      <!--=========================================================-->
-      <!--peri32-dataelement-3125 WondRand in profile "bc-MaternalObservation"
-          peri32-dataelement-2876 WondRand in profile "bc-MaternalObservation"-->
-      <!--<concept>
-              <code value="449747006"/>
-              <display value="bevinding betreffende rand van wond (bevinding)"/>
-          </concept>-->
-      <!--=========================================================-->
    </compose>
 </ValueSet>

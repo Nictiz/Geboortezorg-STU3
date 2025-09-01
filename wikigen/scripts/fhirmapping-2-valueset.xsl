@@ -97,9 +97,12 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             <record id="peri32-dataelement-2913">SociaalNetwerk</record>
             <record id="peri32-dataelement-10774">UrinatieGeweest?</record>
             <record id="peri32-dataelement-10775">DefecatieGeweest?</record>
+            <record id="peri32-dataelement-3111">Bloedverlies kraambed (lochia) (Waarde)</record>
+            <record id="peri32-dataelement-3113">Aantal kraamverbanden (Waarde)</record>
             <record id="peri32-dataelement-3115">Lochia foetide / riekend?</record>
             <record id="peri32-dataelement-3117">Grote stolsels in lochia (Waarde)</record>
         </xsl:variable>
+        
         <!-- Get fhirmapping records - grouped per profile - that map into bc profiles at root resource level, e.g. Condition or Observation -->
         <xsl:for-each-group select="$fhirmapping-file/record[string-length(profile[starts-with(., 'bc-')]) gt 0][not(contains(mapping, '.')) or ID = $valueConcepts/@id]" group-by="profile">
             <xsl:sort select="current-grouping-key()"/>
