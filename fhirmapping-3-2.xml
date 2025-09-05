@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="qa/fhirmapping.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	id="2.16.840.1.113883.2.4.3.11.60.90.77.1.12"
 	effectiveDate="2020-04-22T00:00:00"
@@ -4818,14 +4819,15 @@
 		<example>https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|364336006</searchurl>
 	</record>
-	<record>
+	<!-- This one occurrs twice. The other looked more complete -->
+	<!--<record>
 		<ID>peri32-dataelement-4193</ID>
 		<naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-BirthObservation</profile>
 		<example>https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|169812000</searchurl>
-	</record>
+	</record>-->
 	<record>
 		<ID>peri32-dataelement-1587</ID>
 		<naam>Ziekenhuis baring</naam>
