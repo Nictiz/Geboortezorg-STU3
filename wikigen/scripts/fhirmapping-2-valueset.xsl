@@ -179,7 +179,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 
                 <!-- Start building the ValueSet -->
                 <xsl:message>Creating <xsl:value-of select="$outputdir"/>/ValueSets/<xsl:value-of select="current-grouping-key()"/>-code.xml ...</xsl:message>
-                <xsl:result-document href="{$outputdir}/ValueSets/{current-grouping-key()}-code.xml" indent="yes" omit-xml-declaration="yes">
+                <xsl:result-document href="file:///{$outputdir}/ValueSets/{current-grouping-key()}-code.xml" indent="yes" omit-xml-declaration="yes">
+                    <xsl:variable name="myVar" select="concat(current-grouping-key(), '-code')"/>
                     <ValueSet xmlns="http://hl7.org/fhir">
                         <id value="{current-grouping-key()}-code"/>
                         <meta>
@@ -214,6 +215,16 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                             <display value="{current-group()[1]/@displayName}"/>
                                         </concept>
                                     </xsl:for-each-group>
+                                    
+                                    <!--Add a hard-coded concept code in ValueSet bc-MaternalObservation-code.xml, for the include subsection with Snomed codes-->
+                                    <!--Needed because the code is a Fixed Code on element Observation.code.coding:WoundObservableCode.code in the zib profile of WoundCharacteristics but is not included in the fhirmapping input file-->
+                                    <!--see http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics and ticket NICTIZ-35369-->
+                                    <xsl:if test="contains(local:getUri(current-grouping-key()),'snomed') and ($myVar = 'bc-MaternalObservation-code')">
+                                        <concept>
+                                            <code value="364554009"/>
+                                            <display value="Wound observable (observable entity)"/>
+                                        </concept>
+                                    </xsl:if>      
                                 </include>
                             </xsl:for-each-group>
                             <!-- Create compose.include elements per valueSet preventing duplicates ... technically they could be in a single include but left it the way I found it -->
