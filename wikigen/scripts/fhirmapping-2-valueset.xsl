@@ -31,6 +31,17 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     
     <xsl:param name="outputdir" select="'.'"/>
     
+    <xsl:variable name="opdir">
+        <xsl:variable name="unixify" select="replace(resolve-uri(replace($outputdir, '\\', '/')), '/$', '')"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($unixify, 'file:')">
+                <xsl:value-of select="$unixify"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="concat('file:///', $unixify)"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="fhirVersion" select="'3.0'"/>
     <xsl:variable name="all-profiles" select="collection('../../profiles/?select=*.xml&amp;recurse=yes')//f:StructureDefinition" as="element(f:StructureDefinition)+"/>
     <xsl:variable name="fhirmapping-file" select="doc('../../fhirmapping-3-2.xml')/*" as="element()+"/>
@@ -179,8 +190,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 
                 <!-- Start building the ValueSet -->
                 <xsl:variable name="valuesetName" select="concat(current-grouping-key(), '-code')"/>
-                <xsl:message>Creating <xsl:value-of select="$outputdir"/>/ValueSets/<xsl:value-of select="$valuesetName"/>.xml ...</xsl:message>
-                <xsl:result-document href="{replace(resolve-uri($outputdir), '\\', '/')}/ValueSets/{$valuesetName}.xml" indent="yes" omit-xml-declaration="yes">
+                <xsl:message>Creating <xsl:value-of select="replace($outputdir, '[\\/]$', '')"/>/ValueSets/<xsl:value-of select="$valuesetName"/>.xml ...</xsl:message>
+                <xsl:result-document href="{$opdir}/ValueSets/{$valuesetName}.xml" indent="yes" omit-xml-declaration="yes">
                     <ValueSet xmlns="http://hl7.org/fhir">
                         <id value="{$valuesetName}"/>
                         <meta>
