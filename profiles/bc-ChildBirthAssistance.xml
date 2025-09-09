@@ -108,7 +108,7 @@
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.195--20140102000000" />
-          <display value="Partus stadium"/>
+          <display value="Partus stadium" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -163,26 +163,6 @@
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.&#xD;&#xA;Note that the reference Encounter.participant.individual is also used for element peri32-dataelement-11029 Niet-zorgverlener (string). In this case, only element .display is populated." />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1624" />
-        <comment value="Aanpakker kind" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1625" />
-        <comment value="Zorgverlener" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1626" />
-        <comment value="Supervisor" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-1627" />
-        <comment value="Zorgverlener" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10801" />
         <comment value="Zorgverlener" />
       </mapping>
@@ -209,13 +189,6 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10712" />
         <comment value="ContactMet" />
-      </mapping>
-    </element>
-    <element id="Encounter.participant.individual.display">
-      <path value="Encounter.participant.individual.display" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-11029" />
       </mapping>
     </element>
     <element id="Encounter.period.start">
