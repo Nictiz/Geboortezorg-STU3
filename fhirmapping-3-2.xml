@@ -11465,9 +11465,9 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-2416</ID>
-		<naam>Verrichting (Onderzoek)</naam>
+		<naam>Verrichting (Maternaal onderzoek)</naam>
 		<mapping>Procedure</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
 		<searchurl>GET [base]/Procedure?context=EpisodeOfCare/[id for pregnancy episode]</searchurl>
@@ -11475,8 +11475,8 @@
 	<record>
 		<ID>peri32-dataelement-2417</ID>
 		<naam>VerrichtingStartDatum</naam>
-		<mapping>Procedure.effectivePeriod.start</mapping>
-		<profile>zib-Procedure</profile>
+		<mapping>Procedure.performed[x]:performedPeriod.start</mapping>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
@@ -11484,8 +11484,8 @@
 	<record>
 		<ID>peri32-dataelement-2418</ID>
 		<naam>VerrichtingEindDatum</naam>
-		<mapping>Procedure.effectivePeriod.end</mapping>
-		<profile>zib-Procedure</profile>
+		<mapping>Procedure.performed[x]:performedPeriod.end</mapping>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
@@ -11494,7 +11494,7 @@
 		<ID>peri32-dataelement-2419</ID>
 		<naam>VerrichtingAnatomischeLocatie</naam>
 		<mapping>Procedure.bodySite</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.8</zib>
 	</record>
@@ -11502,7 +11502,7 @@
 		<ID>peri32-dataelement-2420</ID>
 		<naam>VerrichtingLateraliteit</naam>
 		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.11</zib>
 	</record>
@@ -11510,7 +11510,7 @@
 		<ID>peri32-dataelement-2421</ID>
 		<naam>Indicatie</naam>
 		<mapping>Procedure.reasonReference</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.9</zib>
 	</record>
