@@ -174,26 +174,26 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 </xsl:variable>
                 
                 <!-- Check the current ValueSet for things - concepts and/or value sets - that will not be present in the new data. We will copy those into the new value set as comments -->
-                <xsl:variable name="extraTerminologyAssociations" select="$theValueSet/f:compose/f:include/f:concept[not(f:code/@value = $terminologyAssociations/@code)] | 
+                <xsl:variable name="extraTerminologyAssociations" select="$theValueSet/f:compose/f:include/f:concept[not(f:code/@value = ($terminologyAssociations/@code, '364554009'))] | 
                                                                           $theValueSet/f:compose/f:include/f:valueSet[not(substring-before(tokenize(@value, '/')[last()], '--') = $terminologyAssociations/@valueSet)]" as="element()*"/>
                 
                 <!-- Start building the ValueSet -->
-                <xsl:message>Creating <xsl:value-of select="$outputdir"/>/ValueSets/<xsl:value-of select="current-grouping-key()"/>-code.xml ...</xsl:message>
-                <xsl:result-document href="file:///{$outputdir}/ValueSets/{current-grouping-key()}-code.xml" indent="yes" omit-xml-declaration="yes">
-                    <xsl:variable name="myVar" select="concat(current-grouping-key(), '-code')"/>
+                <xsl:variable name="valuesetName" select="concat(current-grouping-key(), '-code')"/>
+                <xsl:message>Creating <xsl:value-of select="$outputdir"/>/ValueSets/<xsl:value-of select="$valuesetName"/>.xml ...</xsl:message>
+                <xsl:result-document href="{resolve-uri($outputdir)}/ValueSets/{$valuesetName}.xml" indent="yes" omit-xml-declaration="yes">
                     <ValueSet xmlns="http://hl7.org/fhir">
-                        <id value="{current-grouping-key()}-code"/>
+                        <id value="{$valuesetName}"/>
                         <meta>
                             <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
                         </meta>
-                        <url value="http://nictiz.nl/fhir/ValueSet/{current-grouping-key()}-code"/>
+                        <url value="http://nictiz.nl/fhir/ValueSet/{$valuesetName}"/>
                         <version value="1.3.3"/>
-                        <name value="{current-grouping-key()}-code"/>
-                        <title value="{current-grouping-key()}-code"/>
+                        <name value="{$valuesetName}"/>
+                        <title value="{$valuesetName}"/>
                         <status value="draft"/>
                         <experimental value="false"/>
                         <publisher value="Nictiz"/>
-                        <description value="{current-grouping-key()}-code"/>
+                        <description value="{$valuesetName}"/>
                         <immutable value="false"/>
                         <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
                         <compose>
@@ -219,7 +219,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                                     <!--Add a hard-coded concept code in ValueSet bc-MaternalObservation-code.xml, for the include subsection with Snomed codes-->
                                     <!--Needed because the code is a Fixed Code on element Observation.code.coding:WoundObservableCode.code in the zib profile of WoundCharacteristics but is not included in the fhirmapping input file-->
                                     <!--see http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics and ticket NICTIZ-35369-->
-                                    <xsl:if test="contains(local:getUri(current-grouping-key()),'snomed') and ($myVar = 'bc-MaternalObservation-code')">
+                                    <xsl:if test="contains(local:getUri(current-grouping-key()),'snomed') and ($valuesetName = 'bc-MaternalObservation-code')">
                                         <concept>
                                             <code value="364554009"/>
                                             <display value="Wound observable (observable entity)"/>
@@ -263,7 +263,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                             <!-- Some of the existing ValueSets for -code have include of full code system (normally LOINC). Not sure why but keep those as we will not get that knowledge from the dataset -->
                             <xsl:copy-of select="$theValueSet/f:compose/f:include[f:system][empty(f:concept | f:valueSet)]"/>
                             
-                            <!-- If there is more terminology in the original value set then we currently have, we check what profile this temrinology should now be in by looking up the dataset concept 
+                            <!-- If there is more terminology in the original value set than we currently have, we check what profile this temrinology should now be in by looking up the dataset concept 
                                 that this terminology belongs to, and subsequently the mapping(s) this concept has. If the terminology is connected to a concept that also maps into the current profile, then
                                 it is added as comment in the new ValueSet. This should be looked into, as there should not be any comment like that. Any terminology relevant for the current profile should 
                                 have been captured in $terminologyAssociations  -->
