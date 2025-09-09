@@ -180,7 +180,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <!-- Start building the ValueSet -->
                 <xsl:variable name="valuesetName" select="concat(current-grouping-key(), '-code')"/>
                 <xsl:message>Creating <xsl:value-of select="$outputdir"/>/ValueSets/<xsl:value-of select="$valuesetName"/>.xml ...</xsl:message>
-                <xsl:result-document href="{resolve-uri($outputdir)}/ValueSets/{$valuesetName}.xml" indent="yes" omit-xml-declaration="yes">
+                <xsl:result-document href="{replace(resolve-uri($outputdir), '\\', '/')}/ValueSets/{$valuesetName}.xml" indent="yes" omit-xml-declaration="yes">
                     <ValueSet xmlns="http://hl7.org/fhir">
                         <id value="{$valuesetName}"/>
                         <meta>
