@@ -4077,14 +4077,14 @@
 		<ID>peri32-dataelement-1080</ID>
 		<naam>Verrichting (Algemene anamnese)</naam>
 		<mapping>Procedure</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1081</ID>
 		<naam>VerrichtingStartDatum</naam>
 		<mapping>Procedure.performed[x]:performedPeriod.start</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.2</zib>
 	</record>
@@ -4092,7 +4092,7 @@
 		<ID>peri32-dataelement-1082</ID>
 		<naam>VerrichtingEindDatum</naam>
 		<mapping>Procedure.performed[x]:performedPeriod.end</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.3</zib>
 	</record>
@@ -4100,7 +4100,7 @@
 		<ID>peri32-dataelement-1083</ID>
 		<naam>VerrichtingAnatomischeLocatie</naam>
 		<mapping>Procedure.bodySite</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.8</zib>
 	</record>
@@ -4108,7 +4108,7 @@
 		<ID>peri32-dataelement-1084</ID>
 		<naam>VerrichtingLateraliteit</naam>
 		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.11</zib>
 	</record>
@@ -4116,7 +4116,7 @@
 		<ID>peri32-dataelement-1085</ID>
 		<naam>Indicatie</naam>
 		<mapping>Procedure.reasonReference</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 	</record>
 	<record>
@@ -4131,7 +4131,7 @@
 		<ID>peri32-dataelement-1087</ID>
 		<naam>VerrichtingType</naam>
 		<mapping>Procedure.code</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 	</record>
 	<record>
@@ -4156,14 +4156,14 @@
 		<ID>peri32-dataelement-1088</ID>
 		<naam>VerrichtingMethode</naam>
 		<mapping>Procedure.extension:procedureMethod</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1089</ID>
 		<naam>MedischHulpmiddel</naam>
 		<mapping>Procedure.focalDevice.manipulated</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.7</zib>
 	</record>
@@ -4177,7 +4177,7 @@
 		<ID>peri32-dataelement-1091</ID>
 		<naam>Locatie</naam>
 		<mapping>Procedure.performer.actor</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.5</zib>
 	</record>
@@ -4191,7 +4191,7 @@
 		<ID>peri32-dataelement-1093</ID>
 		<naam>Uitvoerder</naam>
 		<mapping>Procedure.performer.actor</mapping>
-		<profile>zib-Procedure</profile>
+		<profile>bc-ObstetricProcedure</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.6</zib>
 	</record>
@@ -4205,7 +4205,7 @@
 		<ID>peri32-dataelement-1095</ID>
 		<naam>Aanvrager</naam>
 		<mapping>Procedure.basedOn:request/requester.agent</mapping>
-		<profile>zib-Procedure/zib-ProcedureRequest</profile>
+		<profile>bc-ObstetricProcedure/zib-ProcedureRequest</profile>
 		<in>true</in>
 		<zib>NL-CM-14.1.10</zib>
 	</record>
