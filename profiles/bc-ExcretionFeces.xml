@@ -49,9 +49,8 @@
         <code value="249612005" />
       </patternCoding>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2-ext" />
         <map value="peri32-dataelement-9938" />
@@ -61,10 +60,6 @@
     <element id="Observation.value[x]:valueDateTime">
       <path value="Observation.value[x]" />
       <sliceName value="valueDateTime" />
-    </element>
-    <element id="Observation.value[x]:valueDateTime.value">
-      <path value="Observation.value[x].value" />
-      <type />
     </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
@@ -97,28 +92,30 @@
         <comment value="ObservatieSpecimen" />
       </mapping>
     </element>
-    <element id="Observation.component:clothing">
-      <path value="Observation.component" />
-      <sliceName value="clothing" />
-      <max value="0" />
+    <element id="Observation.component">
+      <path value="Observation.component"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="code.coding"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
     </element>
     <element id="Observation.component:feces">
       <path value="Observation.component" />
       <sliceName value="feces" />
       <max value="1" />
     </element>
-    <element id="Observation.component:feces.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="364689004" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:feces.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="364689004"/>
+      </patternCoding>
     </element>
-    <element id="Observation.component:feces.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:feces.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -140,18 +137,15 @@
       <sliceName value="fecalDiapers" />
       <max value="1" />
     </element>
-    <element id="Observation.component:fecalDiapers.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="160281000146105" />
-        </coding>
-      </patternCodeableConcept>
+    <element id="Observation.component:fecalDiapers.code.coding">
+      <path value="Observation.component.code.coding" />
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <code value="160281000146105"/>
+      </patternCoding>
     </element>
-    <element id="Observation.component:fecalDiapers.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:fecalDiapers.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="Quantity" />
       </type>

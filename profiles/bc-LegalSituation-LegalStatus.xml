@@ -51,6 +51,16 @@
         <map value="peri32-dataelement-10806" />
         <comment value="JuridischeSituatie" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10567" />
+        <comment value="JuridischeSituatie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10566" />
+        <comment value="JuridischeSituatie" />
+      </mapping>
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
@@ -97,9 +107,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Child" />
       </type>
     </element>
-    <element id="Condition.onset[x]:onsetDateTime">
-      <path value="Condition.onsetDateTime" />
-      <sliceName value="onsetDateTime" />
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
       <type>
         <code value="dateTime" />
       </type>
@@ -108,16 +117,25 @@
         <map value="peri32-dataelement-3334" />
         <comment value="DatumAanvang" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7861" />
+        <comment value="DatumAanvang" />
+      </mapping>
     </element>
-    <element id="Condition.abatement[x]:abatementDateTime">
-      <path value="Condition.abatementDateTime" />
-      <sliceName value="abatementDateTime" />
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
       <type>
         <code value="dateTime" />
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3335" />
+        <comment value="DatumEinde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7862" />
         <comment value="DatumEinde" />
       </mapping>
     </element>

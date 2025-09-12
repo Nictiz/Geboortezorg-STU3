@@ -123,12 +123,15 @@
       <path value="Procedure.code" />
       <min value="1" />
     </element>
-    <element id="Procedure.code.coding:birth">
+    <element id="Procedure.code.coding">
       <path value="Procedure.code.coding" />
-      <sliceName value="birth" />
       <min value="1" />
     </element>
-    <element id="Procedure.code.coding:birth.code">
+    <element id="Procedure.code.coding.system">
+      <path value="Procedure.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Procedure.code.coding.code">
       <path value="Procedure.code.coding.code" />
       <min value="1" />
       <fixedCode value="3950001" />
@@ -168,6 +171,37 @@
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-4" />
         <comment value="Zorgverlening" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1624" />
+        <comment value="Aanpakker kind" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1625" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1626" />
+        <comment value="Supervisor" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1627" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor.display">
+      <path value="Procedure.performer.actor.display" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11029" />
+        <comment value="Niet-zorgverlener" />
       </mapping>
     </element>
     <element id="Procedure.reasonReference">

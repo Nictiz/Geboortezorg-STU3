@@ -73,7 +73,7 @@
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10283" />
+        <map value="peri32-dataelement-1378" />
         <comment value="Patient" />
       </mapping>
     </element>
@@ -97,9 +97,11 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.value[x]:valueBoolean">
+    <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-10551" />
@@ -119,7 +121,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -131,14 +133,35 @@
     </element>
     <element id="Observation.component:deceasedDateTime.code.coding">
       <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.component:deceasedDateTime.code.coding:deceasedDateTimeSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="deceasedDateTimeSNOMED" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="399753006" />
       </patternCoding>
     </element>
-    <element id="Observation.component:deceasedDateTime.value[x]:valueDateTime">
-      <path value="Observation.component.valueDateTime" />
-      <sliceName value="valueDateTime" />
+    <element id="Observation.component:deceasedDateTime.code.coding:deceasedDateTimeLOINC">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="deceasedDateTimeLOINC" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="81954-0" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:deceasedDateTime.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="dateTime" />
       </type>
@@ -155,14 +178,30 @@
     </element>
     <element id="Observation.component:perinatalPhase.code.coding">
       <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="246454002" />
       </patternCoding>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept">
+    <element id="Observation.component:perinatalPhase.code.coding:perinatalPhaseSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="perinatalPhaseSNOMED" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="246454002" />
+      </patternCoding>
+    </element>
+    <element id="Observation.component:perinatalPhase.value[x]">
       <path value="Observation.component.value[x]" />
-      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -172,7 +211,7 @@
         <comment value="FasePerinataleSterfteWaarde" />
       </mapping>
     </element>
-    <element id="Observation.component:perinatalPhase.value[x]:valueCodeableConcept.coding">
+    <element id="Observation.component:perinatalPhase.value[x].coding">
       <path value="Observation.component.value[x].coding" />
       <binding>
         <strength value="extensible" />

@@ -26,6 +26,7 @@
   <abstract value="false" />
   <contextType value="resource" />
   <context value="Patient" />
+  <context value="RelatedPerson" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -36,13 +37,16 @@
       <definition value="The gender the patient identifies with. The Patient's gender identity is used as guidance                 (e.g. for staff) about how to interact with the patient." />
       <max value="1" />
     </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/patient-genderIdentity" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/bc-patient-genderIdentity" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
-      <path value="Extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />

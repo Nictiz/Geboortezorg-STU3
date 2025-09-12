@@ -23,11 +23,7 @@
                shortId="1313"
                name="Administratief"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1290"
                level="2"
                type="group"
@@ -65,8 +61,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.name"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.name RelatedPerson.name"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1293"
                level="4"
@@ -227,10 +223,11 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address RelatedPerson.address"
                example="">
          <search>GET [base]/Coverage?_include=Coverage:payor:Patient</search>
+         <search>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3280"
                level="4"
@@ -241,9 +238,9 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line:line.streetName"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line:line.streetName RelatedPerson.address.line:line.streetName"
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3281"
                level="4"
                type="string"
@@ -253,8 +250,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line:houseNumber"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line:houseNumber RelatedPerson.address.line:houseNumber"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3282"
                level="4"
@@ -265,8 +262,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line:extension:buildingNumbersuffix"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line:extension:buildingNumbersuffix RelatedPerson.address.line:extension:buildingNumbersuffix"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3283"
                level="4"
@@ -277,8 +274,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line:extension:buildingNumbersuffix"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line:extension:buildingNumbersuffix RelatedPerson.address.line:extension:buildingNumbersuffix"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3284"
                level="4"
@@ -289,8 +286,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line.extension:additionalLocator"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line.extension:additionalLocator RelatedPerson.address.line.extension:additionalLocator"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3285"
                level="4"
@@ -301,8 +298,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line.postalCode"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line.postalCode RelatedPerson.address.line.postalCode"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3286"
                level="4"
@@ -313,9 +310,9 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line.city"
-               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line.city RelatedPerson.address.line.city"
+               example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4 https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3287"
                level="4"
                type="string"
@@ -325,8 +322,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line.district"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line.district RelatedPerson.address.line.district"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3288"
                level="4"
@@ -337,8 +334,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPersonaddress.country"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.country RelatedPerson.address.country"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3289"
                level="4"
@@ -349,8 +346,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.line.extension:unitID"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.line.extension:unitID RelatedPerson.address.line.extension:unitID"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3290"
                level="4"
@@ -361,8 +358,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.address.type/.use (via conceptmap)"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.address.type/.use (via conceptmap) RelatedPerson.address.type/.use (via conceptmap)"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3291"
                level="3"
@@ -373,10 +370,11 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom RelatedPerson.telecom"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4">
          <search>GET [base]/Coverage?_include=Coverage:payor:Patient</search>
+         <search>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3292"
                level="4"
@@ -387,10 +385,11 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom RelatedPerson.telecom"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4">
          <search>GET [base]/Coverage?_include=Coverage:payor:Patient</search>
+         <search>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3293"
                level="5"
@@ -401,8 +400,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom.value"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom.value RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3294"
                level="5"
@@ -413,8 +412,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom:extension:TelecomType"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom:extension:TelecomType RelatedPerson.telecom:extension:TelecomType"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3295"
                level="5"
@@ -425,8 +424,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom.use"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom.use RelatedPerson.telecom.use"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3296"
                level="4"
@@ -437,10 +436,11 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom.value"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom.value RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4">
          <search>GET [base]/Coverage?_include=Coverage:payor:Patient</search>
+         <search>GET [base]/Coverage?_include=Coverage:payor:RelatedPerson</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3297"
                level="5"
@@ -451,8 +451,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom.value"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom.value RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3298"
                level="5"
@@ -463,8 +463,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-patient/nl-core-relatedperson"
-               mapping="Patient/RelatedPerson.telecom.use"
+               pattern="nl-core-patient nl-core-relatedperson"
+               mapping="Patient.telecom.use RelatedPerson.telecom.use"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.750"
                level="2"
@@ -732,7 +732,7 @@
                pattern="bc-DisorderOfChild"
                mapping="Condition.code"
                example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-20">
-         <search>GET [base]/Condition?code=http://snomed.info/sct |362972006</search>
+         <search>GET [base]/Condition?code=http://snomed.info/sct|362972006</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1983"
                level="6"
@@ -828,7 +828,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson"
+               mapping="RelatedPerson"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -842,7 +842,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name"
+               mapping="RelatedPerson.name"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -856,7 +856,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.given"
+               mapping="RelatedPerson.name.given"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3301"
                level="4"
@@ -868,7 +868,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.given"
+               mapping="RelatedPerson.name.given"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3302"
                level="4"
@@ -880,7 +880,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.given"
+               mapping="RelatedPerson.name.given"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3303"
                level="4"
@@ -892,7 +892,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.use"
+               mapping="RelatedPerson.name.use"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3304"
                level="4"
@@ -904,7 +904,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannameOwnName"
+               mapping="RelatedPerson.name.family:humannameOwnName"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -918,7 +918,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannameOwnPrefix"
+               mapping="RelatedPerson.name.family:humannameOwnPrefix"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3306"
                level="5"
@@ -930,7 +930,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannameOwnName"
+               mapping="RelatedPerson.name.family:humannameOwnName"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3307"
                level="4"
@@ -942,7 +942,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannamePartnerName"
+               mapping="RelatedPerson.name.family:humannamePartnerName"
                example="">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -956,7 +956,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannamePartnerPrefix"
+               mapping="RelatedPerson.name.family:humannamePartnerPrefix"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3309"
                level="5"
@@ -968,7 +968,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.name.family:humannamePartnerName"
+               mapping="RelatedPerson.name.family:humannamePartnerName"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3310"
                level="3"
@@ -980,7 +980,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom"
+               mapping="RelatedPerson.telecom"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -994,7 +994,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom"
+               mapping="RelatedPerson.telecom"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -1008,7 +1008,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom.value"
+               mapping="RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3313"
                level="5"
@@ -1020,7 +1020,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom:extension:TelecomType"
+               mapping="RelatedPerson.telecom:extension:TelecomType"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3314"
                level="5"
@@ -1032,7 +1032,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom.use"
+               mapping="RelatedPerson.telecom.use"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3315"
                level="4"
@@ -1044,7 +1044,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom.value"
+               mapping="RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -1058,7 +1058,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom.value"
+               mapping="RelatedPerson.telecom.value"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3317"
                level="5"
@@ -1070,7 +1070,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.telecom.use"
+               mapping="RelatedPerson.telecom.use"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3318"
                level="3"
@@ -1082,7 +1082,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address"
+               mapping="RelatedPerson.address"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2">
          <search>GET [base]/RelatedPerson?patient=[id]</search>
       </mapping>
@@ -1096,7 +1096,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line:line.streetName"
+               mapping="RelatedPerson.address.line:line.streetName"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3320"
                level="4"
@@ -1108,7 +1108,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line:houseNumber"
+               mapping="RelatedPerson.address.line:houseNumber"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3321"
                level="4"
@@ -1120,7 +1120,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line:extension:buildingNumbersuffix"
+               mapping="RelatedPerson.address.line:extension:buildingNumbersuffix"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3322"
                level="4"
@@ -1132,7 +1132,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line:extension:buildingNumbersuffix"
+               mapping="RelatedPerson.address.line:extension:buildingNumbersuffix"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3323"
                level="4"
@@ -1144,7 +1144,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line.extension:additionalLocator"
+               mapping="RelatedPerson.address.line.extension:additionalLocator"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3324"
                level="4"
@@ -1156,7 +1156,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line.postalCode"
+               mapping="RelatedPerson.address.line.postalCode"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3325"
                level="4"
@@ -1168,7 +1168,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line.city"
+               mapping="RelatedPerson.address.line.city"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3326"
                level="4"
@@ -1180,7 +1180,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line.district"
+               mapping="RelatedPerson.address.line.district"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3327"
                level="4"
@@ -1192,7 +1192,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedpersonaddress.country"
+               mapping="RelatedPersonaddress.country"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3328"
                level="4"
@@ -1204,7 +1204,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.line.extension"
+               mapping="RelatedPerson.address.line.extension"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3329"
                level="4"
@@ -1216,7 +1216,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.address.type/.use (via conceptmap)"
+               mapping="RelatedPerson.address.type/.use (via conceptmap)"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.954"
                level="3"
@@ -1228,7 +1228,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson:role"
+               mapping="RelatedPerson:role"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.955"
                level="3"
@@ -1240,7 +1240,7 @@
                resource=""
                bc-pattern="false"
                pattern="nl-core-relatedperson"
-               mapping="Relatedperson.relationship"
+               mapping="RelatedPerson.relationship"
                example="https://simplifier.net/geboortezorg-stu3/relatedperson-example-duplicate-2"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.675"
                level="2"
@@ -1254,8 +1254,7 @@
                pattern="nl-core-patient"
                mapping="Patient*"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3">
-         <search>GET [base]/Patient/[patientid]</search>
-         <search>GET [base]/Patient?_id=[patientid or childid]</search>
+         <search>GET [base]/Patient/[patientid]GET [base]/Patient?_id=[patientid or childid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3197"
                level="3"
@@ -1650,8 +1649,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bc-child"
-               mapping="Patient.extension.born"
+               pattern="bc-Child"
+               mapping="Patient.extension:fetalStatus.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.683"
                level="3"
@@ -1783,7 +1782,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-LegalSituation-LegalStatus bc-LegalSituation-Representation"
-               mapping="Condition.onset[x]:onsetDateTime"
+               mapping="Condition.onset[x]:onsetDateTime Condition.onset[x]:onsetDateTime"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.7862"
                level="3"
@@ -1795,7 +1794,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-LegalSituation-LegalStatus bc-LegalSituation-Representation"
-               mapping="Condistion.abatementDateTime"
+               mapping="Condition.abatement[x]:abatementDateTime Condition.abatement[x]:abatementDateTime"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.956"
                level="2"
@@ -2320,11 +2319,10 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern="bc-MaternalRecord"
-               mapping="EpisodeOfCare"
+               pattern="bc-MaternalRecord bc-MultidisciplinaryTeamMeeting"
+               mapping="EpisodeOfCare Encounter.episodeOfCare"
                example="https://simplifier.net/geboortezorg-stu3/episodeofcare-example">
-         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct |364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}</search>
-         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
+         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct|364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3338"
                level="3"
@@ -2570,8 +2568,7 @@
                pattern="bc-Woman"
                mapping="Patient"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3">
-         <search>GET [base]/Patient/[patientid]</search>
-         <search>GET [base]/Patient?_id=[patientid]</search>
+         <search>GET [base]/Patient/[patientid]GET [base]/Patient?_id=[patientid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1713"
                level="2"
@@ -2606,8 +2603,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation"
-               mapping="Condition"
+               pattern="bc-LegalSituation-LegalStatus bc-LegalSituation-Representation"
+               mapping="Condition Condition"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.900"
                level="3"
@@ -2675,7 +2672,7 @@
                pattern="zib-FamilySituation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/family-situation">
-         <search>GET [base]/Observation?code=http://snomed.info/sct |365470003&amp;patient=[patientid]</search>
+         <search>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2690"
                level="4"
@@ -2689,8 +2686,7 @@
                pattern="bc-Woman"
                mapping="Patient.maritalStatus"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-4">
-         <search>GET [base]/Patient/[patientid]</search>
-         <search>GET [base]/Patient?identifier=[bsn]</search>
+         <search>GET [base]/Patient/[patientid]GET [base]/Patient?identifier=[bsn]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1717"
                level="4"
@@ -2752,7 +2748,7 @@
                pattern="zib-FamilySituation"
                mapping="Observation.component:child"
                example="https://simplifier.net/geboortezorg-stu3/family-situation">
-         <search>GET [base]/Observation?code=http://snomed.info/sct |365470003&amp;patient=[patientid]</search>
+         <search>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1722"
                level="5"
@@ -2802,7 +2798,7 @@
                pattern="zib-LivingSituation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/living-situation">
-         <search>GET [base]/Observation?code=http://snomed.info/sct |365508006&amp;patient=[patientid]</search>
+         <search>GET [base]/Observation?code=http://snomed.info/sct|365508006&amp;patient=[patientid]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1726"
                level="4"
@@ -2920,8 +2916,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="false"
-               pattern="bc-Maternalbservation"
+               bc-pattern="true"
+               pattern="bc-MaternalObservation"
                mapping="Observation.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2583"
@@ -3593,7 +3589,7 @@
                maximumMultiplicity="*"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2603"
@@ -3605,7 +3601,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.category"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2604"
@@ -3617,7 +3613,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.code"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2605"
@@ -3641,7 +3637,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.abatement[x]:abatementDateTime"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2607"
@@ -3653,7 +3649,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.clinicalStatus"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2608"
@@ -3665,7 +3661,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.verificationStatus"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2609"
@@ -3677,7 +3673,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-problem"
+               pattern="zib-Problem"
                mapping="Condition.note"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3331"
@@ -3992,8 +3988,7 @@
                pattern="bc-MaternalRecord"
                mapping="EpisodeOfCare"
                example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10">
-         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct |364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}</search>
-         <search>GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
+         <search>GET [base]/EpisodeOfCare?type=http://snomed/info/sct|364320009&amp;patient=[patientid]&amp;status=[active/inactive]{&amp;_include=EpisodeOfCare:organization&amp;_include=EpisodeOfCare:care-manager}GET [base]/EpisodeOfCare?_id=[id for pregnancy episode]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1698"
                level="2"
@@ -4004,8 +3999,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-Pregnancy"
-               mapping="Condition.identifier"
+               pattern="zib-Pregnancy bc-MaternalRecord"
+               mapping="Condition.identifier EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier"
                example="https://simplifier.net/geboortezorg-stu3/episodeofcare-example-duplicate-3">
          <search>GET [base]/Condition?context=EpisodeOfCare/[recordid],Encounter/[contactid]</search>
       </mapping>
@@ -4021,7 +4016,7 @@
                pattern="zib-Pregnancy"
                mapping="Condition"
                example="https://simplifier.net/geboortezorg-stu3/condition-example-duplicate-10">
-         <search>GET [base]/Condition?code=http://snomed.info/sct |364320009&amp;context=[id for pregnancy episode]</search>
+         <search>GET [base]/Condition?code=http://snomed.info/sct|364320009&amp;context=[id for pregnancy episode]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3342"
                level="3"
@@ -4047,7 +4042,7 @@
                pattern="zib-Pregnancy-Parity"
                mapping="Observation.value[x]:valueQuantity"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-90">
-         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org |11977-6}</search>
+         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org|11977-6}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3344"
                level="3"
@@ -4061,7 +4056,7 @@
                pattern="zib-Pregnancy-Gravidity"
                mapping="Observation.value[x]:valueQuantity"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-86">
-         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org |11996-6}</search>
+         <search>GET [base]/Observation?context=[id for pregnancy episode]{&amp;code=http://loinc.org|11996-6}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1712"
                level="2"
@@ -4085,7 +4080,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2253"
                level="4"
@@ -4339,7 +4334,7 @@
                pattern="bc-Encounter"
                mapping="Encounter"
                example="https://simplifier.net/geboortezorg-stu3/encounter-example-duplicate-3">
-         <search>GET [base]/Encounter?type=http://snomed.info/sct |18114009&amp;episodeofcare=[id for pregnancy episode]&amp;_include=Encounter:participant:Practitioner</search>
+         <search>GET [base]/Encounter?type=http://snomed.info/sct|18114009&amp;episodeofcare=[id for pregnancy episode]&amp;_include=Encounter:participant:Practitioner</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10520"
                level="3"
@@ -4365,7 +4360,7 @@
                pattern="zib-AlcoholUse"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-189">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |228273003}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct|228273003}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.122"
                level="4"
@@ -4451,7 +4446,7 @@
                pattern="zib-DrugUse"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-190">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |228366006}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct|228366006}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.117"
                level="4"
@@ -4561,7 +4556,7 @@
                pattern="zib-TobaccoUse"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-191">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct |365980008}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode],Encounter/[prenatal visit id]{&amp;code=http://snomed.info/sct|365980008}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2244"
                level="4"
@@ -4695,7 +4690,7 @@
                pattern="bc-DisorderOfPregnancy"
                mapping="Condition"
                example="https://simplifier.net/geboortezorg-stu3/example-pregnancy-disorder">
-         <search>GET [base]/Condition?category=http://snomed.info/sct |173300003&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+         <search>GET [base]/Condition?category=http://snomed.info/sct|173300003&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1181"
                level="3"
@@ -4853,7 +4848,7 @@
                pattern="bc-DeliveryProcedure"
                mapping="Procedure"
                example="https://simplifier.net/geboortezorg-stu3/procedure-example">
-         <search>GET [base]/Procedure?code=http://snomed.info/sct |236973005&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
+         <search>GET [base]/Procedure?code=http://snomed.info/sct|236973005&amp;context=EpisodeOfCare/[id for pregnancy episode]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.38"
                level="2"
@@ -4879,7 +4874,7 @@
                pattern="bc-DeliveryObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/begin-actieve-ontsluiting-wouden-zwanger1">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |439771001}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct|439771001}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4085"
                level="4"
@@ -4953,7 +4948,7 @@
                pattern="bc-DeliveryObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/wijze-begin-baring">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct |249120008}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]{&amp;code=http://snomed.info/sct|249120008}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4097"
                level="4"
@@ -5180,8 +5175,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="nl-core-practitionerrole"
-               mapping="PractitionerRole"
+               pattern="nl-core-practitionerrole bc-ChildBirthAssistance"
+               mapping="PractitionerRole Encounter.participant.individual"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10714"
                level="4"
@@ -5217,7 +5212,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-ChildBirthAssistance"
-               mapping="Encounter.participant.extension:periodOfArrival"
+               mapping="Encounter.extension:periodOfArrival"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10726"
                level="4"
@@ -5229,7 +5224,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-ChildBirthAssistance"
-               mapping="Encounter.participant.extension:timeWhenCalled"
+               mapping="Encounter.extension:timeWhenCalled"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10716"
                level="4"
@@ -5241,7 +5236,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-ChildBirthAssistance"
-               mapping="Encounter.participant.period.start"
+               mapping="Encounter.period.start"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10717"
                level="4"
@@ -5253,7 +5248,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-ChildBirthAssistance"
-               mapping="Encounter.participant.period.end"
+               mapping="Encounter.period.end"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.39"
                level="2"
@@ -5267,7 +5262,7 @@
                pattern="bc-Birth"
                mapping="Procedure"
                example="">
-         <search>GET [base]/Procedure?code=http://snomed.info/sct |42857002&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</search>
+         <search>GET [base]/Procedure?code=http://snomed.info/sct|42857002&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9685"
                level="3"
@@ -5293,7 +5288,7 @@
                pattern="bc-BirthObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-67">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |364336006}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct|364336006}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4145"
                level="4"
@@ -5355,7 +5350,7 @@
                pattern="bc-BirthObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/werkelijke-plaats-baring">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct |169812000}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy]{&amp;code=http://snomed.info/sct|169812000}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.4194"
                level="4"
@@ -5705,8 +5700,7 @@
                pattern="bc-Child"
                mapping="Patient"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5">
-         <search>GET [base]/Procedure?code=http://snomed.info/sct |3950001&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</search>
-         <search>GET [base]/Patient/[child-id]</search>
+         <search>GET [base]/Procedure?code=http://snomed.info/sct|3950001&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subjectGET [base]/Patient/[child-id]</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1754"
                level="2"
@@ -5729,8 +5723,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bc-Child"
-               mapping="Patient"
+               pattern="bc-Child bc-PerinatalDeath"
+               mapping="Patient Observation.subject"
                example="https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-5"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10566"
                level="3"
@@ -5741,8 +5735,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation"
-               mapping="Condition"
+               pattern="bc-LegalSituation-LegalStatus bc-LegalSituation-Representation"
+               mapping="Condition Condition"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2924"
                level="3"
@@ -5789,7 +5783,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-RelatedPerson"
+               pattern="nl-core-relatedperson"
                mapping="RelatedPerson"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2932"
@@ -5825,8 +5819,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="zib-RelatedPerson"
-               mapping="Relatedperson"
+               pattern="nl-core-relatedperson"
+               mapping="RelatedPerson"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2936"
                level="5"
@@ -5846,11 +5840,7 @@
                shortId="10773"
                name="DatumOverlijdenZusBroer"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2937"
                level="4"
                type="text"
@@ -5883,11 +5873,11 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |8339-4}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org|8339-4}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1419"
                level="4"
@@ -5897,8 +5887,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation.value[x]:valueQuantity"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-185"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1423"
@@ -5909,9 +5899,9 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
-               mapping="Observation.interpretation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
+               mapping="Observation.component.value[x]:valueQuantity"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1420"
                level="4"
@@ -5921,8 +5911,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation.comment"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1421"
@@ -5933,8 +5923,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation.effective[x]:effectiveDateTime"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1422"
@@ -5945,8 +5935,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-ChildObservation"
+               bc-pattern="false"
+               pattern="zib-BodyWeight"
                mapping="Observation.component:clothing.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1765"
@@ -5985,7 +5975,7 @@
                pattern="zib-ApgarScore"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/observation-example-duplicate-77">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |9272-6}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org|9272-6}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1409"
                level="6"
@@ -6095,7 +6085,7 @@
                pattern="zib-ApgarScore"
                mapping="Observation"
                example="">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |9274-2}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org|9274-2}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9664"
                level="6"
@@ -6205,7 +6195,7 @@
                pattern="zib-ApgarScore"
                mapping="Observation"
                example="">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org |9271-8}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;patient=[child-id]{&amp;code=http://loinc.org|9271-8}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9673"
                level="6"
@@ -6627,7 +6617,7 @@
                pattern="bc-MaternalObservation"
                mapping="Observation"
                example="https://simplifier.net/geboortezorg-stu3/example-bloedgroepab">
-         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;{category=http://snomed.info/sct |49581000146104}</search>
+         <search>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;{category=http://snomed.info/sct|49581000146104}</search>
       </mapping>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1766"
                level="3"
@@ -7299,7 +7289,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.value[x]:valueQuantity"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3115"
                level="6"
@@ -7357,9 +7347,9 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-MaternalObservation"
-               mapping="Observation"
+               bc-pattern="false"
+               pattern="bc-MaternalObservation zib-Wound"
+               mapping="Observation Condition"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10661"
                level="6"
@@ -7371,7 +7361,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueBoolean"
+               mapping="Observation.component.extension:observationComponentValueBooleanSTU3"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3122"
                level="6"
@@ -7379,7 +7369,12 @@
                shortId="3122"
                name="WondWeefsel"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"/>
+               maximumMultiplicity="1"
+               resource=""
+               bc-pattern="true"
+               pattern="bc-MaternalObservation"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
+               example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3123"
                level="6"
                type="boolean"
@@ -7390,7 +7385,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueBoolean"
+               mapping="Observation.component.extension:observationComponentValueBooleanSTU3"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3124"
                level="6"
@@ -7402,7 +7397,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3125"
                level="6"
@@ -7414,7 +7409,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3132"
                level="6"
@@ -7424,9 +7419,9 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueDateTime"
+               bc-pattern="false"
+               pattern="zib-Wound"
+               mapping="Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3150"
                level="6"
@@ -7436,9 +7431,9 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-MaternalObservation"
-               mapping="Observation.comment"
+               bc-pattern="false"
+               pattern="zib-Wound"
+               mapping="Condition.comment"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9860"
                level="5"
@@ -7690,7 +7685,7 @@
                resource=""
                bc-pattern="false"
                pattern="bc-BreastFindings"
-               mapping="Observation.value[x]:valueString"
+               mapping="Observation.component:nipples.value[x]:valueString"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10736"
                level="7"
@@ -8001,8 +7996,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="true"
-               pattern="bc-MaternalObservation"
-               mapping="Observation"
+               pattern="zib-Wound bc-MaternalObservation"
+               mapping="Condition Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10662"
                level="7"
@@ -8014,7 +8009,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueBoolean"
+               mapping="Observation.component.extension:observationComponentValueBooleanSTU3"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2873"
                level="7"
@@ -8026,7 +8021,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2874"
                level="7"
@@ -8038,7 +8033,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueBoolean"
+               mapping="Observation.component.extension:observationComponentValueBooleanSTU3"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2875"
                level="7"
@@ -8050,7 +8045,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2876"
                level="7"
@@ -8062,7 +8057,7 @@
                resource=""
                bc-pattern="true"
                pattern="bc-MaternalObservation"
-               mapping="Observation.value[x]:valueCodeableConcept"
+               mapping="Observation.component.value[x]:valueCodeableConcept"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2901"
                level="7"
@@ -8072,9 +8067,9 @@
                minimumMultiplicity="0"
                maximumMultiplicity="1"
                resource=""
-               bc-pattern="true"
-               pattern="bc-MaternalObservation"
-               mapping="Observation.comment"
+               bc-pattern="false"
+               pattern="zib-Wound"
+               mapping="Condition.comment"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10795"
                level="5"
@@ -8433,8 +8428,8 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bc-ExcretionFeces/bc-ExcretionUrine"
-               mapping="Observation"
+               pattern="bc-ExcretionFeces bc-ExcretionUrine"
+               mapping="Observation Observation"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9937"
                level="6"
@@ -8589,7 +8584,7 @@
                maximumMultiplicity="1"
                resource=""
                bc-pattern="false"
-               pattern="bbc-ExcretionUrine"
+               pattern="bc-ExcretionUrine"
                mapping="Observation.specimen"
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.9956"
@@ -9282,198 +9277,126 @@
                shortId="926"
                name="Bouwstenen"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2610"
                level="2"
                type="group"
                shortId="2610"
                name="Klinische context"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10374"
                level="3"
                type="group"
                shortId="10374"
                name="MedischHulpmiddel"
                minimumMultiplicity="0"
-               maximumMultiplicity="*"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="*"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10375"
                level="4"
                type="group"
                shortId="10375"
                name="Product"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10376"
                level="5"
                type="code"
                shortId="10376"
                name="ProductID"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10377"
                level="5"
                type="code"
                shortId="10377"
                name="ProductType"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10378"
                level="4"
                type="string"
                shortId="10378"
                name="ProductOmschrijving"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10379"
                level="4"
                type="datetime"
                shortId="10379"
                name="BeginDatum"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10532"
                level="4"
                type="datetime"
                shortId="10532"
                name="EindDatum"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10380"
                level="4"
                type="group"
                shortId="10380"
                name="Indicatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10381"
                level="5"
                type="group"
                shortId="10381"
                name="Probleem"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10382"
                level="4"
                type="string"
                shortId="10382"
                name="Toelichting"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10383"
                level="4"
                type="code"
                shortId="10383"
                name="AnatomischeLocatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10384"
                level="4"
                type="code"
                shortId="10384"
                name="Lateraliteit"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10385"
                level="4"
                type="group"
                shortId="10385"
                name="Locatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10526"
                level="5"
                type="group"
                shortId="10526"
                name="Zorgaanbieder"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10387"
                level="4"
                type="group"
                shortId="10387"
                name="Zorgverlener"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.10525"
                level="5"
                type="group"
                shortId="10525"
                name="Zorgverlener"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.7937"
                level="3"
                type="group"
@@ -9636,55 +9559,35 @@
                shortId="1332"
                name="Subbouwstenen"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3054"
                level="3"
                type="group"
                shortId="3054"
                name="AnatomischeLocatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3055"
                level="4"
                type="code"
                shortId="3055"
                name="Locatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.3056"
                level="4"
                type="code"
                shortId="3056"
                name="Lateraliteit"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1059"
                level="2"
                type="group"
                shortId="1059"
                name="Metingen"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1060"
                level="3"
                type="group"
@@ -9703,110 +9606,70 @@
                shortId="1061"
                name="Meetmethode"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1062"
                level="4"
                type="code"
                shortId="1062"
                name="ManchetType"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1063"
                level="4"
                type="code"
                shortId="1063"
                name="MeetLocatie"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1064"
                level="4"
                type="code"
                shortId="1064"
                name="DiastolischEindpunt"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1065"
                level="4"
                type="quantity"
                shortId="1065"
                name="SystolischeBloeddruk"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1066"
                level="4"
                type="quantity"
                shortId="1066"
                name="DiastolischeBloeddruk"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1067"
                level="4"
                type="quantity"
                shortId="1067"
                name="GemiddeldeBloeddruk"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1068"
                level="4"
                type="datetime"
                shortId="1068"
                name="BloeddrukDatumTijd"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1069"
                level="4"
                type="string"
                shortId="1069"
                name="Toelichting"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1070"
                level="4"
                type="code"
                shortId="1070"
                name="Houding"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1073"
                level="3"
                type="group"
@@ -9837,33 +9700,21 @@
                shortId="1075"
                name="Toelichting"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1076"
                level="4"
                type="datetime"
                shortId="1076"
                name="GewichtDatumTijd"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.1077"
                level="4"
                type="code"
                shortId="1077"
                name="Kleding"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2793"
                level="3"
                type="group"
@@ -9872,7 +9723,8 @@
                minimumMultiplicity="0"
                maximumMultiplicity="*"
                resource=""
-               pattern=""
+               bc-pattern="false"
+               pattern="zib-BodyTemperature"
                mapping=""
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2794"
@@ -9883,7 +9735,8 @@
                minimumMultiplicity="1"
                maximumMultiplicity="1"
                resource=""
-               pattern=""
+               bc-pattern="false"
+               pattern="zib-BodyTemperature"
                mapping=""
                example=""/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2795"
@@ -9892,150 +9745,83 @@
                shortId="2795"
                name="TemperatuurDatumTijd"
                minimumMultiplicity="1"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2796"
                level="4"
                type="string"
                shortId="2796"
                name="Toelichting"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2797"
                level="4"
                type="code"
                shortId="2797"
                name="TemperatuurType"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2584"
                level="2"
                type="group"
                shortId="2584"
                name="Patienten context"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2688"
                level="3"
                type="group"
                shortId="2688"
                name="BurgerlijkeStaatRC"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2689"
                level="4"
                type="code"
                shortId="2689"
                name="BurgerlijkeStaat"
                minimumMultiplicity="0"
-               maximumMultiplicity="*"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="*"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2904"
                level="3"
                type="group"
                shortId="2904"
                name="Taalvaardigheid"
                minimumMultiplicity="0"
-               maximumMultiplicity="*"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="*"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2905"
                level="4"
                type="code"
                shortId="2905"
                name="CommunicatieTaal"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2906"
                level="4"
                type="code"
                shortId="2906"
                name="TaalvaardigheidBegrijpen"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2907"
                level="4"
                type="code"
                shortId="2907"
                name="TaalvaardigheidSpreken"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2908"
                level="4"
                type="code"
                shortId="2908"
                name="TaalvaardigheidLezen"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
+               maximumMultiplicity="1"/>
       <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.2909"
                level="4"
                type="string"
                shortId="2909"
                name="Toelichting"
                minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               pattern=""
-               mapping=""
-               example=""/>
-      <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.11.1429"
-               level="1"
-               type="group"
-               shortId="1429"
-               name="Prullenbak"
-               minimumMultiplicity="0"
-               maximumMultiplicity="*"/>
-      <mapping conceptId="2.16.840.1.113883.2.4.3.11.60.90.77.2.12.915"
-               level="2"
-               type="group"
-               shortId="915"
-               name="Etniciteit"
-               minimumMultiplicity="0"
-               maximumMultiplicity="1"
-               resource=""
-               bc-pattern="false"
-               pattern="nl-core-relatedperson"
-               mapping="Relatedperson.extension"
-               example=""/>
+               maximumMultiplicity="1"/>
    </map>
 </maps>

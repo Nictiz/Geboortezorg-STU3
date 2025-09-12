@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-PregnancyObservation-code"/>
    <meta>
@@ -8,7 +7,7 @@
    <version value="1.3.3"/>
    <name value="bc-PregnancyObservation-code"/>
    <title value="bc-PregnancyObservation-code"/>
-   <status value="active"/>
+   <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
    <description value="bc-PregnancyObservation-code"/>
@@ -18,52 +17,60 @@
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3347 ATermeDatum"/>
+            </extension>
             <code value="161714006"/>
             <display value="geschatte datum van partus (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-1729 Datum einde zwangerschap"/>
+            </extension>
             <code value="118951000146109"/>
             <display value="datum van einde van zwangerschap (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2223 Definitieve à terme Waarde"/>
+            </extension>
             <code value="147781000146105"/>
             <display value="definitieve uitgerekende datum van partus (waarneembare entiteit)"/>
          </concept>
          <concept>
-            <code value="246435002"/>
-            <display value="aantal foetussen (waarneembare entiteit)"/>
-         </concept>
-         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2231 TweelingzwangerschapWaarde"/>
+            </extension>
             <code value="65147003"/>
-            <display value="tweelingzwangerschap (aandoening)"/>
+            <display value="tweelingzwangerschap (bevinding)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-1740 AantalLevendeKinderenWaarde"/>
+            </extension>
             <code value="143881000146107"/>
             <display value="aantal levende nakomelingen (waarneembare entiteit)"/>
          </concept>
          <concept>
-            <code value="713651007"/>
-            <display value="voorgeschiedenis met zwangerschap met abortus als resultaat (situatie)"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-1820 FetalLossWaarde"/>
+            </extension>
+            <code value="16216731000119106"/>
+            <display value="voorgeschiedenis met eerdere zwangerschap met intra-uteriene foetale dood (situatie)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2137 LevenVoelenWaarde"/>
+            </extension>
             <code value="364618000"/>
             <display value="bewegingspatroon van foetus (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2146 ActueelAantalLevendeFoetusWaarde"/>
+            </extension>
             <code value="142931000146106"/>
             <display value="aantal levende foetussen (waarneembare entiteit)"/>
-         </concept>
-         <concept>
-            <code value="59283008 276507005 276506001"/>
-            <display value="maternale sterfte (gebeurtenis) foetale sterfte (gebeurtenis) neonatale sterfte (gebeurtenis)"/>
-         </concept>
-         <concept>
-            <code value="399753006"/>
-            <display value="datum van overlijden (waarneembare entiteit)"/>
-         </concept>
-         <concept>
-            <code value="386639001"/>
-            <display value="afbreken van zwangerschap (verrichting)"/>
          </concept>
       </include>
       <include>

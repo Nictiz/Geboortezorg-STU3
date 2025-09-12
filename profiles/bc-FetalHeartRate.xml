@@ -46,6 +46,16 @@
         <map value="peri32-dataelement-1776" />
         <comment value="Foetale hartslag (Hartfrequentie)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1783" />
+        <comment value="Foetale hartslag (Hartfrequentie)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1784" />
+        <comment value="Foetale hartslag (Hartfrequentie)" />
+      </mapping>
     </element>
     <element id="Observation.extension:fetus">
       <path value="Observation.extension" />
@@ -66,10 +76,39 @@
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateSNOMED">
+      <path value="Observation.code.coding" />
+      <sliceName value="fetalHeartRateSNOMED" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="249043002" />
       </patternCoding>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateSNOMED.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="foetale hartfrequentie (waarneembare entiteit)" />
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateLOINC">
+      <path value="Observation.code.coding" />
+      <sliceName value="fetalHeartRateLOINC" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="8867-4" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:fetalHeartRateLOINC.display">
+      <path value="Observation.code.coding.display" />
+      <defaultValueString value="Hartslagfrequentie [aantal/tijd]" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -107,21 +146,29 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
+    <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1778" />
         <comment value="HartfrequentieDatumTijd" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10958" />
+        <comment value="HartfrequentieDatumTijd" />
+      </mapping>
     </element>
-    <element id="Observation.value[x]:valueQuantity">
+    <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1777" />
+        <comment value="HartfrequentieWaarde" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10959" />
         <comment value="HartfrequentieWaarde" />
       </mapping>
     </element>
@@ -130,6 +177,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1782" />
+        <comment value="InterpretatieFrequentie" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10962" />
         <comment value="InterpretatieFrequentie" />
       </mapping>
     </element>
@@ -159,12 +211,22 @@
         <map value="peri32-dataelement-1780" />
         <comment value="Toelichting" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10963" />
+        <comment value="Toelichting" />
+      </mapping>
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1779" />
+        <comment value="HartslagMeetMethode" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10960" />
         <comment value="HartslagMeetMethode" />
       </mapping>
     </element>
@@ -182,7 +244,7 @@
       <path value="Observation.method.coding" />
       <sliceName value="heartActionBasedOn" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="Hartactie op basis van" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.236--20170203161659" />
       </binding>
@@ -192,7 +254,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -209,9 +271,8 @@
         <code value="249044008" />
       </patternCoding>
     </element>
-    <element id="Observation.component:heartRateRegularity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:heartRateRegularity.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -223,6 +284,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1781" />
+        <comment value="HartslagRegelmatigheid" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10961" />
         <comment value="HartslagRegelmatigheid" />
       </mapping>
     </element>

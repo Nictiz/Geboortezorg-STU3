@@ -74,11 +74,6 @@
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9144" />
-        <comment value="Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)" />
-      </mapping>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9661" />
         <comment value="Probleem (Postpartum complicatie)" />
       </mapping>
@@ -117,9 +112,8 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Condition.extension:delivery.value[x]:valueReference">
+    <element id="Condition.extension:delivery.value[x]">
       <path value="Condition.extension.valueReference" />
-      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />

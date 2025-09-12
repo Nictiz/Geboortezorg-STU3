@@ -40,6 +40,11 @@
         <map value="peri32-dataelement-7937" />
         <comment value="VoedingspatroonZuigeling" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-7947" />
+        <comment value="VoedingspatroonZuigeling" />
+      </mapping>
     </element>
     <element id="Observation.basedOn">
       <path value="Observation.basedOn" />
@@ -70,9 +75,11 @@
       <path value="Observation.component" />
       <sliceName value="FeedingSupplement" />
     </element>
-    <element id="Observation.component:FeedingSupplement.valueString:valueString">
-      <path value="Observation.component.valueString" />
-      <sliceName value="valueString" />
+    <element id="Observation.component:FeedingSupplement.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7939" />
@@ -83,9 +90,11 @@
       <path value="Observation.component" />
       <sliceName value="FeedingFrequency" />
     </element>
-    <element id="Observation.component:FeedingFrequency.valueQuantity:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.component:FeedingFrequency.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
       <example>
         <label value="Example of frequency" />
         <valueQuantity>
@@ -149,9 +158,11 @@
         <comment value="VoedingDuur" />
       </mapping>
     </element>
-    <element id="Observation.component:FeedingType.valueCodeableConcept:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:FeedingType.value[x]">
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
       <binding>
         <strength value="extensible" />
         <description value="VoedingSoort_GZ" />
@@ -179,9 +190,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:SupplementaryFeeding.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.component:SupplementaryFeeding.value[x]">
+      <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>

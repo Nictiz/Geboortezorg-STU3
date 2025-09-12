@@ -37,18 +37,12 @@
         <comment value="IndividueelZorgplan" />
       </mapping>
     </element>
-    <element id="CarePlan.extension:coordinator">
-      <path value="CarePlan.extension" />
-      <sliceName value="coordinator" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
-      </type>
+    <element id="CarePlan.basedOn">
+      <path value="CarePlan.basedOn" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-8801" />
-        <comment value="Casemanager" />
+        <map value="peri32-dataelement-8816" />
+        <comment value="ZorgAfspraak" />
       </mapping>
     </element>
     <element id="CarePlan.category">
@@ -112,6 +106,61 @@
         <comment value="EindDatum" />
       </mapping>
     </element>
+    <element id="CarePlan.author">
+      <path value="CarePlan.author" />
+      <definition value="Identifies the individual(s) or ogranization who is responsible for the content of the care plan. This can be either the contributor and/or the coordinator of the care plan. Use the isCoordinator and isContributor extensions to indicate the role of the author." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-careteam" />
+      </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8802" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:practitionerRole">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="practitionerRole" />
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8802" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CarePlan.author.extension:isCoordinator">
+      <path value="CarePlan.author.extension" />
+      <sliceName value="isCoordinator" />
+      <definition value="Indicates if the .author is responsible for coordinating the execution of the activities of the care plan. Set this element to true if the health professional referenced in .author is the coordinator of the care plan." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-careplan-isCoordinator" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8801" />
+        <comment value="Casemanager" />
+      </mapping>
+    </element>
     <element id="CarePlan.careTeam">
       <path value="CarePlan.careTeam" />
       <type>
@@ -122,6 +171,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-8803" />
         <comment value="Betrokkenen" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-8804" />
+        <comment value="ZorgTeam" />
       </mapping>
     </element>
     <element id="CarePlan.goal">
@@ -140,7 +194,7 @@
       <path value="CarePlan.activity.detail.goal" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Goal" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-IndividualCarePlan-Goal" />
       </type>
     </element>
   </differential>

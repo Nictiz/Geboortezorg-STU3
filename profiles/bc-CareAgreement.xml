@@ -44,23 +44,23 @@
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.category.coding">
+      <path value="CarePlan.category.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="coding.code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
-    <element id="CarePlan.category:carePlanCode">
-      <path value="CarePlan.category" />
+    <element id="CarePlan.category.coding:carePlanCode">
+      <path value="CarePlan.category.coding" />
       <sliceName value="carePlanCode" />
       <min value="1" />
       <max value="1" />
-    </element>
-    <element id="CarePlan.category:carePlanCode.coding">
-      <path value="CarePlan.category.coding" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="288834001" />
@@ -134,6 +134,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3867" />
         <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3844" />
+        <comment value="AfspraakPartijen" />
       </mapping>
     </element>
     <element id="CarePlan.author.extension:practitionerRole">
@@ -222,7 +227,7 @@
       <slicing>
         <discriminator>
           <type value="profile" />
-          <path value="reference.resolve()" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -241,6 +246,19 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
       <isModifier value="false" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-3856" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.performer:healthProfessional">
+      <path value="CarePlan.activity.detail.performer" />
+      <sliceName value="healthProfessional" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3856" />

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="bc-ChildObservation-code"/>
    <meta>
@@ -8,7 +7,7 @@
    <version value="1.3.3"/>
    <name value="bc-ChildObservation-code"/>
    <title value="bc-ChildObservation-code"/>
-   <status value="active"/>
+   <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Nictiz"/>
    <description value="bc-ChildObservation-code"/>
@@ -18,83 +17,137 @@
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2941 HuidWaarde"/>
+            </extension>
             <code value="364528001"/>
             <display value="observatie betreffende huid (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2971 HoofdHalsWaarde"/>
+            </extension>
             <code value="364403006"/>
             <display value="observatie betreffende hoofd-halsregio (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-2979 ThoraxWaarde"/>
+            </extension>
             <code value="364434005"/>
-            <display value=" aspect van thorax (waarneembare entiteit)"/>
+            <display value="aspect van thorax (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3072 AbdomenWaarde"/>
+            </extension>
             <code value="364446009"/>
             <display value="algemene kenmerken van abdomen (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3077 RugWaarde"/>
+            </extension>
             <code value="364415005"/>
             <display value="observatie betreffende wervelkolom (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3082 ExtremiteitenWaarde"/>
+            </extension>
             <code value="363799009"/>
             <display value="kenmerk van extremiteit (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3051 GenitaliaWaarde"/>
+            </extension>
             <code value="364204002"/>
             <display value="observatie betreffende geslachtsorgaan (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-3087 NeurologieWaarde"/>
+            </extension>
             <code value="363820009"/>
             <display value="observatie betreffende neurologie (waarneembare entiteit)"/>
          </concept>
          <concept>
-            <code value="442618008 413083006"/>
-            <display value="afwijkende bevinding tijdens evaluatie (bevinding) automated auditory brainstem response test (verrichting)"/>
-         </concept>
-         <concept>
-            <code value="105421008"/>
-            <display value="opleidingsniveau (waarneembare entiteit)"/>
-         </concept>
-         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9963 AdemhalingWaarde"/>
+            </extension>
             <code value="364062005"/>
             <display value="observatie betreffende ademhaling (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9889 NavelstompWaarde"/>
+            </extension>
             <code value="364595007"/>
             <display value="aspect van navelstrengstomp (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9899 SlaappatroonWaarde"/>
+            </extension>
             <code value="404950004"/>
             <display value="gedrag omtrent slaap (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9909 HuilgedragWaarde"/>
+            </extension>
             <code value="28263002"/>
             <display value="huilen (waarneembare entiteit)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9919 SpugenWaarde"/>
+            </extension>
+            <code value="300359004"/>
+            <display value="bevinding betreffende braken (bevinding)"/>
+         </concept>
+         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-9929 SchedelWaarde"/>
+            </extension>
             <code value="248369007"/>
             <display value="bevinding betreffende schedel (bevinding)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10006 GehoortestWaarde"/>
+            </extension>
             <code value="252957005"/>
             <display value="gehoortest bij kind (verrichting)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10023 DatumGehoortestWaarde"/>
+            </extension>
+            <code value="439272007"/>
+            <display value="datum van verrichting (waarneembare entiteit)"/>
+         </concept>
+         <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10016 HielprikWaarde"/>
+            </extension>
             <code value="77262006"/>
             <display value="hielprik (verrichting)"/>
          </concept>
          <concept>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10024 DatumHielprikWaarde"/>
+            </extension>
             <code value="439771001"/>
             <display value="datum van gebeurtenis (waarneembare entiteit)"/>
          </concept>
-      </include>
-      <include>
-         <system value="http://loinc.org"/>
          <concept>
-            <code value="8339-4"/>
-            <display value="Birth weight Measured"/>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+               <valueString value="peri32-dataelement-10025 SetnummerHielprikWaarde"/>
+            </extension>
+            <code value="396278008"/>
+            <display value="identificatienummer (waarneembare entiteit)"/>
          </concept>
       </include>
    </compose>
