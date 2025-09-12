@@ -136,21 +136,21 @@ Based on ART-DECOR transaction version: </xsl:text>
                 <xsl:when test="$self/@pattern and starts-with(., 'bc-')">
                     <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=3.0.0|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>
                 <xsl:when test="$self/@pattern and starts-with(., 'nl-')">
                     <xsl:text>{{Simplifier|http://fhir.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.2.20|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.3.0|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>
                 <xsl:when test="$self/@pattern and starts-with(., 'zib-')">
                     <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.2.20|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.3.0|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>

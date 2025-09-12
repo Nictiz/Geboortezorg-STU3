@@ -27,7 +27,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:output method="text" encoding="UTF-8"/>
     <xsl:include href="add-type.xsl"/>
     
-    <xsl:param name="version" select="'1.3.3'"/>
+    <xsl:param name="version" select="'3.0.0'"/>
     
     <xd:doc>
         <xd:desc>Start table for  the root concepts of the dataset</xd:desc>
