@@ -76,7 +76,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                     <xsl:variable name="pattern" select="$fhirmapping/profile"/>
                     <xsl:attribute name="resource" select="$fhirmapping/resource"/>
                     <xsl:for-each select="$pattern">
-                        <xsl:attribute name="bc-pattern" select="if ((starts-with(., 'bc-') and ends-with(., 'Observation')) or starts-with(., 'bc-Disorder')) then true() else false()"/>                
+                        <xsl:attribute name="bc-pattern" select="if ((starts-with(., 'bc-') and ends-with(., 'Observation')) or starts-with(., 'bc-Disorder') or (. ='bc-ObstetricProcedure')) then true() else false()"/>                
                     </xsl:for-each>
                     <xsl:attribute name="pattern" select="$pattern"/>
                     <xsl:attribute name="mapping" select="$fhirmapping/mapping"/>
