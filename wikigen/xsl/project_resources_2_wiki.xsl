@@ -84,7 +84,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:text>}}</xsl:text>
         <xsl:text>
 ||</xsl:text>
-        <xsl:value-of select="replace(@pattern,'Gebz:FHIR_IG',concat('Gebz:V',substring($version,0,4),'_FHIR_IG'))"/>
+<!--        <xsl:value-of select="replace(@pattern,'Gebz:FHIR_IG',concat('Gebz:V',substring($version,0,4),'_FHIR_IG'))"/>-->
+        <xsl:value-of select="replace(@pattern,'Gebz:FHIR_IG', 'Gebz:FHIR')"/>
         <xsl:text>
 ||</xsl:text>
         <xsl:text>{{Simplifier|</xsl:text>
