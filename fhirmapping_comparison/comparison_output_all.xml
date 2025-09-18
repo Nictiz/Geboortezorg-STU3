@@ -1,0 +1,2561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fhirmapping_differences xmlns="http://hl7.org/fhir">
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10872</ID>
+         <naam>SoftwareNaam</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">ihe.mhd.minimal.documentreference</profile>
+         <mapping>DocumentReference.author</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10873</ID>
+         <naam>Verificatie zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">ihe.mhd.minimal.documentreference</profile>
+         <mapping>DocumentReference.authenticator</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10874</ID>
+         <naam>Geverifieerd door zorgverlener?</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">ihe.mhd.minimal.documentreference</profile>
+         <mapping>DocumentReference.authenticator</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10875</ID>
+         <naam>VerificatieDatum</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">ihe.mhd.minimal.documentreference</profile>
+         <mapping>DocumentReference.authenticator.extension:bc-verification-date</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-1292</ID>
+         <naam>BetalerNaam</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.name</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.name</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.name</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3279</ID>
+         <naam>Adresgegevens</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3280</ID>
+         <naam>Straat</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line:line.streetName</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line:line.streetName</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line:line.streetName</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3281</ID>
+         <naam>Huisnummer</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line:houseNumber</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line:houseNumber</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line:houseNumber</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3282</ID>
+         <naam>Huisnummerletter</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line:extension:buildingNumbersuffix</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3283</ID>
+         <naam>Huisnummertoevoeging</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line:extension:buildingNumbersuffix</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line:extension:buildingNumbersuffix</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3284</ID>
+         <naam>AanduidingBijNummer</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line.extension:additionalLocator</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line.extension:additionalLocator</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line.extension:additionalLocator</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3285</ID>
+         <naam>Postcode</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line.postalCode</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line.postalCode</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line.postalCode</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3286</ID>
+         <naam>Woonplaats</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line.city</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line.city</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line.city</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3287</ID>
+         <naam>Gemeente</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line.district</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line.district</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line.district</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3288</ID>
+         <naam>Land</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPersonaddress.country</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.country</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.country</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3289</ID>
+         <naam>AdditioneleInformatie</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.line.extension:unitID</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.line.extension:unitID</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.line.extension:unitID</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3290</ID>
+         <naam>AdresSoort</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.address.type/.use (via conceptmap)</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.address.type/.use (via conceptmap)</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.address.type/.use (via conceptmap)</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3291</ID>
+         <naam>Contactgegevens</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3292</ID>
+         <naam>Telefoonnummers</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3293</ID>
+         <naam>Telefoonnummer</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom.value</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom.value</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom.value</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3294</ID>
+         <naam>TelecomType</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom:extension:TelecomType</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom:extension:TelecomType</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom:extension:TelecomType</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3295</ID>
+         <naam>NummerSoort</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom.use</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom.use</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom.use</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3296</ID>
+         <naam>EmailAdressen</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom.value</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom.value</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom.value</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3297</ID>
+         <naam>EmailAdres</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom.value</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom.value</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom.value</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3298</ID>
+         <naam>EmailSoort</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-patient/nl-core-relatedperson</profile>
+         <mapping>Patient/RelatedPerson.telecom.use</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.telecom.use</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>RelatedPerson.telecom.use</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-10682</ID>
+         <naam>Probleem (OpnameIndicatie_LNR)</naam>
+      </element>
+      <original_mapping>
+         <profile>nvt</profile>
+         <mapping>nvt</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DisorderOfChild</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9861</ID>
+         <naam>GeborenIndicator</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-child</profile>
+         <mapping>Patient.extension.born</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-child</profile>
+         <mapping>Patient.extension:fetalStatus.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-7861</ID>
+         <naam>DatumAanvang</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</profile>
+         <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-LegalStatus</profile>
+         <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-Representation</profile>
+         <mapping>Condition.onset[x]:onsetDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-7862</ID>
+         <naam>DatumEinde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</profile>
+         <mapping>Condistion.abatementDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-LegalStatus</profile>
+         <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-Representation</profile>
+         <mapping>Condition.abatement[x]:abatementDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3844</ID>
+         <naam>AfspraakPartijen</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author.extension:isContributor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3849</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author.extension:practitionerRole</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3867</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author.extension:practitionerRole</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3858</ID>
+         <naam>Coordinator</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author.extension:coordinator</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-careagreement</profile>
+         <mapping>CarePlan.author.extension:isCoordinator</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3864</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-practitionerrole</profile>
+         <mapping>PractitionerRole</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-practitionerrole</profile>
+         <mapping>PractitionerRole</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-CareAgreement</profile>
+         <mapping>CarePlan.author.extension:practitionerRole.valueReference:valueReference</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3399</ID>
+         <naam>ZorgEpisode</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalRecord</profile>
+         <mapping>EpisodeOfCare</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalRecord</profile>
+         <mapping>EpisodeOfCare</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-MultidisciplinaryTeamMeeting</profile>
+         <mapping>Encounter.episodeOfCare</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-8801</ID>
+         <naam>Casemanager</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-IndividualCarePlan</profile>
+         <mapping>CarePlan.extension:caseManager</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-individualcareplan</profile>
+         <mapping>CarePlan.author.extension:isCoordinator</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-8802</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-practitioner</profile>
+         <mapping>Practitioner</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-practitioner</profile>
+         <mapping>Practitioner</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-IndividualCareplan</profile>
+         <mapping>CarePlan.author</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-IndividualCareplan</profile>
+         <mapping>CarePlan.author.extension:practitionerRole</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-8804</ID>
+         <naam>ZorgTeam</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-IndividualCarePlan</profile>
+         <mapping>CareTeam</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-individualcareplan</profile>
+         <mapping>CarePlan.careTeam</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-8810</ID>
+         <naam>Behandeldoel</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-IndividualCarePlan</profile>
+         <mapping>CarePlan.activity.detail.goal</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-individualcareplan</profile>
+         <mapping>CarePlan.goal</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-8816</ID>
+         <naam>ZorgAfspraak</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-IndividualCarePlan-Goal</profile>
+         <mapping>Goal.extension:carePlan</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-IndividualCareplan</profile>
+         <mapping>CarePlan.basedOn</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9144</ID>
+         <naam>Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DisorderPostPartum</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9172</ID>
+         <naam>ObservatieDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation.effective[x]:effectiveDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping status="identical">observation.effective[x]:effectivedatetime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9174</ID>
+         <naam>HoeveelheidBloedverliesWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping status="identical">observation.value[x]:valuequantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9175</ID>
+         <naam>ObservatieMethode</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation.method</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping status="identical">observation.method</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-9180</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping status="identical">observation.comment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10567</ID>
+         <naam>JuridischeSituatie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-LegalStatus</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-Representation</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-915</ID>
+         <naam>Etniciteit</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping>Relatedperson.extension</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2582</ID>
+         <naam>Schooltype</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-Maternalbservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping status="identical">observation.value[x]:valuecodeableconcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10404</ID>
+         <naam>SpecificatieAnders</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.modifierExtension:specificationOther.value[x]:valueString</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.modifierExtension:specificationOther.value[x]:valueString</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.except.extension:dataAbsentReason</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10410</ID>
+         <naam>AfspraakPartij</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.except.actor:agreementParty</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-treatmentdirective</profile>
+         <mapping>Consent.consentingParty</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10411</ID>
+         <naam>Patient</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.except.actor:agreementParty.reference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-treatmentdirective</profile>
+         <mapping>Consent.consentingParty</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10413</ID>
+         <naam>Vertegenwoordiger</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.except.actor:agreementParty.reference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-treatmentdirective</profile>
+         <mapping>Consent.consentingParty</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10415</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.except.actor:agreementParty.reference.extension:practitionerRole</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.consentingParty</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-TreatmentDirective</profile>
+         <mapping>Consent.consentingParty.extension:practitionerRole</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1080</ID>
+         <naam>Verrichting (Algemene anamnese)</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1081</ID>
+         <naam>VerrichtingStartDatum</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.performed[x]:performedperiod.start</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1082</ID>
+         <naam>VerrichtingEindDatum</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.performed[x]:performedperiod.end</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1083</ID>
+         <naam>VerrichtingAnatomischeLocatie</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.bodySite</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.bodysite</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1084</ID>
+         <naam>VerrichtingLateraliteit</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.bodysite.extension:procedurelaterality.value[x]:valuecodeableconcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1085</ID>
+         <naam>Indicatie</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.reasonReference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.reasonreference</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1087</ID>
+         <naam>VerrichtingType</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.code</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.code</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1088</ID>
+         <naam>VerrichtingMethode</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.extension:procedureMethod</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.extension:proceduremethod</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1089</ID>
+         <naam>MedischHulpmiddel</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.focalDevice.manipulated</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.focaldevice.manipulated</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1091</ID>
+         <naam>Locatie</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1093</ID>
+         <naam>Uitvoerder</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1095</ID>
+         <naam>Aanvrager</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure/zib-ProcedureRequest</profile>
+         <mapping>Procedure.basedOn:request/requester.agent</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure/zib-ProcedureRequest</profile>
+         <mapping status="identical">procedure.basedon:request/requester.agent</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1119</ID>
+         <naam>Aandoening</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-FamilyMemberHistory</profile>
+         <mapping>FamilyMemberHistory.condition.code.extension:conditionReference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-familymemberhistory</profile>
+         <mapping>FamilyMemberHistory.condition.code</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-4394</ID>
+         <naam>Werkelijke plaats baring (type locatie) (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-4395</ID>
+         <naam>Ziekenhuis baring</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4402</ID>
+         <naam>Geboortegewicht (Lichaamsgewicht)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10556</ID>
+         <naam>Probleem infectieziekte(n) Gezin</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-FamilyMemberHistory</profile>
+         <mapping>FamilyMemberHistory.condition.code.extension:conditionReference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-familymemberhistory</profile>
+         <mapping>FamilyMemberHistory.condition.code</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-1698</ID>
+         <naam>Identificatie van de zwangerschap</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Pregnancy</profile>
+         <mapping>Condition.identifier</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Pregnancy</profile>
+         <mapping>Condition.identifier</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-MaternalRecord</profile>
+         <mapping>EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1837</ID>
+         <naam>Aantal foetussen (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1838</ID>
+         <naam>AantalFoetussenDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.effective[x]:effectiveDateTime</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1840</ID>
+         <naam>AantalFoetussenWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1841</ID>
+         <naam>ObservatieMethode</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.method</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1843</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2252</ID>
+         <naam>Voorgenomen plaats baring tijdens zwangerschap (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2279</ID>
+         <naam>Voorgenomen voeding (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2272</ID>
+         <naam>Voorgenomen achternaam (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueString</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2269</ID>
+         <naam>Kraamzorg aangevraagd (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1846</ID>
+         <naam>Maternale sterfte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1847</ID>
+         <naam>OverlijdensIndicator</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.deceased[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1848</ID>
+         <naam>DatumOverlijden</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-PregnancyObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-patient</profile>
+         <mapping>Patient.deceased[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4108</ID>
+         <naam>Breken Vliezen (Observatie)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4109</ID>
+         <naam>ObservatieDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation.effective[x]:effectiveDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping status="identical">observation.effective[x]:effectivedatetime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4111</ID>
+         <naam>BrekenVliezenWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping status="identical">observation.value[x]:valuedatetime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4112</ID>
+         <naam>ObservatieMethode</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation.method</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping status="identical">observation.method</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-4119</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping status="identical">observation.comment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-10247</ID>
+         <naam>DuurUitdrijvingWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>nvt</profile>
+         <mapping>nvt</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-BirthObservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-1587</ID>
+         <naam>Ziekenhuis baring</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DeliveryProcedure</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryObservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-DeliveryProcedure</profile>
+         <mapping>Procedure.location</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10801</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>nl-core-practitionerrole</profile>
+         <mapping>PractitionerRole</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-practitionerrole</profile>
+         <mapping>PractitionerRole</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.individual</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10738</ID>
+         <naam>PartusStadiumWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.extension:periodOfArrival</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-childbirthassistance</profile>
+         <mapping>Encounter.extension:periodOfArrival</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10726</ID>
+         <naam>OproepDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.extension:timeWhenCalled</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-childbirthassistance</profile>
+         <mapping>Encounter.extension:timeWhenCalled</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10716</ID>
+         <naam>AankomstDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.period.start</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-childbirthassistance</profile>
+         <mapping>Encounter.period.start</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10717</ID>
+         <naam>EindDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.period.end</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-childbirthassistance</profile>
+         <mapping>Encounter.period.end</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1624</ID>
+         <naam>Aanpakker kind</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.individual</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Birth</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1625</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.individual</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Birth</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1626</ID>
+         <naam>Supervisor</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.individual</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Birth</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1627</ID>
+         <naam>Zorgverlener</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildBirthAssistance</profile>
+         <mapping>Encounter.participant.individual</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Birth</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10803</ID>
+         <naam>Foetus</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-Fetus</profile>
+         <mapping>BodySite</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Fetus</profile>
+         <mapping>BodySite</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-Child</profile>
+         <mapping>Patient</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10803</ID>
+         <naam>Foetus</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-Child</profile>
+         <mapping>Patient</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Fetus</profile>
+         <mapping>BodySite</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-Child</profile>
+         <mapping>Patient</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-1378</ID>
+         <naam>Patient</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-Child</profile>
+         <mapping>Patient</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-Child</profile>
+         <mapping>Patient</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-PerinatalDeath</profile>
+         <mapping>Observation.subject</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10566</ID>
+         <naam>JuridischeSituatie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-LegalStatus</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-LegalSituation-Representation</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10499</ID>
+         <naam>Contactpersoon</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-RelatedPerson</profile>
+         <mapping>RelatedPerson</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping status="identical">relatedperson</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10503</ID>
+         <naam>Contactpersoon</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-RelatedPerson</profile>
+         <mapping>Relatedperson</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>nl-core-relatedperson</profile>
+         <mapping status="identical">relatedperson</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1418</ID>
+         <naam>Geboortegewicht (Lichaamsgewicht)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1419</ID>
+         <naam>GewichtWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation.value[x]:valuequantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1423</ID>
+         <naam>PercentielGeboortegewicht</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation.interpretation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1420</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation.comment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1421</ID>
+         <naam>GewichtDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation.effective[x]:effectiveDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation.effective[x]:effectivedatetime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1422</ID>
+         <naam>Kleding</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ChildObservation</profile>
+         <mapping>Observation.component:clothing.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyWeight</profile>
+         <mapping status="identical">observation.component:clothing.value[x]:valuecodeableconcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1489</ID>
+         <naam>Problematiek kind</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DisorderOfChild</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-7895</ID>
+         <naam>Ernst Encefalopathie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DisorderOfChild</profile>
+         <mapping>Condition.severity</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1490</ID>
+         <naam>Geboortetrauma</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DisorderOfChild</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1513</ID>
+         <naam>Congenitale aandoeningen</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-DisorderOfChild</profile>
+         <mapping>Condition</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2416</ID>
+         <naam>Verrichting (Onderzoek)</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2417</ID>
+         <naam>VerrichtingStartDatum</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.effectivePeriod.start</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2418</ID>
+         <naam>VerrichtingEindDatum</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.effectivePeriod.end</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2419</ID>
+         <naam>VerrichtingAnatomischeLocatie</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.bodySite</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.bodysite</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2420</ID>
+         <naam>VerrichtingLateraliteit</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.bodysite.extension:procedurelaterality.value[x]:valuecodeableconcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2421</ID>
+         <naam>Indicatie</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-Procedure</profile>
+         <mapping>Procedure.reasonReference</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping status="identical">procedure.reasonreference</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2427</ID>
+         <naam>Locatie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ObstetricProcedure</profile>
+         <mapping>Procedure.performer.actor</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-obstetricprocedure</profile>
+         <mapping>Procedure.location</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-10283</ID>
+         <naam>Patient</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.subject</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.subject</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-FetalHeartRate</profile>
+         <mapping>Observation.subject</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-UmbilicalCord</profile>
+         <mapping>Observation.subject</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1767</ID>
+         <naam>Foetale monitoring (CTG)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetalMonitoring</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-1768</ID>
+         <naam>TijdsInterval</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-FetalMonitoring</profile>
+         <mapping>Observation.effective[x]:effectivePeriod</mapping>
+      </original_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1783</ID>
+         <naam>Foetale hartslag (Hartfrequentie)</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-HeartRate</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetalHeartRate</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-3525</ID>
+         <naam>ACPercentielWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>ntb</profile>
+         <mapping>ntb</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.component:acPercentielWaarde.value[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-3631</ID>
+         <naam>SchedelomvangPercentielWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>ntb</profile>
+         <mapping>ntb</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-HeadCircumference</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-3551</ID>
+         <naam>FLPercentielWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>ntb</profile>
+         <mapping>ntb</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.component:flPercentielWaarde.value[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-3588</ID>
+         <naam>CRLPercentielWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>ntb</profile>
+         <mapping>ntb</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.component:crlPercentielWaarde.value[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-3601</ID>
+         <naam>TCDPercentielWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>ntb</profile>
+         <mapping>ntb</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetusObservation</profile>
+         <mapping>Observation.component:tcdPercentielWaarde.value[x]</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-1784</ID>
+         <naam>Foetale hartslag (Hartfrequentie)</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-HeartRate</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FetalHeartRate</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7868</ID>
+         <naam>TekstUitslag</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-TextResult</profile>
+         <mapping>DiagnosticReport</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-PregnancyUltraSound</profile>
+         <mapping status="identical">diagnosticreport</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7869</ID>
+         <naam>TekstUitslagDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-TextResult</profile>
+         <mapping>DiagnosticReport.effectiveDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-PregnancyUltraSound</profile>
+         <mapping status="identical">diagnosticreport.effectivedatetime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7872</ID>
+         <naam>TekstUitslagStatus</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-TextResult</profile>
+         <mapping>DiagnosticReport.status.extension:TextResultStatus</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-PregnancyUltraSound</profile>
+         <mapping status="identical">diagnosticreport.status.extension:textresultstatus</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7873</ID>
+         <naam>TekstResultaat</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-TextResult</profile>
+         <mapping>DiagnosticReport.conclusion</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-PregnancyUltraSound</profile>
+         <mapping status="identical">diagnosticreport.conclusion</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7874</ID>
+         <naam>TekstUitslagType</naam>
+      </element>
+      <original_mapping>
+         <profile>zib-TextResult</profile>
+         <mapping>DiagnosticReport.code</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-PregnancyUltraSound</profile>
+         <mapping status="identical">diagnosticreport.code</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3113</ID>
+         <naam>Aantal kraamverbanden (Waarde)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-3120</ID>
+         <naam>Sectiowond (Wond)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10661</ID>
+         <naam>Sectiowond normaal</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3123</ID>
+         <naam>WondInfectie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3124</ID>
+         <naam>WondVochtigheid</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3125</ID>
+         <naam>WondRand</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3126</ID>
+         <naam>Wondlengte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3127</ID>
+         <naam>Wondbreedte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3128</ID>
+         <naam>Wonddiepte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3131</ID>
+         <naam>WondOntstaansdatum</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.onsetDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3132</ID>
+         <naam>DatumLaatsteVerbandwissel</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3149</ID>
+         <naam>WondFoto</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping>Binary</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.component.value[x]:valueAttachment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-3150</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.comment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2857</ID>
+         <naam>TepelsWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-BreastFindings</profile>
+         <mapping>Observation.value[x]:valueString</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-breastfindings</profile>
+         <mapping>Observation.component:nipples.value[x]:valueString</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-2871</ID>
+         <naam>Perineumwond (Wond)</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-10662</ID>
+         <naam>Perineumwond normaal</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2873</ID>
+         <naam>WondWeefsel</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2874</ID>
+         <naam>WondInfectie</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueBoolean</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2875</ID>
+         <naam>WondVochtigheid</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2876</ID>
+         <naam>WondRand</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueCodeableConcept</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2877</ID>
+         <naam>Wondlengte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2878</ID>
+         <naam>Wondbreedte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2879</ID>
+         <naam>Wonddiepte</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueQuantity</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile status="identical">bc-maternalobservation</profile>
+         <mapping>Observation.component.value[x]:valueQuantity</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2882</ID>
+         <naam>WondOntstaansdatum</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.onsetDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2883</ID>
+         <naam>DatumLaatsteVerbandwissel</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.value[x]:valueDateTime</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2900</ID>
+         <naam>WondFoto</naam>
+      </element>
+      <original_mapping>
+         <profile>IHE.MHD.Minimal.DocumentReference</profile>
+         <mapping>Binary</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.component.value[x]:valueAttachment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-2901</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-MaternalObservation</profile>
+         <mapping>Observation.comment</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-Wound</profile>
+         <mapping>Condition.comment</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="changed">
+      <element>
+         <ID>peri32-dataelement-7947</ID>
+         <naam>VoedingspatroonZuigeling</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-InfantFeedingPattern</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-FeedingPatternInfant</profile>
+         <mapping status="identical">observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="multiples-in-other">
+      <element>
+         <ID>peri32-dataelement-9936</ID>
+         <naam>Uitscheiding</naam>
+      </element>
+      <original_mapping>
+         <profile>bc-ExcretionFeces/bc-ExcretionUrine</profile>
+         <mapping>Observation</mapping>
+      </original_mapping>
+      <other_mapping>
+         <profile>bc-ExcretionFeces</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+      <other_mapping>
+         <profile>bc-ExcretionUrine</profile>
+         <mapping>Observation</mapping>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-1667</ID>
+         <naam>Lichaamslengte</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyHeight</profile>
+         <mapping status="identical"/>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-1668</ID>
+         <naam>LengteWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyHeight</profile>
+         <mapping status="identical"/>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-2793</ID>
+         <naam>Lichaamstemperatuur</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyTemperature</profile>
+         <mapping status="identical"/>
+      </other_mapping>
+   </difference>
+   <difference type="mapping-added">
+      <element>
+         <ID>peri32-dataelement-2794</ID>
+         <naam>TemperatuurWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+      <other_mapping>
+         <profile>zib-BodyTemperature</profile>
+         <mapping status="identical"/>
+      </other_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-9044</ID>
+         <naam>Aantal foetussen (Observatie) (1.0)</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-9049</ID>
+         <naam>AantalFoetussenDatumTijd</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-9050</ID>
+         <naam>AantalFoetussenWaarde</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-9051</ID>
+         <naam>ObservatieMethode</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+   </difference>
+   <difference type="missing-in-other">
+      <element>
+         <ID>peri32-dataelement-9052</ID>
+         <naam>Toelichting</naam>
+      </element>
+      <original_mapping>
+         <profile/>
+         <mapping/>
+      </original_mapping>
+   </difference>
+</fhirmapping_differences>

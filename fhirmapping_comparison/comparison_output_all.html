@@ -1,0 +1,2214 @@
+<!DOCTYPE HTML>
+<html xmlns="http://hl7.org/fhir">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>FHIR Mapping Comparison</title>
+      <style>
+                        body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:24px}
+                        h1{margin:0 0 8px}
+                        .summary{margin:8px 0 20px;color:#555}
+                        .toc a{margin-right:12px}
+                        table{border-collapse:collapse;width:100%;margin:16px 0}
+                        th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
+                        th{background:#f5f5f5;position:sticky;top:0}
+                        tr:nth-child(even){background:#fafafa}
+                        .badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:12px;background:#eee}
+                        /* explicit status badges */
+                        .badge.changed{background:#ffe066;}
+                        .badge.identical{background:#bdf0bd;}
+                        /* --- Count badges (for group summaries and headers) --- */
+                        .count-badge {
+                        display:inline-block;
+                        padding:2px 8px;
+                        border-radius:12px;
+                        font-size:12px;
+                        background:#eee;
+                        }
+                        section.changed .count-badge        { background:#ffe066; }
+                        section.mapping-added .count-badge  { background:#d6f5d6; }
+                        section.missing-in-other .count-badge { background:#ffd6d6; }
+                        section.multiples-in-other .count-badge { background:#e6e6ff; }
+                        .mono{font-family:ui-monospace,Consolas,monospace}
+                    </style>
+   </head>
+   <body>
+      <h1>FHIR Mapping Comparison</h1>
+      <div class="summary">
+         Total differences:
+         <strong>175</strong>
+         —
+         <span class="badge">changed:
+            103</span><span class="badge">mapping-added:
+            11</span><span class="badge">missing-in-other:
+            18</span><span class="badge">multiples-in-other:
+            43</span></div>
+      <div class="explanation">
+         <p><strong>Original</strong> refers to the fhirmapping-3-2 file at the time of the release of Simplifier package
+            1.3.2.</p>
+         <p><strong>Other</strong> refers to the fhirmapping file that we want to compare to, in this case the fhirmapping-3-2
+            file at the time of the release of package 3.0.0.</p>
+      </div>
+      <p>Quick links:</p>
+      <div class="toc"><a href="#changed">changed</a><a href="#multiples-in-other">multiples-in-other</a><a href="#mapping-added">mapping-added</a><a href="#missing-in-other">missing-in-other</a></div>
+      <section id="changed" class="changed">
+         <h2>changed<span class="badge">103</span></h2>
+         <table>
+            <thead>
+               <tr>
+                  <th style="width:22%">ID</th>
+                  <th style="width:28%">Naam</th>
+                  <th style="width:25%">Original (profile · mapping)</th>
+                  <th style="width:25%">Other (profile · mapping)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="mono">peri32-dataelement-1119</td>
+                  <td>Aandoening</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-FamilyMemberHistory</div>
+                     <div><strong>mapping:</strong>FamilyMemberHistory.condition.code.extension:conditionReference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-familymemberhistory<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>FamilyMemberHistory.condition.code<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10716</td>
+                  <td>AankomstDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.period.start</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-childbirthassistance<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Encounter.period.start<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1624</td>
+                  <td>Aanpakker kind</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.individual</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Birth<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performer.actor<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3113</td>
+                  <td>Aantal kraamverbanden (Waarde)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1095</td>
+                  <td>Aanvrager</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure/zib-ProcedureRequest</div>
+                     <div><strong>mapping:</strong>Procedure.basedOn:request/requester.agent</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure/zib-ProcedureRequest<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.basedon:request/requester.agent<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10410</td>
+                  <td>AfspraakPartij</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-TreatmentDirective</div>
+                     <div><strong>mapping:</strong>Consent.except.actor:agreementParty</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-treatmentdirective<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Consent.consentingParty<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-8810</td>
+                  <td>Behandeldoel</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-IndividualCarePlan</div>
+                     <div><strong>mapping:</strong>CarePlan.activity.detail.goal</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-individualcareplan<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.goal<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4108</td>
+                  <td>Breken Vliezen (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4111</td>
+                  <td>BrekenVliezenWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.value[x]:valuedatetime<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-8801</td>
+                  <td>Casemanager</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-IndividualCarePlan</div>
+                     <div><strong>mapping:</strong>CarePlan.extension:caseManager</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-individualcareplan<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.author.extension:isCoordinator<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10499</td>
+                  <td>Contactpersoon</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-RelatedPerson</div>
+                     <div><strong>mapping:</strong>RelatedPerson</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-relatedperson<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>relatedperson<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10503</td>
+                  <td>Contactpersoon</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-RelatedPerson</div>
+                     <div><strong>mapping:</strong>Relatedperson</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-relatedperson<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>relatedperson<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3858</td>
+                  <td>Coordinator</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-CareAgreement</div>
+                     <div><strong>mapping:</strong>CarePlan.author.extension:coordinator</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-careagreement<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.author.extension:isCoordinator<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2883</td>
+                  <td>DatumLaatsteVerbandwissel</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3132</td>
+                  <td>DatumLaatsteVerbandwissel</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.extension:DateOfLastDressingChange.value[x]:valueDateTime<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1848</td>
+                  <td>DatumOverlijden</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Patient.deceased[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10717</td>
+                  <td>EindDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.period.end</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-childbirthassistance<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Encounter.period.end<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1783</td>
+                  <td>Foetale hartslag (Hartfrequentie)</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-HeartRate</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetalHeartRate<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1784</td>
+                  <td>Foetale hartslag (Hartfrequentie)</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-HeartRate</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetalHeartRate<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1767</td>
+                  <td>Foetale monitoring (CTG)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-FetusObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetalMonitoring<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1418</td>
+                  <td>Geboortegewicht (Lichaamsgewicht)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4402</td>
+                  <td>Geboortegewicht (Lichaamsgewicht)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9861</td>
+                  <td>GeborenIndicator</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-child</div>
+                     <div><strong>mapping:</strong>Patient.extension.born</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-child<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Patient.extension:fetalStatus.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10874</td>
+                  <td>Geverifieerd door zorgverlener?</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>ihe.mhd.minimal.documentreference<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>DocumentReference.authenticator<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1421</td>
+                  <td>GewichtDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation.effective[x]:effectiveDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.effective[x]:effectivedatetime<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1419</td>
+                  <td>GewichtWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.value[x]:valuequantity<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9174</td>
+                  <td>HoeveelheidBloedverliesWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.value[x]:valuequantity<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1085</td>
+                  <td>Indicatie</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.reasonReference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.reasonreference<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2421</td>
+                  <td>Indicatie</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.reasonReference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.reasonreference<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9144</td>
+                  <td>Inspectie perineum/ sfincter/ vrouwelijke geslachtsorganen (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DisorderPostPartum</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1422</td>
+                  <td>Kleding</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation.component:clothing.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.component:clothing.value[x]:valuecodeableconcept<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2269</td>
+                  <td>Kraamzorg aangevraagd (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1091</td>
+                  <td>Locatie</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.performer.actor</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.performer.actor<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2427</td>
+                  <td>Locatie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ObstetricProcedure</div>
+                     <div><strong>mapping:</strong>Procedure.performer.actor</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-obstetricprocedure<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.location<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1846</td>
+                  <td>Maternale sterfte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Patient<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1089</td>
+                  <td>MedischHulpmiddel</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.focalDevice.manipulated</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.focaldevice.manipulated<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4109</td>
+                  <td>ObservatieDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation.effective[x]:effectiveDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.effective[x]:effectivedatetime<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9172</td>
+                  <td>ObservatieDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryObservation</div>
+                     <div><strong>mapping:</strong>Observation.effective[x]:effectiveDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.effective[x]:effectivedatetime<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4112</td>
+                  <td>ObservatieMethode</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation.method</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.method<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9175</td>
+                  <td>ObservatieMethode</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryObservation</div>
+                     <div><strong>mapping:</strong>Observation.method</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.method<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10726</td>
+                  <td>OproepDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.extension:timeWhenCalled</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-childbirthassistance<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Encounter.extension:timeWhenCalled<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1847</td>
+                  <td>OverlijdensIndicator</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Patient.deceased[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10738</td>
+                  <td>PartusStadiumWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.extension:periodOfArrival</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-childbirthassistance<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Encounter.extension:periodOfArrival<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10411</td>
+                  <td>Patient</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-TreatmentDirective</div>
+                     <div><strong>mapping:</strong>Consent.except.actor:agreementParty.reference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-treatmentdirective<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Consent.consentingParty<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1423</td>
+                  <td>PercentielGeboortegewicht</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation.interpretation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10662</td>
+                  <td>Perineumwond normaal</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.extension:observationComponentValueBooleanSTU3<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10556</td>
+                  <td>Probleem infectieziekte(n) Gezin</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-FamilyMemberHistory</div>
+                     <div><strong>mapping:</strong>FamilyMemberHistory.condition.code.extension:conditionReference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-familymemberhistory<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>FamilyMemberHistory.condition.code<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2582</td>
+                  <td>Schooltype</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-Maternalbservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.value[x]:valuecodeableconcept<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10661</td>
+                  <td>Sectiowond normaal</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.extension:observationComponentValueBooleanSTU3<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10872</td>
+                  <td>SoftwareNaam</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>ihe.mhd.minimal.documentreference<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>DocumentReference.author<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1626</td>
+                  <td>Supervisor</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.individual</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Birth<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performer.actor<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7873</td>
+                  <td>TekstResultaat</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-TextResult</div>
+                     <div><strong>mapping:</strong>DiagnosticReport.conclusion</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-PregnancyUltraSound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>diagnosticreport.conclusion<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7868</td>
+                  <td>TekstUitslag</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-TextResult</div>
+                     <div><strong>mapping:</strong>DiagnosticReport</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-PregnancyUltraSound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>diagnosticreport<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7869</td>
+                  <td>TekstUitslagDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-TextResult</div>
+                     <div><strong>mapping:</strong>DiagnosticReport.effectiveDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-PregnancyUltraSound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>diagnosticreport.effectivedatetime<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7872</td>
+                  <td>TekstUitslagStatus</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-TextResult</div>
+                     <div><strong>mapping:</strong>DiagnosticReport.status.extension:TextResultStatus</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-PregnancyUltraSound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>diagnosticreport.status.extension:textresultstatus<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7874</td>
+                  <td>TekstUitslagType</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-TextResult</div>
+                     <div><strong>mapping:</strong>DiagnosticReport.code</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-PregnancyUltraSound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>diagnosticreport.code<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2857</td>
+                  <td>TepelsWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BreastFindings</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueString</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-breastfindings<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component:nipples.value[x]:valueString<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1420</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyWeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.comment<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2901</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.comment<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3150</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.comment<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4119</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.comment<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9180</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation.comment<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1093</td>
+                  <td>Uitvoerder</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.performer.actor</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.performer.actor<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10873</td>
+                  <td>Verificatie zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>ihe.mhd.minimal.documentreference<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>DocumentReference.authenticator<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10875</td>
+                  <td>VerificatieDatum</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>ihe.mhd.minimal.documentreference<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>DocumentReference.authenticator.extension:bc-verification-date<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1080</td>
+                  <td>Verrichting (Algemene anamnese)</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2416</td>
+                  <td>Verrichting (Onderzoek)</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1083</td>
+                  <td>VerrichtingAnatomischeLocatie</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.bodySite</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.bodysite<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2419</td>
+                  <td>VerrichtingAnatomischeLocatie</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.bodySite</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.bodysite<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1082</td>
+                  <td>VerrichtingEindDatum</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.performed[x]:performedPeriod.end</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.performed[x]:performedperiod.end<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2418</td>
+                  <td>VerrichtingEindDatum</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.effectivePeriod.end</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performed[x]:performedPeriod.end<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1084</td>
+                  <td>VerrichtingLateraliteit</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.bodysite.extension:procedurelaterality.value[x]:valuecodeableconcept<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2420</td>
+                  <td>VerrichtingLateraliteit</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.bodysite.extension:procedurelaterality.value[x]:valuecodeableconcept<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1088</td>
+                  <td>VerrichtingMethode</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.extension:procedureMethod</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.extension:proceduremethod<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1081</td>
+                  <td>VerrichtingStartDatum</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.performed[x]:performedPeriod.start</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.performed[x]:performedperiod.start<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2417</td>
+                  <td>VerrichtingStartDatum</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.effectivePeriod.start</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performed[x]:performedPeriod.start<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1087</td>
+                  <td>VerrichtingType</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Procedure</div>
+                     <div><strong>mapping:</strong>Procedure.code</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ObstetricProcedure<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>procedure.code<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10413</td>
+                  <td>Vertegenwoordiger</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-TreatmentDirective</div>
+                     <div><strong>mapping:</strong>Consent.except.actor:agreementParty.reference</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-treatmentdirective<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Consent.consentingParty<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7947</td>
+                  <td>VoedingspatroonZuigeling</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-InfantFeedingPattern</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FeedingPatternInfant<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>observation<span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2272</td>
+                  <td>Voorgenomen achternaam (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueString</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2252</td>
+                  <td>Voorgenomen plaats baring tijdens zwangerschap (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2279</td>
+                  <td>Voorgenomen voeding (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2900</td>
+                  <td>WondFoto</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong>Binary</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueAttachment<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3149</td>
+                  <td>WondFoto</td>
+                  <td>
+                     <div><strong>profile:</strong>IHE.MHD.Minimal.DocumentReference</div>
+                     <div><strong>mapping:</strong>Binary</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueAttachment<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2874</td>
+                  <td>WondInfectie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.extension:observationComponentValueBooleanSTU3<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3123</td>
+                  <td>WondInfectie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueBoolean</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.extension:observationComponentValueBooleanSTU3<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2882</td>
+                  <td>WondOntstaansdatum</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.onsetDateTime<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3131</td>
+                  <td>WondOntstaansdatum</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition.onsetDateTime<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2876</td>
+                  <td>WondRand</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3125</td>
+                  <td>WondRand</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2875</td>
+                  <td>WondVochtigheid</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3124</td>
+                  <td>WondVochtigheid</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2873</td>
+                  <td>WondWeefsel</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueCodeableConcept</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueCodeableConcept<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2878</td>
+                  <td>Wondbreedte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3127</td>
+                  <td>Wondbreedte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2879</td>
+                  <td>Wonddiepte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3128</td>
+                  <td>Wonddiepte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2877</td>
+                  <td>Wondlengte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3126</td>
+                  <td>Wondlengte</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-maternalobservation<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-8816</td>
+                  <td>ZorgAfspraak</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-IndividualCarePlan-Goal</div>
+                     <div><strong>mapping:</strong>Goal.extension:carePlan</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-IndividualCareplan<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.basedOn<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-8804</td>
+                  <td>ZorgTeam</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-IndividualCarePlan</div>
+                     <div><strong>mapping:</strong>CareTeam</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-individualcareplan<span class="badge identical">identical</span></span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.careTeam<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1625</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.individual</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Birth<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performer.actor<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1627</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ChildBirthAssistance</div>
+                     <div><strong>mapping:</strong>Encounter.participant.individual</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Birth<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Procedure.performer.actor<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
+      <section id="multiples-in-other" class="multiples-in-other">
+         <h2>multiples-in-other<span class="badge">43</span></h2>
+         <table>
+            <thead>
+               <tr>
+                  <th style="width:22%">ID</th>
+                  <th style="width:28%">Naam</th>
+                  <th style="width:25%">Original (profile · mapping)</th>
+                  <th style="width:25%">Other (profile · mapping)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="mono">peri32-dataelement-3284</td>
+                  <td>AanduidingBijNummer</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line.extension:additionalLocator</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line.extension:additionalLocator RelatedPerson.address.line.extension:additionalLocator</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3289</td>
+                  <td>AdditioneleInformatie</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line.extension:unitID</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line.extension:unitID RelatedPerson.address.line.extension:unitID</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3290</td>
+                  <td>AdresSoort</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.type/.use (via conceptmap)</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.type/.use (via conceptmap) RelatedPerson.address.type/.use (via conceptmap)</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3279</td>
+                  <td>Adresgegevens</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address RelatedPerson.address</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3844</td>
+                  <td>AfspraakPartijen</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-CareAgreement</div>
+                     <div><strong>mapping:</strong>CarePlan.author</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-CareAgreement bc-CareAgreement</span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.author CarePlan.author.extension:isContributor</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1292</td>
+                  <td>BetalerNaam</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.name</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.name RelatedPerson.name</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3291</td>
+                  <td>Contactgegevens</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom RelatedPerson.telecom</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7861</td>
+                  <td>DatumAanvang</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</div>
+                     <div><strong>mapping:</strong>Condition.onset[x]:onsetDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</span></div>
+                     <div><strong>mapping:</strong><span>Condition.onset[x]:onsetDateTime Condition.onset[x]:onsetDateTime</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7862</td>
+                  <td>DatumEinde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</div>
+                     <div><strong>mapping:</strong>Condistion.abatementDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</span></div>
+                     <div><strong>mapping:</strong><span>Condition.abatement[x]:abatementDateTime Condition.abatement[x]:abatementDateTime</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3297</td>
+                  <td>EmailAdres</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom.value</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom.value RelatedPerson.telecom.value</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3296</td>
+                  <td>EmailAdressen</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom.value</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom.value RelatedPerson.telecom.value</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3298</td>
+                  <td>EmailSoort</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom.use</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom.use RelatedPerson.telecom.use</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10803</td>
+                  <td>Foetus</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-Fetus</div>
+                     <div><strong>mapping:</strong>BodySite</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Fetus bc-Child</span></div>
+                     <div><strong>mapping:</strong><span>BodySite Patient</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10803</td>
+                  <td>Foetus</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-Child</div>
+                     <div><strong>mapping:</strong>Patient</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Fetus bc-Child</span></div>
+                     <div><strong>mapping:</strong><span>BodySite Patient</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3287</td>
+                  <td>Gemeente</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line.district</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line.district RelatedPerson.address.line.district</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3281</td>
+                  <td>Huisnummer</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line:houseNumber</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line:houseNumber RelatedPerson.address.line:houseNumber</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3282</td>
+                  <td>Huisnummerletter</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line:extension:buildingNumbersuffix RelatedPerson.address.line:extension:buildingNumbersuffix</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3283</td>
+                  <td>Huisnummertoevoeging</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line:extension:buildingNumbersuffix</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line:extension:buildingNumbersuffix RelatedPerson.address.line:extension:buildingNumbersuffix</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1698</td>
+                  <td>Identificatie van de zwangerschap</td>
+                  <td>
+                     <div><strong>profile:</strong>zib-Pregnancy</div>
+                     <div><strong>mapping:</strong>Condition.identifier</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Pregnancy bc-MaternalRecord</span></div>
+                     <div><strong>mapping:</strong><span>Condition.identifier EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10566</td>
+                  <td>JuridischeSituatie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</span></div>
+                     <div><strong>mapping:</strong><span>Condition Condition</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10567</td>
+                  <td>JuridischeSituatie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-LegalSituation-LegalStatus/bc-LegalSituation-Representation</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-LegalSituation-LegalStatus bc-LegalSituation-Representation</span></div>
+                     <div><strong>mapping:</strong><span>Condition Condition</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3288</td>
+                  <td>Land</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPersonaddress.country</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.country RelatedPerson.address.country</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3295</td>
+                  <td>NummerSoort</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom.use</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom.use RelatedPerson.telecom.use</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10283</td>
+                  <td>Patient</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-FetusObservation</div>
+                     <div><strong>mapping:</strong>Observation.subject</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetusObservation bc-FetalHeartRate bc-UmbilicalCord</span></div>
+                     <div><strong>mapping:</strong><span>Observation.subject Observation.subject Observation.subject</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1378</td>
+                  <td>Patient</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-Child</div>
+                     <div><strong>mapping:</strong>Patient</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-Child bc-PerinatalDeath</span></div>
+                     <div><strong>mapping:</strong><span>Patient Observation.subject</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2871</td>
+                  <td>Perineumwond (Wond)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-Wound bc-MaternalObservation</span></div>
+                     <div><strong>mapping:</strong><span>Condition Observation</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3285</td>
+                  <td>Postcode</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line.postalCode</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line.postalCode RelatedPerson.address.line.postalCode</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3120</td>
+                  <td>Sectiowond (Wond)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalObservation zib-Wound</span></div>
+                     <div><strong>mapping:</strong><span>Observation Condition</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10404</td>
+                  <td>SpecificatieAnders</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-TreatmentDirective</div>
+                     <div><strong>mapping:</strong>Consent.modifierExtension:specificationOther.value[x]:valueString</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-TreatmentDirective bc-TreatmentDirective</span></div>
+                     <div><strong>mapping:</strong><span>Consent.modifierExtension:specificationOther.value[x]:valueString Consent.except.extension:dataAbsentReason</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3280</td>
+                  <td>Straat</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line:line.streetName</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line:line.streetName RelatedPerson.address.line:line.streetName</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3294</td>
+                  <td>TelecomType</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom:extension:TelecomType</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom:extension:TelecomType RelatedPerson.telecom:extension:TelecomType</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3293</td>
+                  <td>Telefoonnummer</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom.value</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom.value RelatedPerson.telecom.value</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3292</td>
+                  <td>Telefoonnummers</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.telecom</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.telecom RelatedPerson.telecom</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9936</td>
+                  <td>Uitscheiding</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-ExcretionFeces/bc-ExcretionUrine</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-ExcretionFeces bc-ExcretionUrine</span></div>
+                     <div><strong>mapping:</strong><span>Observation Observation</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3286</td>
+                  <td>Woonplaats</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-patient/nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Patient/RelatedPerson.address.line.city</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-patient nl-core-relatedperson</span></div>
+                     <div><strong>mapping:</strong><span>Patient.address.line.city RelatedPerson.address.line.city</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1587</td>
+                  <td>Ziekenhuis baring</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryProcedure</div>
+                     <div><strong>mapping:</strong>Procedure.performer.actor</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DeliveryObservation bc-DeliveryProcedure</span></div>
+                     <div><strong>mapping:</strong><span>Observation Procedure.location</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3399</td>
+                  <td>ZorgEpisode</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-MaternalRecord</div>
+                     <div><strong>mapping:</strong>EpisodeOfCare</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-MaternalRecord bc-MultidisciplinaryTeamMeeting</span></div>
+                     <div><strong>mapping:</strong><span>EpisodeOfCare Encounter.episodeOfCare</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10415</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-TreatmentDirective</div>
+                     <div><strong>mapping:</strong>Consent.except.actor:agreementParty.reference.extension:practitionerRole</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-TreatmentDirective bc-TreatmentDirective</span></div>
+                     <div><strong>mapping:</strong><span>Consent.consentingParty Consent.consentingParty.extension:practitionerRole</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10801</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-practitionerrole</div>
+                     <div><strong>mapping:</strong>PractitionerRole</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-practitionerrole bc-ChildBirthAssistance</span></div>
+                     <div><strong>mapping:</strong><span>PractitionerRole Encounter.participant.individual</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3849</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-CareAgreement</div>
+                     <div><strong>mapping:</strong>CarePlan.author</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-CareAgreement bc-CareAgreement</span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.author CarePlan.author.extension:practitionerRole</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3864</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-practitionerrole</div>
+                     <div><strong>mapping:</strong>PractitionerRole</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-practitionerrole bc-CareAgreement</span></div>
+                     <div><strong>mapping:</strong><span>PractitionerRole CarePlan.author.extension:practitionerRole.valueReference:valueReference</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3867</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-CareAgreement</div>
+                     <div><strong>mapping:</strong>CarePlan.author</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-CareAgreement bc-CareAgreement</span></div>
+                     <div><strong>mapping:</strong><span>CarePlan.author CarePlan.author.extension:practitionerRole</span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-8802</td>
+                  <td>Zorgverlener</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-practitioner</div>
+                     <div><strong>mapping:</strong>Practitioner</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>nl-core-practitioner bc-IndividualCareplan bc-IndividualCareplan</span></div>
+                     <div><strong>mapping:</strong><span>Practitioner CarePlan.author CarePlan.author.extension:practitionerRole</span></div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
+      <section id="mapping-added" class="mapping-added">
+         <h2>mapping-added<span class="badge">11</span></h2>
+         <table>
+            <thead>
+               <tr>
+                  <th style="width:22%">ID</th>
+                  <th style="width:28%">Naam</th>
+                  <th style="width:25%">Original (profile · mapping)</th>
+                  <th style="width:25%">Other (profile · mapping)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="mono">peri32-dataelement-3525</td>
+                  <td>ACPercentielWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>ntb</div>
+                     <div><strong>mapping:</strong>ntb</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetusObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component:acPercentielWaarde.value[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3588</td>
+                  <td>CRLPercentielWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>ntb</div>
+                     <div><strong>mapping:</strong>ntb</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetusObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component:crlPercentielWaarde.value[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10247</td>
+                  <td>DuurUitdrijvingWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>nvt</div>
+                     <div><strong>mapping:</strong>nvt</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-BirthObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3551</td>
+                  <td>FLPercentielWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>ntb</div>
+                     <div><strong>mapping:</strong>ntb</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetusObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component:flPercentielWaarde.value[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1668</td>
+                  <td>LengteWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyHeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span><span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1667</td>
+                  <td>Lichaamslengte</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyHeight<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span><span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2793</td>
+                  <td>Lichaamstemperatuur</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyTemperature<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span><span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-10682</td>
+                  <td>Probleem (OpnameIndicatie_LNR)</td>
+                  <td>
+                     <div><strong>profile:</strong>nvt</div>
+                     <div><strong>mapping:</strong>nvt</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-DisorderOfChild<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Condition<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3631</td>
+                  <td>SchedelomvangPercentielWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>ntb</div>
+                     <div><strong>mapping:</strong>ntb</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-HeadCircumference<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component.value[x]:valueQuantity<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-3601</td>
+                  <td>TCDPercentielWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>ntb</div>
+                     <div><strong>mapping:</strong>ntb</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>bc-FetusObservation<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span>Observation.component:tcdPercentielWaarde.value[x]<span class="badge changed">changed</span></span></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-2794</td>
+                  <td>TemperatuurWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span>zib-BodyTemperature<span class="badge changed">changed</span></span></div>
+                     <div><strong>mapping:</strong><span><span class="badge identical">identical</span></span></div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
+      <section id="missing-in-other" class="missing-in-other">
+         <h2>missing-in-other<span class="badge">18</span></h2>
+         <table>
+            <thead>
+               <tr>
+                  <th style="width:22%">ID</th>
+                  <th style="width:28%">Naam</th>
+                  <th style="width:25%">Original (profile · mapping)</th>
+                  <th style="width:25%">Other (profile · mapping)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="mono">peri32-dataelement-1837</td>
+                  <td>Aantal foetussen (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9044</td>
+                  <td>Aantal foetussen (Observatie) (1.0)</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1838</td>
+                  <td>AantalFoetussenDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.effective[x]:effectiveDateTime</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9049</td>
+                  <td>AantalFoetussenDatumTijd</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1840</td>
+                  <td>AantalFoetussenWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.value[x]:valueQuantity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9050</td>
+                  <td>AantalFoetussenWaarde</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1513</td>
+                  <td>Congenitale aandoeningen</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DisorderOfChild</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-7895</td>
+                  <td>Ernst Encefalopathie</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DisorderOfChild</div>
+                     <div><strong>mapping:</strong>Condition.severity</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-915</td>
+                  <td>Etniciteit</td>
+                  <td>
+                     <div><strong>profile:</strong>nl-core-relatedperson</div>
+                     <div><strong>mapping:</strong>Relatedperson.extension</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1490</td>
+                  <td>Geboortetrauma</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DisorderOfChild</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1841</td>
+                  <td>ObservatieMethode</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.method</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9051</td>
+                  <td>ObservatieMethode</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1489</td>
+                  <td>Problematiek kind</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DisorderOfChild</div>
+                     <div><strong>mapping:</strong>Condition</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1768</td>
+                  <td>TijdsInterval</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-FetalMonitoring</div>
+                     <div><strong>mapping:</strong>Observation.effective[x]:effectivePeriod</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-1843</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-PregnancyObservation</div>
+                     <div><strong>mapping:</strong>Observation.comment</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-9052</td>
+                  <td>Toelichting</td>
+                  <td>
+                     <div><strong>profile:</strong></div>
+                     <div><strong>mapping:</strong></div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4394</td>
+                  <td>Werkelijke plaats baring (type locatie) (Observatie)</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-BirthObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="mono">peri32-dataelement-4395</td>
+                  <td>Ziekenhuis baring</td>
+                  <td>
+                     <div><strong>profile:</strong>bc-DeliveryObservation</div>
+                     <div><strong>mapping:</strong>Observation</div>
+                  </td>
+                  <td>
+                     <div><strong>profile:</strong><span/></div>
+                     <div><strong>mapping:</strong><span/></div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
+   </body>
+</html>
