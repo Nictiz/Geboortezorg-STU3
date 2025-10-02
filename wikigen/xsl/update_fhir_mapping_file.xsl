@@ -60,13 +60,25 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         </xsl:if>
         <record>
             <ID><xsl:value-of select="@iddisplay/string()"/></ID>
-            <naam><xsl:value-of select="name"/></naam>
-            <mapping><xsl:value-of select="$fhirmapping/mapping"/></mapping>
-            <profile><xsl:value-of select="$fhirmapping/profile"/></profile>
-            <in><xsl:value-of select="$fhirmapping/in"/></in>
-            <zib><xsl:value-of select="$fhirmapping/zib"/></zib>
-            <example><xsl:value-of select="$fhirmapping/example"/></example>
-            <searchurl><xsl:value-of select="$fhirmapping/searchurl"/></searchurl>
+            <naam><xsl:value-of select="name[@language='nl-NL']"/></naam>         
+            <xsl:if test="$fhirmapping/mapping[normalize-space()]">
+                <mapping><xsl:value-of select="$fhirmapping/mapping"/></mapping>
+            </xsl:if>
+            <xsl:if test="$fhirmapping/profile[normalize-space()]">
+                <profile><xsl:value-of select="$fhirmapping/profile"/></profile>
+            </xsl:if>
+            <xsl:if test="$fhirmapping/in[normalize-space()]">
+                <in><xsl:value-of select="$fhirmapping/in"/></in>
+            </xsl:if>
+            <xsl:if test="$fhirmapping/zib[normalize-space()]">
+                <zib><xsl:value-of select="$fhirmapping/zib"/></zib>
+            </xsl:if>            
+            <xsl:if test="$fhirmapping/example[normalize-space()]">
+                <example><xsl:value-of select="$fhirmapping/example"/></example>
+            </xsl:if>            
+            <xsl:if test="$fhirmapping/searchurl[normalize-space()]">
+                <searchurl><xsl:value-of select="$fhirmapping/searchurl"/></searchurl>
+            </xsl:if>
         </record>
     </xsl:template>
     
