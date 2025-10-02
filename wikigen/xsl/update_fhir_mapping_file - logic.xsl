@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright © Nictiz
 
-This program is free software; you can redistribute it and/or modify it under the terms of the
-GNU Lesser General Public License as published by the Free Software Foundation; either version
-2.1 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU Lesser General Public License for more details.
-
-The full text of the license is available at http://www.gnu.org/copyleft/lesser.html
--->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
-    <xd:doc scope="stylesheet">
-        <xd:desc>Updates the fhir mapping xml file for a new version of the ART-DECOR dataset by copying all concepts from the dataset and copy available mapping data from current version of the fhir mapping xml file
-            <xd:p><xd:b>Expected input</xd:b> DECOR release file containing ADA community info that holds relevant mapping information. Use tool "adarelease_2_adacommunity.xsl" (should be where you found this tool) to set set up the initial community for upload on ART-DECOR</xd:p>
-            <xd:p><xd:b>History:</xd:b>
-            <xd:ul>
-                <xd:li>2021-08-24 version 0.1 LM</xd:li>
-            </xd:ul>
-        </xd:p>
-        </xd:desc>
-    </xd:doc>
+
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
@@ -30,10 +9,8 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:variable name="fhirmapping-file" select="document('../../fhirmapping-3-2.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
     <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
-    
-    <xd:doc>
-        <xd:desc>Make base table</xd:desc>
-    </xd:doc>
+
+
     <xsl:template match="dataset">
         <xsl:processing-instruction name="xml-model" select="'href=&quot;qa/fhirmapping.sch&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;'" />
         <xsl:variable name="dataset" select="."/>
@@ -54,9 +31,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
         </xsl:for-each>
     </xsl:template>
 
-    <xd:doc>
-        <xd:desc>Creates a record for a concept</xd:desc>
-    </xd:doc>
+
     <xsl:template match="concept" mode="createRecords">
         <xsl:variable name="id" select="@iddisplay/string()"/>
         <xsl:variable name="concept-name" select="name"/>
@@ -94,7 +69,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 </xsl:if>
             </record>
         </xsl:for-each>
-        
+
     </xsl:template>
     
     <xsl:template match="node()|@*"/>
