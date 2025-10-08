@@ -72,6 +72,6 @@
 
     </xsl:template>
     
-    <xsl:template match="node()|@*"/>
+    <xsl:template match="node()|@*"/> <!--catch-all empty template that overrides built-in templates-->
 
 </xsl:stylesheet>
