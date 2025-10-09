@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--this stylesheet looks for the mapping information in the bc- profiles-->
+<!--this stylesheet updates the existing fhirmapping-3-2 file, and additionally it looks for the mapping information in the bc- profiles-->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:f="http://hl7.org/fhir" exclude-result-prefixes="#all" version="2.0">
-
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
+    <xsl:param name="debug" as="xs:boolean" select="false()"/> <!--TOGGLE BETWEEN TRUE/FALSE TO SEE MESSAGE LOGGING-->
     <xsl:param name="compiled-mappings-output" as="xs:string" select="'qa/compiled-mappings-output.xml'"/>
     
     <!-- Point to the 'profiles' folder that contains all bc- profile xml's -->
@@ -14,40 +14,11 @@
     <!-- Load only files matching bc-*.xml in that folder (no subfolders) -->
     <xsl:variable name="bc-profile-files" select="collection(concat($bc-profile-folder-uri,'?select=bc-*.xml;recurse=no;on-error=warning'))"/>
 
-    
     <xsl:variable name="fhirmapping-file" select="document('../../fhirmapping-3-2.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
     <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
 
-    <xsl:template match="dataset">
-        
-        <!-- DEBUG: scan bc-*.xml and print what we'd extract (attributes only) -->
-        <!-- whole <xsl:for-each> may be removed-->
-        <xsl:for-each select="$bc-profile-files">
-            <!-- record.profile from /name/@value -->
-            <xsl:variable name="profile-bc" select="normalize-space(/*/f:name/@value)"/>
-            
-            <!-- each element that has a mapping -->
-            <xsl:for-each select="/*/f:differential/f:element[f:mapping]">
-                <!-- record.mapping from element/path/@value -->
-                <xsl:variable name="mapping-bc" select="normalize-space(f:path/@value)"/>
-                
-                <!-- each mapping under the element -->
-                <xsl:for-each select="f:mapping">
-                    <!-- record.ID from mapping/map/@value -->
-                    <xsl:variable name="id-bc"   select="normalize-space(f:map/@value)"/>
-                    <!-- record.naam from mapping/comment/@value -->
-                    <xsl:variable name="naam-bc" select="normalize-space(f:comment/@value)"/>
-                    
-                    <xsl:message
-                        select="concat('expected record → ID=', $id-bc,
-                        ' | naam=', $naam-bc,
-                        ' | mapping=', $mapping-bc,
-                        ' | profile=', $profile-bc)"/>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:for-each>        
-        
+    <xsl:template match="dataset">        
         <!-- Compile all <mapping> entries found in bc- profiles (under all differential.element) into an in-memory doc -->
         <xsl:variable name="compiled-mappings" as="document-node()">
             <xsl:document>
@@ -57,16 +28,27 @@
                         <xsl:variable name="profile-bc" select="normalize-space(/*/f:name/@value)"/>  
                         <!-- each element that has a mapping -->
                         <xsl:for-each select="/*/f:differential/f:element[f:mapping]">
-                            <!-- record.mapping from element/path/@value -->
-                            <xsl:variable name="mapping-bc" select="normalize-space(f:path/@value)"/>
+                            <!-- record.mapping from element/@id -->
+                            <xsl:variable name="mapping-bc" select="normalize-space(@id)"/> <!--changed from f:path/@value to @id-->
                             <!-- each mapping under the element -->
                             <xsl:for-each select="f:mapping">
+                                <!-- record.ID from mapping/map/@value -->
+                                <xsl:variable name="id-bc"   select="normalize-space(f:map/@value)"/>
+                                <!-- record.naam from mapping/comment/@value -->
+                                <xsl:variable name="naam-bc" select="normalize-space(f:comment/@value)"/>
                                 <record>
-                                    <ID><xsl:value-of select="normalize-space(f:map/@value)"/></ID> <!-- record.ID from mapping/map/@value -->
-                                    <naam><xsl:value-of select="normalize-space(f:comment/@value)"/></naam> <!-- record.naam from mapping/comment/@value -->
+                                    <ID><xsl:value-of select="$id-bc"/></ID> <!-- record.ID from mapping/map/@value -->
+                                    <naam><xsl:value-of select="$naam-bc"/></naam> <!-- record.naam from mapping/comment/@value -->
                                     <mapping><xsl:value-of select="$mapping-bc"/></mapping>
                                     <profile><xsl:value-of select="$profile-bc"/></profile>                                                                 
-                                </record>                                
+                                </record>  
+                                <xsl:if test="$debug">
+                                    <xsl:message
+                                        select="concat('expected record → ID=', $id-bc,
+                                        ' | naam=', $naam-bc,
+                                        ' | mapping=', $mapping-bc,
+                                        ' | profile=', $profile-bc)"/>
+                                </xsl:if>
                             </xsl:for-each>
                         </xsl:for-each>
                     </xsl:for-each>
@@ -78,12 +60,10 @@
             <xsl:sequence select="$compiled-mappings/node()"/>
         </xsl:result-document>
         
-        <!--debug message, may be removed-->
-        <xsl:message select="concat('Wrote ', count($compiled-mappings//record),' mappings found in bc-profiles to ', resolve-uri($compiled-mappings-output, static-base-uri()))"/>
-        
-        <!--debug message, may be removed-->
+        <!--debug messages, may be removed-->
         <xsl:message select="concat('bc-profile files found: ', count($bc-profile-files))"/>
-        
+        <xsl:message select="concat('Wrote ', count($compiled-mappings//record),' mappings found in bc-profiles to ', resolve-uri($compiled-mappings-output, static-base-uri()))"/>
+
         <xsl:processing-instruction name="xml-model" select="'href=&quot;qa/fhirmapping.sch&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;'" />
         <xsl:variable name="dataset" select="."/>
         <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -104,7 +84,6 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
-
 
     <xsl:template match="concept" mode="createRecords">
         <xsl:param name="compiled-mappings" as="document-node()"/>
@@ -207,7 +186,7 @@
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:otherwise> <!--case b3 when: dataset concept exists in fhirmapping, but not anymore in the bc-profile mappings-->
-                        <xsl:message>The concept for <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> is not mapped in the current bc-profiles. The previous fhirmapping which will be leading for the resulting fhirmapping. Recommended to review</xsl:message>
+                        <xsl:message>Concept <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> is not mapped in the current bc-profiles. The previous fhirmapping will be leading for the resulting output. Recommended to review</xsl:message>
                         <!--the new fhirmapping will follow the profile mappings-->
                         <xsl:for-each select="$fhirmapping"> <!--loop over fhirmappings found in fhirmapping-profiles-->
                             <record>

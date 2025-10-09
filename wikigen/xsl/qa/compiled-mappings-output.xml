@@ -27,13 +27,13 @@
    <record>
       <ID>peri32-dataelement-9985</ID>
       <naam>OnzekerheidWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:uncertainty.value[x]</mapping>
       <profile>bc-AbilityToTakeCareOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9992</ID>
       <naam>VaardigheidWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:ability.value[x]</mapping>
       <profile>bc-AbilityToTakeCareOfChild</profile>
    </record>
    <record>
@@ -63,25 +63,25 @@
    <record>
       <ID>peri32-dataelement-2413</ID>
       <naam>HoeveelheidVruchtwaterWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:amnioticFluidQuantity.value[x]</mapping>
       <profile>bc-AmnioticFluid</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2479</ID>
       <naam>VruchtwatercompartimentWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:amnioticFluidCompartment.value[x]</mapping>
       <profile>bc-AmnioticFluid</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10568</ID>
       <naam>VruchtwaterSDPWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:amnioticFluidSDP.value[x]</mapping>
       <profile>bc-AmnioticFluid</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10569</ID>
       <naam>VruchtwaterAFIWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:amnioticFluidAFI.value[x]</mapping>
       <profile>bc-AmnioticFluid</profile>
    </record>
    <record>
@@ -93,67 +93,67 @@
    <record>
       <ID>peri32-dataelement-2813</ID>
       <naam>Darm</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:bowel.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2814</ID>
       <naam>Blaas</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:bladder.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2815</ID>
       <naam>UiterlijkeVerzorging</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:personalGrooming.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2816</ID>
       <naam>Toiletgebruik</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:toiletUse.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2817</ID>
       <naam>Eten</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:eating.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2818</ID>
       <naam>Transfers</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:transfers.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2819</ID>
       <naam>Mobiliteit</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:mobility.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2820</ID>
       <naam>AanUitkleden</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:dressingAndUndressing.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2821</ID>
       <naam>TrappenLopen</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:walkingStairs.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2822</ID>
       <naam>BadenDouchen</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:bathingAndShowering.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2823</ID>
       <naam>TotaalScore</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:totalScore.value[x]</mapping>
       <profile>bc-BarthelIndex</profile>
    </record>
    <record>
@@ -267,7 +267,7 @@
    <record>
       <ID>peri32-dataelement-4330</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-BirthControl</profile>
    </record>
    <record>
@@ -291,7 +291,7 @@
    <record>
       <ID>peri32-dataelement-4332</ID>
       <naam>GebruikAnticonceptieWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:birthcontrolMethod.value[x]</mapping>
       <profile>bc-BirthControl</profile>
    </record>
    <record>
@@ -327,13 +327,13 @@
    <record>
       <ID>peri23-dataelement-40002</ID>
       <naam>Baring</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:birth</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-80709</ID>
       <naam>Vorige baring</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:birth</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
@@ -351,79 +351,79 @@
    <record>
       <ID>peri32-dataelement-4133</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4145</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4194</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-20590</ID>
       <naam>Tijdstip begin actieve ontsluiting</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-30030</ID>
       <naam>Tijdstip actief meepersen</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-20640</ID>
       <naam>Hoeveelheid bloedverlies</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40280</ID>
       <naam>Perinatale sterfte?</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40300</ID>
       <naam>Datum/tijd vaststelling perinatale sterfte</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-80619</ID>
       <naam>Tijdstip breken vliezen</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82089</ID>
       <naam>Ruggeprik gewenst, niet gekregen?</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4147</ID>
       <naam>TypePartusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4196</ID>
       <naam>WerkelijkePlaatsBaringWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4135</ID>
       <naam>ActiefMeepersenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-BirthObservation</profile>
    </record>
    <record>
@@ -483,7 +483,7 @@
    <record>
       <ID>peri32-dataelement-2861</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-BreastFindings</profile>
    </record>
    <record>
@@ -495,19 +495,19 @@
    <record>
       <ID>peri32-dataelement-2857</ID>
       <naam>TepelsWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:nipples.value[x]:valueString</mapping>
       <profile>bc-BreastFindings</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10736</ID>
       <naam>HuidWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:skin.value[x]:valueString</mapping>
       <profile>bc-BreastFindings</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10737</ID>
       <naam>OverigeAfwijkingWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:other.value[x]:valueString</mapping>
       <profile>bc-BreastFindings</profile>
    </record>
    <record>
@@ -579,31 +579,31 @@
    <record>
       <ID>peri32-dataelement-3849</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:practitionerRole</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3867</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:practitionerRole</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3864</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.author.extension.valueReference</mapping>
+      <mapping>CarePlan.author.extension:practitionerRole.valueReference:valueReference</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3858</ID>
       <naam>Coordinator</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:isCoordinator</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3844</ID>
       <naam>AfspraakPartijen</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:isContributor</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
@@ -627,25 +627,25 @@
    <record>
       <ID>peri32-dataelement-3856</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.activity.detail.performer.extension</mapping>
+      <mapping>CarePlan.activity.detail.performer.extension:practitionerRole</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3856</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.activity.detail.performer</mapping>
+      <mapping>CarePlan.activity.detail.performer:healthProfessional</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3852</ID>
       <naam>Patient</naam>
-      <mapping>CarePlan.activity.detail.performer</mapping>
+      <mapping>CarePlan.activity.detail.performer:patient</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3854</ID>
       <naam>Contactpersoon</naam>
-      <mapping>CarePlan.activity.detail.performer</mapping>
+      <mapping>CarePlan.activity.detail.performer:contactPerson</mapping>
       <profile>bc-CareAgreement</profile>
    </record>
    <record>
@@ -705,7 +705,7 @@
    <record>
       <ID>peri23-dataelement-82121</ID>
       <naam>Type betrokkenheid</naam>
-      <mapping>CareTeam.participant.role.coding</mapping>
+      <mapping>CareTeam.participant.role.coding:typeOfInvolvement</mapping>
       <profile>bc-CareTeam</profile>
    </record>
    <record>
@@ -741,13 +741,13 @@
    <record>
       <ID>peri23-dataelement-82120</ID>
       <naam>Betrokkenheid kinderarts</naam>
-      <mapping>CareTeam.participant.member.extension</mapping>
+      <mapping>CareTeam.participant.member.extension:practitionerRole</mapping>
       <profile>bc-CareTeam</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82119</ID>
       <naam>Kinderarts betrokken?</naam>
-      <mapping>CareTeam.participant.member.extension</mapping>
+      <mapping>CareTeam.participant.member.extension:practitionerRole</mapping>
       <profile>bc-CareTeam</profile>
    </record>
    <record>
@@ -849,7 +849,7 @@
    <record>
       <ID>peri32-dataelement-9861</ID>
       <naam>GeborenIndicator</naam>
-      <mapping>Patient.extension.value[x]</mapping>
+      <mapping>Patient.extension:fetalStatus.value[x]</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -873,7 +873,7 @@
    <record>
       <ID>peri23-dataelement-40010</ID>
       <naam>BSN kind</naam>
-      <mapping>Patient.identifier</mapping>
+      <mapping>Patient.identifier:BSN</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -891,7 +891,7 @@
    <record>
       <ID>peri32-dataelement-10702</ID>
       <naam>Naamgebruik</naam>
-      <mapping>Patient.name.extension</mapping>
+      <mapping>Patient.name.extension:humannameAssemblyOrder</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -903,31 +903,31 @@
    <record>
       <ID>peri23-dataelement-82054</ID>
       <naam>Voorvoegsel</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannameOwnPrefix</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10705</ID>
       <naam>Achternaam</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannameOwnName</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82054</ID>
       <naam>Voorvoegsel</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannamePartnerPrefix</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10704</ID>
       <naam>Voorvoegsels</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannamePartnerPrefix</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10703</ID>
       <naam>Geslachtsnaam</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannamePartnerName</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -969,7 +969,7 @@
    <record>
       <ID>peri23-dataelement-40041</ID>
       <naam>Geslacht (medische observatie)</naam>
-      <mapping>Patient.gender.extension</mapping>
+      <mapping>Patient.gender.extension:birthSex</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -987,7 +987,7 @@
    <record>
       <ID>peri23-dataelement-40050</ID>
       <naam/>
-      <mapping>Patient.birthDate.extension</mapping>
+      <mapping>Patient.birthDate.extension:birthTime</mapping>
       <profile>bc-Child</profile>
    </record>
    <record>
@@ -1035,19 +1035,19 @@
    <record>
       <ID>peri32-dataelement-10726</ID>
       <naam>OproepDatumTijd</naam>
-      <mapping>Encounter.extension</mapping>
+      <mapping>Encounter.extension:timeWhenCalled</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
       <ID>peri23-dataelement-20650</ID>
       <naam>Partusstadium assistente gearriveerd</naam>
-      <mapping>Encounter.extension</mapping>
+      <mapping>Encounter.extension:periodOfArrival</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10738</ID>
       <naam>PartusStadiumWaarde</naam>
-      <mapping>Encounter.extension</mapping>
+      <mapping>Encounter.extension:periodOfArrival</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
@@ -1071,25 +1071,25 @@
    <record>
       <ID>peri23-dataelement-82132</ID>
       <naam>Rol partusassistent</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40150</ID>
       <naam>Rol aanpakker kind</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40170</ID>
       <naam>Rol supervisor</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10712</ID>
       <naam>ContactMet</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-ChildBirthAssistance</profile>
    </record>
    <record>
@@ -1425,343 +1425,343 @@
    <record>
       <ID>peri32-dataelement-8645</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2940</ID>
       <naam>HuidDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2970</ID>
       <naam>HoofdHalsDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2978</ID>
       <naam>ThoraxDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3071</ID>
       <naam>AbdomenDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3076</ID>
       <naam>RugDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3081</ID>
       <naam>ExtremiteitenDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3050</ID>
       <naam>GenitaliaDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3086</ID>
       <naam>NeurologieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8690</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8718</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8728</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9761</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9782</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9792</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9961</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9887</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9897</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9907</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9917</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9927</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10004</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10014</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-70030</ID>
       <naam>Substantie voeding kind</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10665</ID>
       <naam>Oorzaak overlijden (Probleem)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2941</ID>
       <naam>HuidWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2971</ID>
       <naam>HoofdHalsWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2979</ID>
       <naam>ThoraxWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3072</ID>
       <naam>AbdomenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3077</ID>
       <naam>RugWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3082</ID>
       <naam>ExtremiteitenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3051</ID>
       <naam>GenitaliaWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3087</ID>
       <naam>NeurologieWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8692</ID>
       <naam>ROPScreeningAfgeslotenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8720</ID>
       <naam>AABRAfwijkendWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8730</ID>
       <naam>BERAAfwijkendWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9763</ID>
       <naam>NeurologieWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9784</ID>
       <naam>GehoorWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9963</ID>
       <naam>AdemhalingWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9889</ID>
       <naam>NavelstompWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9909</ID>
       <naam>HuilgedragWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9919</ID>
       <naam>SpugenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9929</ID>
       <naam>SchedelWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9738</ID>
       <naam>Opleiding moeder</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9739</ID>
       <naam>Opleiding vader</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9741</ID>
       <naam>Schooltype</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8647</ID>
       <naam>KindInLevenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9794</ID>
       <naam>GezondheidstoestandWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9899</ID>
       <naam>SlaappatroonWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10006</ID>
       <naam>GehoortestWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10016</ID>
       <naam>HielprikWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10023</ID>
       <naam>DatumGehoortestWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10024</ID>
       <naam>DatumHielprikWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-70011</ID>
       <naam>Voeding kind (datum)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-10604</ID>
       <naam>Geboortegewicht</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40060</ID>
       <naam>Geboortegewicht</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1430</ID>
       <naam>Oorzaak overlijden (Probleem)</naam>
-      <mapping>Observation.value[x].extension</mapping>
+      <mapping>Observation.value[x].extension:valueReference</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
@@ -1965,19 +1965,19 @@
    <record>
       <ID>peri32-dataelement-8697</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8725</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8735</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ChildObservation</profile>
    </record>
    <record>
@@ -2181,25 +2181,25 @@
    <record>
       <ID>peri32-dataelement-4302</ID>
       <naam>Beleid</naam>
-      <mapping>ClinicalImpression.extension</mapping>
+      <mapping>ClinicalImpression.extension:management</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10912</ID>
       <naam>Beleid</naam>
-      <mapping>ClinicalImpression.extension</mapping>
+      <mapping>ClinicalImpression.extension:management</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2624</ID>
       <naam>ConclusieDatumTijd</naam>
-      <mapping>ClinicalImpression.effective[x]</mapping>
+      <mapping>ClinicalImpression.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10907</ID>
       <naam>ConclusieDatumTijd</naam>
-      <mapping>ClinicalImpression.effective[x]</mapping>
+      <mapping>ClinicalImpression.effective[x]:effectiveDateTime</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
@@ -2217,13 +2217,13 @@
    <record>
       <ID>peri32-dataelement-3634</ID>
       <naam>Verrichting (Onderzoek)</naam>
-      <mapping>ClinicalImpression.investigation.item.extension</mapping>
+      <mapping>ClinicalImpression.investigation.item.extension:procedure</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10909</ID>
       <naam>Verrichting (Onderzoek)</naam>
-      <mapping>ClinicalImpression.investigation.item.extension</mapping>
+      <mapping>ClinicalImpression.investigation.item.extension:procedure</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
@@ -2241,13 +2241,13 @@
    <record>
       <ID>peri32-dataelement-2630</ID>
       <naam>Conclusie</naam>
-      <mapping>ClinicalImpression.finding.item[x]</mapping>
+      <mapping>ClinicalImpression.finding:pregnancyRiskCategory.item[x]</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10911</ID>
       <naam>Conclusie</naam>
-      <mapping>ClinicalImpression.finding.item[x]</mapping>
+      <mapping>ClinicalImpression.finding:pregnancyRiskCategory.item[x]</mapping>
       <profile>bc-ClinicalImpression</profile>
    </record>
    <record>
@@ -2379,13 +2379,13 @@
    <record>
       <ID>peri23-dataelement-6</ID>
       <naam>Bevalling</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:delivery</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-18</ID>
       <naam>Eerdere bevalling</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:delivery</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
@@ -2403,73 +2403,73 @@
    <record>
       <ID>peri32-dataelement-4085</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4097</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4121</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4219</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4231</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4243</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4255</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4267</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4279</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4291</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3968</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4109</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
@@ -2523,67 +2523,67 @@
    <record>
       <ID>peri32-dataelement-1751</ID>
       <naam>HoeveelheidBloedverliesWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4087</ID>
       <naam>BeginActieveOntsluitingWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4233</ID>
       <naam>GeboortePlacentaWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4111</ID>
       <naam>BrekenVliezenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4099</ID>
       <naam>BeginBaringWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4245</ID>
       <naam>PlacentaCompleetWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4281</ID>
       <naam>CompleetheidVliezenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4293</ID>
       <naam>NavelstrengVatenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4123</ID>
       <naam>Aard Vruchtwater Waarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4257</ID>
       <naam>PlacentaPAWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4269</ID>
       <naam>TestuitslagPAWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-DeliveryObservation</profile>
    </record>
    <record>
@@ -3081,31 +3081,31 @@
    <record>
       <ID>peri32-dataelement-3632</ID>
       <naam>Aanvang</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:onsetInstitution</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7896</ID>
       <naam>MicroorganismeSepsisMeningitis</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:causativeAgent</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7897</ID>
       <naam>MicroorganismeCongenitaleInfectie</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:causativeAgent</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7899</ID>
       <naam>Lijnsepsis?</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:lineSepsis</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7898</ID>
       <naam>Onset</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:onsetPeriod</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
@@ -3585,19 +3585,19 @@
    <record>
       <ID>peri23-dataelement-40090</ID>
       <naam>Specificatie congenitale afwijking</naam>
-      <mapping>Condition.code.coding</mapping>
+      <mapping>Condition.code.coding:disorderOfChildCode</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri23-dataelement-80789</ID>
       <naam>Problematiek kind</naam>
-      <mapping>Condition.code.coding</mapping>
+      <mapping>Condition.code.coding:disorderOfChildCode</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40120</ID>
       <naam>Specificatie chromosomale afwijking</naam>
-      <mapping>Condition.code.coding</mapping>
+      <mapping>Condition.code.coding:disorderOfChildCode</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
@@ -3717,115 +3717,115 @@
    <record>
       <ID>peri32-dataelement-10684</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2698</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1505</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1495</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1516</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9723</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9773</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3922</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3932</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3942</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10572</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10582</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10592</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10602</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10612</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10622</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10632</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10642</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10652</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
@@ -3843,229 +3843,229 @@
    <record>
       <ID>peri32-dataelement-10687</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2701</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1508</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1498</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1519</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9726</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9776</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3925</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3935</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3945</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10575</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10585</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10595</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10605</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10615</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10625</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10635</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10645</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10655</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10688</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2702</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1509</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1499</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1520</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9727</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9777</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3926</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3936</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3946</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10576</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10586</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10596</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10606</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10616</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10626</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10636</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10646</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10656</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfChild</profile>
    </record>
    <record>
@@ -4275,7 +4275,7 @@
    <record>
       <ID>peri32-dataelement-1593</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
@@ -4293,25 +4293,25 @@
    <record>
       <ID>peri32-dataelement-1569</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1596</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1570</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1597</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
@@ -4329,7 +4329,7 @@
    <record>
       <ID>peri23-dataelement-82445</ID>
       <naam>Vermoeden iuvd op basis van</naam>
-      <mapping>Condition.evidence.code</mapping>
+      <mapping>Condition.evidence.code:evidenceIUVD</mapping>
       <profile>bc-DisorderOfLaborAndDelivery</profile>
    </record>
    <record>
@@ -4395,13 +4395,13 @@
    <record>
       <ID>peri23-dataelement-3</ID>
       <naam>Zwangerschap</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:pregnancy</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
       <ID>peri23-dataelement-17</ID>
       <naam>bstetrische anamnese gegroepeerd per voorgaande zwangerschap</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:pregnancy</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
@@ -4473,13 +4473,13 @@
    <record>
       <ID>peri32-dataelement-1182</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2462</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
@@ -4497,25 +4497,25 @@
    <record>
       <ID>peri32-dataelement-1185</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2465</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1186</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2466</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderOfPregnancy</profile>
    </record>
    <record>
@@ -4581,13 +4581,13 @@
    <record>
       <ID>peri23-dataelement-6</ID>
       <naam>Bevalling</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:delivery</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
       <ID>peri23-dataelement-18</ID>
       <naam>Eerdere bevalling</naam>
-      <mapping>Condition.extension</mapping>
+      <mapping>Condition.extension:delivery</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
@@ -4653,13 +4653,13 @@
    <record>
       <ID>peri32-dataelement-2307</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2846</ID>
       <naam>ProbleemLateraliteit</naam>
-      <mapping>Condition.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
@@ -4677,25 +4677,25 @@
    <record>
       <ID>peri32-dataelement-2310</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2849</ID>
       <naam>ProbleemBeginDatum</naam>
-      <mapping>Condition.onsetDateTime</mapping>
+      <mapping>Condition.onsetDateTime:onsetDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2311</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2850</ID>
       <naam>ProbleemEindDatum</naam>
-      <mapping>Condition.abatementDateTime</mapping>
+      <mapping>Condition.abatementDateTime:abatementDateTime</mapping>
       <profile>bc-DisorderPostPartum</profile>
    </record>
    <record>
@@ -4713,7 +4713,7 @@
    <record>
       <ID>peri32-dataelement-7888</ID>
       <naam>Eiceldonatie</naam>
-      <mapping>RelatedPerson.extension</mapping>
+      <mapping>RelatedPerson.extension:role</mapping>
       <profile>bc-Donor</profile>
    </record>
    <record>
@@ -4725,7 +4725,7 @@
    <record>
       <ID>peri32-dataelement-7890</ID>
       <naam>Leeftijd eiceldonor</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-DonorObservation</profile>
    </record>
    <record>
@@ -4881,13 +4881,13 @@
    <record>
       <ID>peri23-dataelement-3</ID>
       <naam>Zwangerschap</naam>
-      <mapping>Encounter.diagnosis</mapping>
+      <mapping>Encounter.diagnosis:pregnancy</mapping>
       <profile>bc-Encounter</profile>
    </record>
    <record>
       <ID>peri23-dataelement-17</ID>
       <naam>Obstetrische anamnese gegroepeerd per voorgaande zwangerschap</naam>
-      <mapping>Encounter.diagnosis</mapping>
+      <mapping>Encounter.diagnosis:pregnancy</mapping>
       <profile>bc-Encounter</profile>
    </record>
    <record>
@@ -4953,13 +4953,13 @@
    <record>
       <ID>peri32-dataelement-9940</ID>
       <naam>FecesWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:feces.value[x]</mapping>
       <profile>bc-ExcretionFeces</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9957</ID>
       <naam>PoepluiersWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:fecalDiapers.value[x]</mapping>
       <profile>bc-ExcretionFeces</profile>
    </record>
    <record>
@@ -5001,13 +5001,13 @@
    <record>
       <ID>peri32-dataelement-9950</ID>
       <naam>UrineWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:urine.value[x]</mapping>
       <profile>bc-ExcretionUrine</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9958</ID>
       <naam>PlasluiersWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:urineDiapers.value[x]</mapping>
       <profile>bc-ExcretionUrine</profile>
    </record>
    <record>
@@ -5037,13 +5037,13 @@
    <record>
       <ID>peri32-dataelement-1117</ID>
       <naam>OverlijdensIndicator</naam>
-      <mapping>FamilyMemberHistory.deceased[x]</mapping>
+      <mapping>FamilyMemberHistory.deceased[x]:deceasedBoolean</mapping>
       <profile>bc-FamilyMemberHistory</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1118</ID>
       <naam>LeeftijdBijOverlijden</naam>
-      <mapping>FamilyMemberHistory.deceased[x]</mapping>
+      <mapping>FamilyMemberHistory.deceased[x]:deceasedAge</mapping>
       <profile>bc-FamilyMemberHistory</profile>
    </record>
    <record>
@@ -5097,19 +5097,19 @@
    <record>
       <ID>peri32-dataelement-2917</ID>
       <naam>InstabieleGezinssituatieWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:unstableFamilySituation.value[x]</mapping>
       <profile>bc-FamilySituationAssessment</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2919</ID>
       <naam>ZorgelijkeGezinssituatieWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:alarmingFamilySituation.value[x]</mapping>
       <profile>bc-FamilySituationAssessment</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2921</ID>
       <naam>IntoxicatiesWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:intoxication.value[x]</mapping>
       <profile>bc-FamilySituationAssessment</profile>
    </record>
    <record>
@@ -5139,7 +5139,7 @@
    <record>
       <ID>peri32-dataelement-7938</ID>
       <naam>VoedingspatroonZuigelingDatumTijd</naam>
-      <mapping>Observation.effectiveDateTime</mapping>
+      <mapping>Observation.effectiveDateTime:effectiveDateTime</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
@@ -5151,49 +5151,49 @@
    <record>
       <ID>peri32-dataelement-7939</ID>
       <naam>VoedingToevoeging</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:FeedingSupplement.value[x]</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7940</ID>
       <naam>VoedingFrequentie</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:FeedingFrequency.value[x]</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7944</ID>
       <naam>Voeding</naam>
-      <mapping>Observation.component</mapping>
+      <mapping>Observation.component:FeedingType</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7946</ID>
       <naam>VoedingMethode</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component:FeedingType.extension:feedingMethod</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10504</ID>
       <naam>VoedingHoeveelheid</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component:FeedingType.extension:feedingQuantity</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10505</ID>
       <naam>VoedingDuur</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component:FeedingType.extension:feedingDuration</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7945</ID>
       <naam>VoedingSoort</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:FeedingType.value[x]</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10506</ID>
       <naam>Bijvoeding?</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:SupplementaryFeeding.value[x]</mapping>
       <profile>bc-FeedingPatternInfant</profile>
    </record>
    <record>
@@ -5289,13 +5289,13 @@
    <record>
       <ID>peri32-dataelement-1781</ID>
       <naam>HartslagRegelmatigheid</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:heartRateRegularity.value[x]</mapping>
       <profile>bc-FetalHeartRate</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10961</ID>
       <naam>HartslagRegelmatigheid</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:heartRateRegularity.value[x]</mapping>
       <profile>bc-FetalHeartRate</profile>
    </record>
    <record>
@@ -5337,49 +5337,49 @@
    <record>
       <ID>peri32-dataelement-3899</ID>
       <naam>EffectOpFoetaleHartslag</naam>
-      <mapping>Observation.related.target</mapping>
+      <mapping>Observation.related:uterusActivity.target</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3916</ID>
       <naam>FoetaleMonitoringMoment</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:monitoringMoment.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3909</ID>
       <naam>BasisHartFrequentie</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:basalHeartRate.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3910</ID>
       <naam>FoetaleAcceleraties</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:fetalAccelerations.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3911</ID>
       <naam>FoetaleDeceleraties</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:fetalDecelerations.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3912</ID>
       <naam>FoetaleHartFrequentieVariabiliteit</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:heartFrequencyVariability.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3913</ID>
       <naam>ConclusieFIGO</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:conclusionFIGO.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3914</ID>
       <naam>ConclusieFisher</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:conclusionFisher.value[x]</mapping>
       <profile>bc-FetalMonitoring</profile>
    </record>
    <record>
@@ -5511,145 +5511,145 @@
    <record>
       <ID>peri32-dataelement-3519</ID>
       <naam>ACDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3545</ID>
       <naam>FLDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3558</ID>
       <naam>BPDDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3570</ID>
       <naam>LBDDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3582</ID>
       <naam>CRLDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3595</ID>
       <naam>TCDDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3608</ID>
       <naam>NTDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3620</ID>
       <naam>EFWDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10852</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10953</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3520</ID>
       <naam>ACDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3546</ID>
       <naam>FLDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3559</ID>
       <naam>BPDDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3571</ID>
       <naam>LBDDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3583</ID>
       <naam>CRLDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3596</ID>
       <naam>TCDDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3609</ID>
       <naam>NTDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3621</ID>
       <naam>EFWDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10853</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10954</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4170</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2405</ID>
       <naam>BewegingFoetusDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7837</ID>
       <naam>OrgaansysteemFoetusDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7848</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
@@ -5691,85 +5691,85 @@
    <record>
       <ID>peri32-dataelement-4172</ID>
       <naam>LiggingKindWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2407</ID>
       <naam>BewegingFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7839</ID>
       <naam>OrgaansysteemFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7850</ID>
       <naam>SonomarkerWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10951</ID>
       <naam>LiggingFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3515</ID>
       <naam>ACWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3541</ID>
       <naam>FLWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3554</ID>
       <naam>BPDWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3566</ID>
       <naam>LBDWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3578</ID>
       <naam>CRLWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3591</ID>
       <naam>TCDWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3604</ID>
       <naam>NTWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3616</ID>
       <naam>EFWWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10848</ID>
       <naam>DiameterVruchtzakWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
@@ -5955,31 +5955,31 @@
    <record>
       <ID>peri32-dataelement-3525</ID>
       <naam>ACPercentielWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:acPercentielWaarde.value[x]</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3551</ID>
       <naam>FLPercentielWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:flPercentielWaarde.value[x]</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3588</ID>
       <naam>CRLPercentielWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:crlPercentielWaarde.value[x]</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3601</ID>
       <naam>TCDPercentielWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:tcdPercentielWaarde.value[x]</mapping>
       <profile>bc-FetusObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8814</ID>
       <naam>AfsluitDatum</naam>
-      <mapping>Goal.extension</mapping>
+      <mapping>Goal.extension:endDate</mapping>
       <profile>bc-IndividualCarePlan-Goal</profile>
    </record>
    <record>
@@ -5991,7 +5991,7 @@
    <record>
       <ID>peri32-dataelement-8813</ID>
       <naam>StreefDatum</naam>
-      <mapping>Goal.target.dueDate</mapping>
+      <mapping>Goal.target.due[x]:dueDate</mapping>
       <profile>bc-IndividualCarePlan-Goal</profile>
    </record>
    <record>
@@ -6039,13 +6039,13 @@
    <record>
       <ID>peri32-dataelement-8802</ID>
       <naam>Zorgverlener</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:practitionerRole</mapping>
       <profile>bc-IndividualCareplan</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8801</ID>
       <naam>Casemanager</naam>
-      <mapping>CarePlan.author.extension</mapping>
+      <mapping>CarePlan.author.extension:isCoordinator</mapping>
       <profile>bc-IndividualCareplan</profile>
    </record>
    <record>
@@ -6477,283 +6477,283 @@
    <record>
       <ID>peri32-dataelement-3500</ID>
       <naam>ConsanguiniteitDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3433</ID>
       <naam>BMIDatumBeginTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1743</ID>
       <naam>FoliumzuurgebruikDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4368</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10271</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2253</ID>
       <naam>VoorgenomenPlaatsBaringDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3838</ID>
       <naam>VoorgenomenEchelonDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3872</ID>
       <naam>VoorgenomenVoedingDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3875</ID>
       <naam>VoorgenomenAchternaamDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3878</ID>
       <naam>KraamzorgAangevraagdDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3109</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2866</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2826</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10221</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10231</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7974</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7984</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7951</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7961</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9172</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3421</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4054</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4066</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4078</ID>
       <naam>MeetDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3641</ID>
       <naam>CervixlengteDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3684</ID>
       <naam>PortioDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3697</ID>
       <naam>PositiePortioDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3709</ID>
       <naam>OntsluitingDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3721</ID>
       <naam>VliezenDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3733</ID>
       <naam>IndalingHodgeDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3745</ID>
       <naam>AardVoorliggendDeelDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3757</ID>
       <naam>StandDatumBeginTijd</naam>
-      <mapping>Observation.effective[x].start</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.start</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3434</ID>
       <naam>BMIDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3422</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4055</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4067</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4079</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-34067</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-34055</ID>
       <naam>MeetDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3642</ID>
       <naam>CervixlengteDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3685</ID>
       <naam>PortioDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3698</ID>
       <naam>PositiePortioDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3710</ID>
       <naam>OntsluitingDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3722</ID>
       <naam>VliezenDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3734</ID>
       <naam>IndalingHodgeDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3746</ID>
       <naam>AardVoorliggendDeelDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3758</ID>
       <naam>StandDatumEindTijd</naam>
-      <mapping>Observation.effective[x].end</mapping>
+      <mapping>Observation.effective[x]:effectivePeriod.end</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
@@ -6987,301 +6987,301 @@
    <record>
       <ID>peri32-dataelement-1745</ID>
       <naam>FoliumzuurgebruikWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2255</ID>
       <naam>VoorgenomenPlaatsBaringWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3337</ID>
       <naam>VoorgenomenEchelonWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2281</ID>
       <naam>VoorgenomenVoedingWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10897</ID>
       <naam>Keuze ouders NIPT</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3680</ID>
       <naam>PortioWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3693</ID>
       <naam>PositiePortioWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3705</ID>
       <naam>OntsluitingWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3717</ID>
       <naam>VliezenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3729</ID>
       <naam>IndalingHodgeWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3741</ID>
       <naam>AardVoorliggendDeelWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4062</ID>
       <naam>LiggingFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4074</ID>
       <naam>IndalingFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3753</ID>
       <naam>StandWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3111</ID>
       <naam>Bloedverlies kraambed (lochia) (Waarde)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3113</ID>
       <naam>Aantal kraamverbanden (Waarde)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4050</ID>
       <naam>FundusstandWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7976</ID>
       <naam>VloeienWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7971</ID>
       <naam>UrineContinentie</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7972</ID>
       <naam>FecesContinentie</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7953</ID>
       <naam>ConditiePerineumWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7963</ID>
       <naam>SectiowondWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2869</ID>
       <naam>ObservatieWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2582</ID>
       <naam>Schooltype</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3429</ID>
       <naam>BMIWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10745</ID>
       <naam>GeindiceerdAantalUurKraamzorgWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3417</ID>
       <naam>FundushoogteWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3637</ID>
       <naam>CervixlengteWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9174</ID>
       <naam>HoeveelheidBloedverliesWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3499</ID>
       <naam>ConsanguiniteitWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2913</ID>
       <naam>SociaalNetwerk</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4370</ID>
       <naam>KinkhoestvaccinatieWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2277</ID>
       <naam>KraamzorgAangevraagdWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10746</ID>
       <naam>WenstVrouwMinderKraamzorgWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10273</ID>
       <naam>TrisomieAnamneseWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10774</ID>
       <naam>UrinatieGeweest?</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10775</ID>
       <naam>DefecatieGeweest?</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3115</ID>
       <naam>Lochia foetide / riekend? (Waarde)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3117</ID>
       <naam>Grote stolsels in lochia (Waarde)</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10732</ID>
       <naam>ZelfredzaamheidAndersDanVerwachting</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7986</ID>
       <naam>MenstruatieWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10675</ID>
       <naam>Flatusincontinentie</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10898</ID>
       <naam>Gebruik LMWH?</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2275</ID>
       <naam>VoorgenomenAchternaamWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10223</ID>
       <naam>VoorlichtingVeiligSlapenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10233</ID>
       <naam>VoorlichtingVitamineDWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueString</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10744</ID>
       <naam>GeindiceerdAantalUurKraamzorgDatumTijd</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10747</ID>
       <naam>WenstVrouwMinderKraamzorgDatumTijd</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2270</ID>
       <naam>Zorgaanbieder</naam>
-      <mapping>Observation.value[x].extension</mapping>
+      <mapping>Observation.value[x].extension:bcObservationValueReference</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2938</ID>
       <naam>Voorkeursziekenhuis</naam>
-      <mapping>Observation.value[x].extension</mapping>
+      <mapping>Observation.value[x].extension:bcObservationValueReference</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
@@ -7557,7 +7557,7 @@
    <record>
       <ID>peri32-dataelement-2868</ID>
       <naam>Lateraliteit</naam>
-      <mapping>Observation.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
@@ -7773,115 +7773,115 @@
    <record>
       <ID>peri32-dataelement-10661</ID>
       <naam>Sectiowond normaal</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10662</ID>
       <naam>Perineumwond normaal</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3123</ID>
       <naam>WondInfectie</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2874</ID>
       <naam>WondInfectie</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component.extension:observationComponentValueBooleanSTU3</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3149</ID>
       <naam>WondFoto</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueAttachment</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2900</ID>
       <naam>WondFoto</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueAttachment</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3122</ID>
       <naam>WondWeefsel</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3124</ID>
       <naam>WondVochtigheid</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3125</ID>
       <naam>WondRand</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2873</ID>
       <naam>WondWeefsel</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2875</ID>
       <naam>WondVochtigheid</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2876</ID>
       <naam>WondRand</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueCodeableConcept</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3126</ID>
       <naam>Wondlengte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3127</ID>
       <naam>Wondbreedte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3128</ID>
       <naam>Wonddiepte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2877</ID>
       <naam>Wondlengte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2878</ID>
       <naam>Wondbreedte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2879</ID>
       <naam>Wonddiepte</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3113</ID>
       <naam>Aantal kraamverbanden</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component.value[x]:valueQuantity</mapping>
       <profile>bc-MaternalObservation</profile>
    </record>
    <record>
@@ -7911,19 +7911,19 @@
    <record>
       <ID>peri32-dataelement-3404</ID>
       <naam>ZorgEpisodeNaam</naam>
-      <mapping>EpisodeOfCare.extension</mapping>
+      <mapping>EpisodeOfCare.extension:title</mapping>
       <profile>bc-MaternalRecord</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3405</ID>
       <naam>Toelichting</naam>
-      <mapping>EpisodeOfCare.extension</mapping>
+      <mapping>EpisodeOfCare.extension:comment</mapping>
       <profile>bc-MaternalRecord</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1698</ID>
       <naam>Identificatie van de zwangerschap</naam>
-      <mapping>EpisodeOfCare.extension.valueIdentifier</mapping>
+      <mapping>EpisodeOfCare.extension:groupIdentifier.valueIdentifier:valueIdentifier</mapping>
       <profile>bc-MaternalRecord</profile>
    </record>
    <record>
@@ -7953,7 +7953,7 @@
    <record>
       <ID>peri23-dataelement-20355</ID>
       <naam>Eindverantwoordelijk in welke perinatale periode?</naam>
-      <mapping>EpisodeOfCare.type.coding</mapping>
+      <mapping>EpisodeOfCare.type.coding:perinatalPeriod</mapping>
       <profile>bc-MaternalRecord</profile>
    </record>
    <record>
@@ -8025,7 +8025,7 @@
    <record>
       <ID>peri32-dataelement-3373</ID>
       <naam>IntentieBehandeling</naam>
-      <mapping>CarePlan.extension.valueCodeableConcept</mapping>
+      <mapping>CarePlan.extension:intentTreatment.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-MultidisciplinaryTeamMeeting-Plan</profile>
    </record>
    <record>
@@ -8055,7 +8055,7 @@
    <record>
       <ID>peri32-dataelement-3363</ID>
       <naam>RolDeelnemer</naam>
-      <mapping>Encounter.participant.type</mapping>
+      <mapping>Encounter.participant.type:role</mapping>
       <profile>bc-MultidisciplinaryTeamMeeting</profile>
    </record>
    <record>
@@ -8073,13 +8073,13 @@
    <record>
       <ID>peri32-dataelement-1345</ID>
       <naam>Zorgverlener</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:practitionerRole</mapping>
       <profile>bc-MultidisciplinaryTeamMeeting</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1989</ID>
       <naam>Patient</naam>
-      <mapping>Encounter.participant.individual.extension</mapping>
+      <mapping>Encounter.participant.individual.extension:patient</mapping>
       <profile>bc-MultidisciplinaryTeamMeeting</profile>
    </record>
    <record>
@@ -8277,85 +8277,85 @@
    <record>
       <ID>peri32-dataelement-1198</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1555</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1611</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8707</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7908</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8768</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2424</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1440</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1457</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1088</ID>
       <naam>VerrichtingMethode</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:procedureMethod</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.12</ID>
       <naam>ProcedureMethod</naam>
-      <mapping>Procedure.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.extension:procedureMethod.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7919</ID>
       <naam>Beslismoment sectio caesarea</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:decisionMoment</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40225</ID>
       <naam>Beslismoment sectio caesarea</naam>
-      <mapping>Procedure.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.extension:decisionMoment.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10280</ID>
       <naam>Moment amniotomie</naam>
-      <mapping>Procedure.extension</mapping>
+      <mapping>Procedure.extension:partusPhase</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -8367,25 +8367,25 @@
    <record>
       <ID>NL-CM:14.1.10</ID>
       <naam>RequestedBy</naam>
-      <mapping>Procedure.basedOn</mapping>
+      <mapping>Procedure.basedOn:request</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.10</ID>
       <naam>RequestedBy</naam>
-      <mapping>Procedure.basedOn</mapping>
+      <mapping>Procedure.basedOn:request</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.10</ID>
       <naam>Requester. The requester information is located in a referenced ProcedureRequest.</naam>
-      <mapping>Procedure.basedOn</mapping>
+      <mapping>Procedure.basedOn:request</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1095</ID>
       <naam>Aanvrager</naam>
-      <mapping>Procedure.basedOn</mapping>
+      <mapping>Procedure.basedOn:request</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -8475,37 +8475,37 @@
    <record>
       <ID>peri23-dataelement-20560</ID>
       <naam>Interventie begin baring</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40190</ID>
       <naam>Vaginale kunstverlossing</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82230</ID>
       <naam>Intra-uterine behandeling</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-30050</ID>
       <naam>Episiotomie?</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40240</ID>
       <naam>Overige interventies</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-20616</ID>
       <naam>Bijstimulatie toegediend?</naam>
-      <mapping>Procedure.code.coding</mapping>
+      <mapping>Procedure.code.coding:VerrichtingTypeCodelijst</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -8535,163 +8535,163 @@
    <record>
       <ID>NL-CM:14.1.2</ID>
       <naam>ProcedureStartDate</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.2</ID>
       <naam>ProcedureStartDate</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.2</ID>
       <naam>ProcedureStartDate</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82298</ID>
       <naam>Datum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1191</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1548</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1604</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8700</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7901</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8761</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1433</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1450</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1081</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2417</ID>
       <naam>VerrichtingStartDatum</naam>
-      <mapping>Procedure.performed[x].start</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.start</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.3</ID>
       <naam>ProcedureEndDate</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.3</ID>
       <naam>ProcedureEndDate</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.3</ID>
       <naam>ProcedureEndDate</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1192</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1549</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1605</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8701</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7902</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8762</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1434</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1451</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1082</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2418</ID>
       <naam>VerrichtingEindDatum</naam>
-      <mapping>Procedure.performed[x].end</mapping>
+      <mapping>Procedure.performed[x]:performedPeriod.end</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -8817,19 +8817,19 @@
    <record>
       <ID>NL-CM:17.1.5</ID>
       <naam>HealthcareProviderRole</naam>
-      <mapping>Procedure.performer.role.coding</mapping>
+      <mapping>Procedure.performer.role.coding:healthProfessionalRole</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:17.1.5</ID>
       <naam>HealthcareProviderRole</naam>
-      <mapping>Procedure.performer.role.coding</mapping>
+      <mapping>Procedure.performer.role.coding:healthProfessionalRole</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:17.1.5</ID>
       <naam>HealthProfessionalRole</naam>
-      <mapping>Procedure.performer.role.coding</mapping>
+      <mapping>Procedure.performer.role.coding:healthProfessionalRole</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -8871,25 +8871,25 @@
    <record>
       <ID>peri23-dataelement-20570</ID>
       <naam>Indicatie interventie begin baring</naam>
-      <mapping>Procedure.reasonCode.coding</mapping>
+      <mapping>Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82546</ID>
       <naam>Indicatie primaire sectio</naam>
-      <mapping>Procedure.reasonCode.coding</mapping>
+      <mapping>Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82547</ID>
       <naam>Indicatie secundaire sectio</naam>
-      <mapping>Procedure.reasonCode.coding</mapping>
+      <mapping>Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-80794</ID>
       <naam>Indicatie episiotomie</naam>
-      <mapping>Procedure.reasonCode.coding</mapping>
+      <mapping>Procedure.reasonCode.coding:bc-ObstetricProcedureReasonCode</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -9093,73 +9093,73 @@
    <record>
       <ID>peri32-dataelement-8764</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>NL-CM:14.1.11</ID>
       <naam>ProcedureLaterality</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1194</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1551</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1607</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8703</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7904</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1436</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri31-dataelement-1453</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1084</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2420</ID>
       <naam>VerrichtingLateraliteit</naam>
-      <mapping>Procedure.bodySite.extension.valueCodeableConcept</mapping>
+      <mapping>Procedure.bodySite.extension:ProcedureLaterality.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
       <ID>peri23-dataelement-40200</ID>
       <naam>Succes vaginale kunstverlossing</naam>
-      <mapping>Procedure.outcome.extension</mapping>
+      <mapping>Procedure.outcome.extension:success</mapping>
       <profile>bc-ObstetricProcedure</profile>
    </record>
    <record>
@@ -9291,13 +9291,13 @@
    <record>
       <ID>peri32-dataelement-10552</ID>
       <naam>DatumOverlijden</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:deceasedDateTime.value[x]</mapping>
       <profile>bc-PerinatalDeath</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1762</ID>
       <naam>FasePerinataleSterfteWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:perinatalPhase.value[x]</mapping>
       <profile>bc-PerinatalDeath</profile>
    </record>
    <record>
@@ -9327,19 +9327,19 @@
    <record>
       <ID>peri32-dataelement-3953</ID>
       <naam>PerineumWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:perineum.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PerinealAssessment</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3954</ID>
       <naam>SfincterWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:sfincter.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PerinealAssessment</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10553</ID>
       <naam>VrouwelijkGeslachtsorgaanWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:femaleGenital.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PerinealAssessment</profile>
    </record>
    <record>
@@ -9369,19 +9369,19 @@
    <record>
       <ID>peri32-dataelement-2449</ID>
       <naam>PlacentalokalisatieWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:placentaLocalization.value[x]</mapping>
       <profile>bc-PlacentaLocalization</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7867</ID>
       <naam>SectioLittekenWaarde</naam>
-      <mapping>Observation.component.extension</mapping>
+      <mapping>Observation.component:sectionScar.extension:valueBoolean</mapping>
       <profile>bc-PlacentaLocalization</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2448</ID>
       <naam>OstiumWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:ostium.value[x]</mapping>
       <profile>bc-PlacentaLocalization</profile>
    </record>
    <record>
@@ -9447,13 +9447,13 @@
    <record>
       <ID>peri23-dataelement-3</ID>
       <naam>Zwangerschap</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:pregnancy</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri23-dataelement-17</ID>
       <naam>Zwangerschap</naam>
-      <mapping>Observation.extension</mapping>
+      <mapping>Observation.extension:pregnancy</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
@@ -9471,55 +9471,55 @@
    <record>
       <ID>peri32-dataelement-3349</ID>
       <naam>DatumBepaling</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2221</ID>
       <naam>Definitieve a terme DatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1838</ID>
       <naam>AantalFoetussenDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1825</ID>
       <naam>MeerlingZwangerschapDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1735</ID>
       <naam>AantalLevendeKinderenDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1818</ID>
       <naam>FetalLossDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2135</ID>
       <naam>LevenVoelenDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2144</ID>
       <naam>ActueleAantalLevendeFoetusDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4158</ID>
       <naam>ObservatieDatumTijd</naam>
-      <mapping>Observation.effective[x]</mapping>
+      <mapping>Observation.effective[x]:effectiveDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
@@ -9597,61 +9597,61 @@
    <record>
       <ID>peri32-dataelement-2231</ID>
       <naam>TyperingGemellizwangerschapWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2137</ID>
       <naam>LevenVoelenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1840</ID>
       <naam>AantalFoetussenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1740</ID>
       <naam>AantalLevendeKinderenWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1820</ID>
       <naam>FetalLossWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2146</ID>
       <naam>ActueelAantalLevendeFoetusWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueQuantity</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-4160</ID>
       <naam>TOPnavPrenataalOnderzoekWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3347</ID>
       <naam>ATermeDatum</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-1729</ID>
       <naam>Datum einde zwangerschap</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2223</ID>
       <naam>Definitieve a terme Waarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
@@ -9753,7 +9753,7 @@
    <record>
       <ID>peri32-dataelement-2224</ID>
       <naam>Definitieve a terme Methode</naam>
-      <mapping>Observation.method.coding</mapping>
+      <mapping>Observation.method.coding:aTermMethod</mapping>
       <profile>bc-PregnancyObservation</profile>
    </record>
    <record>
@@ -9771,7 +9771,7 @@
    <record>
       <ID>peri32-dataelement-2423</ID>
       <naam>VerrichtingType</naam>
-      <mapping>DiagnosticReport.code.coding</mapping>
+      <mapping>DiagnosticReport.code.coding:ultraSoundType</mapping>
       <profile>bc-PregnancyUltraSound</profile>
    </record>
    <record>
@@ -9819,19 +9819,19 @@
    <record>
       <ID>peri32-dataelement-8921</ID>
       <naam>ConclusieWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:conclusion.value[x]:valueCodeableConcept</mapping>
       <profile>bc-PregnancyUltraSoundGeneralFindings</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8931</ID>
       <naam>VerdenkingAfwijkingobvWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:suspicionAbnormalities.value[x]</mapping>
       <profile>bc-PregnancyUltraSoundGeneralFindings</profile>
    </record>
    <record>
       <ID>peri32-dataelement-8930</ID>
       <naam>AdviesWaarde</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:advice.value[x]</mapping>
       <profile>bc-PregnancyUltraSoundGeneralFindings</profile>
    </record>
    <record>
@@ -9849,19 +9849,19 @@
    <record>
       <ID>peri32-dataelement-7892</ID>
       <naam>Cryo embryo</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-ProcedureObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7891</ID>
       <naam>Eicelextractiedatum</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-ProcedureObservation</profile>
    </record>
    <record>
       <ID>peri32-dataelement-7893</ID>
       <naam>Embryotransferdatum</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueDateTime</mapping>
       <profile>bc-ProcedureObservation</profile>
    </record>
    <record>
@@ -9879,31 +9879,31 @@
    <record>
       <ID>peri23-dataelement-20367</ID>
       <naam>Perinatale periode</naam>
-      <mapping>ReferralRequest.extension.valueCodeableConcept</mapping>
+      <mapping>ReferralRequest.extension:perinatalPeriod.valueCodeableConcept:valueCodeableConcept</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10487</ID>
       <naam>ContactSoort</naam>
-      <mapping>ReferralRequest.extension</mapping>
+      <mapping>ReferralRequest.extension:contactType</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82581</ID>
       <naam>Type verwijzing</naam>
-      <mapping>ReferralRequest.type.coding</mapping>
+      <mapping>ReferralRequest.type.coding:referralType</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri32-dataelement-9683</ID>
       <naam>Type verwijzing</naam>
-      <mapping>ReferralRequest.type.coding</mapping>
+      <mapping>ReferralRequest.type.coding:referralType</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10297</ID>
       <naam>Type verwijzing</naam>
-      <mapping>ReferralRequest.type.coding</mapping>
+      <mapping>ReferralRequest.type.coding:referralType</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
@@ -9945,7 +9945,7 @@
    <record>
       <ID>peri23-dataelement-82580</ID>
       <naam>Specialisme</naam>
-      <mapping>ReferralRequest.requester.extension</mapping>
+      <mapping>ReferralRequest.requester.extension:specialty</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
@@ -9999,31 +9999,31 @@
    <record>
       <ID>peri23-dataelement-82448</ID>
       <naam>Reden verwijzing van 2e naar 1e lijn</naam>
-      <mapping>ReferralRequest.reasonCode.coding</mapping>
+      <mapping>ReferralRequest.reasonCode.coding:reasonReferralSecondToFirstLine</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri23-dataelement-20372</ID>
       <naam>Categorie Reden (Acute Overdracht)</naam>
-      <mapping>ReferralRequest.reasonCode.coding</mapping>
+      <mapping>ReferralRequest.reasonCode.coding:reasonReferralCategory</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82449</ID>
       <naam>Reden verwijzing van 3e naar 2e lijn</naam>
-      <mapping>ReferralRequest.reasonCode.coding</mapping>
+      <mapping>ReferralRequest.reasonCode.coding:reasonReferralThirdToSecondLine</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82450</ID>
       <naam>Reden verwijzing van 1e naar 2e lijn</naam>
-      <mapping>ReferralRequest.reasonCode.coding</mapping>
+      <mapping>ReferralRequest.reasonCode.coding:reasonReferralFirstToSecondLineEndPregnancy</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82453</ID>
       <naam>Einde zwangerschap</naam>
-      <mapping>ReferralRequest.reasonCode.coding</mapping>
+      <mapping>ReferralRequest.reasonCode.coding:reasonReferralFirstToSecondLineEndPregnancy</mapping>
       <profile>bc-ReferralRequest</profile>
    </record>
    <record>
@@ -10107,7 +10107,7 @@
    <record>
       <ID>peri32-dataelement-915</ID>
       <naam>Etniciteit</naam>
-      <mapping>RelatedPerson.extension</mapping>
+      <mapping>RelatedPerson.extension:ethnicity</mapping>
       <profile>bc-RelatedPerson</profile>
    </record>
    <record>
@@ -10125,19 +10125,19 @@
    <record>
       <ID>NL-CM:2.2.13</ID>
       <naam>Comment</naam>
-      <mapping>Consent.extension.valueString</mapping>
+      <mapping>Consent.extension:comment.valueString:valueString</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10417</ID>
       <naam>Toelichting</naam>
-      <mapping>Consent.extension.valueString</mapping>
+      <mapping>Consent.extension:comment.valueString:valueString</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10404</ID>
       <naam>SpecificatieAnders</naam>
-      <mapping>Consent.modifierExtension.value[x]</mapping>
+      <mapping>Consent.modifierExtension:specificationOther.value[x]</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
@@ -10209,25 +10209,25 @@
    <record>
       <ID>peri32-dataelement-10415</ID>
       <naam>Zorgverlener</naam>
-      <mapping>Consent.consentingParty.extension</mapping>
+      <mapping>Consent.consentingParty.extension:practitionerRole</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
       <ID>NL-CM:2.2.8</ID>
       <naam>AdvanceDirective</naam>
-      <mapping>Consent.source[x]</mapping>
+      <mapping>Consent.source[x]:sourceReference</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10408</ID>
       <naam>Wilsverklaring</naam>
-      <mapping>Consent.source[x]</mapping>
+      <mapping>Consent.source[x]:sourceReference</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10407</ID>
       <naam>RedenBeeindigd</naam>
-      <mapping>Consent.except.extension</mapping>
+      <mapping>Consent.except.extension:reasonForEnding</mapping>
       <profile>bc-TreatmentDirective</profile>
    </record>
    <record>
@@ -10311,7 +10311,7 @@
    <record>
       <ID>peri32-dataelement-7793</ID>
       <naam>NavelstrengVatenWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:umbilicalCordVessels.value[x]</mapping>
       <profile>bc-UmbilicalCord</profile>
    </record>
    <record>
@@ -10353,37 +10353,37 @@
    <record>
       <ID>peri32-dataelement-3900</ID>
       <naam>UterusActiviteitFrequentie</naam>
-      <mapping>Observation.component.valueQuantity</mapping>
+      <mapping>Observation.component:uterusActivityFrequency.value[x]:valueQuantity</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3901</ID>
       <naam>UterusActiviteitDuur</naam>
-      <mapping>Observation.component.valueQuantity</mapping>
+      <mapping>Observation.component:uterusActivityDuration.value[x]:valueQuantity</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3902</ID>
       <naam>UterusActiviteitIntensiteit</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:uterusActivityIntensity.value[x]:valueCodeableConcept</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3903</ID>
       <naam>MonteVideoUnits</naam>
-      <mapping>Observation.component.valueQuantity</mapping>
+      <mapping>Observation.component:monteVideoUnits.value[x]:valueQuantity</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3904</ID>
       <naam>UterusActiviteitRegelmatigheid</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:uterusActivityRegularity.value[x]:valueCodeableConcept</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
       <ID>peri32-dataelement-3906</ID>
       <naam>ConclusieUterusActiviteit</naam>
-      <mapping>Observation.component.valueCodeableConcept</mapping>
+      <mapping>Observation.component:conclusionUterusActivity.value[x]:valueCodeableConcept</mapping>
       <profile>bc-UterusActivity</profile>
    </record>
    <record>
@@ -10401,7 +10401,7 @@
    <record>
       <ID>peri32-dataelement-10764</ID>
       <naam>VitamineKWaarde</naam>
-      <mapping>Observation.value[x]</mapping>
+      <mapping>Observation.value[x]:valueBoolean</mapping>
       <profile>bc-VitaminKAdministration</profile>
    </record>
    <record>
@@ -10419,7 +10419,7 @@
    <record>
       <ID>peri32-dataelement-10765</ID>
       <naam>DatumVitamineKWaarde</naam>
-      <mapping>Observation.component.value[x]</mapping>
+      <mapping>Observation.component:administrationDate.value[x]</mapping>
       <profile>bc-VitaminKAdministration</profile>
    </record>
    <record>
@@ -10479,55 +10479,55 @@
    <record>
       <ID>peri32-dataelement-1676</ID>
       <naam>Apotheek</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:preferredPharmacy</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-690</ID>
       <naam>NationaliteitRC</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:nationality</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-691</ID>
       <naam>Nationaliteit</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:nationality</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri23-dataelement-10400</ID>
       <naam>Ethniciteit</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:ethnicity</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-912</ID>
       <naam>Etniciteit</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:ethnicity</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-913</ID>
       <naam>EtniciteitType</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:ethnicity</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-914</ID>
       <naam>Toelichting</naam>
-      <mapping>Patient.extension.valueCodeableConcept.text</mapping>
+      <mapping>Patient.extension:ethnicity.valueCodeableConcept:valueCodeableConcept.text</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10776</ID>
       <naam>Geslacht (identiteit)</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:genderIdentity</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-10802</ID>
       <naam>Geslacht (identiteit)</naam>
-      <mapping>Patient.extension</mapping>
+      <mapping>Patient.extension:genderIdentity</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
@@ -10545,7 +10545,7 @@
    <record>
       <ID>peri23-dataelement-10030</ID>
       <naam>Burgerservicenummer</naam>
-      <mapping>Patient.identifier</mapping>
+      <mapping>Patient.identifier:BSN</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
@@ -10563,13 +10563,13 @@
    <record>
       <ID>peri23-dataelement-82363</ID>
       <naam>Voorvoegsel (als soort naam is BR)</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannameOwnPrefix</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri23-dataelement-82363</ID>
       <naam>Voorvoegsel (als soort naam = SP)</naam>
-      <mapping>Patient.name.family.extension</mapping>
+      <mapping>Patient.name.family.extension:humannamePartnerPrefix</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
@@ -10605,19 +10605,19 @@
    <record>
       <ID>peri23-dataelement-10301</ID>
       <naam>Straatnaam</naam>
-      <mapping>Patient.address.line.extension</mapping>
+      <mapping>Patient.address.line.extension:streetName</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri23-dataelement-10302</ID>
       <naam>Huisnummer</naam>
-      <mapping>Patient.address.line.extension</mapping>
+      <mapping>Patient.address.line.extension:houseNumber</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri23-dataelement-10303</ID>
       <naam>Huisletter/huisnummertoevoeging</naam>
-      <mapping>Patient.address.line.extension</mapping>
+      <mapping>Patient.address.line.extension:buildingNumbersuffix</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
@@ -10653,19 +10653,19 @@
    <record>
       <ID>peri32-dataelement-2910</ID>
       <naam>Taalvaardigheid</naam>
-      <mapping>Patient.communication.extension</mapping>
+      <mapping>Patient.communication.extension:languageProficiency</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri32-dataelement-2911</ID>
       <naam>Taalvaardigheid</naam>
-      <mapping>Patient.communication.extension</mapping>
+      <mapping>Patient.communication.extension:languageProficiency</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
       <ID>peri23-dataelement-10401</ID>
       <naam>Taalvaardigheid vrouw Nederlandse taal</naam>
-      <mapping>Patient.communication.extension.extension.valueCoding</mapping>
+      <mapping>Patient.communication.extension:languageProficiency.extension:level.valueCoding:valueCoding</mapping>
       <profile>bc-Woman</profile>
    </record>
    <record>
