@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--this stylesheet updates the existing fhirmapping-3-2 file, and additionally it looks for the mapping information in the bc- profiles-->
+<!--TO DO review element 674-->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:f="http://hl7.org/fhir" exclude-result-prefixes="#all" version="2.0">
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
-    <xsl:param name="debug" as="xs:boolean" select="false()"/> <!--TOGGLE BETWEEN TRUE/FALSE TO SEE MESSAGE LOGGING-->
-    <xsl:param name="compiled-mappings-output" as="xs:string" select="'qa/compiled-mappings-output.xml'"/>
+    <xsl:param name="debug" as="xs:boolean" select="true()"/> <!--TOGGLE BETWEEN true()/false() TO SEE MESSAGE LOGGING-->
+    <!--<xsl:param name="compiled-mappings-output" as="xs:string" select="'qa/compiled-mappings-output.xml'"/>-->
+    <xsl:param name="compiled-mappings-output" as="xs:string" select="'compiled-mappings-output.xml'"/>
     
     <!-- Point to the 'profiles' folder that contains all bc- profile xml's -->
     <xsl:param name="bc-profile-folder" as="xs:string" select="'../../profiles/'"/>
@@ -13,8 +15,8 @@
     <xsl:variable name="bc-profile-folder-uri" as="xs:anyURI" select="resolve-uri($bc-profile-folder, static-base-uri())"/>
     <!-- Load only files matching bc-*.xml in that folder (no subfolders) -->
     <xsl:variable name="bc-profile-files" select="collection(concat($bc-profile-folder-uri,'?select=bc-*.xml;recurse=no;on-error=warning'))"/>
-
     <xsl:variable name="fhirmapping-file" select="document('../../fhirmapping-3-2.xml')"/>
+    
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
     <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
 
@@ -102,12 +104,12 @@
         <xsl:variable name="mappings-equal" select="empty($prevMappings[not(. = $profMappings)]) and empty($profMappings[not(. = $prevMappings)])"/>
         <xsl:variable name="profiles-equal" select="empty($prevProfiles[not(. = $profProfiles)]) and empty($profProfiles[not(. = $prevProfiles)])"/>
 
-        <xsl:choose> <!--a: first choose based on presence in fhrimapping-->
-            <xsl:when test="empty($fhirmapping)"> <!--chosen when the dataset concept does not exist in the previous fhirmapping-->
+        <xsl:choose> <!--first choose based on presence in fhrimapping-->
+            <xsl:when test="empty($fhirmapping)"> <!--a: New dataset concept - the concept does not exist in the previous fhirmapping-->
                 <xsl:choose> <!--second choose based on whether mapping exists in the fhirmapping-profiles-->
-                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case a1 when: a mapping exists only in fhirmapping-profiles-->
+                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case a1: a mapping exists in fhirmapping-profiles-->
                         <xsl:variable name="profiles-list" select="string-join(distinct-values(for $p in $fhirmapping-profiles/profile return normalize-space(string($p))),', ')"/>
-                        <xsl:message>A new concept for <xsl:value-of select="name"/> is found in the dataset with id <xsl:value-of select="$id"/>. Mapping information found in bc-profile(s): {<xsl:value-of select="$profiles-list"/>} and is added to the mapping file</xsl:message>
+                        <xsl:message>a1: New concept <xsl:value-of select="name"/> with id <xsl:value-of select="$id"/> is found in the dataset. Mapping information found in bc-profile(s): {<xsl:value-of select="$profiles-list"/>} and is added to the mapping file</xsl:message>
                         <!--there may be multiple mappings in the profile xml's-->
                         <xsl:for-each select="$fhirmapping-profiles">
                             <record>
@@ -118,8 +120,8 @@
                             </record>
                         </xsl:for-each>
                     </xsl:when>
-                    <xsl:otherwise> <!--case a2 when: a mapping doesn't exist in fhirmapping or in fhirmapping-profiles either-->
-                        <xsl:message>A new concept for <xsl:value-of select="name"/> is found in the dataset with id <xsl:value-of select="$id"/> and is added to the mapping file. No mapping information found in bc-profiles, to be determined</xsl:message>
+                    <xsl:otherwise> <!--case a2: a mapping doesn't exist in fhirmapping-profiles-->
+                        <xsl:message>a2: New concept <xsl:value-of select="name"/> with id <xsl:value-of select="$id"/> is found in the dataset. No mapping information found in bc-profiles, to be determined</xsl:message>
                         <record>
                             <ID><xsl:value-of select="$id"/></ID>
                             <naam><xsl:value-of select="name[@language='nl-NL']"/></naam> 
@@ -129,9 +131,10 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-            <xsl:otherwise> <!--chosen when the dataset concept exists in the previous fhirmapping-->
-                <xsl:choose>
-                    <xsl:when test="exists($fhirmapping-profiles) and $mappings-equal and $profiles-equal"> <!--case b1 when: dataset concept exists in both fhirmappings, and they are equal-->
+            <xsl:otherwise> <!--b: Existing dataset concept - the concept exists in the previous fhirmapping-->
+                <xsl:choose> <!--second choose-->
+                    <xsl:when test="exists($fhirmapping-profiles) and $mappings-equal and $profiles-equal"> <!--case b1: dataset concept exists in both fhirmappings, and they are equal-->
+                        <xsl:message>b1: dataset concept <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> exists</xsl:message>
                         <xsl:for-each select="$fhirmapping"> <!--loop over fhirmappings found in fhirmapping xml-->
                             <record>
                                 <ID><xsl:value-of select="$id"/></ID>
@@ -157,8 +160,8 @@
                             </record>
                         </xsl:for-each>
                     </xsl:when>
-                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case b2 when: dataset concept exists in both mappings, but with differences-->
-                        <xsl:message>The concept for <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> has a revised mapping in the current bc-profiles which will be leading for the resulting fhirmapping. Review done?</xsl:message>
+                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case b2: dataset concept exists in both mappings, but with differences-->
+                        <xsl:message>b2: Concept <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> has a revised mapping in the current bc-profiles which will be leading for the resulting fhirmapping. Review done?</xsl:message>
                         <!--the new fhirmapping will follow the profile mappings-->
                         <xsl:for-each select="$fhirmapping-profiles"> <!--loop over fhirmappings found in fhirmapping-profiles-->
                             <record>
@@ -185,8 +188,8 @@
                             </record>
                         </xsl:for-each>
                     </xsl:when>
-                    <xsl:otherwise> <!--case b3 when: dataset concept exists in fhirmapping, but not anymore in the bc-profile mappings-->
-                        <xsl:message>Concept <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> is not mapped in the current bc-profiles. The previous fhirmapping will be leading for the resulting output. Recommended to review</xsl:message>
+                    <xsl:otherwise> <!--case b3: dataset concept exists in fhirmapping, but not anymore in the bc-profile mappings-->
+                        <xsl:message>b3: Concept <xsl:value-of select="naam"/> with id <xsl:value-of select="ID"/> is not mapped in the current bc-profiles. The previous fhirmapping will be leading for the resulting output. Recommended to review</xsl:message>
                         <!--the new fhirmapping will follow the profile mappings-->
                         <xsl:for-each select="$fhirmapping"> <!--loop over fhirmappings found in fhirmapping-profiles-->
                             <record>
