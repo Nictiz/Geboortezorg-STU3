@@ -6,8 +6,8 @@
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
     <xsl:param name="debug" as="xs:boolean" select="true()"/> <!--TOGGLE BETWEEN true()/false() TO SEE MESSAGE LOGGING-->
-    <xsl:param name="compiled-mappings-output" as="xs:string" select="'qa/compiled-mappings-output.xml'"/>
-    <xsl:param name="log-messages-output" as="xs:string" select="'qa/mapping-messages.xml'"/>
+    <xsl:param name="compiled-mappings-output" as="xs:string" select="'qa/compiled-profile-mappings.xml'"/>
+    <xsl:param name="log-messages-output" as="xs:string" select="'qa/log-messages-mapping.txt'"/>
     
     <!-- Point to the 'profiles' folder that contains all bc- profile xml's -->
     <xsl:param name="bc-profile-folder" as="xs:string" select="'../../profiles/'"/>
@@ -66,17 +66,32 @@
         <xsl:message select="concat('bc-profile files found: ', count($bc-profile-files))"/>
         <xsl:message select="concat('Wrote ', count($compiled-mappings//record),' mappings found in bc-profiles to ', resolve-uri($compiled-mappings-output, static-base-uri()))"/>
 
-        <xsl:processing-instruction name="xml-model" select="'href=&quot;qa/fhirmapping.sch&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;'" />
+        <!--write log messages to a document in the qa folder-->
         <xsl:variable name="dataset" select="."/>
+        <xsl:result-document href="{resolve-uri($log-messages-output, static-base-uri())}" method="text" encoding="UTF-8">
+            <xsl:for-each select="$dataset//concept[@type=('group','item') and @statusCode!='cancelled' and not((.|ancestor::concept)[lower-case(normalize-space(string(name[@language='nl-NL'])))='prullenbak'])]">
+                <xsl:variable name="line">
+                    <xsl:apply-templates select="." mode="createLogLine">
+                        <xsl:with-param name="compiled-mappings" select="$compiled-mappings"/>
+                    </xsl:apply-templates>
+                </xsl:variable>
+                <xsl:value-of select="normalize-space($line)"/>
+                <xsl:text>&#10;</xsl:text>
+            </xsl:for-each>
+        </xsl:result-document>
+
+        <!--loop over all active dataset concepts excluding the prullenbak concepts, in order to create <record> elements in the output-->
+        <xsl:processing-instruction name="xml-model" select="'href=&quot;qa/fhirmapping.sch&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;'" />
         <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <xsl:copy-of select="@*"/>
             <!--loop over all <concept> elements in your source (i.e. the dataset) xml, and create a record-->
-            <xsl:for-each select="$dataset//concept[@type=('group','item') and @statusCode!='cancelled' and not((.|ancestor::concept)[lower-case(normalize-space(string(name[@language='nl-NL'])))='prullenbak']) ]">
+            <xsl:for-each select="$dataset//concept[@type=('group','item') and @statusCode!='cancelled' and not((.|ancestor::concept)[lower-case(normalize-space(string(name[@language='nl-NL'])))='prullenbak'])]">
                 <xsl:apply-templates select="." mode="createRecords">
                     <xsl:with-param name="compiled-mappings" select="$compiled-mappings"/>
                 </xsl:apply-templates> 
             </xsl:for-each>
         </dataset>
+        
         <!--now loop over all <record> elements in the already existing fhirmapping-3-2.xml 
             and emit a message if you don't find it in the source (i.e dataset) xml anymore-->
         <xsl:for-each select="$fhirmapping-file/dataset/record">
@@ -94,6 +109,7 @@
         <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping-file)"/> 
         <xsl:variable name="fhirmapping-profiles" select="key('fhirmapping-lookup', @iddisplay, $compiled-mappings)"/> <!--look up mappings in the bc-profile mappings-->
 
+        <!--variables for comparison-->
         <!-- handling multiple values and/or spaces in fhirmapping -->
         <xsl:variable name="prevMappings" select="distinct-values(tokenize(normalize-space(string-join($fhirmapping/mapping, ' ')), '\s+'))"/>
         <xsl:variable name="prevProfiles" select="distinct-values(tokenize(normalize-space(string-join($fhirmapping/profile, ' ')), '\s+'))"/>
@@ -227,6 +243,53 @@
         </xsl:choose>       
     </xsl:template>
     
+    <xsl:template match="concept" mode="createLogLine">
+        <!--this template follows the logic structure of template that matches="concept" in mode="createRecords" but is used to generate a .txt file with log messages -->
+        <xsl:param name="compiled-mappings" as="document-node()"/>
+        <xsl:variable name="id" select="@iddisplay/string()"/>
+        <xsl:variable name="concept-name" select="name"/>
+        <xsl:variable name="fhirmapping" select="key('fhirmapping-lookup', @iddisplay, $fhirmapping-file)"/> 
+        <xsl:variable name="fhirmapping-profiles" select="key('fhirmapping-lookup', @iddisplay, $compiled-mappings)"/> <!--look up mappings in the bc-profile mappings-->
+        
+        <!--variables for comparison-->
+        <!-- handling multiple values and/or spaces in fhirmapping -->
+        <xsl:variable name="prevMappings" select="distinct-values(tokenize(normalize-space(string-join($fhirmapping/mapping, ' ')), '\s+'))"/>
+        <xsl:variable name="prevProfiles" select="distinct-values(tokenize(normalize-space(string-join($fhirmapping/profile, ' ')), '\s+'))"/>
+        <!-- handling multiple values and/or spaces in fhirmapping-profiles -->
+        <xsl:variable name="profMappings" select="distinct-values(for $m in $fhirmapping-profiles/mapping return normalize-space($m))"/>
+        <xsl:variable name="profProfiles" select="distinct-values(for $p in $fhirmapping-profiles/profile return normalize-space($p))"/>
+        <!-- set equality: previous mappings are equal to bc-profile mappings if and only if neither has an item missing in the other -->
+        <xsl:variable name="mappings-equal" select="empty($prevMappings[not(. = $profMappings)]) and empty($profMappings[not(. = $prevMappings)])"/>
+        <xsl:variable name="profiles-equal" select="empty($prevProfiles[not(. = $profProfiles)]) and empty($profProfiles[not(. = $prevProfiles)])"/>
+        
+        <xsl:choose> <!--first choose: tests presence in current fhirmapping-->
+            <xsl:when test="empty($fhirmapping)"> <!--a: New dataset concept - the concept does not exist in the previous fhirmapping-->
+                <xsl:choose> <!--second choose: tests whether mapping exists in the fhirmapping-profiles-->
+                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case a1: a mapping exists in fhirmapping-profiles (doesn't exist in previous mapping)-->
+                        <xsl:variable name="profiles-list" select="string-join(distinct-values(for $p in $fhirmapping-profiles/profile return normalize-space(string($p))),', ')"/>
+                        <xsl:sequence select="concat('a1: New concept ',normalize-space(string(name[@language='nl-NL'])), ' with id ',$id, ' is found in the dataset. Mapping information taken from bc-profile(s): {',$profiles-list,'}.' )"/>
+                    </xsl:when>
+                    <xsl:otherwise> <!--case a2: a mapping doesn't exist in fhirmapping-profiles (doesn't exist in previous mapping)-->
+                        <xsl:sequence select="concat('a2: New concept ',normalize-space(string(name[@language='nl-NL'])), ' with id ',$id, ' is found in the dataset. Mapping information not found, to be determined.' )"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise> <!--b: Existing dataset concept - the concept exists in the previous fhirmapping-->
+                <xsl:choose> <!--second choose: tests whether mapping exists in the fhirmapping-profiles AND tests equality of mappings-->
+                    <xsl:when test="exists($fhirmapping-profiles) and $mappings-equal and $profiles-equal"> <!--case b1: dataset concept exists in both fhirmappings, and they are equal-->
+                        <xsl:sequence select="concat('b1: Existing concept ',normalize-space(string(name[@language='nl-NL'])), ' with id ',$id, ' is found in the dataset. Mapping information remains unchanged.' )"/>
+                    </xsl:when>
+                    <xsl:when test="exists($fhirmapping-profiles)"> <!--case b2: dataset concept exists in both mappings, but with differences-->
+                        <xsl:variable name="profiles-list" select="string-join(distinct-values(for $p in $fhirmapping-profiles/profile return normalize-space(string($p))),', ')"/>
+                        <xsl:sequence select="concat('b2: Existing concept ',normalize-space(string(name[@language='nl-NL'])), ' with id ',$id, ' is found in the dataset. Mapping information has been revised, based on bc-profile(s): {',$profiles-list,'}. Recommended to review.')"/>
+                    </xsl:when>
+                    <xsl:otherwise> <!--case b3: dataset concept exists in fhirmapping, but not (anymore?) in the bc-profile mappings-->
+                        <xsl:sequence select="concat('b3: Existing concept ',normalize-space(string(name[@language='nl-NL'])), ' with id ',$id, ' is found in the dataset. Mapping information found exclusively in the previous fhirmapping. Recommended to review.' )"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:otherwise>
+        </xsl:choose>       
+    </xsl:template>
     
     <xsl:template match="node()|@*"/> <!--this is a catch-all empty template that overrides built-in templates-->
 
