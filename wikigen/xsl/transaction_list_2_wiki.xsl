@@ -51,7 +51,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 &lt;section begin=transaction /&gt;
 Based on ART-DECOR transaction version: </xsl:text>
             <xsl:value-of
-                select="concat('[https://decor.nictiz.nl/ad/#/peri20-/scenarios/scenarios/', @id, '/', @transactionEffectiveDate, ' ', @transactionEffectiveDate, ']')"/>
+                select="concat('[https://decor.nictiz.nl/ad/#/peri20-/scenarios/scenarios/', @transactionId, '/', @transactionEffectiveDate, ' ', @transactionEffectiveDate, ']')"/>
             <xsl:text>
 {| class="wikitable" 
 | style="background-color: #1F497D;; color: white; font-weight: bold; text-align:center;"  colspan="13" | PWD 3.2 to FHIR
@@ -136,21 +136,21 @@ Based on ART-DECOR transaction version: </xsl:text>
                 <xsl:when test="$self/@pattern and starts-with(., 'bc-')">
                     <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=3.0.0|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=1.3.3|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>
                 <xsl:when test="$self/@pattern and starts-with(., 'nl-')">
                     <xsl:text>{{Simplifier|http://fhir.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.3.0|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.2.20|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>
                 <xsl:when test="$self/@pattern and starts-with(., 'zib-')">
                     <xsl:text>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/</xsl:text>
                     <xsl:value-of select="."/>
-                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.3.0|title=</xsl:text>
+                    <xsl:text>|nictiz.fhir.nl.stu3.zib2017|pkgVersion=2.2.20|title=</xsl:text>
                     <xsl:value-of select="."/>
                     <xsl:text>}}</xsl:text>
                 </xsl:when>
