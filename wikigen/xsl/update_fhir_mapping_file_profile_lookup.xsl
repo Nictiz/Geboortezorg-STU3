@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--this stylesheet updates the existing fhirmapping-3-2 file, and additionally it looks for the mapping information in the bc- profiles-->
-<!--TO DO review element 674-->
+<!--
+Copyright © Nictiz
+
+This program is free software; you can redistribute it and/or modify it under the terms of the
+GNU Lesser General Public License as published by the Free Software Foundation; either version
+2.1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Lesser General Public License for more details.
+
+The full text of the license is available at http://www.gnu.org/copyleft/lesser.html
+-->
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:f="http://hl7.org/fhir" exclude-result-prefixes="#all" version="2.0">
-    
+    <xd:doc scope="stylesheet">
+        <xd:desc>Updates the existing fhir mapping xml file (fhirmapping-3-2.xml) for a new version of the ART-DECOR dataset xml. 
+            The stylesheet will copy all concepts from the dataset xml, compare the mapping information found in the bc-profiles to the mapping information found in the existing version of fhirmapping-3-3.xml, and fill the record elements accordingly. 
+            The stylesheet also produces additional information files in the qa folder. 
+            The xml file compiled-profile-mappings.xml holds all mapping information found in the bc-profiles, and the log-messages-mapping.txt holds information about the comparison of the mapping information found for each dataset concept. 
+            <xd:p><xd:b>Expected input: </xd:b>DECOR dataset xml file.</xd:p>
+            <xd:p><xd:b>Expected output: </xd:b>An updated version of the existing fhirmapping information.</xd:p>
+            <xd:p><xd:b>History: </xd:b>
+                <xd:ul>
+                    <xd:li>2025-11-05 version 0.1 VG</xd:li>
+                </xd:ul>
+            </xd:p>
+                <xd:p><xd:b>Based on: </xd:b>the existing update_fhir_mapping_file.xsl, version 0.1 (2021-08-24, LM)</xd:p>
+        </xd:desc>
+    </xd:doc>
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
     <xsl:param name="debug" as="xs:boolean" select="true()"/> <!--TOGGLE BETWEEN true()/false() TO SEE MESSAGE LOGGING-->
@@ -20,6 +45,9 @@
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
     <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
 
+    <xd:doc>
+        <xd:desc>Make base table</xd:desc>
+    </xd:doc>
     <xsl:template match="dataset">        
         <!-- Compile all <mapping> entries found in bc- profiles (under all differential.element) into an in-memory doc -->
         <xsl:variable name="compiled-mappings" as="document-node()">
@@ -102,6 +130,9 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xd:doc>
+        <xd:desc>Creates a record for each concept</xd:desc>
+    </xd:doc>
     <xsl:template match="concept" mode="createRecords">
         <xsl:param name="compiled-mappings" as="document-node()"/>
         <xsl:variable name="id" select="@iddisplay/string()"/>
