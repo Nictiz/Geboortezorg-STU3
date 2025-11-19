@@ -15,7 +15,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
 <xsl:stylesheet xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:f="http://hl7.org/fhir" exclude-result-prefixes="#all" version="2.0">
     <xd:doc scope="stylesheet">
         <xd:desc>Updates the existing fhir mapping xml file (fhirmapping-3-2.xml) for a new version of the ART-DECOR dataset xml. 
-            The stylesheet will copy all concepts from the dataset xml, compare the mapping information found in the bc-profiles to the mapping information found in the existing version of fhirmapping-3-3.xml, and fill the record elements accordingly. 
+            The stylesheet will copy all concepts from the dataset xml, compare the mapping information found in the bc-profiles to the mapping information found in the existing version of fhirmapping-3-2.xml, and fill the record elements accordingly. 
             The stylesheet also produces additional information files in the qa folder. 
             The xml file compiled-profile-mappings.xml holds all mapping information found in the bc-profiles, and the log-messages-mapping.txt holds information about the comparison of the mapping information found for each dataset concept. 
             <xd:p><xd:b>Expected input: </xd:b>DECOR dataset xml file.</xd:p>
