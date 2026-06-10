@@ -91,9 +91,14 @@
         <comment value="Voeding" />
       </mapping>
     </element>
+    <element id="Observation.component:FeedingType.extension">
+      <path value="Observation.component.extension" />
+      <min value="2" />
+    </element>
     <element id="Observation.component:FeedingType.extension:feedingMethod">
       <path value="Observation.component.extension" />
       <sliceName value="feedingMethod" />
+      <min value="1" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-7946" />
@@ -103,6 +108,7 @@
     <element id="Observation.component:FeedingType.extension:feedingDateTime">
       <path value="Observation.component.extension" />
       <sliceName value="feedingDateTime" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -147,6 +153,7 @@
     </element>
     <element id="Observation.component:FeedingType.value[x]">
       <path value="Observation.component.value[x]" />
+      <min value="1" />
       <binding>
         <strength value="extensible" />
         <description value="VoedingSoort_GZ" />
