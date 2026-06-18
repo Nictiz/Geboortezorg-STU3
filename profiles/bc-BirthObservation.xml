@@ -256,6 +256,13 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Observation.value[x]:valueDateTime.extension:valuePeriodDuration.value[x]">
+      <path value="Observation.value[x].extension.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10247" />
+      </mapping>
+    </element>
     <element id="Observation.comment">
       <path value="Observation.comment" />
       <mapping>
@@ -310,13 +317,6 @@
         <description value="MeetMethode_GZ" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
       </binding>
-    </element>
-    <element id="Observation.component.value[x]">
-      <path value="Observation.component.value[x]" />
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-10247" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
