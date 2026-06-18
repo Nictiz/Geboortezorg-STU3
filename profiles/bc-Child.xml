@@ -228,7 +228,7 @@
       </type>
     </element>
     <element id="Patient.extension:birthPlace.valueAddress">
-      <path value="Patient.extension.value[x]" />
+      <path value="Patient.extension.valueAddress" />
       <type>
         <code value="Address" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address" />
@@ -242,23 +242,18 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-fetalStatus" />
       </type>
     </element>
-    <element id="Patient.extension:fetalStatus.url">
-      <path value="Patient.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/StructureDefinition/patient-fetalStatus" />
-    </element>
     <element id="Patient.extension:fetalStatus.value[x]">
       <path value="Patient.extension.value[x]" />
-      <type>
-        <code value="code" />
-      </type>
-      <mapping>
-        <identity value="gebz-peri-v3.2" />
-        <map value="peri32-dataelement-9861" />
-        <comment value="GeborenIndicator" />
-      </mapping>
+      <binding>
+        <strength value="required" />
+        <description value="FetalStatus" />
+      </binding>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <mapping>
         <identity value="gebz-peri-v2.3" />
         <map value="peri23-dataelement-40007" />
@@ -405,9 +400,8 @@
         <comment value="Geslacht (medische observatie)" />
       </mapping>
     </element>
-    <element id="Patient.gender.extension:birthSex.valueCodeableConcept:valueCodeableConcept">
+    <element id="Patient.gender.extension:birthSex.valueCodeableConcept">
       <path value="Patient.gender.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <binding>
         <strength value="extensible" />
         <description value="GenderMedisch" />
@@ -461,14 +455,6 @@
         <map value="peri23-dataelement-40025" />
         <comment value="Rangnummer kind" />
       </mapping>
-    </element>
-    <element id="Patient.communication.extension:languageProficiency">
-      <path value="Patient.communication.extension" />
-      <sliceName value="languageProficiency" />
-    </element>
-    <element id="Patient.communication.extension:languageProficiency.extension">
-      <path value="Patient.communication.extension.extension" />
-      <min value="2" />
     </element>
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />
