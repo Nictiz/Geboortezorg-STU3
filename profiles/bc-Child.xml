@@ -234,21 +234,6 @@
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address" />
       </type>
     </element>
-    <element id="Patient.extension:fetalStatus">
-      <path value="Patient.extension" />
-      <sliceName value="fetalStatus" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-fetalStatus" />
-      </type>
-    </element>
-    <element id="Patient.extension:fetalStatus.value[x]">
-      <path value="Patient.extension.value[x]" />
-      <binding>
-        <strength value="required" />
-        <description value="FetalStatus" />
-      </binding>
-    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
