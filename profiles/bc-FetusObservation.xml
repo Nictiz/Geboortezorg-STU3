@@ -131,9 +131,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-focusSTU3" />
       </type>
     </element>
-    <element id="Observation.extension:fetus.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Observation.extension:fetus.value[x]">
+      <path value="Observation.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Fetus" />
@@ -388,6 +387,7 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
+      <definition value="The information determined as a result of making the observation, if the information has a simple value.&#xD;&#xA;If the information determined is the 'OrgaansysteemFoetusWaarde' and the value.coding.code is 'UNK', value.text must be populated with 'Not performed'." />
       <type>
         <code value="CodeableConcept" />
       </type>

@@ -30,12 +30,6 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <constraint>
-        <key value="gz-2" />
-        <severity value="error" />
-        <human value="If Observation.component:amnioticFluidCompartment.value[x] is UNK, Observation.component:amnioticFluidCompartment.value[x].extension:dataAbsentReason.value[x] MUST be populated" />
-        <expression value="Observation.component.where(code.coding.code = '249129009').value.empty() or Observation.component.where(code.coding.code = '249129009').value.coding.code.where($this = 'UNK').empty() or Observation.component.where(code.coding.code = '249129009').value.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists()" />
-      </constraint>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2410" />
@@ -117,10 +111,10 @@
     </element>
     <element id="Observation.component:amnioticFluidCompartment.value[x]">
       <path value="Observation.component.value[x]" />
+      <definition value="The information determined as a result of making the observation, if the information has a simple value.&#xD;&#xA;If the value.coding.code is 'UNK', value.text must be populated with 'Not performed'." />
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="gz-2" />
       <binding>
         <strength value="extensible" />
         <description value="BeoordelingBevindingen" />
@@ -133,19 +127,6 @@
         <map value="peri32-dataelement-2479" />
         <comment value="VruchtwatercompartimentWaarde" />
       </mapping>
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.value[x].extension:dataAbsentReason">
-      <path value="Observation.component.value[x].extension" />
-      <sliceName value="dataAbsentReason" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason" />
-      </type>
-      <isModifier value="false" />
-    </element>
-    <element id="Observation.component:amnioticFluidCompartment.value[x].extension:dataAbsentReason.value[x]">
-      <path value="Observation.component.value[x].extension.value[x]" />
-      <fixedCode value="not-performed" />
     </element>
     <element id="Observation.component:amnioticFluidSDP">
       <path value="Observation.component" />
