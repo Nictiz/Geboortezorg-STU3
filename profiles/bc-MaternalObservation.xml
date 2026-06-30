@@ -286,6 +286,11 @@
         <map value="peri32-dataelement-2279" />
         <comment value="Voorgenomen voeding (Observatie)" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11103" />
+        <comment value="Urine (observatie)" />
+      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -443,6 +448,11 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-9172" />
+        <comment value="ObservatieDatumTijd" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11104" />
         <comment value="ObservatieDatumTijd" />
       </mapping>
     </element>
@@ -1074,7 +1084,7 @@
         <comment value="WenstVrouwMinderKraamzorgDatumTijd" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:bcObservationValueReference">
+    <element id="Observation.value[x]:valueDateTime.extension:bcObservationValueReference">
       <path value="Observation.value[x].extension" />
       <sliceName value="bcObservationValueReference" />
       <max value="1" />
@@ -1271,6 +1281,11 @@
         <map value="peri32-dataelement-9180" />
         <comment value="Toelichting" />
       </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11109" />
+        <comment value="Toelichting" />
+      </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
@@ -1334,9 +1349,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier" />
       </type>
     </element>
-    <element id="Observation.bodySite.extension:laterality.valueCodeableConcept:valueCodeableConcept">
-      <path value="Observation.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.bodySite.extension:laterality.value[x]">
+      <path value="Observation.bodySite.extension.value[x]" />
       <binding>
         <strength value="extensible" />
         <description value="LateraliteitCodelijst" />
@@ -1598,6 +1612,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-MaternalObservation-value" />
+        <valueSetUri value="http://nictiz.nl/fhir/ValueSet/bc-MaternalObservation-value" />
+      </binding>
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3122" />
@@ -1627,6 +1646,21 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-2876" />
         <comment value="WondRand" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11105" />
+        <comment value="UrineAandrang" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <language value="peri32-dataelement-11106" />
+        <map value="UrineKleur" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11107" />
+        <comment value="UrineHoeveelheid" />
       </mapping>
     </element>
     <element id="Observation.component.value[x]:valueQuantity">
@@ -1669,6 +1703,11 @@
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-3113" />
         <comment value="Aantal kraamverbanden" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11108" />
+        <comment value="UrineFrequentie" />
       </mapping>
     </element>
     <element id="Observation.component.value[x]:valueString">
