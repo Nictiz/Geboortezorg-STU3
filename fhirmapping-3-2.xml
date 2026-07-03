@@ -15221,7 +15221,7 @@
 		<zib>NL-CM-4.15.2</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2783</ID>
+		<ID>peri32-dataelement-11063</ID>
 		<naam>Stoma</naam>
 		<mapping>Observation.extension:stoma</mapping>
 		<profile>zib-BowelFunction</profile>
@@ -15229,7 +15229,7 @@
 		<zib>NL-CM-4.15.3</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2784</ID>
+		<ID>peri32-dataelement-11064</ID>
 		<naam>Stoma</naam>
 		<mapping>Observation</mapping>
 		<profile>zib-Stoma</profile>
@@ -16952,34 +16952,88 @@
 		<in>false</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11055</ID>
+		<naam>Stoma</naam>
+		<mapping>Observation</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11056</ID>
+		<naam>StomaType</naam>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11057</ID>
+		<naam>StomaMateriaal</naam>
+		<mapping></mapping>
+		<profile>zib-MedicalDevice</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11059</ID>
+		<naam>AnatomischeLocatie</naam>
+		<mapping>Observation.bodySite</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11060</ID>
+		<naam>Lateraliteit</naam>
+		<mapping>Observation.bodySite.extension:Laterality</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11061</ID>
+		<naam>AanlegDatum</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11062</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10374</ID>
 		<naam>MedischHulpmiddel</naam>
-		<in>false</in>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10375</ID>
 		<naam>Product</naam>
-		<in>false</in>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10375</ID>
+		<naam>Product</naam>
+		<mapping>DeviceUseStatement.device</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10376</ID>
 		<naam>ProductID</naam>
-		<in>false</in>
+		<mapping>Device.identifier</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10377</ID>
 		<naam>ProductType</naam>
-		<in>false</in>
+		<mapping>Device.type</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10378</ID>
 		<naam>ProductOmschrijving</naam>
-		<in>false</in>
+		<mapping>Device.note.text</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10379</ID>
 		<naam>BeginDatum</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.whenUsed.start</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10532</ID>
@@ -16989,7 +17043,8 @@
 	<record>
 		<ID>peri32-dataelement-10380</ID>
 		<naam>Indicatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.indication.extension:indication_Problem</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10381</ID>
@@ -16999,32 +17054,38 @@
 	<record>
 		<ID>peri32-dataelement-10382</ID>
 		<naam>Toelichting</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.note.text</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10383</ID>
 		<naam>AnatomischeLocatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.bodySite</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10384</ID>
 		<naam>Lateraliteit</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10385</ID>
 		<naam>Locatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthcareProvider</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10526</ID>
 		<naam>Zorgaanbieder</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthcareProvider</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10387</ID>
 		<naam>Zorgverlener</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthProfessional</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10525</ID>
