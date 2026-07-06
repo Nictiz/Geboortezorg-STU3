@@ -5127,10 +5127,34 @@
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10556</ID>
-		<naam>Probleem infectieziekte(n) Gezin</naam>
-		<mapping>FamilyMemberHistory.condition.code</mapping>
-		<profile>bc-FamilyMemberHistory</profile>
+		<ID>peri32-dataelement-11069</ID>
+		<naam>Infectieziekte(n) Gezin (Observatie)</naam>
+		<mapping>Observation</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11070</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11072</ID>
+		<naam>InfectieziekteGezinWaarde</naam>
+		<mapping>Observation.value[x]</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11073</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11078</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10557</ID>
