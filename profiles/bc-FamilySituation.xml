@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-FamilySituation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bc-FamilySituation" />
+  <name value="bc-FamilySituation" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="geboortezorg@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="FamilySituation defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0, release 2017.&#xD;&#xA;Traditionally, a family is defined as a group of people of one or more adults who carry responsibility for caring for and raising one or more children. Currently, the term is used more broadly for all forms of cohabitation which form a recognizable social unit, of people who are or who are not related and who have long-lasting, affective bonds and provide each other with support and care." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="gebz-peri-v3.2" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets-\-peri20-?id=2.16.840.1.113883.2.4.3.11.60.90.77.1.6&amp;effectiveDate=2016-09-08T00%3A00%3A00&amp;conceptId=2.16.840.1.113883.2.4.3.11.60.90.77.2.6.4&amp;conceptEffectiveDate=2016-09-08T00%3A00%3A00" />
+    <name value="Geboortezorg 3.2" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-FamilySituation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.component:child">
+      <path value="Observation.component" />
+      <sliceName value="child" />
+    </element>
+    <element id="Observation.component:child.extension:deceasedDateTime">
+      <path value="Observation.component.extension" />
+      <sliceName value="deceasedDateTime" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-familysituation-deceaseddatetime" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Observation.component:child.extension:deceasedDateTime.value[x]">
+      <path value="Observation.component.extension.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11028" />
+        <comment value="DatumOverlijden" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
