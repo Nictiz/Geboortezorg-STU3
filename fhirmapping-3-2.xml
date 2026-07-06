@@ -8454,24 +8454,40 @@
 		<ID>peri32-dataelement-2924</ID>
 		<naam>GezinssituatieKind</naam>
 		<mapping>Observation</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2925</ID>
 		<naam>GezinssamenstellingKind</naam>
 		<mapping>Observation.component:familyComposition.valueCodeableConcept</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.2</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2926</ID>
 		<naam>OuderVerzorger</naam>
-		<mapping>Observation.component:parentCarer.extension:parentCarer</mapping>
-		<profile>zib-FamilySituationChild</profile>
-		<in>true</in>
-		<zib>NL-CM-7.16.3</zib>
+		<mapping>Observation.component:parentCarer</mapping>
+		<profile>bc-FamilySituationChild</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11026</ID>
+		<naam>Patient</naam>
+		<mapping>Observation.component:parentCarer.extension:parentCarerWoman.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11026</ID>
+		<naam>Patient</naam>
+		<mapping>Patient</mapping>
+		<profile>bc-Woman</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10499</ID>
+		<naam>Contactpersoon</naam>
+		<mapping>Observation.component:parentCarer.extension:parentCarer.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10499</ID>
@@ -8483,7 +8499,7 @@
 		<ID>peri32-dataelement-2932</ID>
 		<naam>AantalBroersEnZussen</naam>
 		<mapping>Observation.component:sibling</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>false</in>
 		<zib>NL-CM-7.16.7</zib>
 	</record>
@@ -8491,7 +8507,7 @@
 		<ID>peri32-dataelement-2933</ID>
 		<naam>BroerOfZus</naam>
 		<mapping>Observation.component:sibling</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.8</zib>
 	</record>
@@ -8505,19 +8521,21 @@
 		<ID>peri32-dataelement-2936</ID>
 		<naam>GeboortedatumZusBroer</naam>
 		<mapping>Observation.component:sibling.valueDateTime</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.10</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10773</ID>
 		<naam>DatumOverlijdenZusBroer</naam>
+		<mapping>Observation.component:sibling.extension:siblingDeceasedDatetime.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2937</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.11</zib>
 	</record>
