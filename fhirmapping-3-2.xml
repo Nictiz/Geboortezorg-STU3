@@ -3488,7 +3488,7 @@
 		<ID>peri32-dataelement-1714</ID>
 		<naam>Gezinssituatie</naam>
 		<mapping>Observation</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</searchurl>
@@ -3507,7 +3507,7 @@
 		<ID>peri32-dataelement-1717</ID>
 		<naam>Gezinssamenstelling</naam>
 		<mapping>Observation.component:familyComposition.valueCodeableConcept</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.8</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3516,7 +3516,7 @@
 		<ID>peri32-dataelement-1718</ID>
 		<naam>AantalKinderen</naam>
 		<mapping>Observation.component:numberOfChildren.valueQuantity</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3525,7 +3525,7 @@
 		<ID>peri32-dataelement-1719</ID>
 		<naam>AantalKinderenInwonend</naam>
 		<mapping>Observation.component:numberOfChildrenLivingAtHome.valueQuantity</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.9</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3534,7 +3534,7 @@
 		<ID>peri32-dataelement-1720</ID>
 		<naam>Zorgtaak</naam>
 		<mapping>Observation.component:careResponsibility.valueString</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.10</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3543,17 +3543,23 @@
 		<ID>peri32-dataelement-1721</ID>
 		<naam>Kind</naam>
 		<mapping>Observation.component:child</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11028</ID>
+		<naam>DatumOverlijden</naam>
+		<mapping>Observation.component:child.extension:deceasedDateTime.value[x]</mapping>
+		<profile>bc-FamilySituation</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-1722</ID>
 		<naam>Geboortedatum</naam>
 		<mapping>Observation.component:child.valueDateTime</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.4</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3562,7 +3568,7 @@
 		<ID>peri32-dataelement-1723</ID>
 		<naam>Inwonend</naam>
 		<mapping>Observation.component:child.extension:livingAtHome</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3571,7 +3577,7 @@
 		<ID>peri32-dataelement-1724</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.6</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
