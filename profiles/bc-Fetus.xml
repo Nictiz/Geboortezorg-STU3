@@ -77,6 +77,14 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="BodySite.extension:LegalstatusVOTS.value[x]">
+      <path value="BodySite.extension.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11030" />
+        <comment value="VOTS" />
+      </mapping>
+    </element>
     <element id="BodySite.extension:child">
       <path value="BodySite.extension" />
       <sliceName value="child" />
@@ -85,6 +93,14 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-bodysite-child" />
       </type>
+    </element>
+    <element id="BodySite.extension:child.valueReference">
+      <path value="BodySite.extension.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1378" />
+        <comment value="Patient" />
+      </mapping>
     </element>
     <element id="BodySite.code.coding">
       <path value="BodySite.code.coding" />
@@ -104,12 +120,31 @@
         <code value="83418008" />
       </patternCoding>
     </element>
+    <element id="BodySite.description">
+      <path value="BodySite.description" />
+      <comment value="This description could include any visual markings used to orientate the viewer e.g. external reference points, special sutures, ink markings.&#xD;&#xA;&#xD;&#xA;Description used to distinguish between babies in a multiple pregnancy, allowing descriptions such as &quot;Baby A&quot; and &quot;Baby B&quot; to be used." />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11141" />
+        <comment value="Identificator (foetus)" />
+      </mapping>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11142" />
+        <comment value="Identificator (foetus)" />
+      </mapping>
+    </element>
     <element id="BodySite.patient">
       <path value="BodySite.patient" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Woman" />
       </type>
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-1434" />
+        <comment value="Patient" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
