@@ -1,0 +1,109 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.399--20260622111633"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2026-06-22T11:16:33Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.399--20260622111633"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.399"/>
+    </identifier>
+    <version value="2026-06-22T11:16:33"/>
+    <name value="AardVoorliggendDeel"/>
+    <title value="AardVoorliggendDeel"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="070-3173450"/>
+        </telecom>
+    </contact>
+    <description value="AardVoorliggendDeel"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="dataAbsentReason 'Not Performed'"/>
+                </extension>
+                <code value="UNK"/>
+                <display value="Unknown"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Niet bepaald"/>
+                </designation>
+            </concept>
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="289417008"/>
+                <display value="kleine fontanel palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289411009"/>
+                <display value="grote fontanel palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="684711000146101"/>
+                <display value="kin palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289390007"/>
+                <display value="vertex cranii palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289410005"/>
+                <display value="fontanel palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="684721000146106"/>
+                <display value="sacrum palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289398000"/>
+                <display value="stuit van foetus palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="684671000146102"/>
+                <display value="schouder palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="684681000146100"/>
+                <display value="romp palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="684691000146103"/>
+                <display value="heup palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289395002"/>
+                <display value="hand van foetus palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="289396001"/>
+                <display value="voet van foetus palpabel bij vaginaal toucher (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="249069008"/>
+                <display value="geen lichaamsdelen van foetus bij vaginaal toucher (bevinding)"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
