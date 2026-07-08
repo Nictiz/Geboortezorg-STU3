@@ -1605,6 +1605,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11142</ID>
+		<naam>Identificator (foetus)</naam>
+		<mapping>BodySite.description</mapping>
+		<profile>bc-Fetus</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3358</ID>
 		<naam>Rangnummer</naam>
 		<mapping>Patient.multipleInteger</mapping>
@@ -3545,6 +3551,12 @@
 		<in>true</in>
 		<zib>peri32-dataelement-675</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-1434</ID>
+		<naam>Patient</naam>
+		<mapping>BodySite.patient</mapping>
+		<profile>bc-Fetus</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10567</ID>
@@ -8531,22 +8543,16 @@
 		<profile>bc-Child</profile>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10804</ID>
-		<naam>Demografische gegevens</naam>
-		<mapping>Patient</mapping>
-		<profile>bc-Child</profile>
+		<ID>peri32-dataelement-11141</ID>
+		<naam>Identificator (foetus)</naam>
+		<mapping>BodySite.description</mapping>
+		<profile>bc-Fetus</profile>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10805</ID>
-		<naam>Patient</naam>
-		<mapping>Patient</mapping>
-		<profile>bc-Child</profile>
-	</record>
-	<record>
-		<ID>peri32-dataelement-10806</ID>
-		<naam>JuridischeSituatie</naam>
-		<mapping>Condition</mapping>
-		<profile>bc-LegalSituation-LegalStatus</profile>
+		<ID>peri32-dataelement-11030</ID>
+		<naam>VOTS</naam>
+		<mapping>BodySite.extension:LegalstatusVOTS.value[x]</mapping>
+		<profile>bc-Fetus</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1404</ID>
