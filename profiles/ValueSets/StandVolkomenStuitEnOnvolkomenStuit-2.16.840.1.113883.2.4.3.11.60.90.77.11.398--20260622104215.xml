@@ -1,0 +1,74 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.398--20260622104215"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2026-06-22T10:42:15Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.398--20260622104215"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.398"/>
+    </identifier>
+    <version value="2026-06-22T10:42:15"/>
+    <name value="StandVolkomenStuitEnOnvolkomenStuit"/>
+    <title value="Stand volkomen stuit en onvolkomen stuit"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="070-3173450"/>
+        </telecom>
+    </contact>
+    <description value="Stand volkomen stuit en onvolkomen stuit"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="79888005"/>
+                <display value="stuitligging met os sacrum voor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="58261003"/>
+                <display value="stuitligging met os sacrum achter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="64433002"/>
+                <display value="stuitligging met os sacrum linksvoor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="2138000"/>
+                <display value="stuitligging met os sacrum linksachter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="79643007"/>
+                <display value="stuitligging met os sacrum rechtsvoor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="112073004"/>
+                <display value="stuitligging met os sacrum rechtsachter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="54486001"/>
+                <display value="stuitligging met os sacrum linksdwars (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="89550007"/>
+                <display value="stuitligging met os sacrum rechtsdwars (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="82334004"/>
+                <display value="onbepaald (kwalificatiewaarde)"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

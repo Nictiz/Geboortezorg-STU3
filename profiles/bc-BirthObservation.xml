@@ -85,9 +85,8 @@
         <comment value="Vorige baring" />
       </mapping>
     </element>
-    <element id="Observation.extension:birth.valueReference:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Observation.extension:birth.value[x]">
+      <path value="Observation.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-Birth" />
@@ -248,7 +247,7 @@
         <comment value="ActiefMeepersenWaarde" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:valuePeriodDuration">
+    <element id="Observation.value[x]:valueDateTime.extension:valuePeriodDuration">
       <path value="Observation.value[x].extension" />
       <sliceName value="valuePeriodDuration" />
       <type>
@@ -311,6 +310,24 @@
         <description value="MeetMethode_GZ" />
         <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.282--20200526172902" />
       </binding>
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-BirthObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-BirthObservation-code" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10247" />
+        <comment value="DuurUitdrijvingWaarde" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

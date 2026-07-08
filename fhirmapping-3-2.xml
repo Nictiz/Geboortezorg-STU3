@@ -1605,6 +1605,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11142</ID>
+		<naam>Identificator (foetus)</naam>
+		<mapping>BodySite.description</mapping>
+		<profile>bc-Fetus</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3358</ID>
 		<naam>Rangnummer</naam>
 		<mapping>Patient.multipleInteger</mapping>
@@ -3419,6 +3425,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/patient-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-1434</ID>
+		<naam>Patient</naam>
+		<mapping>BodySite.patient</mapping>
+		<profile>bc-Fetus</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10567</ID>
 		<naam>JuridischeSituatie</naam>
 		<mapping>Condition</mapping>
@@ -3488,7 +3500,7 @@
 		<ID>peri32-dataelement-1714</ID>
 		<naam>Gezinssituatie</naam>
 		<mapping>Observation</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</searchurl>
@@ -3507,7 +3519,7 @@
 		<ID>peri32-dataelement-1717</ID>
 		<naam>Gezinssamenstelling</naam>
 		<mapping>Observation.component:familyComposition.valueCodeableConcept</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.8</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3516,7 +3528,7 @@
 		<ID>peri32-dataelement-1718</ID>
 		<naam>AantalKinderen</naam>
 		<mapping>Observation.component:numberOfChildren.valueQuantity</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3525,7 +3537,7 @@
 		<ID>peri32-dataelement-1719</ID>
 		<naam>AantalKinderenInwonend</naam>
 		<mapping>Observation.component:numberOfChildrenLivingAtHome.valueQuantity</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.9</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3534,7 +3546,7 @@
 		<ID>peri32-dataelement-1720</ID>
 		<naam>Zorgtaak</naam>
 		<mapping>Observation.component:careResponsibility.valueString</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.10</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3543,17 +3555,23 @@
 		<ID>peri32-dataelement-1721</ID>
 		<naam>Kind</naam>
 		<mapping>Observation.component:child</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
 		<searchurl>GET [base]/Observation?code=http://snomed.info/sct|365470003&amp;patient=[patientid]</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11028</ID>
+		<naam>DatumOverlijden</naam>
+		<mapping>Observation.component:child.extension:deceasedDateTime.value[x]</mapping>
+		<profile>bc-FamilySituation</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-1722</ID>
 		<naam>Geboortedatum</naam>
 		<mapping>Observation.component:child.valueDateTime</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.4</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3562,7 +3580,7 @@
 		<ID>peri32-dataelement-1723</ID>
 		<naam>Inwonend</naam>
 		<mapping>Observation.component:child.extension:livingAtHome</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -3571,7 +3589,7 @@
 		<ID>peri32-dataelement-1724</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>zib-FamilySituation</profile>
+		<profile>bc-FamilySituation</profile>
 		<in>true</in>
 		<zib>NL-CM-7.13.6</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/family-situation</example>
@@ -7137,8 +7155,8 @@
 	<record>
 		<ID>peri32-dataelement-10246</ID>
 		<naam>DuurActieveOntsluitingWaarde</naam>
-		<mapping>nvt</mapping>
-		<profile>nvt</profile>
+		<mapping>Observation.component.value[x]:valueQuantity</mapping>
+		<profile>bc-DeliveryObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-4088</ID>
@@ -7199,7 +7217,7 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-4108</ID>
-		<naam>Breken Vliezen (Observatie)</naam>
+		<naam>Gebroken Vliezen (Observatie)</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-DeliveryObservation</profile>
 	</record>
@@ -7211,7 +7229,7 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-4111</ID>
-		<naam>BrekenVliezenWaarde</naam>
+		<naam>GebrokenVliezenWaarde</naam>
 		<mapping>Observation.value[x]:valueDateTime</mapping>
 		<profile>bc-DeliveryObservation</profile>
 	</record>
@@ -7229,7 +7247,7 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-4120</ID>
-		<naam>Aard Vruchtwater (Observatie)</naam>
+		<naam>Aard Aflopend Vruchtwater (Observatie)</naam>
 		<mapping>Observation</mapping>
 		<profile>bc-DeliveryObservation</profile>
 	</record>
@@ -7241,7 +7259,7 @@
 	</record>
 	<record>
 		<ID>peri32-dataelement-4123</ID>
-		<naam>Aard Vruchtwater Waarde</naam>
+		<naam>AardAflopendVruchtwaterWaarde</naam>
 		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
 		<profile>bc-DeliveryObservation</profile>
 	</record>
@@ -7264,6 +7282,18 @@
 		<profile>bc-Birth</profile>
 		<in>false</in>
 		<searchurl>GET [base]/Procedure?code=http://snomed.info/sct|42857002&amp;context=EpisodeOfCare/[id for pregnancy episode]&amp;_include=Procedure:subject</searchurl>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11139</ID>
+		<naam>Foetus</naam>
+		<mapping>BodySite</mapping>
+		<profile>bc-Fetus</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11139</ID>
+		<naam>Foetus</naam>
+		<mapping>Observation.extension:fetus.value[x]</mapping>
+		<profile>bc-FetusObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9685</ID>
@@ -8361,22 +8391,16 @@
 		<profile>bc-Child</profile>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10804</ID>
-		<naam>Demografische gegevens</naam>
-		<mapping>Patient</mapping>
-		<profile>bc-Child</profile>
+		<ID>peri32-dataelement-11141</ID>
+		<naam>Identificator (foetus)</naam>
+		<mapping>BodySite.description</mapping>
+		<profile>bc-Fetus</profile>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10805</ID>
-		<naam>Patient</naam>
-		<mapping>Patient</mapping>
-		<profile>bc-Child</profile>
-	</record>
-	<record>
-		<ID>peri32-dataelement-10806</ID>
-		<naam>JuridischeSituatie</naam>
-		<mapping>Condition</mapping>
-		<profile>bc-LegalSituation-LegalStatus</profile>
+		<ID>peri32-dataelement-11030</ID>
+		<naam>VOTS</naam>
+		<mapping>BodySite.extension:LegalstatusVOTS.value[x]</mapping>
+		<profile>bc-Fetus</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1404</ID>
@@ -15065,6 +15089,55 @@
 		<naam>UrinatieGeweest?</naam>
 		<mapping>Observation.value[x]:valueBoolean</mapping>
 		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11103</ID>
+		<naam>Urine (observatie)</naam>
+		<mapping>Observation</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11104</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11105</ID>
+		<naam>UrineAandrang</naam>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11106</ID>
+		<naam>UrineKleur</naam>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11107</ID>
+		<naam>UrineHoeveelheid</naam>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11108</ID>
+		<naam>UrineFrequentie</naam>
+		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11109</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-MaternalObservation</profile>
+		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2759</ID>
