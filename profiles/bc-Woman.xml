@@ -297,6 +297,16 @@
         <comment value="Geslacht (identiteit)" />
       </mapping>
     </element>
+    <element id="Patient.extension:genderIdentity.value[x]">
+      <path value="Patient.extension.value[x]" />
+      <binding>
+        <strength value="extensible" />
+        <description value="gender-identity" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.11.373--20220228110248" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>

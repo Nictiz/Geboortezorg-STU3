@@ -7993,7 +7993,7 @@
 	</record>
 	<record>
 		<ID>peri31-dataelement-1432</ID>
-		<naam>Procedure</naam>
+		<naam>Verrichting</naam>
 		<mapping>Procedure</mapping>
 		<profile>bc-ObstetricProcedure</profile>
 		<zib/>
@@ -17313,6 +17313,66 @@
 		<ID>peri32-dataelement-1545</ID>
 		<naam>Zorgverlener</naam>
 		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11045</ID>
+		<naam>Probleem (2017)</naam>
+		<mapping>Condition</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11046</ID>
+		<naam>ProbleemAnatomischeLocatie</naam>
+		<mapping>Condition.bodySite</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11047</ID>
+		<naam>ProbleemLateraliteit</naam>
+		<mapping>Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11048</ID>
+		<naam>ProbleemType</naam>
+		<mapping>Condition.category</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11049</ID>
+		<naam>ProbleemNaam</naam>
+		<mapping>Condition.code</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11050</ID>
+		<naam>ProbleemBeginDatum</naam>
+		<mapping>Condition.onset[x]:onsetDateTime</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11051</ID>
+		<naam>ProbleemEindDatum</naam>
+		<mapping>Condition.abatement[x]:abatementDateTime</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11052</ID>
+		<naam>ProbleemStatus</naam>
+		<mapping>Condition.clinicalStatus</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11053</ID>
+		<naam>VerificatieStatus</naam>
+		<mapping>Condition.verificationStatus</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11054</ID>
+		<naam>Toelichting</naam>
+		<mapping>Condition.note</mapping>
+		<profile>zib-Problem</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2610</ID>
