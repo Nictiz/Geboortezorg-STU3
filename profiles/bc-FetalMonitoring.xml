@@ -42,6 +42,18 @@
         <comment value="Foetale monitoring (CTG)" />
       </mapping>
     </element>
+    <element id="Observation.extension:fetus">
+      <path value="Observation.extension" />
+      <sliceName value="fetus" />
+    </element>
+    <element id="Observation.extension:fetus.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-11140" />
+        <comment value="Foetus" />
+      </mapping>
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <patternCoding>
@@ -61,10 +73,6 @@
         <map value="peri32-dataelement-11025" />
         <comment value="TijdsInterval" />
       </mapping>
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
-      <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />

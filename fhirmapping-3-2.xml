@@ -1702,8 +1702,16 @@
 	<record>
 		<ID>peri32-dataelement-959</ID>
 		<naam>OrganisatieLocatie</naam>
-		<mapping>Organization?</mapping>
+		<mapping>Organization.name</mapping>
 		<profile>nl-core-organization</profile>
+		<in>false</in>
+		<zib>NL-CM-17.2.8</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-959</ID>
+		<naam>OrganisatieLocatie</naam>
+		<mapping>Location.name</mapping>
+		<profile>nl-core-location</profile>
 		<in>false</in>
 		<zib>NL-CM-17.2.8</zib>
 	</record>
@@ -1724,6 +1732,12 @@
 		<searchurl>GET [base]/Organization</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3228</ID>
+		<naam>Contactgegevens</naam>
+		<mapping>Location.telecom</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3229</ID>
 		<naam>Telefoonnummers</naam>
 		<mapping>Organization.telecom.value</mapping>
@@ -1732,6 +1746,12 @@
 		<zib>NL-CM-20.6.2</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 		<searchurl>GET [base]/Organization</searchurl>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3229</ID>
+		<naam>Telefoonnummers</naam>
+		<mapping>Location.telecom.value</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3230</ID>
@@ -1743,6 +1763,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3230</ID>
+		<naam>Telefoonnummer</naam>
+		<mapping>Location.telecom.value</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3231</ID>
 		<naam>TelecomType</naam>
 		<mapping>Organization.telecom:extension:TelecomType</mapping>
@@ -1752,6 +1778,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3231</ID>
+		<naam>TelecomType</naam>
+		<mapping>Location.telecom:extension:TelecomType</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3232</ID>
 		<naam>NummerSoort</naam>
 		<mapping>Organization.telecom.use</mapping>
@@ -1759,6 +1791,12 @@
 		<in>true</in>
 		<zib>NL-CM-20.6.6</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3232</ID>
+		<naam>NummerSoort</naam>
+		<mapping>Location.telecom.use</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3233</ID>
@@ -1771,6 +1809,12 @@
 		<searchurl>GET [base]/Organization</searchurl>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3233</ID>
+		<naam>EmailAdressen</naam>
+		<mapping>Location.telecom</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3234</ID>
 		<naam>EmailAdres</naam>
 		<mapping>Organization.telecom.value</mapping>
@@ -1778,6 +1822,12 @@
 		<in>true</in>
 		<zib>NL-CM-20.6.7</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3234</ID>
+		<naam>EmailAdres</naam>
+		<mapping>Location.telecom.value</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3235</ID>
@@ -1789,12 +1839,24 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3235</ID>
+		<naam>EmailSoort</naam>
+		<mapping>Location.telecom.use</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3236</ID>
 		<naam>Adresgegevens</naam>
 		<mapping>Organization.address</mapping>
 		<profile>nl-core-organization</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3236</ID>
+		<naam>Adresgegevens</naam>
+		<mapping>Location.address</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3237</ID>
@@ -1806,6 +1868,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3237</ID>
+		<naam>Straat</naam>
+		<mapping>Location.address.line.streetName</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3238</ID>
 		<naam>Huisnummer</naam>
 		<mapping>Organization.address.line.houseNumber</mapping>
@@ -1813,6 +1881,12 @@
 		<in>true</in>
 		<zib>NL-CM-20.5.12</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3238</ID>
+		<naam>Huisnummer</naam>
+		<mapping>Location.address.line.houseNumber</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3239</ID>
@@ -1824,6 +1898,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3239</ID>
+		<naam>Huisnummerletter</naam>
+		<mapping>Location.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3240</ID>
 		<naam>Huisnummertoevoeging</naam>
 		<mapping>Organization.address.line:extension:buildingNumbersuffix</mapping>
@@ -1833,12 +1913,24 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3240</ID>
+		<naam>Huisnummertoevoeging</naam>
+		<mapping>Location.address.line:extension:buildingNumbersuffix</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3241</ID>
 		<naam>AanduidingBijNummer</naam>
 		<mapping>Organization.address.line:extension:additionalLocator</mapping>
 		<profile>nl-core-organization</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.9</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3241</ID>
+		<naam>AanduidingBijNummer</naam>
+		<mapping>Location.address.line:extension:additionalLocator</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3242</ID>
@@ -1850,6 +1942,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3242</ID>
+		<naam>Postcode</naam>
+		<mapping>Location.address.postalCode</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3243</ID>
 		<naam>Woonplaats</naam>
 		<mapping>Organization.address.city</mapping>
@@ -1857,6 +1955,12 @@
 		<in>true</in>
 		<zib>NL-CM-20.5.3</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3243</ID>
+		<naam>Woonplaats</naam>
+		<mapping>Location.address.city</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3244</ID>
@@ -1868,6 +1972,12 @@
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3244</ID>
+		<naam>Gemeente</naam>
+		<mapping>Location.address.district</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3245</ID>
 		<naam>Land</naam>
 		<mapping>Organization.address.country</mapping>
@@ -1875,6 +1985,12 @@
 		<in>true</in>
 		<zib>NL-CM-20.5.5</zib>
 		<example>https://simplifier.net/geboortezorg-stu3/organization-example-duplicate-3</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3245</ID>
+		<naam>Land</naam>
+		<mapping>Location.address.country</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3246</ID>
@@ -1885,12 +2001,24 @@
 		<zib>NL-CM-20.5.7</zib>
 	</record>
 	<record>
+		<ID>peri32-dataelement-3246</ID>
+		<naam>AdditioneleInformatie</naam>
+		<mapping>Location.address.line.extension</mapping>
+		<profile>nl-core-location</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-3247</ID>
 		<naam>AdresSoort</naam>
 		<mapping>Organization.address.use/.type (via conceptMap)</mapping>
 		<profile>nl-core-organization</profile>
 		<in>true</in>
 		<zib>NL-CM-20.5.8</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-3247</ID>
+		<naam>AdresSoort</naam>
+		<mapping>Location.address.use/.type (via conceptMap)</mapping>
+		<profile>nl-core-location</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-965</ID>
@@ -2019,7 +2147,7 @@
 		<ID>peri32-dataelement-2219</ID>
 		<naam>Specialisme</naam>
 		<mapping>PractitionerRole.specialty</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/practitionerrole-example-duplicate-3</example>
 	</record>
@@ -2342,7 +2470,7 @@
 		<ID>peri32-dataelement-3870</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3858</ID>
@@ -2354,7 +2482,7 @@
 		<ID>peri32-dataelement-3864</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-3864</ID>
@@ -5139,10 +5267,34 @@
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-10556</ID>
-		<naam>Probleem infectieziekte(n) Gezin</naam>
-		<mapping>FamilyMemberHistory.condition.code</mapping>
-		<profile>bc-FamilyMemberHistory</profile>
+		<ID>peri32-dataelement-11069</ID>
+		<naam>Infectieziekte(n) Gezin (Observatie)</naam>
+		<mapping>Observation</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11070</ID>
+		<naam>ObservatieDatumTijd</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11072</ID>
+		<naam>InfectieziekteGezinWaarde</naam>
+		<mapping>Observation.value[x]</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11073</ID>
+		<naam>ObservatieMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-MaternalObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11078</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-MaternalObservation</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10557</ID>
@@ -7525,7 +7677,7 @@
 		<ID>peri32-dataelement-10801</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10801</ID>
@@ -8460,24 +8612,40 @@
 		<ID>peri32-dataelement-2924</ID>
 		<naam>GezinssituatieKind</naam>
 		<mapping>Observation</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2925</ID>
 		<naam>GezinssamenstellingKind</naam>
 		<mapping>Observation.component:familyComposition.valueCodeableConcept</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.2</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2926</ID>
 		<naam>OuderVerzorger</naam>
-		<mapping>Observation.component:parentCarer.extension:parentCarer</mapping>
-		<profile>zib-FamilySituationChild</profile>
-		<in>true</in>
-		<zib>NL-CM-7.16.3</zib>
+		<mapping>Observation.component:parentCarer</mapping>
+		<profile>bc-FamilySituationChild</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11026</ID>
+		<naam>Patient</naam>
+		<mapping>Observation.component:parentCarer.extension:parentCarerWoman.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11026</ID>
+		<naam>Patient</naam>
+		<mapping>Patient</mapping>
+		<profile>bc-Woman</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10499</ID>
+		<naam>Contactpersoon</naam>
+		<mapping>Observation.component:parentCarer.extension:parentCarer.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10499</ID>
@@ -8489,7 +8657,7 @@
 		<ID>peri32-dataelement-2932</ID>
 		<naam>AantalBroersEnZussen</naam>
 		<mapping>Observation.component:sibling</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>false</in>
 		<zib>NL-CM-7.16.7</zib>
 	</record>
@@ -8497,7 +8665,7 @@
 		<ID>peri32-dataelement-2933</ID>
 		<naam>BroerOfZus</naam>
 		<mapping>Observation.component:sibling</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.8</zib>
 	</record>
@@ -8511,19 +8679,21 @@
 		<ID>peri32-dataelement-2936</ID>
 		<naam>GeboortedatumZusBroer</naam>
 		<mapping>Observation.component:sibling.valueDateTime</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.10</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10773</ID>
 		<naam>DatumOverlijdenZusBroer</naam>
+		<mapping>Observation.component:sibling.extension:siblingDeceasedDatetime.value[x]</mapping>
+		<profile>bc-FamilySituationChild</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2937</ID>
 		<naam>Toelichting</naam>
 		<mapping>Observation.comment</mapping>
-		<profile>zib-FamilySituationChild</profile>
+		<profile>bc-FamilySituationChild</profile>
 		<in>true</in>
 		<zib>NL-CM-7.16.11</zib>
 	</record>
@@ -11488,142 +11658,15 @@
 		<in>false</in>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2416</ID>
-		<naam>Verrichting (Maternaal onderzoek)</naam>
-		<mapping>Procedure</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
-		<searchurl>GET [base]/Procedure?context=EpisodeOfCare/[id for pregnancy episode]</searchurl>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2417</ID>
-		<naam>VerrichtingStartDatum</naam>
-		<mapping>Procedure.performed[x]:performedPeriod.start</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.2</zib>
-		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2418</ID>
-		<naam>VerrichtingEindDatum</naam>
-		<mapping>Procedure.performed[x]:performedPeriod.end</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.3</zib>
-		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2419</ID>
-		<naam>VerrichtingAnatomischeLocatie</naam>
-		<mapping>Procedure.bodySite</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.8</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2420</ID>
-		<naam>VerrichtingLateraliteit</naam>
-		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.11</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2421</ID>
-		<naam>Indicatie</naam>
-		<mapping>Procedure.reasonReference</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.9</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2422</ID>
-		<naam>Probleem</naam>
-		<mapping>Condition</mapping>
-		<profile>zib-Problem</profile>
-		<in>true</in>
-		<zib>NL-CM-2017-207</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2423</ID>
-		<naam>VerrichtingType</naam>
-		<mapping>Procedure.code</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>false</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2424</ID>
-		<naam>VerrichtingMethode</naam>
-		<mapping>Procedure.extension:procedureMethod</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.12</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2425</ID>
-		<naam>MedischHulpmiddel</naam>
-		<mapping>Procedure.focalDevice</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-		<zib>NL-CM-14.1.7</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-10474</ID>
-		<naam>MedischHulpmiddel</naam>
-		<mapping>Device</mapping>
-		<profile>zib-MedicalDeviceProduct</profile>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2427</ID>
-		<naam>Locatie</naam>
-		<mapping>Procedure.location</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2433</ID>
-		<naam>Zorgaanbieder</naam>
-		<mapping>Organization</mapping>
-		<profile>nl-core-organization</profile>
-		<in>true</in>
-		<zib>peri32-dataelement-956</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2429</ID>
-		<naam>Uitvoerder</naam>
-		<mapping>Procedure.performer.actor</mapping>
-		<profile>bc-ObstetricProcedure</profile>
-		<in>true</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2434</ID>
-		<naam>Zorgverlener</naam>
-		<mapping>Practitioner</mapping>
-		<profile>nl-core-practitioner</profile>
-		<in>true</in>
-		<zib>peri32-dataelement-978</zib>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2431</ID>
-		<naam>Aanvrager</naam>
-		<mapping>Procedure.Requestrequester</mapping>
-		<profile>zib-ProcedureRequest</profile>
-		<in>true</in>
-	</record>
-	<record>
-		<ID>peri32-dataelement-2435</ID>
-		<naam>Zorgverlener</naam>
-		<mapping>Practitioner</mapping>
-		<profile>nl-core-practitioner</profile>
-		<in>true</in>
-		<zib>peri32-dataelement-978</zib>
-	</record>
-	<record>
 		<ID>peri32-dataelement-8912</ID>
 		<naam>Media</naam>
 		<mapping>DocumentReference</mapping>
+		<profile>IHE.MHD.Minimal.DocumentReference</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11065</ID>
+		<naam>Contact</naam>
+		<mapping>DocumentReference.context.encounter</mapping>
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
@@ -11651,6 +11694,12 @@
 		<profile>IHE.MHD.Minimal.DocumentReference</profile>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11066</ID>
+		<naam>MediaType</naam>
+		<mapping>DocumentReference.content.attachment.contentType</mapping>
+		<profile>IHE.MHD.Minimal.DocumentReference</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-8916</ID>
 		<naam>Datum/Tijd</naam>
 		<mapping>DocumentReference.indexed</mapping>
@@ -11668,6 +11717,30 @@
 		<mapping>Observation</mapping>
 		<profile>bc-FetusObservation</profile>
 		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11140</ID>
+		<naam>Foetus</naam>
+		<mapping>Observation.extension:fetus.value[x]</mapping>
+		<profile>bc-FetusObservation</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11140</ID>
+		<naam>Foetus</naam>
+		<mapping>Observation.extension:fetus.value[x]</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11140</ID>
+		<naam>Foetus</naam>
+		<mapping>Observation.extension:fetus.value[x]</mapping>
+		<profile>bc-UmbilicalCord</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11140</ID>
+		<naam>Foetus</naam>
+		<mapping>Observation.extension:fetus.value[x]</mapping>
+		<profile>bc-FetalMonitoring</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10283</ID>
@@ -11817,7 +11890,7 @@
 		<ID>peri32-dataelement-3908</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>Practitioner</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1209</ID>
@@ -11825,6 +11898,18 @@
 		<mapping>DiagnosticReport</mapping>
 		<profile>bc-PregnancyUltraSound</profile>
 		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-1209</ID>
+		<naam>Echoscopie</naam>
+		<mapping>Procedure.report</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11098</ID>
+		<naam>Verrichting (Maternaal onderzoek)</naam>
+		<mapping>Procedure</mapping>
+		<profile>bc-ObstetricProcedure</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-8918</ID>
@@ -12237,6 +12322,42 @@
 		<profile>bc-FetalHeartRate</profile>
 		<in>true</in>
 		<zib>peri32-dataelement-1776</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10964</ID>
+		<naam>HartfrequentieDatumTijd</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10965</ID>
+		<naam>HartfrequentieWaarde</naam>
+		<mapping>Observation.value[x]:valueQuantity</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10966</ID>
+		<naam>HartslagMeetMethode</naam>
+		<mapping>Observation.method</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10967</ID>
+		<naam>HartslagRegelmatigheid</naam>
+		<mapping>Observation.component:heartRateRegularity.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10968</ID>
+		<naam>InterpretatieFrequentie</naam>
+		<mapping>Observation.interpretation</mapping>
+		<profile>bc-FetalHeartRate</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10969</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>bc-FetalHeartRate</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7789</ID>
@@ -13421,13 +13542,13 @@
 		<ID>peri32-dataelement-7868</ID>
 		<naam>TekstUitslag</naam>
 		<mapping>DiagnosticReport</mapping>
-		<profile>bc-PregnancyUltraSound</profile>
+		<profile>zib-TextResult</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7869</ID>
 		<naam>TekstUitslagDatumTijd</naam>
 		<mapping>DiagnosticReport.effectiveDateTime</mapping>
-		<profile>bc-PregnancyUltraSound</profile>
+		<profile>zib-TextResult</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7870</ID>
@@ -13445,19 +13566,19 @@
 		<ID>peri32-dataelement-7872</ID>
 		<naam>TekstUitslagStatus</naam>
 		<mapping>DiagnosticReport.status.extension:TextResultStatus</mapping>
-		<profile>bc-PregnancyUltraSound</profile>
+		<profile>zib-TextResult</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7873</ID>
 		<naam>TekstResultaat</naam>
 		<mapping>DiagnosticReport.conclusion</mapping>
-		<profile>bc-PregnancyUltraSound</profile>
+		<profile>zib-TextResult</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-7874</ID>
 		<naam>TekstUitslagType</naam>
 		<mapping>DiagnosticReport.code</mapping>
-		<profile>bc-PregnancyUltraSound</profile>
+		<profile>zib-TextResult</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9885</ID>
@@ -13541,6 +13662,145 @@
 		<in>true</in>
 		<example>https://simplifier.net/geboortezorg-stu3/example-bloedgroepab</example>
 		<searchurl>GET [base]/Observation?context=EpisodeOfCare/[id for pregnancy episode]&amp;{category=http://snomed.info/sct|49581000146104}</searchurl>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11027</ID>
+		<naam>Patient</naam>
+		<mapping>Patient</mapping>
+		<profile>bc-Woman</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2416</ID>
+		<naam>Verrichting (Maternaal onderzoek)</naam>
+		<mapping>Procedure</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
+		<searchurl>GET [base]/Procedure?context=EpisodeOfCare/[id for pregnancy episode]</searchurl>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2417</ID>
+		<naam>VerrichtingStartDatum</naam>
+		<mapping>Procedure.performed[x]:performedPeriod.start</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.2</zib>
+		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2418</ID>
+		<naam>VerrichtingEindDatum</naam>
+		<mapping>Procedure.performed[x]:performedPeriod.end</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.3</zib>
+		<example>https://simplifier.net/geboortezorg-stu3/medicalinvestigation</example>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2419</ID>
+		<naam>VerrichtingAnatomischeLocatie</naam>
+		<mapping>Procedure.bodySite</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.8</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2420</ID>
+		<naam>VerrichtingLateraliteit</naam>
+		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.11</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2421</ID>
+		<naam>Indicatie</naam>
+		<mapping>Procedure.reasonReference</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.9</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2422</ID>
+		<naam>Probleem</naam>
+		<mapping>Condition</mapping>
+		<profile>zib-Problem</profile>
+		<in>true</in>
+		<zib>NL-CM-2017-207</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2423</ID>
+		<naam>VerrichtingType</naam>
+		<mapping>Procedure.code</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>false</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2424</ID>
+		<naam>VerrichtingMethode</naam>
+		<mapping>Procedure.extension:procedureMethod</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.12</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2425</ID>
+		<naam>MedischHulpmiddel</naam>
+		<mapping>Procedure.focalDevice</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+		<zib>NL-CM-14.1.7</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10474</ID>
+		<naam>MedischHulpmiddel</naam>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2427</ID>
+		<naam>Locatie</naam>
+		<mapping>Procedure.location</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2433</ID>
+		<naam>Zorgaanbieder</naam>
+		<mapping>Organization</mapping>
+		<profile>nl-core-organization</profile>
+		<in>true</in>
+		<zib>peri32-dataelement-956</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2429</ID>
+		<naam>Uitvoerder</naam>
+		<mapping>Procedure.performer.actor</mapping>
+		<profile>bc-ObstetricProcedure</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2434</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Practitioner</mapping>
+		<profile>nl-core-practitioner</profile>
+		<in>true</in>
+		<zib>peri32-dataelement-978</zib>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2431</ID>
+		<naam>Aanvrager</naam>
+		<mapping>Procedure.Requestrequester</mapping>
+		<profile>zib-ProcedureRequest</profile>
+		<in>true</in>
+	</record>
+	<record>
+		<ID>peri32-dataelement-2435</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Practitioner</mapping>
+		<profile>nl-core-practitioner</profile>
+		<in>true</in>
+		<zib>peri32-dataelement-978</zib>
 	</record>
 	<record>
 		<ID>peri32-dataelement-1849</ID>
@@ -14661,6 +14921,114 @@
 		<in>false</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11015</ID>
+		<naam>Patient</naam>
+		<mapping>Patient</mapping>
+		<profile>bc-Child</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11079</ID>
+		<naam>Verrichting (Neonataal onderzoek)</naam>
+		<mapping>Procedure</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11080</ID>
+		<naam>VerrichtingStartDatum</naam>
+		<mapping>Procedure.performed[x]:performedPeriod.start</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11081</ID>
+		<naam>VerrichtingEindDatum</naam>
+		<mapping>Procedure.performed[x]:performedPeriod.end</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11082</ID>
+		<naam>VerrichtingAnatomischeLocatie</naam>
+		<mapping>Procedure.bodySite</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11083</ID>
+		<naam>VerrichtingLateraliteit</naam>
+		<mapping>Procedure.bodySite.extension:ProcedureLaterality.value[x]:valueCodeableConcept</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11084</ID>
+		<naam>Indicatie</naam>
+		<mapping>Procedure.reasonReference</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11085</ID>
+		<naam>Probleem</naam>
+		<mapping>Condition</mapping>
+		<profile>zib-Problem</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11086</ID>
+		<naam>VerrichtingType</naam>
+		<mapping>Procedure.code</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11087</ID>
+		<naam>VerrichtingMethode</naam>
+		<mapping>Procedure.extension:procedureMethod</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11088</ID>
+		<naam>MedischHulpmiddel</naam>
+		<mapping>Procedure.focalDevice</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11089</ID>
+		<naam>MedischHulpmiddel</naam>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11090</ID>
+		<naam>Locatie</naam>
+		<mapping>Procedure.location</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11091</ID>
+		<naam>Zorgaanbieder</naam>
+		<mapping>Organization</mapping>
+		<profile>nl-core-organization</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11092</ID>
+		<naam>Uitvoerder</naam>
+		<mapping>Procedure.performer.actor</mapping>
+		<profile>zib-Procedure</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11093</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Practitioner</mapping>
+		<profile>nl-core-practitioner</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11094</ID>
+		<naam>Aanvrager</naam>
+		<mapping>Procedure.Requestrequester</mapping>
+		<profile>zib-ProcedureRequest</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11095</ID>
+		<naam>Zorgverlener</naam>
+		<mapping>Practitioner</mapping>
+		<profile>nl-core-practitioner</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-1440</ID>
 		<naam>Labonderzoek neonataal bloed</naam>
 		<mapping>Observation</mapping>
@@ -15221,7 +15589,7 @@
 		<zib>NL-CM-4.15.2</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2783</ID>
+		<ID>peri32-dataelement-11063</ID>
 		<naam>Stoma</naam>
 		<mapping>Observation.extension:stoma</mapping>
 		<profile>zib-BowelFunction</profile>
@@ -15229,7 +15597,7 @@
 		<zib>NL-CM-4.15.3</zib>
 	</record>
 	<record>
-		<ID>peri32-dataelement-2784</ID>
+		<ID>peri32-dataelement-11064</ID>
 		<naam>Stoma</naam>
 		<mapping>Observation</mapping>
 		<profile>zib-Stoma</profile>
@@ -15925,7 +16293,7 @@
 		<ID>peri32-dataelement-10798</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-9825</ID>
@@ -16344,7 +16712,7 @@
 		<ID>peri32-dataelement-10794</ID>
 		<naam>Zorgverlener</naam>
 		<mapping>PractitionerRole</mapping>
-		<profile>nl-core-practitionerrole</profile>
+		<profile>bc-PractitionerRole</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10003</ID>
@@ -16952,44 +17320,106 @@
 		<in>false</in>
 	</record>
 	<record>
+		<ID>peri32-dataelement-11055</ID>
+		<naam>Stoma</naam>
+		<mapping>Observation</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11056</ID>
+		<naam>StomaType</naam>
+		<mapping>Observation.value[x]:valueCodeableConcept</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11057</ID>
+		<naam>StomaMateriaal</naam>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11058</ID>
+		<naam>MedischHulpmiddel</naam>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11059</ID>
+		<naam>AnatomischeLocatie</naam>
+		<mapping>Observation.bodySite</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11060</ID>
+		<naam>Lateraliteit</naam>
+		<mapping>Observation.bodySite.extension:Laterality</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11061</ID>
+		<naam>AanlegDatum</naam>
+		<mapping>Observation.effective[x]:effectiveDateTime</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-11062</ID>
+		<naam>Toelichting</naam>
+		<mapping>Observation.comment</mapping>
+		<profile>zib-Stoma</profile>
+	</record>
+	<record>
 		<ID>peri32-dataelement-10374</ID>
 		<naam>MedischHulpmiddel</naam>
-		<in>false</in>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10375</ID>
 		<naam>Product</naam>
-		<in>false</in>
+		<mapping>Device</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
+	</record>
+	<record>
+		<ID>peri32-dataelement-10375</ID>
+		<naam>Product</naam>
+		<mapping>DeviceUseStatement.device</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10376</ID>
 		<naam>ProductID</naam>
-		<in>false</in>
+		<mapping>Device.identifier</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10377</ID>
 		<naam>ProductType</naam>
-		<in>false</in>
+		<mapping>Device.type</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10378</ID>
 		<naam>ProductOmschrijving</naam>
-		<in>false</in>
+		<mapping>Device.note.text</mapping>
+		<profile>zib-MedicalDeviceProduct</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10379</ID>
 		<naam>BeginDatum</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.whenUsed.start</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10532</ID>
 		<naam>EindDatum</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.whenUsed.end</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10380</ID>
 		<naam>Indicatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.indication.extension:indication_Problem</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10381</ID>
@@ -16999,32 +17429,38 @@
 	<record>
 		<ID>peri32-dataelement-10382</ID>
 		<naam>Toelichting</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.note.text</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10383</ID>
 		<naam>AnatomischeLocatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.bodySite</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10384</ID>
 		<naam>Lateraliteit</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10385</ID>
 		<naam>Locatie</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthcareProvider</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10526</ID>
 		<naam>Zorgaanbieder</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthcareProvider</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10387</ID>
 		<naam>Zorgverlener</naam>
-		<in>false</in>
+		<mapping>DeviceUseStatement.extension:HealthProfessional</mapping>
+		<profile>zib-MedicalDevice</profile>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10525</ID>
