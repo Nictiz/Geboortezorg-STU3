@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An Observation profile describing delivery-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as onset of labor or blood loss pertain to a delivery Procedure.&#xD;&#xA;* Delivery-related Observations use focus extension to point to the delivery Procedure they're about.&#xD;&#xA;* Delivery-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Pregnancy-related disorder | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_IG_bc-DeliveryObservation]]" />
+  <description value="An Observation profile describing delivery-related Observations, as defined by BabyConnect. &#xD;&#xA;Observations such as onset of labor or blood loss pertain to a delivery Procedure.&#xD;&#xA;* Delivery-related Observations use focus extension to point to the delivery Procedure they're about.&#xD;&#xA;* Delivery-related Observations refer to the EpisodeOfCare with Observation.context.reference&#xD;&#xA;&#xD;&#xA;Pattern: [[Delivery-related Observation | https://informatiestandaarden.nictiz.nl/wiki/Gebz:FHIR_bc-DeliveryObservation]]" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -124,7 +124,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4120" />
-        <comment value="Aard Vruchtwater (Observatie)" />
+        <comment value="Aard Aflopend Vruchtwater (Observatie)" />
       </mapping>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -134,7 +134,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4108" />
-        <comment value="Breken Vliezen (Observatie)" />
+        <comment value="Gebroken Vliezen (Observatie)" />
       </mapping>
     </element>
     <element id="Observation.extension">
@@ -161,8 +161,8 @@
         <comment value="Eerdere bevalling" />
       </mapping>
     </element>
-    <element id="Observation.extension:delivery.valueReference">
-      <path value="Observation.extension.valueReference" />
+    <element id="Observation.extension:delivery.value[x]">
+      <path value="Observation.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/bc-DeliveryProcedure" />
@@ -368,7 +368,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4111" />
-        <comment value="BrekenVliezenWaarde" />
+        <comment value="GebrokenVliezenWaarde" />
       </mapping>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
@@ -405,7 +405,7 @@
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-4123" />
-        <comment value="Aard Vruchtwater Waarde" />
+        <comment value="AardAflopendVruchtwaterWaarde" />
       </mapping>
     </element>
     <element id="Observation.value[x]:valueBoolean">
@@ -432,7 +432,7 @@
         <comment value="TestuitslagPAWaarde" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:valuePeriodDuration">
+    <element id="Observation.value[x]:valueString.extension:valuePeriodDuration">
       <path value="Observation.value[x].extension" />
       <sliceName value="valuePeriodDuration" />
       <type>
@@ -593,6 +593,24 @@
     <element id="Observation.device">
       <path value="Observation.device" />
       <max value="0" />
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="bc-DeliveryObservation-code" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/ValueSet/bc-DeliveryObservation-code" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]" />
+      <mapping>
+        <identity value="gebz-peri-v3.2" />
+        <map value="peri32-dataelement-10246" />
+        <comment value="DuurActieveOntsluitingWaarde" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

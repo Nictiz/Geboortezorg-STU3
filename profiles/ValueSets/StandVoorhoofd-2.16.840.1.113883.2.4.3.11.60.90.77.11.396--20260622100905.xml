@@ -1,0 +1,82 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.90.77.11.396--20260622100905"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2026-06-22T10:09:05Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.90.77.11.396--20260622100905"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.90.77.11.396"/>
+    </identifier>
+    <version value="2026-06-22T10:09:05"/>
+    <name value="StandVoorhoofd"/>
+    <title value="Stand voorhoofd"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="070-3173450"/>
+        </telecom>
+    </contact>
+    <description value="Stand voorhoofd"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="249095005"/>
+                <display value="voorhoofdsligging met kin voor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="249094009"/>
+                <display value="voorhoofdsligging met kin achter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="79884007"/>
+                <display value="voorhoofdsligging met kin linksvoor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="71531003"/>
+                <display value="voorhoofdsligging met kin linksachter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="32808002"/>
+                <display value="voorhoofdsligging met kin rechtsvoor (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="11246006"/>
+                <display value="voorhoofdsligging met kin rechtsachter (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="15692007"/>
+                <display value="voorhoofdsligging met kin linksdwars (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="43957006"/>
+                <display value="voorhoofdsligging met kin rechtsdwars (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="82334004"/>
+                <display value="onbepaald (kwalificatiewaarde)"/>
+            </concept>
+            <concept>
+                <code value="46917002"/>
+                <display value="asynclitisme anterior (bevinding)"/>
+            </concept>
+            <concept>
+                <code value="90731001"/>
+                <display value="asynclitismus posterior (bevinding)"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
