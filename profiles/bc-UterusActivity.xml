@@ -49,11 +49,12 @@
         <code value="364277008" />
       </patternCoding>
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effective[x]"/>
+      <sliceName value="effectivePeriod"/>
       <type>
-        <code value="Period" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TimeInterval" />
+        <code value="Period"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/bc-TimeInterval"/>
       </type>
       <mapping>
         <identity value="gebz-peri-v3.2" />
@@ -120,7 +121,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:uterusActivityFrequency.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
@@ -144,7 +145,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:uterusActivityDuration.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
+      <path value="Observation.component.value[x]"/>
       <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
@@ -156,11 +157,11 @@
       </mapping>
     </element>
     <element id="Observation.component:uterusActivityDuration.value[x]:valueQuantity.unit">
-      <path value="Observation.component.valueQuantity.unit" />
+      <path value="Observation.component.value[x].unit" />
       <defaultValueString value="sec" />
     </element>
     <element id="Observation.component:uterusActivityDuration.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+      <path value="Observation.component.value[x].code" />
       <defaultValueCode value="sec" />
     </element>
     <element id="Observation.component:uterusActivityIntensity">
@@ -176,7 +177,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:uterusActivityIntensity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
@@ -207,7 +208,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:monteVideoUnits.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueQuantity" />
       <type>
         <code value="Quantity" />
@@ -219,11 +220,11 @@
       </mapping>
     </element>
     <element id="Observation.component:monteVideoUnits.value[x]:valueQuantity.unit">
-      <path value="Observation.component.valueQuantity.unit" />
+      <path value="Observation.component.value[x].unit" />
       <defaultValueString value="MVU" />
     </element>
     <element id="Observation.component:monteVideoUnits.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code" />
+      <path value="Observation.component.value[x].code" />
       <defaultValueCode value="MVU" />
     </element>
     <element id="Observation.component:uterusActivityRegularity">
@@ -238,7 +239,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:uterusActivityRegularity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
@@ -269,7 +270,7 @@
       </patternCoding>
     </element>
     <element id="Observation.component:conclusionUterusActivity.value[x]:valueCodeableConcept">
-      <path value="Observation.component.valueCodeableConcept" />
+      <path value="Observation.component.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
