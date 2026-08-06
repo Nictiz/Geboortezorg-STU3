@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-DisorderOfLaborAndDelivery" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/bc-DisorderOfLaborAndDelivery" />
-  <version value="1.3.3" />
+  <version value="3.0.0-beta1" />
   <name value="bc-DisorderOfLaborAndDelivery" />
   <title value="bc-DisorderOfLaborAndDelivery" />
   <status value="active" />
@@ -232,9 +232,8 @@
       <path value="Condition.bodySite.extension" />
       <sliceName value="Laterality" />
     </element>
-    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept:valueCodeableConcept">
+    <element id="Condition.bodySite.extension:Laterality.valueCodeableConcept">
       <path value="Condition.bodySite.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1593" />
@@ -249,9 +248,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/body-site-instance" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:bodySiteReference.valueReference:valueReference">
+    <element id="Condition.bodySite.extension:bodySiteReference.valueReference">
       <path value="Condition.bodySite.extension.valueReference" />
-      <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
@@ -289,9 +287,8 @@
         <comment value="Zorgverlening" />
       </mapping>
     </element>
-    <element id="Condition.onsetDateTime:onsetDateTime">
+    <element id="Condition.onsetDateTime">
       <path value="Condition.onsetDateTime" />
-      <sliceName value="onsetDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1569" />
@@ -303,9 +300,8 @@
         <comment value="ProbleemBeginDatum" />
       </mapping>
     </element>
-    <element id="Condition.abatementDateTime:abatementDateTime">
+    <element id="Condition.abatementDateTime">
       <path value="Condition.abatementDateTime" />
-      <sliceName value="abatementDateTime" />
       <mapping>
         <identity value="gebz-peri-v3.2" />
         <map value="peri32-dataelement-1570" />
