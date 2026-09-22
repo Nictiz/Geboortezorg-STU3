@@ -339,8 +339,8 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||11143
 ||&#160;&#160;&#160;&#160;&#160;&#160;Foetus
 ||0 .. 1
-||
-||
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Fetus}}
+||BodySite
 |-
 |[[Bestand:ANY.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3358
@@ -493,7 +493,7 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||2219
 ||&#160;&#160;&#160;&#160;&#160;&#160;Specialisme
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PractitionerRole|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PractitionerRole}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PractitionerRole|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PractitionerRole}}
 ||PractitionerRole.specialty
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -514,35 +514,35 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||3399
 ||&#160;&#160;&#160;ZorgEpisode
 ||1 .. *
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MultidisciplinaryTeamMeeting}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MultidisciplinaryTeamMeeting|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MultidisciplinaryTeamMeeting}}
 ||EpisodeOfCare<br>Encounter.episodeOfCare
 |-
 |[[Bestand:II.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3338
 ||&#160;&#160;&#160;&#160;&#160;&#160;Identificatienummer
 ||1 .. *
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.identifier
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3400
 ||&#160;&#160;&#160;&#160;&#160;&#160;BeginDatum
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.period.start
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3401
 ||&#160;&#160;&#160;&#160;&#160;&#160;EindDatum
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.period.end
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3402
 ||&#160;&#160;&#160;&#160;&#160;&#160;FocusZorgEpisode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.diagnosis.condition
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -619,14 +619,14 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||3404
 ||&#160;&#160;&#160;&#160;&#160;&#160;ZorgEpisodeNaam
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.extension:title
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8822
 ||&#160;&#160;&#160;&#160;&#160;&#160;ZorgEpisodeVerantwoordelijke
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.careManager
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -640,63 +640,63 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||2164
 ||&#160;&#160;&#160;&#160;&#160;&#160;StatusZorgepisode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.status
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||3405
 ||&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare.extension:comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8877
 ||&#160;&#160;&#160;Verwijsgegevens
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-ReferralRequest}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-ReferralRequest}}
 ||ReferralRequest
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8879
 ||&#160;&#160;&#160;&#160;&#160;&#160;Verwijzing van/ afkomstig van
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-ReferralRequest}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-ReferralRequest}}
 ||ReferralRequest.requester
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||9660
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Zorgaanbieder
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-ReferralRequest}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-ReferralRequest|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-ReferralRequest}}
 ||ReferralRequest.requester.agent
 |-style="vertical-align:top;  background-color: #E8D7BE;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||674
 ||Vrouw
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Woman}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Woman}}
 ||Patient
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||1713
 ||&#160;&#160;&#160;Demografische gegevens
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Woman}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Woman}}
 ||Patient
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||1434
 ||&#160;&#160;&#160;&#160;&#160;&#160;Patient
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Woman}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Fetus}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Woman}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Fetus}}
 ||Patient<br>BodySite.patient
 |-style="vertical-align:top;  background-color: #E8D7BE;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||25
 ||Zwangerschapsgegevens
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-MaternalRecord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-MaternalRecord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-MaternalRecord}}
 ||EpisodeOfCare
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -759,14 +759,14 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||10803
 ||Foetus
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Fetus}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Child}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Fetus}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Child|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Child}}
 ||BodySite<br>Patient
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||11141
 ||&#160;&#160;&#160;Identificator (foetus)
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Fetus}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Fetus|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Fetus}}
 ||BodySite.description
 |-style="vertical-align:top;  background-color: #E8D7BE;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -843,14 +843,14 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||11140
 ||&#160;&#160;&#160;&#160;&#160;&#160;Foetus
 ||1 .. *
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetusObservation}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalMonitoring}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetusObservation}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalMonitoring|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalMonitoring}}
 ||Observation.extension:fetus.value[x]<br>Observation.extension:fetus.value[x]<br>Observation.extension:fetus.value[x]<br>Observation.extension:fetus.value[x]
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10283
 ||&#160;&#160;&#160;&#160;&#160;&#160;Patient
 ||1 .. *
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetusObservation}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetusObservation|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetusObservation}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}<br>{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.subject<br>Observation.subject<br>Observation.subject
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -871,56 +871,56 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||8918
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Echografische bevindingen algemeen (Observatie)
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8919
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieDatumTijd
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.effective[x]:effectiveDateTime
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8929
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.method
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8921
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ConclusieWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.component:conclusion.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8931
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VerdenkingAfwijkingobvWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.component:suspicionAbnormalities.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8930
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AdviesWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.component:advice.value[x]:valueCodeableConcept
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||8927
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSoundGeneralFindings}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSoundGeneralFindings|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSoundGeneralFindings}}
 ||Observation.comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||1210
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Biometrie
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PregnancyUltraSound}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PregnancyUltraSound|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PregnancyUltraSound}}
 ||DiagnosticReport
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -1340,49 +1340,49 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||1784
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Foetale hartslag (Hartfrequentie)
 ||0 .. *
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10964
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartfrequentieDatumTijd
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.effective[x]:effectiveDateTime
 |-
 |[[Bestand:PQ.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10965
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartfrequentieWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.value[x]:valueQuantity
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10966
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartslagMeetMethode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.method
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10967
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HartslagRegelmatigheid
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.component:heartRateRegularity.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10968
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;InterpretatieFrequentie
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.interpretation
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||10969
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-FetalHeartRate}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-FetalHeartRate|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-FetalHeartRate}}
 ||Observation.comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -1480,91 +1480,91 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||2410
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vruchtwater (Meting)
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2411
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MeetDatumTijd
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation.effective[x]:effectiveDateTime
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2413
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HoeveelheidVruchtwaterWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation.component:amnioticFluidQuantity.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2479
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VruchtwatercompartimentWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation.component:amnioticFluidCompartment.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2414
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MeetMethode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation.method
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2415
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-AmnioticFluid}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-AmnioticFluid|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-AmnioticFluid}}
 ||Observation.comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2437
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PlacentaLokalisatie (Observatie)
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2438
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PlacentaLokalisatieDatumTijd
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.effective[x]:effectiveDateTime
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2449
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;PlacentalokalisatieWaarde
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.component:placentaLocalization.value[x]:valueCodeableConcept
 |-
 |[[Bestand:BL.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7867
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SectioLittekenWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.component:sectionScar.extension:valueBoolean
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2448
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OstiumWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.component:ostium.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2441
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.method
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||2442
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-PlacentaLocalization}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-PlacentaLocalization|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-PlacentaLocalization}}
 ||Observation.comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -1690,42 +1690,42 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||7790
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Navelstreng (Observatie)
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation
 |-
 |[[Bestand:TS.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7791
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NavelstrengDatumTijd
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.effective[x]:effectiveDateTime
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7846
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NavelstrengWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7793
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NavelstrengVatenWaarde
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.component:umbilicalCordVessels.value[x]:valueCodeableConcept
 |-
 |[[Bestand:CD.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7794
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ObservatieMethode
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.method
 |-
 |[[Bestand:ST.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
 ||7799
 ||&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Toelichting
 ||0 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-UmbilicalCord}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-UmbilicalCord|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-UmbilicalCord}}
 ||Observation.comment
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
@@ -2089,7 +2089,7 @@ Based on ART-DECOR transaction version: [https://decor.nictiz.nl/ad/#/peri20-/sc
 ||11027
 ||&#160;&#160;&#160;&#160;&#160;&#160;Patient
 ||1 .. 1
-||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta1|title=bc-Woman}}
+||{{Simplifier|http://nictiz.nl/fhir/StructureDefinition/bc-Woman|nictiz.fhir.nl.stu3.geboortezorg|pkgVersion=4.0.0-beta.1|title=bc-Woman}}
 ||Patient
 |-style="vertical-align:top;  background-color: #E3E3E3;"
 |[[Bestand:Container.png|16px|link=Beschrijving_en_gebruik_datatypes]] 
