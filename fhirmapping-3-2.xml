@@ -18260,56 +18260,78 @@
 	<record>
 		<ID>peri32-dataelement-2688</ID>
 		<naam>BurgerlijkeStaatRC</naam>
+		<mapping>Patient.maritalStatus</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2689</ID>
 		<naam>BurgerlijkeStaat</naam>
+		<mapping>Patient.maritalStatus</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2904</ID>
 		<naam>Taalvaardigheid</naam>
+		<mapping>Patient.communication</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2905</ID>
 		<naam>CommunicatieTaal</naam>
+		<mapping>Patient.communication.language</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2906</ID>
 		<naam>TaalvaardigheidBegrijpen</naam>
+		<mapping>Patient.communication.extension:languageProficiency</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2907</ID>
 		<naam>TaalvaardigheidSpreken</naam>
+		<mapping>Patient.communication.extension:languageProficiency</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2908</ID>
 		<naam>TaalvaardigheidLezen</naam>
+		<mapping>Patient.communication.extension:languageProficiency</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-2909</ID>
 		<naam>Toelichting</naam>
+		<mapping>Patient.communication.extension:comment</mapping>
+		<profile>bc-Woman</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10423</ID>
 		<naam>Wilsverklaring</naam>
+		<mapping>Consent</mapping>
+		<profile>zib-AdvanceDirective</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10424</ID>
 		<naam>WilsverklaringType</naam>
+		<mapping>Consent.category:typeOfLivingWill</mapping>
+		<profile>zib-AdvanceDirective</profile>
 		<in>false</in>
 	</record>
 	<record>
 		<ID>peri32-dataelement-10425</ID>
 		<naam>WilsverklaringDatum</naam>
+		<mapping>Consent.dateTime</mapping>
+		<profile>zib-AdvanceDirective</profile>
 		<in>false</in>
 	</record>
 	<record>
@@ -18337,6 +18359,8 @@
 	<record>
 		<ID>peri32-dataelement-10430</ID>
 		<naam>WilsverklaringDocument</naam>
+		<mapping>Consent.source[x]</mapping>
+		<profile>zib-AdvanceDirective</profile>
 		<in>false</in>
 	</record>
 	<record>
